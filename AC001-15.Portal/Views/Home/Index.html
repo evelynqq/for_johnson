@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html @* xmlns:ng="http://angularjs.org" *@ id="ng-app" ng-app="portalApp" meidon-time="@ViewBag.MeiDonNow" @* 主機的美東時間 *@ moment-lang="@ViewBag.Language" @* 瀏覽器語系 *@ ng-init="'@Resources.Shared.Head_Title'">
+
+<head>
+    <title>welcome</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="shortcut icon" href="../../../_Common/Content/Views/Shared/images/favicon.ico" />
+    <link href="../../bundles/site.css" rel="stylesheet" />
+    <link href="../../Content/Views/Home/index.css" rel="stylesheet" />
+    <script src="../../../_Common/Scripts/jquery/v1.12.4/jquery.min.js"></script>
+    <script src="../../bundles/include-html.js"></script>
+    <script src="../../../_Common/Content/jquery.SuperSlide.2.1.2.js" type="text/javascript"></script>
+    <script>
+        // Slide-banner
+        $(function () {
+            $('#slide-banner').slide({
+                titCell: 'ul.slide-pager',
+                mainCell: 'div.slide',
+                autoPage: true,
+                autoPlay: true,
+                effect: 'fold',
+                interTime: 3000,
+                delayTime: 500,
+                easing: 'swing',
+                trigger: 'click'
+            });
+        });
+    </script>
+</head>
+
+<body class="layout" ng-controller="LayoutCtrl">
+    <header id="header"></header>
+    <nav id="nav" slide-menu></nav>
+    <!-- Slide-Banner -->
+    <div id="banner">
+        <section id="slide-banner">
+            <div class="slide">
+                <a href="#"><img src="../../../_Common/Content/Views/Shared/images/01.jpg"></a>
+                <a href="#"><img src="../../../_Common/Content/Views/Shared/images/02.jpg"></a>
+                <a href="#"><img src="../../../_Common/Content/Views/Shared/images/03.jpg"></a>
+            </div>
+            <ul class="slide-pager"></ul>
+        </section>
+        <div id="news"></div>
+    </div>
+    <!-- Slide-Banner End -->
+    <div id="content">
+        <div id="home-slot" ng-controller="LobbiesCtrl" class="ng-scope">
+            <div class="wrapper">
+                <div class="slot-list" carousel-slider="" super-vis="8" super-play="true" super-effect="leftLoop">
+                    <span class="prev"></span>
+                    <span class="next"></span>
+                    <div class="main-cell">
+                        <div class="tempWrap" style="overflow:hidden; position:relative; width:960px">
+                            <ul class="game-list" ng-init="show='mg'" style="width: 3000px; position: relative; overflow: hidden; padding: 0px; margin: 0px; left: -1320px;">
+                                <li game-box="pg" ng-click="toPgHtml()" ng-mouseover="show='pg'" ng-class="{'active': show=='pg'}" class="clone ng-scope" style="float: left; width: 120px;">PG電子</li>
+                                <li game-box="mg" ng-click="toMgFlash()" ng-mouseover="show='mg'" ng-class="{'active': show=='mg'}" style="float: left; width: 120px;" class="ng-scope">MG電子</li>
+                                <li game-box="mw" ng-click="toMwHtml()" ng-mouseover="show='mw'" ng-class="{'active': show=='mw'}" style="float: left; width: 120px;" class="ng-scope">MW電子</li>
+                                <li game-box="pt" ng-click="toPtFlash()" ng-mouseover="show='pt'" ng-class="{'active': show=='pt'}" style="float: left; width: 120px;" class="ng-scope">PT電子</li>
+                                <li game-box="cq9" ng-click="toCq9Html()" ng-mouseover="show='cq9'" ng-class="{'active': show=='cq9'}" style="float: left; width: 120px;" class="ng-scope">傳奇電子</li>
+                                <li game-box="jdb" ng-click="toJdbHtml()" ng-mouseover="show='jdb'" ng-class="{'active': show=='jdb'}" style="float: left; width: 120px;" class="ng-scope">JDB電子</li>
+                                <li game-box="ag" ng-click="toAgHtml()" ng-mouseover="show='ag'" ng-class="{'active': show=='ga'}" style="float: left; width: 120px;" class="ng-scope">AG電子</li>
+                                <li game-box="sg" ng-click="toSgFlash()" ng-mouseover="show='sg'" ng-class="{'active': show=='sg'}" style="float: left; width: 120px;" class="ng-scope">SG電子</li>
+                                <li game-box="gns" ng-click="toGnsHtml()" ng-mouseover="show='gns'" ng-class="{'active': show=='gns'}" style="float: left; width: 120px;" class="ng-scope">GNS電子</li>
+                                <li game-box="gpi" ng-click="toGpiFlash()" ng-mouseover="show='gpi'" ng-class="{'active': show=='gpi'}" style="float: left; width: 120px;" class="ng-scope">GPI電子</li>
+                                <li game-box="bb" ng-click="toBbGame()" ng-mouseover="show='bb'" ng-class="{'active': show=='bb'}" style="float: left; width: 120px;" class="ng-scope">BBIN電子</li>
+                                <li game-box="prg" ng-click="toPrgFlash()" ng-mouseover="show='prg'" ng-class="{'active': show=='prg'}" style="float: left; width: 120px;" class="ng-scope">PP電子</li>
+                                <li game-box="hb" ng-click="toHabaHtml()" ng-mouseover="show='hb'" ng-class="{'active': show=='hb'}" style="float: left; width: 120px;" class="ng-scope">HB電子</li>
+                                <li game-box="ne" ng-click="toNetentHtml()" ng-mouseover="show='ne'" ng-class="{'active': show=='ne'}" style="float: left; width: 120px;" class="ng-scope">NE電子</li>
+                                <li game-box="rt" ng-click="toRedTigerHtml()" ng-mouseover="show='rt'" ng-class="{'active': show=='rt'}" style="float: left; width: 120px;" class="ng-scope active">RT電子</li>
+                                <li game-box="ga" ng-click="toGameArtHtml()" ng-mouseover="show='ga'" ng-class="{'active': show=='ga'}" style="float: left; width: 120px;" class="ng-scope">GA電子</li>
+                                <li game-box="pg" ng-click="toPgHtml()" ng-mouseover="show='pg'" ng-class="{'active': show=='pg'}" style="float: left; width: 120px;" class="ng-scope">PG電子</li>
+                                <li game-box="mg" ng-click="toMgFlash()" ng-mouseover="show='mg'" ng-class="{'active': show=='mg'}" class="clone ng-scope" style="float: left; width: 120px;">MG電子</li>
+                                <li game-box="mw" ng-click="toMwHtml()" ng-mouseover="show='mw'" ng-class="{'active': show=='mw'}" class="clone ng-scope" style="float: left; width: 120px;">MW電子</li>
+                                <li game-box="pt" ng-click="toPtFlash()" ng-mouseover="show='pt'" ng-class="{'active': show=='pt'}" class="clone ng-scope" style="float: left; width: 120px;">PT電子</li>
+                                <li game-box="cq9" ng-click="toCq9Html()" ng-mouseover="show='cq9'" ng-class="{'active': show=='cq9'}" class="clone ng-scope" style="float: left; width: 120px;">傳奇電子</li>
+                                <li game-box="jdb" ng-click="toJdbHtml()" ng-mouseover="show='jdb'" ng-class="{'active': show=='jdb'}" class="clone ng-scope" style="float: left; width: 120px;">JDB電子</li>
+                                <li game-box="ag" ng-click="toAgHtml()" ng-mouseover="show='ag'" ng-class="{'active': show=='ga'}" class="clone ng-scope" style="float: left; width: 120px;">AG電子</li>
+                                <li game-box="sg" ng-click="toSgFlash()" ng-mouseover="show='sg'" ng-class="{'active': show=='sg'}" class="clone ng-scope" style="float: left; width: 120px;">SG電子</li>
+                                <li game-box="gns" ng-click="toGnsHtml()" ng-mouseover="show='gns'" ng-class="{'active': show=='gns'}" class="clone ng-scope" style="float: left; width: 120px;">GNS電子</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="slot-info">
+                    <div class="slot-panel ng-hide" ng-show="show=='mg'">
+                        <ul>
+                            <li class="mg01" ng-click="toMgFlash()">不朽的浪漫</li>
+                            <li class="mg02" ng-click="toMgFlash()">东方珍兽</li>
+                            <li class="mg03" ng-click="toMgFlash()">伴娘我最大</li>
+                            <li class="mg04" ng-click="toMgFlash()">招财鞭炮</li>
+                        </ul>
+                        <ul class="right">
+                            <li class="mg05" ng-click="toMgFlash()">花花公子</li>
+                            <li class="mg06" ng-click="toMgFlash()">胸围银行</li>
+                            <li class="mg07" ng-click="toMgFlash()">淑女之夜</li>
+                            <li class="mg08" ng-click="toMgFlash()">摆脱</li>
+                        </ul>
+                    </div>
+                    <div class="slot-panel ng-hide" ng-show="show=='mw'">
+                        <ul>
+                            <li class="mw01" ng-click="toMwFish()">千炮捕鱼</li>
+                            <li class="mw02" ng-click="toMwHtml()">五龙争霸</li>
+                            <li class="mw03" ng-click="toMwHtml()">水浒英雄</li>
+                            <li class="mw04" ng-click="toMwHtml()">百乐牛牛</li>
+                        </ul>
+                        <ul class="right">
+                            <li class="mw05" ng-click="toMwHtml()">明星97</li>
+                            <li class="mw06" ng-click="toMwHtml()">经典水果机</li>
+                            <li class="mw07" ng-click="toMwHtml()">洪福齐天</li>
+                            <li class="mw08" ng-click="toMwHtml()">黄金777</li>
+                        </ul>
+                    </div>
+                    <div class="slot-panel ng-hide" ng-show="show=='pt'">
+                        <ul>
+                            <li class="pt01" ng-click="toPtFlash()">大明帝国</li>
+                            <li class="pt02" ng-click="toPtFlash()">古怪猴子</li>
+                            <li class="pt03" ng-click="toPtFlash()">圣诞奇迹</li>
+                            <li class="pt04" ng-click="toPtFlash()">白狮王</li>
+                        </ul>
+                        <ul class="right">
+                            <li class="pt05" ng-click="toPtFlash()">好事成双</li>
+                            <li class="pt06" ng-click="toPtFlash()">招财进宝</li>
+                            <li class="pt07" ng-click="toPtFlash()">武则天</li>
+                            <li class="pt08" ng-click="toPtFlash()">湛蓝深海</li>
+                        </ul>
+                    </div>
+                    <div class="slot-panel ng-hide" ng-show="show=='cq9'">
+                        <ul>
+                            <li class="cq901" ng-click="toCq9Html()">五福临门</li>
+                            <li class="cq902" ng-click="toCq9Html()">金玉满堂</li>
+                            <li class="cq903" ng-click="toCq9Html()">金鸡报喜</li>
+                            <li class="cq904" ng-click="toCq9Html()">甜蜜蜜</li>
+                        </ul>
+                        <ul class="right">
+                            <li class="cq905" ng-click="toCq9Html()">跳起来</li>
+                            <li class="cq906" ng-click="toCq9Html()">跳起来2</li>
+                            <li class="cq907" ng-click="toCq9Html()">钟馗运财</li>
+                            <li class="cq908" ng-click="toCq9Html()">钻石水果王</li>
+                        </ul>
+                    </div>
+                    <div class="slot-panel ng-hide" ng-show="show=='jdb'">
+                        <ul>
+                            <li class="jdb01" ng-click="toJdbHtml()">飞龙在天</li>
+                            <li class="jdb02" ng-click="toJdbHtml()">月光秘宝</li>
+                            <li class="jdb03" ng-click="toJdbHtml()">台湾黑熊</li>
+                            <li class="jdb04" ng-click="toJdbHtml()">江山美人</li>
+                        </ul>
+                        <ul class="right">
+                            <li class="jdb05" ng-click="toJdbHtml()">过新年</li>
+                            <li class="jdb06" ng-click="toJdbHtml()">变脸</li>
+                            <li class="jdb07" ng-click="toJdbHtml()">芝麻开门</li>
+                            <li class="jdb08" ng-click="toJdbHtml()">金鸡报囍</li>
+                        </ul>
+                    </div>
+                    <div class="slot-panel ng-hide" ng-show="show=='ag'">
+                        <ul>
+                            <li class="ag01" ng-click="toAgHtml()">天空守护者</li>
+                            <li class="ag02" ng-click="toAgHtml()">太空漫游</li>
+                            <li class="ag03" ng-click="toAgHtml()">日本武士</li>
+                            <li class="ag04" ng-click="toAgHtml()">水果拉霸</li>
+                        </ul>
+                        <ul class="right">
+                            <li class="ag05" ng-click="toAgHtml()">冰河世界</li>
+                            <li class="ag06" ng-click="toAgHtml()">齐天大圣</li>
+                            <li class="ag07" ng-click="toAgHtml()">灵猴献瑞</li>
+                            <li class="ag08" ng-click="toAgHtml()">侏罗纪</li>
+                        </ul>
+                    </div>
+                    <div class="slot-panel ng-hide" ng-show="show=='sg'">
+                        <ul>
+                            <li class="sg01" ng-click="toSgFlash()">大福小福</li>
+                            <li class="sg02" ng-click="toSgFlash()">五龙吐珠</li>
+                            <li class="sg03" ng-click="toSgFlash()">太空神猴</li>
+                            <li class="sg04" ng-click="toSgFlash()">发发发</li>
+                        </ul>
+                        <ul class="right">
+                            <li class="sg05" ng-click="toSgFlash()">黄金黥鱼</li>
+                            <li class="sg06" ng-click="toSgFlash()">森林狂欢季</li>
+                            <li class="sg07" ng-click="toSgFlash()">新发大财</li>
+                            <li class="sg08" ng-click="toSgFlash()">熊之蜜</li>
+                        </ul>
+                    </div>
+                    <div class="slot-panel ng-hide" ng-show="show=='gns'">
+                        <ul>
+                            <li class="gns01" ng-click="toGnsHtml()">女帝崛起</li>
+                            <li class="gns02" ng-click="toGnsHtml()">五行传说</li>
+                            <li class="gns03" ng-click="toGnsHtml()">妖精传奇</li>
+                            <li class="gns04" ng-click="toGnsHtml()">罗宾大探险</li>
+                        </ul>
+                        <ul class="right">
+                            <li class="gns05" ng-click="toGnsHtml()">星际探索：猎户座</li>
+                            <li class="gns06" ng-click="toGnsHtml()">神枪独角兽</li>
+                            <li class="gns07" ng-click="toGnsHtml()">奢华生活</li>
+                            <li class="gns08" ng-click="toGnsHtml()">维京人传奇</li>
+                        </ul>
+                    </div>
+                    <div class="slot-panel ng-hide" ng-show="show=='gpi'">
+                        <ul>
+                            <li class="gpi01" ng-click="toGpiFlash()">2014足球老虎机</li>
+                            <li class="gpi02" ng-click="toGpiFlash()">水果乐园</li>
+                            <li class="gpi03" ng-click="toGpiFlash()">四大美女</li>
+                            <li class="gpi04" ng-click="toGpiFlash()">罗马帝国</li>
+                        </ul>
+                        <ul class="right">
+                            <li class="gpi05" ng-click="toGpiFlash()">金瓶梅</li>
+                            <li class="gpi06" ng-click="toGpiFlash()">海底世界</li>
+                            <li class="gpi07" ng-click="toGpiFlash()">海盗寻宝</li>
+                            <li class="gpi08" ng-click="toGpiFlash()">深海探险</li>
+                        </ul>
+                    </div>
+                    <div class="slot-panel ng-hide" ng-show="show=='bb'">
+                        <ul>
+                            <li class="bb01" ng-click="toBbGame()">三国</li>
+                            <li class="bb02" ng-click="toBbGame()">外星争霸</li>
+                            <li class="bb03" ng-click="toBbGame()">连环夺宝</li>
+                            <li class="bb04" ng-click="toBbGame()">钻石水果盘</li>
+                        </ul>
+                        <ul class="right">
+                            <li class="bb05" ng-click="toBbGame()">钻石列车</li>
+                            <li class="bb06" ng-click="toBbGame()">喜福猴年</li>
+                            <li class="bb07" ng-click="toBbGame()">惑星战记</li>
+                            <li class="bb08" ng-click="toBbGame()">糖果派对</li>
+                        </ul>
+                    </div>
+                    <div class="slot-panel ng-hide" ng-show="show=='prg'">
+                        <ul>
+                            <li class="pp01" ng-click="toPrgFlash()">大堡礁</li>
+                            <li class="pp02" ng-click="toPrgFlash()">女神戈帝梵</li>
+                            <li class="pp03" ng-click="toPrgFlash()">无敌金刚</li>
+                            <li class="pp04" ng-click="toPrgFlash()">月之女神</li>
+                        </ul>
+                        <ul class="right">
+                            <li class="pp05" ng-click="toPrgFlash()">西游记</li>
+                            <li class="pp06" ng-click="toPrgFlash()">奔跑吧!猴子</li>
+                            <li class="pp07" ng-click="toPrgFlash()">阿拉丁宝藏</li>
+                            <li class="pp08" ng-click="toPrgFlash()">野生动物园</li>
+                        </ul>
+                    </div>
+                    <div class="slot-panel ng-hide" ng-show="show=='hb'">
+                        <ul>
+                            <li class="hb01" ng-click="toHabaHtml()">12生肖</li>
+                            <li class="hb02" ng-click="toHabaHtml()">公鸡王</li>
+                            <li class="hb03" ng-click="toHabaHtml()">凤凰</li>
+                            <li class="hb04" ng-click="toHabaHtml()">发财神</li>
+                        </ul>
+                        <ul class="right">
+                            <li class="hb05" ng-click="toHabaHtml()">龙之宝座</li>
+                            <li class="hb06" ng-click="toHabaHtml()">巫婆大财</li>
+                            <li class="hb07" ng-click="toHabaHtml()">罗马帝国</li>
+                            <li class="hb08" ng-click="toHabaHtml()">炸弹追击</li>
+                        </ul>
+                    </div>
+                    <div class="slot-panel ng-hide" ng-show="show=='ne'">
+                        <ul>
+                            <li class="ne01" ng-click="toNetentHtml()">小红帽</li>
+                            <li class="ne02" ng-click="toNetentHtml()">双重旋转</li>
+                            <li class="ne03" ng-click="toNetentHtml()">水果商店</li>
+                            <li class="ne04" ng-click="toNetentHtml()">吸血鬼</li>
+                        </ul>
+                        <ul class="right">
+                            <li class="ne05" ng-click="toNetentHtml()">宝石炫光</li>
+                            <li class="ne06" ng-click="toNetentHtml()">星爆</li>
+                            <li class="ne07" ng-click="toNetentHtml()">胜利者</li>
+                            <li class="ne08" ng-click="toNetentHtml()">富小猪</li>
+                        </ul>
+                    </div>
+                    <div class="slot-panel" ng-show="show=='rt'">
+                        <ul>
+                            <li class="rt01" ng-click="toRedTigerHtml()">五福临门</li>
+                            <li class="rt02" ng-click="toRedTigerHtml()">凤凰涅槃</li>
+                            <li class="rt03" ng-click="toRedTigerHtml()">龙之谕</li>
+                            <li class="rt04" ng-click="toRedTigerHtml()">华夏祥瑞</li>
+                        </ul>
+                        <ul class="right">
+                            <li class="rt05" ng-click="toRedTigerHtml()">西游寻宝</li>
+                            <li class="rt06" ng-click="toRedTigerHtml()">财神</li>
+                            <li class="rt07" ng-click="toRedTigerHtml()">恭贺新禧</li>
+                            <li class="rt08" ng-click="toRedTigerHtml()">蓝钻风暴</li>
+                        </ul>
+                    </div>
+                    <div class="slot-panel ng-hide" ng-show="show=='ga'">
+                        <ul>
+                            <li class="ga01" ng-click="toGameArtHtml()">88年财富</li>
+                            <li class="ga02" ng-click="toGameArtHtml()">三王</li>
+                            <li class="ga03" ng-click="toGameArtHtml()">卡里古拉</li>
+                            <li class="ga04" ng-click="toGameArtHtml()">老虎的心</li>
+                        </ul>
+                        <ul class="right">
+                            <li class="ga05" ng-click="toGameArtHtml()">国王的财富</li>
+                            <li class="ga06" ng-click="toGameArtHtml()">宝玉</li>
+                            <li class="ga07" ng-click="toGameArtHtml()">种钱得钱2</li>
+                            <li class="ga08" ng-click="toGameArtHtml()">雷声鸟</li>
+                        </ul>
+                    </div>
+                    <div class="slot-panel ng-hide" ng-show="show=='pg'">
+                        <ul>
+                            <li class="pg01" ng-click="toPgHtml()">西游争霸</li>
+                            <li class="pg02" ng-click="toPgHtml()">迎财神</li>
+                            <li class="pg03" ng-click="toPgHtml()">皇冠列车</li>
+                            <li class="pg04" ng-click="toPgHtml()">动物星球</li>
+                        </ul>
+                        <ul class="right">
+                            <li class="pg05" ng-click="toPgFish()">鱼王争霸</li>
+                            <li class="pg06" ng-click="toPgHtml()">猴子爬树</li>
+                            <li class="pg07" ng-click="toPgHtml()">福禄寿喜</li>
+                            <li class="pg08" ng-click="toPgHtml()">骰宝</li>
+                        </ul>
+                    </div>
+                    <div class="winner ng-scope" ng-controller="WinnerListCtrl">
+                        <ul class="cycle-slideshow" data-cycle-fx="carousel" data-cycle-carousel-vertical="true" data-cycle-timeout="1" data-cycle-easing="linear" data-cycle-slides="> li" data-cycle-speed="1500" data-cycle-pause-on-hover="true" style="position: relative; overflow: hidden;">
+                            <li ng-repeat="item in winnerList track by $index" class="ng-scope cycle-slide cycle-sentinel" style="position: static; top: 0px; left: 0px; z-index: 100; opacity: 1; display: block; visibility: hidden;">
+                                <span title="ak***123" class="ng-binding" style="visibility: hidden;">ak***123</span><span class="money ng-binding" title="87643.09" style="visibility: hidden;">87643.09</span><span class="game ng-binding" title="皇冠体育" style="visibility: hidden;">皇冠体育</span>
+                            </li>
+                            <div class="cycle-carousel-wrap" style="margin: 0px; padding: 0px; top: 0px; left: 0px; position: absolute;">
+                                <li ng-repeat="item in winnerList track by $index" class="ng-scope cycle-slide" style="position: static; top: 0px; left: 0px; z-index: 100; opacity: 1; display: block;">
+                                    <span title="ak***123" class="ng-binding">ak***123</span><span class="money ng-binding" title="87643.09">87643.09</span><span class="game ng-binding" title="皇冠体育">皇冠体育</span>
+                                </li>
+                                <li ng-repeat="item in winnerList track by $index" class="ng-scope cycle-slide" style="position: static; top: 0px; left: 0px; z-index: 99; display: block;">
+                                    <span title="bb***168" class="ng-binding">bb***168</span><span class="money ng-binding" title="127463.09">127463.09</span><span class="game ng-binding" title="船长的宝藏">船长的宝藏</span>
+                                </li>
+                                <li ng-repeat="item in winnerList track by $index" class="ng-scope cycle-slide" style="position: static; top: 0px; left: 0px; z-index: 97; display: block;">
+                                    <span title="ok***888" class="ng-binding">ok***888</span><span class="money ng-binding" title="102567.45">102567.45</span><span class="game ng-binding" title="胸围银行">胸围银行</span>
+                                </li>
+                                <li ng-repeat="item in winnerList track by $index" class="ng-scope cycle-slide" style="position: static; top: 0px; left: 0px; z-index: 96; display: block;">
+                                    <span title="fu***ong" class="ng-binding">fu***ong</span><span class="money ng-binding" title="37281.09">37281.09</span><span class="game ng-binding" title="北京赛车PK10">北京赛车PK10</span>
+                                </li>
+                                <li ng-repeat="item in winnerList track by $index" class="ng-scope cycle-slide" style="position: static; top: 0px; left: 0px; z-index: 95; display: block;">
+                                    <span title="ha***666" class="ng-binding">ha***666</span><span class="money ng-binding" title="76893.53">76893.53</span><span class="game ng-binding" title="北京赛车PK10">北京赛车PK10</span>
+                                </li>
+                                <li ng-repeat="item in winnerList track by $index" class="ng-scope cycle-slide" style="position: static; top: 0px; left: 0px; z-index: 94; display: block;">
+                                    <span title="de***669" class="ng-binding">de***669</span><span class="money ng-binding" title="36845.55">36845.55</span><span class="game ng-binding" title="狂欢节">狂欢节</span>
+                                </li>
+                                <li ng-repeat="item in winnerList track by $index" class="ng-scope cycle-slide" style="position: static; top: 0px; left: 0px; z-index: 93; display: block;">
+                                    <span title="s***ing" class="ng-binding">s***ing</span><span class="money ng-binding" title="103784.06">103784.06</span><span class="game ng-binding" title="圣诞树">圣诞树</span>
+                                </li>
+                            </div>
+                            <!-- ngRepeat: item in winnerList track by $index -->
+                            <!-- end ngRepeat: item in winnerList track by $index -->
+                            <!-- end ngRepeat: item in winnerList track by $index -->
+                            <!-- end ngRepeat: item in winnerList track by $index -->
+                            <!-- end ngRepeat: item in winnerList track by $index -->
+                            <!-- end ngRepeat: item in winnerList track by $index -->
+                            <!-- end ngRepeat: item in winnerList track by $index -->
+                            <!-- end ngRepeat: item in winnerList track by $index -->
+                            <!-- end ngRepeat: item in winnerList track by $index -->
+                            <!-- end ngRepeat: item in winnerList track by $index -->
+                            <!-- end ngRepeat: item in winnerList track by $index -->
+                            <!-- end ngRepeat: item in winnerList track by $index -->
+                            <!-- end ngRepeat: item in winnerList track by $index -->
+                            <!-- end ngRepeat: item in winnerList track by $index -->
+                            <!-- end ngRepeat: item in winnerList track by $index -->
+                            <!-- end ngRepeat: item in winnerList track by $index -->
+                            <!-- end ngRepeat: item in winnerList track by $index -->
+                            <!-- end ngRepeat: item in winnerList track by $index -->
+                            <!-- end ngRepeat: item in winnerList track by $index -->
+                            <!-- end ngRepeat: item in winnerList track by $index -->
+                            <!-- end ngRepeat: item in winnerList track by $index -->
+                        </ul>
+                        <p class="jackpot" digital="" digital-min="34267343" word="CNY" add="">CNY34,269,757.45</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="home-casino">
+            <div class="wrapper">
+                <ul>
+                    <li class="live">
+                        <a href="../Lobby/Live.html">
+                            <p>真人娱乐 LIVE DEALER</p>
+                            <span>澳门永利</span>集合十大真人娱乐平台，为您提供最顶级的娱乐体验，真人娱乐场天天返水高达1.2%
+                        </a>
+                    </li>
+                    <li class="sport">
+                        <a href="../Lobby/Sport.html">
+                            <p>体育赛事 SPORT</p>
+                            英超、意甲、德甲、西甲等世界足坛顶尖赛事，让您畅享足球赛事的同时可以时刻体验体育投注的魅力
+                        </a>
+                    </li>
+                    <li class="lottery">
+                        <a href="../Lobby/Lottery.html">
+                            <p>彩票游戏 LOTTERY</p>
+                            江西时时彩，新疆时时彩，天津时时彩，广东快乐十分等，六合彩赔率业界最高48.2倍
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="home-mobile"></div>
+    </div>
+    <footer id="footer"></footer>
+</body>
+
+</html>

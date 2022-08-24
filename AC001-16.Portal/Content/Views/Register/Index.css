@@ -1,0 +1,250 @@
+﻿#banner {
+    background-image: url('../Register/images/banner.jpg');
+}
+
+/* #region 針對type=number  會出現右邊上下箭頭做隐藏 */
+input[type="number"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+    input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none; /*for chrome*/
+    }
+
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none; /*for chrome*/
+    }
+/* #endregion 針對type=number  會出現右邊上下箭頭 */
+
+#register {
+    display: inline-block;
+    color: #151515;
+}
+
+.form-group .control-label {
+    width: 20%;
+    font-size: 14px;
+    line-height: 32px;
+}
+
+    .form-group .control-label .fa {
+        color: #b20000;
+    }
+
+.fa-star:before {
+    content: '*';
+}
+
+.form-group .control-div {
+    width: 34%;
+    text-align: left;
+    line-height: 32px;
+}
+
+.form-group .control-info {
+    display: inline-block;
+    width: 45%;
+    text-align: left;
+}
+
+.form-group .control-div input,
+#checkcode-input-group input {
+    display: block;
+    width: 100%;
+    height: 32px;
+    padding: 5px 4px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+    .form-group .control-div input::-webkit-input-placeholder {
+        color: transparent;
+    }
+
+    .form-group .control-div input:-moz-placeholder {
+        color: transparent;
+    }
+
+    .form-group .control-div input::-moz-placeholder {
+        color: transparent;
+    }
+
+    .form-group .control-div input:-ms-input-placeholder {
+        color: transparent;
+    }
+
+.form-group .control-div > label {
+    display: inline-block;
+}
+
+.form-group .control-div input[type="radio"],
+.form-group .control-div input[type="checkbox"] {
+    display: inline-block;
+    padding: 0;
+    width: 14px;
+    height: 14px;
+}
+
+.form-group:last-child .control-div {
+    width: 100%;
+    padding-left: 90px;
+}
+
+.modal {
+    background: rgba(0,0,0,0.5);
+}
+
+.modal-dialog {
+    width: 700px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+fieldset {
+    width: 700px;
+    margin: 0 auto;
+    border: none;
+}
+
+    fieldset legend {
+        display: block;
+        margin: 20px 0;
+        padding-left: 43px;
+        width: 100%;
+        background: #e21e22;
+        color: #fff;
+        font-family: 'Microsoft YaHei';
+        font-size: 16px;
+        line-height: 43px;
+    }
+
+.showMore {
+    display: none;
+}
+
+#moreoption, .agreement {
+    color: #fc0;
+    cursor: pointer;
+}
+
+    #moreoption:hover,
+    .agreement:hover {
+        color: #c39c00;
+    }
+
+a.agreement:hover {
+    text-decoration: underline;
+}
+
+.hasShow {
+    display: block;
+    -webkit-transition: all linear 3s;
+    -moz-transition: all linear 3s;
+    transition: all linear 3s;
+}
+/*輸入驗證碼的群組*/
+#checkcode-input-group {
+    display: inline-block;
+    float: left;
+    width: 203px;
+    height: 32px;
+    background: #e5e5e5;
+}
+
+    #checkcode-input-group > input {
+        display: inline-block;
+        float: left;
+    }
+
+    #checkcode-input-group > span {
+        float: left;
+        width: 30%;
+    }
+
+.control-info > img {
+    height: 29px;
+}
+
+.checkcode {
+    position: relative;
+}
+
+    .checkcode img {
+        width: 100%;
+        height: 100%;
+        -moz-border-radius: 3px;
+             border-radius: 3px;
+    }
+
+#btn-submit,
+.form-btn {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    -moz-border-radius: 3px;
+         border-radius: 3px;
+    width: 150px;
+    height: 55px;
+    background: #e21e22;
+    border: none;
+    color: #fff;
+    font-family: 'Microsoft YaHei';
+    font-size: 16px;
+    -webkit-transition: all 0.3s;
+       -moz-transition: all 0.3s;
+            transition: all 0.3s;
+}
+
+    #btn-submit:hover,
+    .form-btn:hover {
+        color: #e21e22;
+        background: #fff;
+        border: 2px solid #e21e22;
+    }
+
+.modal-header {
+    color: #fff;
+    text-align: left;
+    background: #808080;
+}
+
+.modal-content,
+.modal-dialog,
+.modal-body,
+.modal-footer {
+    background: #fff;
+}
+
+.modal-footer {
+    margin-top: 15px;
+    padding: 19px 20px 20px;
+    text-align: right;
+    border-top: 1px solid #e5e5e5;
+}
+
+.modal-body > ul {
+    list-style-type: disc;
+    padding-left: 30px;
+}
+
+    .modal-body > ul li {
+        line-height: 2em;
+    }
+
+.modal-header > .modal-title {
+    color: #fff;
+    font-weight: normal;
+}
+
+.lineheight {
+    color: #ff0000;
+}

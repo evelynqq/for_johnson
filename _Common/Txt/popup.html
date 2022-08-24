@@ -1,0 +1,136 @@
+<!-- 最新消息彈窗 -->
+<div id="marquee-wrapper">
+    <aside id="marquee">
+        <header>
+            <h2>最新消息</h2>
+        </header>
+        <ul id="newsBags">
+            <!-- ngRepeat: news in newsBags track by $index -->
+            <li>★公司入款帐户不定时更新,请会员入款仔细查看最新收款帐户,若转入已下架帐户公司一概不负责</li>
+            <!-- end ngRepeat: news in newsBags track by $index -->
+            <li>★建议会员多加使用QQ钱包,若出现商户限额或其他错误信息,请多加重新提交尝试即可</li>
+            <!-- end ngRepeat: news in newsBags track by $index -->
+            <li>★近期有不肖诈骗团体利用劫持网页手法使会员开启GStargaming网页时跳转至其他非法网站,请各位会员小心资金安全,GStargaming官网并没有其他网站与网址,GStargaming关心您
+            </li>
+            <!-- end ngRepeat: news in newsBags track by $index -->
+            <li>★目前一天取款前五次免手续费出款，第六次開始收取50元手续费，以最后一笔取款往前推算24小时，建议会员可以24小时取款五次以内，就不会收取手续费用</li>
+            <!-- end ngRepeat: news in newsBags track by $index -->
+        </ul>
+        <footer>
+            <span onclick="closeMarquee()">關閉</span>
+        </footer>
+    </aside>
+</div>
+<!-- 最新消息彈窗結束 -->
+<!-- 一鍵取回資金彈窗 -->
+<div class="modal fade" id="account-popup">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header ng-scope">
+                <button onclick="modalClose()" type="button" class="close">×</button>
+                <h4 class="modal-title">帐户余额</h4>
+            </div>
+            <div class="modal-body s-modal">
+                <div class="header-button">
+                    <button>資金回收</button>
+                    <button>刷新餘額</button>
+                </div>
+                <div>
+                    <span>帐户余额：1,650.73</span>
+                </div>
+                <span>余额明細：</span>
+                <table class="average">
+                    <thead>
+                        <tr>
+                            <th>钱包</th>
+                            <th>余额</th>
+                            <th>钱包状态</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>主站</td>
+                            <td class="money">$ 0</td>
+                            <td><span class="normal" title="正常"><i class="fa fa-check"></i> 正常</span></td>
+                        </tr>
+                        <tr>
+                            <td>MW2</td>
+                            <td class="money">$ 0.20</td>
+                            <td><span class="disable" title="停用"><i class="fa fa-times"></i> 維護中</span></td>
+                        </tr>
+                        <tr>
+                            <td>AG</td>
+                            <td class="money">$ 1,650.48</td>
+                            <td><span class="normal" title="正常"><i class="fa fa-check"></i> 正常</span></td>
+                        </tr>
+                        <tr>
+                            <td>主站</td>
+                            <td class="money">$ 0</td>
+                            <td><span class="normal" title="正常"><i class="fa fa-check"></i> 正常</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="alert alert-warning">
+                    <span>維護中的遊戲因遊戲商限制可能無法取得最即時的餘額資訊及取回餘額。若發生無法取回情形，請稍待遊戲館維護結束後在嘗試。</span>
+                </div>
+                <ul id="pager">
+                    <li ng-click="startPage()">&lt;&lt;</li>
+                    <li ng-click="prevPage()">&lt;</li>
+                    <li><span ng-bind="currentPage+1" class="ng-binding">1</span>/<span ng-bind="pageCount()"
+                            class="ng-binding">8</span></li>
+                    <li ng-click="nextPage()">&gt;</li>
+                    <li ng-click="endPage()">&gt;&gt;</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 一鍵取回資金彈窗結束 -->
+<!-- 手機驗證彈窗 -->
+<div class="modal fade" id="captcha-popup">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <section class="on">
+                <div class="modal-header ng-scope">
+                    <button onclick="modalClose()" type="button" class="close">×</button>
+                    <h4 class="modal-title">验证联络资料-确认手机号</h4>
+                </div>
+                <div class="modal-body s-modal">
+                    <p>系统将传送验证码到以下手机号码，请确认：</p>
+                    <div>
+                        <span>+86</span>
+                        <input type="text">
+                    </div>
+                    <button onclick="captchaNextPage(this)">获取验证码</button>
+                </div>
+            </section>
+            <section>
+                <div class="modal-header ng-scope">
+                    <button onclick="modalClose()" type="button" class="close">×</button>
+                    <h4 class="modal-title">验证联络资料-输入验证码</h4>
+                </div>
+                <div class="modal-body s-modal">
+                    <p>系统已传送验证码到以下手机号码，请确认：</p>
+                    <p>＋86 13******789</p>
+                    <p>验证码将在 <span class="text-danger">09:45</span> 后失效</p>
+                    <p>若您无法收到验证码,请 <a onclick="captchaPrevPage(this)">重新获取</a></p>
+                    <input type="text" class="captcha">
+                    <button onclick="captchaNextPage(this)">继续</button>
+                    <span class="text-danger">验证码不正确, 请重新输入</span>
+                </div>
+            </section>
+            <section>
+                <div class="modal-header ng-scope">
+                    <button onclick="modalClose(),captchaReset()" type="button" class="close">×</button>
+                    <h4 class="modal-title">注册成功</h4>
+                </div>
+                <div class="modal-body s-modal">
+                    <p>注册成功</p>
+                    <button onclick="window.location.href='../Home/index.html'">进入游戏首页</button>
+                    <button onclick="window.location.href='../Deposit/index.html'">立即存款</button>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+<!-- 手機驗證彈窗結束 -->

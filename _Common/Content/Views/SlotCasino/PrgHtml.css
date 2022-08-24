@@ -1,0 +1,73 @@
+﻿/* #region header */
+#search {
+    background-color: #ff800d;
+}
+/* #endregion header */
+
+/* #region nav */
+nav {
+    background-color: #ff800d;
+}
+
+#game-nav > li:hover > span,
+#game-nav > li.active > span {
+    color: #fff;
+    font-weight: bold;
+    background-color: #333;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+}
+
+ol.subnav > li {
+    color: #fff;
+    background-color: #ff800d;
+}
+
+    ol.subnav > li:hover {
+        background-color: #333;
+    }
+/* #endregion nav */
+
+/* #region recommend-list */
+#recommend-list .slick-dots li.slick-active,
+#recommend-list .slick-dots li.slick-active:hover,
+#recommend-list .slick-prev:hover,
+#recommend-list .slick-next:hover {
+    background-color: #ff800d;
+}
+
+#recommend-list .list-title {
+    border-bottom: 2px solid #ff800d;
+}
+
+    #recommend-list .list-title span {
+        background-color: #ff800d;
+    }
+
+    #recommend-list .list-title a {
+        color: #ff800d;
+    }
+/* #endregion recommend-list */
+
+/* #region 游戏列表区块 */
+.game-list li:hover {
+    background-color: #ff800d;
+    border-color: #ff800d;
+}
+
+    .game-list li:hover .game-logo:before {
+        background-image: url('../../../../_Common/Content/Views/SlotCasino/PRG/hover.png');
+    }
+
+    .game-list li:hover .game-text {
+        color: #fff;
+    }
+/* #endregion 游戏列表区块 */
+
+/* #region pager */
+#pager > li[ng-click]:hover {
+    color: #fff;
+    background-color: #ff800d;
+}
+/* #endregion pager */

@@ -1,0 +1,157 @@
+﻿@import "../../../../_Common/Css/GameCode";
+
+#nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    display: inline-block;
+    margin-top: 103px;
+    text-align: center;
+    &.ScrollTop {
+        position: fixed;
+        margin-top: 0;
+        z-index: 9;
+    }
+    ul {
+        width: 1100px;
+        height: 47px;
+        margin: 0 auto;
+        padding: 0 23px;
+        background: #ffc722;
+        list-style: none;
+        > li {
+            float: left;
+            position: relative;
+            height: 47px;
+            &:hover,
+            &.active {
+                background: #272727;
+                > a {
+                    color: #fff;
+                }
+            }
+            > a {
+                display: inline-block;
+                width: 131px;
+                color: #272727;
+                font-size: 14px;
+                font-family: "Microsoft JhengHei", "Microsoft YaHei";
+                text-align: center;
+                text-decoration: none;
+                text-transform: uppercase;
+                line-height: 47px;
+            }
+            &.hot > a {
+                background: url("../Shared/images/hot_n.gif") no-repeat right top;
+            }
+            &:hover .subnav {
+                display: block;
+                height: auto;
+                li {
+                    opacity: 1;
+                    transform: none;
+                    transition-delay: 0s;
+                }
+            }
+        }
+    }
+}
+
+.subnav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -27px;
+    z-index: 3;
+    list-style: none;
+    overflow: hidden;
+    perspective: 280px;
+    width: 540px;
+    ol {
+        float: left;
+        li {
+            position: relative;
+            display: block;
+            width: 180px;
+            height: 40px;
+            padding-left: 80px;
+            color: #fff;
+            font-size: 12px;
+            line-height: 40px;
+            text-align: left;
+            background-color: #272727;
+            background-repeat: no-repeat;
+            background-position: left center;
+            background-size: 40% auto;
+            background-position-x: 10px;
+            a {
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                padding-left: 70px;
+                color: inherit;
+                text-decoration: none;
+            }
+            &:hover {
+                background-color: #363533;
+            }
+            &.hot {
+                color: #f00;
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 2px;
+                    left: 2px;
+                    display: inline-block;
+                    width: 21px;
+                    height: 12px;
+                    background: url("../Shared/images/hot_n.gif") no-repeat center center;
+                }
+            }
+        }
+    }
+}
+
+@each $gamebox in $game-list {
+    .subnav li.#{$gamebox} {
+        background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v2/color/Game/#{$gamebox}.png');
+    }
+}
+
+@each $gamebox in $live-list {
+    .subnav li.#{$gamebox} {
+        background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v2/color/live/#{$gamebox}.png');
+    }
+}
+
+@each $gamebox in $sport-list {
+    .subnav li.#{$gamebox} {
+        background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v2/color/Sport/#{$gamebox}.png');
+    }
+}
+
+@each $gamebox in $esport-list {
+    .subnav li.#{$gamebox} {
+        background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v2/color/Esport/#{$gamebox}.png');
+    }
+}
+
+@each $gamebox in $lottery-list {
+    .subnav li.#{$gamebox} {
+        background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v2/color/Lottery/#{$gamebox}.png');
+    }
+}
+
+@each $gamebox in $board-list {
+    .subnav li.#{$gamebox} {
+        background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v2/color/Board/#{$gamebox}.png');
+    }
+}
+
+@each $gamebox in $fish-list {
+    .subnav li.#{$gamebox} {
+        background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v2/color/Fish/#{$gamebox}.png');
+    }
+}

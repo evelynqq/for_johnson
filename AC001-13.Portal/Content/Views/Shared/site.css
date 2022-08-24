@@ -1,0 +1,882 @@
+@charset "UTF-8";
+/* #region base */
+body {
+  font-size: 13px;
+  font-family: 'Microsoft YaHei';
+  background-color: #374f7e;
+}
+
+body.layout {
+  min-width: 1000px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+iframe {
+  border: none;
+}
+
+[ng-click] {
+  cursor: pointer;
+}
+
+ol, ul {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* #endregion base */
+/* #region LoginToGame */
+#logingame-body {
+  background: #3c260e;
+}
+
+/* #endregion LoginToGame */
+/* #region header */
+#header {
+  height: 200px;
+}
+
+/* #endregion header */
+/* #region logo */
+#logo-bg {
+  position: relative;
+  display: inline-block;
+  width: 312px;
+  height: 70px;
+  margin: 35px 0 0 40px;
+  text-align: center;
+  background: url("../../../../_Common/Content/Views/Shared/images/logo_w.png") no-repeat;
+  background-size: auto 100%;
+}
+
+#logo-bg iframe {
+  display: none;
+}
+
+#logo-bg > a {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  margin: auto 0;
+}
+
+/*#endregion logo */
+/* #region top-nav */
+#top-nav {
+  position: absolute;
+  right: 40px;
+  top: 0;
+  height: 40px;
+}
+
+#top-nav li {
+  float: left;
+  line-height: 40px;
+  text-align: center;
+}
+
+#top-nav li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#top-nav li a.reg,
+#top-nav li a.freeplay {
+  color: #e7ceb0;
+}
+
+#top-nav li a:hover {
+  color: #00b9ff;
+}
+
+#top-nav li a:before {
+  content: '|';
+  margin: 0 5px;
+  color: #fff;
+}
+
+#top-nav li a.home:before {
+  display: none;
+}
+
+/* #endregion top-nav */
+/* #region language 選擇語系 */
+#language {
+  margin-right: 10px;
+}
+
+#language span {
+  display: inline-block;
+  margin: 0 2px;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+#language span[data-language="zh-CN"] {
+  background: url("../Shared/images/ch.gif") no-repeat;
+}
+
+#language span[data-language="zh-TW"] {
+  background: url("../Shared/images/tw.gif") no-repeat;
+}
+
+#language span[data-language="en-US"] {
+  background: url("../Shared/images/en.gif") no-repeat;
+}
+
+#language span[data-language="th"] {
+  display: none;
+}
+
+/* #endregion language 選擇語系 */
+/* #region nav 導覽列 */
+#nav {
+  position: absolute;
+  right: 30px;
+  top: 50px;
+  height: 42px;
+}
+
+#nav > ul > li {
+  position: relative;
+  float: left;
+  width: 83px;
+  height: 41px;
+  line-height: 42px;
+  text-align: center;
+}
+
+#nav > ul > li a {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+#nav > ul > li a:hover {
+  color: #00b9ff;
+}
+
+#nav > ul > li:hover .subnav {
+  display: block;
+  background-color: #fff;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 2px 80px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 80px 0 rgba(0, 0, 0, 0.2);
+}
+
+#nav > ul > li:hover .subnav:before {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 8px;
+  height: 8px;
+  left: 210px;
+  top: -4px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background-color: inherit;
+}
+
+.subnav {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  width: 330px;
+  margin-left: -215px;
+  padding: 8px;
+  text-align: center;
+  z-index: 99;
+}
+
+.subnav.gamesub {
+  width: 330px;
+}
+
+.subnav li {
+  display: inline-block;
+  width: 100px;
+  height: 36px;
+  line-height: 36px;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  color: #2e4369;
+  margin: 2px 0;
+  cursor: pointer;
+}
+
+.subnav li:hover {
+  background: #38517e;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.subnav li:before {
+  width: 100px;
+  height: 36px;
+  display: inline-block;
+  line-height: 36px;
+  text-align: center;
+}
+
+.subnav li:hover:before {
+  color: #fff;
+  background-color: rgba(1, 3, 25, 0.8);
+  border-radius: 3px;
+}
+
+/* #endregion nav 導覽列 */
+/* #region  用來包覆「免費試玩」和「帳號的動作操作與資訊顯示區塊 */
+#account-bot {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+/* #endregion  用來包覆「免費試玩」和「帳號的動作操作與資訊顯示區塊*/
+/* #region loginbar 顯示「登入帳號」區塊 */
+#account-box {
+  position: absolute;
+  top: -470px;
+  right: 40px;
+  display: inline-block;
+  width: 975px;
+  height: 42px;
+  text-align: right;
+}
+
+#account-box > form {
+  position: relative;
+  display: inline-block;
+  padding-left: 110px;
+  line-height: 42px;
+}
+
+#account-box > form input {
+  width: 190px;
+  height: 36px;
+  padding: 0 10px;
+  color: #292929;
+  font-size: 13px;
+  background-color: #fff;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  border: 1px solid #d3d5d8;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+#account-box > form input:hover {
+  border: 1px solid #829ca9;
+}
+
+#account-box > form input:focus {
+  border: 1px solid #00b9ff;
+}
+
+#account-box .login-btn,
+#account-box .logout-btn,
+#account-box .reg-btn,
+#account-box .forget-btn {
+  color: #fff;
+  display: inline-block;
+  width: 85px;
+  height: 36px;
+  line-height: 32px;
+  font-size: 13px;
+  border-radius: 3px;
+  text-align: center;
+  -webkit-transition: all .15s ease-in-out;
+  -o-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out;
+}
+
+#account-box .login-btn,
+#account-box .logout-btn {
+  background-color: #00b9ff;
+  border-color: #00b9ff;
+}
+
+#account-box .login-btn:hover,
+#account-box .logout-btn:hover {
+  background-color: #00a4df;
+  border-color: #00a4df;
+}
+
+#account-box .forget-btn {
+  background-color: #2ED06E;
+  border-color: #2ED06E;
+}
+
+#account-box .forget-btn:hover {
+  background-color: #28B862;
+  border-color: #28B862;
+}
+
+#account-box .reg-btn {
+  width: 99px;
+  color: #00b9ff;
+  background-color: transparent;
+  border: 1px solid #00b9ff;
+  text-decoration: none;
+  line-height: 34px;
+}
+
+#account-box .reg-btn:hover {
+  color: #FFF;
+  background-color: #00b9ff;
+  border-color: #00b9ff;
+}
+
+#check-code-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+#captcha {
+  position: absolute;
+  top: 11px;
+  right: 10px;
+  width: auto;
+  height: 19px;
+}
+
+#agree {
+  display: inline-block;
+  position: absolute;
+  top: 40px;
+  right: 150px;
+  padding: 2px 5px;
+  line-height: 20px;
+  font-size: 13px;
+  color: #d3d5d8;
+}
+
+#agree a {
+  color: #00b9ff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* #endregion loginbar 顯示「登入帳號」區塊 */
+/* #region account-info 登入後, 顯示「帳號資訊」區塊 */
+ul#account-info {
+  width: 100%;
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+ul#account-info > li {
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 14px;
+  color: #fff;
+  line-height: 36px;
+  vertical-align: top;
+}
+
+ul#account-info > li > span.account {
+  display: inline-block;
+  max-width: 8em;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: top;
+  overflow: hidden;
+}
+
+ul#account-info > li a {
+  cursor: pointer;
+}
+
+ul#account-info > li a:hover {
+  color: #ffd800;
+}
+
+ul#account-info #member-level {
+  color: #fff;
+  background: #2ab9ff;
+}
+
+ul#account-info #member-level:before {
+  background: #fff;
+}
+
+#action-box {
+  display: inline-block;
+  line-height: 36px;
+  vertical-align: top;
+  margin-left: 5px;
+}
+
+#action-box > a {
+  text-align: center;
+  text-decoration: none;
+}
+
+#action-box .logout-btn,
+#action-box .forget-btn {
+  line-height: 36px;
+}
+
+/* #endregion account-info 登入後, 顯示「帳號資訊」區塊 */
+/* #region account-nav 登入後的子導覽列 (帳號相關操作) */
+ul#account-nav {
+  text-align: right;
+  vertical-align: top;
+}
+
+ul#account-nav > li {
+  display: inline-block;
+  line-height: 36px;
+  background-color: #2e4369;
+  border: 1px solid #2e4369;
+  border-radius: 3px;
+  width: 90px;
+  margin-right: 2px;
+  text-align: center;
+}
+
+ul#account-nav > li:first-child {
+  margin-left: 0;
+}
+
+ul#account-nav > li > a {
+  display: inline-block;
+  color: #fff;
+  font-size: 13px;
+  text-decoration: none;
+  text-align: center;
+}
+
+ul#account-nav > li:hover {
+  background-color: #253655;
+  border: 1px solid #829ca9;
+}
+
+ul#account-nav > li > a:hover {
+  color: #fff;
+}
+
+/* #endregion 登入後的子導覽列 (帳號相關操作) */
+/* #region banner */
+#banner {
+  height: 300px;
+  background-image: url("../Shared/images/welcome_banner.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* #endregion banner */
+/* #region news 跑馬燈 */
+#news {
+  position: relative;
+  height: 38px;
+  padding: 0 40px;
+  background-color: #fff;
+  z-index: 2;
+}
+
+#news .wrapper {
+  width: 100%;
+  position: relative;
+  padding-left: 50px;
+  background: none;
+}
+
+#news .wrapper:before {
+  content: '最新消息';
+  position: absolute;
+  left: 0;
+  line-height: 38px;
+  color: #37517E;
+}
+
+#hot-news {
+  white-space: nowrap;
+  overflow: hidden;
+  margin-left: 10px;
+}
+
+#hot-news div.main-cell {
+  width: 1000px;
+  padding: 0 20px;
+  overflow: hidden;
+}
+
+#hot-news li {
+  display: inline-block;
+  margin-right: 5px;
+  color: #829ca9;
+  font-size: 13px;
+  line-height: 38px;
+  vertical-align: top;
+}
+
+#hot-news li:hover {
+  color: #00b9ff;
+}
+
+/* #endregion 跑馬燈 */
+/* #region content 內頁 */
+#content {
+  padding: 15px 0;
+  background: #f6f7f9;
+}
+
+/* #endregion content 內頁 */
+/* #region footer */
+#footer {
+  height: 276px;
+  text-align: center;
+  background: #37507e;
+}
+
+#footer-info {
+  width: 100%;
+  height: 61px;
+  background: #263754;
+}
+
+#footer-info ul {
+  width: 1000px;
+  height: 61px;
+  background: url("../Shared/images/footer_info.png") no-repeat center;
+}
+
+#footer-info ul li {
+  float: left;
+  width: 250px;
+  height: 45px;
+  padding-top: 24px;
+  color: #fff;
+  font-size: 14px;
+  text-align: left;
+}
+
+#footer-info ul li.QQ {
+  padding-left: 70px;
+}
+
+#footer-info ul li.mail {
+  padding-left: 45px;
+}
+
+#footer-info ul li.promotion {
+  padding: 24px 20px 0 65px;
+}
+
+#footer-info ul li.chat {
+  padding: 24px 15px 0 55px;
+}
+
+#footer-info ul li a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+#footer-nav {
+  margin: 25px 0;
+}
+
+#footer-nav li {
+  float: left;
+}
+
+#footer-nav a {
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+}
+
+#footer-nav a:hover {
+  color: #e6e6e6;
+  text-decoration: underline;
+}
+
+#footer-nav li a:before {
+  content: '|';
+  color: #6f8691;
+  margin: 0 10px;
+}
+
+#footer-nav li:first-child a:before {
+  display: none;
+}
+
+#footer-logo {
+  padding-top: 60px;
+  text-align: center;
+  background: url("../Shared/images/footer_logo.png") no-repeat center top;
+}
+
+#footer-logo p {
+  color: #6f8691;
+}
+
+/* #endregion footer */
+/* #region 近期浏览 */
+#review-list {
+  position: fixed;
+  bottom: -77px;
+  left: 0;
+  width: 100%;
+  height: 77px;
+  background: rgba(38, 55, 84, 0.8);
+  color: #fff;
+  z-index: 1;
+  -webkit-transition: bottom 0.4s;
+  -o-transition: bottom 0.4s;
+  transition: bottom 0.4s;
+}
+
+#review-list.open {
+  bottom: 0;
+}
+
+#review-list .up,
+#review-list .down {
+  position: absolute;
+  top: -24px;
+  left: 0;
+  width: 150px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  background: url("../../../../_Common/Content/Views/Shared/images/review/tab.png") no-repeat;
+}
+
+#review-list .up:after,
+#review-list .down:after {
+  content: '';
+  display: inline-block;
+  margin-left: 5px;
+  width: 7px;
+  height: 8px;
+}
+
+#review-list .up:after {
+  background: url("../../../../_Common/Content/Views/Shared/images/review/up.png") no-repeat;
+}
+
+#review-list .down:after {
+  background: url("../../../../_Common/Content/Views/Shared/images/review/down.png") no-repeat;
+}
+
+#review-list .wrapper {
+  padding-left: 80px;
+  height: 77px;
+  background: url("../../../../_Common/Content/Views/Shared/images/review/txt.png") no-repeat 20px 15px;
+}
+
+#review-box li {
+  display: inline-block;
+  position: relative;
+  margin: 10px 8px 0;
+  width: 60px;
+  height: 60px;
+}
+
+#review-box li.no-review {
+  line-height: 60px;
+}
+
+#review-box li img {
+  width: 60px;
+  height: 60px;
+}
+
+#review-box li div {
+  display: none;
+  position: absolute;
+  top: -31px;
+  left: -5px;
+  padding-top: 2px;
+  width: 70px;
+  height: 29px;
+  text-align: center;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  background: url("../../../../_Common/Content/Views/Shared/images/review/title.png") no-repeat;
+}
+
+#review-box li:hover div {
+  display: block;
+}
+
+/* #endregion 近期浏览 */
+/* #region mailbox 站内信 不同版请由此修改 */
+#mailbox {
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  text-decoration: none;
+  background: url("../../../../_Common/Content/Views/Shared/images/m_icon.png") no-repeat;
+}
+
+#mailbox > span, #mailbox > span:hover {
+  position: absolute;
+  left: 80%;
+  bottom: 60%;
+  min-width: 16px;
+  padding: 0 2px;
+  height: 16px;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  line-height: 16px;
+  border-radius: 5px;
+  background: #04b9ff;
+}
+
+/* #endregion mailbox 站内信 不同版请由此修改 */
+/* #region 彈跳視窗跑馬燈資訊內容 */
+#marquee-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  display: none;
+}
+
+#marquee-wrapper.show {
+  display: block;
+  z-index: 1000;
+  background-image: url("../../../../_Common/Content/Views/Shared/images/transparent-black.png");
+}
+
+#marquee {
+  width: 600px;
+  max-height: 500px;
+  margin: 30px auto 0 auto;
+  background-color: #fff;
+  background-image: url("../../../../_Common/Content/Views/Shared/images/table_background.jpg");
+  border-radius: 5px;
+  cursor: default;
+  -webkit-transition: margin-top ease-in 300ms;
+  -o-transition: margin-top ease-in 300ms;
+  transition: margin-top ease-in 300ms;
+}
+
+#marquee > header {
+  text-align: center;
+  background-color: #e9e9e9;
+  border-bottom: 1px solid #CCC;
+  border-radius: 5px 5px 0 0;
+}
+
+#marquee > header > h2 {
+  margin: 0;
+  color: #0080e3;
+  font-size: 21px;
+  line-height: 60px;
+}
+
+ul#newsBags {
+  margin: 0;
+  padding: 10px 50px;
+  max-height: 380px;
+  overflow: auto;
+}
+
+ul#newsBags > li {
+  color: #454545;
+  font-size: 13px;
+  line-height: 27px;
+  list-style: disc;
+  white-space: pre-line;
+  border-bottom: 1px dashed #999;
+}
+
+#marquee > footer {
+  text-align: center;
+  line-height: 80px;
+  background-color: #e9e9e9;
+  background-image: -webkit-radial-gradient(center top, ellipse farthest-side, rgba(0, 0, 0, 0.3), transparent);
+  background-size: 100% 8px;
+  background-repeat: no-repeat;
+  border-top: 1px solid #ccc;
+  border-radius: 0 0 5px 5px;
+}
+
+#marquee > footer > span {
+  display: inline-block;
+  width: 119px;
+  font-size: 15px;
+  font-weight: bolder;
+  line-height: 45.5px;
+  background-image: url("../../../../_Common/Content/Views/Shared/images/sent_bn.png");
+  cursor: pointer;
+}
+
+#marquee > footer > span:hover {
+  background-position: 0 -45.5px;
+}
+
+/* #endregion 彈跳視窗跑馬燈資訊內容 */
+/* #region 弹跳出来的notice Dialog */
+/* title 文字背景顏色此修改 */
+.ui-widget-header {
+  min-height: 30px;
+  line-height: 30px;
+}
+
+.ui-dialog {
+  z-index: 999;
+}
+
+.ui-dialog .ui-dialog-title {
+  font-size: 13px;
+  line-height: 15px;
+}
+
+.ui-dialog .ui-dialog-buttonpane {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only {
+  font-size: 12px;
+}
+
+.ui-dialog .ui-dialog-buttonpane button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 3px 6px;
+  background: #ffd800;
+}
+
+/* Directive: popup-dialog 若modal:true, 会出现fullscreen overlay, 下面可以设定样式 */
+/* #endregion 弹跳出来的notice Dialog */
+/*# sourceMappingURL=site.css.map */

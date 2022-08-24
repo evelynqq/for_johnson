@@ -1,0 +1,426 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About_Me" xml:space="preserve">
+    <value>เกี่ยวกกับฉัน</value>
+  </data>
+  <data name="Account" xml:space="preserve">
+    <value>บัญชี</value>
+  </data>
+  <data name="AddFavorite" xml:space="preserve">
+    <value>รายการโปรดใหม่</value>
+  </data>
+  <data name="AddHomePage" xml:space="preserve">
+    <value>หน้าแรก</value>
+  </data>
+  <data name="Agreement" xml:space="preserve">
+    <value>Agreement</value>
+  </data>
+  <data name="AlternateDomain" xml:space="preserve">
+    <value>โดเมนอื่น</value>
+  </data>
+  <data name="Balance" xml:space="preserve">
+    <value>ยอดคงเหลือ</value>
+  </data>
+  <data name="BetRecord" xml:space="preserve">
+    <value>รายการเดิมพัน</value>
+  </data>
+  <data name="ChangeMoneyPassword" xml:space="preserve">
+    <value>เปลี่ยนรหัสผ่านเงิน</value>
+  </data>
+  <data name="Change_Password" xml:space="preserve">
+    <value>เปลี่ยนรหัสลับ</value>
+  </data>
+  <data name="CheckCode" xml:space="preserve">
+    <value>แคปช่า</value>
+  </data>
+  <data name="ClickAgree" xml:space="preserve">
+    <value>Click Sign agreed to</value>
+  </data>
+  <data name="Client" xml:space="preserve">
+    <value>ไคลเอนต์</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>ยืนยัน</value>
+  </data>
+  <data name="Footer_AboutUs" xml:space="preserve">
+    <value>เกี่ยวกับเรา</value>
+  </data>
+  <data name="Footer_Affiliation" xml:space="preserve">
+    <value>ผู้เข้าร่วมโครงการ</value>
+  </data>
+  <data name="Footer_Blog" xml:space="preserve">
+    <value>บล็อก</value>
+  </data>
+  <data name="Footer_ContactUs" xml:space="preserve">
+    <value>ติอต่อเรา</value>
+  </data>
+  <data name="Footer_Download" xml:space="preserve">
+    <value>ดาวน์โหลด</value>
+  </data>
+  <data name="Footer_FAQ" xml:space="preserve">
+    <value>คำถามที่พบบ่อย</value>
+  </data>
+  <data name="Footer_Guide" xml:space="preserve">
+    <value>คู่มือ</value>
+  </data>
+  <data name="Footer_HowToDeposit" xml:space="preserve">
+    <value>วิธีการฝากเงิน</value>
+  </data>
+  <data name="Footer_HowWithdrawals" xml:space="preserve">
+    <value>วิธีการถอนเงิน</value>
+  </data>
+  <data name="Footer_MobileBet" xml:space="preserve">
+    <value>พนันบนมือถือ</value>
+  </data>
+  <data name="Footer_Network_Detect" xml:space="preserve">
+    <value>ตรวจสอบเครือข่าย</value>
+  </data>
+  <data name="Footer_Responsible" xml:space="preserve">
+    <value>รับผิดชอบในการเดิมพัน</value>
+  </data>
+  <data name="Forget" xml:space="preserve">
+    <value>ลืมรหัสลับ</value>
+  </data>
+  <data name="Free_Play" xml:space="preserve">
+    <value>เล่นฟรี</value>
+  </data>
+  <data name="Girl" xml:space="preserve">
+    <value>การทำเป็นตัวอย่างหรือกวดวิชา</value>
+  </data>
+  <data name="Head_Title" xml:space="preserve">
+    <value>GPK DEMO</value>
+  </data>
+  <data name="Inquiry" xml:space="preserve">
+    <value>สอบถาม</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>กำลังโหลด</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>ลงชื่อเข้า</value>
+  </data>
+  <data name="LoginToAgent" xml:space="preserve">
+    <value>บริหาร</value>
+  </data>
+  <data name="LogoFlashIDTitle" xml:space="preserve">
+    <value>GPK DEMO โฮม</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>ลงชื่อออก</value>
+  </data>
+  <data name="Nav_AG" xml:space="preserve">
+    <value>ไอซ่าเกมมิ่ง</value>
+  </data>
+  <data name="Nav_AgentCooperation" xml:space="preserve">
+    <value>ตัวแทนสหกรณ์</value>
+  </data>
+  <data name="Nav_BBIN" xml:space="preserve">
+    <value>บีบี คาสิโน</value>
+  </data>
+  <data name="Nav_Casino" xml:space="preserve">
+    <value>บ่อนคาสิโน</value>
+  </data>
+  <data name="Nav_GPK" xml:space="preserve">
+    <value>คาสินโน จีพีเค</value>
+  </data>
+  <data name="Nav_Home" xml:space="preserve">
+    <value>หน้าแรก</value>
+  </data>
+  <data name="Nav_JoinUs" xml:space="preserve">
+    <value>ร่วมกับเรา</value>
+  </data>
+  <data name="Nav_LiveCasino" xml:space="preserve">
+    <value>คาสิโนสด</value>
+  </data>
+  <data name="Nav_LiveCasino_LiveTop" xml:space="preserve">
+    <value>สูงสุด</value>
+  </data>
+  <data name="Nav_LiveCasino_Multibet" xml:space="preserve">
+    <value>พนันหลายรูปแบบ</value>
+  </data>
+  <data name="Nav_LiveCasino_RobotLive" xml:space="preserve">
+    <value>ถ่ายทอดสดโรบอท/โรบอทไลฟ์</value>
+  </data>
+  <data name="Nav_LiveCasino_RobotMutlibet" xml:space="preserve">
+    <value>พนันหลายรูปแบบโรบอท</value>
+  </data>
+  <data name="Nav_Lottery" xml:space="preserve">
+    <value>สลากกินแบ่ง</value>
+  </data>
+  <data name="Nav_MG" xml:space="preserve">
+    <value>ไมโครเกมมิ่ง</value>
+  </data>
+  <data name="Nav_Promotions" xml:space="preserve">
+    <value>โปรโมชั่น</value>
+  </data>
+  <data name="Nav_PT" xml:space="preserve">
+    <value>PT คาสิโน</value>
+  </data>
+  <data name="Nav_SABA" xml:space="preserve">
+    <value>SABA กีฬา</value>
+  </data>
+  <data name="Nav_Sports" xml:space="preserve">
+    <value>กีฬา</value>
+  </data>
+  <data name="Nav_Ultimate" xml:space="preserve">
+    <value>สูงสุด</value>
+  </data>
+  <data name="Nav_VIP" xml:space="preserve">
+    <value>วีไอพี</value>
+  </data>
+  <data name="Nav_XTD" xml:space="preserve">
+    <value>XTD คาสิโน</value>
+  </data>
+  <data name="NewsInfo" xml:space="preserve">
+    <value>ข้อมูลข่าวสาร</value>
+  </data>
+  <data name="Online_Chat" xml:space="preserve">
+    <value>แชทออนไลน์</value>
+  </data>
+  <data name="Online_Deposit" xml:space="preserve">
+    <value>เงินฝากออนไลน์</value>
+  </data>
+  <data name="Online_Transfer" xml:space="preserve">
+    <value>โอนเงินออนไลน์</value>
+  </data>
+  <data name="Online_Withdraw" xml:space="preserve">
+    <value>ถอนออนไลน์</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>รหัสลับ</value>
+  </data>
+  <data name="Processing" xml:space="preserve">
+    <value>กำลังดำเนินการ...</value>
+  </data>
+  <data name="SelectLanguage" xml:space="preserve">
+    <value>ภาษา</value>
+  </data>
+  <data name="StationMail" xml:space="preserve">
+    <value>จดหมายสถานี</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>ยื่น</value>
+  </data>
+  <data name="Suggest1" xml:space="preserve">
+    <value>ความต้องการของระบบ : ไซต์บราวซ์ แนะนำความละเอียดสูงสุดที่ 1024x768 ซึ่งท่านบันทึกเกมส์ด้วยบราวซ์เซอร์ IE10</value>
+  </data>
+  <data name="Suggest2" xml:space="preserve">
+    <value>ลิขสิทธ์ © GPK DEMO สงวนสิทธิ</value>
+  </data>
+  <data name="Transaction_Record" xml:space="preserve">
+    <value>บันทึกรายการ</value>
+  </data>
+  <data name="Understand" xml:space="preserve">
+    <value>ฉันเข้าใจ</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>ล่าสุด</value>
+  </data>
+  <data name="VerifyDeposit" xml:space="preserve">
+    <value>ตรวจสอบการฝากเงิน</value>
+  </data>
+  <data name="WalletIsLocked" xml:space="preserve">
+    <value>กระเป๋าสตางค์ของคุณได้รับการแช่แข็งไม่สามารถเข้าถึงเงินกรุณาติดต่อฝ่ายบริการลูกค้าออนไลน</value>
+  </data>
+  <data name="Nav_HG" xml:space="preserve">
+    <value>CROWN กีฬา</value>
+  </data>
+  <data name="Online_Payment" xml:space="preserve">
+    <value>ชำระเงินออนไลน์</value>
+  </data>
+  <data name="Processing1" xml:space="preserve">
+    <value>กำลังประมวลผล ...</value>
+  </data>
+  <data name="Nav_GPI" xml:space="preserve">
+    <value>GPI คาสิโน</value>
+  </data>
+  <data name="Nav_EG" xml:space="preserve">
+    <value>EG คาสิโน</value>
+  </data>
+  <data name="Nav_EVO" xml:space="preserve">
+    <value>EVO คาสิโน</value>
+  </data>
+  <data name="Nav_GNS" xml:space="preserve">
+    <value>GNS คาสิโน</value>
+  </data>
+  <data name="Nav_PRG" xml:space="preserve">
+    <value>PP คาสิโน</value>
+  </data>
+  <data name="Nav_SG" xml:space="preserve">
+    <value>SG คาสิโน</value>
+  </data>
+  <data name="Nav_AB" xml:space="preserve">
+    <value>AB คาสิโน</value>
+  </data>
+  <data name="Nav_UG" xml:space="preserve">
+    <value>UG คาสิโน</value>
+  </data>
+  <data name="Nav_RG" xml:space="preserve">
+    <value>GPK คาสิโน</value>
+  </data>
+  <data name="Nav_MW" xml:space="preserve">
+    <value>MW คาสิโน</value>
+  </data>
+  <data name="Nav_IG" xml:space="preserve">
+    <value>IG คาสิโน</value>
+  </data>
+  <data name="Nav_HABA" xml:space="preserve">
+    <value>HB คาสิโน</value>
+  </data>
+  <data name="Nav_JDB" xml:space="preserve">
+    <value>JDB คาสิโน</value>
+  </data>
+  <data name="Nav_NETENT" xml:space="preserve">
+    <value>NE คาสิโน</value>
+  </data>
+  <data name="Nav_CQ9" xml:space="preserve">
+    <value>CQ9 คาสิโน</value>
+  </data>
+  <data name="Nav_GD" xml:space="preserve">
+    <value>GD คาสิโน</value>
+  </data>
+  <data name="Nav_REDTIGER" xml:space="preserve">
+    <value>RT คาสิโน</value>
+  </data>
+  <data name="Nav_SUNBET" xml:space="preserve">
+    <value>SUNBET คาสิโน</value>
+  </data>
+  <data name="Nav_GAMEART" xml:space="preserve">
+    <value>GA คาสิโน</value>
+  </data>
+  <data name="Nav_BG" xml:space="preserve">
+    <value>BG คาสิโน</value>
+  </data>
+  <data name="Nav_PG" xml:space="preserve">
+    <value>PG คาสิโน</value>
+  </data>
+  <data name="Nav_CMD" xml:space="preserve">
+    <value>CMD คาสิโน</value>
+  </data>
+  <data name="Nav_LG" xml:space="preserve">
+    <value>LG คาสิโน</value>
+  </data>
+  <data name="Nav_ISB" xml:space="preserve">
+    <value>ISB คาสิโน</value>
+  </data>
+  <data name="Nav_KG" xml:space="preserve">
+    <value>KG คาสิโน</value>
+  </data>
+</root>

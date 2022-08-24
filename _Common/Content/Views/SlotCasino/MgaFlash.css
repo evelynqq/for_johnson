@@ -1,0 +1,69 @@
+﻿/* #region header */
+#search {
+    background-color: #32b5e9;
+}
+/* #endregion header */
+
+/* #region nav */
+nav {
+    background-color: #32b5e9;
+}
+
+#game-nav > li:hover > span,
+#game-nav > li.active > span {
+    color: #000;
+    font-weight: bold;
+    background-color: #21e519;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+}
+
+ol.subnav > li {
+    background-color: #21e519;
+}
+
+    ol.subnav > li:hover {
+        color: #fff;
+        background-color: #32b5e9;
+    }
+/* #endregion nav */
+
+/* #region recommend-list */
+#recommend-list .slick-dots li.slick-active,
+#recommend-list .slick-dots li.slick-active:hover,
+#recommend-list .slick-prev:hover,
+#recommend-list .slick-next:hover {
+    background-color: #32b5e9;
+}
+
+#recommend-list .list-title {
+    border-bottom: 2px solid #32b5e9;
+}
+
+    #recommend-list .list-title span {
+        color: #000;
+        background-color: #32b5e9;
+    }
+
+    #recommend-list .list-title a {
+        color: #32b5e9;
+    }
+/* #endregion recommend-list */
+
+/* #region game-list */
+.game-list li:hover {
+    background-color: #32b5e9;
+    border-color: #32b5e9;
+}
+
+    .game-list li:hover .game-logo:before {
+        background-image: url('../../../../_Common/Content/Views/SlotCasino/MGA/hover.png');
+    }
+/* #endregion game-list */
+
+/* #region pager */
+#pager > li[ng-click]:hover {
+    background-color: #32b5e9;
+}
+/* #endregion pager */

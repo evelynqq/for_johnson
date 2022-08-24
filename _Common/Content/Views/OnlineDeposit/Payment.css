@@ -1,0 +1,429 @@
+﻿html, body {
+    font-size: 14px;
+    font-family: 'Microsoft JhengHei';
+    background: #e5e5e5
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important
+}
+
+body {
+    margin: 8px;
+    padding: 0
+}
+
+    body .container {
+        width: 734px;
+        margin: 0 auto
+    }
+
+.panel {
+    background: #fff;
+    border: 1px solid #ddd;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none
+}
+
+    .panel .panel-heading {
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center
+    }
+
+.panel-body > form {
+    width: 100%;
+    text-align: left;
+}
+
+.word-break {
+    word-break: break-all
+}
+
+.custom-deposit-color {
+    color: #fff
+}
+
+.custom-deposit-bg {
+    background-color: #d84066
+}
+
+.custom-deposit-color-r {
+    color: #d84066
+}
+
+.custom-deposit-bg-r {
+    background-color: #fff
+}
+
+.custom-deposit-hover:hover {
+    color: #fff;
+    background-color: #d84066
+}
+
+.Form .panel .panel-body {
+    padding: 0
+}
+
+    .Form .panel .panel-body .deposit-highlight {
+        color: red
+    }
+
+    .Form .panel .panel-body > div {
+        display: inline-block;
+        width: 50%;
+        height: 378px;
+        vertical-align: top
+    }
+
+    .Form .panel .panel-body .payment-list {
+        color: #999;
+        font-size: 14px;
+        text-align: left;
+        border-right: 1px solid #ddd;
+        overflow-y: auto
+    }
+
+        .Form .panel .panel-body .payment-list > div {
+            position: relative;
+            margin: 7px;
+            padding: 35px 35px 35px 15px;
+            background-color: #eee;
+            border: 1px solid #ddd;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
+            border-radius: 4px
+        }
+
+        .Form .panel .panel-body .payment-list p {
+            margin: 0;
+            line-height: 28px
+        }
+
+            .Form .panel .panel-body .payment-list p.title {
+                font-size: 16px;
+                word-break: break-all
+            }
+
+        .Form .panel .panel-body .payment-list > div i {
+            position: absolute;
+            right: 13px;
+            bottom: 14px;
+            font-size: 20px
+        }
+
+        .Form .panel .panel-body .payment-list > div.default i {
+            color: #ccc
+        }
+
+        .Form .panel .panel-body .payment-list > div.selected {
+            background-color: #fff;
+            border-width: 2px;
+            border-left-width: 8px;
+            border-style: solid
+        }
+
+            .Form .panel .panel-body .payment-list > div.selected p.title {
+                color: #333
+            }
+
+    .Form .panel .panel-body .form-section {
+        padding: 30px 10px 30px 50px;
+        color: #333;
+        font-size: 14px;
+        text-align: left;
+        overflow-y: auto
+    }
+
+        .Form .panel .panel-body .form-section p {
+            margin: 0 0 5px;
+            line-height: 28px
+        }
+
+        .Form .panel .panel-body .form-section .recommend-section > div {
+            display: inline-block;
+            width: 80px;
+            height: 40px;
+            vertical-align: top;
+            margin: 0 10px 10px 0;
+            padding: 0 5px;
+            color: #999;
+            font-size: 13px;
+            line-height: 38px;
+            text-align: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            border: 1px solid #ccc;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            border-radius: 5px
+        }
+
+        .Form .panel .panel-body .form-section .recommend-section .selected {
+            font-weight: bold
+        }
+
+        .Form .panel .panel-body .form-section .input-section {
+            margin-bottom: 10px
+        }
+
+        .Form .panel .panel-body .form-section button {
+            display: inline-block;
+            width: 119px;
+            height: 39px;
+            color: #333;
+            border: 1px solid #ccc;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
+            border-radius: 4px;
+            background: linear-gradient(180deg,rgba(253,253,253,1) 0%,rgba(253,253,253,1) 0%,rgba(224,224,224,1) 100%,rgba(224,224,224,1) 100%);
+            box-shadow: 0 1px 1px rgba(0,0,0,.0666666666666667),0 1px 0 0 rgba(255,255,255,.117647058823529) inset;
+            cursor: pointer
+        }
+
+            .Form .panel .panel-body .form-section button[disabled] {
+                color: #888;
+                opacity: .6;
+                cursor: no-drop
+            }
+
+    .Form .panel .panel-body .point-section .form-group {
+        margin: 0
+    }
+
+        .Form .panel .panel-body .point-section .form-group .control-div {
+            width: 50%;
+        }
+
+        .Form .panel .panel-body .point-section .form-group .control-label {
+            width: 33%;
+            padding: 0;
+            font-weight: normal
+        }
+
+.Form .input-group {
+    position: relative;
+    display: inline-table;
+    border-collapse: separate
+}
+
+    .Form .input-group .form-control {
+        display: table-cell;
+        width: 221px;
+        position: relative;
+        z-index: 2;
+        float: left;
+        margin-bottom: 0;
+        height: 34px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #555;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+        -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+        -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+        transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s
+    }
+
+        .Form .input-group .form-control:focus {
+            outline: none
+        }
+
+        .Form .input-group .form-control:last-child {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0
+        }
+
+        .Form .input-group-addon:not(:first-child):not(:last-child), .Form .input-group .form-control:not(:first-child):not(:last-child) {
+            -moz-border-radius: 0;
+            -webkit-border-radius: 0;
+            border-radius: 0
+        }
+
+    .Form .input-group.has-error .form-control {
+        border-color: #a94442
+    }
+
+.Form .input-group-addon {
+    display: table-cell;
+    width: auto;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    color: #555;
+    text-align: center;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    white-space: nowrap;
+    vertical-align: middle
+}
+
+    .Form .input-group-addon:first-child {
+        border-right: 0
+    }
+
+    .Form .input-group-addon:first-child {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0
+    }
+
+.Form .contain-inline-block {
+    font-size: 0
+}
+
+.Select .panel-body {
+    width: 60%;
+    margin: 0 auto
+}
+
+.Select .form-group .control-label {
+    width: 25%;
+    line-height: 34px;
+    text-align: right;
+}
+
+.Select .form-group > div {
+    display: inline-block;
+    width: 80%
+}
+
+.Select .form-group .form-control {
+    display: inline-block;
+    width: 70%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s
+}
+
+.Select .banks {
+    padding-top: 20px;
+    font-size: 0;
+    text-align: left
+}
+
+    .Select .banks > div {
+        display: inline-block;
+        width: 50%;
+        font-size: 14px;
+        vertical-align: top;
+        margin-bottom: 20px
+    }
+
+        .Select .banks > div input[type=radio] {
+            margin-top: 0;
+            vertical-align: middle
+        }
+
+.DTPPPay table {
+    margin: 0 auto;
+    width: 400px;
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+    .DTPPPay table tbody tr td {
+        background: #fff;
+        border: 1px solid #ccc;
+        padding: 5px 10px;
+        text-align: justify
+    }
+
+        .DTPPPay table tbody tr td:first-child {
+            font-weight: bold
+        }
+
+    .DTPPPay table tbody tr.highlight {
+        color: #ab1b1b
+    }
+
+        .DTPPPay table tbody tr.highlight td {
+            background: #f2dede;
+            border-color: #efaaaa
+        }
+
+    .DTPPPay table tbody tr.border-high td {
+        border-bottom: 1px solid #efaaaa
+    }
+
+.DTPPPay img {
+    max-width: 300px
+}
+
+.loading {
+    position: relative;
+    width: .7em;
+    height: .7em;
+    margin: .7em auto 2.1em;
+    font-size: 25px;
+    text-indent: -9999em;
+    border-radius: 50%;
+    -webkit-animation: load5 .5s infinite ease;
+    animation: load5 .5s infinite ease;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+@-webkit-keyframes load5 {
+    0%, 100% {
+        box-shadow: -3em .7em 0em 0em rgba(255, 255, 255, 0.8), -1.5em .7em 0em 0em rgba(255, 255, 255, 0.2), 0em .7em 0em 0em rgba(255, 255, 255, 0.2), 1.5em .7em 0em 0em rgba(255, 255, 255, 0.4), 3em .7em 0em 0em rgba(255, 255, 255, 0.6);
+    }
+
+    20% {
+        box-shadow: -3em .7em 0em 0em rgba(255, 255, 255, 0.6), -1.5em .7em 0em 0em rgba(255, 255, 255, 0.8), 0em .7em 0em 0em rgba(255, 255, 255, 0.2), 1.5em .7em 0em 0em rgba(255, 255, 255, 0.2), 3em .7em 0em 0em rgba(255, 255, 255, 0.4);
+    }
+
+    40% {
+        box-shadow: -3em .7em 0em 0em rgba(255, 255, 255, 0.4), -1.5em .7em 0em 0em rgba(255, 255, 255, 0.6), 0em .7em 0em 0em rgba(255, 255, 255, 0.8), 1.5em .7em 0em 0em rgba(255, 255, 255, 0.2), 3em .7em 0em 0em rgba(255, 255, 255, 0.2);
+    }
+
+    60% {
+        box-shadow: -3em .7em 0em 0em rgba(255, 255, 255, 0.2), -1.5em .7em 0em 0em rgba(255, 255, 255, 0.4), 0em .7em 0em 0em rgba(255, 255, 255, 0.6), 1.5em .7em 0em 0em rgba(255, 255, 255, 0.8), 3em .7em 0em 0em rgba(255, 255, 255, 0.2);
+    }
+
+    80% {
+        box-shadow: -3em .7em 0em 0em rgba(255, 255, 255, 0.2), -1.5em .7em 0em 0em rgba(255, 255, 255, 0.2), 0em .7em 0em 0em rgba(255, 255, 255, 0.4), 1.5em .7em 0em 0em rgba(255, 255, 255, 0.6), 3em .7em 0em 0em rgba(255, 255, 255, 0.8);
+    }
+}
+
+@keyframes load5 {
+    0%, 100% {
+        box-shadow: -3em .7em 0em 0em rgba(255, 255, 255, 0.8), -1.5em .7em 0em 0em rgba(255, 255, 255, 0.2), 0em .7em 0em 0em rgba(255, 255, 255, 0.2), 1.5em .7em 0em 0em rgba(255, 255, 255, 0.4), 3em .7em 0em 0em rgba(255, 255, 255, 0.6);
+    }
+
+    20% {
+        box-shadow: -3em .7em 0em 0em rgba(255, 255, 255, 0.6), -1.5em .7em 0em 0em rgba(255, 255, 255, 0.8), 0em .7em 0em 0em rgba(255, 255, 255, 0.2), 1.5em .7em 0em 0em rgba(255, 255, 255, 0.2), 3em .7em 0em 0em rgba(255, 255, 255, 0.4);
+    }
+
+    40% {
+        box-shadow: -3em .7em 0em 0em rgba(255, 255, 255, 0.4), -1.5em .7em 0em 0em rgba(255, 255, 255, 0.6), 0em .7em 0em 0em rgba(255, 255, 255, 0.8), 1.5em .7em 0em 0em rgba(255, 255, 255, 0.2), 3em .7em 0em 0em rgba(255, 255, 255, 0.2);
+    }
+
+    60% {
+        box-shadow: -3em .7em 0em 0em rgba(255, 255, 255, 0.2), -1.5em .7em 0em 0em rgba(255, 255, 255, 0.4), 0em .7em 0em 0em rgba(255, 255, 255, 0.6), 1.5em .7em 0em 0em rgba(255, 255, 255, 0.8), 3em .7em 0em 0em rgba(255, 255, 255, 0.2);
+    }
+
+    80% {
+        box-shadow: -3em .7em 0em 0em rgba(255, 255, 255, 0.2), -1.5em .7em 0em 0em rgba(255, 255, 255, 0.2), 0em .7em 0em 0em rgba(255, 255, 255, 0.4), 1.5em .7em 0em 0em rgba(255, 255, 255, 0.6), 3em .7em 0em 0em rgba(255, 255, 255, 0.8);
+    }
+}

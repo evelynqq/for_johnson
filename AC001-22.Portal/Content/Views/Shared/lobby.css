@@ -1,0 +1,78 @@
+﻿#lobby {
+    position: relative;
+    min-height: 300px;
+    margin-bottom: 75px;
+}
+
+    #lobby ul.game-list {
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+        margin: 15px auto;
+        text-align: center;
+    }
+
+        #lobby ul.game-list li {
+            position: relative;
+            display: inline-block;
+            overflow:hidden;
+            font-size: 18px;
+            color: #ffbe22;
+        }
+
+            #lobby ul.game-list li span {
+                position: absolute;
+                bottom: 10px;
+                left: 15px;
+                z-index: 1;
+            }
+
+            #lobby ul.game-list li:before {
+                content: '';
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 100%;
+                background: #000;
+                opacity: 0;
+                -webkit-transition: all .5s;
+                -o-transition: all .5s;
+                transition: all .5s;
+                z-index: 2;
+            }
+
+            #lobby ul.game-list li:after {
+                content: '立即进入';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 120px;
+                height: 38px;
+                display: block;
+                background: #ffbe22;
+                color: #000;
+                margin-left: -60px;
+                margin-top: -20px;
+                font-size: 15px;
+                line-height: 38px;
+                opacity: 0;
+                -webkit-transition: all .5s;
+                -o-transition: all .5s;
+                transition: all .5s;
+                z-index: 3;
+            }
+
+            #lobby ul.game-list li:not([game-box="more"]):hover:before {
+                opacity: .7;
+            }
+
+            #lobby ul.game-list li:not([game-box="more"]):hover:after {
+                margin-top: -42px;
+                opacity: 1;
+            }
+
+            #lobby ul.game-list li[game-box="more"] {
+                padding-top: 285px;
+                text-align: left;
+                padding-left: 15px;
+            }

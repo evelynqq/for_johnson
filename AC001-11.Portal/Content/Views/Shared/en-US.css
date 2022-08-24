@@ -1,0 +1,25 @@
+﻿#header-top {
+    text-transform: uppercase;
+}
+
+ul#account-info > li > span.account {
+    max-width: 4em;
+}
+
+#account-box.off-scroll.is-login ul#account-info > li > span.account {
+    max-width: 8em;
+}
+
+/* nav */
+#nav > ul > li a {
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+    #nav > ul > li > a > span {
+        display: none;
+    }
+
+    #nav > ul > li > .subnav > li {
+        font-size: 12px;
+    }

@@ -1,0 +1,21 @@
+﻿#top-nav > li {
+    text-transform: uppercase;
+}
+
+#nav > ul > li > a {
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.subnav li {
+    font-size: 12px;
+}
+
+#un-lobby ul#sidebar li a {
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+#footer-nav a {
+    text-transform: uppercase;
+}

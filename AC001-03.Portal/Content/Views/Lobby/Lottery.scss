@@ -1,0 +1,53 @@
+﻿@import '../../../../_Common/Css/GameCode';
+
+ul.game-list > li {
+    width: 432px;
+    height: 288px;
+    margin: 10px 20px;
+    background-color: #fff;
+    position: relative;
+    &:not([game-box='more'])::before {
+        content: '进入游戏';
+        width: 140px;
+        height: 30px;
+        font-size: 16px;
+        vertical-align: 18px;
+        color: #fff;
+        background-color: #2a9b59;
+        top: 245px;
+        left: 145px;
+        letter-spacing: 3px;
+        line-height: 28px;
+        border-radius: 5px;
+        position: absolute;
+    }
+    span {
+        font-size: 28px;
+        color: #444;
+        letter-spacing: 2px;
+        position: absolute;
+        font-weight: bolder;
+        bottom: 45px;
+        width: 432px;
+        height: 45px;
+        left: 0;
+        text-align: center;
+    }
+}
+ul.game-list > li[game-box='more'] > span {
+    bottom: 30px;
+}
+
+#lobby > ul.game-list > li:hover {
+    background-position: top;
+    &::before {
+        background-color: #0e5f31;
+    }
+}
+
+// gamebox-list
+@each $gamebox in $lottery-list {
+    #lobby li[game-box='#{$gamebox}'] {
+        background-image: url('../lobby/Lottery/#{$gamebox}.jpg');
+    }
+}

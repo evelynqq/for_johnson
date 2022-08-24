@@ -1,0 +1,162 @@
+﻿/* #region nav 導覽列 */
+#nav {
+    float: left;
+    > ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        > li {
+            position: relative;
+            float: left;
+            width: 90px;
+            height: 99px;
+            margin-left: 5px;
+            padding-top: 14px;
+            color: #045583;
+            font-family: 'Microsoft YaHei';
+            line-height: 22px;
+            text-align: center;
+            transition: all .2s;
+            &:before {
+                content: '';
+                display: block;
+                position: relative;
+                top: 24px;
+                left: 36px;
+                width: 21px;
+                height: 18px;
+                margin-top: -18px;
+                background-position: center top;
+                background-repeat: no-repeat;
+                z-index: -1;
+            }
+            &:hover, .active {
+                color: #ed6e6e;
+                border-bottom: 4px solid #045583;
+                box-shadow: 0 5px 10px 0 rgba(0,0,0,.2);
+                :before {
+                    background-position: center bottom;
+                } 
+            }
+            .color {
+                a, span {
+                    color: #ed6e6e;
+                }
+            }
+            .hot:after {
+                content: '';
+                display: block;
+                position: relative;
+                top: -60px;
+                left: 71px;
+                width: 13px;
+                height: 18px;
+                margin-top: -12px;
+                background: url('../Shared/images/nav_hot.gif') no-repeat;
+            }
+            a {
+                display: block;
+                height: 85px;
+                padding: 30px 0 0;
+                color: inherit;
+                font-size: 14px;
+                text-decoration: none;
+                span {
+                    display: block;
+                    font-size: 11px;
+                    color: #818181;
+                    text-transform: uppercase;
+                }
+            }
+            &.home:before {
+                margin-top: -15px;
+                height: 15px;
+                background-image: url('../Shared/images/nav_01.png');
+            }
+            &.fish:before {
+                background-image: url('../Shared/images/nav_09.png');
+            }
+            &.game:before {
+                background-image: url('../Shared/images/nav_02.png');
+            }
+            &.live:before {
+                background-image: url('../Shared/images/nav_03.png');
+            }            
+            &.sport:before {
+                background-image: url('../Shared/images/nav_04.png');
+            }         
+            &.lottery:before {
+                background-image: url('../Shared/images/nav_05.png');
+            }
+            &.board:before {
+                background-image: url('../Shared/images/nav_10.png');
+            }
+            &.promotion:before {
+                margin-top: -16px;
+                height: 16px;
+                background-image: url('../Shared/images/nav_06.png');
+            }
+            &.mobile:before {
+                margin-top: -16px;
+                height: 16px;
+                background-image: url('../Shared/images/nav_07.png');
+            }
+            &.chat:before {
+                background-image: url('../Shared/images/nav_08.png');
+            }
+            &:hover .subnav {
+                display: block;
+            }
+        }
+    }
+}
+
+.subnav {
+    display: none;
+    position: absolute;
+    right: 0;
+    left: -136px;
+    width: 360px;
+    margin-top: 10px;
+    padding: 9px 9px 19px;
+    font-size: 0;
+    list-style: none;
+    background: rgba(255,255,255,.7);
+    border-radius: 20px;
+    &:before {
+        content: '';
+        position: relative;
+        height: 10px;
+        width: 360px;
+        display: block;
+        top: -19px;
+        left: -9px;
+    }
+    > li {
+        position: relative;
+        height: 30px;
+        width: 110px;
+        color: #fff;
+        font-size: 13px;
+        font-family: 'Microsoft YaHei';
+        line-height: 29px;
+        background: #024e80;
+        float: left;
+        border-radius: 30px;
+        margin: 2px;
+        .hot:after {
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: auto;
+            right: 3px;
+            width: 13px;
+            height: 18px;
+            background: url('../Shared/images/nav_hot.gif') no-repeat;
+        }
+        &:hover {
+            background: #ed6e6e;
+            transition: all 400ms;
+        }
+    }
+}

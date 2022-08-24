@@ -1,0 +1,150 @@
+﻿table thead tr th {
+    white-space: nowrap;
+}
+
+.table>tbody>tr:hover>td {
+    background: #fef3b9 !important;
+}
+
+tfoot {
+    text-align: center;
+    background: #dfdfdf;
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td,
+.table-striped>tbody>tr:nth-child(odd)>th {
+    background-color: #f9f9f9;
+}
+
+form fieldset {
+    padding: 0 15px;
+    text-align: center;
+    border: 1px solid #c0c0c0;
+}
+
+.form-horizontal .form-group {
+    display: inline-block;
+    width: 450px;
+    height: 40px;
+    margin: 0;
+}
+
+.control-div>input {
+    width: 150px;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #c0c0c0;
+}
+
+.form-group {
+    float: left;
+    width: 50%;
+    line-height: 32px;
+}
+
+.form-group.game-type {
+    padding: 0 36px 0 16px;
+}
+
+.form-group .control-label {
+    width: auto;
+    /*cheome*/
+    width: initial;
+    /*IE*/
+}
+
+.form-group .control-div {
+    width: auto;
+    /*cheome*/
+    width: initial;
+    /*IE*/
+}
+
+/*加總計算的CSS*/
+.tol {
+    color: #a94442;
+}
+
+/*搜尋*/
+#betDialog {
+    /* 頁面載入時不讓angular的元件跑出來 */
+    display: none;
+    font-size: 14px;
+}
+
+.row {
+    display: inline-block;
+    width: 100%;
+    margin: 6px 0;
+    padding: 0 54px 0 18px;
+    line-height: 30px;
+    text-align: right;
+}
+
+.check-inline {
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.search {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.btn_search {
+    width: 70px;
+    height: 27px;
+    /* background: url('../../../../_Common/Content/Views/BetRecord/images/btn_01.png') 0 0 no-repeat;  
+    border: none; */
+    line-height: 15px;
+    background: -webkit-linear-gradient(#fbfbfb, #ddd);
+    background: -o-linear-gradient(#fbfbfb, #ddd);
+    background: -moz-linear-gradient(#fbfbfb, #ddd);
+    background: linear-gradient(#fbfbfb, #ddd);
+    border: 1px solid #b4b4b4;
+}
+
+.btn_search:hover {
+    /* background: url('../../../../_Common/Content/Views/BetRecord/images/btn_02.png') 0 0 no-repeat; */
+    background: -webkit-linear-gradient(#ddd, #fbfbfb);
+    background: -o-linear-gradient(#ddd, #fbfbfb);
+    background: -moz-linear-gradient(#ddd, #fbfbfb);
+    background: linear-gradient(#ddd, #fbfbfb);
+}
+
+.btn_group {
+    display: block;
+    vertical-align: top;
+    margin: 10px auto;
+}
+
+.btn_group:before,
+.btn_group:after {
+    display: table;
+    content: '';
+}
+
+.btn_group:after {
+    clear: both;
+}
+
+.btn_group button {
+    float: left;
+    background-color: transparent;
+    border: 1px solid #666;
+}
+
+.btn_group button:first-child {
+    border-right: none;
+    -webkit-border-top-left-radius: 3px;
+    border-top-left-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.btn_group button:last-child {
+    -webkit-border-top-right-radius: 3px;
+    border-top-right-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}

@@ -1,0 +1,59 @@
+﻿body {
+    min-width: 944px;
+    margin: 0;
+    background: #140B06 url('../../../../_Common/Content/Views/Lobby/LatestActivity/bg_x.jpg') repeat-y center top;
+}
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+[ng-click] {
+    cursor: pointer;
+}
+
+ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.wrapper {
+    width: 944px;
+    margin: auto;
+}
+
+#latest-activity {
+    min-height: 683px;
+    background: url('../../../../_Common/Content/Views/Lobby/LatestActivity/bg.jpg') no-repeat center top;
+}
+
+#game-list {
+    display: block;
+    padding: 350px 30px 20px;
+    font-size: 0;
+}
+
+    #game-list li {
+        text-align: center;
+        background-repeat: no-repeat;
+        background-position: center top;
+    }
+
+        #game-list li + li {
+            margin-top: 10px;
+        }
+
+        #game-list li.non-active {
+            filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+            opacity: 0.5;
+        }
+
+        /* 活動尚未開始 & 活動結束 */
+        #game-list li.notStart,
+        #game-list li.overdue {
+            display: none;
+        }

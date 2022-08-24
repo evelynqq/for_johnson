@@ -1,0 +1,17 @@
+﻿/* Lobby各廳設定 */
+#lobby {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 0;
+}
+
+    #lobby > ul.game-list {
+        display: block;
+        text-align: center;
+    }
+
+        #lobby > ul.game-list > li {
+            display: inline-block;
+            vertical-align: top;
+            background-repeat: no-repeat;
+        }

@@ -1,0 +1,97 @@
+﻿@import '../../../../_Common/Css/GameCode';
+
+#banner {
+    background-image: url('../Lobby/Lottery/banner.jpg');
+}
+
+#content {
+    background-image: url('../Lobby/Lottery/background.jpg');
+}
+
+#lobby .game-list > li {
+    width: 431px;
+    height: 275px;
+    background-color: #201611;
+    background-position-x: 155px;
+    background-position-y: 22px;
+    background-repeat: no-repeat;
+    margin: 20px 30px;
+    border: 1px solid #412d23;
+    position: relative;
+    transition: all ease 0.1s;
+    span {
+        position: absolute;
+        font-size: 15px;
+        color: #6F6A66;
+        left: 0;
+        top: 130px;
+        width: 160px;
+        height: 30px;
+        text-align: center;
+    }
+    &::before {
+        content: '';
+        width: 160px;
+        height: 160px;
+        position: absolute;
+        top: 30px;
+        left: 10px;
+        background-repeat: no-repeat;
+        background-size: 90%;
+    }
+    &:not([game-list='more'])::after {
+        content:'进入游戏';
+        position: absolute;
+        bottom: 50px;
+        left: 20px;
+        width: 115px;
+        height: 50px;
+        font-size: 16px;
+        line-height: 50px;
+        -moz-border-radius: 20px;
+        -webkit-border-radius: 20px;
+        border-radius: 5px;
+        border: 1px solid #111111;
+        color: #756f6b;
+        background: #2b231a;
+        background: -moz-linear-gradient(top, #2b231a 0%, #201611 44%, #201614 100%);
+        background: -webkit-linear-gradient(top, #2b231a 0%,#201611 44%,#201614 100%);
+        background: linear-gradient(to bottom, #2b231a 0%,#201611 44%,#201614 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#201611', endColorstr='#201614',GradientType=0 );
+    } 
+    &:hover {
+        transform: scale(1.02);
+    }
+}
+
+// gamebox-list
+@each $gamebox in $lottery-list {
+    #lobby li.#{$gamebox} {
+        background-image: url('../lobby/Lottery/#{$gamebox}.jpg');
+        &::before {
+            background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v2/color/Lottery/#{$gamebox}.png');
+        }
+    }
+}
+
+#lobby .game-list > li:not([game-list='more']):hover::after {
+    border: 1px solid #d20000;
+    color: #fff;
+    background: #9c5953;
+    background: -moz-linear-gradient(top, #9c5953 0%, #761c14 44%, #5d0f0d 100%);
+    background: -webkit-linear-gradient(top, #9c5953 0%,#761c14 44%,#5d0f0d 100%);
+    background: linear-gradient(to bottom, #9c5953 0%,#761c14 44%,#5d0f0d 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#761c14', endColorstr='#5d0f0d',GradientType=0 );
+} 
+#lobby .game-list > li.more::after {
+    display: none;
+}
+#lobby .game-list > li.more:hover {
+    border-color: #412d23;
+    transform: none;
+}
+#lobby .game-list > li.more > span {
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: #50382d;
+}

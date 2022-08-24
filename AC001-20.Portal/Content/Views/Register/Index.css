@@ -1,0 +1,106 @@
+﻿.form-group {
+    position: relative;
+    display: block;
+    height: 32px;
+    padding: 0 10px;
+    margin: 40px 0;
+    font-size: 12px;
+    line-height: 1.428571429;
+    color: #8491a5;
+    text-align: right;
+    background-image: none;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.form-group .control-div {
+    width: 80%;
+}
+
+.form-group .control-label {
+    width: 20%;
+    padding: 0;
+    color: #262f3c;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 30px;
+    text-align: left;
+}
+
+.form-group input {
+    border: 1px solid #e8e8e8;
+    background: #fff;
+}
+
+.form-group .control-info {
+    position: absolute;
+    right: 25px;
+    top: 40px;
+}
+
+fieldset {
+    margin: 10px;
+    border: 1px solid #16b6c2;
+    color: #16b6d2;
+}
+
+legend {
+    padding: 0 10px;
+}
+
+.sex {
+    margin-top: 6px;
+}
+
+.sex label {
+    width: 60px;
+    display: inline-block;
+}
+.sex input {
+    width: 30px;
+    display: inline-block;
+}
+
+.last {
+    text-align: center;
+    border: none;
+}
+
+.last .form-group {
+    margin: 10px 0 10px 200px;
+    width: 340px;
+}
+
+.last button {
+    font-size: 13px;
+    color: #fff;
+    width: 150px;
+    white-space: nowrap;
+    margin: 5px 10px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+}
+
+input[type='checkbox'] {
+    width: 20px;
+    display: inline-block;
+}
+
+#btn-submit {
+    background: #16b6d2;
+}
+
+    #btn-submit:hover {
+        background: #00a1dc;
+    }
+
+#btn-reset {
+    background: #ff6f80;
+}
+
+    #btn-reset:hover {
+        background: #ff3c53;
+    }

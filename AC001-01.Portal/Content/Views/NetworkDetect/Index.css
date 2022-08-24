@@ -1,0 +1,55 @@
+﻿.slogan {
+    width: 618px;
+    height: 35px;
+    margin: 20px auto;
+    color: #313131;
+    font-size: 16px;
+    font-family: 'Microsoft YaHei';
+    line-height: 35px;
+    text-align: center;
+    background: url('../NetworkDetect/images/slogan.png');
+}
+
+.form-group {
+    width: 95%;
+    padding: 10px 5px;
+    text-align: center;
+    border-bottom: 1px solid #999;
+}
+
+input {
+    height: 23px;
+    padding: 0 10px;
+    color: #313131;
+    font-size: 14px;
+    font-family: SinSum;
+    border: none;
+}
+
+    input.link {
+        width: 250px;
+    }
+
+button.reload, a.hyperlink {
+    margin-left: 10px;
+    padding: 5px 25px;
+    color: #fff !important;
+    font-family: 'Microsoft YaHei';
+    text-decoration: none;
+    background: #6B7CD6;
+    border: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+    button.reload:hover, a.hyperlink:hover {
+        background: #FFA10C;
+    }
+
+button.reload {
+    display: block;
+    margin: 21px auto;
+    padding: 10px 25px;
+    font-size: 18px;
+}

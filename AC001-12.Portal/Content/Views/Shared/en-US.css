@@ -1,0 +1,28 @@
+﻿ul.top-nav li a {
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+ul#account-nav > li:before {
+    padding: 0 5px;
+}
+
+#nav > ul > li a {
+    font-size: 12px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+#nav > ul > li.chat a {
+    letter-spacing: -1px;
+    text-align: left;
+}
+
+#un-lobby ul#sidebar li a {
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+ul#account-info > li > span.account {
+    max-width: 5em;
+}

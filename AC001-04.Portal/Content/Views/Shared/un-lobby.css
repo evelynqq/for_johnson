@@ -1,0 +1,220 @@
+﻿#un-lobby {
+    min-height: 500px;
+}
+
+    #un-lobby aside {
+        float: left;
+        width: 199px;
+        margin: 0 10px 0 25px;
+        padding-top: 100px;
+        padding-bottom: 10px;
+        text-align: center;
+        background: url('../Shared/images/aside.jpg') #fff no-repeat center top;
+        border: 1px solid #ccc;
+
+    }
+
+        #un-lobby aside ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+            #un-lobby aside ul li {
+                height: 44px;
+            }
+                #un-lobby aside ul li:hover, #un-lobby aside ul li.active {
+                    background: #6c54ab;
+                }
+
+                #un-lobby aside ul li a {
+                    display: inline-block;
+                    width: 118px;
+                    height: 44px;
+                    text-align: center;
+                    line-height: 44px;
+                    color: #666;
+                    font-size: 18px;
+                    text-decoration: none;
+                }
+
+                #un-lobby aside ul li:hover a, #un-lobby aside ul li.active a {
+                    color: #fff;
+                }
+
+    #un-lobby #articles {
+        width: 755px;
+        min-height: 564px;
+        padding: 20px 30px;
+        color: #6c53ab;
+        font: normal 12px SimSun;
+        line-height: 180%;
+        overflow: hidden;
+        background: #fff;
+        border: 1px solid #ccc;
+        margin: 10px;
+    }
+
+        #un-lobby #articles h3 {
+            font: bold 14px SimSun;
+        }
+
+        #un-lobby #articles p {
+            margin: 0 0 30px 0;
+            color: #666;
+        }
+
+        #un-lobby #articles ol li {
+            color: #666;
+        }
+
+        #un-lobby #articles .click {
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #un-lobby #articles table {
+            width: 100%;
+            text-align: center;
+        }
+
+            #un-lobby #articles table th {
+                text-align: center;
+                padding: 8px;
+                border: 1px solid #fff;
+                background: #ffc74e;
+            }
+
+            #un-lobby #articles table td {
+                padding: 8px;
+                border: 1px solid #fff;
+                background: #eee;
+            }
+
+        /* #region deposit线上存款页面使用 */
+        #un-lobby #articles ul.deposit {
+            list-style-type: none;
+            padding: 0;
+            color: #9bacd4;
+            font-family: SimSun;
+        }
+
+            #un-lobby #articles ul.deposit li {
+                font-size: 12px;
+                font-family: Arial,'Microsoft JhengHei';
+                counter-increment: title;
+            }
+
+                #un-lobby #articles ul.deposit li > a:before {
+                    content: "方式 "counter(title,upper-alpha)":";
+                }
+
+                #un-lobby #articles ul.deposit li a {
+                    color: #ffc74e;
+                    font-size: 16px;
+                }
+
+                #un-lobby #articles ul.deposit li span.method:before {
+                    content: "方式 -"counter(title,upper-alpha);
+                }
+
+.highlight-red {
+    color: #f00;
+}
+
+.highlight-yellow {
+    color: #ff0;
+}
+
+.highlight-white {
+    color: #fff;
+}
+
+.highlight-purple {
+    color: #f0f;
+}
+
+/* #region 合作夥伴tab 供其他页面使用 */
+#articles ul.mtab-menual {
+    padding: 0;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+    #articles ul.mtab-menual li {
+        display: inline-block;
+        padding: 0 10px;
+        color: #fff;
+        font-size: 12px;
+        text-align: center;
+        line-height: 40px;
+        background: #8f72d8;
+        cursor: pointer;
+    }
+
+        #articles ul.mtab-menual li.mtab {
+            color: #6c54ab;
+            font-weight: bold;
+            background: #ffc74e;
+        }
+/* #endregion 合作夥伴tab 供其他页面使用 */
+
+/* #endregion deposit线上存款页面使用 */
+
+.body {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 5px;
+    background-color: #e1e1e1;
+    border-radius: 3px;
+}
+
+    .body #title, #heading, #panel-online-deposit #title {
+        height: 48px;
+        color: #fff;
+        font-family: 'Microsoft JhengHei';
+        font-size: 21px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        background: #6c54ab;
+    }
+
+#input-group-amount .form-control {
+    padding-left: 12px;
+}
+
+.body #account-heading, .body #withdrawal-heading {
+    background: #666;
+    color: #fff;
+}
+
+    .body #account-heading a, .body #withdrawal-heading a {
+        color: #fff;
+    }
+
+.body #change-money-pwd .form-group .control-label {
+    width: 26%;
+}
+
+.body #change-pwd .form-group .control-label {
+    width: 24%;
+}
+
+.body .form-group .control-label {
+    font-family: sans-serif;
+}
+
+.panel {
+    background: #e5e5e5;
+}
+
+/* 一鍵取回 */
+.body.container #title,
+.body #account-heading,
+.body #withdrawal-heading,
+#account-popup.modal.in table th {
+    color: #fff;
+    background: #8f72d8;
+}

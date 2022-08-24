@@ -1,0 +1,320 @@
+﻿/* 各頁設定 */
+#un-lobby {
+    margin: 0 auto;
+    text-align: left;
+    border: 1px solid #2e2e2e;
+}
+
+    #un-lobby > * {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    #un-lobby aside {
+        width: 200px;
+        margin-right: -5px;
+        background: rgba(0,0,0,.1);
+        background: url("../Shared/images/main-counter-bg.png") no-repeat;
+        background-size: cover;
+    }
+
+    #un-lobby ul#sidebar {
+        list-style-type: none;
+    }
+
+        #un-lobby ul#sidebar li {
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            border-top: 1px solid #746252;
+            border-bottom: 1px solid rgba(0,0,0,.2);
+        }
+
+            #un-lobby ul#sidebar li:hover,
+            #un-lobby ul#sidebar li.active {
+                background: rgba(0,0,0,.5);
+                border-top: 1px solid rgba(0,0,0,.2);
+            }
+
+            #un-lobby ul#sidebar li a {
+                display: block;
+                height: 100%;
+                color: #ffcf86;
+                text-decoration: none;
+            }
+
+/* 內文CSS */
+#articles {
+    width: 799px;
+    min-height: 500px;
+    margin-right: -1px;
+    padding: 15px 35px;
+    color: #d5d5d5;
+    text-align: left;
+}
+
+    #articles h2 {
+        margin: 0;
+        color: #ffc000;
+        font-size: 16px;
+    }
+
+    #articles h3 {
+        color: #f4d079;
+        font-size: 15px;
+        font-weight: normal;
+    }
+
+        #articles h3:before {
+            content: '';
+            display: block;
+            height: 2px;
+            margin-bottom: 10px;
+            background: url('../Shared/images/unlobby_hr.png') repeat-x center;
+        }
+
+    #articles h4 {
+    }
+
+    #Union{
+        margin-top: 15px;
+    }
+
+    #Union:before {
+        content: '';
+        display: block;
+        height: 2px;
+        margin-bottom: 10px;
+        background: url('../Shared/images/unlobby_hr.png') repeat-x center;
+    }
+
+    #articles > ul {
+        list-style: none;
+    }
+
+    #articles ol {
+        padding-left: 20px;
+        list-style-type: decimal;
+    }
+
+    #articles p,
+    #articles li {
+        font-size: 12px;
+        text-align: justify;
+        line-height: 2em;
+    }
+
+    #articles p {
+        margin: 1em 0;
+        color: #d5d5d5;
+        font-size: 12px;
+    }
+
+    #articles a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    #articles table {
+        width: 100%;
+    }
+
+        #articles table tr,
+        #articles table th {
+            background-color: #464646;
+            border: 1px solid #303030;
+        }
+
+        #articles table tr,
+        #articles table th,
+        #articles table td {
+            line-height: 2em;
+            text-align: center;
+        }
+
+        #articles table th {
+        }
+
+    /* 重點顏色 */
+    #articles .highlight {
+        color: #e5c670;
+    }
+
+    #articles .highlight-purple {
+        color: #d370e5;
+    }
+
+    #articles .highlight-darkpurple {
+        color: #b30a7e;
+    }
+
+    #articles .highlight-purple2 {
+        color: #df075d;
+    }
+
+    #articles .highlight-lightgreen {
+        color: #70e5c5;
+    }
+
+    #articles .highlight-lightred {
+        color: #e57086;
+    }
+
+    #articles .highlight-green {
+        color: #aae570;
+    }
+
+    #articles .highlight-green2 {
+        color: #0f0;
+    }
+
+    #articles .highlight-blue {
+        color: #7094e5;
+    }
+
+    #articles .highlight-blue2 {
+        color: #06f;
+    }
+
+    #articles .highlight-otherred {
+        color: #e570a2;
+    }
+
+    #articles .highlight-red {
+        color: #f00;
+    }
+
+    #articles .highlight-yellow {
+        color: #ff0;
+    }
+
+    #articles .highlight-orange {
+        color: #db8708;
+    }
+
+    #articles .highlight-orange2 {
+        color: #ffc000;
+    }
+
+    #articles .highlight-white {
+        color: #fff;
+    }
+
+    #articles .highlight-bold {
+        font-size: 16px;
+        font-weight: bold;
+    }
+    /* #region 合作夥伴tab 供其他页面使用 */
+    #articles ul.mtab-menual {
+        padding-bottom: 15px;
+        padding-left: 0;
+        list-style-type: none;
+    }
+
+        #articles ul.mtab-menual li {
+            display: inline-block;
+            width: 174px;
+            height: 55px;
+            margin: 0 -3px;
+            color: #f6f6f6;
+            font-size: 21px;
+            line-height: 55px;
+            text-align: center;
+            border: 1px solid #4f4f4f;
+            background-color: #353535;
+            cursor: pointer;
+        }
+
+            #articles ul.mtab-menual li.mtab {
+                color: #181000;
+                background-color: #ffcf86;
+            }
+    /* #endregion 合作夥伴tab 供其他页面使用 */
+
+    /* #region deposit线上存款页面使用 */
+    #articles ul.deposit {
+        margin-top: 20px;
+        letter-spacing: 2px;
+        list-style-type: none;
+    }
+
+        #articles ul.deposit > li {
+            counter-increment: title;
+        }
+
+            #articles ul.deposit > li > a:before {
+                content: counter(title,upper-alpha)".";
+            }
+
+            #articles ul.deposit > li a {
+                color: #ff0;
+                font-size: 16px;
+                text-decoration: underline;
+            }
+
+                #articles ul.deposit > li a img {
+                    width: 20px;
+                }
+/* #endregion deposit线上存款页面使用 */
+
+/* #region account nav共用 */
+.body {
+    position: relative;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 5px;
+    font-size: 14px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+    .body #title {
+        color: #000;
+        text-align: center;
+        background: #827157;
+    }
+
+    .body.container #title,
+    .body #account-heading,
+    .body #withdrawal-heading {
+        color: #000;
+        background-color: #b9b9b9;
+    }
+    /* 檢視存入帳戶的文字顏色 */
+    .body #show-account-info.btn {
+        color: #000;
+    }
+/* #endregion account nav共用 */
+
+/* #region 輸入框placeholder顏色 */
+/* 此為預設顏色，若各站需特別色系請由此修改，不需要可整段刪除 */
+.form-group .control-div input::-webkit-input-placeholder {
+    color: #959595;
+    font-size: 12px;
+}
+
+.form-group .control-div input::-moz-placeholder {
+    color: #959595;
+    font-size: 12px;
+}
+
+.form-group .control-div input:-ms-input-placeholder {
+    color: #959595;
+    font-size: 12px;
+}
+
+.form-group .control-div input.placeholder {
+    color: #959595;
+    font-size: 12px;
+}
+/* #endregion 輸入框placeholder顏色 */
+
+/* 一鍵取回 */
+.body.container #title,
+.body #account-heading,
+.body #withdrawal-heading,
+#account-popup.modal.in table th {
+    color: #fff;
+    background: #655548;
+}

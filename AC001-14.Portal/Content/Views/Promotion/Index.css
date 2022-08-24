@@ -1,0 +1,105 @@
+﻿#content {
+    padding-bottom: 28px;
+    background-image: url('../Promotion/images/content_bg.jpg');
+}
+
+#banner {
+    display: block;
+}
+
+#un-lobby {
+    display: block;
+    width: 1048px;
+    margin: 0 auto;
+    padding: 24px;
+    background: #e9eaec;
+    -moz-border-radius: 10px 10px 0 0;
+    -webkit-border-radius: 10px 10px 0 0;
+    border-radius: 10px 10px 0 0;
+}
+
+#unlobby-title {
+    display: block;
+    height: 36px;
+    background: url('../Promotion/images/title.jpg') no-repeat;
+}
+
+/*#region 優惠分類樣式 */
+ul.navtab {
+    display: inline-block;
+    padding: 10px 0;
+}
+
+    ul.navtab li {
+        float: left;
+        height: 30px;
+        margin-right: 6px;
+        padding: 0px 15px;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 30px;
+        background: #f39800;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+    }
+
+        ul.navtab li:hover,
+        ul.navtab li.tab {
+            background: #000;
+        }
+/*#endregion 優惠分類樣式 */
+
+/*#region 優惠區塊 */
+ul.discount {
+    margin: 0 auto;
+    padding: 0px 20px;
+    width: 100%;
+}
+
+    ul.discount > li {
+        width: 100%;
+    }
+
+        ul.discount > li:first-child {
+            margin-bottom: 5px;
+        }
+
+            ul.discount > li:first-child > img {
+                width: 100%;
+            }
+
+        /*優惠內文顏色*/
+        ul.discount > li.content {
+            color: #000;
+            text-align: justify;
+            overflow-x: auto;
+        }
+
+li.content table {
+    width: 100%;
+}
+
+    li.content table tr,
+    li.content table th,
+    li.content table td {
+        line-height: 2em;
+        text-align: center;
+    }
+
+li.content ol {
+    padding-left: 20px;
+    list-style-type: decimal;
+}
+
+li.content ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+li.content .highlight {
+    color: #f00;
+}
+
+/*#endregion 優惠區塊 */

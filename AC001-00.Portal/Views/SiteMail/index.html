@@ -1,0 +1,18 @@
+    <link href="../../../_Common/Content/Views/SiteMail/index.css" rel="stylesheet" />
+    <style>
+        .cloak {
+            display: none;
+        }
+    </style>
+    <script>
+        function chengTab(elem, tab) {
+            $(elem).siblings().removeClass('active');
+            $(elem).addClass('active');
+            $('table').addClass('cloak');
+            $('#' + tab).removeClass('cloak');
+        }
+    </script>
+
+    <div class="body mail" data-page="SiteMail">
+        <!-- Load SiteMail -->
+    </div>

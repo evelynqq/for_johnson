@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html @*xmlns:ng="http://angularjs.org" *@ id="ng-app" ng-app="portalApp" meidon-time="@ViewBag.MeiDonNow" @*主機的美東時間*@
+    moment-lang="@ViewBag.Language" @*瀏覽器語系*@ ng-init="'@Resources.Shared.Head_Title'">
+
+<head>
+    <title>welcome</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="shortcut icon" href="../../../_Common/Content/Views/Shared/images/favicon.ico" />
+    <link href="../../bundles/site.css" rel="stylesheet" />
+    <link href="../../Content/Views/Shared/lobby.css" rel="stylesheet" />
+    <link href="../../Content/Views/Lobby/Esport.css" rel="stylesheet" />
+    <script src="../../../_Common/Scripts/jquery/v1.12.4/jquery.min.js"></script>
+    <script src="../../bundles/include-html.js"></script>
+    <script>
+        // for View
+        $(function () {
+            var lobby = 'esport';
+            var row = 3;
+            var rank = false;
+            var frame = '<ul class="game-list">*</ul>';
+            var position = '<li class="code"><span>name</span><div>vcode ESPORTS</div></li>';
+            var more = '<li class="more"><span>敬请期待</span><div>COMING SOON</div></li>';
+            var ViewList = getViewList(lobby, row, rank, frame, position, more);
+
+            $(ViewList).prependTo('#lobby');
+        });
+    </script>
+</head>
+
+<body class="layout" ng-controller="LayoutCtrl">
+    <header id="header"></header>
+
+    <!-- @* 導覽列 *@ -->
+    <nav id="nav"></nav>
+
+    <!-- Banner -->
+    <div id="banner"></div>
+
+    <!-- @* 跑馬燈 *@ -->
+    <div id="news"></div>
+
+    <!-- Content -->
+    <div id="content">
+
+        <section id="lobby" ng-controller="LobbiesCtrl">
+            <!-- List -->
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer"></footer>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+﻿/*#region 公司入款關閉時用的樣式*/
+#companyDeposit {
+    background: #e5e5e5;
+}
+
+    #companyDeposit .container {
+        width: 805px;
+        max-width: none !important;
+    }
+
+    #companyDeposit #heading {
+        margin: 1px 1px;
+        color: #fff;
+        font-family: '新細明體';
+        font-size: 15px;
+        font-weight: bold;
+        background: url('/CdnRedirect/Web.Portal/GPK.Portal/Content/Views/Shared/images/heading.jpg') no-repeat;
+    }
+
+    #companyDeposit .panel {
+        width: 641px;
+        color: #656565;
+        background: url('../../../../_Common/Content/Views/OnlineDeposit/images/panel_background.jpg') repeat;
+        border: 1px solid #b7b7b7;
+        -moz-box-shadow: inset 0 0 1px 1px #FFF;
+        -webkit-box-shadow: inset 0 0 1px 1px #FFF;
+        box-shadow: inset 0 0 1px 1px #FFF;
+    }
+
+    #companyDeposit .panel-body {
+        position: relative;
+        text-align: center;
+    }
+
+    #companyDeposit .panel-shadow {
+        position: absolute;
+        left: 0;
+        bottom: -19px;
+        width: 100%;
+        height: 18px;
+        background: url('../../../../_Common/Content/Views/OnlineDeposit/images/panel_shadow.jpg') no-repeat;
+    }
+
+    #companyDeposit .disabled-title {
+        text-align: center;
+    }
+
+.fluid-container {
+    display: inline-block;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.pre-line {
+    white-space: pre-line;
+}
+/*#endregion 公司入款關閉時用的樣式*/

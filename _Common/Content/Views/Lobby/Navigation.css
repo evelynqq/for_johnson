@@ -1,0 +1,421 @@
+﻿html {
+    height: 100%;
+}
+
+body#lobbyNav-body {
+    height: 100%;
+    padding: 0;
+    background: #fff;
+}
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+ul {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+body#lobbyNav-body iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: #fff;
+}
+
+#LobbyNav {
+    display: none;
+}
+
+    #LobbyNav.LobbyNav {
+        display: inline-block;
+    }
+
+.LobbyNav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -335px;
+    width: 335px;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    background-color: #2269d4 \9;
+    background-color: rgba(34,105,212,.9);
+    -moz-transition: left linear .2s !important;
+    -o-transition: left linear .2s !important;
+    -webkit-transition: left linear .2s !important;
+    transition: left linear .2s !important;
+}
+
+    .LobbyNav span.lobbyNav-pager {
+        position: absolute;
+        top: 195px;
+        right: -46px;
+        display: inline-block;
+        width: 46px;
+        height: 64px;
+        background: url('../../../../_Common/Content/Views/Lobby/Navigation/slide_right.png') no-repeat;
+    }
+
+    .LobbyNav.slide-show {
+        left: 0;
+    }
+
+        .LobbyNav.slide-show span.lobbyNav-pager {
+            background-image: url('../../../../_Common/Content/Views/Lobby/Navigation/slide_left.png')
+        }
+
+    /* region logo */
+    .LobbyNav .lobbyNav-logo {
+        height: 75px;
+        text-align: center;
+    }
+
+        .LobbyNav .lobbyNav-logo:before {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+
+        .LobbyNav .lobbyNav-logo img {
+            display: inline-block;
+            max-height: 60px;
+            vertical-align: middle;
+        }
+    /* endregion logo */
+
+    /* region banner */
+    .LobbyNav .lobbyNav-banner {
+        height: 120px;
+        margin: 0;
+        background-color: #000;
+    }
+    /* endregion banner */
+
+    /* region game-category */
+    .LobbyNav .lobbyNav-category {
+        height: 65px;
+        text-align: center;
+    }
+
+        .LobbyNav .lobbyNav-category span.lobbyNav-prev,
+        .LobbyNav .lobbyNav-category span.lobbyNav-next {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            background-repeat: no-repeat;
+            background-position: center top;
+            cursor: pointer;
+        }
+
+            .LobbyNav .lobbyNav-category span.lobbyNav-prev:hover,
+            .LobbyNav .lobbyNav-category span.lobbyNav-next:hover {
+                background-position: center bottom;
+            }
+
+        .LobbyNav .lobbyNav-category span.lobbyNav-prev {
+            background: url('../../../../_Common/Content/Views/Lobby/Navigation/prev.png');
+        }
+
+        .LobbyNav .lobbyNav-category span.lobbyNav-next {
+            background: url('../../../../_Common/Content/Views/Lobby/Navigation/next.png');
+        }
+
+        .LobbyNav .lobbyNav-category div.lobbyNav-cate-wrapper {
+            position: relative;
+            display: inline-block;
+            width: 275px;
+            height: 65px;
+            vertical-align: middle;
+            overflow: hidden;
+        }
+
+        .LobbyNav .lobbyNav-category ul {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 377px;
+            padding-top: 22px;
+            font-size: 0;
+            text-align: left;
+        }
+
+            .LobbyNav .lobbyNav-category ul > li {
+                display: inline-block;
+                color: #fff;
+                font-size: 14px;
+                font-family: Arial,'Microsoft YaHei';
+                cursor: pointer;
+            }
+
+                .LobbyNav .lobbyNav-category ul > li + li:before {
+                    content: '|';
+                    padding: 0 5px;
+                    color: #71aaff;
+                    font-size: 14px;
+                    cursor: default;
+                }
+
+                .LobbyNav .lobbyNav-category ul > li.active,
+                .LobbyNav .lobbyNav-category ul > li:hover {
+                    color: #ffee58;
+                }
+    /* endregion game-category */
+
+    /* region game-list */
+    .LobbyNav .lobbyNav-list {
+        font-size: 0;
+        background-color: #001739 \9;
+        background-color: rgba(0,23,57,.8);
+    }
+
+        .LobbyNav .lobbyNav-list ul {
+            display: block;
+            text-align: left;
+        }
+
+        .LobbyNav .lobbyNav-list li {
+            position: relative;
+            display: inline-block;
+            width: 106px;
+            height: 106px;
+            vertical-align: top;
+            overflow: hidden;
+            padding-top: 73px;
+            color: #fff;
+            font-size: 14px;
+            font-family: Arial,'Microsoft YaHei';
+            text-align: center;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            background-repeat: no-repeat;
+            background-position: center 8px;
+            background-size: 70px 70px;
+            border-right: 1px solid #003b93;
+            border-bottom: 1px solid #003b93;
+        }
+
+        /* 补鱼图片从后端吐回来需要客制化调整 */
+        .LobbyNav .lobbyNav-list ul.lobbyNav-list-fish li img {
+            position: absolute;
+            top: 8px;
+            right: 0;
+            left: 0;
+            z-index: 0;
+            display: block;
+            height: 58px;
+            margin: 0 auto;
+        }
+
+        .LobbyNav .lobbyNav-list li:hover {
+            color: #fff000;
+        }
+
+        .LobbyNav .lobbyNav-list li.hot:before,
+        .LobbyNav .lobbyNav-list li.new:before,
+        .LobbyNav .lobbyNav-list li.event:before,
+        .LobbyNav .lobbyNav-list li.new-and-hot:after,
+        .LobbyNav .lobbyNav-list ul.hot-list li:before,
+        .LobbyNav .lobbyNav-list ul.new-list li:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-repeat: no-repeat;
+        }
+
+        .LobbyNav .lobbyNav-list ul.new-list li:before,
+        .LobbyNav .lobbyNav-list li.new:before {
+            background-image: url('../../../../_Common/Content/Views/Lobby/Navigation/new.png');
+        }
+
+        .LobbyNav .lobbyNav-list ul.hot-list li:before,
+        .LobbyNav .lobbyNav-list li.hot:before {
+            background-image: url('../../../../_Common/Content/Views/Lobby/Navigation/hot.png');
+        }
+
+        .LobbyNav .lobbyNav-list li.event:before {
+            top: 38px;
+            width: 19px;
+            height: 38px;
+            background-image: url('../../../../_Common/Content/Views/Lobby/Navigation/event.gif');
+        }
+
+        /* 游戏 logo */
+        .LobbyNav .lobbyNav-list li[game-box="bb"] {
+            background-image: url('../../../../_Common/Content/Views/Lobby/Navigation/logo/bb.png');
+        }
+
+        .LobbyNav .lobbyNav-list li[game-box="ag"] {
+            background-image: url('../../../../_Common/Content/Views/Lobby/Navigation/logo/ag.png');
+        }
+
+        .LobbyNav .lobbyNav-list li[game-box="mg"] {
+            background-image: url('../../../../_Common/Content/Views/Lobby/Navigation/logo/mg.png');
+        }
+
+        .LobbyNav .lobbyNav-list li[game-box="pt"] {
+            background-image: url('../../../../_Common/Content/Views/Lobby/Navigation/logo/pt.png');
+        }
+
+        .LobbyNav .lobbyNav-list li[game-box="gpi"] {
+            background-image: url('../../../../_Common/Content/Views/Lobby/Navigation/logo/gpi.png');
+        }
+
+        .LobbyNav .lobbyNav-list li[game-box="gns"] {
+            background-image: url('../../../../_Common/Content/Views/Lobby/Navigation/logo/gns.png');
+        }
+
+        .LobbyNav .lobbyNav-list li[game-box="prg"] {
+            background-image: url('../../../../_Common/Content/Views/Lobby/Navigation/logo/prg.png');
+        }
+
+        .LobbyNav .lobbyNav-list li[game-box="sg"] {
+            background-image: url('../../../../_Common/Content/Views/Lobby/Navigation/logo/sg.png');
+        }
+
+        .LobbyNav .lobbyNav-list li[game-box="mw"] {
+            background-image: url('../../../../_Common/Content/Views/Lobby/Navigation/logo/mw.png');
+        }
+
+        .LobbyNav .lobbyNav-list li[game-box="haba"] {
+            background-image: url('../../../../_Common/Content/Views/Lobby/Navigation/logo/hb.png');
+        }
+
+        .LobbyNav .lobbyNav-list li[game-box="netent"] {
+            background-image: url('../../../../_Common/Content/Views/Lobby/Navigation/logo/netent.png');
+        }
+
+        .LobbyNav .lobbyNav-list li[game-box="cq9"] {
+            background-image: url('../../../../_Common/Content/Views/Lobby/Navigation/logo/cq9.png');
+        }
+
+        .LobbyNav .lobbyNav-list li[game-box="jdb"] {
+            background-image: url('../../../../_Common/Content/Views/Lobby/Navigation/logo/jdb.png');
+        }
+
+        .LobbyNav .lobbyNav-list li[game-box="redtiger"] {
+            background-image: url('../../../../_Common/Content/Views/Lobby/Navigation/logo/rt.png');
+        }
+
+        .LobbyNav .lobbyNav-list li[game-box="gameart"] {
+            background-image: url('../../../../_Common/Content/Views/Lobby/Navigation/logo/ga.png');
+        }
+
+        .LobbyNav .lobbyNav-list li[game-box="pg"] {
+            background-image: url('../../../../_Common/Content/Views/Lobby/Navigation/logo/pg.png');
+        }
+
+        .LobbyNav .lobbyNav-list li[game-box="lg"] {
+            background-image: url('../../../../_Common/Content/Views/Lobby/Navigation/logo/lg.png');
+        }
+
+        .LobbyNav .lobbyNav-list li[game-box="fish"] {
+            background-image: url('../../../../_Common/Content/Views/Lobby/Navigation/logo/fishhunter.png');
+        }
+
+        .LobbyNav .lobbyNav-list li[game-box="ab"] {
+            background-image: url('../../../../_Common/Content/Views/Lobby/Navigation/logo/ab.png');
+        }
+
+        .LobbyNav .lobbyNav-list li[game-box="evo"] {
+            background-image: url('../../../../_Common/Content/Views/Lobby/Navigation/logo/evo.png');
+        }
+
+        .LobbyNav .lobbyNav-list li[game-box="gd"] {
+            background-image: url('../../../../_Common/Content/Views/Lobby/Navigation/logo/gd.png');
+        }
+
+        .LobbyNav .lobbyNav-list li[game-box="sunbet"] {
+            background-image: url('../../../../_Common/Content/Views/Lobby/Navigation/logo/sunbet.png');
+        }
+
+        .LobbyNav .lobbyNav-list li[game-box="bg"] {
+            background-image: url('../../../../_Common/Content/Views/Lobby/Navigation/logo/bg.png');
+        }
+
+        .LobbyNav .lobbyNav-list li[game-box="saba"] {
+            background-image: url('../../../../_Common/Content/Views/Lobby/Navigation/logo/saba.png');
+        }
+
+        .LobbyNav .lobbyNav-list li[game-box="hg"] {
+            background-image: url('../../../../_Common/Content/Views/Lobby/Navigation/logo/crown.png');
+        }
+
+        .LobbyNav .lobbyNav-list li[game-box="cmd"] {
+            background-image: url('../../../../_Common/Content/Views/Lobby/Navigation/logo/cmd.png');
+        }
+
+        .LobbyNav .lobbyNav-list li[game-box="ig"] {
+            background-image: url('../../../../_Common/Content/Views/Lobby/Navigation/logo/ig.png');
+        }
+
+        .LobbyNav .lobbyNav-list li[game-box="isb"] {
+            background-image: url('../../../../_Common/Content/Views/Lobby/Navigation/logo/isb.png');
+        }
+
+        .LobbyNav .lobbyNav-list li[game-box="kg"] {
+            background-image: url('../../../../_Common/Content/Views/Lobby/Navigation/logo/kg.png');
+        }
+
+        .LobbyNav .lobbyNav-list li[game-box="lx"] {
+            background-image: url('../../../../_Common/Content/Views/Lobby/Navigation/logo/lx.png');
+        }
+
+        .LobbyNav .lobbyNav-list li[game-box="rg"] {
+            background-image: url('../../../../_Common/Content/Views/Lobby/Navigation/logo/rg.png');
+        }
+
+        .LobbyNav .lobbyNav-list li[game-box="pts"] {
+            background-image: url('../../../../_Common/Content/Views/Lobby/Navigation/logo/pts.png');
+        }
+
+        .LobbyNav .lobbyNav-list li[game-box="ebet"] {
+            background-image: url('../../../../_Common/Content/Views/Lobby/Navigation/logo/ebet.png');
+        }
+
+        .LobbyNav .lobbyNav-list li[game-box="im"] {
+            background-image: url('../../../../_Common/Content/Views/Lobby/Navigation/logo/im.png');
+        }
+
+/* 卷轴 css */
+body#lobbyNav-body .LobbyNav .lobbyNav-list .mCSB_inside > .mCSB_container {
+    margin-right: 17px;
+}
+
+/* 卷轴背景 */
+body#lobbyNav-body .LobbyNav .lobbyNav-list .mCSB_scrollTools {
+    width: 17px;
+    background: #001635;
+}
+
+/* 卷轴拖移本体 */
+body#lobbyNav-body .LobbyNav .lobbyNav-list .mCSB_dragger {
+    background: #2365c8;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+}
+
+body#lobbyNav-body .LobbyNav .lobbyNav-list .mCSB_dragger_bar {
+    background: none;
+}
+
+body#lobbyNav-body .LobbyNav .lobbyNav-list .mCSB_scrollTools .mCSB_draggerRail {
+    display: none;
+}
+/* endregion game-list */

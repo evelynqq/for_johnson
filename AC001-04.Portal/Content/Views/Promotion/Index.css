@@ -1,0 +1,118 @@
+﻿#banner {
+    background: url('../Shared/images/banner.jpg') no-repeat center;
+}
+/*#region 遊戲分類樣式 */
+ul.navtab {
+    margin: 15px 0 0;
+    border-bottom: 3px solid #8f72d8;
+}
+
+    ul.navtab li {
+        display: inline-block;
+        width: 100px;
+        margin-right: 5px;
+        padding: 5px;
+        color: #6c54ab;
+        font-size: 14px;
+        font-family: 'Microsoft JhengHei';
+        text-align: center;
+        background: #ffc74e;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+        ul.navtab li.tab {
+            color: #fff;
+            background: #8f72d8;
+        }
+
+/*#endregion 遊戲分類樣式 */
+#un-lobby > div > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+}
+
+    #un-lobby > div > ul > li:first-child {
+        cursor: pointer;
+    }
+
+    #un-lobby > div > ul > li[ng-bind-html] {
+        color: #fff;
+        background: #ddd;
+        display: inline-block;
+        width: 980px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    #un-lobby > div > ul > li > img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+li[ng-bind-html] h4 {
+    position: relative;
+    left: -50px;
+    padding-left: 18px;
+    font-size: 20px;
+    font-family: '微軟正黑體';
+    font-weight: bold;
+    line-height: 47px;
+    background: url('../Promotion/images/title.png') top left no-repeat;
+}
+
+li[ng-bind-html] table {
+    border: 1px solid #2a4582;
+    width: 100%;
+}
+
+    li[ng-bind-html] table caption {
+        text-align: left;
+    }
+
+    li[ng-bind-html] table th {
+        padding: 5px 0;
+        background: #06051d;
+        font-weight: bold;
+    }
+
+    li[ng-bind-html] table td {
+        padding: 5px 0;
+        background: none;
+    }
+
+    li[ng-bind-html] table td, li[ng-bind-html] table th, li[ng-bind-html] table tr {
+        border: 1px solid #2a4582;
+        text-align: center;
+    }
+
+li[ng-bind-html] ul, li[ng-bind-html] ol {
+    padding: 0 0 0 40px !important;
+    list-style-type: cjk-ideographic !important;
+}
+
+    li[ng-bind-html] ol > li {
+        font-size: 15px;
+        line-height: 26px;
+        display: list-item;
+    }
+
+    li[ng-bind-html] ol ul li {
+        list-style-type: decimal;
+    }
+
+li[ng-bind-html] span {
+    color: #df512b;
+    font-weight: bold;
+}
+
+li[ng-bind-html] p {
+    font-size: 15px;
+    text-align: justify;
+}
+
+li[ng-bind-html] dl, li[ng-bind-html] dl dd {
+    margin-left: 5em;
+}

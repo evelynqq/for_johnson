@@ -1,0 +1,183 @@
+﻿body {
+    background-image:url('../Home/images/homeBg.jpg');
+}
+
+#home {
+    display: inline-block;
+    margin-bottom: 40px;
+}
+
+#news {
+    top: 578px;
+}
+
+#banner {
+    height: 618px;
+    text-align: center;
+    background: none;
+}
+
+/* #region slide-banner樣式 */
+.reg-btn {
+    position: absolute;
+    top: 602px;
+    left: -101px;
+    width: 262px;
+    height: 276px;
+    background: url('../Home/images/registerBtn.png') no-repeat center center;
+}
+
+/* .reg-btn:before {
+    display: none;
+} */
+
+.welcome-btn {
+    position: absolute;
+    top: 602px;
+    left: -128px;
+    width: 262px;
+    height: 276px;
+    background: url('../Home/images/welcomeBtn.png') no-repeat center center;
+}
+
+#slide-banner {
+    position: relative;
+    height: 588px;
+    overflow: hidden;
+    display: none;
+}
+
+    #slide-banner .slide {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -960px;
+    }
+
+        #slide-banner .slide a {
+            display: inline-block;
+            width: 1920px;
+            height: 588px;
+        }
+
+    #slide-banner .slide-pager {
+        position: absolute;
+        bottom: 6px;
+        right: 0;
+        left: 0;
+        width: 1000px;
+        margin: 0 auto;
+        text-align: right;
+    }
+
+        #slide-banner .slide-pager li {
+            display: inline-block;
+            margin-right: 6px;
+            width: 42px;
+            height: 7px;
+            font-size: 0;
+            background-color: #fc0000;
+            border: 1px solid #fc0000;
+            cursor: pointer;
+        }
+
+            #slide-banner .slide-pager li.on {
+                background-color: #000;
+                border: 1px solid #fff;
+            }
+/* #endregion slide-banner樣式 */
+
+/* #region 首頁附屬資訊區 */
+
+ul.sub-info {
+    margin: 10px auto;
+    padding: 0;
+}
+
+    ul.sub-info > li {
+        position: relative;
+        list-style: none;
+        float: left;
+        width: 243px;
+        height: 86px;
+        margin: 0 3px;
+        background-position: center top;
+    }
+
+        ul.sub-info > li:hover {
+            background-position: center bottom;
+        }
+
+        ul.sub-info > li > a {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        ul.sub-info > li[data-info="join"] {
+            background-image: url('../Home/images/infojoin.png');
+        }
+
+        ul.sub-info > li[data-info="trial"] {
+            background-image: url('../Home/images/infotrial.png');
+        }
+
+        ul.sub-info > li[data-info="discunt"] {
+            background-image: url('../Home/images/infodiscunt.png');
+        }
+
+        ul.sub-info > li[data-info="line"] {
+            background-image: url('../Home/images/infoline.png');
+        }
+/* #endregion 首頁附屬資訊區 */
+
+/* 遊戲清單導覽區 */
+#game-box {
+    width: 100%;
+    margin: 10px auto 10px;
+}
+
+    #game-box li {
+        display: inline-block;
+        width: 17.2%;
+        height: 276px;
+        margin-left: -5px;
+        margin-right: 1%;
+    }
+    #game-box li:first-child{
+        margin-left: 0;
+    }
+    #game-box li:last-child{
+        margin-right: 0;
+    }
+
+        #game-box li a {
+            display: block;
+            height: 100%;
+            background-size: cover;
+            background-position: center top;
+        }
+
+            #game-box li a:hover {
+                background-position: center bottom;
+            }
+
+        #game-box li[data-img="live"] a {
+            background-image: url('../Home/images/live.1.png');
+        }
+        #game-box li[data-img="slot"] {
+            margin-right: 28.2%;
+        }
+        #game-box li[data-img="slot"] a {
+            background-image: url('../Home/images/game.1.png');
+        }
+
+        #game-box li[data-img="lottery"] a {
+            background-image: url('../Home/images/lottery.1.png');
+        }
+
+        #game-box li[data-img="fish"] a {
+            background-image: url('../Home/images/fish.1.png');
+        }

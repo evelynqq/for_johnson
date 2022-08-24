@@ -1,0 +1,856 @@
+/*#cuteslider_3_wrapper {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 0;
+    width: 1920px;
+    height: 441px;
+    margin-left: -960px;
+    overflow: hidden
+}
+
+#cuteslider_3_wrapper .cute-slider {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -960px
+}
+
+#cuteslider_3_wrapper .br-slidecontrol {
+    bottom: 65px
+}
+
+#cuteslider_3_wrapper .br-slidecontrol ul {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
+}
+
+#cuteslider_3_wrapper .br-slidecontrol ul li {
+    margin-left: 10px;
+    width: 15px;
+    height: 15px;
+    background: url('images/slide_btn.png') no-repeat center top
+}
+
+#cuteslider_3_wrapper .br-slidecontrol ul li:hover {
+    background-position: center bottom
+}
+
+#cuteslider_3_wrapper .br-slidecontrol ul li .br-control-selected {
+    background: none
+}
+
+#cuteslider_3_wrapper.cs-circleslight .br-thumb-up {
+    left: -36px
+}
+
+
+
+#captcha {
+    top: 6px;
+    right: 6px;
+    height: 25px
+}
+*/
+
+#banner {
+    height: 620px;
+    background-image: url('../Home/images/banner.jpg');
+}
+
+    #banner:after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        height: 180px;
+        width: 100%;
+        background: url('../Home/images/bannerBottomBg.png') no-repeat center top;
+    }
+
+/* #region slide-banner樣式 */
+#slide-banner {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+}
+
+    #slide-banner .slide {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -960px;
+    }
+
+
+        #slide-banner .slide a {
+            display: inline-block;
+            width: 1920px;
+            height: 600px; /* 通常只會改這兩個地方 跟著圖片高度 */
+        }
+
+    
+    /* 點點切換紐 */
+    #slide-banner .slide-pager {
+        position: absolute;
+        bottom: 70px;
+        left: 15px;
+        width: 100%;
+        text-align: center;
+        z-index: 1;
+    }
+
+        #slide-banner .slide-pager li {
+            display: inline-block;
+            width: 13px;
+            height: 13px;
+            margin: 0 4px;
+            /* 若要数字编号可以把font-size: 0拿掉 */
+            font-size: 0;
+            background-color: #ff9e3a;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+            #slide-banner .slide-pager .on,
+            #slide-banner .slide-pager li:hover {
+                background-color: #fff;
+            }
+/* #endregion slide-banner樣式 */
+
+#account-nav > li > a {
+    line-height: 28px
+}
+
+#account-nav > li.transaction:before {
+    display: none
+}
+
+#action-box {
+    margin: 0
+}
+
+#news {
+    top: 0;
+    bottom: auto;
+}
+
+#content {
+    padding: 0;
+    background-image: none
+}
+
+/* #region home-slot */
+#home-slot {
+    height: 490px;
+    overflow: hidden;
+    font-size: 0;
+    background: #000 url('images/slot/bg.jpg') no-repeat center top
+}
+
+    #home-slot > div.wrapper {
+        width: 1000px;
+    }
+
+    #home-slot > div.wrapper:before,
+    #home-slot > div.wrapper:after {
+        content: '';
+        position: absolute;
+        top: 87px;
+        left: -52px;
+        z-index: 2;
+        display: inline-block;
+        width: 70px;
+        height: 384px;
+        background: url('images/slot/role_left.png') no-repeat center top
+    }
+
+    #home-slot > div.wrapper:after {
+        left: auto;
+        right: -52px;
+        background: url('images/slot/role_right.png') no-repeat center top
+    }
+
+    #home-slot div.slot-list {
+        position: relative;
+        z-index: 3;
+        display: block;
+        height: 88px;
+        overflow: hidden;
+    }
+
+    #home-slot div.slot-list > span {
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        display: inline-block;
+        width: 20px;
+        height: 88px;
+        cursor: pointer;
+        vertical-align: top
+    }
+
+        #home-slot div.slot-list > span:before {
+            content: '';
+            display: block;
+            width: 12px;
+            height: 20px;
+            margin: 34px auto 0;
+            background-position: center top;
+            background-repeat: no-repeat
+        }
+
+        #home-slot div.slot-list > span:hover:before {
+            background-position: center bottom
+        }
+
+        #home-slot div.slot-list > span.prev {
+            left: 0
+        }
+
+            #home-slot div.slot-list > span.prev:before {
+                background-image: url('images/slot/prev.png')
+            }
+
+        #home-slot div.slot-list > span.next {
+            right: 0
+        }
+
+            #home-slot div.slot-list > span.next:before {
+                background-image: url('images/slot/next.png')
+            }
+
+    #home-slot div.slot-list .main-cell {
+        margin: 0 20px
+    }
+
+    #home-slot div.slot-list ul.game-list > li {
+        width: 120px;
+        height: 88px;
+        color: #fff;
+        font-size: 18px;
+        text-align: center
+    }
+
+        #home-slot div.slot-list ul.game-list > li.active,
+        #home-slot div.slot-list ul.game-list > li:hover {
+            color: #ffda52;;
+            border-bottom: 2px solid #ffda52;
+        }
+
+        #home-slot div.slot-list ul.game-list > li:before {
+            content: '';
+            display: block;
+            height: 55px;
+            background-repeat: no-repeat;
+            background-position: center bottom
+        }
+
+        #home-slot div.slot-list ul.game-list > li[game-box="bb"]:before {
+            background-image: url('images/slot/bb.png')
+        }
+        #home-slot div.slot-list ul.game-list > li[game-box="mg"]:before {
+            background-image: url('images/slot/mg.png')
+        }
+        #home-slot div.slot-list ul.game-list > li[game-box="pt"]:before {
+            background-image: url('images/slot/pt.png')
+        }
+        #home-slot div.slot-list ul.game-list > li[game-box="ag"]:before {
+            background-image: url('images/slot/ag.png')
+        }
+        #home-slot div.slot-list ul.game-list > li[game-box="gpi"]:before {
+            background-image: url('images/slot/gpi.png')
+        }
+        #home-slot div.slot-list ul.game-list > li[game-box="gns"]:before {
+            background-image: url('images/slot/gns.png')
+        }
+        #home-slot div.slot-list ul.game-list > li[game-box="prg"]:before {
+            background-image: url('images/slot/pp.png')
+        }
+        #home-slot div.slot-list ul.game-list > li[game-box="sg"]:before {
+            background-image: url('images/slot/sg.png')
+        }
+        #home-slot div.slot-list ul.game-list > li[game-box="mw"]:before {
+            background-image: url('images/slot/mw.png')
+        }
+        #home-slot div.slot-list ul.game-list > li[game-box="hb"]:before {
+            background-image: url('images/slot/hb.png')
+        }
+        #home-slot div.slot-list ul.game-list > li[game-box="jdb"]:before {
+            background-image: url('images/slot/jdb.png')
+        }
+        #home-slot div.slot-list ul.game-list > li[game-box="ne"]:before {
+            background-image: url('images/slot/ne.png')
+        }
+        #home-slot div.slot-list ul.game-list > li[game-box="cq9"]:before {
+            background-image: url('images/slot/cq9.png')
+        }
+        #home-slot div.slot-list ul.game-list > li[game-box="rt"]:before {
+            background-image: url('images/slot/rt.png')
+        }
+        #home-slot div.slot-list ul.game-list > li[game-box="ga"]:before {
+            background-image: url('images/slot/ga.png')
+        }
+        #home-slot div.slot-list ul.game-list > li[game-box="pg"]:before {
+            background-image: url('images/slot/pg.png')
+        }
+
+    #home-slot div.slot-info {
+        position: relative;
+        z-index: 1;
+        height: 372px;
+        overflow: hidden;
+    }
+
+        #home-slot div.slot-info div.slot-panel {
+            position: relative;
+            z-index: 1;
+            margin: 14px;
+            background: #28180a;
+        }
+
+        #home-slot div.slot-info div.slot-panel ul {
+            width: 336px;
+            padding: 5px;
+        }
+
+        #home-slot div.slot-info div.slot-panel ul.right {
+            float: right
+        }
+
+        #home-slot div.slot-info div.slot-panel ul li {
+            display: inline-block;
+            width: 153px;
+            height: 164px;
+            vertical-align: top;
+            margin: 5px;
+            padding-top: 120px;
+            color: #fff;
+            font-size: 14px;
+            line-height: 44px;
+            text-align: center;
+            background-color: #000;
+            background-repeat: no-repeat;
+            background-position: center top
+        }
+
+        #home-slot div.slot-info div.slot-panel ul li:hover {
+            color: #ffda52;
+        }
+
+        #home-slot div.slot-info div.slot-panel ul li.ag01 {
+            background-image: url('images/slot/ag/01.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.ag02 {
+            background-image: url('images/slot/ag/02.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.ag03 {
+            background-image: url('images/slot/ag/03.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.ag04 {
+            background-image: url('images/slot/ag/04.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.ag05 {
+            background-image: url('images/slot/ag/05.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.ag06 {
+            background-image: url('images/slot/ag/06.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.ag07 {
+            background-image: url('images/slot/ag/07.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.ag08 {
+            background-image: url('images/slot/ag/08.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.bb01 {
+            background-image: url('images/slot/bb/01.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.bb02 {
+            background-image: url('images/slot/bb/02.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.bb03 {
+            background-image: url('images/slot/bb/03.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.bb04 {
+            background-image: url('images/slot/bb/04.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.bb05 {
+            background-image: url('images/slot/bb/05.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.bb06 {
+            background-image: url('images/slot/bb/06.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.bb07 {
+            background-image: url('images/slot/bb/07.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.bb08 {
+            background-image: url('images/slot/bb/08.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.cq901 {
+            background-image: url('images/slot/cq9/01.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.cq902 {
+            background-image: url('images/slot/cq9/02.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.cq903 {
+            background-image: url('images/slot/cq9/03.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.cq904 {
+            background-image: url('images/slot/cq9/04.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.cq905 {
+            background-image: url('images/slot/cq9/05.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.cq906 {
+            background-image: url('images/slot/cq9/06.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.cq907 {
+            background-image: url('images/slot/cq9/07.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.cq908 {
+            background-image: url('images/slot/cq9/08.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.ga01 {
+            background-image: url('images/slot/ga/01.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.ga02 {
+            background-image: url('images/slot/ga/02.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.ga03 {
+            background-image: url('images/slot/ga/03.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.ga04 {
+            background-image: url('images/slot/ga/04.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.ga05 {
+            background-image: url('images/slot/ga/05.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.ga06 {
+            background-image: url('images/slot/ga/06.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.ga07 {
+            background-image: url('images/slot/ga/07.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.ga08 {
+            background-image: url('images/slot/ga/08.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.gns01 {
+            background-image: url('images/slot/gns/01.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.gns02 {
+            background-image: url('images/slot/gns/02.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.gns03 {
+            background-image: url('images/slot/gns/03.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.gns04 {
+            background-image: url('images/slot/gns/04.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.gns05 {
+            background-image: url('images/slot/gns/05.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.gns06 {
+            background-image: url('images/slot/gns/06.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.gns07 {
+            background-image: url('images/slot/gns/07.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.gns08 {
+            background-image: url('images/slot/gns/08.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.gpi01 {
+            background-image: url('images/slot/gpi/01.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.gpi02 {
+            background-image: url('images/slot/gpi/02.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.gpi03 {
+            background-image: url('images/slot/gpi/03.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.gpi04 {
+            background-image: url('images/slot/gpi/04.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.gpi05 {
+            background-image: url('images/slot/gpi/05.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.gpi06 {
+            background-image: url('images/slot/gpi/06.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.gpi07 {
+            background-image: url('images/slot/gpi/07.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.gpi08 {
+            background-image: url('images/slot/gpi/08.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.hb01 {
+            background-image: url('images/slot/hb/01.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.hb02 {
+            background-image: url('images/slot/hb/02.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.hb03 {
+            background-image: url('images/slot/hb/03.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.hb04 {
+            background-image: url('images/slot/hb/04.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.hb05 {
+            background-image: url('images/slot/hb/05.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.hb06 {
+            background-image: url('images/slot/hb/06.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.hb07 {
+            background-image: url('images/slot/hb/07.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.hb08 {
+            background-image: url('images/slot/hb/08.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.jdb01 {
+            background-image: url('images/slot/jdb/01.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.jdb02 {
+            background-image: url('images/slot/jdb/02.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.jdb03 {
+            background-image: url('images/slot/jdb/03.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.jdb04 {
+            background-image: url('images/slot/jdb/04.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.jdb05 {
+            background-image: url('images/slot/jdb/05.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.jdb06 {
+            background-image: url('images/slot/jdb/06.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.jdb07 {
+            background-image: url('images/slot/jdb/07.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.jdb08 {
+            background-image: url('images/slot/jdb/08.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.mg01 {
+            background-image: url('images/slot/mg/01.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.mg02 {
+            background-image: url('images/slot/mg/02.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.mg03 {
+            background-image: url('images/slot/mg/03.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.mg04 {
+            background-image: url('images/slot/mg/04.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.mg05 {
+            background-image: url('images/slot/mg/05.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.mg06 {
+            background-image: url('images/slot/mg/06.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.mg07 {
+            background-image: url('images/slot/mg/07.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.mg08 {
+            background-image: url('images/slot/mg/08.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.mw01 {
+            background-image: url('images/slot/mw/01.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.mw02 {
+            background-image: url('images/slot/mw/02.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.mw03 {
+            background-image: url('images/slot/mw/03.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.mw04 {
+            background-image: url('images/slot/mw/04.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.mw05 {
+            background-image: url('images/slot/mw/05.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.mw06 {
+            background-image: url('images/slot/mw/06.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.mw07 {
+            background-image: url('images/slot/mw/07.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.mw08 {
+            background-image: url('images/slot/mw/08.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.ne01 {
+            background-image: url('images/slot/ne/01.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.ne02 {
+            background-image: url('images/slot/ne/02.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.ne03 {
+            background-image: url('images/slot/ne/03.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.ne04 {
+            background-image: url('images/slot/ne/04.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.ne05 {
+            background-image: url('images/slot/ne/05.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.ne06 {
+            background-image: url('images/slot/ne/06.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.ne07 {
+            background-image: url('images/slot/ne/07.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.ne08 {
+            background-image: url('images/slot/ne/08.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.pg01 {
+            background-image: url('images/slot/pg/01.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.pg02 {
+            background-image: url('images/slot/pg/02.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.pg03 {
+            background-image: url('images/slot/pg/03.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.pg04 {
+            background-image: url('images/slot/pg/04.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.pg05 {
+            background-image: url('images/slot/pg/05.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.pg06 {
+            background-image: url('images/slot/pg/06.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.pg07 {
+            background-image: url('images/slot/pg/07.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.pg08 {
+            background-image: url('images/slot/pg/08.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.pp01 {
+            background-image: url('images/slot/pp/01.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.pp02 {
+            background-image: url('images/slot/pp/02.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.pp03 {
+            background-image: url('images/slot/pp/03.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.pp04 {
+            background-image: url('images/slot/pp/04.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.pp05 {
+            background-image: url('images/slot/pp/05.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.pp06 {
+            background-image: url('images/slot/pp/06.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.pp07 {
+            background-image: url('images/slot/pp/07.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.pp08 {
+            background-image: url('images/slot/pp/08.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.pt01 {
+            background-image: url('images/slot/pt/01.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.pt02 {
+            background-image: url('images/slot/pt/02.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.pt03 {
+            background-image: url('images/slot/pt/03.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.pt04 {
+            background-image: url('images/slot/pt/04.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.pt05 {
+            background-image: url('images/slot/pt/05.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.pt06 {
+            background-image: url('images/slot/pt/06.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.pt07 {
+            background-image: url('images/slot/pt/07.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.pt08 {
+            background-image: url('images/slot/pt/08.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.rt01 {
+            background-image: url('images/slot/rt/01.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.rt02 {
+            background-image: url('images/slot/rt/02.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.rt03 {
+            background-image: url('images/slot/rt/03.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.rt04 {
+            background-image: url('images/slot/rt/04.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.rt05 {
+            background-image: url('images/slot/rt/05.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.rt06 {
+            background-image: url('images/slot/rt/06.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.rt07 {
+            background-image: url('images/slot/rt/07.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.rt08 {
+            background-image: url('images/slot/rt/08.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.sg01 {
+            background-image: url('images/slot/sg/01.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.sg02 {
+            background-image: url('images/slot/sg/02.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.sg03 {
+            background-image: url('images/slot/sg/03.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.sg04 {
+            background-image: url('images/slot/sg/04.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.sg05 {
+            background-image: url('images/slot/sg/05.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.sg06 {
+            background-image: url('images/slot/sg/06.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.sg07 {
+            background-image: url('images/slot/sg/07.jpg')
+        }
+        #home-slot div.slot-info div.slot-panel ul li.sg08 {
+            background-image: url('images/slot/sg/08.jpg')
+        }
+
+        #home-slot div.slot-info div.winner {
+            position: absolute;
+            top: 14px;
+            left: 368px;
+            z-index: 2;
+            display: inline-block;
+            width: 265px;
+            height: 354px;
+            padding-top: 80px;
+            background: url('images/slot/winner.png') no-repeat center top
+        }
+
+        #home-slot div.slot-info div.winner>ul {
+            display: block;
+            width: 220px;
+            height: 150px;
+            margin: 0 auto 0;
+            overflow: hidden
+        }
+
+        #home-slot div.slot-info div.winner>ul li {
+            width: 220px
+        }
+
+        #home-slot div.slot-info div.winner>ul li span {
+            display: inline-block;
+            width: 33%;
+            vertical-align: top;
+            color: #502913;
+            font-size: 12px;
+            line-height: 24px;
+            text-align: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap
+        }
+
+        #home-slot div.slot-info p.jackpot {
+            margin: 52px 0 0;
+            color: #a50d1f;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+/* #endregion home-slot */
+
+/* #region home-casino */
+#home-casino {
+    height: 488px;
+    padding-top: 32px;
+    font-size: 0;
+    text-align: center;
+    background-color: #000
+}
+
+    #home-casino div.wrapper:after {
+        content: '';
+        display: block;
+        height: 125px;
+        background: url('images/casino_list.png') no-repeat center center
+    }
+
+    #home-casino ul li {
+        display: inline-block;
+        width: 299px;
+        height: 331px;
+        vertical-align: top;
+        background: url('images/casino_bg.png') no-repeat center top
+    }
+
+        #home-casino ul li+li {
+            margin-left: 50px
+        }
+
+        #home-casino ul li:hover {
+            background-image: url('images/casino_hover.png')
+        }
+
+    #home-casino ul li a {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        padding: 0 11px;
+        color: #757575;
+        font-size: 12px;
+        line-height: 24px;
+        text-decoration: none
+    }
+
+        #home-casino ul li a p {
+            margin: 0 auto;
+            color: #f9ee84;
+            font-size: 18px;
+            line-height: 60px
+        }
+
+            #home-casino ul li p:after {
+                content: '';
+                display: block;
+                height: 164px;
+                margin-bottom: 5px;
+                background-repeat: no-repeat;
+                background-position: center top
+            }
+
+            #home-casino ul li.live p:after {
+                background-image: url('images/casino_live.png')
+            }
+
+            #home-casino ul li.sport p:after {
+                background-image: url('images/casino_sport.png')
+            }
+
+            #home-casino ul li.lottery p:after {
+                background-image: url('images/casino_lottery.png')
+            }
+
+/* #endregion home-casino */
+
+#home-mobile {
+    height: 430px;
+    background: #2b2b2b url('images/mobile_app.jpg') no-repeat center top
+}

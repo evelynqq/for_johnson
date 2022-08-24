@@ -1,0 +1,103 @@
+﻿#content > .wrapper {
+    background: none;
+    width: 1035px;
+}
+
+#un-lobby #unlobby-title {
+    display: none;
+}
+/*#region 遊戲分類樣式 */
+ul.navtab {
+    width: 970px;
+    margin: 0 auto 10px;
+    border-bottom: 1px solid #e62026;
+}
+
+    ul.navtab li {
+        float: left;
+        display: inline-block;
+        height: 38px;
+        padding: 0 5px;
+        color: #fff;
+        font-size: 14px;
+        font-family: 'Microsoft JhengHei';
+        line-height: 38px;
+        width: 100px;
+        text-align: center;
+        background: #ccc;
+    }
+
+        ul.navtab li.tab {
+            background: #e62026;
+        }
+/*#endregion 遊戲分類樣式 */
+
+/*#region 優惠區塊 */
+ul.discount {
+    margin: 0 auto;
+    padding: 0px 10px;
+}
+
+    ul.discount > li:first-child {
+        margin-bottom: 10px;
+        overflow: hidden;
+    }
+
+    ul.discount > li.content {
+        width: 940px;
+        text-align: left;
+        color: #fff;
+        font-size: 20px;
+    }
+
+li.content img {
+    /*li.content padding多少  就要margin負多少 */
+}
+
+li.content h3 {
+}
+
+li.content h4 {
+}
+
+li.content h5 {
+}
+
+li.content p {
+}
+
+li.content dd {
+    margin-left: 0;
+}
+
+li.content table {
+}
+
+    li.content table tr,
+    li.content table th,
+    li.content table td {
+        text-align: center;
+        border: 1px solid #fff;
+    }
+
+    li.content table th {
+    }
+
+li.content ol {
+    padding-left: 20px;
+    list-style-type: decimal;
+}
+
+li.content ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+li.content ol li {
+}
+
+li.content .highlight {
+    color: #f00;
+}
+
+/*#endregion */

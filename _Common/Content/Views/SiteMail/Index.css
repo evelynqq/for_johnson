@@ -1,0 +1,203 @@
+﻿/* 清除 site 樣式 */
+.mailbody ol,
+.mailbody ul {
+    display: block;
+    margin: 1em 0;
+    padding-left: 40px;
+}
+
+.mailbody ul {
+    list-style: disc;
+}
+
+.mailbody ol {
+    list-style: decimal;
+}
+
+/* 背景色 */
+.mail .panel {
+    background: #f7f8fa;
+}
+
+.mail .panel-body {
+    text-align: left;
+}
+
+/* 发信按钮 仿 BS */
+.mail .btn-primary {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #fff;
+    background-color: #428bca;
+    border-color: #357ebd;
+}
+
+.mail .btn-primary:hover {
+    color: #fff;
+    background-color: #3276b1;
+    border-color: #285e8e;
+}
+
+/* 收寄信 tab 仿 BS */
+.mail .nav-tabs {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    display: inline-block;
+}
+
+.mail .nav-tabs li {
+    float: left;
+    margin-bottom: -1px;
+    min-width: 80px;
+    height: 38px;
+    padding: 0 5px;
+    color: #23527c;
+    font-size: 14px;
+    text-align: center;
+    line-height: 38px;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+}
+
+.mail .nav-tabs li:hover {
+    background: #eee;
+}
+
+.mail .nav-tabs li.active {
+    border-left: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid transparent;
+    color: #555;
+    background: #fff;
+}
+
+/* 功能按钮 btn group 仿 BS */
+.mail .features {
+    margin: 10px 0;
+}
+
+.mail .btn-default:hover {
+    color: #333;
+    background-color: #ebebeb;
+    border-color: #adadad;
+}
+
+.mail .btn-group {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.mail .btn-group>.btn {
+    float: left;
+}
+
+.mail .btn-group>.btn:focus {
+    outline: none;
+}
+
+.mail .btn-group .btn+.btn {
+    margin-left: -1px;
+}
+
+.mail .btn-group>.btn:first-child {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.mail .btn-group>.btn:last-child {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+/* 表格顏色 仿 BS */
+.table>tbody>tr.active>td {
+    background-color: #f5f5f5;
+}
+
+.table-hover>tbody>tr.active:hover>td {
+    background-color: #e8e8e8;
+}
+
+.table>tbody>tr.warning>td {
+    background-color: #fcf8e3;
+}
+
+.table-hover>tbody>tr.warning:hover>td {
+    background-color: #faf2cc;
+}
+
+/* 未讀粗體 */
+.table>tbody>tr.notRead * {
+    font-weight: bold;
+}
+
+/* 主旨過長顯示 */
+.mail .subject {
+    padding: 0;
+    max-width: 40em;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* 調整發信表單樣式 */
+.form-group .control-label {
+    width: 10%;
+}
+
+.form-group .control-div {
+    width: 90%;
+}
+
+.control-div input {
+    background: #fff;
+    border: 1px solid #999;
+}
+
+.modal-title input {
+    width: 100%;
+}
+
+/* 信件內容 */
+.modal-body {
+    max-height: 560px;
+    overflow-y: auto;
+}
+
+.modal-body .mailbody {
+    display: inline-block;
+    width: 100%;
+    margin: 15px 0;
+    padding: 9px 14px;
+    background-color: #f7f7f9;
+    border: 1px solid #e1e1e8;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.modal-body .mailbody img {
+    width: 100%;
+}
+
+.modal-body .mailbody blockquote {
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    border-left: 5px solid #eee;
+}
+
+.modal-title .subject {
+    display: inline-block;
+    max-width: 35em;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}

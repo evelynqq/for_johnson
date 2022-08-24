@@ -1,0 +1,66 @@
+﻿@import '../../../../_Common/Css/GameCode';
+
+#lobby {
+    display: block;
+    width: 1000px;
+    margin-left: -10px;
+}
+
+#lobby > ul.game-list > li {
+    width: 327px;
+    height: 346px;
+    margin: 3px;
+    padding-top: 265px;
+    background-position: 50% 50%;
+    background-size: 100% 100%;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    position: relative;
+    span {
+        font-size: 60px;
+        color: #fff;
+        position: absolute;
+        font-weight: bold;
+        line-height: 20px;
+        letter-spacing: 2px;
+        top: 50px;
+        left: 28px;
+        display: inline-block;
+        p {
+            font-size: 35px;
+            font-weight: bold;
+        }
+    }
+}
+#lobby > ul.game-list > li:hover {
+    transform: translateY(-3px);
+    transition: transform 0.5s;
+    box-shadow: 0 0 300px 300px rgba(0, 0, 0, 0.5) inset;
+    span {
+        color: #5d5757cc;
+    }
+}
+
+ul.game-list > li:after {
+    content: '';
+    display: block;
+    width: 105px;
+    height: 39px;
+    margin: 0 auto;
+    background: url('../Lobby/Live/enter.png') no-repeat center top;
+}
+
+ul.game-list > li:hover:after {
+    background-position: center bottom;
+}
+
+// gamebox-list
+@each $gamebox in $live-list {
+    #lobby li[game-box='#{$gamebox}'] {
+        background-image: url('../lobby/live/#{$gamebox}.jpg');
+    }
+}
+
+ul.game-list > li[game-box='more']:after {
+    display: none;
+}

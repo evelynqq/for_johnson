@@ -1,0 +1,36 @@
+#banner {
+  background-image: url("../Mgm/images/banner.jpg");
+}
+
+#invite-box .invite-list li p:first-child {
+  color: #0cbeed;
+}
+
+#invite-box h3 {
+  color: #ffa600;
+}
+
+#invite-box .icon-btn {
+  background: #ffa600;
+}
+
+#invite-box .icon-btn:before {
+  background: #0cbeed;
+}
+
+#invite-box b {
+  color: #0cbeed;
+}
+
+#invite-record.modal.in table th {
+  background: #ffa600;
+}
+
+#invite-record.modal.in .search-time button {
+  background: #ffa600;
+}
+
+#invite-record.modal.in .search-time button:hover {
+  background: #0cbeed;
+}
+/*# sourceMappingURL=Index.css.map */

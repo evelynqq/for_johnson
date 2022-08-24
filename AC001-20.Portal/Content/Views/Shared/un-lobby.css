@@ -1,0 +1,367 @@
+﻿/* 各頁設定 */
+#content {
+    display: inline-block;
+    padding-bottom: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+#un-lobby {
+    min-height: 510px;
+    padding: 30px 0 80px;
+    display: inline-block;
+    width: 100%;
+    max-width: 1000px;
+}
+
+#un-lobby aside {
+    float: left;
+    width: 216px;
+}
+
+#un-lobby ul#sidebar {
+    background: #fff;
+    border: 2px solid #e8e8e8;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#un-lobby ul#sidebar li {
+    position: relative;
+    width: 216px;
+}
+
+#un-lobby ul#sidebar li+li {
+    border-top: 1px solid #e8e8e8;
+}
+
+#un-lobby ul#sidebar li a {
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+    color: #8491a5;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 50px;
+    text-transform: lowercase;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+#un-lobby ul#sidebar li:hover a,
+#un-lobby ul#sidebar li.active a {
+    color: #16b6d2;
+}
+
+#un-lobby ul#sidebar li.hot:before {
+    content: '';
+    position: absolute;
+    top: 17px;
+    left: 25px;
+    width: 35px;
+    height: 15px;
+    background: url(../Shared/images/hot.png) no-repeat;
+}
+
+/* 右邊框架 */
+.page-right {
+    float: right;
+    width: 730px;
+}
+
+ul.page-tab {
+    width: 100%;
+    height: 30px;
+    font-size: 0;
+    border-bottom: 1px solid #bba458;
+}
+
+ul.page-tab>li {
+    display: inline-block;
+    width: 25%;
+    height: 30px;
+    color: #8491a5;
+    font-size: 16px;
+    text-align: center;
+    line-height: 30px;
+}
+
+ul.page-tab.account-tab>li {
+    width: 20%;
+}
+
+ul.page-tab>li:hover {
+    background: #bba458;
+}
+
+ul.page-tab>li>a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: #8491a5;
+    text-decoration: none;
+    text-transform: lowercase;
+}
+
+ul.page-tab>li.active>a {
+    color: #c0b181;
+    text-decoration: underline;
+}
+
+ul.page-tab>li.active:hover>a {
+    color: #8491a5;
+}
+
+ul.txt-tab {
+    width: 100%;
+    height: 30px;
+    font-size: 0
+}
+
+ul.txt-tab>li {
+    display: inline-block;
+    width: 25%;
+    height: 30px;
+    color: #8491a5;
+    font-size: 16px;
+    text-align: center;
+    line-height: 30px
+}
+
+ul.txt-tab>li:hover {
+    background: #bba458
+}
+
+ul.txt-tab>li.active {
+    color: #c0b181;
+    text-decoration: underline
+}
+
+ul.txt-tab>li.active:hover {
+    color: #8491a5;
+}
+
+/* 內文CSS */
+#articles {
+    width: 750px;
+    float: right;
+    color: #8491a5;
+    text-align: left;
+}
+
+#articles h2 {
+    color: #16b6d2;
+    font-size: 20px;
+    line-height: 43px
+}
+
+#articles h3 {
+    color: #262f3c;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+#articles h4 {
+    color: #16b6d2;
+    font-size: 14px;
+    text-align: left
+}
+
+#articles ul {
+    list-style: none;
+    padding-left: 5px;
+}
+
+#articles ol {
+    padding-left: 20px;
+    list-style-type: decimal;
+}
+
+#articles ol ul {
+    padding: 0;
+}
+
+#articles p,
+#articles li {
+    margin: 1em 0;
+    color: #8491a5;
+    font-size: 14px;
+    font-weight: lighter;
+    line-height: 24px;
+}
+
+#articles li a {
+    color: #c0b181;
+    font-size: 16px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+#articles p {
+    margin: 1em 0;
+}
+
+#articles form {
+    padding: 10px 20px;
+}
+
+#articles table {
+    width: 100%;
+    border: 1px solid #e8e8e8;
+}
+
+#articles table tr,
+#articles table th,
+#articles table td {
+    font-size: 15px;
+    font-family: 'Microsoft JhengHei';
+    line-height: 2em;
+    text-align: center;
+    border: 1px solid #999;
+    color: #8491a5;
+}
+
+#articles table th {
+    font-size: 18px;
+    background: #555;
+    color: #e8e8e8;
+}
+
+/* 重點顏色 */
+#articles .highlight {
+    color: #16b6d2;
+    font-weight: bolder;
+}
+
+#articles .highlight-red {
+    color: red
+}
+
+#articles .background-yellow {
+    background: #ff0
+}
+
+
+/* 項目列表 */
+
+#articles ul.counter {
+    position: relative
+}
+
+#articles ul.counter>li {
+    counter-increment: list;
+    padding-left: 2em;
+}
+
+#articles ul.counter>li::before {
+    content: counter(list, decimal)".";
+    position: absolute;
+    display: inline-block;
+    left: 0;
+    color: #c0b181;
+}
+
+/* #region 合作夥伴tab 供其他页面使用 */
+#articles ul.mtab-menual {
+    padding-bottom: 15px;
+    padding-left: 0;
+    text-align: left;
+}
+
+#articles ul.mtab-menual li {
+    display: inline-block;
+    width: 124px;
+    height: 37px;
+    color: #8491a5;
+    font-size: 16px;
+    line-height: 34px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #e8e8e8;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+#articles ul.mtab-menual li:hover,
+#articles ul.mtab-menual li.mtab {
+    color: #fff;
+    background-color: #ff6f80;
+}
+
+/* #region deposit线上存款页面使用 */
+#articles ul.deposit {
+    padding: 0;
+    list-style-type: none;
+}
+
+#articles ul.deposit li {
+    font-size: 16px;
+    counter-increment: title;
+}
+
+#articles ul.deposit li>a:before {
+    content: "方法 "counter(title, upper-alpha)"、";
+}
+
+#articles ul.deposit li a {
+    color: #f00;
+    text-decoration: underline;
+}
+
+/* #endregion deposit线上存款页面使用 */
+
+/* #region account nav共用 */
+.body {
+    position: relative;
+    width: 1000px;
+    margin: 40px auto;
+    font-size: 14px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.body #title {
+    color: #fff;
+    text-align: center;
+    background: #666;
+}
+
+.body.container #title {
+    font-size: 15px;
+    font-family: '新細明體';
+}
+
+.body.container #title,
+.body #account-heading,
+.body #withdrawal-heading {
+    color: #fff;
+    background: #706c80;
+}
+
+/* 檢視存入帳戶的文字顏色 */
+.body #show-account-info.btn {
+    color: #fff;
+}
+
+/* #endregion account nav共用 */
+
+/* #region account nav共用 */
+
+/* 一鍵取回 */
+.body.container #title,
+.body #account-heading,
+.body #withdrawal-heading,
+#account-popup.modal.in table th {
+    color: #fff;
+    background: #16b6d2;
+}

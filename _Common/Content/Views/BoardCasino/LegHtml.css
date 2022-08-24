@@ -1,0 +1,539 @@
+﻿
+/* #region base */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, 'Microsoft JhengHei','微軟正黑體','微软正黑体';
+    background-color: #fff;
+}
+
+*:focus {
+    outline: none;
+}
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+    *[ng-click] {
+        cursor: pointer;
+    }
+
+ul, ol {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.BoardHtml {
+    margin: 0 auto;
+}
+
+.wrapper {
+    position: relative;
+    width: 850px;
+    margin: 0 auto;
+}
+/* #endregion base */
+
+/* #region header*/
+#header {
+    font-size: 0;
+}
+
+#logo {
+    position: relative;
+    display: inline-block;
+    height: 80px;
+}
+
+    #logo img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+    }
+
+#search {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 200px;
+    height: 40px;
+    padding: 5px;
+    background-color: #333;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+    #search > form > * {
+        display: inline-block;
+        height: 30px;
+        vertical-align: top;
+        border: none;
+    }
+
+    #search form input {
+        width: 150px;
+        margin-right: 5px;
+        padding: 0 5px;
+        color: #000;
+        font-size: 12px;
+        font-family: Arial, 'Microsoft JhengHei','微軟正黑體','微软正黑体';
+        line-height: 30px;
+        background-color: #fff;
+        border: none;
+    }
+
+
+    #search > form > input::-webkit-input-placeholder {
+        color: #000;
+        -moz-transition: all .3s;
+        -o-transition: all .3s;
+        -webkit-transition: all .3s;
+        transition: all .3s;
+    }
+
+    #search > form > input::-moz-placeholder {
+        color: #000;
+        -moz-transition: all .3s;
+        -o-transition: all .3s;
+        -webkit-transition: all .3s;
+        transition: all .3s;
+    }
+
+    #search > form > input:-ms-input-placeholder {
+        color: #000;
+        -moz-transition: all .3s;
+        -o-transition: all .3s;
+        -webkit-transition: all .3s;
+        transition: all .3s;
+    }
+
+    #search > form > input.placeholdersjs {
+        color: #000;
+        -moz-transition: all .3s;
+        -o-transition: all .3s;
+        -webkit-transition: all .3s;
+        transition: all .3s;
+    }
+
+    #search > form > input:focus::-webkit-input-placeholder {
+        color: rgba(32, 30, 30, 0.3);
+    }
+
+    #search > form > input:focus::-moz-placeholder {
+        color: rgba(32, 30, 30, 0.3);
+    }
+
+    #search > form > input:focus:-ms-input-placeholder {
+        color: rgba(32, 30, 30, 0.3);
+    }
+
+    #search > form > input.placeholdersjs {
+        color: rgba(32, 30, 30, 0.3);
+    }
+
+    #search form button {
+        width: 30px;
+        color: #fff;
+        font-size: 20px;
+        background-color: transparent;
+        cursor: pointer;
+        border: none;
+        outline: none;
+    }
+/* #endregion header*/
+
+/* #region nav */
+nav {
+    margin-bottom: 15px;
+    padding: 10px 0 0;
+    min-height: 50px;
+    background-color: #eee;
+}
+
+#game-nav {
+    display: block;
+    font-size: 0;
+}
+
+    #game-nav > li {
+        position: relative;
+        display: inline-block;
+        margin: 0 10px 10px 0;
+        vertical-align: top;
+    }
+
+        #game-nav > li > span {
+            display: inline-block;
+            padding: 0 15px;
+            color: #fff;
+            font-size: 15px;
+            line-height: 30px;
+        }
+
+        #game-nav > li:hover > ol.subnav {
+            display: block;
+        }
+
+ol.subnav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -50px;
+    width: 100px;
+    padding: 10px 0 0;
+    text-align: center;
+    z-index: 3;
+}
+
+    ol.subnav > li {
+        color: #000;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 30px;
+        background-color: #fff;
+        cursor: pointer;
+    }
+
+/* #endregion nav */
+
+/* #region banner*/
+#content #banner > img {
+    width: 100%;
+}
+/* #endregion banner*/
+
+/* #region 游戏列表区块*/
+#game-list {
+    position: relative;
+    margin: 0 auto;
+    display: block;
+    padding: 0;
+    font-size: 0;
+    text-align: left;
+}
+
+    #game-list li {
+        position: relative;
+        display: inline-block;
+        width: 160px;
+        height: 180px;
+        margin: 5px;
+        vertical-align: top;
+        z-index: 0;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+    }
+
+        #game-list li img.icon {
+            position: absolute;
+            z-index: 2;
+        }
+
+            #game-list li img.icon.icon01 {
+                top: 9px;
+                left: 9px;
+            }
+
+            #game-list li img.icon.icon02 {
+                top: 7px;
+                right: 10px;
+            }
+
+            #game-list li img.icon.icon03 {
+                right: 5px;
+                bottom: 30px;
+            }
+
+            #game-list li img.icon.icon04 {
+                left: -10px;
+                bottom: 30px;
+            }
+
+        #game-list li .game-logo {
+            position: relative;
+            height: 100%;
+            padding-top: 9px;
+            text-align: center;
+        }
+
+        #game-list li:hover .game-logo:before {
+            content: '';
+            position: absolute;
+            top: 9px;
+            left: 9px;
+            width: 140px;
+            height: 140px;
+            z-index: 1;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        #game-list li .game-logo img {
+            width: 140px;
+            height: 140px;
+        }
+
+        #game-list li .game-text {
+            position: absolute;
+            bottom: 5px;
+            width: 100%;
+            color: #000;
+            font-size: 16px;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            -ms-text-overflow: ellipsis;
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+        }
+/* #endregion 游戏列表区块*/
+
+/* #region pager */
+#pager {
+    display: block;
+    margin: 20px auto 15px;
+    text-align: center;
+    font-size: 0;
+}
+
+    #pager > li {
+        display: inline-block;
+        margin: 0 3px;
+        padding: 0 10px;
+        color: #000;
+        height: 25px;
+        font-size: 16px;
+        line-height: 25px;
+        vertical-align: top;
+        background-color: #ccc;
+    }
+/* #endregion pager */
+
+/* #region RWD*/
+
+/* 装置萤幕宽小于870 */
+@media (max-width: 870px) {
+    .BoardHtml .wrapper {
+        width: 680px;
+    }
+
+    #game-list li {
+        margin: 5px;
+    }
+}
+
+/* 装置萤幕宽小于700px */
+@media (max-width: 700px) {
+
+    .BoardHtml .wrapper {
+        width: 510px;
+    }
+
+    #game-nav > li span,
+    ol.subnav > li {
+        font-size: 13px;
+    }
+}
+
+/*装置萤幕宽小于530*/
+@media (max-width: 530px) {
+    #header {
+        text-align: center;
+    }
+
+        #header #logo {
+            display: block;
+        }
+
+        #header #search {
+            position: static;
+            margin: 0 auto 15px;
+        }
+
+    #game-nav > li {
+        margin: 0 0 10px 0;
+    }
+
+    .BoardHtml .wrapper {
+        width: 340px;
+    }
+
+    .BoardHtml #game-list li {
+        width: 109px;
+        height: 126px;
+        margin: 2px;
+    }
+
+        .BoardHtml #game-list li img.icon.icon01 {
+            left: 6px;
+        }
+
+        .BoardHtml #game-list li img.icon.icon02 {
+            right: 3px;
+        }
+
+        .BoardHtml #game-list li .game-logo img {
+            width: 95px;
+            height: 95px;
+        }
+
+        .BoardHtml #game-list li:hover .game-logo:before {
+            left: 6px;
+            width: 95px;
+            height: 95px;
+        }
+
+        .BoardHtml #game-list li .game-text {
+            bottom: 1px;
+            font-size: 14px;
+        }
+}
+
+/* #endregion RWD*/
+
+/* #region 熱門遊戲的文字變換顏色 */
+.hot > span {
+    color: #24e12b;
+    -moz-animation-duration: 0.5s;
+    -o-animation-duration: 0.5s;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -moz-animation-name: blink;
+    -o-animation-name: blink;
+    -webkit-animation-name: blink;
+    animation-name: blink;
+    -moz-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -moz-animation-direction: alternate;
+    -o-animation-direction: alternate;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    -moz-animation-timing-function: linear;
+    -o-animation-timing-function: linear;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+
+@-moz-keyframes blink {
+    from {
+        color: #24e12b;
+    }
+
+    to {
+        color: #147dff;
+    }
+}
+
+@-webkit-keyframes blink {
+    from {
+        color: #24e12b;
+    }
+
+    to {
+        color: #147dff;
+    }
+}
+
+@keyframes blink {
+    from {
+        color: #24e12b;
+    }
+
+    to {
+        color: #147dff;
+    }
+}
+/* #endregion 熱門遊戲的文字變換顏色 */
+
+/* #region header */
+#search {
+    background: #d613b3; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#d613b3, #4c2773);
+    background: -o-linear-gradient(#d613b3, #4c2773);
+    background: -moz-linear-gradient(#d613b3, #4c2773);
+    background: linear-gradient(#d613b3, #4c2773);
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+/* #endregion header */
+
+/* #region nav */
+nav {
+    background: #d613b3; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#d613b3, #4c2773);
+    background: -o-linear-gradient(#d613b3, #4c2773);
+    background: -moz-linear-gradient(#d613b3, #4c2773);
+    background: linear-gradient(#d613b3, #4c2773);
+}
+
+#game-nav > li > span {
+    font-weight: bold;
+}
+
+#game-nav > li:hover span,
+#game-nav > li.active span {
+    background-color: #ff00d1;
+}
+
+ol.subnav > li {
+    color: #000;
+    font-weight: bold;
+    background-color: #fff;
+}
+
+    ol.subnav > li:hover {
+        color: #fff;
+        background-color: #ff00d1;
+    }
+/* #endregion nav */
+
+/* #region 游戏列表区块 */
+#game-list li {
+    border-color: #555;
+}
+
+    #game-list li:hover {
+        color: #fff;
+        background: #d613b3; /* For browsers that do not support gradients */
+        background: -webkit-linear-gradient(#d613b3, #4c2773);
+        background: -o-linear-gradient(#d613b3, #4c2773);
+        background: -moz-linear-gradient(#d613b3, #4c2773);
+        background: linear-gradient(#d613b3, #4c2773);
+        border-color: #fff;
+    }
+
+        #game-list li:hover .game-logo:before {
+            background-image: url('../../../../_Common/Content/Views/BoardCasino/LEG/hover.png');
+        }
+
+        #game-list li:hover .game-text {
+            color: #fff;
+        }
+/* #endregion 游戏列表区块 */
+
+/* #region pager */
+#pager > li {
+    color: #fff;
+    background-color: #555;
+}
+
+#pager li[ng-click]:hover {
+    background-color: #ff00d1;
+}
+/* #endregion pager */

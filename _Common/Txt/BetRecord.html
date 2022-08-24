@@ -1,0 +1,99 @@
+<div class="panel panel-default">
+    <div id="title" class="panel-heading">
+        <div>投注记录</div>
+    </div>
+    <div id="bet_record" class="panel-body">
+        <div ng-switch="betRecord.status.isReady">
+            <div ng-switch-when="true" class="ng-scope">
+                <div class="panel_top">
+                    <form ng-submit="betRecord.submit()" class="ng-pristine ng-valid">
+                        <fieldset>
+                            <div class="form-group text-left">
+                                <label class="control-label">
+                                    <input type="radio" name="searchTimeOption" ng-model="betRecord.searchTimeOption" ng-value="1" class="ng-pristine ng-valid" value="1">
+                                    投注日期
+                                </label>
+                                <div class="control-div">
+                                    <input type="text" datetimepicker="" ng-required="betRecord.searchTimeOption == 1" placeholder="开始日期 yyyy/mm/dd" ng-model="betRecord.wagersTimeBegin" ng-disabled="betRecord.searchTimeOption == 2" class="ng-pristine ng-valid ng-valid-required" required="required">
+                                    -
+                                    <input type="text" datetimepicker="" ng-required="betRecord.searchTimeOption == 1" placeholder="结束日期 yyyy/mm/dd" ng-model="betRecord.wagersTimeEnd" ng-disabled="betRecord.searchTimeOption == 2" class="ng-pristine ng-valid ng-valid-required" required="required">
+                                </div>
+                            </div>
+                            <div class="form-group text-left">
+                                <label class="control-label">
+                                    <input type="radio" name="searchTimeOption" ng-model="betRecord.searchTimeOption" ng-value="2" class="ng-pristine ng-valid" value="2">
+                                    派彩时间
+                                </label>
+                                <div class="control-div">
+                                    <input type="text" datetimepicker="" ng-required="betRecord.searchTimeOption == 2" placeholder="开始日期 yyyy/mm/dd" ng-model="betRecord.payoffTimeBegin" ng-disabled="betRecord.searchTimeOption == 1" class="ng-pristine ng-valid ng-valid-required" disabled="disabled">
+                                    -
+                                    <input type="text" datetimepicker="" ng-required="betRecord.searchTimeOption == 2" placeholder="结束日期 yyyy/mm/dd" ng-model="betRecord.payoffTimeEnd" ng-disabled="betRecord.searchTimeOption == 1" class="ng-pristine ng-valid ng-valid-required" disabled="disabled">
+                                </div>
+                            </div>
+                            <div class="form-group text-left">
+                                <label class="control-label" ng-class="{'text-muted': betRecord.searchTimeOption == 2}">
+                                    <input type="checkbox" ng-model="betRecord.unpayOnly" ng-disabled="betRecord.searchTimeOption == 2" class="ng-pristine ng-valid">
+                                    只查询未派彩注单
+                                </label>
+                            </div>
+                            <div class="form-group game-type">
+                                <label class="control-label">游戏类型</label>
+                                <div class="control-div ng-binding">
+                                    (全选)
+                                    &nbsp; &nbsp;
+                                </div>
+                                <button type="button" class="btn btn-default btn_search pull-right" id="opener">选取</button>
+                            </div>
+                        </fieldset>
+                        <div class="row">
+                            <button class="btn btn_search search pull-right" ng-disabled="betRecord.status.isLoading">搜寻</button>
+                        </div>
+                    </form>
+                    <table id="bet_recordTable" class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th class="text-left">游戏类型</th>
+                                <th class="text-left">游戏名称</th>
+                                <th class="text-left">投注时间</th>
+                                <th class="text-left">派彩时间</th>
+                                <th class="text-right">投注额</th>
+                                <th class="text-right">有效投注</th>
+                                <th class="text-right">派彩</th>
+                            </tr>
+                            <tr class="tol">
+                                <th colspan="4" class="text-left">
+                                    总共：
+                                    <span ng-show="isSearchCompleted" class="ng-binding">0</span>
+                                    <i class="fa fa-spinner fa-spin ng-hide" ng-show="!isSearchCompleted"></i>
+                                    笔
+                                </th>
+                                <th class="text-right">
+                                    <span ng-show="isSearchCompleted" class="ng-binding">$ 0</span>
+                                    <i class="fa fa-spinner fa-spin ng-hide" ng-show="!isSearchCompleted"></i>
+                                </th>
+                                <th class="text-right">
+                                    <span ng-show="isSearchCompleted" class="ng-binding">$ 0</span>
+                                    <i class="fa fa-spinner fa-spin ng-hide" ng-show="!isSearchCompleted"></i>
+                                </th>
+                                <th class="text-right">
+                                    <span ng-show="isSearchCompleted" class="ng-binding">$ 0</span>
+                                    <i class="fa fa-spinner fa-spin ng-hide" ng-show="!isSearchCompleted"></i>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- ngRepeat: datum in betRecord.lists -->
+                        </tbody>
+                        <tfoot>
+                            <tr ng-switch="betRecord.status.isDataAllLoaded">
+                                <td ng-switch-when="true" class="text-center ng-scope" colspan="8">
+                                    <span>资料已全部载入</span>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

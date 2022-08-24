@@ -1,0 +1,88 @@
+﻿@import '../../../../_Common/Css/GameCode';
+
+#banner {
+    background-image: url('../Lobby/Esport/banner.jpg');
+}
+
+#content {
+    background-image: url('../Lobby/Esport/background.jpg');
+}
+
+.game-list > li {
+    width: 320px;
+    height: 370px;
+    margin-bottom: 20px;
+    background-color: #2f2f2f;
+    border-bottom: 8px solid #585858;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.game-list > li:nth-child(3n + 2) {
+    margin: 0 20px;
+}
+
+.game-list > li:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 320px;
+    height: 299px;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.5s;
+}
+
+.game-list > li:hover {
+    transform: translateY(-5px);
+    border-bottom: 8px solid #0088fe;
+}
+
+.game-list > li:hover:before {
+    transform: scale(1.1);
+}
+
+// gamebox-list
+@each $gamebox in $esport-list {
+    #lobby li[game-box='#{$gamebox}']:before {
+        background-image: url('../lobby/Esport/#{$gamebox}.jpg');
+    }
+}
+
+.game-list > li[game-box='more']:hover:before {
+    transform: none;
+}
+
+.game-list > li span {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 320px;
+    height: 60px;
+    color: #0088fe;
+    font-size: 24px;
+    text-align: center;
+    line-height: 20px;
+    transition: all 0.5s;
+}
+
+.game-list > li[game-box="more"] span {
+    color: #58584F;
+}
+
+.game-list > li:hover span {
+    bottom: -25px;
+}
+.game-list > li[game-box="more"]:hover span {
+    bottom: -20px;
+}
+
+.game-list > li[game-box="more"]:hover {
+    transform: scale(1);
+    border-bottom: 8px solid #585858;
+    background-color: #2f2f2f;
+}
+.game-list > li[game-box="more"]:hover::before {
+    transform: scale(1);
+}

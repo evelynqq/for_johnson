@@ -1,0 +1,130 @@
+﻿#banner {
+    /* background-image: url('images/banner.jpg'); */
+}
+
+#content {
+    padding: 44px 0;
+    background-image: url('images/content_bg.jpg');
+}
+
+    #content > div.wrapper {
+        width: 1014px;
+    }
+
+#un-lobby {
+    padding: 0;
+    background-color: #202020;
+    border: 1px solid #313131;
+}
+
+/*#region 優惠分類樣式 */
+ul.navtab {
+    display: block;
+    width: 960px;
+    margin: 25px auto;
+    font-size: 0;
+    text-align: left;
+    border-bottom: 2px solid #353535;
+}
+
+    ul.navtab li {
+        display: inline-block;
+        width: 110px;
+        height: 42px;
+        margin-right: 5px;
+        color: #fff;
+        font-size: 14px;
+        line-height: 42px;
+        text-align: center;
+        background-color: #353535;
+        -moz-border-radius: 5px 5px 0 0;
+        -webkit-border-radius: 5px 5px 0 0;
+        border-radius: 5px 5px 0 0;
+        cursor: pointer;
+    }
+
+        ul.navtab li:hover,
+        ul.navtab li.tab {
+            color: #111;
+            background-color: #cca758;
+        }
+/*#endregion 優惠分類樣式 */
+
+/*#region 優惠區塊 */
+ul.discount {
+    margin: 0 auto;
+    padding: 0px 26px;
+    width: 100%;
+}
+
+    ul.discount > li {
+        width: 100%;
+    }
+
+        ul.discount > li:first-child {
+            margin-bottom: 5px;
+        }
+
+            ul.discount > li:first-child > img {
+                width: 100%;
+            }
+
+        /*優惠內文顏色*/
+        ul.discount > li.content {
+            color: #fff;
+            text-align: justify;
+            overflow-x: auto;
+        }
+
+li.content img {
+    /*li.content padding多少  就要margin負多少 */
+}
+
+li.content h3 {
+}
+
+li.content h4 {
+}
+
+li.content h5 {
+}
+
+li.content p {
+}
+
+li.content dd {
+    margin-left: 0;
+}
+
+li.content table {
+    width: 100%;
+}
+
+    li.content table tr,
+    li.content table th,
+    li.content table td {
+        line-height: 2em;
+        text-align: center;
+    }
+
+    li.content table th {
+    }
+
+li.content ol {
+    padding-left: 20px;
+    list-style-type: decimal;
+}
+
+li.content ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+li.content ol li {
+}
+
+li.content .highlight {
+    color: #f00;
+}
+
+/*#endregion 優惠區塊 */

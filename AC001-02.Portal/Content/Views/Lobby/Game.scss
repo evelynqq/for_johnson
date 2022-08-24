@@ -1,0 +1,76 @@
+﻿@import '../../../../_Common/Css/GameCode';
+
+#banner {
+    background-image: url('../Lobby/Game/banner.jpg');
+}
+
+#content {
+    background-image: url('../Lobby/Game/background.jpg');
+}
+
+#lobby iframe {
+    width: 100%;
+    height: 900px;
+    background: #fff;
+    transition: all linear 0.2s;
+}
+
+.game-list {
+    text-align: center;
+}
+
+.game-list > li {
+    width: 166.5px;
+    height: 56px;
+    padding-top: 10px;
+    padding-left: 62px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 400;
+    text-align: left;
+    line-height: 20px;
+    white-space: nowrap;
+    background-color: #208ae6;
+    background-position: -7px center;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid #2e9dfe;
+    background-size: 45% auto;
+}
+
+.game-list > li + li {
+    border-left: 1px solid #2e9dfe;
+}
+
+.game-list > li > div {
+    color: #78b3fb;
+    font-size: 12px;
+}
+
+.game-list > li:hover,
+.game-list > li.active,
+.game-list > li:hover > div,
+.game-list > li.active > div {
+    color: #008ffe;
+    background-color: #fff;
+}
+
+// gamebox-list
+@each $gamebox in $game-list {
+    @if $gamebox != more {
+        #lobby li[game-box='#{$gamebox}'] {
+            background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Game/#{$gamebox}.png');
+        }
+    }
+}
+
+.game-list > li[game-box='more'] {
+    padding-left: 62px;
+    color: #78b3fb;
+    text-align: left;
+}
+
+.game-list > li[game-box='more']:hover,
+.game-list > li[game-box='more']:hover > div {
+    color: #78b3fb;
+    background-color: #1e8ae6;
+}

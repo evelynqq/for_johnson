@@ -1,0 +1,9 @@
+﻿.form-group .control-label {
+    width: 24%;
+}
+
+.form-group .control-info {
+    display: inline-block;
+    width: 35%;
+    text-align: left;
+}

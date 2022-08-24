@@ -1,0 +1,255 @@
+﻿<body class="layout" ng-controller="LayoutCtrl">
+    <header id="header">
+        <!-- popup -->
+        <div id="popup"></div>
+        <div id="header-top">
+            <div class="wrapper">
+                <div id="language" select-language="">
+                    選擇語言：
+                    <span class="language ng-scope" data-language="zh-CN" title="简体中文"></span>
+                    <span class="language ng-scope" data-language="zh-TW" title="繁体中文"></span>
+                    <span class="language ng-scope" data-language="en-US" title="English"></span>
+                    <span class="language ng-scope" data-language="th" title="ภาษาไทย"></span>
+                </div>
+                <ul class="top-nav">
+                    <li><a href="../Trial/Apply.html" target="_blank">免費試玩</a></li>
+                    <li class="license">牌照顯示</li>
+                    <li><a href="https://cdn1.0a0w.com/Client/dns2.html" target="_blank">DNS 防劫持教程</a></li>
+                    <li><a href="../Partner/index.html">代理合作</a></li>
+                    <li><a href="javascript:void(0)" ng-click="addFavoriteClick()">加入收藏</a></li>
+                    <li><a href="javascript:void(0)" ng-click="addHomePageClick()">設為首頁</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div id="logo-bg">
+                <a href="../Home/index.html"></a>
+            </div>
+            <nav id="nav" slide-menu>
+                <ul ng-controller="LobbiesCtrl" class="ng-scope">
+                    <li class="home active">
+                        <a nav-active="" href="../Home/index.html">首页<span>HOME</span></a>
+                    </li>
+                    <li id="navFish" class="fish">
+                        <a href="#">捕鱼达人<span>FISH</span></a>
+                        <div class="subnav live" carousel-slider="" super-vis="7" super-effect="leftLoop">
+                            <span class="prev"></span>
+                            <div class="main-cell">
+                                <div class="tempWrap" style="overflow:hidden; position:relative; width:910px">
+                                    <ol style="width: 2080px; position: relative; overflow: hidden; padding: 0px; margin: 0px; left: 0px;">
+                                        <!-- List -->
+                                    </ol>
+                                </div>
+                            </div>
+                            <span class="next"></span>
+                        </div>
+                    </li>
+                    <li id="navLive">
+                        <a nav-active="" href="../Lobby/Live.html" ng-click="toMwHtml()">真人娱乐<span>CASINO</span></a>
+                        <div class="subnav live" carousel-slider="" super-vis="7" super-effect="leftLoop">
+                            <span class="prev"></span>
+                            <div class="main-cell">
+                                <div class="tempWrap" style="overflow:hidden; position:relative; width:910px">
+                                    <ol style="width: 2080px; position: relative; overflow: hidden; padding: 0px; margin: 0px; left: 0px;">
+                                        <!-- List -->
+                                    </ol>
+                                </div>
+                            </div>
+                            <span class="next"></span>
+                        </div>
+                    </li>
+                    <li id="navSport">
+                        <a nav-active="" href="../Lobby/Sport.html" ng-click="toMwHtml()">体育赛事<span>SPORT</span></a>
+                        <div class="subnav sport" carousel-slider="" super-vis="7" super-effect="leftLoop">
+                            <span class="prev"></span>
+                            <div class="main-cell">
+                                <div class="tempWrap" style="overflow:hidden; position:relative; width:910px">
+                                    <ol
+                                        style="width: 2080px; position: relative; overflow: hidden; padding: 0px; margin: 0px; left: 0px;">
+                                        <!-- List -->
+                                    </ol>
+                                </div>
+                            </div>
+                            <span class="next"></span>
+                        </div>
+                    </li>
+                    <li id="navEsport">
+                        <a nav-active="" href="../Lobby/Esport.html" ng-click="toMwHtml()">电子竞技<span>ESPORT</span></a>
+                        <div class="subnav esport" carousel-slider="" super-vis="7" super-effect="leftLoop">
+                            <span class="prev"></span>
+                            <div class="main-cell">
+                                <div class="tempWrap" style="overflow:hidden; position:relative; width:910px">
+                                    <ol style="width: 2080px; position: relative; overflow: hidden; padding: 0px; margin: 0px; left: 0px;">
+                                        <!-- List -->
+                                    </ol>
+                                </div>
+                            </div>
+                            <span class="next"></span>
+                        </div>
+                    </li>
+                    <li id="navLottery">
+                        <a nav-active="" href="../Lobby/Lottery.html" ng-click="toMwHtml()"
+                            >彩票游戏<span>LOTTERY</span></a
+                        >
+                        <div class="subnav lottery" carousel-slider="" super-vis="7" super-effect="leftLoop">
+                            <span class="prev"></span>
+                            <div class="main-cell">
+                                <div class="tempWrap" style="overflow:hidden; position:relative; width:910px">
+                                    <ol style="width: 2080px; position: relative; overflow: hidden; padding: 0px; margin: 0px; left: 0px;">
+                                        <!-- List -->
+                                    </ol>
+                                </div>
+                            </div>
+                            <span class="next"></span>
+                        </div>
+                    </li>
+                    <li id="navGame">
+                        <a nav-active="" href="../Lobby/Game.html" ng-click="toMwHtml()">电子游艺<span>GAME</span></a>
+                        <div class="subnav game" carousel-slider="" super-vis="7" super-effect="leftLoop">
+                            <span class="prev"></span>
+                            <div class="main-cell">
+                                <div class="tempWrap" style="overflow:hidden; position:relative; width:910px">
+                                    <ol style="width: 2080px; position: relative; overflow: hidden; padding: 0px; margin: 0px; left: 0px;">
+                                        <!-- List -->
+                                    </ol>
+                                </div>
+                            </div>
+                            <span class="next"></span>
+                        </div>
+                    </li>
+                    <li id="navBoard">
+                        <a nav-active="" href="../Lobby/Board.html" ng-click="toMwHtml()">棋牌游戏<span>BOARD</span></a>
+                        <div class="subnav board" carousel-slider="" super-vis="7" super-effect="leftLoop">
+                            <span class="prev"></span>
+                            <div class="main-cell">
+                                <div class="tempWrap" style="overflow:hidden; position:relative; width:910px">
+                                    <ol style="width: 2080px; position: relative; overflow: hidden; padding: 0px; margin: 0px; left: 0px;">
+                                        <!-- List -->
+                                    </ol>
+                                </div>
+                            </div>
+                            <span class="next"></span>
+                        </div>
+                    </li>
+                    <li class="promotion">
+                        <a nav-active="" href="../Promotion/index.html" ng-click="toMwHtml()"
+                            >优惠活动<span>PROMOTION</span></a
+                        >
+                        <div class="subnav promotion" carousel-slider="" super-vis="7" super-effect="leftLoop">
+                            <span class="prev"></span>
+                            <div class="main-cell">
+                                <div class="tempWrap" style="overflow:hidden; position:relative; width:910px">
+                                    <ol style="width: 2080px; position: relative; overflow: hidden; padding: 0px; margin: 0px; left: 0px;">
+                                        <li game-box="redenvelope" class="clone ng-scope" style="float: left;width: 120px;"></li>
+                                         ></li> ol>
+                                </div>
+                            </div>
+                            <span class="next"></span>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div id="header-bot">
+            <div class="wrapper">
+                <!-- Account-box -->
+                <!-- 未登入 -->
+                <div id="account-box" class="is-logout">
+                    <form ng-controller="LoginCtrl" ng-submit="login(loginParams)" ng-disabled="isProcessing">
+                        <input id="login_account" type="text" placeholder="@Resources.Shared.Account" ng-model="loginParams.account" required autofocus />
+                        <input id="login_password" type="password" placeholder="@Resources.Shared.Password" ng-model="loginParams.password" required />
+                        <div id="check-code-wrapper">
+                            <input data-checkcode-retriever="checkCode" checkcode-type="Login" type="text" placeholder="@Resources.Shared.CheckCode" ng-model="loginParams.checkCode" required />
+                            <img id="captcha" ng-show="checkCode.image" ng-src="{{ checkCode.image }}" />
+                        </div>
+                        <button id="login-box" class="login-btn" onclick="login()">登入</button>
+                        <button class="join-btn" ng-click="RegisterClick()" type="button" onclick="location.href='../Register/index.html';">
+                            免費開戶
+                        </button>
+                        <!-- <div id="agree" ng-show="loginOver" ng-cloak>
+                            點擊登入表示同意<a ng-click="agreement()">用戶協議</a>
+                        </div> -->
+                    </form>
+                </div>
+                <!-- 登入 -->
+                <div id="account-box" class="is-login">
+                    <ul id="account-info">
+                        <li>
+                            帳號 :
+                            <span id="member-level" class="vip10" onclick="window.location.href='../Vip/index.html'">vip10</span>
+                            <span class="account">DemoAccount</span>
+                            <a id="mailbox" href="../SiteMail/index.html" title="站內信" class="ng-scope">
+                                <span class="ng-binding">1</span>
+                            </a>
+                        </li>
+                        <li>
+                            帳戶餘額 :
+                            <span class="account account-balance ng-binding" title="$ 5000.00" onclick="accountPopup()">$5,000.00</span>
+                            <a ng-click="updateBalance()" title="更新">
+                                <i ng-show="!updatingBalance" class="fa fa-refresh"></i>
+                                <i ng-show="updatingBalance" class="fa fa-spinner fa-spin ng-hide"></i>
+                            </a>
+                            <div id="callBackAllWallet" ng-click="callBackAllWallet()"></div>
+                        </li>
+                    </ul>
+                    <ul id="account-nav">
+                        <!-- Account Nav List -->
+                    </ul>
+                    <div id="action-box">
+                        <a class="login-btn" onclick="signOut()">登出</a>
+                    </div>
+                </div>
+                <!-- Account-box End -->
+            </div>
+        </div>
+    </header>
+    <div id="banner"></div>
+    <div id="content">
+        <div class="hot-top">
+            <div class="wrapper">
+                <div id="news">
+                    <div id="hot-news" news-manual>
+                        <div class="marqueen">
+                            <ul class="news-list">
+                                <li onclick="newsClick()">
+                                    ★公司入款帐户不定时更新,请会员入款仔细查看最新收款帐户,若转入已下架帐户公司一概不负责
+                                </li>
+                                <li onclick="newsClick()">
+                                    ★建议会员多加使用QQ钱包,若出现商户限额或其他错误信息,请多加重新提交尝试即可
+                                </li>
+                                <li onclick="newsClick()">
+                                    ★近期有不肖诈骗团体利用劫持网页手法使会员开启GStargaming网页时跳转至其他非法网站,请各位会员小心资金安全,GStargaming官网并没有其他网站与网址,GStargaming关心您
+                                </li>
+                                <li onclick="newsClick()">
+                                    ★目前一天取款前五次免手续费出款，第六次開始收取50元手续费，以最后一笔取款往前推算24小时，建议会员可以24小时取款五次以内，就不会收取手续费用
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-hot" ng-click="lineChatClick()"></div>
+                <div class="join-hot" onclick="window.location.href='../Register/index.html'"></div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="wrapper">
+            <div id="footer-logo"></div>
+            <ul id="footer-nav">
+                <!-- Append Footer List -->
+            </ul>
+            <ul id="footer-info">
+                <li class="mail">邮箱：<span ng-bind="ContactInfo.Email" class="ng-binding"></span></li>
+                <li class="suggest">投诉：<span ng-bind="ContactInfo.Email" class="ng-binding"></span></li>
+                <li class="agent" ng-click="qqClick(ContactInfo.QQ)">
+                    代理QQ：<span ng-bind="ContactInfo.QQ" class="ng-binding"></span>
+                </li>
+                <li class="qq" ng-click="qqClick(ContactInfo.QQ)">
+                    QQ：<span ng-bind="ContactInfo.QQ" class="ng-binding"></span>
+                </li>
+                <li class="chat" ng-click="lineChatClick()">7X24小时在线客服</li>
+            </ul>
+        </div>
+        <p id="footer-suggest"><!-- Copyright --></p>
+    </footer>
+</body>

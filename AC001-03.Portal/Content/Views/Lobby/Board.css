@@ -1,0 +1,114 @@
+@charset "UTF-8";
+ul.game-list > li {
+  width: 432px;
+  height: 288px;
+  margin: 10px 20px;
+  background-color: #fff;
+  position: relative;
+}
+
+ul.game-list > li:not([game-box='more'])::before {
+  content: '进入游戏';
+  width: 140px;
+  height: 30px;
+  font-size: 16px;
+  vertical-align: 18px;
+  color: #fff;
+  background-color: #2a9b59;
+  top: 245px;
+  left: 145px;
+  letter-spacing: 3px;
+  line-height: 28px;
+  border-radius: 5px;
+  position: absolute;
+}
+
+ul.game-list > li span {
+  font-size: 28px;
+  color: #444;
+  letter-spacing: 2px;
+  position: absolute;
+  font-weight: bolder;
+  bottom: 45px;
+  width: 432px;
+  height: 45px;
+  left: 0;
+  text-align: center;
+}
+
+ul.game-list > li[game-box='more'] > span {
+  bottom: 30px;
+}
+
+#lobby > ul.game-list > li:hover {
+  background-position: top;
+}
+
+#lobby > ul.game-list > li:hover::before {
+  background-color: #0e5f31;
+}
+
+#lobby li[game-box='more'] {
+  background-image: url("../lobby/Board/more.jpg");
+}
+
+#lobby li[game-box='City761Board'] {
+  background-image: url("../lobby/Board/City761Board.jpg");
+}
+
+#lobby li[game-box='JdbBoard'] {
+  background-image: url("../lobby/Board/JdbBoard.jpg");
+}
+
+#lobby li[game-box='KgHtml'] {
+  background-image: url("../lobby/Board/KgHtml.jpg");
+}
+
+#lobby li[game-box='LegBoard'] {
+  background-image: url("../lobby/Board/LegBoard.jpg");
+}
+
+#lobby li[game-box='JsBoard'] {
+  background-image: url("../lobby/Board/JsBoard.jpg");
+}
+
+#lobby li[game-box='VgBoard'] {
+  background-image: url("../lobby/Board/VgBoard.jpg");
+}
+
+#lobby li[game-box='NwBoard'] {
+  background-image: url("../lobby/Board/NwBoard.jpg");
+}
+
+#lobby li[game-box='FgBoard'] {
+  background-image: url("../lobby/Board/FgBoard.jpg");
+}
+
+#lobby li[game-box='KyBoard'] {
+  background-image: url("../lobby/Board/KyBoard.jpg");
+}
+
+#lobby li[game-box='LcBoard'] {
+  background-image: url("../lobby/Board/LcBoard.jpg");
+}
+
+#lobby li[game-box='T365Board'] {
+  background-image: url("../lobby/Board/T365Board.jpg");
+}
+
+#lobby li[game-box='YgBoard'] {
+  background-image: url("../lobby/Board/YgBoard.jpg");
+}
+
+#lobby li[game-box='AsBoard'] {
+  background-image: url("../lobby/Board/AsBoard.jpg");
+}
+
+#lobby li[game-box='TyBoard'] {
+  background-image: url("../lobby/Board/TyBoard.jpg");
+}
+
+#lobby li[game-box='Cq9Board'] {
+  background-image: url("../lobby/Board/Cq9Board.jpg");
+}
+/*# sourceMappingURL=Board.css.map */

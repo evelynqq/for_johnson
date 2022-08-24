@@ -1,0 +1,9 @@
+﻿#lobby {
+    border: 1px solid #b0b0b0;
+}
+
+    #lobby ul.game-list > li {
+        width: 321px;
+        height: 405px;
+        margin: 10px 5px;
+    }

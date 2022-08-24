@@ -1,0 +1,140 @@
+@charset "UTF-8";
+#banner {
+  background-image: url("../Lobby/Lottery/banner.jpg");
+  background-position: bottom center;
+  background-size: auto 100%;
+}
+
+ul.game-list > li {
+  position: relative;
+  width: 355px;
+  height: 286px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #303031;
+  background-color: #303031;
+  display: inline-block;
+}
+
+ul.game-list > li:not([game-box='more']):hover {
+  width: 355px;
+  height: 286px;
+  border: 1px solid #ffcf86;
+  background-position-y: 0;
+}
+
+ul.game-list > li:not([game-box='more']):hover::before {
+  content: '';
+  width: 353px;
+  height: 230px;
+  background-color: rgba(10, 10, 10, 0.7);
+  display: inline-block;
+}
+
+ul.game-list > li:not([game-box='more']):hover:after {
+  color: #ffcf86;
+}
+
+ul.game-list > li:not([game-box='more']):after {
+  content: '立即進入';
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #55514e;
+  height: 40px;
+  padding-top: 14px;
+  font-size: 16px;
+}
+
+ul.game-list > li span {
+  position: absolute;
+  left: 21px;
+  top: 21px;
+  font-size: 20px;
+  color: #ffcf86;
+  text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+ul.game-list > li div {
+  display: none;
+}
+
+ul.game-list > li[game-box='more'] > span {
+  top: 100px;
+  width: 160px;
+  height: 40px;
+  line-height: 38px;
+  left: 96px;
+  border: 1px solid #ffcf86;
+}
+
+#lobby li[game-box="more"] {
+  background-image: url("../lobby/Lottery/more.jpg");
+}
+
+#lobby li[game-box="BbinaLottery"] {
+  background-image: url("../lobby/Lottery/BbinaLottery.jpg");
+}
+
+#lobby li[game-box="IgLottery"] {
+  background-image: url("../lobby/Lottery/IgLottery.jpg");
+}
+
+#lobby li[game-box="IgLotto"] {
+  background-image: url("../lobby/Lottery/IgLotto.jpg");
+}
+
+#lobby li[game-box="IgaLottery"] {
+  background-image: url("../lobby/Lottery/IgaLottery.jpg");
+}
+
+#lobby li[game-box="IgaLotto"] {
+  background-image: url("../lobby/Lottery/IgaLotto.jpg");
+}
+
+#lobby li[game-box="LxLottery"] {
+  background-image: url("../lobby/Lottery/LxLottery.jpg");
+}
+
+#lobby li[game-box="VrLottery"] {
+  background-image: url("../lobby/Lottery/VrLottery.jpg");
+}
+
+#lobby li[game-box="AplLottery"] {
+  background-image: url("../lobby/Lottery/AplLottery.jpg");
+}
+
+#lobby li[game-box="G1Lottery"] {
+  background-image: url("../lobby/Lottery/G1Lottery.jpg");
+}
+
+#lobby li[game-box="G1aLottery"] {
+  background-image: url("../lobby/Lottery/G1aLottery.jpg");
+}
+
+#lobby li[game-box="GbLottery"] {
+  background-image: url("../lobby/Lottery/GbLottery.jpg");
+}
+
+#lobby li[game-box="GblLottery"] {
+  background-image: url("../lobby/Lottery/GblLottery.jpg");
+}
+
+#lobby li[game-box="SgwLottery"] {
+  background-image: url("../lobby/Lottery/SgwLottery.jpg");
+}
+
+#lobby li[game-box="BgLottery"] {
+  background-image: url("../lobby/Lottery/BgLottery.jpg");
+}
+
+#lobby li[game-box="Ig1Lottery"] {
+  background-image: url("../lobby/Lottery/Ig1Lottery.jpg");
+}
+
+#lobby li[game-box="Ig1Lotto"] {
+  background-image: url("../lobby/Lottery/Ig1Lotto.jpg");
+}
+/*# sourceMappingURL=Lottery.css.map */

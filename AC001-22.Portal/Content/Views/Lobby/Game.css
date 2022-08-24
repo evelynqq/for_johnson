@@ -1,0 +1,187 @@
+#banner {
+  background-image: url("../Lobby/Game/banner.jpg");
+}
+
+#content {
+  min-height: 679px;
+  overflow: hidden;
+}
+
+#lobby ul.game-list {
+  margin: 25px 0;
+}
+
+#lobby ul.game-list li {
+  width: 434px;
+  height: 321px;
+  margin: 10px;
+}
+
+#lobby ul.game-list div {
+  display: none;
+}
+
+#lobby li[game-box='more'] {
+  background-image: url("../lobby/Game/more.jpg");
+}
+
+#lobby li[game-box='AgHtml'] {
+  background-image: url("../lobby/Game/AgHtml.jpg");
+}
+
+#lobby li[game-box='BbinaSlot'] {
+  background-image: url("../lobby/Game/BbinaSlot.jpg");
+}
+
+#lobby li[game-box='Cq9Html'] {
+  background-image: url("../lobby/Game/Cq9Html.jpg");
+}
+
+#lobby li[game-box='FsHtml'] {
+  background-image: url("../lobby/Game/FsHtml.jpg");
+}
+
+#lobby li[game-box='GaHtml'] {
+  background-image: url("../lobby/Game/GaHtml.jpg");
+}
+
+#lobby li[game-box='GnsHtml'] {
+  background-image: url("../lobby/Game/GnsHtml.jpg");
+}
+
+#lobby li[game-box='GpiHtml'] {
+  background-image: url("../lobby/Game/GpiHtml.jpg");
+}
+
+#lobby li[game-box='GpiFlash'] {
+  background-image: url("../lobby/Game/GpiFlash.jpg");
+}
+
+#lobby li[game-box='HabaHtml'] {
+  background-image: url("../lobby/Game/HabaHtml.jpg");
+}
+
+#lobby li[game-box='IsbHtml'] {
+  background-image: url("../lobby/Game/IsbHtml.jpg");
+}
+
+#lobby li[game-box='JdbHtml'] {
+  background-image: url("../lobby/Game/JdbHtml.jpg");
+}
+
+#lobby li[game-box='LgHtml'] {
+  background-image: url("../lobby/Game/LgHtml.jpg");
+}
+
+#lobby li[game-box='MgaHtml'] {
+  background-image: url("../lobby/Game/MgaHtml.jpg");
+}
+
+#lobby li[game-box='MgaFlash'] {
+  background-image: url("../lobby/Game/MgaFlash.jpg");
+}
+
+#lobby li[game-box='MwHtml'] {
+  background-image: url("../lobby/Game/MwHtml.jpg");
+}
+
+#lobby li[game-box='MwSlot'] {
+  background-image: url("../lobby/Game/MwSlot.jpg");
+}
+
+#lobby li[game-box='NeHtml'] {
+  background-image: url("../lobby/Game/NeHtml.jpg");
+}
+
+#lobby li[game-box='Ne2Slot'] {
+  background-image: url("../lobby/Game/Ne2Slot.jpg");
+}
+
+#lobby li[game-box='PgHtml'] {
+  background-image: url("../lobby/Game/PgHtml.jpg");
+}
+
+#lobby li[game-box='PngHtml'] {
+  background-image: url("../lobby/Game/PngHtml.jpg");
+}
+
+#lobby li[game-box='PrgHtml'] {
+  background-image: url("../lobby/Game/PrgHtml.jpg");
+}
+
+#lobby li[game-box='PrgFlash'] {
+  background-image: url("../lobby/Game/PrgFlash.jpg");
+}
+
+#lobby li[game-box='PtaHtml'] {
+  background-image: url("../lobby/Game/PtaHtml.jpg");
+}
+
+#lobby li[game-box='PtaFlash'] {
+  background-image: url("../lobby/Game/PtaFlash.jpg");
+}
+
+#lobby li[game-box='PtbSlot'] {
+  background-image: url("../lobby/Game/PtbSlot.jpg");
+}
+
+#lobby li[game-box='PtsHtml'] {
+  background-image: url("../lobby/Game/PtsHtml.jpg");
+}
+
+#lobby li[game-box='SgHtml'] {
+  background-image: url("../lobby/Game/SgHtml.jpg");
+}
+
+#lobby li[game-box='SgFlash'] {
+  background-image: url("../lobby/Game/SgFlash.jpg");
+}
+
+#lobby li[game-box='RtHtml'] {
+  background-image: url("../lobby/Game/RtHtml.jpg");
+}
+
+#lobby li[game-box='TpgHtml'] {
+  background-image: url("../lobby/Game/TpgHtml.jpg");
+}
+
+#lobby li[game-box='AeSlot'] {
+  background-image: url("../lobby/Game/AeSlot.jpg");
+}
+
+#lobby li[game-box='JpSlot'] {
+  background-image: url("../lobby/Game/JpSlot.jpg");
+}
+
+#lobby li[game-box='RtgSlot'] {
+  background-image: url("../lobby/Game/RtgSlot.jpg");
+}
+
+#lobby li[game-box='QtSlot'] {
+  background-image: url("../lobby/Game/QtSlot.jpg");
+}
+
+#lobby li[game-box='PsSlot'] {
+  background-image: url("../lobby/Game/PsSlot.jpg");
+}
+
+#lobby li[game-box='Pg1Slot'] {
+  background-image: url("../lobby/Game/Pg1Slot.jpg");
+}
+
+#lobby li[game-box='GanSlot'] {
+  background-image: url("../lobby/Game/GanSlot.jpg");
+}
+
+#lobby li[game-box='HbSlot'] {
+  background-image: url("../lobby/Game/HbSlot.jpg");
+}
+
+#lobby li[game-box='BgSlot'] {
+  background-image: url("../lobby/Game/BgSlot.jpg");
+}
+
+#lobby li[game-box='VrSlot'] {
+  background-image: url("../lobby/Game/VrSlot.jpg");
+}
+/*# sourceMappingURL=Game.css.map */

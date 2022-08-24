@@ -1,0 +1,1119 @@
+﻿#banner {
+    margin-top: 20px;
+}
+
+/* #region slide-banner樣式 */
+#slide-banner {
+    position: relative;
+    height: 342px;
+    overflow: hidden;
+}
+
+    #slide-banner .slide {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -500px;
+    }
+
+        #slide-banner .slide a {
+            display: inline-block;
+            width: 1000px;
+            height: 342px; /* 通常只會改這兩個地方 跟著圖片高度 */
+        }
+
+            #slide-banner .slide a img {
+                width: 100%;
+            }
+
+    
+    /* 點點切換紐 */
+    #slide-banner .slide-pager {
+        position: absolute;
+        bottom: 40px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+        #slide-banner .slide-pager li {
+            display: inline-block;
+            width: 13px;
+            height: 13px;
+            margin: 0 4px;
+            /* 若要数字编号可以把font-size: 0拿掉 */
+            font-size: 0;
+            background-color: #13589a;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+            #slide-banner .slide-pager .on,
+            #slide-banner .slide-pager li:hover {
+                background-color: #fff;
+            }
+/* #endregion slide-banner樣式 */
+
+#header {
+    position: absolute;
+}
+
+#member {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    left: auto;
+    width: 257px;
+    height: 351px;
+    background: url('../Shared/images/member_bg.png') no-repeat center top;
+    .wrapper {
+        width: auto;
+        background: none;
+    }
+}
+
+
+#account-box {
+    width: 257px;
+    height: 382px;
+    padding-top: 55px;
+    background-position: center 22px;
+    ul, #action-box {
+        width:90%;
+        margin: 0 auto 10px auto
+    }
+    > form {
+        input {
+            width: 100%;
+            height: 35px;
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+        > button {
+            line-height: 33px;
+        }
+        > .login-btn {
+            height: 35px;
+            border: none;
+        }
+        > .reg-btn {
+            height: 33px;
+            margin: 0;
+        }
+        > #check-code-wrapper > input {
+            width: 136px;
+        }
+    }
+    .link {
+        display: none;
+    }
+    .online {
+        margin-top: 10px;
+        color: #cccccc;
+        font-size: 12px;
+        > span {
+            color: #fffc00
+        }
+    }   
+}
+
+#check-code-wrapper > a {
+    margin-left: 4px;
+    color: #cccccc;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+#captcha {
+    top: 7px;
+    right: auto;
+    left: 78px;
+    height: 24px;
+}
+
+#agree {
+    top: 232px;
+    right: 74px;
+}
+
+#account-info {
+    display: block;
+}
+
+#account-nav {
+    display: block;
+}
+
+#account-nav>li {
+    display: inline-block;
+    color: #fff;
+    line-height: 20px;
+    background: #0088fe;
+    border-radius: 5px;
+    margin: 5px 0;
+    padding: 5px 10px;
+    width: 47.5%;
+    text-align: center;
+}
+
+#account-nav>li:nth-child(2n-1) {
+    margin-right: 10px;
+}
+
+#account-nav>li+li:before {
+    display: none;
+}
+
+    #account-nav .transaction:before {
+        display: none;
+    }
+
+    #account-nav .logout {
+        display: none;
+    }
+
+.ScrollTop #account-nav {
+    padding-right: 10px;
+}
+
+.ScrollTop #account-nav>li {
+    background: none;
+    width: auto;
+    padding: 0;
+    line-height: 30px;
+}
+
+.ScrollTop #account-nav>li+li:before {
+    content: '|';
+    display: inline-block;
+    vertical-align: top;
+    color: #fff;
+    font-size: 12px;
+    padding: 0 6px;
+}
+
+#action-box {
+    margin-top: 10px;
+}
+
+    #action-box .logout-btn {
+        display: inline-block;
+        width: 100%;
+        height: 35px;
+        font-size: 14px;
+        text-align: center;
+        text-decoration: none;
+        line-height: 33px;
+        background: #f0f0f0;
+        color: #585858;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+    }
+
+/* #region ScrollTop */
+#header.ScrollTop {
+    position: fixed;
+}
+
+#member.ScrollTop {
+    position: fixed;
+    top: 124px;
+    right: auto;
+    left: 0;
+    z-index: 8;
+    width: 100%;
+    height: 40px;
+}
+
+    #member.ScrollTop .wrapper {
+        width: 1000px;
+        background-color: #202020;
+    }
+
+.ScrollTop #account-box {
+    width: auto;
+    height: auto;
+    padding: 0 0 0 180px;
+    background-position: 10px center;
+}
+
+    .ScrollTop #account-box > form input {
+        width: 153px;
+        height: 27px;
+        margin: 0 4px 0 0;
+    }
+
+    .ScrollTop #account-box > form > button {
+        font-size: 14px;
+        line-height: 26px;
+    }
+
+    .ScrollTop #account-box > form > .login-btn {
+        height: 28px;
+        border: 1px solid #f3010c;
+    }
+
+    .ScrollTop #account-box > form > .reg-btn {
+        height: 26px;
+        margin: 0 4px 0 0;
+    }
+
+    .ScrollTop #account-box > form > #check-code-wrapper > input {
+        width: 153px;
+    }
+
+    .ScrollTop #account-box .link {
+        display: inline;
+    }
+
+    .ScrollTop #account-box .online {
+        display: none;
+    }
+
+.ScrollTop #check-code-wrapper > a {
+    display: none;
+}
+
+.ScrollTop #captcha {
+    top: 11px;
+    right: 8px;
+    left: auto;
+    height: 19px;
+}
+
+.ScrollTop #agree {
+    top: 100%;
+    right: 198px;
+}
+
+.ScrollTop #account-info {
+    display: inline-block;
+}
+
+.ScrollTop #account-nav {
+    display: inline-block;
+}
+
+    .ScrollTop #account-nav .transaction:before {
+        display: inline-block;
+    }
+
+    .ScrollTop #account-nav .logout {
+        display: inline-block;
+    }
+
+.ScrollTop #action-box {
+    display: none;
+}
+/* #endregion ScrollTop */
+
+#content{
+    background: #fff;
+}
+.slot-board {
+    height: 582px;
+    padding: 54px 0 20px 0;
+    background: url('../Home/images/board_bg.jpg') no-repeat center top;
+}
+
+.jackpot {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 32px;
+    letter-spacing: 2px;
+}
+
+.slot-nav {
+    color: #fff;
+    width: 944px;
+    height: 79px;
+    margin: 45px auto 0;
+    font-size: 0;
+    text-align: left;
+    overflow: hidden;
+}
+
+    .slot-nav li {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        width: 118px;
+        height: 79px;
+        padding-top: 2px;
+        font-size: 15px;
+        text-align: center;
+    }
+
+        .slot-nav li.on,
+        .slot-nav li:hover {
+            background: url('../Home/images/slot_nav/hover.png') no-repeat center top;
+        }
+
+        .slot-nav li[game-box="space"]:hover {
+            background: none;
+        }
+
+        .slot-nav li:before {
+            content: '';
+            display: block;
+            height: 40px;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        .slot-nav li + li:after {
+            content: '';
+            position: absolute;
+            top: 30px;
+            left: -7px;
+            width: 15px;
+            height: 15px;
+            background: url('../Home/images/slot_nav/flower.png');
+        }
+
+        .slot-nav li[game-box="ag"]:before {
+            background-image: url('../Home/images/slot_nav/ag.png');
+        }
+
+        .slot-nav li[game-box="agfish"]:before {
+            background-image: url('../Home/images/slot_nav/agfish.png');
+        }
+
+        .slot-nav li[game-box="bb"]:before {
+            background-image: url('../Home/images/slot_nav/bb.png');
+        }
+
+        .slot-nav li[game-box="cq9"]:before {
+            background-image: url('../Home/images/slot_nav/cq9.png');
+        }
+
+        .slot-nav li[game-box="ga"]:before {
+            background-image: url('../Home/images/slot_nav/ga.png');
+        }
+
+        .slot-nav li[game-box="gns"]:before {
+            background-image: url('../Home/images/slot_nav/gns.png');
+        }
+
+        .slot-nav li[game-box="gpi"]:before {
+            background-image: url('../Home/images/slot_nav/gpi.png');
+        }
+
+        .slot-nav li[game-box="hb"]:before {
+            background-image: url('../Home/images/slot_nav/hb.png');
+        }
+
+        .slot-nav li[game-box="jdb"]:before {
+            background-image: url('../Home/images/slot_nav/jdb.png');
+        }
+
+        .slot-nav li[game-box="mg"]:before {
+            background-image: url('../Home/images/slot_nav/mg.png');
+        }
+
+        .slot-nav li[game-box="mw"]:before {
+            background-image: url('../Home/images/slot_nav/mw.png');
+        }
+
+        .slot-nav li[game-box="mwfish"]:before {
+            background-image: url('../Home/images/slot_nav/mwfish.png');
+        }
+
+        .slot-nav li[game-box="ne"]:before {
+            background-image: url('../Home/images/slot_nav/ne.png');
+        }
+
+        .slot-nav li[game-box="pp"]:before {
+            background-image: url('../Home/images/slot_nav/pp.png');
+        }
+
+        .slot-nav li[game-box="pt"]:before {
+            background-image: url('../Home/images/slot_nav/pt.png');
+        }
+
+        .slot-nav li[game-box="rt"]:before {
+            background-image: url('../Home/images/slot_nav/rt.png');
+        }
+
+        .slot-nav li[game-box="sg"]:before {
+            background-image: url('../Home/images/slot_nav/sg.png');
+        }
+
+.list-board {
+    position: relative;
+    height: 350px;
+    padding: 16px 40px 0;
+}
+
+.slot-list {
+    width: 690px;
+    padding: 10px 0 0 10px;
+}
+
+    .slot-list ul {
+        font-size: 0;
+    }
+
+    .slot-list li {
+        position: relative;
+        display: inline-block;
+        width: 160px;
+        height: 145px;
+        margin: 0 10px 10px 0;
+        padding: 105px 5px 0;
+        color: #888;
+        font-size: 12px;
+        line-height: 35px;
+        background-color: #3b3b3b;
+        background-position: center 5px;
+        background-repeat: no-repeat;
+    }
+
+        .slot-list li:after {
+            content: '';
+            position: absolute;
+            top: 105px;
+            right: 5px;
+            width: 64px;
+            height: 35px;
+            background: url('../Home/images/slot_list/star.png') no-repeat center 11px;
+        }
+
+        .slot-list li:hover {
+            color: #000;
+            background-color: #ebc963;
+        }
+
+            .slot-list li:hover:after {
+                background-image: url('../Home/images/slot_list/star_h.png');
+            }
+
+    .slot-list > .agfish,
+    .slot-list > .mwfish {
+        display: block;
+        width: 670px;
+        height: 300px;
+    }
+
+    .slot-list > .agfish {
+        background: url('../Home/images/slot_list/agfish.png') no-repeat;
+    }
+
+    .slot-list > .mwfish {
+        background: url('../Home/images/slot_list/mwfish.png') no-repeat;
+    }
+
+    .slot-list .mg li[data-img="01"] {
+        background-image: url('../Home/images/slot_list/mg/01.png');
+    }
+
+    .slot-list .mg li[data-img="02"] {
+        background-image: url('../Home/images/slot_list/mg/02.png');
+    }
+
+    .slot-list .mg li[data-img="03"] {
+        background-image: url('../Home/images/slot_list/mg/03.png');
+    }
+
+    .slot-list .mg li[data-img="04"] {
+        background-image: url('../Home/images/slot_list/mg/04.png');
+    }
+
+    .slot-list .mg li[data-img="05"] {
+        background-image: url('../Home/images/slot_list/mg/05.png');
+    }
+
+    .slot-list .mg li[data-img="06"] {
+        background-image: url('../Home/images/slot_list/mg/06.png');
+    }
+
+    .slot-list .mg li[data-img="07"] {
+        background-image: url('../Home/images/slot_list/mg/07.png');
+    }
+
+    .slot-list .mg li[data-img="08"] {
+        background-image: url('../Home/images/slot_list/mg/08.png');
+    }
+
+    .slot-list .pt li[data-img="01"] {
+        background-image: url('../Home/images/slot_list/pt/01.png');
+    }
+
+    .slot-list .pt li[data-img="02"] {
+        background-image: url('../Home/images/slot_list/pt/02.png');
+    }
+
+    .slot-list .pt li[data-img="03"] {
+        background-image: url('../Home/images/slot_list/pt/03.png');
+    }
+
+    .slot-list .pt li[data-img="04"] {
+        background-image: url('../Home/images/slot_list/pt/04.png');
+    }
+
+    .slot-list .pt li[data-img="05"] {
+        background-image: url('../Home/images/slot_list/pt/05.png');
+    }
+
+    .slot-list .pt li[data-img="06"] {
+        background-image: url('../Home/images/slot_list/pt/06.png');
+    }
+
+    .slot-list .pt li[data-img="07"] {
+        background-image: url('../Home/images/slot_list/pt/07.png');
+    }
+
+    .slot-list .pt li[data-img="08"] {
+        background-image: url('../Home/images/slot_list/pt/08.png');
+    }
+
+    .slot-list .ag li[data-img="01"] {
+        background-image: url('../Home/images/slot_list/ag/01.png');
+    }
+
+    .slot-list .ag li[data-img="02"] {
+        background-image: url('../Home/images/slot_list/ag/02.png');
+    }
+
+    .slot-list .ag li[data-img="03"] {
+        background-image: url('../Home/images/slot_list/ag/03.png');
+    }
+
+    .slot-list .ag li[data-img="04"] {
+        background-image: url('../Home/images/slot_list/ag/04.png');
+    }
+
+    .slot-list .ag li[data-img="05"] {
+        background-image: url('../Home/images/slot_list/ag/05.png');
+    }
+
+    .slot-list .ag li[data-img="06"] {
+        background-image: url('../Home/images/slot_list/ag/06.png');
+    }
+
+    .slot-list .ag li[data-img="07"] {
+        background-image: url('../Home/images/slot_list/ag/07.png');
+    }
+
+    .slot-list .ag li[data-img="08"] {
+        background-image: url('../Home/images/slot_list/ag/08.png');
+    }
+
+    .slot-list .bb li[data-img="01"] {
+        background-image: url('../Home/images/slot_list/bb/01.png');
+    }
+
+    .slot-list .bb li[data-img="02"] {
+        background-image: url('../Home/images/slot_list/bb/02.png');
+    }
+
+    .slot-list .bb li[data-img="03"] {
+        background-image: url('../Home/images/slot_list/bb/03.png');
+    }
+
+    .slot-list .bb li[data-img="04"] {
+        background-image: url('../Home/images/slot_list/bb/04.png');
+    }
+
+    .slot-list .bb li[data-img="05"] {
+        background-image: url('../Home/images/slot_list/bb/05.png');
+    }
+
+    .slot-list .bb li[data-img="06"] {
+        background-image: url('../Home/images/slot_list/bb/06.png');
+    }
+
+    .slot-list .bb li[data-img="07"] {
+        background-image: url('../Home/images/slot_list/bb/07.png');
+    }
+
+    .slot-list .bb li[data-img="08"] {
+        background-image: url('../Home/images/slot_list/bb/08.png');
+    }
+
+    .slot-list .sg li[data-img="01"] {
+        background-image: url('../Home/images/slot_list/sg/01.png');
+    }
+
+    .slot-list .sg li[data-img="02"] {
+        background-image: url('../Home/images/slot_list/sg/02.png');
+    }
+
+    .slot-list .sg li[data-img="03"] {
+        background-image: url('../Home/images/slot_list/sg/03.png');
+    }
+
+    .slot-list .sg li[data-img="04"] {
+        background-image: url('../Home/images/slot_list/sg/04.png');
+    }
+
+    .slot-list .sg li[data-img="05"] {
+        background-image: url('../Home/images/slot_list/sg/05.png');
+    }
+
+    .slot-list .sg li[data-img="06"] {
+        background-image: url('../Home/images/slot_list/sg/06.png');
+    }
+
+    .slot-list .sg li[data-img="07"] {
+        background-image: url('../Home/images/slot_list/sg/07.png');
+    }
+
+    .slot-list .sg li[data-img="08"] {
+        background-image: url('../Home/images/slot_list/sg/08.png');
+    }
+
+    .slot-list .hb li[data-img="01"] {
+        background-image: url('../Home/images/slot_list/hb/01.png');
+    }
+
+    .slot-list .hb li[data-img="02"] {
+        background-image: url('../Home/images/slot_list/hb/02.png');
+    }
+
+    .slot-list .hb li[data-img="03"] {
+        background-image: url('../Home/images/slot_list/hb/03.png');
+    }
+
+    .slot-list .hb li[data-img="04"] {
+        background-image: url('../Home/images/slot_list/hb/04.png');
+    }
+
+    .slot-list .hb li[data-img="05"] {
+        background-image: url('../Home/images/slot_list/hb/05.png');
+    }
+
+    .slot-list .hb li[data-img="06"] {
+        background-image: url('../Home/images/slot_list/hb/06.png');
+    }
+
+    .slot-list .hb li[data-img="07"] {
+        background-image: url('../Home/images/slot_list/hb/07.png');
+    }
+
+    .slot-list .hb li[data-img="08"] {
+        background-image: url('../Home/images/slot_list/hb/08.png');
+    }
+
+    .slot-list .pp li[data-img="01"] {
+        background-image: url('../Home/images/slot_list/pp/01.png');
+    }
+
+    .slot-list .pp li[data-img="02"] {
+        background-image: url('../Home/images/slot_list/pp/02.png');
+    }
+
+    .slot-list .pp li[data-img="03"] {
+        background-image: url('../Home/images/slot_list/pp/03.png');
+    }
+
+    .slot-list .pp li[data-img="04"] {
+        background-image: url('../Home/images/slot_list/pp/04.png');
+    }
+
+    .slot-list .pp li[data-img="05"] {
+        background-image: url('../Home/images/slot_list/pp/05.png');
+    }
+
+    .slot-list .pp li[data-img="06"] {
+        background-image: url('../Home/images/slot_list/pp/06.png');
+    }
+
+    .slot-list .pp li[data-img="07"] {
+        background-image: url('../Home/images/slot_list/pp/07.png');
+    }
+
+    .slot-list .pp li[data-img="08"] {
+        background-image: url('../Home/images/slot_list/pp/08.png');
+    }
+
+    .slot-list .gpi li[data-img="01"] {
+        background-image: url('../Home/images/slot_list/gpi/01.png');
+    }
+
+    .slot-list .gpi li[data-img="02"] {
+        background-image: url('../Home/images/slot_list/gpi/02.png');
+    }
+
+    .slot-list .gpi li[data-img="03"] {
+        background-image: url('../Home/images/slot_list/gpi/03.png');
+    }
+
+    .slot-list .gpi li[data-img="04"] {
+        background-image: url('../Home/images/slot_list/gpi/04.png');
+    }
+
+    .slot-list .gpi li[data-img="05"] {
+        background-image: url('../Home/images/slot_list/gpi/05.png');
+    }
+
+    .slot-list .gpi li[data-img="06"] {
+        background-image: url('../Home/images/slot_list/gpi/06.png');
+    }
+
+    .slot-list .gpi li[data-img="07"] {
+        background-image: url('../Home/images/slot_list/gpi/07.png');
+    }
+
+    .slot-list .gpi li[data-img="08"] {
+        background-image: url('../Home/images/slot_list/gpi/08.png');
+    }
+
+    .slot-list .cq9 li[data-img="01"] {
+        background-image: url('../Home/images/slot_list/cq9/01.png');
+    }
+
+    .slot-list .cq9 li[data-img="02"] {
+        background-image: url('../Home/images/slot_list/cq9/02.png');
+    }
+
+    .slot-list .cq9 li[data-img="03"] {
+        background-image: url('../Home/images/slot_list/cq9/03.png');
+    }
+
+    .slot-list .cq9 li[data-img="04"] {
+        background-image: url('../Home/images/slot_list/cq9/04.png');
+    }
+
+    .slot-list .cq9 li[data-img="05"] {
+        background-image: url('../Home/images/slot_list/cq9/05.png');
+    }
+
+    .slot-list .cq9 li[data-img="06"] {
+        background-image: url('../Home/images/slot_list/cq9/06.png');
+    }
+
+    .slot-list .cq9 li[data-img="07"] {
+        background-image: url('../Home/images/slot_list/cq9/07.png');
+    }
+
+    .slot-list .cq9 li[data-img="08"] {
+        background-image: url('../Home/images/slot_list/cq9/08.png');
+    }
+
+    .slot-list .gns li[data-img="01"] {
+        background-image: url('../Home/images/slot_list/gns/01.png');
+    }
+
+    .slot-list .gns li[data-img="02"] {
+        background-image: url('../Home/images/slot_list/gns/02.png');
+    }
+
+    .slot-list .gns li[data-img="03"] {
+        background-image: url('../Home/images/slot_list/gns/03.png');
+    }
+
+    .slot-list .gns li[data-img="04"] {
+        background-image: url('../Home/images/slot_list/gns/04.png');
+    }
+
+    .slot-list .gns li[data-img="05"] {
+        background-image: url('../Home/images/slot_list/gns/05.png');
+    }
+
+    .slot-list .gns li[data-img="06"] {
+        background-image: url('../Home/images/slot_list/gns/06.png');
+    }
+
+    .slot-list .gns li[data-img="07"] {
+        background-image: url('../Home/images/slot_list/gns/07.png');
+    }
+
+    .slot-list .gns li[data-img="08"] {
+        background-image: url('../Home/images/slot_list/gns/08.png');
+    }
+
+    .slot-list .mw li[data-img="01"] {
+        background-image: url('../Home/images/slot_list/mw/01.png');
+    }
+
+    .slot-list .mw li[data-img="02"] {
+        background-image: url('../Home/images/slot_list/mw/02.png');
+    }
+
+    .slot-list .mw li[data-img="03"] {
+        background-image: url('../Home/images/slot_list/mw/03.png');
+    }
+
+    .slot-list .mw li[data-img="04"] {
+        background-image: url('../Home/images/slot_list/mw/04.png');
+    }
+
+    .slot-list .mw li[data-img="05"] {
+        background-image: url('../Home/images/slot_list/mw/05.png');
+    }
+
+    .slot-list .mw li[data-img="06"] {
+        background-image: url('../Home/images/slot_list/mw/06.png');
+    }
+
+    .slot-list .mw li[data-img="07"] {
+        background-image: url('../Home/images/slot_list/mw/07.png');
+    }
+
+    .slot-list .mw li[data-img="08"] {
+        background-image: url('../Home/images/slot_list/mw/08.png');
+    }
+
+    .slot-list .jdb li[data-img="01"] {
+        background-image: url('../Home/images/slot_list/jdb/01.png');
+    }
+
+    .slot-list .jdb li[data-img="02"] {
+        background-image: url('../Home/images/slot_list/jdb/02.png');
+    }
+
+    .slot-list .jdb li[data-img="03"] {
+        background-image: url('../Home/images/slot_list/jdb/03.png');
+    }
+
+    .slot-list .jdb li[data-img="04"] {
+        background-image: url('../Home/images/slot_list/jdb/04.png');
+    }
+
+    .slot-list .jdb li[data-img="05"] {
+        background-image: url('../Home/images/slot_list/jdb/05.png');
+    }
+
+    .slot-list .jdb li[data-img="06"] {
+        background-image: url('../Home/images/slot_list/jdb/06.png');
+    }
+
+    .slot-list .jdb li[data-img="07"] {
+        background-image: url('../Home/images/slot_list/jdb/07.png');
+    }
+
+    .slot-list .jdb li[data-img="08"] {
+        background-image: url('../Home/images/slot_list/jdb/08.png');
+    }
+
+    .slot-list .ne li[data-img="01"] {
+        background-image: url('../Home/images/slot_list/ne/01.png');
+    }
+
+    .slot-list .ne li[data-img="02"] {
+        background-image: url('../Home/images/slot_list/ne/02.png');
+    }
+
+    .slot-list .ne li[data-img="03"] {
+        background-image: url('../Home/images/slot_list/ne/03.png');
+    }
+
+    .slot-list .ne li[data-img="04"] {
+        background-image: url('../Home/images/slot_list/ne/04.png');
+    }
+
+    .slot-list .ne li[data-img="05"] {
+        background-image: url('../Home/images/slot_list/ne/05.png');
+    }
+
+    .slot-list .ne li[data-img="06"] {
+        background-image: url('../Home/images/slot_list/ne/06.png');
+    }
+
+    .slot-list .ne li[data-img="07"] {
+        background-image: url('../Home/images/slot_list/ne/07.png');
+    }
+
+    .slot-list .ne li[data-img="08"] {
+        background-image: url('../Home/images/slot_list/ne/08.png');
+    }
+
+    .slot-list .rt li[data-img="01"] {
+        background-image: url('../Home/images/slot_list/rt/01.png');
+    }
+
+    .slot-list .rt li[data-img="02"] {
+        background-image: url('../Home/images/slot_list/rt/02.png');
+    }
+
+    .slot-list .rt li[data-img="03"] {
+        background-image: url('../Home/images/slot_list/rt/03.png');
+    }
+
+    .slot-list .rt li[data-img="04"] {
+        background-image: url('../Home/images/slot_list/rt/04.png');
+    }
+
+    .slot-list .rt li[data-img="05"] {
+        background-image: url('../Home/images/slot_list/rt/05.png');
+    }
+
+    .slot-list .rt li[data-img="06"] {
+        background-image: url('../Home/images/slot_list/rt/06.png');
+    }
+
+    .slot-list .rt li[data-img="07"] {
+        background-image: url('../Home/images/slot_list/rt/07.png');
+    }
+
+    .slot-list .rt li[data-img="08"] {
+        background-image: url('../Home/images/slot_list/rt/08.png');
+    }
+
+    .slot-list .ga li[data-img="01"] {
+        background-image: url('../Home/images/slot_list/ga/01.png');
+    }
+
+    .slot-list .ga li[data-img="02"] {
+        background-image: url('../Home/images/slot_list/ga/02.png');
+    }
+
+    .slot-list .ga li[data-img="03"] {
+        background-image: url('../Home/images/slot_list/ga/03.png');
+    }
+
+    .slot-list .ga li[data-img="04"] {
+        background-image: url('../Home/images/slot_list/ga/04.png');
+    }
+
+    .slot-list .ga li[data-img="05"] {
+        background-image: url('../Home/images/slot_list/ga/05.png');
+    }
+
+    .slot-list .ga li[data-img="06"] {
+        background-image: url('../Home/images/slot_list/ga/06.png');
+    }
+
+    .slot-list .ga li[data-img="07"] {
+        background-image: url('../Home/images/slot_list/ga/07.png');
+    }
+
+    .slot-list .ga li[data-img="08"] {
+        background-image: url('../Home/images/slot_list/ga/08.png');
+    }
+
+.slot-prev,
+.slot-next {
+    position: absolute;
+    bottom: 0;
+    width: 40px;
+    height: 350px;
+    cursor: pointer;
+}
+
+.slot-prev {
+    left: 0;
+}
+
+.slot-next {
+    right: 0;
+}
+
+.winner-list {
+    position: absolute;
+    top: 117px;
+    right: 49px;
+    width: 190px;
+}
+
+    .winner-list li {
+        height: 25px;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+        .winner-list li > span {
+            display: inline-block;
+        }
+
+        .winner-list li .name {
+            width: 55px;
+            color: #fff;
+        }
+
+        .winner-list li .money {
+            width: 62px;
+            color: #f00;
+            margin-right: 8px;
+        }
+
+        .winner-list li .game {
+            color: #fff;
+        }
+/*#region 遊戲清單導覽區 */
+#game-box {
+    margin: 0 auto;
+    font-size: 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+    #game-box li {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        width: 239px;
+        height: 317px;
+        background-position: center top;
+        background-repeat: no-repeat;
+        -moz-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+
+        #game-box li + li {
+            margin-left: 14px
+        }
+
+        #game-box li:before,
+        #game-box li:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            -moz-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            -webkit-transition: all 0.5s;
+            transition: all 0.5s;
+        }
+
+        #game-box li:before {
+            background-position: center top;
+        }
+
+        #game-box li:after {
+            opacity: 0;
+            background-position: center bottom;
+        }
+
+            #game-box li:hover:after {
+                opacity: 1;
+            }
+
+        #game-box li a {
+            position: relative;
+            display: block;
+            height: 100%;
+            z-index: 1;
+        }
+
+        #game-box li[data-img="live"]:before,
+        #game-box li[data-img="live"]:after {
+            background-image: url('../Home/images/live.jpg');
+        }
+
+        #game-box li[data-img="sport"]:before,
+        #game-box li[data-img="sport"]:after {
+            background-image: url('../Home/images/sport.jpg');
+        }
+
+        #game-box li[data-img="slot"]:before,
+        #game-box li[data-img="slot"]:after {
+            background-image: url('../Home/images/game.jpg');
+        }
+
+        #game-box li[data-img="lottery"]:before,
+        #game-box li[data-img="lottery"]:after {
+            background-image: url('../Home/images/lottery.jpg');
+        }
+/*#endregion 遊戲清單導覽區 */

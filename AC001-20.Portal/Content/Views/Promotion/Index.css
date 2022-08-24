@@ -1,0 +1,118 @@
+﻿#un-lobby {
+    padding: 30px 0 85px;
+    text-align: center;
+}
+
+    #un-lobby #unlobby-title {
+        display: none;
+    }
+
+/*#region 遊戲分類樣式 */
+ul.navtab {
+    display: none;
+    /*display: inline-block;*/
+    width: 1000px;
+    padding: 0;
+    margin: 0 auto 10px;
+    border-bottom: 2px solid #800705;
+}
+
+    ul.navtab li {
+        display: inline-block;
+        height: 30px;
+        padding: 0 10px;
+        color: #fff;
+        font-size: 14px;
+        line-height: 30px;
+    }
+
+        ul.navtab li.tab,
+        ul.navtab li:hover {
+            background: #800705;
+        }
+/*#endregion 遊戲分類樣式 */
+
+#un-lobby > div {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+    #un-lobby > div > ul.discount {
+        position: relative;
+        border: 4px solid #d1d1d1;
+        list-style: none;
+        margin: 0 auto 20px;
+        padding: 0;
+    }
+
+        #un-lobby > div > ul.discount > li:first-child {
+            height: 165px;
+        }
+
+        #un-lobby > div > ul.discount > li.content {
+            padding: 40px;
+            color: #fff;
+            font-size: 13px;
+            line-height: 1.8;
+            text-align: left;
+            background: #151515;
+            border-top: 4px solid #c8b989;
+        }
+
+        #un-lobby > div > ul img {
+            width: 100%;
+            height: 165px;
+        }
+
+li.content h3 {
+}
+
+li.content h4 {
+    display: inline-block;
+    height: 34px;
+    margin: 10px 0;
+    padding: 0 10px;
+    line-height: 34px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    background: #f0c647;
+}
+
+li.content h5 {
+}
+
+li.content p {
+}
+
+li.content dd {
+    margin-left: 0;
+}
+
+
+li.content table {
+    width: 100%;
+    margin: 30px 0;
+}
+
+    li.content table tr,
+    li.content table th,
+    li.content table td {
+        font-size: 15px;
+        line-height: 2em;
+        text-align: center;
+        border: 1px solid #999;
+    }
+
+    li.content table th {
+        font-size: 18px;
+        background: #555;
+    }
+
+li.content ol {
+    padding-left: 20px;
+    list-style-type: decimal;
+}
+
+    li.content ol li {
+    }

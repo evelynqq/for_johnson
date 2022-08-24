@@ -1,0 +1,33 @@
+﻿@import '../../../../_Common/Css/GameCode';
+
+#banner {
+    background-image: url('../Lobby/Esport/banner.jpg');
+}
+
+#lobby .game-list > li {
+    width: 325px;
+    height: 280px;
+    margin: 0px 4px 10px 4px;
+    background-position: center 10px;
+    &:before {
+        top: 10px;
+        left: 0;
+        width: 325px;
+        height: 214px;
+    }
+    &:after {
+        top: 190px;
+    }
+    &:not([game-box='more']):hover{
+        &:after {
+            top: 100px;
+        }
+    }
+}
+
+// gamebox-list
+@each $gamebox in $esport-list {
+    #lobby li[game-box='#{$gamebox}'] {
+        background-image: url('../lobby/Esport/#{$gamebox}.jpg');
+    }
+}

@@ -1,0 +1,22 @@
+﻿@import '../../../../_Common/Css/GameCode';
+
+#lobby {
+    padding: 30px 0 20px;
+}
+
+#banner {
+    background-image: url('../Lobby/Live/banner.jpg');
+}
+
+.game-list > li {
+    width: 327px;
+    height: 275px;
+    padding-top: 210px;
+}
+
+// gamebox-list
+@each $gamebox in $live-list {
+    #lobby li.#{$gamebox} {
+        background-image: url('../lobby/live/#{$gamebox}.jpg');
+    }
+}

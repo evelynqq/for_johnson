@@ -1,0 +1,17 @@
+﻿#un-lobby .unlobby-nav {
+    display: none;
+}
+
+#articles table tr,
+#articles table th,
+#articles table td {
+    color: #fff;
+    padding: 8px 0;
+    background-color: #009338;
+    border-color: #ffbc3a;
+}
+
+#articles table th {
+    color: #fff;
+    background-color: #003612;
+}

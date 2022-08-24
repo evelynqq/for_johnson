@@ -1,0 +1,80 @@
+﻿@import "../../../../_Common/Css/GameCode";
+
+#banner {
+    background-image: url('../Lobby/Sport/banner.jpg');
+    background-position: bottom center;
+    background-size: auto 100%;
+}
+
+ul.game-list > li {
+    position: relative;
+    width: 221px;
+    height: 441px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #303031;
+    background-color: #303031;
+    display: inline-block;
+    &:not([game-box='more']):hover {
+        width: 221px;
+        height: 441px;
+        border: 1px solid #ffcf86;
+        background-position-y: 0;
+        &::before {
+            content: '';
+            width: 219px;
+            height: 385px;
+            background-color: rgba(10,10,10,0.7);
+            display: inline-block;
+            }
+        &:after {
+            // display: block;
+            color: #ffcf86;
+        }
+    }
+    &:not([game-box='more']):after {
+        content:'立即進入';
+        position: absolute;
+        text-align: center;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        color: 	#55514e;
+        height: 40px;
+        padding-top: 14px;
+        font-size: 16px;
+    }        
+    span {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        font-size: 18px;
+        color: #ffcf86;
+        text-shadow: black 0.1em 0.1em 0.2em;
+    }
+    div {
+        display: none;
+    }
+}
+ul.game-list > li[game-box='more'] > span {
+    top: 150px;
+    width: 160px;
+    height: 40px;
+    line-height: 38px;
+    left: 29px;
+    border: 1px solid #ffcf86;
+}
+// gamebox-list
+@each $gamebox in $sport-list {
+    #lobby li[game-box="#{$gamebox}"] {
+        background-image: url("../lobby/Sport/#{$gamebox}.jpg");
+    }
+}
+
+@each $gamebox in $esport-list {
+    @if ($gamebox != 'more') {
+        #lobby li[game-box="#{$gamebox}"] {
+            background-image: url("../lobby/Esport/#{$gamebox}.jpg");
+        }
+    }
+}

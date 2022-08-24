@@ -1,0 +1,1836 @@
+@charset "UTF-8";
+#nav {
+  float: right;
+}
+
+#nav .login {
+  padding-top: 0;
+}
+
+#nav .login > ul > li {
+  height: 122px;
+}
+
+#nav .login > ul > li > a {
+  padding-top: 30px;
+}
+
+#nav > ul {
+  display: block;
+}
+
+#nav > ul > li {
+  display: inline-block;
+  height: 75px;
+  vertical-align: top;
+}
+
+#nav > ul > li > a {
+  display: inline-block;
+  height: 100%;
+  padding: 22px 10px;
+  color: #9195ad;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+}
+
+#nav > ul > li > a:hover {
+  color: #fff;
+}
+
+#nav > ul > li > a span {
+  display: block;
+  font-size: 12px;
+  font-weight: normal;
+  opacity: 0.5;
+}
+
+#nav > ul > li:hover .subnav {
+  display: block;
+}
+
+.subnav {
+  display: none;
+  position: absolute;
+  top: 151px;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  height: 160px;
+  min-width: 1000px;
+  text-align: center;
+  background: rgba(24, 32, 46, 0.7);
+  overflow: hidden;
+}
+
+.subnav li {
+  display: inline-block;
+  margin: 0 5px;
+  width: 120px;
+  height: 160px;
+  vertical-align: top;
+  padding-top: 112px;
+  color: #fff;
+  font-size: 14px;
+  font-family: "Microsoft Yahei";
+  position: relative;
+  z-index: 1;
+}
+
+.subnav li::before {
+  content: '';
+  width: 120px;
+  height: 160px;
+  top: 9px;
+  left: 2px;
+  background-repeat: no-repeat;
+  vertical-align: top;
+  position: absolute;
+  z-index: -1;
+}
+
+.subnav li::after {
+  content: '';
+  width: 111px;
+  height: 25px;
+  border-radius: 20px;
+  background-color: #18202e;
+  border: 2px solid #db5330;
+  position: absolute;
+  top: 108px;
+  left: 3px;
+  z-index: -1;
+}
+
+.subnav .main-cell {
+  display: inline-block;
+}
+
+.subnav .main-cell > div {
+  margin: 0 auto;
+}
+
+.subnav span {
+  display: inline-block;
+  margin-top: 55px;
+  width: 30px;
+  height: 30px;
+  background-position: center top;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  vertical-align: top;
+}
+
+.subnav span:hover {
+  background-position: center bottom;
+}
+
+.subnav span.prev {
+  left: 0;
+  background-image: url("../Shared/images/subnav/arrow_l.png");
+}
+
+.subnav span.next {
+  right: 0;
+  background-image: url("../Shared/images/subnav/arrow_r.png");
+}
+
+.subnav li[game-box="more"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/live/more.png");
+}
+
+.subnav li[game-box="AllBetReal"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/live/AllBetReal.png");
+}
+
+.subnav li[game-box="AgBr"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/live/AgBr.png");
+}
+
+.subnav li[game-box="BbinaLive"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/live/BbinaLive.png");
+}
+
+.subnav li[game-box="BgReal"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/live/BgReal.png");
+}
+
+.subnav li[game-box="EBetReal"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/live/EBetReal.png");
+}
+
+.subnav li[game-box="EvoReal"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/live/EvoReal.png");
+}
+
+.subnav li[game-box="GdReal"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/live/GdReal.png");
+}
+
+.subnav li[game-box="GpiLive"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/live/GpiLive.png");
+}
+
+.subnav li[game-box="HgaReal"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/live/HgaReal.png");
+}
+
+.subnav li[game-box="OgaReal"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/live/OgaReal.png");
+}
+
+.subnav li[game-box="PtaReal"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/live/PtaReal.png");
+}
+
+.subnav li[game-box="PtaLive"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/live/PtaLive.png");
+}
+
+.subnav li[game-box="PtbReal"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/live/PtbReal.png");
+}
+
+.subnav li[game-box="MgaReal"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/live/MgaReal.png");
+}
+
+.subnav li[game-box="SaReal"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/live/SaReal.png");
+}
+
+.subnav li[game-box="SbLive"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/live/SbLive.png");
+}
+
+.subnav li[game-box="SunbetReal"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/live/SunbetReal.png");
+}
+
+.subnav li[game-box="WmReal"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/live/WmReal.png");
+}
+
+.subnav li[game-box="RyReal"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/live/RyReal.png");
+}
+
+.subnav li[game-box="Ry2Real"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/live/Ry2Real.png");
+}
+
+.subnav li[game-box="more"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Sport/more.png");
+}
+
+.subnav li[game-box="SingSport"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Sport/SingSport.png");
+}
+
+.subnav li[game-box="Sing2Sport"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Sport/Sing2Sport.png");
+}
+
+.subnav li[game-box="AgSport"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Sport/AgSport.png");
+}
+
+.subnav li[game-box="BbinaSport"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Sport/BbinaSport.png");
+}
+
+.subnav li[game-box="CmdSport"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Sport/CmdSport.png");
+}
+
+.subnav li[game-box="IboSport"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Sport/IboSport.png");
+}
+
+.subnav li[game-box="HLSport"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Sport/HLSport.png");
+}
+
+.subnav li[game-box="ImaSport"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Sport/ImaSport.png");
+}
+
+.subnav li[game-box="M8Sport"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Sport/M8Sport.png");
+}
+
+.subnav li[game-box="SabaaSport"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Sport/SabaaSport.png");
+}
+
+.subnav li[game-box="SababSport"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Sport/SababSport.png");
+}
+
+.subnav li[game-box="SV388Sport"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Sport/SV388Sport.png");
+}
+
+.subnav li[game-box="HRBSport"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Sport/HRBSport.png");
+}
+
+.subnav li[game-box="ZfbSport"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Sport/ZfbSport.png");
+}
+
+.subnav li[game-box="E88Sport"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Sport/E88Sport.png");
+}
+
+.subnav li[game-box="GbSport"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Sport/GbSport.png");
+}
+
+.subnav li[game-box="GbsSport"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Sport/GbsSport.png");
+}
+
+.subnav li[game-box="QtSport"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Sport/QtSport.png");
+}
+
+.subnav li[game-box="BtiSport"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Sport/BtiSport.png");
+}
+
+.subnav li[game-box="Cq9Sport"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Sport/Cq9Sport.png");
+}
+
+.subnav li[game-box="more"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Esport/more.png");
+}
+
+.subnav li[game-box="EsbEsport"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Esport/EsbEsport.png");
+}
+
+.subnav li[game-box="Esb1Esport"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Esport/Esb1Esport.png");
+}
+
+.subnav li[game-box="SabaESport"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Esport/SabaESport.png");
+}
+
+.subnav li[game-box="HcEsport"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Esport/HcEsport.png");
+}
+
+.subnav li[game-box="CmdEsport"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Esport/CmdEsport.png");
+}
+
+.subnav li[game-box="SabaaEsport"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Esport/SabaaEsport.png");
+}
+
+.subnav li[game-box="E88Esport"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Esport/E88Esport.png");
+}
+
+.subnav li[game-box="GbEsport"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Esport/GbEsport.png");
+}
+
+.subnav li[game-box="GbsEsport"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Esport/GbsEsport.png");
+}
+
+.subnav li[game-box="LeEsport"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Esport/LeEsport.png");
+}
+
+.subnav li[game-box="AviaEsport"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Esport/AviaEsport.png");
+}
+
+.subnav li[game-box="Cq9Esport"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Esport/Cq9Esport.png");
+}
+
+.subnav li[game-box="TfEsport"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Esport/TfEsport.png");
+}
+
+.subnav li[game-box="more"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Lottery/more.png");
+}
+
+.subnav li[game-box="BbinaLottery"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Lottery/BbinaLottery.png");
+}
+
+.subnav li[game-box="IgLottery"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Lottery/IgLottery.png");
+}
+
+.subnav li[game-box="IgLotto"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Lottery/IgLotto.png");
+}
+
+.subnav li[game-box="IgaLottery"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Lottery/IgaLottery.png");
+}
+
+.subnav li[game-box="IgaLotto"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Lottery/IgaLotto.png");
+}
+
+.subnav li[game-box="LxLottery"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Lottery/LxLottery.png");
+}
+
+.subnav li[game-box="VrLottery"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Lottery/VrLottery.png");
+}
+
+.subnav li[game-box="AplLottery"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Lottery/AplLottery.png");
+}
+
+.subnav li[game-box="G1Lottery"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Lottery/G1Lottery.png");
+}
+
+.subnav li[game-box="G1aLottery"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Lottery/G1aLottery.png");
+}
+
+.subnav li[game-box="GbLottery"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Lottery/GbLottery.png");
+}
+
+.subnav li[game-box="GblLottery"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Lottery/GblLottery.png");
+}
+
+.subnav li[game-box="SgwLottery"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Lottery/SgwLottery.png");
+}
+
+.subnav li[game-box="BgLottery"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Lottery/BgLottery.png");
+}
+
+.subnav li[game-box="Ig1Lottery"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Lottery/Ig1Lottery.png");
+}
+
+.subnav li[game-box="Ig1Lotto"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Lottery/Ig1Lotto.png");
+}
+
+.subnav li[game-box="more"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Board/more.png");
+}
+
+.subnav li[game-box="City761Board"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Board/City761Board.png");
+}
+
+.subnav li[game-box="JdbBoard"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Board/JdbBoard.png");
+}
+
+.subnav li[game-box="KgHtml"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Board/KgHtml.png");
+}
+
+.subnav li[game-box="LegBoard"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Board/LegBoard.png");
+}
+
+.subnav li[game-box="JsBoard"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Board/JsBoard.png");
+}
+
+.subnav li[game-box="VgBoard"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Board/VgBoard.png");
+}
+
+.subnav li[game-box="NwBoard"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Board/NwBoard.png");
+}
+
+.subnav li[game-box="FgBoard"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Board/FgBoard.png");
+}
+
+.subnav li[game-box="KyBoard"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Board/KyBoard.png");
+}
+
+.subnav li[game-box="LcBoard"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Board/LcBoard.png");
+}
+
+.subnav li[game-box="T365Board"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Board/T365Board.png");
+}
+
+.subnav li[game-box="YgBoard"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Board/YgBoard.png");
+}
+
+.subnav li[game-box="AsBoard"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Board/AsBoard.png");
+}
+
+.subnav li[game-box="TyBoard"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Board/TyBoard.png");
+}
+
+.subnav li[game-box="Cq9Board"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Board/Cq9Board.png");
+}
+
+.subnav li[game-box="more"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Game/more.png");
+}
+
+.subnav li[game-box="AgHtml"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Game/AgHtml.png");
+}
+
+.subnav li[game-box="BbinaSlot"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Game/BbinaSlot.png");
+}
+
+.subnav li[game-box="Cq9Html"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Game/Cq9Html.png");
+}
+
+.subnav li[game-box="FsHtml"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Game/FsHtml.png");
+}
+
+.subnav li[game-box="GaHtml"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Game/GaHtml.png");
+}
+
+.subnav li[game-box="GnsHtml"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Game/GnsHtml.png");
+}
+
+.subnav li[game-box="GpiHtml"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Game/GpiHtml.png");
+}
+
+.subnav li[game-box="GpiFlash"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Game/GpiFlash.png");
+}
+
+.subnav li[game-box="HabaHtml"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Game/HabaHtml.png");
+}
+
+.subnav li[game-box="IsbHtml"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Game/IsbHtml.png");
+}
+
+.subnav li[game-box="JdbHtml"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Game/JdbHtml.png");
+}
+
+.subnav li[game-box="LgHtml"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Game/LgHtml.png");
+}
+
+.subnav li[game-box="MgaHtml"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Game/MgaHtml.png");
+}
+
+.subnav li[game-box="MgaFlash"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Game/MgaFlash.png");
+}
+
+.subnav li[game-box="MwHtml"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Game/MwHtml.png");
+}
+
+.subnav li[game-box="MwSlot"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Game/MwSlot.png");
+}
+
+.subnav li[game-box="NeHtml"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Game/NeHtml.png");
+}
+
+.subnav li[game-box="Ne2Slot"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Game/Ne2Slot.png");
+}
+
+.subnav li[game-box="PgHtml"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Game/PgHtml.png");
+}
+
+.subnav li[game-box="PngHtml"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Game/PngHtml.png");
+}
+
+.subnav li[game-box="PrgHtml"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Game/PrgHtml.png");
+}
+
+.subnav li[game-box="PrgFlash"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Game/PrgFlash.png");
+}
+
+.subnav li[game-box="PtaHtml"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Game/PtaHtml.png");
+}
+
+.subnav li[game-box="PtaFlash"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Game/PtaFlash.png");
+}
+
+.subnav li[game-box="PtbSlot"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Game/PtbSlot.png");
+}
+
+.subnav li[game-box="PtsHtml"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Game/PtsHtml.png");
+}
+
+.subnav li[game-box="SgHtml"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Game/SgHtml.png");
+}
+
+.subnav li[game-box="SgFlash"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Game/SgFlash.png");
+}
+
+.subnav li[game-box="RtHtml"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Game/RtHtml.png");
+}
+
+.subnav li[game-box="TpgHtml"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Game/TpgHtml.png");
+}
+
+.subnav li[game-box="AeSlot"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Game/AeSlot.png");
+}
+
+.subnav li[game-box="JpSlot"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Game/JpSlot.png");
+}
+
+.subnav li[game-box="RtgSlot"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Game/RtgSlot.png");
+}
+
+.subnav li[game-box="QtSlot"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Game/QtSlot.png");
+}
+
+.subnav li[game-box="PsSlot"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Game/PsSlot.png");
+}
+
+.subnav li[game-box="Pg1Slot"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Game/Pg1Slot.png");
+}
+
+.subnav li[game-box="GanSlot"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Game/GanSlot.png");
+}
+
+.subnav li[game-box="HbSlot"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Game/HbSlot.png");
+}
+
+.subnav li[game-box="BgSlot"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Game/BgSlot.png");
+}
+
+.subnav li[game-box="VrSlot"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Game/VrSlot.png");
+}
+
+.subnav li[game-box="more"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Fish/more.png");
+}
+
+.subnav li[game-box="City761Fish"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Fish/City761Fish.png");
+}
+
+.subnav li[game-box="AgHsr"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Fish/AgHsr.png");
+}
+
+.subnav li[game-box="BbFish30"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Fish/BbFish30.png");
+}
+
+.subnav li[game-box="BbFish38"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Fish/BbFish38.png");
+}
+
+.subnav li[game-box="Cq9Fish"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Fish/Cq9Fish.png");
+}
+
+.subnav li[game-box="FsFishBeauty"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Fish/FsFishBeauty.png");
+}
+
+.subnav li[game-box="FsFishThunder"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Fish/FsFishThunder.png");
+}
+
+.subnav li[game-box="FsFishBird"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Fish/FsFishBird.png");
+}
+
+.subnav li[game-box="FsFishHappy"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Fish/FsFishHappy.png");
+}
+
+.subnav li[game-box="FsFishEveryDay"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Fish/FsFishEveryDay.png");
+}
+
+.subnav li[game-box="GnsFish"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Fish/GnsFish.png");
+}
+
+.subnav li[game-box="JdbFishMoney"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Fish/JdbFishMoney.png");
+}
+
+.subnav li[game-box="JdbFish"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Fish/JdbFish.png");
+}
+
+.subnav li[game-box="Jdb2Fish"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Fish/Jdb2Fish.png");
+}
+
+.subnav li[game-box="MwFish"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Fish/MwFish.png");
+}
+
+.subnav li[game-box="PgFish"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Fish/PgFish.png");
+}
+
+.subnav li[game-box="Pg2Fish"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Fish/Pg2Fish.png");
+}
+
+.subnav li[game-box="PtFish"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Fish/PtFish.png");
+}
+
+.subnav li[game-box="PtsFish"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Fish/PtsFish.png");
+}
+
+.subnav li[game-box="UgFish"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Fish/UgFish.png");
+}
+
+.subnav li[game-box="TpgFish"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Fish/TpgFish.png");
+}
+
+.subnav li[game-box="QtFish"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Fish/QtFish.png");
+}
+
+.subnav li[game-box="Qt2Fish"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Fish/Qt2Fish.png");
+}
+
+.subnav li[game-box="RtgFish"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Fish/RtgFish.png");
+}
+
+.subnav li[game-box="PsFish"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Fish/PsFish.png");
+}
+
+.subnav li[game-box="Tpg2Fish"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Fish/Tpg2Fish.png");
+}
+
+.subnav li[game-box="Tpg3Fish"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Fish/Tpg3Fish.png");
+}
+
+.subnav li[game-box="BgFish"]::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/Fish/BgFish.png");
+}
+
+/* promotion */
+.subnav.promotion li[game-box="redenvelope"] {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/promotion/01.png");
+}
+
+.subnav.promotion li[game-box="promotion"] {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v4/nav1/promotion/02.png");
+}
+
+.subnav li a {
+  display: block;
+  height: 100%;
+}
+
+/* #region base */
+body {
+  font: 14px 'SimSun',Helvetica,Arial,sans-serif;
+  /* background-color: #0a0b0f  !important; */
+}
+
+body.layout {
+  min-width: 1000px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+iframe {
+  border: 0;
+}
+
+ul, ol {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+ul li, ol li {
+  list-style: none;
+}
+
+[ng-click] {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  position: relative;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+/* #endregion base */
+/* #region header */
+#header {
+  position: fixed;
+  top: 0px;
+  z-index: 3;
+  width: 100%;
+  height: 151px;
+  font-size: 0;
+  font-family: 'Microsoft YaHei';
+  background: #18202e;
+  border-bottom: 2px solid #e51515;
+}
+
+#header #popup {
+  font-size: 14px;
+}
+
+#header > .wrapper {
+  position: static;
+  padding-top: 76px;
+}
+
+#header-top {
+  height: 30px;
+  position: fixed;
+  width: 100%;
+  z-index: 4;
+}
+
+/* #endregion header */
+/* #region logo */
+#logo-bg {
+  position: relative;
+  display: inline-block;
+  width: 220px;
+  height: 75px;
+  vertical-align: top;
+  background: url("../../../../_Common/Content/Views/Shared/images/logo_w.png") no-repeat left top;
+  background-size: 100% auto;
+}
+
+#logo-bg iframe {
+  width: 331px;
+  height: 75px;
+  display: none;
+}
+
+#logo-bg a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+/* #endregion logo */
+/* #region language */
+#language {
+  display: inline-block;
+  vertical-align: top;
+  color: #9ea5bd;
+  font-size: 12px;
+  line-height: 28px;
+}
+
+#language span {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 4px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+#language span[data-language="zh-CN"] {
+  background: url("../Shared/images/cn.png");
+}
+
+#language span[data-language="zh-TW"] {
+  background: url("../Shared/images/zh.png");
+}
+
+#language span[data-language="en-US"] {
+  display: none;
+}
+
+#language span[data-language="th"] {
+  display: none;
+}
+
+/* #endregion language */
+/* #region top-nav */
+ul.top-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+ul.top-nav li {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 10px;
+}
+
+ul.top-nav li a,
+ul.top-nav li.license {
+  display: inline-block;
+  color: #9ea5bd;
+  font-size: 12px;
+  text-transform: uppercase;
+  line-height: 28px;
+  cursor: pointer;
+}
+
+ul.top-nav li.red a {
+  /* color: #f00; */
+}
+
+ul.top-nav li a:hover {
+  color: #fff;
+}
+
+ul.top-nav li.license {
+  position: relative;
+}
+
+ul.top-nav li.license:hover:before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  right: -42px;
+  z-index: 2;
+  width: 768px;
+  height: 309px;
+  background: url(../Shared/images/license.png) no-repeat;
+}
+
+/* #endregion top-nav */
+/* #region loginbar 顯示「登入帳號」區塊 */
+#header-top #account-box {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 653px;
+  height: 36px;
+  z-index: 1;
+  text-align: right;
+}
+
+#header-top #account-box > form {
+  position: relative;
+  display: inline-block;
+  padding: 6px 0;
+  font-size: 0;
+}
+
+#account-box > form input {
+  display: inline-block;
+  width: 150px;
+  vertical-align: middle;
+  margin-left: 5px;
+  padding: 0 5px 0 30px;
+  font-size: 12px;
+  line-height: 22px;
+  background-color: #411e09;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  outline: none;
+  border: 1px solid #353c5e;
+  color: #fff;
+  background-color: #222b43;
+  border-radius: 3px;
+  line-height: 20px;
+  height: 36px;
+}
+
+#account-box > form input::-webkit-input-placeholder {
+  color: transparent;
+}
+
+#account-box > form input:-ms-input-placeholder {
+  color: transparent;
+}
+
+#account-box > form input::-moz-placeholder {
+  color: transparent;
+}
+
+#account-box > form input.placeholder {
+  color: transparent;
+}
+
+#account-box > form input#login_account {
+  background-image: url("../Shared/images/input_account.png");
+}
+
+#account-box > form input#login_password {
+  background-image: url("../Shared/images/input_pw.png");
+}
+
+#account-box > form #check-code-wrapper input {
+  background-image: url("../Shared/images/input_code.png");
+}
+
+#account-box > form button {
+  display: inline-block;
+  width: 84px;
+  vertical-align: middle;
+  margin-left: 5px;
+  font-size: 13px;
+  line-height: 36px;
+  border: none;
+  background: #dd5227;
+  color: #fff;
+  height: 36px;
+  border-radius: 2px;
+}
+
+#account-box > form button:hover {
+  background: #bb4b29;
+}
+
+#account-box > form button.reg-btn {
+  color: #dd5227;
+  background: transparent;
+}
+
+#account-box > form button.reg-btn:hover {
+  color: #bb4b29;
+}
+
+#check-code-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+#captcha {
+  position: absolute;
+  top: 8px;
+  right: 6px;
+  width: auto;
+  height: 20px;
+}
+
+#agree {
+  display: inline-block;
+  position: absolute;
+  top: 100%;
+  right: 95px;
+  z-index: 1;
+  padding: 2px 5px;
+  font-size: 12px;
+  color: #000;
+  background-color: #fff;
+}
+
+#agree a {
+  color: #0c41ed;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* #endregion loginbar 顯示「登入帳號」區塊 */
+/* #region account-info 登入後, 顯示「帳號資訊」區塊 */
+#header-bot {
+  position: fixed;
+  top: 40px;
+  width: 100%;
+  z-index: 2;
+  background: #18202e;
+}
+
+#header-bot #account-box {
+  position: relative;
+  display: block;
+  text-align: right;
+  height: 36px;
+  line-height: 36px;
+}
+
+#header-bot #account-box div.domain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #331c01;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 54px;
+}
+
+#header-bot #account-box div.domain span.red {
+  color: #f00;
+}
+
+#account-info li,
+#account-nav li,
+#action-box {
+  height: 36px;
+  line-height: 36px;
+}
+
+ul#account-info {
+  position: relative;
+  vertical-align: middle;
+}
+
+ul#account-info li {
+  display: inline-block;
+  margin-right: 20px;
+  color: #9ea5bd;
+  font-size: 13px;
+}
+
+ul#account-info li span.account {
+  display: inline-block;
+  max-width: 5em;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: top;
+  overflow: hidden;
+}
+
+ul#account-info li a {
+  cursor: pointer;
+}
+
+ul#account-info li a:hover {
+  color: #fff;
+}
+
+ul#account-info #member-level {
+  color: #fff;
+  background: #db5330;
+}
+
+ul#account-info #member-level:before {
+  background: #fff;
+}
+
+#action-box {
+  display: inline-block;
+  vertical-align: middle;
+  height: 36px;
+  line-height: 36px;
+}
+
+#action-box a {
+  display: inline-block;
+  width: 55px;
+  padding: 0;
+  color: #9ea5bd;
+  font-size: 13px;
+  text-align: center;
+  border: none;
+}
+
+#action-box a:hover {
+  color: #fff;
+}
+
+/* #endregion account-info 登入後, 顯示「帳號資訊」區塊 */
+/* #region account-nav 登入後的子導覽列 (帳號相關操作) */
+ul#account-nav {
+  display: inline-block;
+  vertical-align: middle;
+  background: #db5330;
+  padding: 0 5px;
+  border-radius: 18px;
+}
+
+ul#account-nav li {
+  display: inline-block;
+  vertical-align: top;
+  border-right: 1px solid #18202e;
+}
+
+ul#account-nav li:last-child {
+  border: none;
+}
+
+ul#account-nav li a {
+  display: inline-block;
+  color: #fff;
+  font-size: 13px;
+  text-decoration: none;
+  padding: 0 8px;
+}
+
+ul#account-nav li a:hover {
+  text-decoration: underline;
+}
+
+/* #endregion account-nav 登入後的子導覽列 (帳號相關操作) */
+/* #region mailbox 站内信 不同版请由此修改 */
+#mailbox {
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  text-decoration: none;
+  background: url("../../../../_Common/Content/Views/Shared/images/m_icon.png") no-repeat;
+  vertical-align: top;
+}
+
+#mailbox span {
+  position: absolute;
+  bottom: 60%;
+  left: 80%;
+  min-width: 16px;
+  padding: 0 2px;
+  height: 16px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  background: #f25927;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* #endregion mailbox 站内信 不同版请由此断修改 */
+/* #region banner*/
+#banner {
+  height: 254px;
+  background: #0c0808 url("../Shared/images/banner.jpg") no-repeat center center;
+  margin-top: 151px;
+}
+
+/* #endregion banner*/
+/* #region content 內頁 */
+#content {
+  text-align: center;
+  background: #0a0b0f url("../Shared/images/games_bg.jpg") no-repeat center top;
+  background-size: cover;
+}
+
+.hot-top {
+  display: inline-block;
+  width: 100%;
+  height: 47px;
+  margin: 0 auto;
+  background: #18202e;
+}
+
+.hot-top .join-hot {
+  float: left;
+  width: 160px;
+  height: 47px;
+  background: url("../Shared/images/bar_register.png") 50% 50% no-repeat;
+}
+
+.hot-top .chat-hot {
+  float: left;
+  width: 160px;
+  height: 47px;
+  margin-right: 5px;
+  background: url("../Shared/images/bar_service.png") 50% 50% no-repeat;
+}
+
+.hot-top .is-login .chat-hot {
+  margin-right: 0;
+}
+
+.hot-top .join-hot:hover, .hot-top .chat-hot:hover {
+  opacity: .8;
+}
+
+.hot-top #news {
+  float: left;
+  width: 655px;
+  margin-right: 5px;
+  position: relative;
+  padding: 0;
+}
+
+.hot-top #news.is-login {
+  width: 825px;
+}
+
+.hot-top #news:before {
+  content: '';
+  float: left;
+  width: 70px;
+  height: 47px;
+  background: url("../Shared/images/bar_news.png");
+}
+
+.hot-top #hot-news {
+  height: 47px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.hot-top #hot-news li {
+  display: inline-block;
+  color: #fff;
+  font: 12px/47px "PMingLiU";
+  line-height: 47px;
+  margin-right: 10px;
+}
+
+.hot-top #hot-news li:hover {
+  text-decoration: underline;
+}
+
+/* #endregion content 內頁 */
+/* #region footer */
+#footer {
+  font-size: 0;
+  font-family: 'Microsoft YaHei';
+  padding-top: 20px;
+  background: #18202e;
+  border-top: 1px solid #252c3b;
+  color: #555b6e;
+}
+
+#footer-logo {
+  height: 85px;
+  background: url("../Shared/images/footer_logo.1.png") no-repeat center top;
+}
+
+#footer-nav {
+  display: block;
+  padding: 20px 0;
+  text-align: center;
+}
+
+#footer-nav li {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 10px;
+}
+
+#footer-nav a {
+  color: #9195ad;
+  font-size: 14px;
+  text-align: center;
+}
+
+#footer-nav a:hover {
+  color: #fff;
+}
+
+#footer-info {
+  display: block;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+#footer-info li {
+  display: inline-block;
+  height: 22px;
+  vertical-align: top;
+  padding-left: 33px;
+  font-size: 14px;
+  line-height: 22px;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+#footer-info li span {
+  color: #dd5227;
+  font-size: 12px;
+}
+
+#footer-info li.mail {
+  width: 230px;
+  padding-left: 40px;
+  background-image: url("../Shared/images/info_mail.png");
+}
+
+#footer-info li.suggest {
+  width: 238px;
+  background-image: url("../Shared/images/info_suggest.png");
+}
+
+#footer-info li.agent {
+  width: 209px;
+  background-image: url("../Shared/images/info_agent.png");
+}
+
+#footer-info li.qq {
+  width: 177px;
+  background-image: url("../Shared/images/info_qq.png");
+}
+
+#footer-info li.chat {
+  width: 141px;
+  font-size: 12px;
+  background-image: url("../Shared/images/info_chat.png");
+}
+
+#footer-suggest {
+  margin: 0;
+  font-size: 12px;
+  line-height: 45px;
+  text-align: center;
+  background: #18202e;
+  border-top: 1px solid #252c3b;
+}
+
+/* #endregion footer */
+/* #region service 更多服務 */
+aside.service {
+  position: absolute;
+  top: 130px;
+  width: 158px;
+  z-index: 99;
+}
+
+aside.service#service-left {
+  left: -129px;
+  background: url("../Shared/images/service/left.gif") no-repeat center top;
+  -webkit-transition: left .4s;
+  -o-transition: left .4s;
+  transition: left .4s;
+}
+
+aside.service#service-left.hover {
+  left: 0;
+}
+
+aside.service#service-right {
+  right: 0;
+  width: 29px;
+  padding-left: 29px;
+  overflow-x: hidden;
+  background: url("../Shared/images/service/right.gif") no-repeat left top;
+  -webkit-transition: width .4s;
+  -o-transition: width .4s;
+  transition: width .4s;
+}
+
+aside.service#service-right.hover {
+  width: 162px;
+}
+
+aside.service ul.girl {
+  width: 129px;
+  text-align: center;
+  font-size: 0;
+}
+
+aside.service ul.girl li {
+  display: inline-block;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+aside.service ul.girl li a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+}
+
+aside.service ul.girl li:hover {
+  background-position: right center;
+}
+
+aside.service ul.girl li.kg {
+  height: 77px;
+}
+
+aside.service ul.girl li.http-deposit {
+  height: 72px;
+}
+
+aside.service ul.girl li.mobile {
+  height: 108px;
+}
+
+aside.service ul.girl li.qr {
+  height: 127px;
+}
+
+aside.service ul.girl li.chat {
+  height: 177px;
+}
+
+aside.service ul.girl li.qq2 {
+  margin-top: 45px;
+  height: 27px;
+}
+
+aside.service ul.girl li.qq {
+  height: 27px;
+}
+
+aside.service ul.girl li.promotion {
+  height: 112px;
+}
+
+aside.service ul.girl li.closed {
+  height: 21px;
+  cursor: pointer;
+}
+
+aside.service#service-bottom {
+  position: fixed;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  width: 200px;
+  height: 170px;
+}
+
+aside.service#service-bottom > a {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 170px;
+  -webkit-transition: all linear 500ms;
+  -o-transition: all linear 500ms;
+  transition: all linear 500ms;
+  opacity: 0;
+  filter: alpha(opacity=0) \9;
+  z-index: 1;
+}
+
+aside.service#service-bottom > a.show {
+  opacity: 1;
+  filter: alpha(opacity=100) \9;
+  z-index: 2;
+}
+
+aside.service#service-bottom > a.http-information {
+  background: url("../Shared/images/service/service_leftbottom_HttpInformation.gif") no-repeat;
+}
+
+aside.service#service-bottom > a.http-deposit3 {
+  background: url("../Shared/images/service/service_leftbottom_HttpDeposit3.gif") no-repeat;
+}
+
+aside.service#service-bottom > a.http-redenvelope {
+  background: url("../Shared/images/service/service_leftbottom_HttpRedenvelope.gif") no-repeat;
+}
+
+aside.service#service-bottom .closed {
+  position: absolute;
+  top: -13px;
+  right: -13px;
+  width: 28px;
+  height: 28px;
+  background: url("../Shared/images/close.png") no-repeat;
+  cursor: pointer;
+  z-index: 3;
+}
+
+/* #endregion service 更多服務 */
+/* #region 近期浏览 */
+#review-list {
+  position: fixed;
+  bottom: -77px;
+  left: 0;
+  width: 100%;
+  height: 77px;
+  background: rgba(0, 0, 0, 0.8);
+  background: #000;
+  color: #fff;
+  z-index: 1;
+  -webkit-transition: bottom 0.4s;
+  -o-transition: bottom 0.4s;
+  transition: bottom 0.4s;
+}
+
+#review-list.open {
+  bottom: 0;
+}
+
+#review-list .up,
+#review-list .down {
+  position: absolute;
+  top: -24px;
+  left: 0;
+  width: 150px;
+  height: 24px;
+  text-align: center;
+  background: url("../../../../_Common/Content/Views/Shared/images/review/tab.png") no-repeat;
+}
+
+#review-list .up:after,
+#review-list .down:after {
+  content: '';
+  display: inline-block;
+  margin-left: 5px;
+  width: 7px;
+  height: 8px;
+}
+
+#review-list .up:after {
+  background: url("../../../../_Common/Content/Views/Shared/images/review/up.png") no-repeat;
+}
+
+#review-list .down:after {
+  background: url("../../../../_Common/Content/Views/Shared/images/review/down.png") no-repeat;
+}
+
+#review-list .wrapper {
+  padding-left: 80px;
+  height: 77px;
+  background: url("../../../../_Common/Content/Views/Shared/images/review/txt.png") no-repeat 20px 15px;
+}
+
+#review-box li {
+  display: inline-block;
+  position: relative;
+  margin: 10px 8px 0;
+  width: 60px;
+  height: 60px;
+}
+
+#review-box li.no-review {
+  line-height: 60px;
+}
+
+#review-box li img {
+  width: 60px;
+  height: 60px;
+}
+
+#review-box li div {
+  display: none;
+  position: absolute;
+  top: -31px;
+  left: -5px;
+  padding-top: 2px;
+  width: 70px;
+  height: 29px;
+  text-align: center;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  background: url("../../../../_Common/Content/Views/Shared/images/review/title.png") no-repeat;
+}
+
+#review-box li:hover div {
+  display: block;
+}
+
+/* #endregion 近期浏览 */
+/* #region 彈跳視窗跑馬燈資訊內容 */
+#marquee-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  z-index: -1;
+}
+
+#marquee-wrapper.show {
+  display: block;
+  z-index: 1000;
+  background: url("../../../../_Common/Content/Views/Shared/images/transparent-black.png");
+}
+
+#marquee {
+  width: 600px;
+  max-height: 500px;
+  margin: 30px auto 0;
+  background: url("../../../../_Common/Content/Views/Shared/images/table_background.jpg");
+  cursor: default;
+  border-radius: 5px;
+  -webkit-transition: margin-top ease-in 300ms;
+  -o-transition: margin-top ease-in 300ms;
+  transition: margin-top ease-in 300ms;
+}
+
+#marquee header {
+  text-align: center;
+  background-color: #e9e9e9;
+  border-bottom: 1px solid #ccc;
+  border-radius: 5px 5px 0 0;
+}
+
+#marquee header h2 {
+  margin: 0;
+  color: #0080e3;
+  font-size: 21px;
+  line-height: 60px;
+}
+
+#marquee footer {
+  text-align: center;
+  line-height: 80px;
+  background-color: #e9e9e9;
+  background-image: -webkit-radial-gradient(center top, ellipse farthest-side, rgba(0, 0, 0, 0.3), transparent);
+  background-size: 100% 8px;
+  background-repeat: no-repeat;
+  border-top: 1px solid #ccc;
+  border-radius: 0 0 5px 5px;
+}
+
+#marquee footer span {
+  display: inline-block;
+  width: 119px;
+  font-weight: bolder;
+  font-size: 15px;
+  line-height: 45.5px;
+  background: url("../../../../_Common/Content/Views/Shared/images/sent_bn.png");
+  cursor: pointer;
+}
+
+#marquee footer span:hover {
+  background-position: 0 -45.5px;
+}
+
+ul#newsBags {
+  margin: 0;
+  padding: 10px 50px;
+  max-height: 380px;
+  overflow: auto;
+}
+
+ul#newsBags li {
+  list-style: disc;
+  color: #454545;
+  white-space: pre-line;
+  font-size: 13px;
+  line-height: 27px;
+  border-bottom: 1px dashed #999;
+}
+
+/* #endregion 彈跳視窗跑馬燈資訊內容 */
+/* #region 弹跳出来的notice Dialog */
+/* title 文字背景顏色在此修改 */
+.ui-widget-header {
+  padding: 0 5px;
+  line-height: 12px;
+}
+
+#ad-dialog {
+  display: none;
+  padding: 0;
+}
+
+#ad-dialog img {
+  width: 100%;
+  height: auto !important;
+}
+
+#ad-dialog .dialog-footer {
+  padding: 0 3px;
+  height: 30px;
+  border-top: 1px solid #000;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 25px;
+}
+
+.ui-dialog {
+  z-index: 999;
+}
+
+.ui-dialog .ui-dialog-title {
+  height: 12px;
+  font-size: 13px;
+}
+
+.ui-dialog .ui-dialog-buttonpane {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.ui-dialog .ui-dialog-buttonpane button {
+  margin: 3px 6px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only {
+  font-size: 12px;
+}
+
+/* #endregion 弹跳出来的dialog */
+/*#region loginToGame 游戏平台登入口*/
+#logingame-body {
+  background-color: #211c18 !important;
+}
+
+#logingame-left form #check-code-wrapper {
+  position: relative;
+}
+
+#logingame-left form #check-code-wrapper #captcha {
+  position: absolute;
+  right: 0;
+}
+
+/*#endregion */
+/*# sourceMappingURL=site.css.map */

@@ -1,0 +1,157 @@
+﻿@import '../../../../_Common/Css/GameCode';
+
+#nav {
+    position: absolute;
+    height: 60px;
+    line-height: 78px;
+    top: 120px;
+    left: 50%;
+    width: 1000px;
+    margin-left: -500px;
+    z-index: 2;
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0.63;
+        z-index: -1;
+    }
+    > ul {
+        padding: 0;
+        list-style: none;
+        font-size: 0;
+        > li {
+            display: inline-block;
+            width: 125px;
+            text-align: center;
+            color: #262f3c;
+            font-size: 16px;
+            height: 59px;
+            border-bottom: 5px solid transparent;
+            &:hover {
+                border-bottom: 5px solid #16b6d2;
+                .subnav {
+                    display: block;
+                    opacity: .9;
+                }
+            }
+            &.hot {
+                background-image: url('../Shared/images/hot.png');
+                background-repeat: no-repeat;
+                background-position: 70px 5px;
+            }
+            &:hover,
+            &.active,
+            &.color {
+                color: #16b6d2;
+            }
+            a {
+                display: inline-block;
+                height: 100%;
+                width: 100%;
+                color: inherit;
+                vertical-align: middle;
+                text-decoration: none;
+                text-align: center;
+                letter-spacing: -1px;
+                line-height: 60px;
+                position: relative;
+                top: -12px;
+            }
+        }
+    }
+}
+
+#nav .subnav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    width: 1200px;
+    margin-left: -600px;
+    text-align: center;
+    background: #fff;
+    border-top: #e8e8e8;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 0 0 29px 0 rgba(75, 81, 91, 0.17);
+    ol {
+        width: 1000px;
+        display: inline-block;
+        padding: 20px 35px 0;
+        li {
+            position: relative;
+            float: left;
+            width: 145px;
+            height: 50px;
+            margin: 10px 5px;
+            padding-left: 50px;
+            text-align: left;
+            font-size: 12px;
+            color: #262f3c;
+            line-height: 50px;
+            list-style: none;
+            background-position: left center;
+            background-repeat: no-repeat;
+            background-size: 50px auto;
+            cursor: pointer;
+            &:hover {
+                color: #16b6d2;
+            }
+            &.hot:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 17px;
+                height: 19px;
+                background: url('../Shared/images/hot2.gif') no-repeat right center;
+            }
+        }
+    }
+}
+
+@each $gamebox in $live-list {
+    .subnav li[game-box='#{$gamebox}'] {
+        background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/live/#{$gamebox}.png');
+    }
+}
+
+@each $gamebox in $sport-list {
+    .subnav li[game-box='#{$gamebox}'] {
+        background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Sport/#{$gamebox}.png');
+    }
+}
+
+@each $gamebox in $esport-list {
+    .subnav li[game-box='#{$gamebox}'] {
+        background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Esport/#{$gamebox}.png');
+    }
+}
+
+@each $gamebox in $game-list {
+    .subnav li[game-box='#{$gamebox}'] {
+        background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Game/#{$gamebox}.png');
+    }
+}
+
+@each $gamebox in $lottery-list {
+    .subnav li[game-box='#{$gamebox}'] {
+        background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Lottery/#{$gamebox}.png');
+    }
+}
+
+@each $gamebox in $board-list {
+    .subnav li[game-box='#{$gamebox}'] {
+        background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Board/#{$gamebox}.png');
+    }
+}
+
+@each $gamebox in $fish-list {
+    .subnav li[game-box='#{$gamebox}'] {
+        background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Fish/#{$gamebox}.png');
+    }
+}

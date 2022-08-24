@@ -1,0 +1,84 @@
+﻿/* #region header */
+#search {
+    background-color: #ac741c;
+}
+/* #endregion header */
+
+/* #region nav */
+nav {
+    background-color: #ac741c;
+}
+
+#game-nav > li > span {
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+}
+
+#game-nav > li:hover > span,
+#game-nav > li.active > span {
+    font-weight: bold;
+    background-color: #7c581e;
+}
+
+ol.subnav {
+    background-color: #fff;
+}
+
+    ol.subnav > li:hover {
+        color: #fff;
+        background-color: #7c581e;
+    }
+/* #endregion nav */
+
+/* #region recommend-list */
+#recommend-list .slick-dots li.slick-active,
+#recommend-list .slick-dots li.slick-active:hover,
+#recommend-list .slick-prev:hover,
+#recommend-list .slick-next:hover {
+    background-color: #ac741c;
+}
+
+#recommend-list .list-title {
+    border-bottom: 2px solid #ac741c;
+}
+
+    #recommend-list .list-title span {
+        background-color: #ac741c;
+    }
+
+    #recommend-list .list-title a {
+        color: #ac741c;
+    }
+/* #endregion recommend-list */
+
+/* #region 游戏列表区块 */
+#game-list li {
+    background-color: #fff;
+    border-color: #ac741c;
+}
+
+    #game-list li:hover {
+        background-color: #ac741c;
+    }
+
+    #game-list li .game-logo:hover:before {
+        background-image: url('../../../../_Common/Content/Views/BoardCasino/JS/hover.png');
+    }
+
+    #game-list li:hover .game-text {
+        color: #fff;
+    }
+/* #endregion 游戏列表区块 */
+
+/* #region pager */
+#pager li {
+    color: #000;
+    background-color: #ccc;
+}
+
+    #pager li[ng-click]:hover {
+        color: #fff;
+        background-color: #ac741c;
+    }
+/* #endregion pager */

@@ -1,0 +1,212 @@
+@charset "UTF-8";
+.banner {
+  background: url("../Lobby/Board/banner.jpg") center top no-repeat;
+}
+
+#lobby .game-list li {
+  width: 486px;
+  height: 289px;
+  margin: 0 7px 15px;
+  padding: 65px 0 0 325px;
+  color: #fff;
+  font-size: 12px;
+  border: 1px solid #354666;
+  -webkit-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  background: url("../Lobby/Board/more.jpg");
+  position: relative;
+}
+
+#lobby .game-list li:not([game-box='more']):hover {
+  opacity: 0.7;
+}
+
+#lobby .game-list li span {
+  position: absolute;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 2px;
+  bottom: 0;
+  right: 0;
+  line-height: 370px;
+  text-align: center;
+  width: 204px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+#lobby .game-list li::after {
+  content: '立即进入';
+  position: absolute;
+  font-size: 14px;
+  color: #00afff;
+  bottom: 50px;
+  left: 280px;
+  width: 204px;
+  height: 30px;
+  font-weight: 400;
+  text-align: center;
+}
+
+#lobby .game-list li div {
+  display: none;
+}
+
+#lobby .game-list li::before {
+  content: '';
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 20px;
+  left: 305px;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+#lobby .game-list li[game-box='more'] span {
+  color: #84827D;
+}
+
+#lobby .game-list li[game-box='more']::after {
+  content: 'COMING SOON';
+  position: absolute;
+  font-size: 14px;
+  color: #84827D;
+  bottom: 50px;
+  left: 280px;
+  width: 204px;
+  height: 30px;
+  font-weight: 400;
+  text-align: center;
+}
+
+#lobby li[game-box='more'] {
+  background-image: url("../lobby/Board/more.jpg");
+}
+
+#lobby li[game-box='more']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/color/Board/more.png");
+}
+
+#lobby li[game-box='City761Board'] {
+  background-image: url("../lobby/Board/City761Board.jpg");
+}
+
+#lobby li[game-box='City761Board']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/color/Board/City761Board.png");
+}
+
+#lobby li[game-box='JdbBoard'] {
+  background-image: url("../lobby/Board/JdbBoard.jpg");
+}
+
+#lobby li[game-box='JdbBoard']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/color/Board/JdbBoard.png");
+}
+
+#lobby li[game-box='KgHtml'] {
+  background-image: url("../lobby/Board/KgHtml.jpg");
+}
+
+#lobby li[game-box='KgHtml']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/color/Board/KgHtml.png");
+}
+
+#lobby li[game-box='LegBoard'] {
+  background-image: url("../lobby/Board/LegBoard.jpg");
+}
+
+#lobby li[game-box='LegBoard']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/color/Board/LegBoard.png");
+}
+
+#lobby li[game-box='JsBoard'] {
+  background-image: url("../lobby/Board/JsBoard.jpg");
+}
+
+#lobby li[game-box='JsBoard']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/color/Board/JsBoard.png");
+}
+
+#lobby li[game-box='VgBoard'] {
+  background-image: url("../lobby/Board/VgBoard.jpg");
+}
+
+#lobby li[game-box='VgBoard']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/color/Board/VgBoard.png");
+}
+
+#lobby li[game-box='NwBoard'] {
+  background-image: url("../lobby/Board/NwBoard.jpg");
+}
+
+#lobby li[game-box='NwBoard']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/color/Board/NwBoard.png");
+}
+
+#lobby li[game-box='FgBoard'] {
+  background-image: url("../lobby/Board/FgBoard.jpg");
+}
+
+#lobby li[game-box='FgBoard']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/color/Board/FgBoard.png");
+}
+
+#lobby li[game-box='KyBoard'] {
+  background-image: url("../lobby/Board/KyBoard.jpg");
+}
+
+#lobby li[game-box='KyBoard']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/color/Board/KyBoard.png");
+}
+
+#lobby li[game-box='LcBoard'] {
+  background-image: url("../lobby/Board/LcBoard.jpg");
+}
+
+#lobby li[game-box='LcBoard']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/color/Board/LcBoard.png");
+}
+
+#lobby li[game-box='T365Board'] {
+  background-image: url("../lobby/Board/T365Board.jpg");
+}
+
+#lobby li[game-box='T365Board']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/color/Board/T365Board.png");
+}
+
+#lobby li[game-box='YgBoard'] {
+  background-image: url("../lobby/Board/YgBoard.jpg");
+}
+
+#lobby li[game-box='YgBoard']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/color/Board/YgBoard.png");
+}
+
+#lobby li[game-box='AsBoard'] {
+  background-image: url("../lobby/Board/AsBoard.jpg");
+}
+
+#lobby li[game-box='AsBoard']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/color/Board/AsBoard.png");
+}
+
+#lobby li[game-box='TyBoard'] {
+  background-image: url("../lobby/Board/TyBoard.jpg");
+}
+
+#lobby li[game-box='TyBoard']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/color/Board/TyBoard.png");
+}
+
+#lobby li[game-box='Cq9Board'] {
+  background-image: url("../lobby/Board/Cq9Board.jpg");
+}
+
+#lobby li[game-box='Cq9Board']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/color/Board/Cq9Board.png");
+}
+/*# sourceMappingURL=Board.css.map */

@@ -1,0 +1,159 @@
+﻿body {
+    padding: 80px;
+    font-family: Arial,SimSun;
+    font-size: 12px;
+    background: #555;
+}
+
+#login-content {
+    width: 734px;
+    height: 322px;
+    margin: 0 auto;
+    background: url('../../../../_Common/Content/Views/Account/LoginToGame/bg.png') no-repeat center center;
+}
+
+#logingame-left {
+    float: left;
+    width: 392px;
+    height: 322px;
+    padding: 20px;
+}
+
+    #logingame-left #login-info h3 {
+        margin: 0;
+        color: #fff;
+        font-family: 'Microsoft YaHei';
+        font-size: 36px;
+    }
+
+    #logingame-left #login-info p {
+        color: #fff;
+        margin-top: 0.5em;
+    }
+
+    #logingame-left form {
+        position: relative;
+        padding: 5px 20px;
+    }
+
+        #logingame-left form input {
+            display: block;
+            width: 298px;
+            height: 35px;
+            margin-bottom: 12px;
+            padding-left: 50px;
+            color: #292929;
+            line-height: 35px;
+            border: none;
+            background-position: center center;
+        }
+
+            #logingame-left form input#login_account {
+                background: url('../../../../_Common/Content/Views/Account/LoginToGame/user.png') no-repeat center center;
+            }
+
+            #logingame-left form input#login_password {
+                background: url('../../../../_Common/Content/Views/Account/LoginToGame/pwd.png') no-repeat center center;
+            }
+
+            #logingame-left form input::-webkit-input-placeholder {
+                color: inherit;
+            }
+
+            #logingame-left form input:-ms-input-placeholder {
+                color: inherit;
+            }
+
+            #logingame-left form input::-moz-placeholder {
+                color: inherit;
+            }
+
+            #logingame-left form input.placeholdersjs {
+                color: inherit;
+            }
+
+        #logingame-left form #check-code-wrapper {
+            margin-right: 100px;
+        }
+
+            #logingame-left form #check-code-wrapper input {
+                width: 167px;
+                height: 33px;
+                padding-left: 10px;
+                background-color: transparent;
+                border: 1px solid #000;
+            }
+
+            #logingame-left form #check-code-wrapper #captcha {
+                height: 31px;
+                top: 1px;
+                right: 1px;
+            }
+
+        #logingame-left form #login-box {
+            width: 85px;
+            height: 35px;
+            margin-right: 20px;
+            color: #fff;
+            line-height: 31px;
+            vertical-align: baseline;
+            background: #262626;
+            border: none;
+        }
+
+            #logingame-left form #login-box:hover {
+                background: #3b3b3b;
+            }
+
+        #logingame-left form #forget {
+            color: #a1a1a1;
+            background-color: transparent;
+            border: none;
+        }
+
+            #logingame-left form #forget:hover {
+                color: #fff;
+            }
+
+#agree {
+    top: 98%;
+    right: 42%;
+}
+
+#logingame-logo {
+    width: 341px;
+    height: 70px;
+}
+
+    #logingame-logo img {
+        height: 100%;
+        max-width: 90%;
+    }
+
+#logingame-right {
+    float: right;
+    width: 341px;
+    height: 322px;
+    padding-top: 80px;
+    text-align: center;
+}
+
+    #logingame-right span {
+        display: block;
+        margin: 15px auto 30px;
+        color: #fff;
+    }
+
+    #logingame-right button.joinus {
+        width: 123px;
+        height: 34px;
+        color: #a1a1a1;
+        line-height: 30px;
+        background-color: transparent;
+        border: 1px solid #a1a1a1;
+    }
+
+        #logingame-right button.joinus:hover {
+            color: #fff;
+            border: 1px solid #fff;
+        }

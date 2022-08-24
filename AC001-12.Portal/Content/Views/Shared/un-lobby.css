@@ -1,0 +1,264 @@
+﻿/* 各頁設定 */
+#un-lobby {
+    display: inline-block;
+    width: 100%;
+    margin: 0 auto;
+    margin: 40px 0;
+}
+
+    #un-lobby aside {
+        float: left;
+        width: 247px;
+        margin: 0;
+        background: rgba(0,0,0,.4);
+        /* padding-top: 60px; */
+        /* background: url('../Shared/images/side.png') no-repeat center top; */
+    }
+
+    #un-lobby ul#sidebar {
+        display: inline-block;
+        margin: 0 auto;
+        padding: 20px 0;
+        /* background: url('../Shared/images/aside.png') no-repeat center bottom; */
+    }
+
+        #un-lobby ul#sidebar li {
+            float: left;
+            width: 247px;
+        }
+
+            #un-lobby ul#sidebar li:hover,
+            #un-lobby ul#sidebar li.active {
+                color: #000;
+                background: rgba(255,255,255,.5);
+            }
+
+                #un-lobby ul#sidebar li:hover a,
+                #un-lobby ul#sidebar li.active a {
+                    color: #000;
+                }
+
+            #un-lobby ul#sidebar li a {
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                color: #FFF;
+                font-size: 17px;
+                text-decoration: none;
+                line-height: 40px;
+            }
+
+/* 內文CSS */
+#articles {
+    float: right;
+    width: 730px;
+    min-height: 340px;
+    margin: 0;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 14px;
+    text-align: left;
+    background: rgba(0,0,0,.4);
+}
+
+    #articles h2 {
+        position: relative;
+        margin: 0;
+        color: #b4564a;
+        padding: 10px 10px 10px 40px;
+        font-size: 16px;
+        letter-spacing: 2px;
+        background: rgba(0,0,0,.5);
+        font-weight: normal;
+        border-radius: 3px;
+        box-shadow: 1px 1px 2px rgba(0,0,0,.3)inset, 1px 1px 2px rgba(255,255,255,.1);
+    }
+    #articles h2:before,#articles h2:after{
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        width: 12px;
+        height: 12px;
+        margin-top: -6px;
+        border-radius: 10px;
+        background: #000;
+        box-shadow: 1px 1px 1px rgba(255,255,255,.4);
+    }
+    #articles h2:after{
+        background: rgba(255,255,255,.5);
+        width: 6px;
+        height: 6px;
+        margin-left: 3px;
+        margin-top: -3px;
+        box-shadow: 1px 1px 1px rgba(255,255,255,.4) inset;
+    }
+    #articles h3 {
+        color: #ff0000;
+        font-size: 16px;
+        text-align: left;
+    }
+
+    #articles h4 {
+        color: #ff0000;
+        font-size: 14px;
+        text-align: left;
+    }
+
+    #articles > ul {
+        list-style: none;
+    }
+
+    #articles ol {
+        padding-left: 20px;
+        list-style-type: decimal;
+    }
+
+    #articles p,
+    #articles li {
+        text-align: justify;
+        line-height: 2em;
+    }
+
+    #articles p {
+        margin: 1em 0;
+    }
+
+    #articles table {
+        width: 100%;
+    }
+
+        #articles table tr,
+        #articles table th,
+        #articles table td {
+            line-height: 2em;
+            text-align: center;
+            color: #333;
+            font-size: 15px;
+            border: 1px solid #000;
+        }
+
+        #articles table th {
+            background: #f8b551;
+        }
+
+    /* 重點顏色 */
+    #articles .highlight {
+        color: #ff0000;
+        font-weight: bolder;
+    }
+
+    #articles .highlight-yellow {
+        color: #ffd281;
+    }
+
+    /* #region 合作夥伴tab 供其他页面使用 */
+    #articles ul.mtab-menual {
+        padding: 10px 0;
+        text-align: left;
+    }
+
+        #articles ul.mtab-menual li {
+            display: inline;
+            margin-right: 3px;
+            padding: 5px 8px;
+            color: #000;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 35px;
+            background: #ffd281;
+            cursor: pointer;
+        }
+
+            #articles ul.mtab-menual li.mtab {
+                color: #ffd281;
+                background: #000;
+            }
+    /* #endregion 合作夥伴tab 供其他页面使用 */
+
+    /* #region deposit线上存款页面使用 */
+    #articles ul.deposit {
+        list-style-type: none;
+    }
+
+        #articles ul.deposit li {
+            font-size: 14px;
+            counter-increment: title;
+        }
+
+            #articles ul.deposit li > a:before {
+                content: "方法 "counter(title,upper-alpha)"、";
+            }
+
+            #articles ul.deposit li a {
+                font-size: 16px;
+                color: #f00;
+                text-decoration: underline;
+            }
+/* #endregion deposit线上存款页面使用 */
+
+/* #region account nav共用 */
+.body {
+    position: relative;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 5px;
+    font-size: 14px;
+    font-family: PMingLiU;
+    background: rgba(255,255,255,.8);
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+    .body #title {
+        color: #fff;
+        text-align: center;
+        background: rgba(0,0,0,.5);
+    }
+
+    .body.container #title {
+        font-size: 15px;
+        font-family: '新細明體';
+    }
+
+    .body.container #title,
+    .body #account-heading,
+    .body #withdrawal-heading {
+        color: #fff;
+        background: #767676;
+    }
+    /* 檢視存入帳戶的文字顏色 */
+    .body #show-account-info.btn {
+        color: #fff;
+    }
+/* #endregion account nav共用 */
+
+/* #region 輸入框placeholder顏色 */
+/* 此為預設顏色，若各站需特別色系請由此修改，不需要可整段刪除 */
+.form-group .control-div input::-webkit-input-placeholder {
+    color: #999;
+}
+
+.form-group .control-div input::-moz-placeholder {
+    color: #999;
+}
+
+.form-group .control-div input:-ms-input-placeholder {
+    color: #999;
+}
+
+.form-group .control-div input.placeholder {
+    color: #999;
+}
+/* #endregion 輸入框placeholder顏色 */
+
+/* 一鍵取回 */
+.body.container #title,
+.body #account-heading,
+.body #withdrawal-heading,
+#account-popup.modal.in table th {
+    color: #fff;
+    background: #b4564a;
+}

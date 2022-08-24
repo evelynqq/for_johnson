@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html @* xmlns:ng="http://angularjs.org" *@ id="ng-app" ng-app="portalApp" meidon-time="@ViewBag.MeiDonNow" @* 主機的美東時間 *@ moment-lang="@ViewBag.Language" @* 瀏覽器語系 *@ ng-init="'@Resources.Shared.Head_Title'">
+
+<head>
+    <title>welcome</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="shortcut icon" href="../../../_Common/Content/Views/Shared/images/favicon.ico" />
+    <link href="../../bundles/site.css" rel="stylesheet" />
+    <link href="../../Content/Views/Home/index.css" rel="stylesheet" />
+    <script src="../../../_Common/Scripts/jquery/v1.12.4/jquery.min.js"></script>
+    <script src="../../bundles/include-html.js"></script>
+    <script src="../../../_Common/Content/jquery.SuperSlide.2.1.2.js" type="text/javascript"></script>
+    <script>
+        // Slide-banner
+        $(function () {
+            $('#slide-banner').slide({
+                titCell: 'ul.slide-pager',
+                mainCell: 'div.slide',
+                autoPage: true,
+                autoPlay: true,
+                effect: 'fold',
+                interTime: 3000,
+                delayTime: 500,
+                easing: 'swing',
+                trigger: 'click'
+            });
+        });
+    </script>
+</head>
+
+<body class="layout" ng-controller="LayoutCtrl">
+    <header id="header"></header>
+    <!-- Slide-Banner -->
+    <div id="banner">
+        <section id="slide-banner">
+            <div class="slide">
+                <a href="#"><img src="../../../_Common/Content/Views/Shared/images/01.jpg"></a>
+                <a href="#"><img src="../../../_Common/Content/Views/Shared/images/02.jpg"></a>
+                <a href="#"><img src="../../../_Common/Content/Views/Shared/images/03.jpg"></a>
+            </div>
+            <ul class="slide-pager"></ul>
+        </section>
+    </div>
+    <!-- Slide-Banner End -->
+    <div id="content">
+        <div class="hot-top"></div>
+        <div class="wrapper">
+            <section id="home">
+                <div class="wrapper">
+                    <div id="slots">
+                        <ul id="link-info">
+                            <li class="link01"><a href="javascript:void(0)" ng-click="RegisterClick()"><h3>免费开户</h3>免费开户，立即畅玩游戏</a></li>
+                            <li class="link02"><a href="/Partner"><h3>代理合作</h3>诚招代理，合作共赢</a></li>
+                            <li class="link03"><a ng-href="" target="_blank"><h3>线路检测</h3>随时检测，安全无忧</a></li>
+                            <li class="link04"><a ng-href="" target="_blank"><h3>最新优惠活动</h3>自助申请，查询系统</a></li>
+                        </ul>
+                        <div class="wrapper ng-scope" id="minislot" ng-controller="LobbiesCtrl">
+                            <ul id="game-select" ng-init="microgame='mg'">
+                                <li class="select01" ng-mouseover="microgame='mg'" ng-class="{'game-active':microgame=='mg'}" ng-click="toMgFlash()">MG电子<span>MICROGAMING</span></li>
+                                <li class="select02" ng-mouseover="microgame='pt'" ng-class="{'game-active':microgame=='pt'}" ng-click="toPtFlash()">PT电子<span>PLAYGAMING</span></li>
+                                <li class="select03" ng-mouseover="microgame='bb'" ng-class="{'game-active':microgame=='bb'}" ng-click="toBbGame()">BBIN电子<span>BBINGAMING</span></li>
+                                <li class="select04" ng-mouseover="microgame='mw'" ng-class="{'game-active':microgame=='mw'}" ng-click="toMwHtml()">MW电子<span>MWGAMING</span></li>
+                                <li class="select05 game-active" ng-mouseover="microgame='jdb'" ng-class="{'game-active':microgame=='jdb'}" ng-click="toJdbHtml()">JDB电子<span>JDBGAMING</span></li>
+                            </ul>
+                            <!-- ngIf: microgame=='mg' -->
+                            <!-- ngIf: microgame=='pt' -->
+                            <!-- ngIf: microgame=='bb' -->
+                            <!-- ngIf: microgame=='mw' -->
+                            <!-- ngIf: microgame=='jdb' -->
+                            <ul ng-if="microgame=='jdb'" class="game-view ng-scope">
+                                <li class="jdb01"><a href="/Lobby/Game"></a>
+                                    <p>变脸</p>
+                                </li>
+                                <li class="jdb02"><a href="/Lobby/Game"></a>
+                                    <p>台湾黑熊</p>
+                                </li>
+                                <li class="jdb03"><a href="/Lobby/Game"></a>
+                                    <p>月光秘宝</p>
+                                </li>
+                                <li class="jdb04"><a href="/Lobby/Game"></a>
+                                    <p>江山美人</p>
+                                </li>
+                                <li class="jdb05"><a href="/Lobby/Game"></a>
+                                    <p>芝麻開門</p>
+                                </li>
+                                <li class="jdb06"><a href="/Lobby/Game"></a>
+                                    <p>过新年</p>
+                                </li>
+                            </ul>
+                            <!-- end ngIf: microgame=='jdb' -->
+                            <div id="slide" ng-controller="LobbiesCtrl" class="ng-scope">
+                                <div class="cycle-slider cycle-slideshow" data-cycle-fx="scrollHorz" style="position: relative; overflow: hidden;"><img ng-click="toMwFish()" src="../../Content/Views/Home/images/Slide/mw_fish.jpg" class="cycle-slide cycle-sentinel" style="position: static; top: 0px; left: 0px; z-index: 100; opacity: 1; visibility: hidden; display: block;">
+                                    <div class="cycle-pager"><span class="">•</span><span class="">•</span><span class="cycle-pager-active">•</span></div>
+                                    <img ng-click="toMwFish()" src="../../Content/Views/Home/images/Slide/mw_fish.jpg" class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 97; opacity: 1; display: none;"><img ng-click="toBbGame()" src="../../Content/Views/Home/images/Slide/slot_bb.jpg" class="cycle-slide" style="position: absolute; top: 0px; left: -250.088px; z-index: 100; display: block; opacity: 1;"><img ng-click="toMwHtml()" src="../../Content/Views/Home/images/Slide/mw_doudizhu.jpg" class="cycle-slide cycle-slide-active" style="position: absolute; top: 0px; left: 34.9125px; z-index: 99; display: block; opacity: 1;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aboutus">
+                        <h3>关于<span>澳门美高梅</span><span class="en">MGM CASINO</span></h3>
+                        <p>
+                            品牌信誉-首选<span>澳门美高梅</span>，最具公信力的博彩公司、更有高质量的游戏平台、打
+                            <br> 造在线博彩第一品牌。公司不仅拥有市场上最多样化的游戏投注平台，同时为客户
+                            <br> 提供实时、刺激、高信誉的服务保证和高质量的游戏。
+                        </p>
+                        <ul class="count">
+                            <li id="counter01">
+                                <span>27</span>
+                            </li>
+                            <li id="counter02">
+                                <span>2'56</span>
+                            </li>
+                            <li id="counter03">
+                                <span>22</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <ul id="game-list">
+                        <li data-img="01">
+                            <a href="/Lobby/Live"></a>
+                        </li>
+                        <li data-img="02">
+                            <a href="/Lobby/Sport"></a>
+                        </li>
+                        <li data-img="04">
+                            <a href="/Lobby/Lottery"></a>
+                        </li>
+                        <li data-img="05">
+                            <a href="/Lobby/Game"></a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+    <footer id="footer"></footer>
+</body>
+
+</html>

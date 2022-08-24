@@ -1,0 +1,187 @@
+﻿@import '../../../../_Common/Css/GameCode';
+
+#nav {
+    background: #fff;
+    border-top: 1px solid #fefefe;
+}
+
+.mainnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    > li {
+        float: left;
+        &.service {
+            background: #6577d9 url('../Shared/images/service_btn.jpg') no-repeat center;
+        }
+        > a {
+            position: relative;
+            display: block;
+            width: 125px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 13px;
+            font-family: 'Microsoft YaHei';
+            text-align: center;
+            text-decoration: none;
+            color: #555;
+            transition: color 0.2s, width 0.2s;
+            transition: all 0.2s;
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 19px;
+                width: 1px;
+                height: 12px;
+                background-color: #ccc;
+            }
+            > i {
+                position: relative;
+                top: -1px;
+                font-size: 13px;
+                transition: all 0.4s;
+            }
+        }
+        &.hot > a {
+            background: url('../Shared/images/hot.gif') no-repeat 75px 2px;
+        }
+        &:first-child > a:before,
+        &.service > a:before {
+            display: none;
+        }
+        &:hover > a,
+        &.active > a {
+            color: #00afff;
+        }
+        &:hover > a > i {
+            -webkit-animation: rotate 0.4s;
+            transform: rotate(180deg);
+        }
+        &:hover > .subnav {
+            height: 109px;
+            transition: height 0.4s ease-in;
+        }
+    }
+}
+
+@-webkit-keyframes rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(180deg);
+    }
+}
+
+.subnav {
+    position: absolute;
+    z-index: 99;
+    left: 0;
+    width: 100%;
+    min-width: 1000px;
+    line-height: 109px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: rgba(21, 26, 35, 0.8);
+    background: radial-gradient(ellipse farthest-side at center top, #fff 0%, rgba(228, 228, 228, 0.9) 100%);
+    overflow: hidden;
+    height: 0;
+    transition: height 400ms ease-in;
+    & > span {
+        position: absolute;
+        top: 46px;
+        left: 50%;
+        z-index: 1;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-position: center top;
+        cursor: pointer;
+        &:hover {
+            background-position-y: bottom;
+        }
+        &.prev {
+            margin-left: -505px;
+            background-image: url('../Shared/images/arrow_l.png');
+        }
+        &.next {
+            margin-left: 477px;
+            background-image: url('../Shared/images/arrow_r.png');
+        }
+    }
+    .main-cell {
+        display: inline-block;
+    }
+    ul {
+        display: block;
+        width: 945px;
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+        li {
+            display: inline-block;
+            vertical-align: top;
+            min-width: 105px;
+            width: 135px;
+            margin: 0 0px;
+            padding-top: 25px;
+            color: #555;
+            font-size: 16px;
+            font-family: 'Microsoft Yahei';
+            background-position: center 0px;
+            background-repeat: no-repeat;
+            filter: grayscale(100%);
+            filter: gray;
+            &:hover {
+                color: #00afff;
+                filter: grayscale(0%);
+                filter: gray;
+            }
+        }
+    }
+}
+
+@each $gamebox in $live-list {
+    .subnav li.#{$gamebox} {
+        background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/live/#{$gamebox}.png');
+    }
+}
+
+@each $gamebox in $sport-list {
+    .subnav li.#{$gamebox} {
+        background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Sport/#{$gamebox}.png');
+    }
+}
+
+@each $gamebox in $esport-list {
+    .subnav li.#{$gamebox} {
+        background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Esport/#{$gamebox}.png');
+    }
+}
+
+@each $gamebox in $lottery-list {
+    .subnav li.#{$gamebox} {
+        background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Lottery/#{$gamebox}.png');
+    }
+}
+
+@each $gamebox in $board-list {
+    .subnav li.#{$gamebox} {
+        background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Board/#{$gamebox}.png');
+    }
+}
+
+@each $gamebox in $game-list {
+    .subnav li.#{$gamebox} {
+        background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Game/#{$gamebox}.png');
+    }
+}
+
+@each $gamebox in $fish-list {
+    .subnav li.#{$gamebox} {
+        background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Fish/#{$gamebox}.png');
+    }
+}

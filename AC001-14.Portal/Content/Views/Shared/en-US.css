@@ -1,0 +1,25 @@
+﻿#top-nav > li {
+    text-transform: uppercase;
+}
+
+#account-box.is-login:before {
+    content: 'WELCOME';
+}
+
+#nav > ul > li a {
+    text-transform: uppercase;
+}
+
+#un-lobby ul#sidebar li a {
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+#footer-nav li + li:before {
+    padding: 0 4px;
+    font-size: 12px;
+}
+
+#footer-nav a {
+    font-size: 12px;
+}

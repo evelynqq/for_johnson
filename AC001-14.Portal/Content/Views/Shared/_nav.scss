@@ -1,0 +1,181 @@
+﻿@import "../../../../_Common/Css/GameCode";
+
+#nav {
+    position: absolute;
+    top: 130px;
+    right: 0;
+    left: 0;
+    z-index: 5;
+    min-width: 1140px;
+    font-size: 0;
+    font-family: SimSun;
+    text-align: center;
+    background: #e8e8e8;
+    &.ScrollTop {
+        position: fixed;
+        top: 0;
+    }
+    > ul > li {
+        display: inline-block;
+        width: 94px;
+        vertical-align: top;
+        padding: 8px 0;
+        > a {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            color: #1f1f1f;
+            font-size: 14px;
+            text-align: center;
+            line-height: normal;
+            text-decoration: none;
+            &:before {
+                content: "";
+                display: inline-block;
+                width: 100%;
+                height: 32px;
+                background-repeat: no-repeat;
+                background-position: center top;
+            }
+        }
+        &.home > a:before {
+            background-image: url("../Shared/images/nav/home.png");
+        }
+        &.fish > a:before {
+            background-image: url("../Shared/images/nav/fish.png");
+        }
+        &.game > a:before {
+            background-image: url("../Shared/images/nav/game.png");
+        }
+        &.live > a:before {
+            background-image: url("../Shared/images/nav/live.png");
+        }
+        &.sport > a:before {
+            background-image: url("../Shared/images/nav/sport.png");
+        }
+        &.lottery > a:before {
+            background-image: url("../Shared/images/nav/lottery.png");
+        }
+        &.board > a:before {
+            background-image: url("../Shared/images/nav/board.png");
+            // background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v1/color/Board/#{$gamebox}.png');
+        }
+        &.promotion > a:before {
+            background-image: url("../Shared/images/nav/promotion.png");
+        }
+        &:hover > a,
+        &.active > a {
+            color: #dd0023;
+            &:before {
+                background-position: center bottom;
+            }
+        }
+        &:hover .subnav {
+            display: block;
+        }
+    }
+}
+
+.subnav {
+    display: none;
+    position: absolute;
+    top: 73px;
+    right: 0;
+    left: 0;
+    z-index: 3;
+    font-size: 0;
+    background: rgba(31, 31, 31, 0.9);
+    height: 115px;
+    overflow: hidden;
+    span {
+        &.discount {
+            display: inline-block;
+            width: 177px;
+            height: 120px;
+            vertical-align: top;
+            background: url("../Shared/images/subnav/discount12.png") no-repeat center top;
+        }
+        &.prev,
+        &.next {
+            display: inline-block;
+            width: 22px;
+            height: 22px;
+            margin-top: 47px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        &.prev {
+            margin-left: 10px;
+            background-image: url("../Shared/images/subnav/prev.png");
+        }
+        &.next {
+            background-image: url("../Shared/images/subnav/next.png");
+        }
+    }
+    > div {
+        display: inline-block;
+        vertical-align: top;
+    }
+    .main-cell {
+        display: inline-block;
+        vertical-align: top;
+    }
+    li {
+        display: inline-block;
+        width: 125px;
+        height: 115px;
+        color: #c4c4c4;
+        font-size: 16px;
+        padding-top: 72px;
+        vertical-align: top;
+        background-repeat: no-repeat;
+        background-position: center 10px;
+        background-size: 85% auto;
+        background-position-y: -2px;
+        &:hover {
+            color: #dd0023;
+        }
+    }
+}
+
+@each $gamebox in $game-list {
+    .subnav li[game-box="#{$gamebox}"] {
+        background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v3/nav/Game/#{$gamebox}.png');
+    }
+}
+
+@each $gamebox in $live-list {
+    .subnav li[game-box="#{$gamebox}"] {
+        background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v3/nav/live/#{$gamebox}.png');
+    }
+}
+
+@each $gamebox in $sport-list {
+    .subnav li[game-box="#{$gamebox}"] {
+        background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v3/nav/Sport/#{$gamebox}.png');
+    }
+}
+
+@each $gamebox in $esport-list {
+    .subnav li[game-box="#{$gamebox}"] {
+        background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v3/nav/Esport/#{$gamebox}.png');
+    }
+}
+
+@each $gamebox in $lottery-list {
+    .subnav li[game-box="#{$gamebox}"] {
+        background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v3/nav/Lottery/#{$gamebox}.png');
+    }
+}
+
+@each $gamebox in $board-list {
+    .subnav li[game-box="#{$gamebox}"] {
+        background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v3/nav/Board/#{$gamebox}.png');
+    }
+}
+
+@each $gamebox in $fish-list {
+    .subnav li[game-box="#{$gamebox}"] {
+        background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v3/nav/Fish/#{$gamebox}.png');
+    }
+}

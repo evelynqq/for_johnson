@@ -1,0 +1,125 @@
+﻿body {
+    background: url('../../../../_Common/Content/Views/Shared/images/CountryBlocked/bg.jpg');
+    background-size: cover;
+    color: #343434;
+    text-align: center;
+    font-size: 18px;
+}
+
+.wrap {
+    position: relative;
+    width: 500px;
+    height: 400px;
+    background: rgba(255,255,255,1);
+    margin: 100px auto 0 auto;
+    border-radius: 5px;
+    padding: 10%;
+}
+
+.logo {
+    height: 80px;
+    width: 100%;
+    background: url('../Common/images/logo.png') no-repeat center;
+    background-size: auto 100%;
+    margin: -60px auto 30px auto;
+}
+
+.wrap:before {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: -90px;
+    background: url('../../../../_Common/Content/Views/Shared/images/CountryBlocked/girl.png') no-repeat;
+    background-size: 100% auto;
+    background-position: bottom;
+    width: 45%;
+    height: 1000px;
+    display: block;
+    pointer-events: none;
+}
+
+.button {
+    display: inline-block;
+    width: 48%;
+    height: 40px;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    margin: 0;
+    font-size: 16px;
+    line-height: 40px;
+    text-decoration: none;
+    cursor: pointer;
+    background: -webkit-linear-gradient(20deg,rgb(122, 206, 200),rgb(4, 149, 231));
+    background: -o-linear-gradient(20deg,rgb(122, 206, 200),rgb(4, 149, 231));
+    background: -moz-linear-gradient(20deg,rgb(122, 206, 200),rgb(4, 149, 231));
+    background: linear-gradient(20deg,rgb(122, 206, 200),rgb(4, 149, 231));
+}
+
+    .button:hover {
+        background: -webkit-linear-gradient(-20deg,rgb(122, 206, 200),rgb(4, 149, 231));
+        background: -o-linear-gradient(-20deg,rgb(122, 206, 200),rgb(4, 149, 231));
+        background: -moz-linear-gradient(-20deg,rgb(122, 206, 200),rgb(4, 149, 231));
+        background: linear-gradient(-20deg,rgb(122, 206, 200),rgb(4, 149, 231));
+    }
+
+    .button + .button {
+        margin-left: 2%;
+    }
+
+.error-ip {
+    font-size: 40px;
+    line-height: 40px;
+    margin: 0 0 20px 0;
+}
+
+.content p {
+    line-height: 50px;
+    margin: 50px auto;
+}
+
+@media screen and (max-width: 1300px) {
+    body {
+        background-size: auto 1000px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .wrap {
+        width: 80%;
+        height: auto;
+        padding: 10% 5%;
+    }
+
+    .logo {
+        height: 80px;
+        margin: -30px auto 10px auto;
+    }
+
+    .wrap:before {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .logo {
+        height: 60px;
+        margin: 0 auto 10px auto;
+    }
+
+    .error-ip {
+        font-size: 28px;
+    }
+
+    .content p {
+        font-size: 14px;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+        .button + .button {
+            margin: 10px 0 0 0;
+        }
+}

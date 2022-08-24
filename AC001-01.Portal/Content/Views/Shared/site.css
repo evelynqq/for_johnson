@@ -1,0 +1,1979 @@
+@charset "UTF-8";
+#nav {
+  position: relative;
+  z-index: 1;
+  margin-top: -3px;
+}
+
+#nav > ul {
+  list-style: none;
+  font-size: 0;
+  text-align: center;
+}
+
+#nav > ul > li {
+  position: relative;
+  display: inline-block;
+  width: 11.1%;
+  height: 60px;
+  margin: 0;
+  vertical-align: top;
+  padding-top: 12px;
+  border-right: 1px solid #880503;
+}
+
+#nav > ul > li:last-child {
+  border-right: none;
+}
+
+#nav > ul > li:last-child:after {
+  content: none;
+}
+
+#nav > ul > li:after {
+  content: "";
+  width: 1px;
+  height: 100%;
+  background-color: #2d0000;
+  font-size: 0;
+  zoom: 0;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+#nav > ul > li:hover {
+  background-color: #370000;
+}
+
+#nav > ul > li:hover .subnav {
+  display: block\9;
+  visibility: visible;
+}
+
+#nav > ul > li:hover .subnav li {
+  opacity: 1;
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+  -webkit-transition-delay: 0s;
+       -o-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+#nav > ul > li > a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  color: #ffe6af;
+  font-size: 14px;
+  text-decoration: none;
+  font-family: "Microsoft YaHei";
+}
+
+#nav > ul > li > a > span {
+  display: block;
+  font-size: 12px;
+  color: #999;
+}
+
+#nav > ul > li > a:hover {
+  color: #d9c064;
+}
+
+#nav > ul > li.color > a {
+  color: #f00;
+}
+
+#nav > ul > li.promotion > a {
+  color: #76ee00;
+}
+
+#nav > ul > li.promotion.color > a {
+  color: #e0e;
+}
+
+#nav > ul > li.hot > a:before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  right: 0;
+  display: inline-block;
+  width: 21px;
+  height: 12px;
+  background: url("../Shared/images/nav_hot.gif") no-repeat center top;
+}
+
+.subnav {
+  display: none\9;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 486px;
+  margin-left: -81px;
+  height: 0;
+  z-index: 2;
+  list-style: none;
+  visibility: hidden;
+  -webkit-perspective: 320px;
+          perspective: 320px;
+  -webkit-transition: visibility linear 0.4s;
+  -o-transition: visibility linear 0.4s;
+  transition: visibility linear 0.4s;
+}
+
+.subnav ol {
+  float: left;
+}
+
+.subnav li {
+  position: relative;
+  display: block;
+  width: 162px;
+  height: 42px;
+  padding-left: 70px;
+  color: #d9c064;
+  font-size: 12px;
+  line-height: 40px;
+  text-align: left;
+  background-color: rgba(30, 21, 17, 0.9);
+  background-repeat: no-repeat;
+  background-size: auto 95%;
+  background-position: 6px center;
+  border: 1px solid #990000;
+  opacity: 0;
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+  -webkit-transition: opacity 0.4s, -webkit-transform 0.5s;
+  transition: opacity 0.4s, -webkit-transform 0.5s;
+  -o-transition: opacity 0.4s, transform 0.5s;
+  transition: opacity 0.4s, transform 0.5s;
+  transition: opacity 0.4s, transform 0.5s, -webkit-transform 0.5s;
+}
+
+.subnav li a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding-left: 70px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.subnav li:hover {
+  background-color: #570000;
+}
+
+.subnav li.hot:after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: inline-block;
+  width: 21px;
+  height: 12px;
+  background: url("../Shared/images/nav_hot.gif") no-repeat center center;
+}
+
+/* #region CSS3 过渡效果的延迟 */
+#nav li:hover .subnav li:nth-child(1) {
+  -webkit-transition-delay: 50ms;
+       -o-transition-delay: 50ms;
+          transition-delay: 50ms;
+}
+
+#nav li:hover .subnav li:nth-child(2) {
+  -webkit-transition-delay: 100ms;
+       -o-transition-delay: 100ms;
+          transition-delay: 100ms;
+}
+
+#nav li:hover .subnav li:nth-child(3) {
+  -webkit-transition-delay: 150ms;
+       -o-transition-delay: 150ms;
+          transition-delay: 150ms;
+}
+
+#nav li:hover .subnav li:nth-child(4) {
+  -webkit-transition-delay: 200ms;
+       -o-transition-delay: 200ms;
+          transition-delay: 200ms;
+}
+
+#nav li:hover .subnav li:nth-child(5) {
+  -webkit-transition-delay: 250ms;
+       -o-transition-delay: 250ms;
+          transition-delay: 250ms;
+}
+
+#nav li:hover .subnav li:nth-child(6) {
+  -webkit-transition-delay: 300ms;
+       -o-transition-delay: 300ms;
+          transition-delay: 300ms;
+}
+
+#nav li:hover .subnav li:nth-child(7) {
+  -webkit-transition-delay: 350ms;
+       -o-transition-delay: 350ms;
+          transition-delay: 350ms;
+}
+
+#nav li:hover .subnav li:nth-child(8) {
+  -webkit-transition-delay: 400ms;
+       -o-transition-delay: 400ms;
+          transition-delay: 400ms;
+}
+
+#nav li:hover .subnav li:nth-child(9) {
+  -webkit-transition-delay: 450ms;
+       -o-transition-delay: 450ms;
+          transition-delay: 450ms;
+}
+
+#nav li:hover .subnav li:nth-child(10) {
+  -webkit-transition-delay: 500ms;
+       -o-transition-delay: 500ms;
+          transition-delay: 500ms;
+}
+
+#nav li:hover .subnav li:nth-child(11) {
+  -webkit-transition-delay: 550ms;
+       -o-transition-delay: 550ms;
+          transition-delay: 550ms;
+}
+
+#nav li:hover .subnav li:nth-child(12) {
+  -webkit-transition-delay: 600ms;
+       -o-transition-delay: 600ms;
+          transition-delay: 600ms;
+}
+
+#nav li:hover .subnav li:nth-child(13) {
+  -webkit-transition-delay: 650ms;
+       -o-transition-delay: 650ms;
+          transition-delay: 650ms;
+}
+
+#nav li:hover .subnav li:nth-child(14) {
+  -webkit-transition-delay: 700ms;
+       -o-transition-delay: 700ms;
+          transition-delay: 700ms;
+}
+
+#nav li:hover .subnav li:nth-child(15) {
+  -webkit-transition-delay: 750ms;
+       -o-transition-delay: 750ms;
+          transition-delay: 750ms;
+}
+
+#nav li:hover .subnav li:nth-child(16) {
+  -webkit-transition-delay: 800ms;
+       -o-transition-delay: 800ms;
+          transition-delay: 800ms;
+}
+
+#nav li:hover .subnav li:nth-child(17) {
+  -webkit-transition-delay: 850ms;
+       -o-transition-delay: 850ms;
+          transition-delay: 850ms;
+}
+
+#nav li:hover .subnav li:nth-child(18) {
+  -webkit-transition-delay: 900ms;
+       -o-transition-delay: 900ms;
+          transition-delay: 900ms;
+}
+
+#nav li:hover .subnav li:nth-child(19) {
+  -webkit-transition-delay: 950ms;
+       -o-transition-delay: 950ms;
+          transition-delay: 950ms;
+}
+
+#nav li:hover .subnav li:nth-child(20) {
+  -webkit-transition-delay: 1000ms;
+       -o-transition-delay: 1000ms;
+          transition-delay: 1000ms;
+}
+
+/* #endregion CSS3 过渡效果的延迟 */
+.subnav li.more {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Game/more.png");
+}
+
+.subnav li.AgHtml {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Game/AgHtml.png");
+}
+
+.subnav li.BbinaSlot {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Game/BbinaSlot.png");
+}
+
+.subnav li.Cq9Html {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Game/Cq9Html.png");
+}
+
+.subnav li.FsHtml {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Game/FsHtml.png");
+}
+
+.subnav li.GaHtml {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Game/GaHtml.png");
+}
+
+.subnav li.GnsHtml {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Game/GnsHtml.png");
+}
+
+.subnav li.GpiHtml {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Game/GpiHtml.png");
+}
+
+.subnav li.GpiFlash {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Game/GpiFlash.png");
+}
+
+.subnav li.HabaHtml {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Game/HabaHtml.png");
+}
+
+.subnav li.IsbHtml {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Game/IsbHtml.png");
+}
+
+.subnav li.JdbHtml {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Game/JdbHtml.png");
+}
+
+.subnav li.LgHtml {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Game/LgHtml.png");
+}
+
+.subnav li.MgaHtml {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Game/MgaHtml.png");
+}
+
+.subnav li.MgaFlash {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Game/MgaFlash.png");
+}
+
+.subnav li.MwHtml {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Game/MwHtml.png");
+}
+
+.subnav li.MwSlot {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Game/MwSlot.png");
+}
+
+.subnav li.NeHtml {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Game/NeHtml.png");
+}
+
+.subnav li.Ne2Slot {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Game/Ne2Slot.png");
+}
+
+.subnav li.PgHtml {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Game/PgHtml.png");
+}
+
+.subnav li.PngHtml {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Game/PngHtml.png");
+}
+
+.subnav li.PrgHtml {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Game/PrgHtml.png");
+}
+
+.subnav li.PrgFlash {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Game/PrgFlash.png");
+}
+
+.subnav li.PtaHtml {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Game/PtaHtml.png");
+}
+
+.subnav li.PtaFlash {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Game/PtaFlash.png");
+}
+
+.subnav li.PtbSlot {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Game/PtbSlot.png");
+}
+
+.subnav li.PtsHtml {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Game/PtsHtml.png");
+}
+
+.subnav li.SgHtml {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Game/SgHtml.png");
+}
+
+.subnav li.SgFlash {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Game/SgFlash.png");
+}
+
+.subnav li.RtHtml {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Game/RtHtml.png");
+}
+
+.subnav li.TpgHtml {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Game/TpgHtml.png");
+}
+
+.subnav li.AeSlot {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Game/AeSlot.png");
+}
+
+.subnav li.JpSlot {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Game/JpSlot.png");
+}
+
+.subnav li.RtgSlot {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Game/RtgSlot.png");
+}
+
+.subnav li.QtSlot {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Game/QtSlot.png");
+}
+
+.subnav li.PsSlot {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Game/PsSlot.png");
+}
+
+.subnav li.Pg1Slot {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Game/Pg1Slot.png");
+}
+
+.subnav li.GanSlot {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Game/GanSlot.png");
+}
+
+.subnav li.HbSlot {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Game/HbSlot.png");
+}
+
+.subnav li.BgSlot {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Game/BgSlot.png");
+}
+
+.subnav li.VrSlot {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Game/VrSlot.png");
+}
+
+.subnav li.more {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Board/more.png");
+}
+
+.subnav li.City761Board {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Board/City761Board.png");
+}
+
+.subnav li.JdbBoard {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Board/JdbBoard.png");
+}
+
+.subnav li.KgHtml {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Board/KgHtml.png");
+}
+
+.subnav li.LegBoard {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Board/LegBoard.png");
+}
+
+.subnav li.JsBoard {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Board/JsBoard.png");
+}
+
+.subnav li.VgBoard {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Board/VgBoard.png");
+}
+
+.subnav li.NwBoard {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Board/NwBoard.png");
+}
+
+.subnav li.FgBoard {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Board/FgBoard.png");
+}
+
+.subnav li.KyBoard {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Board/KyBoard.png");
+}
+
+.subnav li.LcBoard {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Board/LcBoard.png");
+}
+
+.subnav li.T365Board {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Board/T365Board.png");
+}
+
+.subnav li.YgBoard {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Board/YgBoard.png");
+}
+
+.subnav li.AsBoard {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Board/AsBoard.png");
+}
+
+.subnav li.TyBoard {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Board/TyBoard.png");
+}
+
+.subnav li.Cq9Board {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Board/Cq9Board.png");
+}
+
+.subnav li.more {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/live/more.png");
+}
+
+.subnav li.AllBetReal {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/live/AllBetReal.png");
+}
+
+.subnav li.AgBr {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/live/AgBr.png");
+}
+
+.subnav li.BbinaLive {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/live/BbinaLive.png");
+}
+
+.subnav li.BgReal {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/live/BgReal.png");
+}
+
+.subnav li.EBetReal {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/live/EBetReal.png");
+}
+
+.subnav li.EvoReal {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/live/EvoReal.png");
+}
+
+.subnav li.GdReal {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/live/GdReal.png");
+}
+
+.subnav li.GpiLive {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/live/GpiLive.png");
+}
+
+.subnav li.HgaReal {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/live/HgaReal.png");
+}
+
+.subnav li.OgaReal {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/live/OgaReal.png");
+}
+
+.subnav li.PtaReal {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/live/PtaReal.png");
+}
+
+.subnav li.PtaLive {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/live/PtaLive.png");
+}
+
+.subnav li.PtbReal {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/live/PtbReal.png");
+}
+
+.subnav li.MgaReal {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/live/MgaReal.png");
+}
+
+.subnav li.SaReal {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/live/SaReal.png");
+}
+
+.subnav li.SbLive {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/live/SbLive.png");
+}
+
+.subnav li.SunbetReal {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/live/SunbetReal.png");
+}
+
+.subnav li.WmReal {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/live/WmReal.png");
+}
+
+.subnav li.RyReal {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/live/RyReal.png");
+}
+
+.subnav li.Ry2Real {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/live/Ry2Real.png");
+}
+
+.subnav li.more {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Sport/more.png");
+}
+
+.subnav li.SingSport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Sport/SingSport.png");
+}
+
+.subnav li.Sing2Sport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Sport/Sing2Sport.png");
+}
+
+.subnav li.AgSport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Sport/AgSport.png");
+}
+
+.subnav li.BbinaSport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Sport/BbinaSport.png");
+}
+
+.subnav li.CmdSport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Sport/CmdSport.png");
+}
+
+.subnav li.IboSport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Sport/IboSport.png");
+}
+
+.subnav li.HLSport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Sport/HLSport.png");
+}
+
+.subnav li.ImaSport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Sport/ImaSport.png");
+}
+
+.subnav li.M8Sport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Sport/M8Sport.png");
+}
+
+.subnav li.SabaaSport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Sport/SabaaSport.png");
+}
+
+.subnav li.SababSport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Sport/SababSport.png");
+}
+
+.subnav li.SV388Sport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Sport/SV388Sport.png");
+}
+
+.subnav li.HRBSport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Sport/HRBSport.png");
+}
+
+.subnav li.ZfbSport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Sport/ZfbSport.png");
+}
+
+.subnav li.E88Sport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Sport/E88Sport.png");
+}
+
+.subnav li.GbSport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Sport/GbSport.png");
+}
+
+.subnav li.GbsSport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Sport/GbsSport.png");
+}
+
+.subnav li.QtSport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Sport/QtSport.png");
+}
+
+.subnav li.BtiSport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Sport/BtiSport.png");
+}
+
+.subnav li.Cq9Sport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Sport/Cq9Sport.png");
+}
+
+.subnav li.more {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Esport/more.png");
+}
+
+.subnav li.EsbEsport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Esport/EsbEsport.png");
+}
+
+.subnav li.Esb1Esport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Esport/Esb1Esport.png");
+}
+
+.subnav li.SabaESport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Esport/SabaESport.png");
+}
+
+.subnav li.HcEsport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Esport/HcEsport.png");
+}
+
+.subnav li.CmdEsport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Esport/CmdEsport.png");
+}
+
+.subnav li.SabaaEsport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Esport/SabaaEsport.png");
+}
+
+.subnav li.E88Esport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Esport/E88Esport.png");
+}
+
+.subnav li.GbEsport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Esport/GbEsport.png");
+}
+
+.subnav li.GbsEsport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Esport/GbsEsport.png");
+}
+
+.subnav li.LeEsport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Esport/LeEsport.png");
+}
+
+.subnav li.AviaEsport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Esport/AviaEsport.png");
+}
+
+.subnav li.Cq9Esport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Esport/Cq9Esport.png");
+}
+
+.subnav li.TfEsport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Esport/TfEsport.png");
+}
+
+.subnav li.more {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Lottery/more.png");
+}
+
+.subnav li.BbinaLottery {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Lottery/BbinaLottery.png");
+}
+
+.subnav li.IgLottery {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Lottery/IgLottery.png");
+}
+
+.subnav li.IgLotto {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Lottery/IgLotto.png");
+}
+
+.subnav li.IgaLottery {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Lottery/IgaLottery.png");
+}
+
+.subnav li.IgaLotto {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Lottery/IgaLotto.png");
+}
+
+.subnav li.LxLottery {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Lottery/LxLottery.png");
+}
+
+.subnav li.VrLottery {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Lottery/VrLottery.png");
+}
+
+.subnav li.AplLottery {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Lottery/AplLottery.png");
+}
+
+.subnav li.G1Lottery {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Lottery/G1Lottery.png");
+}
+
+.subnav li.G1aLottery {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Lottery/G1aLottery.png");
+}
+
+.subnav li.GbLottery {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Lottery/GbLottery.png");
+}
+
+.subnav li.GblLottery {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Lottery/GblLottery.png");
+}
+
+.subnav li.SgwLottery {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Lottery/SgwLottery.png");
+}
+
+.subnav li.BgLottery {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Lottery/BgLottery.png");
+}
+
+.subnav li.Ig1Lottery {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Lottery/Ig1Lottery.png");
+}
+
+.subnav li.Ig1Lotto {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Lottery/Ig1Lotto.png");
+}
+
+.subnav li.more {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Fish/more.png");
+}
+
+.subnav li.City761Fish {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Fish/City761Fish.png");
+}
+
+.subnav li.AgHsr {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Fish/AgHsr.png");
+}
+
+.subnav li.BbFish30 {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Fish/BbFish30.png");
+}
+
+.subnav li.BbFish38 {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Fish/BbFish38.png");
+}
+
+.subnav li.Cq9Fish {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Fish/Cq9Fish.png");
+}
+
+.subnav li.FsFishBeauty {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Fish/FsFishBeauty.png");
+}
+
+.subnav li.FsFishThunder {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Fish/FsFishThunder.png");
+}
+
+.subnav li.FsFishBird {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Fish/FsFishBird.png");
+}
+
+.subnav li.FsFishHappy {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Fish/FsFishHappy.png");
+}
+
+.subnav li.FsFishEveryDay {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Fish/FsFishEveryDay.png");
+}
+
+.subnav li.GnsFish {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Fish/GnsFish.png");
+}
+
+.subnav li.JdbFishMoney {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Fish/JdbFishMoney.png");
+}
+
+.subnav li.JdbFish {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Fish/JdbFish.png");
+}
+
+.subnav li.Jdb2Fish {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Fish/Jdb2Fish.png");
+}
+
+.subnav li.MwFish {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Fish/MwFish.png");
+}
+
+.subnav li.PgFish {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Fish/PgFish.png");
+}
+
+.subnav li.Pg2Fish {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Fish/Pg2Fish.png");
+}
+
+.subnav li.PtFish {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Fish/PtFish.png");
+}
+
+.subnav li.PtsFish {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Fish/PtsFish.png");
+}
+
+.subnav li.UgFish {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Fish/UgFish.png");
+}
+
+.subnav li.TpgFish {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Fish/TpgFish.png");
+}
+
+.subnav li.QtFish {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Fish/QtFish.png");
+}
+
+.subnav li.Qt2Fish {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Fish/Qt2Fish.png");
+}
+
+.subnav li.RtgFish {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Fish/RtgFish.png");
+}
+
+.subnav li.PsFish {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Fish/PsFish.png");
+}
+
+.subnav li.Tpg2Fish {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Fish/Tpg2Fish.png");
+}
+
+.subnav li.Tpg3Fish {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Fish/Tpg3Fish.png");
+}
+
+.subnav li.BgFish {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Fish/BgFish.png");
+}
+
+/* promotion */
+.subnav.promotion {
+  width: 162px;
+}
+
+.subnav.promotion li {
+  padding: 0;
+}
+
+.subnav li.jbp {
+  background-size: 30% auto;
+  background-image: url("../Shared/images/subnav/promotion/jbp.png");
+}
+
+.subnav li.redenvelope {
+  background-size: 30% auto;
+  background-image: url("../Shared/images/subnav/promotion/redenvelope.png");
+}
+
+.subnav li.vip {
+  background-size: 30% auto;
+  background-image: url("../Shared/images/subnav/promotion/vip.png");
+}
+
+.subnav li.download {
+  background-size: 30% auto;
+  background-image: url("../Shared/images/subnav/promotion/download.png");
+}
+
+.subnav li.promo {
+  background-size: 30% auto;
+  background-position: 9px center;
+  background-image: url("../Shared/images/subnav/promotion/promo.png");
+}
+
+/* #region base */
+body {
+  font-family: 微软雅黑, Microsoft YaHei, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.428571429;
+  padding: 0px;
+  margin: 0px;
+}
+
+body.layout {
+  min-width: 1300px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+iframe {
+  border: none;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul li,
+ol li {
+  list-style: none;
+}
+
+[ng-click] {
+  cursor: pointer;
+}
+
+.wrapper {
+  position: relative;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+/* #endregion base */
+/* #region header */
+#header {
+  position: relative;
+  /* background: url('../Shared/images/header.jpg') repeat-x; */
+  background-color: #b60703;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#b60703), color-stop(#980603), to(#6d0403));
+  background-image: -o-linear-gradient(top, #b60703, #980603, #6d0403);
+  background-image: linear-gradient(top, #b60703, #980603, #6d0403);
+  z-index: 2;
+}
+
+#header:before {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 99px;
+  width: 100%;
+  height: 1px;
+  background: #b60703;
+}
+
+#header:after {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 98px;
+  width: 100%;
+  height: 1px;
+  background: #2d0000;
+}
+
+#top-menu {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0;
+  z-index: 99;
+}
+
+#top-menu li {
+  display: inline-block;
+  padding: 0 7px;
+  color: #e4c698;
+  font-size: 12px;
+  line-height: 12px;
+  vertical-align: top;
+  text-transform: uppercase;
+}
+
+#top-menu li:first-child {
+  padding-left: 0;
+}
+
+#top-menu li + li {
+  border-left: 1px solid #840503;
+}
+
+#top-menu li:hover {
+  color: #d6ac6a;
+}
+
+#top-menu li a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#top-menu li[select-language] {
+  position: relative;
+  height: 25px;
+  margin-top: -5px;
+  padding: 5px 25px 5px 5px;
+  overflow: hidden;
+  border: 1px solid #b60703;
+  background: #570000 url("../Shared/images/lang_pic.png") 95% 9px no-repeat;
+}
+
+#top-menu li[select-language]:before {
+  position: absolute;
+  content: '';
+  display: block;
+  top: 0;
+  right: 22px;
+  width: 1px;
+  height: 25px;
+  background: #b60703;
+}
+
+#top-menu li[select-language]:hover {
+  height: auto;
+  padding-bottom: 0;
+  color: #fff;
+}
+
+#top-menu li[select-language] + li {
+  border: none;
+}
+
+#top-menu li[select-language] span {
+  display: block;
+  margin-bottom: 5px;
+  padding-left: 25px;
+  vertical-align: middle;
+  background-image: url("../Shared/images/lang02.png");
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+#top-menu li[select-language] span + span {
+  margin-top: 10px;
+}
+
+#top-menu li[select-language] span[data-language='zh-TW'] {
+  background-image: url("../Shared/images/lang01.png");
+}
+
+#top-menu li[select-language] span[data-language='en-US'] {
+  background-image: url("../Shared/images/lang03.png");
+}
+
+#top-menu li[select-language] span[data-language='th'] {
+  display: none;
+}
+
+#top-menu li[select-language] span:hover {
+  color: #ff9;
+}
+
+/* #endregion header */
+/* #region logo */
+#logo-bg {
+  position: relative;
+  display: inline-block;
+  width: 250px;
+  height: 98px;
+  background: url("../Shared/images/logo.png") no-repeat;
+  background-size: 100% auto;
+  background-position: left center;
+}
+
+#logo-bg iframe {
+  width: 550px;
+  height: 98px;
+  display: none;
+}
+
+#logo-bg > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+/*#endregion logo */
+/* #region loginbar 顯示「登入帳號」區塊 */
+#account-box {
+  position: absolute;
+  top: 33px;
+  right: 0;
+}
+
+#account-box.is-login {
+  text-align: right;
+}
+
+#account-box > form {
+  position: relative;
+  display: inline-block;
+  width: 235px;
+  font-size: 0;
+}
+
+#account-box > form input {
+  width: 127px;
+  height: 27px;
+  margin: 2px;
+  padding: 5px;
+  color: #bababa;
+  font-size: 12px;
+  font-family: SimSun;
+  background-color: #570000;
+  border: 1px solid #b60703;
+  border-radius: 3px;
+}
+
+#account-box > form input[data-checkcode-retriever='checkCode'] {
+  width: 100px;
+  padding-left: 5px;
+  background-image: none;
+}
+
+#account-box > form input::-webkit-input-placeholder {
+  color: #bababa;
+}
+
+#account-box > form input::-moz-placeholder {
+  color: #bababa;
+}
+
+#account-box > form input:-ms-input-placeholder {
+  color: #bababa;
+}
+
+#account-box > form input.placeholder {
+  color: #bababa;
+}
+
+#account-box > form button {
+  margin: 2px;
+  font-size: 12px;
+  vertical-align: top;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+#account-box > form .forget-btn {
+  position: absolute;
+  top: 36px;
+  left: 106px;
+  width: 17px;
+  height: 17px;
+  text-indent: -9999px;
+  border: none;
+  background: url("../Shared/images/forget_btn.png") center top;
+}
+
+#account-box > form .login-btn {
+  width: 100px;
+  height: 27px;
+  color: #ffeccc;
+  background-color: #830402;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e00500), color-stop(#4b0303), to(#e00500));
+  background-image: -o-linear-gradient(top, #e00500, #4b0303, #e00500);
+  background-image: linear-gradient(top, #e00500, #4b0303, #e00500);
+  border: none;
+  border: 1px solid #e00500;
+  border-radius: 5px;
+}
+
+#account-box > form .login-btn:hover {
+  opacity: 0.8;
+}
+
+#account-box > .join-btn {
+  width: 121px;
+  height: 54px;
+  margin-top: 4px;
+  vertical-align: top;
+  font-size: 20px;
+  background-color: #e99f18;
+  color: #fffbe2;
+  border: 1px solid #f8b600;
+  border-radius: 5px;
+  text-shadow: 0 -1px 0 #000000;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+#account-box > .join-btn:hover {
+  opacity: 0.8;
+}
+
+#check-code-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+#captcha {
+  position: absolute;
+  top: 3px;
+  right: 2px;
+  width: 52%;
+  height: 82%;
+}
+
+#agree {
+  display: inline-block;
+  position: absolute;
+  top: 95%;
+  right: 0;
+  padding: 2px 5px;
+  font-size: 13px;
+  color: #fff;
+  z-index: 99;
+  background: #570000;
+}
+
+#agree a {
+  color: #ffc803;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* #endregion loginbar 顯示「登入帳號」區塊 */
+/* #region account-info 登入後, 顯示「帳號資訊」區塊 */
+ul#account-info {
+  position: relative;
+  display: inline-block;
+  margin: 7px 0;
+  list-style: none;
+}
+
+ul#account-info > li {
+  display: inline-block;
+  margin-left: 20px;
+  color: #fff;
+  font-size: 12px;
+  font-family: SimSun;
+  vertical-align: top;
+}
+
+ul#account-info > li > span.account {
+  display: inline-block;
+  max-width: 6em;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: top;
+  overflow: hidden;
+}
+
+ul#account-info > li a {
+  cursor: pointer;
+}
+
+ul#account-info > li a:hover {
+  color: #ff9;
+}
+
+/* #endregion account-info 登入後, 顯示「帳號資訊」區塊 */
+/* #region account-nav 登入後的子導覽列 (帳號相關操作) */
+ul#account-nav {
+  list-style: none;
+  font-size: 0;
+}
+
+ul#account-nav > li {
+  display: inline-block;
+  padding: 0 8px;
+  color: #fff;
+  font-size: 12px;
+  font-family: SimSun;
+  line-height: 12px;
+  text-align: center;
+}
+
+ul#account-nav > li + li {
+  border-left: 1px solid #fff;
+}
+
+ul#account-nav > li:last-child {
+  padding-right: 0;
+}
+
+ul#account-nav > li > a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul#account-nav > li > a:hover,
+ul#account-info li#logout a:hover {
+  color: #ff9;
+}
+
+ul#account-info li#logout a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* #endregion 登入後的子導覽列 (帳號相關操作) */
+/* #region header-bottom */
+#header-bottom {
+  height: 36px;
+  line-height: 36px;
+  color: #828282;
+  font-size: 12px;
+  font-family: SimSun;
+  background: rgba(0, 0, 0, 0.8);
+  position: relative;
+  z-index: 1;
+  text-shadow: none;
+}
+
+#header-bottom #info-menu {
+  display: inline-block;
+  font-size: 0;
+  list-style: none;
+  vertical-align: top;
+}
+
+#header-bottom #info-menu > li {
+  position: relative;
+  display: inline-block;
+  font-size: 12px;
+  vertical-align: top;
+}
+
+#header-bottom #info-menu > li.promo {
+  /* color: #fff; */
+}
+
+#header-bottom #info-menu > li.color {
+  /* color: #f00; */
+}
+
+#header-bottom #info-menu > li:hover {
+  /* color: #fff; */
+}
+
+#header-bottom #info-menu > li.vip {
+  /* color: #f9f900; */
+}
+
+#header-bottom #info-menu > li a {
+  padding: 0 8px;
+  color: inherit;
+  line-height: 12px;
+  text-decoration: none;
+}
+
+#header-bottom #info-menu > li + li a {
+  border-left: 1px solid #828282;
+}
+
+#header-bottom #info-menu > li.warn a {
+  font-weight: bold;
+}
+
+#header-bottom #info-menu > li.warn:before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 17px;
+  background: url("../Shared/images/warn.png") no-repeat center top;
+  vertical-align: middle;
+}
+
+#header-bottom #info-menu > li.warn:hover:before {
+  background-position: center bottom;
+}
+
+/* #endregion header-bottom */
+/* #region news 跑馬燈 */
+#news {
+  position: relative;
+  display: inline-block;
+  width: 770px;
+  vertical-align: top;
+}
+
+#news:before {
+  content: '公告：';
+  float: left;
+  font-weight: bold;
+}
+
+#hot-news {
+  width: 720px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#hot-news li {
+  display: inline-block;
+  text-decoration: none;
+}
+
+#hot-news li:hover {
+  text-decoration: underline;
+}
+
+/* #endregion 跑馬燈 */
+/* #region banner*/
+#banner {
+  position: relative;
+  height: 300px;
+  background-image: url("../Shared/images/banner.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-color: #111;
+  margin-top: -36px;
+}
+
+/* #endregion banner */
+/* #region content 內頁 */
+#content {
+  background-color: #000;
+  background-image: url("../Shared/images/bg.jpg");
+  background-position: center top;
+  background-repeat: repeat-x;
+}
+
+/* #endregion content 內頁 */
+/* #region footer */
+#footer {
+  color: #6b6260;
+  font-size: 12px;
+  border-top: 1px solid #3d3430;
+  background: #1d1612;
+}
+
+#footer-top {
+  height: 206px;
+  color: #f1d9a6;
+  font-family: SimSun;
+  font-size: 15px;
+  font-weight: bold;
+  background: url("../Shared/images/footer_01.jpg") center no-repeat;
+}
+
+#footer-top #num01,
+#footer-top #num02,
+#footer-top #num03 {
+  position: absolute;
+}
+
+#footer-top #num01 {
+  top: 34px;
+  left: 244px;
+}
+
+#footer-top #num02 {
+  top: 66px;
+  left: 342px;
+}
+
+#footer-top #num03 {
+  top: 126px;
+  left: 295px;
+}
+
+#footer-top #num01:after,
+#footer-top #num02:after {
+  content: ' 人';
+  display: inline;
+  color: #e5e5e5;
+  font-size: 12px;
+  font-family: SimSun;
+  font-weight: normal;
+}
+
+#footer-top #num03:after {
+  content: ' 元';
+  display: inline;
+  color: #e5e5e5;
+  font-size: 12px;
+  font-family: SimSun;
+  font-weight: normal;
+}
+
+#footer-top #footer-chat {
+  position: absolute;
+  top: 130px;
+  right: 19px;
+  width: 207px;
+  height: 40px;
+  background: url("../Shared/images/service_btn02.png") center top no-repeat;
+}
+
+#footer-top #footer-chat:hover {
+  background: url("../Shared/images/service_btn02.png") center bottom no-repeat;
+}
+
+#footer-mid {
+  padding: 40px 0 70px;
+  border-top: 1px solid #4c4c4c;
+}
+
+#footer-mid .pic {
+  width: 486px;
+  height: 40px;
+  background: url("../Shared/images/footer_02.png") center top no-repeat;
+}
+
+#footer-nav {
+  margin-bottom: 20px;
+  list-style: none;
+  font-size: 0;
+}
+
+#footer-nav li {
+  display: inline-block;
+  padding: 0 10px;
+  font-size: 12px;
+  line-height: 12px;
+  vertical-align: top;
+  text-transform: uppercase;
+}
+
+#footer-nav li:first-child {
+  padding-left: 0;
+}
+
+#footer-nav li + li {
+  border-left: 1px solid #4c4c4c;
+}
+
+#footer-nav li:hover {
+  color: #fffe10;
+}
+
+#footer-nav li a {
+  text-decoration: none;
+  color: #c19e79;
+}
+
+#footer-info {
+  position: absolute;
+  top: 0;
+  right: 0;
+  list-style: none;
+}
+
+#footer-info li {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+#footer-bottom {
+  padding: 120px 0 5px;
+  text-align: center;
+  border-top: 1px solid #4c4c4c;
+  background: url("../Shared/images/footer_03.png") center 20px no-repeat;
+}
+
+/* #endregion footer */
+/* #region service 更多服務 */
+.services {
+  position: fixed;
+  top: 176px;
+  z-index: 20;
+}
+
+.services > ul {
+  width: 145px;
+}
+
+.services > ul > li {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+}
+
+.services > ul > li > a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.services .close {
+  height: 25px;
+  cursor: pointer;
+}
+
+.service-left {
+  left: 0;
+  background: url("../Shared/images/service/left.1.gif") no-repeat center top;
+}
+
+.service-left .fish {
+  height: 139px;
+}
+
+.service-left .slot {
+  height: 68px;
+}
+
+.service-left .mobile {
+  height: 92px;
+}
+
+.service-left .qr {
+  height: 108px;
+}
+
+.service-right {
+  right: 0;
+  background: url("../Shared/images/service/right.1.gif") no-repeat center top;
+}
+
+.service-right .chat {
+  height: 112px;
+}
+
+.service-right .qq {
+  height: 66px;
+}
+
+.service-right .email {
+  height: 197px;
+}
+
+.service-right .register {
+  height: 32px;
+}
+
+#service-left-bottom {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 200px;
+  height: 200px;
+  z-index: 5;
+}
+
+#service-left-bottom a {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: no-repeat left bottom;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+  filter: alpha(opacity=0) \9;
+  opacity: 0;
+  -webkit-transition: opacity 500ms ease-in-out;
+  -o-transition: opacity 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
+  z-index: 1;
+}
+
+#service-left-bottom a.show {
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)';
+  filter: alpha(opacity=100) \9;
+  opacity: 1;
+  z-index: 2;
+}
+
+#service-left-bottom a.http-redenvelope {
+  background-image: url("../Shared/images/service/redenvelope.gif");
+}
+
+#service-left-bottom a.prom {
+  background-image: url("../Shared/images/service/lb_prom.gif");
+}
+
+#service-left-bottom a.prom2 {
+  background-image: url("../Shared/images/service/lb_prom2.gif");
+}
+
+#service-left-bottom span {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+}
+
+#service-left-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 129px;
+  height: 153px;
+  background: url("../Shared/images/service/promotion.png") no-repeat left top;
+  z-index: 5;
+}
+
+#service-left-top:hover {
+  background-image: url("../Shared/images/service/promotion_h.png");
+}
+
+#service-left-top a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+/* #endregion service 更多服務 */
+/* #region mailbox 站内信 不同版请由此修改 */
+#mailbox {
+  position: relative;
+  top: -5px;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  vertical-align: top;
+  text-decoration: none;
+  background: url("../../../../_Common/Content/Views/Shared/images/m_icon.png") no-repeat;
+}
+
+#mailbox > span,
+#mailbox > span:hover {
+  position: absolute;
+  left: 70%;
+  bottom: 60%;
+  min-width: 16px;
+  padding: 0 2px;
+  height: 16px;
+  color: #b20703;
+  font-size: 12px;
+  text-align: center;
+  line-height: 16px;
+  border-radius: 16px;
+  background: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* #endregion mailbox 站内信 不同版请由此修改 */
+/* #region 彈跳視窗跑馬燈資訊內容 */
+#marquee-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  display: none;
+}
+
+#marquee-wrapper.show {
+  display: block;
+  z-index: 1000;
+  background-image: url("../../../../_Common/Content/Views/Shared/images/transparent-black.png");
+}
+
+#marquee {
+  width: 600px;
+  max-height: 500px;
+  margin: 30px auto 0 auto;
+  background-color: #fff;
+  background-image: url("../../../../_Common/Content/Views/Shared/images/table_background.jpg");
+  border-radius: 5px;
+  cursor: default;
+  -webkit-transition: margin-top ease-in 300ms;
+  -o-transition: margin-top ease-in 300ms;
+  transition: margin-top ease-in 300ms;
+}
+
+#marquee > header {
+  text-align: center;
+  background-color: #e9e9e9;
+  border-bottom: 1px solid #ccc;
+  border-radius: 5px 5px 0 0;
+}
+
+#marquee > header > h2 {
+  margin: 0;
+  color: #0080e3;
+  font-size: 21px;
+  line-height: 60px;
+}
+
+ul#newsBags {
+  margin: 0;
+  padding: 10px 50px;
+  max-height: 380px;
+  overflow: auto;
+}
+
+ul#newsBags > li {
+  color: #454545;
+  font-size: 13px;
+  line-height: 27px;
+  list-style: disc;
+  white-space: pre-line;
+  border-bottom: 1px dashed #999;
+}
+
+#marquee > footer {
+  text-align: center;
+  line-height: 80px;
+  background-color: #e9e9e9;
+  background-image: -webkit-radial-gradient(center top, ellipse farthest-side, rgba(0, 0, 0, 0.3), transparent);
+  background-size: 100% 8px;
+  background-repeat: no-repeat;
+  border-top: 1px solid #ccc;
+  border-radius: 0 0 5px 5px;
+}
+
+#marquee > footer > span {
+  display: inline-block;
+  width: 119px;
+  font-size: 15px;
+  font-weight: bolder;
+  line-height: 45.5px;
+  background-image: url("../../../../_Common/Content/Views/Shared/images/sent_bn.png");
+  cursor: pointer;
+}
+
+#marquee > footer > span:hover {
+  background-position: 0 -45.5px;
+}
+
+/* #endregion 彈跳視窗跑馬燈資訊內容 */
+/* #region 弹跳出来的notice Dialog */
+/* title 文字背景顏色此修改 */
+.ui-widget-header {
+  min-height: 30px;
+  line-height: 30px;
+}
+
+#ad-dialog {
+  display: none;
+  padding: 0;
+}
+
+#ad-dialog img {
+  width: 100%;
+  height: auto !important;
+}
+
+#ad-dialog .dialog-footer {
+  height: 30px;
+  padding: 0 3px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 25px;
+  border-top: 1px solid #000;
+}
+
+.ui-dialog {
+  position: fixed;
+  z-index: 999;
+}
+
+.ui-dialog .ui-dialog-title {
+  font-size: 13px;
+  line-height: 15px;
+}
+
+.ui-dialog .ui-dialog-buttonpane {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only {
+  font-size: 12px;
+}
+
+.ui-dialog .ui-dialog-buttonpane button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 3px 6px;
+  background: #ffd800;
+}
+
+/* #endregion 弹跳出来的notice Dialog */
+/*#region loginToGame 游戏平台登入口*/
+#logingame-body {
+  background-color: #14303e;
+}
+
+/*#endregion */
+/* 針對站長流量統計強制隱藏 */
+#lim_mini {
+  display: none !important;
+}
+/*# sourceMappingURL=site.css.map */

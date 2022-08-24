@@ -1,0 +1,1145 @@
+﻿/* #region base */
+body {
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+}
+
+    body.layout {
+        min-width: 1100px;
+    }
+
+* {
+    box-sizing: border-box;
+}
+
+iframe {
+    border: none;
+}
+
+[ng-click] {
+    cursor: pointer;
+}
+
+ol, ul {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+.wrapper {
+    position: relative;
+    width: 1000px;
+    margin: 0 auto;
+}
+/* #endregion base */
+
+/* #region header */
+#header {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    min-width: 1100px;
+    height: 140px;
+    background: url('../Shared/images/top_bg.png') repeat-x;
+}
+
+    #header > .wrapper {
+        height: 100%;
+    }
+/* #endregion header */
+
+/* #region top-nav */
+#top-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+    #top-nav:before,#top-nav:after{
+        content: "";
+        position: absolute;
+        top: 1px;
+        left: -20px;
+        display: inline-block;
+        height: 32px;
+        width: 12px;
+        background: url("../Shared/images/head-control-divider-1.png") no-repeat;
+        background-size: auto 100%;
+
+    }
+    #top-nav:after{
+        left: initial;
+        right: -20px;
+    }
+
+    #top-nav > li {
+        display: inline-block;
+        height: 35px;
+        margin-left: 4px;
+        color: #ffcf86;
+        line-height: 35px;
+        vertical-align: top;
+    }
+
+        #top-nav > li:hover,
+        #top-nav > li:hover a {
+            text-decoration: underline;
+        }
+
+        #top-nav > li > a {
+            color: #ffcf86;
+            text-decoration: none;
+        }
+
+        #top-nav > li + li:before {
+            content: '';
+            display: inline-block;
+            width: 1px;
+            height: 35px;
+            margin-right: 7px;
+            vertical-align: top;
+            background: url('../Shared/images/line.png') no-repeat left center;
+        }
+
+/* #endregion top-nav */
+
+/* #region language 選擇語系 */
+#language {
+    display: inline-block;
+    line-height: 35px;
+}
+
+#select-language > li {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    background-image: url('../Shared/images/lang.png');
+    cursor: pointer;
+}
+
+    #select-language > li[data-language='en-US'] {
+        background-position: right center;
+    }
+
+    #select-language > li[data-language='zh-TW'] {
+        background-position: center;
+    }
+
+    #select-language > li[data-language='zh-CN'] {
+        background-position: left center;
+    }
+
+    #select-language > li[data-language='th'] {
+        display: none;
+    }
+/* #endregion language 選擇語系 */
+
+/* #region 美東時間 */
+#div-meiDonNow {
+    display: inline-block;
+    margin-left: 4px;
+    color: #b5b5b5;
+    line-height: 35px;
+    vertical-align: top;
+}
+#div-meiDonNow:before{
+    content: "";
+    vertical-align: middle;
+    display: inline-block;
+    height: 100%;
+    width: 17px;
+    margin-right: 10px;
+    margin-left: 10px;
+    background: url("../Shared/images/head-control-divider-1.png") 0 0 no-repeat;
+}
+/* #endregion 美東時間 */
+
+/* #region logo */
+#logo-bg {
+    position: absolute;
+    display: inline-block;
+    width: 207px;
+    height: 68px;
+    background: url('../../../../_Common/Content/Views/Shared/images/logo_w.png') no-repeat;
+    background-position: left center;
+    background-size: 100% auto;
+}
+    #logo-bg:after{
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: 227px;
+        display: inline-block;
+        height: 68px;
+        width: 12px;
+        background: url('../Shared/images/head-control-divider-1.png');
+    }
+    #logo-bg > a {
+        display: block;
+        height: 100%;
+    }
+/* #endregion logo */
+
+/* #region nav 導覽列 */
+#nav {
+    position: absolute;
+    right: 0;
+    bottom: 39px;
+}
+
+    #nav > ul {
+        font-size: 0;
+        list-style: none;
+    }
+
+        #nav > ul > li {
+            position: relative;
+            display: inline-block;
+            width: 94px;
+            height: 68px;
+            padding-top: 21px;
+            color: #ffefff;
+            font-size: 14px;
+            text-align: center;
+            vertical-align: top;
+            border-left-width: 0;
+        }
+
+            #nav > ul > li:first-child {
+                border-left-width: 1px;
+            }
+
+            #nav > ul > li.toggle-color a,
+            #nav > ul > li.toggle-color span {
+                color: #ff0;
+            }
+
+            #nav > ul > li.hot:before {
+                content: '';
+                position: absolute;
+                top: 5px;
+                left: 47px;
+                display: inline-block;
+                width: 21px;
+                height: 12px;
+                background: url('../Shared/images/hot.gif');
+            }
+
+
+
+            #nav > ul > li > a {
+                color: #f5f5f5;
+            }
+
+            /* #nav > ul > li.slot-game a,
+            #nav > ul > li.slot-game span {
+                color: #c0c;
+            }
+
+            #nav > ul > li.pt-game a,
+            #nav > ul > li.pt-game span {
+                color: #f00;
+            }
+
+            #nav > ul > li.mg-game a,
+            #nav > ul > li.mg-game span {
+                color: #39f;
+            }
+
+            #nav > ul > li.live-game a,
+            #nav > ul > li.live-game span {
+                color: #87d016;
+            }
+
+            #nav > ul > li.pro a,
+            #nav > ul > li.pro span {
+                color: #ff0;
+            } */
+
+            #nav > ul > li span {
+                display: block;
+                margin-top: 5px;
+                color: rgba(255,207,134,.5);
+                font-family: Arial;
+                font-size: 12px;
+                font-weight: normal;
+                letter-spacing: -1px;
+            }
+
+            #nav > ul > li:hover a,
+            #nav > ul > li:hover span {
+                color: #FFEDD2;
+            }
+
+            #nav > ul > li a {
+                display: inline-block;
+                width: 100%;
+                color: #ffcf86;
+                text-decoration: none;
+            }
+
+            #nav > ul > li:hover .subnav {
+                display: block;
+            }
+
+.subnav {
+    display: none;
+    position: absolute;
+    top: 67px;
+    left: -13px;
+    z-index: 1;
+    list-style: none;
+    border-radius: 0 0 10px 5px;
+    background: url('../Shared/images/sidemenu-vertical-decor-bg.png') 0 100% repeat-y,url('../Shared/images/sidemenu-vertical-decor-right-bg.png') 100% 100% repeat-y,url("../Shared/images/main-bg.jpg") 0 0 repeat #363332;
+}
+
+    .subnav:after {
+        content: '';
+        width: 178px;
+        height: 20px;
+        background: url('../Shared/images/sub_bottom.png');
+    }
+
+    .subnav li {
+        position: relative;
+        width: 178px;
+        height: 40px;
+        padding-left: 55px;
+        color: #a5a5a5;
+        font-size: 13px;
+        line-height: 40px;
+        text-align: left;
+    }
+
+        .subnav li:before {
+            content: '>>';
+            position: absolute;
+            left: 30px;
+            color: #a5a5a5;
+            font-size: 13px;
+        }
+
+        .subnav li.sub-hot:after {
+            content: '';
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            display: inline-block;
+            width: 17px;
+            height: 21px;
+            background: url('../Shared/images/sub_hot.gif');
+        }
+
+        .subnav li.first-subnav {
+            padding: 0;
+            color: #f00;
+            text-align: center;
+        }
+
+            .subnav li.first-subnav:before {
+                content: none;
+            }
+
+        .subnav li:hover {
+            color: #ffcf86;
+        }
+
+        .subnav li.first-subnav:hover {
+            color: #f00;
+        }
+
+        .subnav li a {
+            color: #fff;
+            line-height: 40px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+/* #region 針對兩排 & 單排的底色做調整*/
+ol.subnav {
+    
+}
+#navLive .subnav,#navSport .subnav{
+    width: 330px;
+}
+#navGame .subnav {
+    width: 495px;
+}
+
+    div.subnav ol {
+        float: left;
+    }
+
+        div.subnav ol + ol {
+            margin-left: -29px;
+        }
+/* #endregion 針對兩排 & 單排的底色做調整*/
+
+/* #endregion nav 導覽列 */
+/* #region loginbar 顯示「登入帳號」區塊 */
+#account-box {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+}
+
+    #account-box > form {
+    }
+
+        #account-box > form > * {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        #account-box > form input {
+            width: 134px;
+            height: 26px;
+            padding: 0 0 0 25px;
+            color: #eaeaea;
+            font-size: 13px;
+            border: 1px solid #746252;
+            border-radius: 12px;
+            background-color: rgba(0,0,0,.8);
+            background-repeat: no-repeat;
+            background-position-x: 2px;
+        }
+
+#login_account {
+    background-image: url('../Shared/images/icon_member.png');
+}
+
+#login_password {
+    background-image: url('../Shared/images/icon_pw.png');
+}
+
+#account-box > form button {
+    width: auot;
+    height: 27px;
+    line-height: 26px;
+    text-align: center;
+    border: none;
+    background-position: center top;
+}
+
+    #account-box > form button:hover {
+        text-decoration: underline;
+    }
+#account-box .login-btn {
+    background: transparent;
+    color: #ffcf86;
+}
+
+#account-box .reg-btn {
+    color: #fff;
+    background-image: url('../Shared/images/sprite-btn-flat-warning-bg.png');
+    background-position: 0 -256px;
+    background-repeat: repeat-x;
+    position: relative;
+    margin: 0 25px 0 20px;
+}
+#account-box .reg-btn:before,#account-box .reg-btn:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -20px;
+    width: 20px;
+    height: 100%;
+    background-image: url('../Shared/images/sprite-btn-flat-warning-bg.png');
+    background-position: 0 -64px;
+}
+#account-box .reg-btn:after{
+    left: initial;
+    right: -20px;
+    background-position: 0 -160px;
+}
+#account-box .reg-btn:hover{
+    background-position: 0 -192px;
+}
+#account-box .reg-btn:hover:before{
+    background-position: 0 -0px;
+}
+#account-box .reg-btn:hover:after{
+    background-position: 0 -96px;
+}
+#account-box span.forget-btn {
+    color: #ffcf86;
+    font-size: 12px;
+}
+
+    #account-box span.forget-btn:hover {
+        text-decoration: underline;
+    }
+
+#account-box #check-code-wrapper {
+    position: relative;
+    vertical-align: top \9;
+}
+
+    #account-box #check-code-wrapper > input {
+        padding-left: 9px;
+    }
+
+#captcha {
+    position: absolute;
+    top: 9px;
+    right: 2px;
+    width: auto;
+    height: 22px;
+}
+
+#account-box #agree {
+    display: none;
+    position: absolute;
+    top: 110%;
+    padding: 0 10px;
+    right: 21px;
+    height: 19px;
+    color: #fff;
+    line-height: 18px;
+    font-size: 12px;
+    background: #171717;
+}
+
+    #agree a {
+        color: #ffcf86;
+        margin-left: 2px;
+        cursor: pointer;
+    }
+/* #endregion loginbar 顯示「登入帳號」區塊 */
+
+/* #region account-info 登入後, 顯示「帳號資訊」區塊 */
+ul#account-info {
+    position: relative;
+    display: inline-block;
+    list-style: none;
+}
+
+    ul#account-info > li {
+        display: inline-block;
+        margin-right: 10px;
+        color: #d5d5d5;
+        font-size: 12px;
+        vertical-align: top;
+    }
+
+        ul#account-info > li > span.account {
+            display: inline-block;
+            max-width: 8em;
+            color: #ffcf86;
+            font-size: 12px;
+            -ms-text-overflow: ellipsis;
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            vertical-align: top;
+            overflow: hidden;
+        }
+
+        ul#account-info > li a {
+            cursor: pointer;
+        }
+
+            ul#account-info > li a:hover {
+                color: #ffd800;
+            }
+
+    ul#account-info .money {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        vertical-align: middle;
+        background-image: url('../Shared/images/icon_plus.png');
+    }
+
+#action-box {
+    display: inline-block;
+    vertical-align: top;
+}
+
+    #action-box > a {
+        display: inline-block;
+        height: 28px;
+        padding: 2px 0;
+        font-size: 12px;
+        line-height: 23px;
+        text-decoration: none;
+        text-align: center;
+        vertical-align: middle;
+        background-position: center top;
+        background-repeat: no-repeat;
+    }
+
+        #action-box > a:hover {
+            background-position-y: bottom;
+        }
+
+    #action-box #change-password-btn {
+        width: auto;
+        min-width: 64px;
+        color: #fff;
+        background-image: url('../Shared/images/sprite-btn-flat-warning-bg.png');
+        background-position: 0 -256px;
+        background-repeat: repeat-x; 
+        position: relative;
+        margin: 0 20px 0 30px;
+    }
+    #action-box #change-password-btn:before, #action-box #change-password-btn:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -19px;
+        width: 21px;
+        height: 100%;
+        background-image: url('../Shared/images/sprite-btn-flat-warning-bg.png');
+        background-position: 0 -64px;
+    }
+    #action-box #change-password-btn:after {
+        left: initial;
+        right: -20px;
+        background-position: 0 -160px;
+    }
+
+    #action-box #change-password-btn:hover{
+        background-position: 0 -192px;
+    }
+    #action-box #change-password-btn:hover:before{
+        background-position: 0 -0px;
+    }
+    #action-box #change-password-btn:hover:after{
+        background-position: 0 -96px;
+    }
+
+    #action-box .logout-btn {
+        width: 52px;
+        color: #ffcf86;
+        /* background-image: url('../Shared/images/btn_logout.png'); */
+    }
+/* #endregion account-info 登入後, 顯示「帳號資訊」區塊 */
+
+/* #region account-nav 登入後的子導覽列 (帳號相關操作) */
+ul#account-nav {
+    display: inline-block;
+    list-style-type: none;
+}
+
+    ul#account-nav > li {
+        display: inline-block;
+        line-height: 41px;
+    }
+
+        ul#account-nav > li:before {
+            content: '|';
+            display: inline-block;
+            color: #b5b5b5;
+            padding: 0 2px;
+            vertical-align: top;
+        }
+
+        ul#account-nav > li:first-child:before {
+            content: none;
+        }
+
+        ul#account-nav > li > a {
+            display: inline-block;
+            height: 100%;
+            color: #d5d5d5;
+            font-size: 12px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+            ul#account-nav > li > a:hover {
+                color: #ffcf86;
+            }
+/* #endregion 登入後的子導覽列 (帳號相關操作) */
+
+/* #region news 跑馬燈 */
+#news {
+    position: relative;
+    height: 35px;
+    margin-top: -35px;
+    color: #ecc866;
+    line-height: 35px;
+    background-color: rgba(0,0,0,.8);
+}
+
+    #news .wrapper:before {
+        content: '最新公告：';
+        float: left;
+    }
+
+    #news .fa {
+        float: left;
+        line-height: 35px;
+        margin-right: 15px;
+    }
+
+#hot-news {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+    #hot-news li {
+        color: #ecc866;
+        text-decoration: none;
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+        #hot-news li:hover {
+            text-decoration: underline;
+        }
+/* #endregion 跑馬燈 */
+
+/* #region Banner */
+#banner {
+    height: 382px;
+    background: #101010 url('../Shared/images/banner.jpg') no-repeat center top;
+    background-position: bottom center;
+    background-size: auto 100%;
+}
+/* #endregion Banner */
+
+/* #region content 內頁 */
+#content {
+    position: relative;
+    padding: 20px 0;
+    text-align: center;
+    background: #181818 url('../Shared/images/main-bg.jpg');
+}
+/* #endregion content 內頁 */
+
+/* #region footer */
+#footer {
+    text-align: center;
+    background: #171717 url('../Shared/images/body-main-bg.png');
+}
+
+#footer-logo {
+    height: 107px;
+    background: url('../Shared/images/footer_logo.png') no-repeat center top;
+    border-top: 1px solid #746252;
+}
+
+#footer-info {
+    padding-top: 20px;
+    list-style: none;
+    white-space: nowrap;
+}
+
+    #footer-info:after {
+        content: '';
+        display: block;
+        height: 3px;
+        margin-top: 15px;
+        background: #171717 url('../Shared/images/footer_hr.png') no-repeat center center;
+    }
+
+    #footer-info li {
+        display: inline-block;
+        height: 44px;
+        margin: 0 53px;
+        padding-left: 52px;
+        color: #ffcf86;
+        font-size: 16px;
+        text-align: left;
+        vertical-align: top;
+        background: no-repeat left top;
+    }
+
+        #footer-info li:hover {
+            color: #ffdaa3;
+            background-position-y: bottom;
+        }
+
+        #footer-info li.macau-tel {
+            background-image: url('../Shared/images/icon_tel.png');
+        }
+
+        #footer-info li.qq2 {
+            background-image: url('../Shared/images/icon_qq.png');
+        }
+
+        #footer-info li.qq {
+            background-image: url('../Shared/images/icon_qq.png');
+        }
+
+        #footer-info li.mail {
+            background-image: url('../Shared/images/icon_mail.png');
+        }
+
+        #footer-info li span {
+            display: block;
+        }
+
+#footer-nav {
+    display: inline-block;
+    margin: 10px auto;
+    list-style: none;
+}
+
+    #footer-nav li {
+        display: inline-block;
+    }
+
+        #footer-nav li.color a {
+            /* color: #f00; */
+        }
+
+        #footer-nav li:before {
+            content: '/';
+            display: inline-block;
+            padding: 0 5px;
+            color: #585858;
+            vertical-align: top;
+        }
+
+        #footer-nav li:first-child:before {
+            content: none;
+        }
+
+    #footer-nav a {
+        padding: 0 7px;
+        color: #988b81;
+        text-decoration: none;
+    }
+
+        #footer-nav a:hover {
+            text-decoration: underline;
+        }
+
+#footer-suggest {
+    margin: 0;
+    padding: 20px 0;
+    color: #988b81;
+    font-family: Arial;
+    font-size: 12px;
+    line-height: 18px;
+}
+/* #endregion footer */
+
+/* #region services */
+.services {
+    position: absolute;
+    z-index: 2;
+    top: 210px;
+}
+
+    .services > ul > li {
+        display: inline-block;
+        width: 100%;
+        vertical-align: top;
+    }
+
+        .services > ul > li > a {
+            display: block;
+            height: 100%;
+        }
+
+.service-left {
+    left: 0;
+}
+
+    .service-left > ul {
+        width: 125px;
+        height: 233px;
+        background: url('../Shared/images/services.png') no-repeat center top;
+    }
+
+    .service-left .chat {
+        height: 82px;
+    }
+
+    .service-left .register {
+        height: 46px;
+    }
+
+    .service-left .deposit {
+        height: 80px;
+    }
+
+    .service-left .close {
+        height: 24px;
+        cursor: pointer;
+    }
+/* #endregion services */
+
+
+/* #region 近期浏览 */
+#review-list {
+    position: fixed;
+    bottom: -77px;
+    left: 0;
+    width: 100%;
+    height: 77px;
+    background: rgba(0,0,0,.8);
+    background: #000;
+    color: #fff;
+    z-index: 1;
+    transition: bottom 0.4s;
+}
+
+    #review-list.open {
+        bottom: 0;
+    }
+
+    #review-list .up,
+    #review-list .down {
+        position: absolute;
+        top: -24px;
+        left: 0;
+        width: 150px;
+        height: 24px;
+        line-height: 24px;
+        text-align: center;
+        background: url('../../../../_Common/Content/Views/Shared/images/review/tab.png') no-repeat;
+    }
+
+        #review-list .up:after,
+        #review-list .down:after {
+            content: '';
+            display: inline-block;
+            margin-left: 5px;
+            width: 7px;
+            height: 8px;
+        }
+
+        #review-list .up:after {
+            background: url('../../../../_Common/Content/Views/Shared/images/review/up.png') no-repeat;
+        }
+
+        #review-list .down:after {
+            background: url('../../../../_Common/Content/Views/Shared/images/review/down.png') no-repeat;
+        }
+
+    #review-list .wrapper {
+        padding-left: 80px;
+        height: 77px;
+        background: url('../../../../_Common/Content/Views/Shared/images/review/txt.png') no-repeat 20px 15px;
+    }
+
+#review-box li {
+    display: inline-block;
+    position: relative;
+    margin: 10px 8px 0;
+    width: 60px;
+    height: 60px;
+}
+
+    #review-box li.no-review {
+        line-height: 60px;
+    }
+
+    #review-box li img {
+        width: 60px;
+        height: 60px;
+    }
+
+    #review-box li div {
+        display: none;
+        position: absolute;
+        top: -31px;
+        left: -5px;
+        padding-top: 2px;
+        width: 70px;
+        height: 29px;
+        text-align: center;
+        -ms-text-overflow: ellipsis;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        background: url('../../../../_Common/Content/Views/Shared/images/review/title.png') no-repeat;
+    }
+
+    #review-box li:hover div {
+        display: block;
+    }
+/* #endregion 近期浏览 */
+
+/* #region mailbox 站内信 不同版请由此修改 */
+#mailbox {
+    position: relative;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    text-decoration: none;
+    background: url('../../../../_Common/Content/Views/Shared/images/m_icon.png') no-repeat;
+}
+
+    #mailbox > span, #mailbox > span:hover {
+        position: absolute;
+        left: 80%;
+        bottom: 60%;
+        min-width: 16px;
+        padding: 0 2px;
+        height: 16px;
+        color: #000;
+        font-size: 12px;
+        text-align: center;
+        line-height: 16px;
+        border-radius: 5px;
+        background: #fff47e;
+        box-sizing: border-box;
+    }
+/* #endregion mailbox 站内信 不同版请由此修改 */
+
+/* #region 彈跳視窗跑馬燈資訊內容 */
+#marquee-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    display: none;
+}
+
+    #marquee-wrapper.show {
+        display: block;
+        z-index: 1000;
+        background-image: url('../../../../_Common/Content/Views/Shared/images/transparent-black.png');
+    }
+
+#marquee {
+    width: 600px;
+    max-height: 500px;
+    margin: 30px auto 0 auto;
+    background-color: #fff;
+    background-image: url('../../../../_Common/Content/Views/Shared/images/table_background.jpg');
+    border-radius: 5px;
+    cursor: default;
+    transition: margin-top ease-in 300ms;
+}
+
+
+    #marquee > header {
+        text-align: center;
+        background-color: #e9e9e9;
+        border-bottom: 1px solid #CCC;
+        border-radius: 5px 5px 0 0;
+    }
+
+        #marquee > header > h2 {
+            margin: 0;
+            color: #0080e3;
+            font-size: 21px;
+            line-height: 60px;
+        }
+
+ul#newsBags {
+    margin: 0;
+    padding: 10px 50px;
+    max-height: 380px;
+    overflow: auto;
+}
+
+    ul#newsBags > li {
+        color: #454545;
+        font-size: 13px;
+        line-height: 27px;
+        list-style: disc;
+        white-space: pre-line;
+        border-bottom: 1px dashed #999;
+    }
+
+#marquee > footer {
+    text-align: center;
+    line-height: 80px;
+    background-color: #e9e9e9;
+    background-image: -webkit-radial-gradient(center top,ellipse farthest-side, rgba(0, 0, 0, 0.3), transparent);
+    background-size: 100% 8px;
+    background-repeat: no-repeat;
+    border-top: 1px solid #ccc;
+    border-radius: 0 0 5px 5px;
+}
+
+    #marquee > footer > span {
+        display: inline-block;
+        width: 119px;
+        font-size: 15px;
+        font-weight: bolder;
+        line-height: 45.5px;
+        background-image: url('../../../../_Common/Content/Views/Shared/images/sent_bn.png');
+        cursor: pointer;
+    }
+
+        #marquee > footer > span:hover {
+            background-position: 0 -45.5px;
+        }
+/* #endregion 彈跳視窗跑馬燈資訊內容 */
+
+/* #region 弹跳出来的notice Dialog */
+/* title 文字背景顏色此修改 */
+.ui-widget-header {
+    min-height: 30px;
+    line-height: 30px;
+}
+
+#ad-dialog {
+    display: none;
+    padding: 0;
+}
+
+    #ad-dialog img {
+        width: 100%;
+        height: auto !important;
+    }
+
+    #ad-dialog .dialog-footer {
+        height: 30px;
+        padding: 0 3px;
+        font-size: 12px;
+        font-weight: bold;
+        line-height: 25px;
+        border-top: 1px solid #000;
+    }
+
+.ui-dialog {
+    z-index: 999;
+}
+
+    .ui-dialog .ui-dialog-title {
+        font-size: 13px;
+        line-height: 15px;
+    }
+
+    .ui-dialog .ui-dialog-buttonpane {
+        margin: 0;
+        padding: 0;
+        border: none;
+    }
+
+button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only {
+    font-size: 12px;
+}
+
+.ui-dialog .ui-dialog-buttonpane button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 3px 6px;
+    background: #ffd800;
+}
+/* #endregion 弹跳出来的notice Dialog */
+
+/*#region 游戏平台登入口 */
+#logingame-body {
+    background-color: #252525;
+}
+
+#logingame-left form #check-code-wrapper {
+    position: relative;
+}
+
+    #logingame-left form #check-code-wrapper #captcha {
+        position: absolute;
+    }
+/*#endregion */

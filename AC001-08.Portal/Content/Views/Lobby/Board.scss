@@ -1,0 +1,30 @@
+﻿@import '../../../../_Common/Css/GameCode';
+
+#banner {
+    background-image: url('../Lobby/Board/banner.jpg');
+}
+
+#content {
+    min-height: 495px;
+    overflow: hidden;
+    /* background: url('../Lobby/Board/Board_bg.jpg') top center no-repeat; */
+}
+
+#lobby ul.game-list {
+    margin: 25px 0;
+    li {
+        width: 434px;
+        height: 321px;
+        margin: 10px;
+    }
+    div {
+        display: none;
+    }
+}
+
+// gamebox-list
+@each $gamebox in $board-list {
+    #lobby [game-box='#{$gamebox}'] {
+        background-image: url('../lobby/Board/#{$gamebox}.jpg');
+    }
+}

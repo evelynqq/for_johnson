@@ -1,0 +1,753 @@
+@charset "UTF-8";
+#news {
+  margin-top: -36px;
+}
+
+#banner {
+  height: 600px;
+  overflow: hidden;
+  background-image: none;
+}
+
+/* #region slide-banner樣式 */
+#slide-banner {
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+  /* 點點切換紐 */
+}
+
+#slide-banner .slide {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -960px;
+}
+
+#slide-banner .slide a {
+  display: inline-block;
+  width: 1920px;
+  height: 600px;
+  /* 通常只會改這兩個地方 跟著圖片高度 */
+}
+
+#slide-banner .slide-pager {
+  position: absolute;
+  bottom: 65px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+#slide-banner .slide-pager li {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  margin: 0 4px;
+  /* 若要数字编号可以把font-size: 0拿掉 */
+  font-size: 0;
+  background-color: #16b6d2;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#slide-banner .slide-pager .on,
+#slide-banner .slide-pager li:hover {
+  background-color: #fff;
+}
+
+/* #endregion slide-banner樣式 */
+#content {
+  padding: 30px 0;
+  position: relative;
+}
+
+.container {
+  width: 1100px;
+  margin: auto;
+}
+
+#lobby-list {
+  text-align: center;
+}
+
+#lobby-list ul {
+  width: 1100px;
+  margin: 0;
+  padding: 0 0 76px;
+  list-style: none;
+  font-size: 0;
+}
+
+#lobby-list ul li {
+  position: relative;
+  top: 0;
+  display: inline-block;
+  width: 340px;
+  height: 340px;
+  margin: 10px 10px 10px 10px;
+  border-radius: 10px;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 29px 0 rgba(75, 81, 91, 0.17);
+          box-shadow: 0 0 29px 0 rgba(75, 81, 91, 0.17);
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+
+#lobby-list ul li:hover {
+  top: -10px;
+}
+
+#lobby-list ul li a {
+  display: block;
+  height: 100%;
+  font-size: 13px;
+  color: #fff;
+  text-decoration: none;
+}
+
+#lobby-list ul li a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 9px;
+  background: -o-linear-gradient(87deg, #a3ede0 0%, #68dcf5 100%);
+  background: linear-gradient(3deg, #a3ede0 0%, #68dcf5 100%);
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+  pointer-events: none;
+}
+
+#lobby-list ul li a:before {
+  content: '进入游戏';
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 16px;
+  line-height: 32px;
+  width: 100px;
+  height: 34px;
+  z-index: 3;
+  border: 1px solid #16b6d2;
+  border-radius: 3px;
+  background: rgba(22, 182, 210, 0.8);
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#lobby-list ul li a:hover:before {
+  margin-top: -17px;
+}
+
+#lobby-list ul li span {
+  position: absolute;
+  bottom: 28px;
+  left: 20px;
+  font-size: 24px;
+  color: #16b6d2;
+}
+
+#lobby-list ul li p {
+  position: absolute;
+  bottom: 2px;
+  left: 20px;
+  font-size: 12px;
+  color: #8491a5;
+}
+
+#lobby-list ul li.sport {
+  background-image: url("../Home/images/Lobby/sport.jpg");
+}
+
+#lobby-list ul li.game {
+  background-image: url("../Home/images/Lobby/game.jpg");
+}
+
+#lobby-list ul li.live {
+  background-image: url("../Home/images/Lobby/live.jpg");
+}
+
+#lobby-list ul li.lottery {
+  background-image: url("../Home/images/Lobby/lottery.jpg");
+}
+
+#lobby-list ul li.board {
+  background-image: url("../Home/images/Lobby/board.jpg");
+}
+
+#lobby-list ul li.esport {
+  background-image: url("../Home/images/Lobby/esport.jpg");
+}
+
+#lobby-list ul li div {
+  width: 85px;
+  height: 27px;
+  line-height: 23px;
+  border-radius: 3px;
+  color: #16b6d2;
+  border: 2px solid #16b6d2;
+  margin: 22px auto;
+}
+
+#lobby-list ul li:hover div {
+  background: #16b6d2;
+  color: #fff;
+}
+
+#gmae-process {
+  background: #fff;
+  padding: 50px 0;
+  height: 520px;
+}
+
+#gmae-process .container {
+  position: relative;
+}
+
+#gmae-process .container:before {
+  content: '';
+  position: absolute;
+  left: 0px;
+  bottom: -20px;
+  width: 305px;
+  height: 326px;
+  background-image: url("../Home/images/GameProcess/game-img1.png");
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+
+#gmae-process .container:after {
+  content: '';
+  position: absolute;
+  left: 0px;
+  bottom: 100px;
+  width: 130px;
+  height: 125px;
+  background-image: url("../Home/images/GameProcess/game-img2.png");
+  -webkit-animation-name: game-img-amination-2;
+          animation-name: game-img-amination-2;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  animation-direction: alternate-reverse;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+#gmae-process:hover .container:before {
+  left: 20px;
+}
+
+#gmae-process .right-box {
+  width: 30%;
+  display: inline-block;
+  vertical-align: top;
+  height: 420px;
+}
+
+#gmae-process .left-box {
+  width: 69%;
+  display: inline-block;
+  text-align: center;
+  padding-right: 30px;
+}
+
+#gmae-process li {
+  position: relative;
+  top: 0;
+  width: 170px;
+  height: 170px;
+  margin: 20px 30px;
+  border-radius: 100px;
+  display: inline-block;
+  border: 5px solid #e2fcfe;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center 20px;
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s;
+}
+
+#gmae-process li h4 {
+  margin-top: 100px;
+  margin-bottom: -10px;
+}
+
+#gmae-process li p {
+  font-size: 12px;
+  color: #8491a5;
+}
+
+#gmae-process li span {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  font-size: 80px;
+  color: #16b6d2;
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s;
+}
+
+#gmae-process li:before {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 40px;
+  display: block;
+  background: #f9f9ef;
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s;
+}
+
+#gmae-process li:after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 40px;
+  width: 80px;
+  height: 80px;
+  display: block;
+}
+
+#gmae-process li:nth-child(1):after {
+  color: #16b6d2;
+  background-image: url("../Home/images/GameProcess/01.jpg"), -webkit-gradient(linear, left top, left bottom, from(#a3ede0), to(#68dcf5));
+  background-image: url("../Home/images/GameProcess/01.jpg"), -o-linear-gradient(#a3ede0, #68dcf5);
+  background-image: url("../Home/images/GameProcess/01.jpg"), linear-gradient(#a3ede0, #68dcf5);
+  background-blend-mode: lighten;
+}
+
+#gmae-process li:nth-child(2):after {
+  color: #16b6d2;
+  background-image: url("../Home/images/GameProcess/02.jpg"), -webkit-gradient(linear, left top, left bottom, from(#a3ede0), to(#68dcf5));
+  background-image: url("../Home/images/GameProcess/02.jpg"), -o-linear-gradient(#a3ede0, #68dcf5);
+  background-image: url("../Home/images/GameProcess/02.jpg"), linear-gradient(#a3ede0, #68dcf5);
+  background-blend-mode: lighten;
+}
+
+#gmae-process li:nth-child(3):after {
+  color: #16b6d2;
+  background-image: url("../Home/images/GameProcess/03.jpg"), -webkit-gradient(linear, left top, left bottom, from(#a3ede0), to(#68dcf5));
+  background-image: url("../Home/images/GameProcess/03.jpg"), -o-linear-gradient(#a3ede0, #68dcf5);
+  background-image: url("../Home/images/GameProcess/03.jpg"), linear-gradient(#a3ede0, #68dcf5);
+  background-blend-mode: lighten;
+}
+
+#gmae-process li:nth-child(4):after {
+  color: #16b6d2;
+  background-image: url("../Home/images/GameProcess/04.jpg"), -webkit-gradient(linear, left top, left bottom, from(#a3ede0), to(#68dcf5));
+  background-image: url("../Home/images/GameProcess/04.jpg"), -o-linear-gradient(#a3ede0, #68dcf5);
+  background-image: url("../Home/images/GameProcess/04.jpg"), linear-gradient(#a3ede0, #68dcf5);
+  background-blend-mode: lighten;
+}
+
+#gmae-process li:nth-child(5):after {
+  color: #16b6d2;
+  background-image: url("../Home/images/GameProcess/05.jpg"), -webkit-gradient(linear, left top, left bottom, from(#a3ede0), to(#68dcf5));
+  background-image: url("../Home/images/GameProcess/05.jpg"), -o-linear-gradient(#a3ede0, #68dcf5);
+  background-image: url("../Home/images/GameProcess/05.jpg"), linear-gradient(#a3ede0, #68dcf5);
+  background-blend-mode: lighten;
+}
+
+#gmae-process li:hover {
+  top: -10px;
+}
+
+#gmae-process li:hover span {
+  bottom: 0px;
+  color: #ff6f80;
+}
+
+#gmae-process li:hover:before {
+  width: 60px;
+  height: 60px;
+  right: -30px;
+}
+
+#gmae-process .title h3 {
+  font-size: 30px;
+  margin-bottom: -15px;
+}
+
+#gmae-process .title p {
+  color: #16b6d2;
+  font-size: 20px;
+}
+
+@-webkit-keyframes game-img-amination-2 {
+  form {
+    bottom: 120px;
+  }
+  to {
+    bottom: 60px;
+  }
+}
+
+@keyframes game-img-amination-2 {
+  form {
+    bottom: 120px;
+  }
+  to {
+    bottom: 60px;
+  }
+}
+
+.app-download {
+  padding: 20px 0;
+  height: 520px;
+  font-size: 0;
+  margin: auto;
+  background-image: url("../Home/images/bg-image.jpg");
+  background-size: 100% auto;
+  background-position: center;
+}
+
+.app-download .container {
+  position: relative;
+}
+
+.app-download .container:before, .app-download .container:after {
+  content: '';
+  position: absolute;
+  background-repeat: no-repeat;
+  -webkit-animation-name: move-updown;
+          animation-name: move-updown;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  animation-direction: alternate-reverse;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.app-download .container:before {
+  top: 60px;
+  left: 65px;
+  width: 128px;
+  height: 147px;
+  background-image: url("../Home/images/AppDownload/dice.png");
+}
+
+.app-download .container:after {
+  top: 60px;
+  left: 435px;
+  width: 175px;
+  height: 146px;
+  background-image: url("../Home/images/AppDownload/chip.png");
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.app-download:hover .app-left > div {
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+.app-download:hover .app-left .mobile-left {
+  -webkit-animation-name: move-left;
+          animation-name: move-left;
+}
+
+.app-download:hover .app-left .mobile-right {
+  -webkit-animation-name: move-right;
+          animation-name: move-right;
+}
+
+.app-download:hover .app-left .mobile-center {
+  -webkit-animation-name: move-zoom;
+          animation-name: move-zoom;
+}
+
+.app-download .app-left,
+.app-download .app-right {
+  display: inline-block;
+}
+
+.app-download .app-left {
+  width: 600px;
+  position: absolute;
+  top: 36px;
+  left: 0;
+}
+
+.app-download .app-left > div {
+  position: absolute;
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.app-download .app-left .mobile-left,
+.app-download .app-left .mobile-right {
+  height: 300px;
+  z-index: 1;
+}
+
+.app-download .app-left .mobile-left {
+  top: 175px;
+  width: 307px;
+  left: 0px;
+  background-image: url("../Home/images/AppDownload/left.png");
+}
+
+.app-download .app-left .mobile-right {
+  top: 175px;
+  width: 300px;
+  right: -10px;
+  background-image: url("../Home/images/AppDownload/right.png");
+}
+
+.app-download .app-left .mobile-center {
+  top: 0px;
+  left: 205px;
+  z-index: 2;
+  width: 203px;
+  height: 409px;
+  background-image: url("../Home/images/AppDownload/center.png");
+}
+
+.app-download .app-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 14px;
+  color: #666;
+  text-align: left;
+}
+
+.app-download .app-right h2,
+.app-download .app-right h3 {
+  font-size: 52px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.app-download .app-right h3 {
+  font-size: 24px;
+  line-height: 30px;
+  margin-top: 10px;
+}
+
+.app-download .app-right .icon {
+  margin: 35px 0;
+  width: 380px;
+}
+
+.app-download .app-right .icon li {
+  list-style: none;
+  display: inline-block;
+  width: 115px;
+  margin-right: 10px;
+  line-height: 30px;
+}
+
+.app-download .app-right .icon li i {
+  width: 15px;
+  margin-right: 5px;
+}
+
+.app-download .app-right .icon li:nth-child(3) {
+  margin-right: 0;
+}
+
+.app-download .app-right .download {
+  position: relative;
+  width: 240px;
+  height: 60px;
+  display: block;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  padding: 0 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.app-download .app-right .download:before {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: 0;
+  display: block;
+  width: 102%;
+  height: 100%;
+  border-radius: 30px;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+
+.app-download .app-right .download span {
+  position: absolute;
+  text-align: center;
+  width: 60%;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+
+.app-download .app-right .download .cn {
+  top: 5px;
+  font-size: 18px;
+}
+
+.app-download .app-right .download .en {
+  top: 32px;
+}
+
+.app-download .app-right .download i {
+  position: relative;
+  font-size: 30px;
+  line-height: 60px;
+  margin-right: 5px;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+
+.app-download .app-right .download:hover:before {
+  background: #f9f9ef;
+}
+
+.app-download .app-right .download:hover i {
+  color: #16b6d2;
+}
+
+.app-download .app-right .download:hover span {
+  color: #16b6d2;
+}
+
+@-webkit-keyframes move-right {
+  from {
+    right: 50px;
+  }
+  to {
+    right: -10px;
+  }
+}
+
+@keyframes move-right {
+  from {
+    right: 50px;
+  }
+  to {
+    right: -10px;
+  }
+}
+
+@-webkit-keyframes move-left {
+  from {
+    left: 50px;
+  }
+  to {
+    left: 0px;
+  }
+}
+
+@keyframes move-left {
+  from {
+    left: 50px;
+  }
+  to {
+    left: 0px;
+  }
+}
+
+@-webkit-keyframes move-zoom {
+  from {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes move-zoom {
+  from {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes move-updown {
+  0% {
+    top: 10px;
+  }
+  50% {
+    top: 90px;
+  }
+  100% {
+    top: 10px;
+  }
+}
+
+@keyframes move-updown {
+  0% {
+    top: 10px;
+  }
+  50% {
+    top: 90px;
+  }
+  100% {
+    top: 10px;
+  }
+}
+
+#introduce {
+  position: relative;
+  height: 620px;
+  padding-top: 30px;
+  background: url("../Home/images/Introduce/footerimg.jpg") no-repeat center top;
+  background-position: center 60px;
+}
+
+#introduce .container {
+  position: relative;
+}
+
+#introduce #time01 {
+  position: absolute;
+  top: 154px;
+  left: 0px;
+  width: 320px;
+  height: 87px;
+  background: url("../Home/images/Introduce/deposit.gif");
+}
+
+#introduce #time02 {
+  position: absolute;
+  top: 245px;
+  left: 0px;
+  width: 320px;
+  height: 87px;
+  background: url("../Home/images/Introduce/withdraw.gif");
+}
+
+#introduce .info {
+  position: absolute;
+  top: 388px;
+  line-height: 28px;
+  left: 50px;
+  color: #8491a5;
+}
+/*# sourceMappingURL=Index.css.map */

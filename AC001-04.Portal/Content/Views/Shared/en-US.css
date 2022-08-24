@@ -1,0 +1,37 @@
+﻿#account-box > form button {
+    font-size: 12px;
+}
+
+#sub-navbar ul#account-nav li a {
+    display: inline-block;
+    max-width: 6em;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: top;
+}
+
+#action-box .logout {
+    font-size: 12px;
+}
+
+#nav ul > li > a {
+    font-size: 12px;
+}
+
+#nav ul > li#chat > a {
+    width: 108px;
+    letter-spacing: -1px;
+}
+
+#un-lobby aside ul li a {
+    width: auto;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+#footer ul#footer-nav li {
+    text-transform: uppercase;
+}

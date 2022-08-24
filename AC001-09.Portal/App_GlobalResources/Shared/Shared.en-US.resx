@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About_Me" xml:space="preserve">
+    <value>About Me</value>
+  </data>
+  <data name="Account" xml:space="preserve">
+    <value>Account</value>
+  </data>
+  <data name="AddFavorite" xml:space="preserve">
+    <value>Add Favorite</value>
+  </data>
+  <data name="AddHomePage" xml:space="preserve">
+    <value>HomePage</value>
+  </data>
+  <data name="Agreement" xml:space="preserve">
+    <value>Agreement</value>
+  </data>
+  <data name="AlternateDomain" xml:space="preserve">
+    <value>Alternate Domain</value>
+  </data>
+  <data name="Balance" xml:space="preserve">
+    <value>Balance</value>
+  </data>
+  <data name="BetRecord" xml:space="preserve">
+    <value>Bet Record</value>
+  </data>
+  <data name="ChangeMoneyPassword" xml:space="preserve">
+    <value>ChangeMoneyPW</value>
+  </data>
+  <data name="Change_Password" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
+  <data name="CheckCode" xml:space="preserve">
+    <value>Check Code</value>
+  </data>
+  <data name="ClickAgree" xml:space="preserve">
+    <value>Click Sign agreed to</value>
+  </data>
+  <data name="Client" xml:space="preserve">
+    <value>CLIENT</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="Footer_AboutUs" xml:space="preserve">
+    <value>ABOUT US</value>
+  </data>
+  <data name="Footer_Affiliation" xml:space="preserve">
+    <value>AFFILIATION</value>
+  </data>
+  <data name="Footer_Blog" xml:space="preserve">
+    <value>BLOG</value>
+  </data>
+  <data name="Footer_ContactUs" xml:space="preserve">
+    <value>CONTACT US</value>
+  </data>
+  <data name="Footer_Download" xml:space="preserve">
+    <value>DOWNLOAD</value>
+  </data>
+  <data name="Footer_FAQ" xml:space="preserve">
+    <value>FAQ</value>
+  </data>
+  <data name="Footer_Guide" xml:space="preserve">
+    <value>Guide</value>
+  </data>
+  <data name="Footer_HowToDeposit" xml:space="preserve">
+    <value>HOW TO DEPOSIT</value>
+  </data>
+  <data name="Footer_HowWithdrawals" xml:space="preserve">
+    <value>HOW WITHDRAWALS</value>
+  </data>
+  <data name="Footer_MobileBet" xml:space="preserve">
+    <value>MOBILE BET</value>
+  </data>
+  <data name="Footer_Network_Detect" xml:space="preserve">
+    <value>Network Detect</value>
+  </data>
+  <data name="Footer_Responsible" xml:space="preserve">
+    <value>Responsible Gambling</value>
+  </data>
+  <data name="Forget" xml:space="preserve">
+    <value>GET P/W</value>
+  </data>
+  <data name="Free_Play" xml:space="preserve">
+    <value>Free Play</value>
+  </data>
+  <data name="Girl" xml:space="preserve">
+    <value>GUIDE</value>
+  </data>
+  <data name="Head_Title" xml:space="preserve">
+    <value>GPK DEMO</value>
+  </data>
+  <data name="Inquiry" xml:space="preserve">
+    <value>Inquiry</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>LOGIN</value>
+  </data>
+  <data name="LoginToAgent" xml:space="preserve">
+    <value>Management</value>
+  </data>
+  <data name="LogoFlashIDTitle" xml:space="preserve">
+    <value>GPK DEMO HOME</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>LOGOUT</value>
+  </data>
+  <data name="Nav_AG" xml:space="preserve">
+    <value>AG CASINO</value>
+  </data>
+  <data name="Nav_AgentCooperation" xml:space="preserve">
+    <value>PARTNER</value>
+  </data>
+  <data name="Nav_BBIN" xml:space="preserve">
+    <value>BB CASINO</value>
+  </data>
+  <data name="Nav_Casino" xml:space="preserve">
+    <value>CASINO</value>
+  </data>
+  <data name="Nav_GPK" xml:space="preserve">
+    <value>EG CASINO</value>
+  </data>
+  <data name="Nav_Home" xml:space="preserve">
+    <value>HOME</value>
+  </data>
+  <data name="Nav_JoinUs" xml:space="preserve">
+    <value>JOIN US</value>
+  </data>
+  <data name="Nav_LiveCasino" xml:space="preserve">
+    <value>LIVE CASINO</value>
+  </data>
+  <data name="Nav_LiveCasino_LiveTop" xml:space="preserve">
+    <value>Ultimate</value>
+  </data>
+  <data name="Nav_LiveCasino_Multibet" xml:space="preserve">
+    <value>Multibet</value>
+  </data>
+  <data name="Nav_LiveCasino_RobotLive" xml:space="preserve">
+    <value>Robot Live</value>
+  </data>
+  <data name="Nav_LiveCasino_RobotMutlibet" xml:space="preserve">
+    <value>Robot Mutlibet</value>
+  </data>
+  <data name="Nav_Lottery" xml:space="preserve">
+    <value>LOTTERY</value>
+  </data>
+  <data name="Nav_MG" xml:space="preserve">
+    <value>MG CASINO</value>
+  </data>
+  <data name="Nav_Promotions" xml:space="preserve">
+    <value>PROMOTIONS</value>
+  </data>
+  <data name="Nav_PT" xml:space="preserve">
+    <value>PT CASINO</value>
+  </data>
+  <data name="Nav_SABA" xml:space="preserve">
+    <value>SABA SPORTS</value>
+  </data>
+  <data name="Nav_Sports" xml:space="preserve">
+    <value>SPORTBOOKS</value>
+  </data>
+  <data name="Nav_Ultimate" xml:space="preserve">
+    <value>ULTIMATE</value>
+  </data>
+  <data name="Nav_VIP" xml:space="preserve">
+    <value>VIP</value>
+  </data>
+  <data name="Nav_XTD" xml:space="preserve">
+    <value>XTD CASINO</value>
+  </data>
+  <data name="NewsInfo" xml:space="preserve">
+    <value>News</value>
+  </data>
+  <data name="Online_Chat" xml:space="preserve">
+    <value>Online Chat</value>
+  </data>
+  <data name="Online_Deposit" xml:space="preserve">
+    <value>Online Deposit</value>
+  </data>
+  <data name="Online_Transfer" xml:space="preserve">
+    <value>Online transfer</value>
+  </data>
+  <data name="Online_Withdraw" xml:space="preserve">
+    <value>Online Withdraw</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Processing" xml:space="preserve">
+    <value>Processing...</value>
+  </data>
+  <data name="SelectLanguage" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="StationMail" xml:space="preserve">
+    <value>StationMail</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="Suggest1" xml:space="preserve">
+    <value>System requirements: Site Browse the best resolution of 1024x768 is recommended that you save the game with the IE10 browser or 360  browser</value>
+  </data>
+  <data name="Suggest2" xml:space="preserve">
+    <value>Copyright © GPK DEMO Reserved</value>
+  </data>
+  <data name="Transaction_Record" xml:space="preserve">
+    <value>Transaction Records</value>
+  </data>
+  <data name="Understand" xml:space="preserve">
+    <value>I understand</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="VerifyDeposit" xml:space="preserve">
+    <value>VerifyDeposit</value>
+  </data>
+  <data name="WalletIsLocked" xml:space="preserve">
+    <value>Your wallet has been frozen, unable to access the funds, please contact customer service online.</value>
+  </data>
+  <data name="Nav_HG" xml:space="preserve">
+    <value>CROWN SPORTS</value>
+  </data>
+  <data name="Online_Payment" xml:space="preserve">
+    <value>Online Payment</value>
+  </data>
+  <data name="Nav_GPI" xml:space="preserve">
+    <value>GPI CASINO</value>
+  </data>
+  <data name="Nav_EG" xml:space="preserve">
+    <value>EG CASINO</value>
+  </data>
+  <data name="Nav_EVO" xml:space="preserve">
+    <value>EVO CASINO</value>
+  </data>
+  <data name="Nav_GNS" xml:space="preserve">
+    <value>GNS CASINO</value>
+  </data>
+  <data name="Nav_PRG" xml:space="preserve">
+    <value>PP CASINO</value>
+  </data>
+  <data name="Nav_SG" xml:space="preserve">
+    <value>SG CASINO</value>
+  </data>
+  <data name="Nav_AB" xml:space="preserve">
+    <value>AB CASINO</value>
+  </data>
+  <data name="Nav_UG" xml:space="preserve">
+    <value>UG CASINO</value>
+  </data>
+  <data name="Nav_RG" xml:space="preserve">
+    <value>GPK CASINO</value>
+  </data>
+  <data name="Nav_MW" xml:space="preserve">
+    <value>MW CASINO</value>
+  </data>
+  <data name="Nav_IG" xml:space="preserve">
+    <value>IG CASINO</value>
+  </data>
+  <data name="Nav_HABA" xml:space="preserve">
+    <value>HB CASINO</value>
+  </data>
+  <data name="Nav_JDB" xml:space="preserve">
+    <value>JDB CASINO</value>
+  </data>
+  <data name="Nav_NETENT" xml:space="preserve">
+    <value>NE CASINO</value>
+  </data>
+  <data name="Nav_CQ9" xml:space="preserve">
+    <value>CQ9 CASINO</value>
+  </data>
+  <data name="Nav_GD" xml:space="preserve">
+    <value>GD CASINO</value>
+  </data>
+  <data name="Nav_REDTIGER" xml:space="preserve">
+    <value>RT CASINO</value>
+  </data>
+  <data name="Nav_SUNBET" xml:space="preserve">
+    <value>SUNBET CASINO</value>
+  </data>
+  <data name="Nav_GAMEART" xml:space="preserve">
+    <value>GA CASINO</value>
+  </data>
+  <data name="Nav_BG" xml:space="preserve">
+    <value>BG CASINO</value>
+  </data>
+  <data name="Nav_PG" xml:space="preserve">
+    <value>PG CASINO</value>
+  </data>
+  <data name="Nav_CMD" xml:space="preserve">
+    <value>CMD CASINO</value>
+  </data>
+  <data name="Nav_LG" xml:space="preserve">
+    <value>LG Casino</value>
+  </data>
+  <data name="Nav_ISB" xml:space="preserve">
+    <value>ISB CASINO</value>
+  </data>
+  <data name="Nav_KG" xml:space="preserve">
+    <value>KG CASINO</value>
+  </data>
+</root>

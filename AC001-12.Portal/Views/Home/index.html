@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>welcome</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="shortcut icon" href="../../../_Common/Content/Views/Shared/images/favicon.ico" />
+    <link href="../../bundles/site.css" rel="stylesheet" />
+    <link href="../../Content/Views/Home/index.css" rel="stylesheet" />
+    <script src="../../../_Common/Scripts/jquery/v1.12.4/jquery.min.js"></script>
+    <script src="../../bundles/include-html.js"></script>
+</head>
+
+<body>
+    <header id="header"></header>
+    <div id="banner"></div>
+    <div id="content">
+        <div class="wrapper">
+            <div id="home">
+                <ul id="game-box">
+                    <li data-img="live">
+                        <a href="../Lobby/Live.html"></a>
+                    </li>
+                    <li data-img="slot">
+                        <a href="../Lobby/Game.html"></a>
+                    </li>
+                    <li data-img="lottery">
+                        <a href="../Lobby/Lottery.html"></a>
+                    </li>
+                    <li data-img="fish" ng-controller="LobbiesCtrl" class="ng-scope">
+                        <a ng-click="toFish()"></a>
+                    </li>
+                </ul>
+                <ul class="sub-info">
+                    <li data-info="join" ng-click="RegisterClick()"></li>
+                    <li data-info="trial" ng-click="FreePlayClick()"></li>
+                    <li data-info="discunt"><a href="/Promotion"></a></li>
+                    <li data-info="line" ng-click="lineChatClick()"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer id="footer"></footer>
+</body>
+
+</html>

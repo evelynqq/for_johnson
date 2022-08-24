@@ -1,0 +1,109 @@
+﻿@import '../../../../_Common/Css/GameCode';
+
+#banner {
+    background: url('../Lobby/Game/banner.jpg') no-repeat center #251630;
+}
+
+#lobby {
+    position: relative;
+    text-align: center;
+    width: 960px;
+    margin: auto;
+}
+
+#lobby .game-list {
+    margin: 10px 0 0 0;
+}
+
+#lobby .main-cell {
+    display: inline-block;
+}
+
+#lobby .game-tab {
+    display: inline-block;
+    z-index: 2;
+    width: 942px;
+    height: 53px;
+    margin: 0px;
+    padding: 0;
+    list-style-type: none;
+    overflow: hidden;
+}
+
+#lobby .game-tab li {
+    position: relative;
+    display: inline-block;
+    width: 157px;
+    height: 53px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    line-height: 53px;
+    background: #654f99;
+    text-align: center;
+    span {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 105px;
+        text-align: center;
+        color: #f9c312;
+        font-size: 15px;
+    }
+    div {
+        display: none;
+    }
+    &:not([game-box='more']):hover span {
+        color: #fff;
+    }
+    &:before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        left: 0px;
+        height: 100px;
+        width: 70px;
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: 110% auto;
+    }
+}
+
+#lobby .game-tab li + li {
+    border-left: 1px solid #9a7ddd;
+}
+
+// gamebox-list
+@each $gamebox in $game-list {
+    #lobby li[game-box='#{$gamebox}']:before {
+        background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v2/color/Game/#{$gamebox}.png');
+    }
+}
+
+#lobby .game-tab li:not([game-box='more']):hover,
+#lobby .game-tab li:not([game-box='more']).active {
+    color: #fff;
+    background: #9a7ddd;
+}
+
+#lobby .prev,
+#lobby .next {
+    position: absolute;
+    top: 0px;
+    width: 20px;
+    height: 53px;
+    cursor: pointer;
+}
+
+#lobby .prev {
+    left: -20px;
+    background: url('../Lobby/Game/prev.png') no-repeat center;
+}
+
+#lobby .next {
+    right: -20px;
+    background: url('../Lobby/Game/next.png') no-repeat center;
+}
+
+#lobby iframe {
+    width: 940px;
+}

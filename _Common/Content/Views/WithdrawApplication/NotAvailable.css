@@ -1,0 +1,71 @@
+﻿.body {
+    padding: 6px;
+}
+
+.panel {
+    margin: 0 auto;
+    background: #e5e5e5;
+    border-color: #ddd;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+}
+
+.panel-heading {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    -webkit-border-top-right-radius: 2px;
+    border-top-right-radius: 2px;
+    -webkit-border-top-left-radius: 2px;
+    border-top-left-radius: 2px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.panel-body {
+    position: relative;
+    padding: 15px 15px 20px 15px;
+}
+
+
+#title {
+    height: 46px;
+    font-weight: bold;
+    font-size: 21px;
+    font-family: '微軟正黑體';
+    border: none;
+}
+
+.alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+    .alert-danger hr {
+        border-top-color: #e4b9c0;
+    }
+
+    .alert-danger .alert-link {
+        color: #843534;
+    }
+
+    .alert-danger strong {
+        color: #808080;
+        font-size: 25px;
+    }
+
+.fluid-container {
+    display: inline-block;
+    margin-top: 20px;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.pre-line {
+    white-space: pre-line;
+}

@@ -1,0 +1,98 @@
+#lobby {
+  padding: 30px 0 20px;
+}
+
+#banner {
+  background-image: url("../Lobby/Live/banner.jpg");
+}
+
+.game-list > li {
+  width: 327px;
+  height: 275px;
+  padding-top: 215px;
+}
+
+#lobby li.more {
+  background-image: url("../lobby/live/more.jpg");
+}
+
+#lobby li.AllBetReal {
+  background-image: url("../lobby/live/AllBetReal.jpg");
+}
+
+#lobby li.AgBr {
+  background-image: url("../lobby/live/AgBr.jpg");
+}
+
+#lobby li.BbinaLive {
+  background-image: url("../lobby/live/BbinaLive.jpg");
+}
+
+#lobby li.BgReal {
+  background-image: url("../lobby/live/BgReal.jpg");
+}
+
+#lobby li.EBetReal {
+  background-image: url("../lobby/live/EBetReal.jpg");
+}
+
+#lobby li.EvoReal {
+  background-image: url("../lobby/live/EvoReal.jpg");
+}
+
+#lobby li.GdReal {
+  background-image: url("../lobby/live/GdReal.jpg");
+}
+
+#lobby li.GpiLive {
+  background-image: url("../lobby/live/GpiLive.jpg");
+}
+
+#lobby li.HgaReal {
+  background-image: url("../lobby/live/HgaReal.jpg");
+}
+
+#lobby li.OgaReal {
+  background-image: url("../lobby/live/OgaReal.jpg");
+}
+
+#lobby li.PtaReal {
+  background-image: url("../lobby/live/PtaReal.jpg");
+}
+
+#lobby li.PtaLive {
+  background-image: url("../lobby/live/PtaLive.jpg");
+}
+
+#lobby li.PtbReal {
+  background-image: url("../lobby/live/PtbReal.jpg");
+}
+
+#lobby li.MgaReal {
+  background-image: url("../lobby/live/MgaReal.jpg");
+}
+
+#lobby li.SaReal {
+  background-image: url("../lobby/live/SaReal.jpg");
+}
+
+#lobby li.SbLive {
+  background-image: url("../lobby/live/SbLive.jpg");
+}
+
+#lobby li.SunbetReal {
+  background-image: url("../lobby/live/SunbetReal.jpg");
+}
+
+#lobby li.WmReal {
+  background-image: url("../lobby/live/WmReal.jpg");
+}
+
+#lobby li.RyReal {
+  background-image: url("../lobby/live/RyReal.jpg");
+}
+
+#lobby li.Ry2Real {
+  background-image: url("../lobby/live/Ry2Real.jpg");
+}
+/*# sourceMappingURL=Live.css.map */

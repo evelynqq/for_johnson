@@ -1,0 +1,22 @@
+﻿@import '../../../../_Common/Css/GameCode';
+
+#lobby {
+    padding: 45px 0 70px;
+}
+
+#banner {
+    background-image: url('../Lobby/Lottery/banner.jpg');
+}
+
+.game-list > li {
+    width: 326px;
+    height: 325px;
+    padding-top: 260px;
+}
+
+// gamebox-list
+@each $gamebox in $board-list {
+    #lobby li.#{$gamebox} {
+        background-image: url('../lobby/Board/#{$gamebox}.jpg');
+    }
+}

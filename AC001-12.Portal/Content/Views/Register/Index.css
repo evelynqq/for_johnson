@@ -1,0 +1,217 @@
+﻿/* #region 針對type=number  會出現右邊上下箭頭做隐藏 */
+input[type="number"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+    input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none; /*for chrome*/
+    }
+
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none; /*for chrome*/
+    }
+/* #endregion 針對type=number  會出現右邊上下箭頭 */
+#articles h2 {
+    position: relative;
+}
+
+.form-group .control-label {
+    width: 20%;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 32px;
+}
+
+    .form-group .control-label .fa,
+    .fa-star {
+        color: #b20000;
+    }
+
+.form-group .control-div {
+    width: 35%;
+    text-align: left;
+    line-height: 32px;
+}
+
+.form-group .control-info {
+    display: inline-block;
+    width: 45%;
+    text-align: left;
+}
+
+.form-group .control-div input,
+#checkcode-input-group input {
+    display: block;
+    width: 100%;
+    height: 32px;
+    padding: 5px 4px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #555;
+    border: none;
+    border-radius: 3px;
+}
+    /* 此為預設顏色，若各站需特別色系請由此修改，不需要可整段刪除 */
+    .form-group .control-div input::-webkit-input-placeholder {
+        color: transparent;
+    }
+
+    .form-group .control-div input::-moz-placeholder {
+        color: transparent;
+    }
+
+    .form-group .control-div input:-ms-input-placeholder {
+        color: transparent;
+    }
+
+    .form-group .control-div input.placeholder {
+        color: transparent;
+    }
+/* #endregion 輸入框placeholder顏色 */
+.form-group .control-div > label {
+    display: inline-block;
+}
+
+.form-group .control-div input[type="radio"],
+.form-group .control-div input[type="checkbox"] {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+}
+
+.modal {
+    background: rgba(0,0,0,0.5);
+}
+
+.modal-dialog {
+    width: 700px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+fieldset {
+    width: 100%;
+    margin: 0 auto;
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+
+    fieldset#last-fieldset .form-group .control-div {
+        width: 50%;
+    }
+
+.showMore {
+    display: none;
+}
+
+#moreoption, .agreement {
+    color: #ff0000;
+    cursor: pointer;
+}
+
+    #moreoption:hover,
+    .agreement:hover {
+        color: #b20000;
+    }
+
+a.agreement:hover {
+    text-decoration: underline;
+}
+
+.hasShow {
+    display: block;
+    -webkit-transition: all linear 3s;
+    -moz-transition: all linear 3s;
+    -ms-transition: all linear 3s;
+    -o-transition: all linear 3s;
+    transition: all linear 3s;
+}
+/*輸入驗證碼的群組*/
+#checkcode-input-group {
+    display: inline-block;
+    float: left;
+    width: 200px;
+    height: 32px;
+    background: #fffadc;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+    #checkcode-input-group > input {
+        display: inline-block;
+        float: left;
+        width: 70%;
+    }
+
+    #checkcode-input-group > span {
+        float: left;
+        width: 30%;
+    }
+
+.checkcode {
+    position: relative;
+}
+
+    .checkcode img {
+        width: 100%;
+        height: 100%;
+        border-radius: 3px;
+    }
+
+#btn-submit,
+#btn-reset {
+    width: 110px;
+    height: 31px;
+    margin: 0 5px;
+    color: #fff;
+    letter-spacing: 2px;
+    background: #b4564a;
+    border: none;
+}
+
+    #btn-submit:hover,
+    #btn-reset:hover {
+        background-position: center bottom;
+    }
+
+.modal-header {
+    color: #fff;
+    text-align: left;
+    background: #808080;
+}
+
+.modal-content,
+.modal-dialog,
+.modal-body,
+.modal-footer {
+    background: #fff;
+}
+
+.modal-footer {
+    margin-top: 15px;
+    padding: 19px 20px 20px;
+    text-align: right;
+    border-top: 1px solid #e5e5e5;
+}
+
+.modal-body > ul {
+    list-style-type: disc;
+    padding-left: 30px;
+}
+
+    .modal-body > ul li {
+        line-height: 2em;
+    }
+
+.modal-header > .modal-title {
+    color: #fff;
+    font-weight: normal;
+}
+
+.lineheight {
+    color: #ff0000;
+}

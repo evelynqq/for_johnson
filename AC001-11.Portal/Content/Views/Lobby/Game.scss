@@ -1,0 +1,107 @@
+﻿@import '../../../../_Common/Css/GameCode';
+
+#banner {
+    background-image: url('../Lobby/Game/banner.jpg');
+}
+
+#lobby {
+    position: relative;
+}
+
+#lobby .prev,
+#lobby .next {
+    position: absolute;
+    top: 25px;
+    display: block;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    background: #23a6da;
+    border-radius: 50px;
+    transition: all 0.2s;
+    &:before {
+        font-size: 20px;
+        line-height: 36px;
+        font-family: sans-serif;
+        padding: 14px;
+    }
+    &:hover {
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+    }
+}
+
+#lobby .prev {
+    left: -10px;
+    &:before {
+        content: '<';
+    }
+}
+
+#lobby .next {
+    right: -10px;
+    &:before {
+        content: '>';
+    }
+}
+
+#lobby .slider-left {
+    overflow: hidden;
+    height: 88px;
+}
+
+#lobby .tempWrap {
+    margin: auto;
+}
+
+.game-list li {
+    display: inline-block;
+    width: 150px;
+    height: 58px;
+    padding: 10px 0;
+    margin: 16px 2px;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-color: #cbe6f4;
+    cursor: pointer;
+    font-size: 15px;
+    color: #0069ba;
+    border-radius: 50px;
+    text-align: left;
+    line-height: 20px;
+    &:before {
+        content: '';
+        position: relative;
+        width: 50px;
+        height: 15px;
+        display: inline-block;
+    }
+    div {
+        font-size: 12px;
+        display: inherit;
+        position: relative;
+        left: 51px;
+    }
+    &:not([game-box='more']):hover,
+    .active {
+        background-position: center bottom;
+        background-color: #0094ca;
+        color: #fff;
+        transition: background-color 600ms;
+    }
+}
+// gamebox-list
+@each $gamebox in $game-list {
+    @if $gamebox != more {
+        #lobby li[game-box='#{$gamebox}'] {
+            background-image: url('../lobby/Game/#{$gamebox}.png');
+        }
+    }
+}
+
+#lobby iframe {
+    display: block;
+    width: 960px;
+    height: 1020px;
+    margin: 10px auto;
+}

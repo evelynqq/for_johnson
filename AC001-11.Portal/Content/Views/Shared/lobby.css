@@ -1,0 +1,18 @@
+﻿#lobby {
+    width: 1000px;
+}
+
+.game-list {
+    list-style: none;
+    margin: 0;
+    padding: 0px 10px;
+    font-size: 0;
+    text-align: center;
+}
+
+    .game-list > li {
+        position: relative;
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-position: top center;
+    }

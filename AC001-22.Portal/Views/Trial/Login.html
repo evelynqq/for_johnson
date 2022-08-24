@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html @* xmlns:ng="http://angularjs.org" *@ id="ng-app" ng-app="portalApp" meidon-time="@ViewBag.MeiDonNow" @* 主機的美東時間 *@ moment-lang="@ViewBag.Language" @* 瀏覽器語系 *@ ng-init="'@Resources.Shared.Head_Title'">
+
+<head>
+    <title>welcome</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="shortcut icon" href="../../../_Common/Content/Views/Shared/images/favicon.ico" />
+    <link href="../../bundles/site.css" rel="stylesheet" />
+    <link href="../../../_Common/Content/Views/Trial/index.css" rel="stylesheet" />
+    <script src="../../../_Common/Scripts/jquery/v1.12.4/jquery.min.js"></script>
+    <script src="../../bundles/include-html.js"></script>
+</head>
+
+<body class="layout" ng-controller="LayoutCtrl">
+    <div class="wrapper">  
+        <div id="content" ng-controller="TrialCtrl" class="ng-scope">
+            <form ng-submit="apply(this)" class="ng-pristine ng-invalid ng-invalid-required">
+                <fieldset>
+                    <legend id="login-logo"></legend>
+                    <div class="form-group">
+                        <label class="control-label">
+                            試玩帳號
+                        </label>
+                        <input name="username" type="text" class="form-control ng-pristine ng-invalid ng-invalid-required" ng-model="params.username" autofocus="" required="">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">
+                            試玩密碼
+                        </label>
+                        <input name="password" type="password" class="form-control ng-pristine ng-invalid ng-invalid-required" ng-model="params.password" required="">
+                    </div>
+                    <div class="form-group error-msg">
+                        
+                    </div>
+                    <button id="btn-login"></button>
+                    
+                    <div id="trial-service" ng-controller="LayoutCtrl" class="form-group tip-msg ng-scope">
+                        點擊
+                        <a href="javascript:void(0)" ng-click="lineChatClick()">在線客服</a>申請試玩
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

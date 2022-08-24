@@ -1,0 +1,19 @@
+﻿#lobby {
+    padding: 20px 0;
+}
+
+    #lobby .game-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 0;
+        text-align: center;
+    }
+
+        #lobby .game-list li {
+            display: inline-block;
+        }
+
+            #lobby .game-list li:hover {
+                border: 1px solid #f70000;
+            }

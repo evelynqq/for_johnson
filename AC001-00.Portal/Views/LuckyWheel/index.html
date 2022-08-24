@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html
+  @*
+  xmlns:ng="http://angularjs.org"
+  *@
+  id="ng-app"
+  ng-app="portalApp"
+  meidon-time="@ViewBag.MeiDonNow"
+  @*
+  主機的美東時間
+  *@
+  moment-lang="@ViewBag.Language"
+  @*
+  瀏覽器語系
+  *@
+  ng-init="'@Resources.Shared.Head_Title'"
+>
+  <head>
+    <style type="text/css">
+      @charset "UTF-8";
+
+      [ng\:cloak],
+      [ng-cloak],
+      [data-ng-cloak],
+      [x-ng-cloak],
+      .ng-cloak,
+      .x-ng-cloak,
+      .ng-hide {
+        display: none !important;
+      }
+
+      ng\:form {
+        display: block;
+      }
+
+      .ng-animate-block-transitions {
+        transition: 0s all !important;
+        -webkit-transition: 0s all !important;
+      }
+    </style>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"
+    />
+    <title>welcome</title>
+    <link
+      rel="shortcut icon"
+      href="../../../_Common/Content/Views/Shared/images/favicon.ico"
+    />
+    <link
+      href="../../../_Common/Content/bootstrap.custom.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../../../_Common/Content/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link href="../../../_Common/Content/normalize.min.css" rel="stylesheet" />
+    <!--[if lte IE 9]>
+      <script src="../../../../_Common/Scripts/placeholders.min.js"></script>
+      <script src="../../../../_Common/Scripts/html5shiv.js"></script>
+    <![endif]-->
+    <link
+      href="../../../_Common/Content/Views/LuckyWheel/Index.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../../../_Common/Content/Views/LuckyWheel/Roulette.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../../../_Common/Content/Views/LuckyWheel/Custom.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body
+    ng-class="{'luckywheel': luckyWheelStatus,'preview':previewStatus}"
+    ng-controller="luckywheelCtrl"
+    class="ng-scope luckywheel"
+  >
+    <header>
+      <div class="wrapper">
+        <h3 class="luckywheel-date" ng-show="luckyWheelStatus">
+          <span ng-bind="activeDateText" class="ng-binding">活动时间 :</span>
+          <span ng-bind="startDate" class="ng-binding">10月22日</span>
+          <span ng-bind="'-'" class="ng-binding">-</span>
+          <span ng-bind="endDate" class="ng-binding">10月31日</span>
+        </h3>
+        <h1 class="luckywheel-title ng-binding" ng-bind="eventName">
+          万圣节欢乐奇幻礼包
+        </h1>
+      </div>
+    </header>
+    <div class="content" ng-show="luckyWheelStatus">
+      <div class="wrapper">
+        <div class="game-panel" load-game="">
+          <div
+            class="roulette ng-scope area6"
+            roulette-wheel=""
+            roulette-radius="220"
+            img-src="../../../../_Common/Content/Views/LuckyWheel/roulette_arrow.png"
+            custom-class="ui-rotate-arrow"
+          >
+            <div class="roulette-wheel" style="width: 440px; height: 440px">
+              <div
+                class="roulette-reward roulette-reward-1111"
+                style="
+                  position: absolute;
+                  left: 165.39891206367338px;
+                  top: 18.732245397006622px;
+                  width: 109.20217587265338px;
+                  height: 109.20217587265338px;
+                "
+              >
+                <img
+                  style="
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 109.20217587265338px;
+                    height: 109.20217587265338px;
+                    font-size: 36.40072529088446px;
+                  "
+                  src="http://cdn2.gjsoft.cc/Web.Portal/LuckyWheel/Upload/RewardImages/bfc941508a0f4d89ab29f37ca53644e9.png"
+                  title="魔域神火碎晶"
+                  alt="魔域神火碎晶"
+                />
+              </div>
+              <div
+                class="roulette-reward roulette-reward-1112"
+                style="
+                  position: absolute;
+                  left: 292.4159712853911px;
+                  top: 92.06557873034005px;
+                  width: 109.20217587265338px;
+                  height: 109.20217587265338px;
+                "
+              >
+                <img
+                  style="
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 109.20217587265338px;
+                    height: 109.20217587265338px;
+                    font-size: 36.40072529088446px;
+                  "
+                  src="http://cdn2.gjsoft.cc/Web.Portal/LuckyWheel/Upload/RewardImages/a30c0101d37540a18e3b9e3565f2a97d.png"
+                  title="魔域经验石"
+                  alt="魔域经验石"
+                />
+              </div>
+              <div
+                class="roulette-reward roulette-reward-1113"
+                style="
+                  position: absolute;
+                  left: 292.415971285391px;
+                  top: 238.73224539700675px;
+                  width: 109.20217587265338px;
+                  height: 109.20217587265338px;
+                "
+              >
+                <img
+                  style="
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 109.20217587265338px;
+                    height: 109.20217587265338px;
+                    font-size: 36.40072529088446px;
+                  "
+                  src="http://cdn2.gjsoft.cc/Web.Portal/LuckyWheel/Upload/RewardImages/3a75f83734274228830c6803d25271b7.png"
+                  title="传说神火秘宝"
+                  alt="传说神火秘宝"
+                />
+              </div>
+              <div
+                class="roulette-reward roulette-reward-1114"
+                style="
+                  position: absolute;
+                  left: 165.39891206367327px;
+                  top: 312.06557873034px;
+                  width: 109.20217587265338px;
+                  height: 109.20217587265338px;
+                "
+              >
+                <img
+                  style="
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 109.20217587265338px;
+                    height: 109.20217587265338px;
+                    font-size: 36.40072529088446px;
+                  "
+                  src="http://cdn2.gjsoft.cc/Web.Portal/LuckyWheel/Upload/RewardImages/d708eb3b8acd4aa68959fd6c3354a27e.png"
+                  title="魔幻灵魂礼包"
+                  alt="魔幻灵魂礼包"
+                />
+              </div>
+              <div
+                class="roulette-reward roulette-reward-1115"
+                style="
+                  position: absolute;
+                  left: 38.381852841955634px;
+                  top: 238.7322453970067px;
+                  width: 109.20217587265338px;
+                  height: 109.20217587265338px;
+                "
+              >
+                <img
+                  style="
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 109.20217587265338px;
+                    height: 109.20217587265338px;
+                    font-size: 36.40072529088446px;
+                  "
+                  src="http://cdn2.gjsoft.cc/Web.Portal/LuckyWheel/Upload/RewardImages/72904b93809945d2b4c5d62361791b7f.png"
+                  title="暗夜魔晶礼包"
+                  alt="暗夜魔晶礼包"
+                />
+              </div>
+              <div
+                class="roulette-reward roulette-reward-1116"
+                style="
+                  position: absolute;
+                  left: 38.38185284195562px;
+                  top: 92.06557873034px;
+                  width: 109.20217587265338px;
+                  height: 109.20217587265338px;
+                "
+              >
+                <img
+                  style="
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 109.20217587265338px;
+                    height: 109.20217587265338px;
+                    font-size: 36.40072529088446px;
+                  "
+                  src="http://cdn2.gjsoft.cc/Web.Portal/LuckyWheel/Upload/RewardImages/d654e83b8c584068967e0f1c77419b44.png"
+                  title="搞怪礼500"
+                  alt="搞怪礼500"
+                />
+              </div>
+              <div
+                class="roulette-arrow"
+                roulette-arrow=""
+                ng-click="startRaffle()"
+                style="background: none"
+              >
+                <img
+                  class="roulette-arrow-image ng-scope"
+                  src="http://www.d02.gjsoft.local/CdnRedirect/Web.Mobile/_Common/Content/Views/LuckyWheel/roulette_arrow.png"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="panel-shadow">
+          <div class="console-panel" load-console="">
+            <div class="login-panel ng-scope" console-login="">
+              <div
+                class="login-button isLink"
+                ng-class="{'isLink': !isLogin}"
+                ng-click="signIn()"
+              >
+                <span
+                  class="login-main ng-binding"
+                  ng-class="{'isGame': isLogin}"
+                  ng-bind="mainText"
+                  >登入</span
+                >
+                <span class="login-sub ng-binding" ng-bind="subText"></span>
+              </div>
+              <div
+                class="login-info isLink"
+                ng-class="{'isLink': !isLogin}"
+                ng-click="signIn()"
+              >
+                <span ng-bind-html="infoText | trustAsHtml" class="ng-binding"
+                  >or
+                  <span class="text-underline">免费注册抽大奖</span> !!</span
+                >
+              </div>
+            </div>
+            <div
+              class="reward-list ng-scope ng-hide"
+              ng-show="isLogin"
+              reward-list=""
+            >
+              <div class="head">
+                <span class="number-text ng-binding" ng-bind="head.numberText"
+                  >No.</span
+                >
+                <span class="reward-name ng-binding" ng-bind="head.rewardName"
+                  >奖项</span
+                >
+              </div>
+              <ul class="list">
+                <!-- ngRepeat: item in rewardInfoList -->
+                <li ng-repeat="item in rewardInfoList" class="ng-scope">
+                  <span ng-bind="$index + 1" class="ng-binding">1</span>
+                  <span ng-bind="item.Name" class="ng-binding"
+                    >魔域神火碎晶</span
+                  >
+                </li>
+                <!-- end ngRepeat: item in rewardInfoList -->
+                <li ng-repeat="item in rewardInfoList" class="ng-scope">
+                  <span ng-bind="$index + 1" class="ng-binding">2</span>
+                  <span ng-bind="item.Name" class="ng-binding">魔域经验石</span>
+                </li>
+                <!-- end ngRepeat: item in rewardInfoList -->
+                <li ng-repeat="item in rewardInfoList" class="ng-scope">
+                  <span ng-bind="$index + 1" class="ng-binding">3</span>
+                  <span ng-bind="item.Name" class="ng-binding"
+                    >传说神火秘宝</span
+                  >
+                </li>
+                <!-- end ngRepeat: item in rewardInfoList -->
+                <li ng-repeat="item in rewardInfoList" class="ng-scope">
+                  <span ng-bind="$index + 1" class="ng-binding">4</span>
+                  <span ng-bind="item.Name" class="ng-binding"
+                    >魔幻灵魂礼包</span
+                  >
+                </li>
+                <!-- end ngRepeat: item in rewardInfoList -->
+                <li ng-repeat="item in rewardInfoList" class="ng-scope">
+                  <span ng-bind="$index + 1" class="ng-binding">5</span>
+                  <span ng-bind="item.Name" class="ng-binding"
+                    >暗夜魔晶礼包</span
+                  >
+                </li>
+                <!-- end ngRepeat: item in rewardInfoList -->
+                <li ng-repeat="item in rewardInfoList" class="ng-scope">
+                  <span ng-bind="$index + 1" class="ng-binding">6</span>
+                  <span ng-bind="item.Name" class="ng-binding">搞怪礼500</span>
+                </li>
+                <!-- end ngRepeat: item in rewardInfoList -->
+              </ul>
+            </div>
+            <div class="account-record ng-scope" account-record="">
+              <div class="head">
+                <span class="number-text ng-binding" ng-bind="head.numberText"
+                  >No.</span
+                >
+                <span
+                  class="reward-account ng-binding"
+                  ng-bind="head.rewardAccount"
+                  >中奖帐号</span
+                >
+                <span class="reward-name ng-binding" ng-bind="head.rewardName"
+                  >奖项</span
+                >
+              </div>
+              <ul class="list">
+                <!-- ngRepeat: item in recordList -->
+                <li ng-repeat="item in recordList" class="ng-scope">
+                  <span ng-bind="$index + 1" class="ng-binding">1</span>
+                  <span ng-bind="item.Account" class="ng-binding"
+                    >i*******6</span
+                  >
+                  <span ng-bind="item.RewardName" class="ng-binding"
+                    >传说神火秘宝</span
+                  >
+                </li>
+                <!-- end ngRepeat: item in recordList -->
+                <li ng-repeat="item in recordList" class="ng-scope">
+                  <span ng-bind="$index + 1" class="ng-binding">2</span>
+                  <span ng-bind="item.Account" class="ng-binding"
+                    >i*******6</span
+                  >
+                  <span ng-bind="item.RewardName" class="ng-binding"
+                    >传说神火秘宝</span
+                  >
+                </li>
+                <!-- end ngRepeat: item in recordList -->
+                <li ng-repeat="item in recordList" class="ng-scope">
+                  <span ng-bind="$index + 1" class="ng-binding">3</span>
+                  <span ng-bind="item.Account" class="ng-binding"
+                    >i*******6</span
+                  >
+                  <span ng-bind="item.RewardName" class="ng-binding"
+                    >魔域神火碎晶</span
+                  >
+                </li>
+                <!-- end ngRepeat: item in recordList -->
+                <li ng-repeat="item in recordList" class="ng-scope">
+                  <span ng-bind="$index + 1" class="ng-binding">4</span>
+                  <span ng-bind="item.Account" class="ng-binding"
+                    >i*******6</span
+                  >
+                  <span ng-bind="item.RewardName" class="ng-binding"
+                    >魔域经验石</span
+                  >
+                </li>
+                <!-- end ngRepeat: item in recordList -->
+                <li ng-repeat="item in recordList" class="ng-scope">
+                  <span ng-bind="$index + 1" class="ng-binding">5</span>
+                  <span ng-bind="item.Account" class="ng-binding"
+                    >i*******9</span
+                  >
+                  <span ng-bind="item.RewardName" class="ng-binding"
+                    >搞怪礼500</span
+                  >
+                </li>
+                <!-- end ngRepeat: item in recordList -->
+                <li ng-repeat="item in recordList" class="ng-scope">
+                  <span ng-bind="$index + 1" class="ng-binding">6</span>
+                  <span ng-bind="item.Account" class="ng-binding"
+                    >j*******9</span
+                  >
+                  <span ng-bind="item.RewardName" class="ng-binding"
+                    >prize3</span
+                  >
+                </li>
+                <!-- end ngRepeat: item in recordList -->
+                <li ng-repeat="item in recordList" class="ng-scope">
+                  <span ng-bind="$index + 1" class="ng-binding">7</span>
+                  <span ng-bind="item.Account" class="ng-binding"
+                    >t******e</span
+                  >
+                  <span ng-bind="item.RewardName" class="ng-binding"
+                    >prize2</span
+                  >
+                </li>
+                <!-- end ngRepeat: item in recordList -->
+                <li ng-repeat="item in recordList" class="ng-scope">
+                  <span ng-bind="$index + 1" class="ng-binding">8</span>
+                  <span ng-bind="item.Account" class="ng-binding"
+                    >t******e</span
+                  >
+                  <span ng-bind="item.RewardName" class="ng-binding"
+                    >prize2</span
+                  >
+                </li>
+                <!-- end ngRepeat: item in recordList -->
+                <li ng-repeat="item in recordList" class="ng-scope">
+                  <span ng-bind="$index + 1" class="ng-binding">9</span>
+                  <span ng-bind="item.Account" class="ng-binding"
+                    >t******e</span
+                  >
+                  <span ng-bind="item.RewardName" class="ng-binding"
+                    >prize2</span
+                  >
+                </li>
+                <!-- end ngRepeat: item in recordList -->
+                <li ng-repeat="item in recordList" class="ng-scope">
+                  <span ng-bind="$index + 1" class="ng-binding">10</span>
+                  <span ng-bind="item.Account" class="ng-binding"
+                    >t******e</span
+                  >
+                  <span ng-bind="item.RewardName" class="ng-binding"
+                    >prize2</span
+                  >
+                </li>
+                <!-- end ngRepeat: item in recordList -->
+                <li ng-repeat="item in recordList" class="ng-scope">
+                  <span ng-bind="$index + 1" class="ng-binding">11</span>
+                  <span ng-bind="item.Account" class="ng-binding"
+                    >t******e</span
+                  >
+                  <span ng-bind="item.RewardName" class="ng-binding"
+                    >prize2</span
+                  >
+                </li>
+                <!-- end ngRepeat: item in recordList -->
+                <li ng-repeat="item in recordList" class="ng-scope">
+                  <span ng-bind="$index + 1" class="ng-binding">12</span>
+                  <span ng-bind="item.Account" class="ng-binding"
+                    >t******e</span
+                  >
+                  <span ng-bind="item.RewardName" class="ng-binding"
+                    >prize3</span
+                  >
+                </li>
+                <!-- end ngRepeat: item in recordList -->
+                <li ng-repeat="item in recordList" class="ng-scope">
+                  <span ng-bind="$index + 1" class="ng-binding">13</span>
+                  <span ng-bind="item.Account" class="ng-binding"
+                    >t******a</span
+                  >
+                  <span ng-bind="item.RewardName" class="ng-binding"
+                    >prize2</span
+                  >
+                </li>
+                <!-- end ngRepeat: item in recordList -->
+                <li ng-repeat="item in recordList" class="ng-scope">
+                  <span ng-bind="$index + 1" class="ng-binding">14</span>
+                  <span ng-bind="item.Account" class="ng-binding"
+                    >t******a</span
+                  >
+                  <span ng-bind="item.RewardName" class="ng-binding"
+                    >prize1</span
+                  >
+                </li>
+                <!-- end ngRepeat: item in recordList -->
+              </ul>
+            </div>
+            <div
+              class="serial-number ng-scope ng-hide"
+              ng-show="isLogin"
+              console-serial-number=""
+            >
+              <input
+                type="text"
+                placeholder="请输入您的兑奖序号..."
+                ng-model="serialNumber"
+                class="ng-pristine ng-valid"
+              />
+              <a
+                href="javascript:void(0)"
+                ng-click="submitSerialnumber()"
+                ng-bind="serialNumberSubmit"
+                class="ng-binding"
+                >ENTER</a
+              >
+              <div
+                class="raffleCount-tip ng-hide"
+                ng-show="showRaffleCount"
+                style=""
+              >
+                <span ng-bind="countFrontText" class="ng-binding"
+                  >恭喜您获得</span
+                >
+                <span ng-bind="raffleTimes" class="ng-binding"></span>
+                <span ng-bind="countBackText" class="ng-binding"
+                  >次 抽奖机会</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer ng-show="luckyWheelStatus" class="">
+      <div class="wrapper">
+        <h2 class="ng-binding">活动说明：</h2>
+        <p class="ng-binding">
+          一年一度的万圣节又来了，我们精心准备了一了万圣节抽奖活动及丰富奖品等着你!
+          从10月24日12:00到10月31日11:59（北京时间）投注满 1,000
+          以上即可获得一个抽奖序号，您就有机会赢取下列六个奖品之一。
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

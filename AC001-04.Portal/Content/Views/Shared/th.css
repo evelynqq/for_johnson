@@ -1,0 +1,26 @@
+﻿#account-box > form button {
+    font-size: 12px;
+}
+
+#action-box .logout {
+    font-size: 12px;
+}
+
+nav ul.mainnav > li > a {
+    font-size: 14px;
+}
+
+nav ul.mainnav > li#chat > a {
+    font-size: 12px;
+    letter-spacing: -1px;
+}
+
+#un-lobby aside ul li a {
+    width: auto;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+#footer ul#footer-nav li a {
+    text-transform: uppercase;
+}

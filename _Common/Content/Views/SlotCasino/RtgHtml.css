@@ -1,0 +1,93 @@
+﻿/* #region header */
+#search {
+    background-color: #c5171e;
+}
+/* #endregion header */
+
+/* #region nav */
+nav {
+    padding: 0;
+    background-color: #c5171e;
+}
+
+#game-nav > li {
+    height: 50px;
+    margin: 0 10px 0 0;
+}
+
+    #game-nav > li > span {
+        position: relative;
+        z-index: 1;
+        display: block;
+        height: 32px;
+        margin: 9px 0;
+        padding: 0 16px;
+        font-weight: bold;
+        border: 2px solid transparent;
+    }
+
+    #game-nav > li:hover span,
+    #game-nav > li.active span {
+        border-color: #fff;
+    }
+
+ol.subnav {
+    padding: 0;
+}
+
+    ol.subnav > li {
+        color: #fff;
+        background-color: #c5171e;
+    }
+
+        ol.subnav > li:hover {
+            color: #c5171e;
+            background-color: #fff;
+        }
+/* #endregion nav */
+
+/* #region recommend-list */
+#recommend-list .slick-dots li.slick-active,
+#recommend-list .slick-dots li.slick-active:hover,
+#recommend-list .slick-prev:hover,
+#recommend-list .slick-next:hover {
+    background-color: #c5171e;
+}
+
+#recommend-list .list-title {
+    border-bottom: 2px solid #c5171e;
+}
+
+    #recommend-list .list-title span {
+        background-color: #c5171e;
+    }
+
+    #recommend-list .list-title a {
+        color: #c5171e;
+    }
+/* #endregion recommend-list */
+
+/* #region 游戏列表区块 */
+.game-list li {
+    border: 1px solid #c5171e;
+}
+
+    .game-list li:hover {
+        background-color: #c5171e;
+    }
+
+        .game-list li:hover .game-logo:before {
+            background: url('../../../../_Common/Content/Views/SlotCasino/Rtg/hover.png') no-repeat center;
+        }
+
+        .game-list li:hover .game-text {
+            color: #fff;
+        }
+/* #endregion 游戏列表区块 */
+
+/* #region pager */
+#pager li[ng-click]:hover {
+    color: #fff;
+    background-color: #c5171e;
+}
+/* #endregion pager */

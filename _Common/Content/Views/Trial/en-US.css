@@ -1,0 +1,14 @@
+﻿.trial-login a {
+    color: #0094ff;
+    margin: 20px 10px;
+    font-size: 22px;
+}
+
+#content form {
+    width: 400px;
+    margin: 50px 30px 20px;
+}
+
+form .control-label {
+    width: 120px;
+}

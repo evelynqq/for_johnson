@@ -1,0 +1,572 @@
+﻿#banner {
+    height: 600px;
+    background-image: none;
+    background-color: #151515;
+}
+
+/* #region slide-banner樣式 */
+#slide-banner {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+}
+
+    #slide-banner .slide {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -960px;
+    }
+
+
+        #slide-banner .slide a {
+            display: inline-block;
+            width: 1920px;
+            height: 600px; /* 通常只會改這兩個地方 跟著圖片高度 */
+        }
+
+    
+    /* 點點切換紐 */
+    #slide-banner .slide-pager {
+        position: absolute;
+        bottom: 40px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+        #slide-banner .slide-pager li {
+            display: inline-block;
+            width: 13px;
+            height: 13px;
+            margin: 0 4px;
+            /* 若要数字编号可以把font-size: 0拿掉 */
+            font-size: 0;
+            background-color: #db5330;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+            #slide-banner .slide-pager .on,
+            #slide-banner .slide-pager li:hover {
+                background-color: #fff;
+            }
+/* #endregion slide-banner樣式 */
+
+#imgNames img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -960px;
+    -moz-transition: all linear 500ms;
+    -o-transition: all linear 500ms;
+    -webkit-transition: all linear 500ms;
+    transition: all linear 500ms;
+    opacity: 0;
+    filter: alpha(opacity=0)\9;
+    cursor: pointer;
+}
+
+    #imgNames img.show {
+        opacity: 1;
+        filter: alpha(opacity=100)\9;
+    }
+
+#ad-pager {
+    display: inline-block;
+    position: absolute;
+    top: 440px;
+    left: auto;
+}
+
+    #ad-pager strong {
+        display: inline-block;
+        position: relative;
+        margin: 0 4px;
+        width: 16px;
+        height: 16px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        background: #eee;
+    }
+
+        #ad-pager strong.active {
+            background: #ffd053;
+        }
+
+        #ad-pager strong a {
+            display: block;
+            height: 100%;
+        }
+
+#content > .wrapper {
+    width: 100%;
+}
+
+#slots {
+    font-family: Arial,'Microsoft YaHei','微軟雅黑體','微软雅黑体';
+}
+
+/* #region link-info */
+#link-info {
+    margin: 20px auto;
+    font-size: 0;
+}
+
+    #link-info li {
+        display: inline-block;
+        position: relative;
+        width: 250px;
+        height: 60px;
+        opacity: .65;
+        background-repeat: no-repeat;
+    }
+
+        #link-info li h3 {
+            margin: 0 0 5px;
+            color: #fff;
+            font-size: 18px;
+            font-weight: normal;
+        }
+
+        #link-info li a {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            padding: 5px 0 0 80px;
+            color: #fff;
+            font-size: 12px;
+            text-align: left;
+            text-decoration: none;
+        }
+
+        #link-info li.link01 {
+            background-image: url('../Home/images/slot/ico_01.png');
+        }
+
+        #link-info li.link02 {
+            background-image: url('../Home/images/slot/ico_02.png');
+        }
+
+        #link-info li.link03 {
+            background-image: url('../Home/images/slot/ico_03.png');
+        }
+
+        #link-info li.link04 {
+            background-image: url('../Home/images/slot/ico_04.png');
+        }
+
+        #link-info li:hover {
+            opacity: 1;
+        }
+
+/* #endregion link-info */
+
+/* #region 電子選單 */
+#minislot {
+    padding-bottom: 30px;
+    font-size: 0;
+}
+
+#game-select {
+    vertical-align: top;
+    border-top: 1px solid #3e4048;
+    border-bottom: 1px solid #3e4048;
+}
+
+    #game-select li {
+        padding: 17px 0 0px 76px;
+        width: 180px;
+        height: 70px;
+        color: #fff;
+        font-size: 16px;
+        border-left: 4px solid #3e4048;
+        border-bottom: 1px solid #3e4048;
+        text-align: left;
+        background: #18202e no-repeat 15px 15px;
+        opacity: .8;
+    }
+
+        #game-select li.game-active,
+        #game-select li:hover {
+            border-left: 4px solid #dd5227;
+            opacity: 1;
+        }
+
+        #game-select li span {
+            display: block;
+            color: #9195ad;
+            font-size: 12px;
+        }
+
+        #game-select li.select01 {
+            background-image:url('../Home/images/slot/icon_mg.png');
+        }
+
+        #game-select li.select02 {
+            background-image:url('../Home/images/slot/icon_pt.png');
+        }
+
+        #game-select li.select03 {
+            background-image:url('../Home/images/slot/icon_bb.png');
+        }
+
+        #game-select li.select04 {
+            background-image:url('../Home/images/slot/icon_mw.png');
+        }
+
+        #game-select li.select05 {
+            border-bottom: none;
+            background-image:url('../Home/images/slot/icon_jdb.png');
+        }
+
+.game-view {
+    width: 520px;
+    height: 352px;
+    vertical-align: top;
+    border: 1px solid #3e4048;
+    border-left: none;
+}
+
+    .game-view li {
+        position: relative;
+        display: inline-block;
+        margin: 11px 7px 0;
+        width: 150px;
+        height: 163px;
+        color: #fff;
+        font-size: 14px;
+    }
+
+        .game-view li a {
+            display: inline-block;
+            width: 150px;
+            height: 100px;
+            border: 2px solid transparent;
+            background-color: transparent;
+            -webkit-transition: background-color .4s;
+            -o-transition: background-color .4s;
+            -moz-transition: background-color .4s;
+            transition: background-color .4s;
+        }
+
+        .game-view li:hover a {
+            background: url('../Home/images/slot/slotstabgo.png') no-repeat center;
+            background-color: rgba(59,31,1,0.7);
+            border: 2px solid #dd5227;
+        }
+
+        .game-view li p {
+            margin: 5px auto;
+        }
+
+        .game-view li:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 20px;
+            width: 150px;
+            height: 13px;
+            background: url('../Home/images/slot/slotsstar.png') no-repeat center;
+        }
+        /* MG */
+        .game-view li.mg01 {
+            background: url('../Home/images/slot/mg01.jpg') no-repeat;
+        }
+
+        .game-view li.mg02 {
+            background: url('../Home/images/slot/mg02.jpg') no-repeat;
+        }
+
+        .game-view li.mg03 {
+            background: url('../Home/images/slot/mg03.jpg') no-repeat;
+        }
+
+        .game-view li.mg04 {
+            background: url('../Home/images/slot/mg04.jpg') no-repeat;
+        }
+
+        .game-view li.mg05 {
+            background: url('../Home/images/slot/mg05.jpg') no-repeat;
+        }
+
+        .game-view li.mg06 {
+            background: url('../Home/images/slot/mg06.jpg') no-repeat;
+        }
+        /* PT */
+        .game-view li.pt01 {
+            background: url('../Home/images/slot/pt01.jpg') no-repeat;
+        }
+
+        .game-view li.pt02 {
+            background: url('../Home/images/slot/pt02.jpg') no-repeat;
+        }
+
+        .game-view li.pt03 {
+            background: url('../Home/images/slot/pt03.jpg') no-repeat;
+        }
+
+        .game-view li.pt04 {
+            background: url('../Home/images/slot/pt04.jpg') no-repeat;
+        }
+
+        .game-view li.pt05 {
+            background: url('../Home/images/slot/pt05.jpg') no-repeat;
+        }
+
+        .game-view li.pt06 {
+            background: url('../Home/images/slot/pt06.jpg') no-repeat;
+        }
+        /* BB */
+        .game-view li.bb01 {
+            background: url('../Home/images/slot/bb01.jpg') no-repeat;
+        }
+
+        .game-view li.bb02 {
+            background: url('../Home/images/slot/bb02.jpg') no-repeat;
+        }
+
+        .game-view li.bb03 {
+            background: url('../Home/images/slot/bb03.jpg') no-repeat;
+        }
+
+        .game-view li.bb04 {
+            background: url('../Home/images/slot/bb04.jpg') no-repeat;
+        }
+
+        .game-view li.bb05 {
+            background: url('../Home/images/slot/bb05.jpg') no-repeat;
+        }
+
+        .game-view li.bb06 {
+            background: url('../Home/images/slot/bb06.jpg') no-repeat;
+        }
+        /* MW */
+        .game-view li.mw01 {
+            background: url('../Home/images/slot/mw01.png') no-repeat;
+        }
+
+        .game-view li.mw02 {
+            background: url('../Home/images/slot/mw02.png') no-repeat;
+        }
+
+        .game-view li.mw03 {
+            background: url('../Home/images/slot/mw03.png') no-repeat;
+        }
+
+        .game-view li.mw04 {
+            background: url('../Home/images/slot/mw04.png') no-repeat;
+        }
+
+        .game-view li.mw05 {
+            background: url('../Home/images/slot/mw05.png') no-repeat;
+        }
+
+        .game-view li.mw06 {
+            background: url('../Home/images/slot/mw06.png') no-repeat;
+        }
+        /* JDB */
+        .game-view li.jdb01 {
+            background: url('../Home/images/slot/jdb01.png') no-repeat;
+        }
+
+        .game-view li.jdb02 {
+            background: url('../Home/images/slot/jdb02.png') no-repeat;
+        }
+
+        .game-view li.jdb03 {
+            background: url('../Home/images/slot/jdb03.png') no-repeat;
+        }
+
+        .game-view li.jdb04 {
+            background: url('../Home/images/slot/jdb04.png') no-repeat;
+        }
+
+        .game-view li.jdb05 {
+            background: url('../Home/images/slot/jdb05.png') no-repeat;
+        }
+
+        .game-view li.jdb06 {
+            background: url('../Home/images/slot/jdb06.png') no-repeat;
+        }
+/* #endregion 電子選單 */
+
+/* #region 首頁輪播圖 */
+#slide {
+    position: relative;
+    display: inline-block;
+    margin-left: 15px;
+    width: 285px;
+    height: 350px;
+    z-index: 0;
+}
+
+    #slide .cycle-pager {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 101;
+    }
+
+        #slide .cycle-pager span {
+            display: inline-block;
+            width: 95px;
+            height: 4px;
+            background: #623a15;
+            cursor: pointer;
+        }
+
+            #slide .cycle-pager span.cycle-pager-active {
+                background: #ffd053;
+            }
+/* #endregion 首頁輪播圖 */
+
+#home .aboutus {
+    height: 371px;
+    padding: 30px 0 0 155px;
+    background: url('../Home/images/about_n.png') no-repeat center center;
+    font-size: 18px;
+    text-align: left;
+}
+
+    #home .aboutus h3 {
+        color: #9195ad;
+        margin-bottom: 10px;
+    }
+
+        #home .aboutus h3 span.en {
+            margin-left: 15px;
+            color: #9195ad;
+            font-weight: normal;
+            vertical-align: middle;
+        }
+
+    #home .aboutus p {
+        margin: 0;
+        color: #9195ad;
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    #home .aboutus ul {
+        margin-top: 20px;
+    }
+
+        #home .aboutus ul li {
+            position: relative;
+            display: inline-block;
+            width: 107px;
+            height: 104px;
+            padding: 7px 9px 0;
+            vertical-align: top;
+            margin-right: 80px;
+            background: url('../Home/images/about_item.png') no-repeat center center;
+        }
+
+            #home .aboutus ul li span {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 107px;
+                height: 104px;
+                color: #fff;
+                font-size: 29px;
+                text-align: center;
+                line-height: 104px;
+            }
+
+                #home .aboutus ul li span:after {
+                    font-size: 12px;
+                }
+
+            #home .aboutus ul li#counter01 span:after {
+                content: '秒';
+            }
+
+            #home .aboutus ul li#counter02 span:after {
+                content: '分';
+            }
+
+            #home .aboutus ul li#counter03 span:after {
+                content: '家';
+            }
+
+            #home .aboutus ul li:after {
+                position: absolute;
+                bottom: -24px;
+                left: 0;
+                display: inline-block;
+                width: 110px;
+                text-align: center;
+                color: #fff;
+                font-size: 12px;
+            }
+
+            #home .aboutus ul li#counter01:after {
+                content: '存款到帐';
+            }
+
+            #home .aboutus ul li#counter02:after {
+                content: '取款到帐';
+            }
+
+            #home .aboutus ul li#counter03:after {
+                content: '游戏平台';
+            }
+
+.slogan {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    width: 770px;
+    height: 300px;
+    margin-left: -600px;
+    background: url('../Home/images/slogan.png') no-repeat\9;
+}
+
+    .slogan iframe {
+        width: 770px;
+        height: 300px;
+    }
+
+ul#game-list {
+    display: inline-block;
+    margin: 30px 0;
+}
+
+    ul#game-list li {
+        display: inline-block;
+        width: 244px;
+        height: 244px;
+        background-repeat: no-repeat;
+        background-position: left center;
+    }
+
+        ul#game-list li:hover {
+            background-position: right center;
+        }
+
+        ul#game-list li a {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+
+        ul#game-list li[data-img="01"] {
+            background-image: url('../Home/images/live_n.png');
+        }
+
+        ul#game-list li[data-img="02"] {
+            background-image: url('../Home/images/sport_n.png');
+        }
+
+        ul#game-list li[data-img="04"] {
+            background-image: url('../Home/images/lottery_n.png');
+        }
+
+        ul#game-list li[data-img="05"] {
+            background-image: url('../Home/images/slot_n.png');
+        }

@@ -1,0 +1,196 @@
+﻿html, body {
+    background: #e5e5e5;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
+body {
+    margin: 8px;
+    padding: 0;
+}
+
+.body #title {
+    height: 40px;
+    font-size: 15px;
+    font-family: '新細明體';
+}
+
+.panel-body > form {
+    width: 100%;
+}
+
+.container {
+    width: 805px;
+    max-width: none !important;
+    background: #e5e5e5;
+}
+
+.actionbar {
+    width: 107px;
+}
+
+.form-control option {
+    cursor: pointer;
+}
+
+#panel-online-deposit {
+    width: 641px;
+}
+
+.panel-shadow {
+    position: absolute;
+    left: 0;
+    bottom: -19px;
+    width: 100%;
+    height: 18px;
+    background: url('../../../../_Common/Content/Views/OnlineDeposit/images/panel_shadow.jpg') no-repeat;
+}
+
+#amount-limit {
+    color: #656565;
+    font-weight: bold;
+}
+
+.form-control {
+    display: table-cell;
+    height: 32px;
+    padding: 0 4px;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.428571429;
+    border: none;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 2px 3px rgba(0,0,0,0.075);
+    -moz-box-shadow: inset 0 2px 3px rgba(0,0,0,0.075);
+    box-shadow: inset 0 2px 3px rgba(0,0,0,0.075);
+    -moz-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+    .form-control:focus {
+        outline: 0;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 249, 149, 0.6);
+        -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 249, 149, 0.6);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 249, 149, 0.6);
+    }
+
+.input-group {
+    position: relative;
+    display: table;
+    border-collapse: separate;
+}
+
+    .input-group[class*="col-"] {
+        float: none;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .input-group .form-control {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+        .input-group-addon:not(:first-child):not(:last-child),
+        .input-group .form-control:not(:first-child):not(:last-child) {
+            -moz-border-radius: 0;
+            -webkit-border-radius: 0;
+            border-radius: 0;
+        }
+
+.input-group-addon {
+    display: table-cell;
+    width: 1%;
+    padding: 5px 4px;
+    color: #555;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+    line-height: 1;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+    .input-group-addon input[type="radio"],
+    .input-group-addon input[type="checkbox"] {
+        margin-top: 0;
+    }
+
+    .input-group-addon:first-child {
+        border-right: 0;
+    }
+
+    .input-group-addon:first-child,
+    .input-group .form-control:last-child {
+        -webkit-border-bottom-left-radius: 0;
+        border-bottom-left-radius: 0;
+        -webkit-border-top-left-radius: 0;
+        border-top-left-radius: 0;
+    }
+
+#input-group-amount {
+    width: 328px;
+    height: 36px;
+    background: url('../../../../_Common/Content/Views/OnlineDeposit/images/input-amount.png') no-repeat;
+    overflow: hidden;
+}
+
+    #input-group-amount .input-group-addon {
+        background: none;
+        border-color: transparent;
+    }
+
+    #input-group-amount .form-control {
+        background: none;
+    }
+
+.col-xs-7 {
+    position: relative;
+    float: left;
+    width: 58.333333333333336%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/* 客制化部分 */
+.actual-deposit {
+    font-weight: bold;
+}
+
+.tooltip {
+    left: 98%;
+    top: 2px;
+}
+
+    .tooltip.amount .tooltipshow {
+        width: 188px;
+    }
+
+.form-group .control-label {
+    height: 32px;
+    line-height: 32px;
+}
+
+.form-group .control-div > span {
+    height: 32px;
+    line-height: 32px;
+}
+
+.form-group.text-black {
+    color: #000;
+}

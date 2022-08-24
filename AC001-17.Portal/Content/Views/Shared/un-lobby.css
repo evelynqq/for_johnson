@@ -1,0 +1,251 @@
+﻿/* 各頁設定 */
+#un-lobby aside {
+    float: left;
+    width: 250px;
+}
+
+    #un-lobby aside #sidebar {
+        position: relative;
+        list-style-type: none;
+        padding: 0px;
+        margin: 0px;
+    }
+
+        #un-lobby aside #sidebar li {
+            border-bottom: 3px solid #f3f4f0;
+        }
+
+        #un-lobby aside #sidebar li:last-child {
+            border: none;
+        }
+
+            #un-lobby aside #sidebar li a {
+                display: block;
+                height: 45px;
+                line-height: 45px;
+                padding-left: 80px;
+                color: #555;
+                font-size: 16px;
+                font-family: Arial, 'Microsoft YaHei';
+                text-decoration: none;
+                -webkit-transition: all 200ms ease-in;
+                -moz-transition: all 200ms ease-in;
+                -o-transition: all 200ms ease-in;
+                transition: all 200ms ease-in;
+            }
+
+                #un-lobby aside #sidebar li a:before {
+                    content: '<';
+                    margin-right: 5px;
+                }
+
+                #un-lobby aside #sidebar li a:hover, #un-lobby aside #sidebar li.active a {
+                    color: #00afff;
+                    padding-left: 70px;
+                }
+
+#un-lobby #articles {
+    overflow: hidden;
+    font-size: 14px;
+    font-family: Arial, SimSun;
+    color: #999;
+    padding: 10px 30px;
+    min-height: 500px;
+}
+#un-lobby > #articles {
+    border-left: 10px solid #f3f4f0;
+    padding: 0 30px;
+}
+
+        #un-lobby #articles h2 {
+            margin: 20px 0 40px;
+            color: #00afff;
+            font-size: 18px;
+            font-weight: normal;
+            font-family: 'Microsoft Yahei';
+        }
+
+        #un-lobby #articles h3 {
+            width: 90%;
+            margin: 30px auto;
+            padding-bottom: 5px;
+            font-size: 20px;
+            font-family: 'Microsoft Yahei';
+            color: #888;
+            letter-spacing: 1px;
+            text-align: center;
+            border-bottom: 2px solid #888;
+        }
+
+        #un-lobby #articles h4 {
+            color: #888;
+        }
+
+        #un-lobby #articles p {
+            margin: 0 0 10px 0;
+            line-height: 220%;
+        }
+
+        #un-lobby #articles .click {
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #un-lobby #articles a {
+            color: #ff9600;
+        }
+
+        #un-lobby #articles ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #un-lobby #articles li {
+            margin: 5px 0;
+        }
+
+#un-lobby table {
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    background: #353f4b;
+}
+
+    #un-lobby table th,#un-lobby table td {
+        text-align: center;
+        padding: 8px;
+        border: 1px solid rgba(255,255,255,.3);
+    }
+
+/*重點顏色*/
+#articles .highlight {
+    color: #ff0000;
+    font-weight: bolder;
+}
+
+/* #region 合作夥伴tab 供其他页面使用*/
+#articles ul.mtab-menual {
+    list-style-type: none;
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+
+    #articles ul.mtab-menual li {
+        display: inline-block;
+        padding: 5px 15px;
+        font-size: 16px;
+        font-weight: bold;
+        font-family: 'Microsoft YaHei';
+        cursor: pointer;
+        color: #fff;
+        font-size: 13px;
+        background: #0e86ca;
+    }
+
+        #articles ul.mtab-menual li.mtab {
+            background: #00aeff;
+        }
+/* #endregion 合作夥伴tab 供其他页面使用*/
+
+/* #region 关于页面显示异常tab 供其他页面使用*/
+#un-lobby #articles a.link {
+    text-decoration: none;
+}
+/* #endregion 关于页面显示异常tab 供其他页面使用*/
+
+/* #region deposit线上存款页面使用 */
+#articles ul.deposit {
+    list-style-type: none;
+}
+
+    #articles ul.deposit li {
+        font-size: 12px;
+        counter-increment: title;
+    }
+
+        #articles ul.deposit li > a:before {
+            content: "方法 "counter(title,upper-alpha)"、";
+        }
+
+        #articles ul.deposit li > a.external-pay:before {
+            content: '';
+        }
+
+        #articles ul.deposit li a {
+            color: #ff9600;
+            font-size: 16px;
+            text-decoration: underline;
+        }
+
+            #articles ul.deposit li a span.icon {
+                display: block;
+                font-size: 0;
+            }
+
+                #articles ul.deposit li a span.icon img {
+                    vertical-align: top;
+                }
+
+        #articles ul.deposit li .green {
+            color: #0f0;
+        }
+
+        #articles ul.deposit li .toggle {
+            color: #ee0;
+        }
+
+            #articles ul.deposit li .toggle.color {
+                color: #ff3030;
+            }
+
+        #articles ul.deposit li span.event {
+            display: inline-block;
+            width: 51px;
+            height: 25px;
+            vertical-align: middle;
+            background: url('../Deposit/images/event.gif') no-repeat left center;
+        }
+/* #endregion deposit线上存款页面使用 */
+
+
+/*#region account nav共用*/
+.body {
+    position: relative;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 5px;
+    color: #383838;
+    font-size: 15px;
+    font-family: '新細明體';
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+    .body #title {
+        color: #fff;
+        background: #353f4b;
+        text-align: center;
+    }
+
+    .body #account-heading,
+    .body #withdrawal-heading {
+        color: #fff;
+        background: #6477d9;
+    }
+    /*檢視存入帳戶的文字顏色*/
+    .body #show-account-info.btn {
+        color: #fff;
+    }
+/*#endregion account nav共用*/
+
+/* 一鍵取回 */
+.body.container #title,
+.body #account-heading,
+.body #withdrawal-heading,
+#account-popup.modal.in table th {
+    color: #fff;
+    background: #363f4b;
+}

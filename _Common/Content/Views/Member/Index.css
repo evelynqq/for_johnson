@@ -1,0 +1,11 @@
+﻿.container {
+    width: 1000px;
+    max-width: none !important;
+    color: #DDDDDD;
+}
+
+.form-actions {
+    float: none;
+    width: 100px;
+    margin: 0 auto;
+}

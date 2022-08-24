@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html @* xmlns:ng="http://angularjs.org" *@ id="ng-app" ng-app="portalApp" meidon-time="@ViewBag.MeiDonNow" @* 主機的美東時間
+    *@ moment-lang="@ViewBag.Language" @* 瀏覽器語系 *@ ng-init="'@Resources.Shared.Head_Title'">
+
+<head>
+    <title>welcome</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="shortcut icon" href="../../../_Common/Content/Views/Shared/images/favicon.ico" />
+    <link href="../../bundles/site.css" rel="stylesheet" />
+    <link href="../../Content/Views/App/single.css" rel="stylesheet" />
+    <script src="../../../_Common/Scripts/jquery/v1.12.4/jquery.min.js"></script>
+    <script src="../../bundles/include-html.js"></script>
+    <script src="../../../_Common/Scripts/jquery/v1.12.4/jquery.min.js"></script>
+    <script src="../../../_Common/Scripts/jquery.qrcode.min.js"></script>
+</head>
+
+<body class="layout" ng-controller="LayoutCtrl">
+    <div id="app-download">
+        <div class="logo"></div>
+        <div class="content">
+            <div class="title">最强原生APP下载</div>
+            <div class="qr-code"></div>
+            <ul class="app-list">
+                <li class="app-bottom">
+                    <div class="title">
+                        <div class="icon"></div>
+                        <h3>Available now</h3>
+                        <p>iOS|Apple</p>
+                        <i class="fa fa-apple"></i>
+                    </div>
+                </li>
+                <li class="app-bottom">
+                    <div class="title">
+                        <div class="icon"></div>
+                        <h3>Available now</h3>
+                        <p>android</p>
+                        <i class="fa fa-android"></i>
+                    </div>
+                </li>
+            </ul>
+            <ol>
+                <li>◆ 多端加密防止劫持</li>
+                <li>◆ 顺畅快速轻松畅游</li>
+                <li>◆ 电竞投注致体验第一首选！</li>
+            </ol>
+        </div>
+    </div>
+    <div class="footer">
+        <p id="footer-suggest">聚星 Copyright© 2019 GStargaming All Rights Reserved</p>
+    </div>
+    <script>
+        $(function () {
+            $(".qr-code").qrcode({
+                text: "5555",
+            });
+        });
+    </script>
+</body>
+
+</html>

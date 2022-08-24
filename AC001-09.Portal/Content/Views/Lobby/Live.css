@@ -1,0 +1,110 @@
+#banner {
+  background-image: url("../Lobby/Live/banner.jpg");
+}
+
+#lobby .game-list > li {
+  width: 320px;
+  height: 265px;
+  margin: 0px 4px 10px 4px;
+  background-position: center 10px;
+}
+
+#lobby .game-list > li:before {
+  top: 10px;
+  left: 0;
+  width: 320px;
+  height: 198px;
+}
+
+#lobby .game-list > li:after {
+  top: 190px;
+}
+
+#lobby .game-list > li:not([game-box='more']):hover:after {
+  top: 100px;
+}
+
+#lobby li[game-box='more'] {
+  background-image: url("../lobby/live/more.jpg");
+}
+
+#lobby li[game-box='AllBetReal'] {
+  background-image: url("../lobby/live/AllBetReal.jpg");
+}
+
+#lobby li[game-box='AgBr'] {
+  background-image: url("../lobby/live/AgBr.jpg");
+}
+
+#lobby li[game-box='BbinaLive'] {
+  background-image: url("../lobby/live/BbinaLive.jpg");
+}
+
+#lobby li[game-box='BgReal'] {
+  background-image: url("../lobby/live/BgReal.jpg");
+}
+
+#lobby li[game-box='EBetReal'] {
+  background-image: url("../lobby/live/EBetReal.jpg");
+}
+
+#lobby li[game-box='EvoReal'] {
+  background-image: url("../lobby/live/EvoReal.jpg");
+}
+
+#lobby li[game-box='GdReal'] {
+  background-image: url("../lobby/live/GdReal.jpg");
+}
+
+#lobby li[game-box='GpiLive'] {
+  background-image: url("../lobby/live/GpiLive.jpg");
+}
+
+#lobby li[game-box='HgaReal'] {
+  background-image: url("../lobby/live/HgaReal.jpg");
+}
+
+#lobby li[game-box='OgaReal'] {
+  background-image: url("../lobby/live/OgaReal.jpg");
+}
+
+#lobby li[game-box='PtaReal'] {
+  background-image: url("../lobby/live/PtaReal.jpg");
+}
+
+#lobby li[game-box='PtaLive'] {
+  background-image: url("../lobby/live/PtaLive.jpg");
+}
+
+#lobby li[game-box='PtbReal'] {
+  background-image: url("../lobby/live/PtbReal.jpg");
+}
+
+#lobby li[game-box='MgaReal'] {
+  background-image: url("../lobby/live/MgaReal.jpg");
+}
+
+#lobby li[game-box='SaReal'] {
+  background-image: url("../lobby/live/SaReal.jpg");
+}
+
+#lobby li[game-box='SbLive'] {
+  background-image: url("../lobby/live/SbLive.jpg");
+}
+
+#lobby li[game-box='SunbetReal'] {
+  background-image: url("../lobby/live/SunbetReal.jpg");
+}
+
+#lobby li[game-box='WmReal'] {
+  background-image: url("../lobby/live/WmReal.jpg");
+}
+
+#lobby li[game-box='RyReal'] {
+  background-image: url("../lobby/live/RyReal.jpg");
+}
+
+#lobby li[game-box='Ry2Real'] {
+  background-image: url("../lobby/live/Ry2Real.jpg");
+}
+/*# sourceMappingURL=Live.css.map */

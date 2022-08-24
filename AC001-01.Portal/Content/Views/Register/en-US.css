@@ -1,0 +1,19 @@
+﻿.form-group .control-label {
+    width: 27%;
+}
+
+.form-group .control-div {
+    width: 30%;
+}
+
+.form-group .control-info {
+    width: 43%;
+}
+
+.btn-group button {
+	width: 95px;
+}
+
+.btn-group {
+	margin: 45px 0 0 28.5%;
+}

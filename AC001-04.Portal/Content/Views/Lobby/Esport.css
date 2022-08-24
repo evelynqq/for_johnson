@@ -1,0 +1,161 @@
+@charset "UTF-8";
+#banner {
+  background: url("../Lobby/Esport/banner.jpg") no-repeat center #251630;
+}
+
+#lobby .game-list li {
+  width: 305px;
+  height: 345px;
+  margin: 5px 5px 35px;
+  position: relative;
+}
+
+#lobby .game-list li span {
+  margin-top: 350px;
+}
+
+#lobby .game-list li div {
+  display: none;
+}
+
+#lobby .game-list li:hover {
+  -webkit-transform: translate3d(0, -2%, 0);
+          transform: translate3d(0, -2%, 0);
+  -webkit-transition: -webkit-transform .1s linear;
+  transition: -webkit-transform .1s linear;
+  -o-transition: transform .1s linear;
+  transition: transform .1s linear;
+  transition: transform .1s linear, -webkit-transform .1s linear;
+}
+
+#lobby .game-list li:hover div {
+  top: 10px;
+  left: 15px;
+  font-size: 48px;
+  color: #ffffff;
+  position: absolute;
+  display: block;
+}
+
+#lobby .game-list li:hover::before {
+  content: '';
+  width: 305px;
+  height: 345px;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position-y: -10px;
+  background-position-x: -10px;
+  top: 0;
+  left: 0;
+  background-image: url("../lobby/Esport/light.png");
+  background-color: rgba(37, 22, 48, 0.7);
+}
+
+#lobby .game-list li:hover:not([game-box='more'])::after {
+  content: '进入游戏';
+  width: 270px;
+  height: 48px;
+  color: #ffc001;
+  background: rgba(131, 121, 134, 0.6);
+  position: absolute;
+  bottom: 20px;
+  left: 16px;
+  font-size: 21px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  line-height: 48px;
+  text-align: center;
+  border: 1px solid #837986;
+  font-weight: lighter;
+  letter-spacing: 1px;
+}
+
+#lobby .game-list li[game-box='more'] div {
+  top: 10px;
+  left: 15px;
+  text-align: left;
+  font-size: 48px;
+  color: #ffffff;
+  position: absolute;
+  display: block;
+}
+
+#lobby .game-list li[game-box='more']::before {
+  content: '';
+  width: 305px;
+  height: 345px;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position-y: -6px;
+  background-position-x: -10px;
+  top: 0;
+  left: 0;
+  background-image: url("../lobby/Esport/light.png");
+  background-color: transparent;
+}
+
+#lobby .game-list li[game-box='more']:hover {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+#lobby li[game-box='more'] {
+  background-image: url("../lobby/Esport/more.jpg");
+}
+
+#lobby li[game-box='EsbEsport'] {
+  background-image: url("../lobby/Esport/EsbEsport.jpg");
+}
+
+#lobby li[game-box='Esb1Esport'] {
+  background-image: url("../lobby/Esport/Esb1Esport.jpg");
+}
+
+#lobby li[game-box='SabaESport'] {
+  background-image: url("../lobby/Esport/SabaESport.jpg");
+}
+
+#lobby li[game-box='HcEsport'] {
+  background-image: url("../lobby/Esport/HcEsport.jpg");
+}
+
+#lobby li[game-box='CmdEsport'] {
+  background-image: url("../lobby/Esport/CmdEsport.jpg");
+}
+
+#lobby li[game-box='SabaaEsport'] {
+  background-image: url("../lobby/Esport/SabaaEsport.jpg");
+}
+
+#lobby li[game-box='E88Esport'] {
+  background-image: url("../lobby/Esport/E88Esport.jpg");
+}
+
+#lobby li[game-box='GbEsport'] {
+  background-image: url("../lobby/Esport/GbEsport.jpg");
+}
+
+#lobby li[game-box='GbsEsport'] {
+  background-image: url("../lobby/Esport/GbsEsport.jpg");
+}
+
+#lobby li[game-box='LeEsport'] {
+  background-image: url("../lobby/Esport/LeEsport.jpg");
+}
+
+#lobby li[game-box='AviaEsport'] {
+  background-image: url("../lobby/Esport/AviaEsport.jpg");
+}
+
+#lobby li[game-box='Cq9Esport'] {
+  background-image: url("../lobby/Esport/Cq9Esport.jpg");
+}
+
+#lobby li[game-box='TfEsport'] {
+  background-image: url("../lobby/Esport/TfEsport.jpg");
+}
+
+#lobby .game-list li:hover {
+  background-position: top;
+}
+/*# sourceMappingURL=Esport.css.map */

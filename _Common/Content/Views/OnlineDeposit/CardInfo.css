@@ -1,0 +1,112 @@
+﻿body {
+    margin: 0;
+    background: url('../../../../_Common/Content/Views/BetRecord/images/panel_background.jpg') repeat;
+}
+
+.panel {
+    background: url('../../../../_Common/Content/Views/BetRecord/images/panel_background.jpg') repeat;
+    box-shadow: none;
+}
+
+#title {
+    height: 48px;
+    background: #5e5e5e;
+    color: #fff;
+    font-family: 'Microsoft JhengHei';
+    font-size: 21px;
+    font-weight: bold;
+    text-align: center;
+}
+
+table {
+    margin: 0 auto;
+    width: 300px;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+    table tbody tr td {
+        background: #fff;
+        border: 1px solid #ccc;
+        padding: 5px 10px;
+        text-align: justify;
+    }
+
+        table tbody tr td:first-child {
+            font-weight: bold;
+        }
+
+    table tbody tr.highlight {
+        color: #ab1b1b;
+    }
+
+        table tbody tr.highlight td {
+            background: #f2dede;
+            border-color: #efaaaa;
+        }
+
+    table tbody tr.border-high td {
+        border-bottom: 1px solid #efaaaa;
+    }
+
+#center-block {
+    margin: 20px auto;
+    width: 119px;
+}
+
+/* bank-transfer page */
+#bank-transfer .panel-body {
+    padding: 20px 20%;
+}
+
+#bank-transfer table {
+    width: 100%;
+}
+
+    #bank-transfer table tr td {
+        padding: 13px 10px;
+    }
+
+        #bank-transfer table tr td:first-child {
+            text-align: center;
+        }
+
+        #bank-transfer table tr td:nth-child(2) {
+            position: relative;
+            text-align: left;
+        }
+
+        #bank-transfer table tr td span {
+            display: inline-block;
+            min-width: 230px;
+        }
+
+        #bank-transfer table tr td button {
+            position: absolute;
+            top: 6px;
+            right: 9px;
+        }
+
+        #bank-transfer table tr td .copy-tooltip {
+            position: absolute;
+            top: 7px;
+            right: 0;
+            height: 30px;
+            padding: 0 5px;
+            color: #fff;
+            line-height: 30px;
+            background-color: rgba(0, 0, 0, .7);
+            -moz-border-radius: 2px;
+            -webkit-border-radius: 2px;
+            border-radius: 2px;
+            -moz-transform: translateX(102%);
+            -ms-transform: translateX(102%);
+            -o-transform: translateX(102%);
+            -webkit-transform: translateX(102%);
+            transform: translateX(102%);
+        }
+
+#bank-transfer .text-info {
+    padding: 20px 0 0 16px;
+    color: #00f;
+}

@@ -1,0 +1,11 @@
+﻿#content .body {
+    padding: 5px 5px 0 5px;
+}
+
+#content .panel {
+    margin-bottom: 10px;
+}
+
+#content .help-block {
+    position: absolute;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html @* xmlns:ng="http://angularjs.org" *@ id="ng-app" ng-app="portalApp" meidon-time="@ViewBag.MeiDonNow" @* 主機的美東時間 *@ moment-lang="@ViewBag.Language" @* 瀏覽器語系 *@ ng-init="'@Resources.Shared.Head_Title'">
+
+<head>
+    <title>welcome</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="shortcut icon" href="../../../_Common/Content/Views/Shared/images/favicon.ico" />
+    <link href="../../bundles/site.css" rel="stylesheet" />
+    <script src="../../../_Common/Scripts/jquery/v1.12.4/jquery.min.js"></script>
+    <script src="../../bundles/include-html.js"></script>
+</head>
+
+<body class="layout" ng-controller="LayoutCtrl">
+    <header id="header"></header>
+    <nav id="nav" slide-menu></nav>
+    <div id="banner"></div>
+    <div id="content">
+        <div class="wrapper">
+            <div id="un-lobby">
+                <aside></aside>
+                <article id="articles" class="articlesResponsibleGambling" data-page="ResponsibleGambling">
+                    <!-- Load ResponsibleGambling -->
+                </article>
+            </div>
+        </div>
+    </div>
+    <footer id="footer"></footer>
+</body>
+
+</html>

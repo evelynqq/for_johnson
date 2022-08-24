@@ -1,0 +1,444 @@
+﻿<body class="layout" ng-controller="LayoutCtrl">
+    <header id="header">
+        <!-- popup -->
+        <div id="popup"></div>
+        <div class="header-top">
+            <div class="wrapper">
+                <div id="news">
+                    <span class="title">最新公告：</span>
+                    <div id="hot-news"  news-manual>
+                        <div class="marqueen">
+                            <ul class="news-list">
+                                <li onclick="newsClick()">★公司入款帐户不定时更新,请会员入款仔细查看最新收款帐户,若转入已下架帐户公司一概不负责</li>
+                                <li onclick="newsClick()">★建议会员多加使用QQ钱包,若出现商户限额或其他错误信息,请多加重新提交尝试即可</li>
+                                <li onclick="newsClick()">★近期有不肖诈骗团体利用劫持网页手法使会员开启GStargaming网页时跳转至其他非法网站,请各位会员小心资金安全,GStargaming官网并没有其他网站与网址,GStargaming关心您</li>
+                                <li onclick="newsClick()">★目前一天取款前五次免手续费出款，第六次開始收取50元手续费，以最后一笔取款往前推算24小时，建议会员可以24小时取款五次以内，就不会收取手续费用</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <ul id="top-nav">
+                    <li class="vip"><a ng-href="" target="_blank">VIP貴賓會</a></li>
+                    <li class="freeplay"><a href="/Trial/Apply" target="_blank">免費試玩</a></li>
+                    <li><a ng-href="" target="_blank">优惠办理大厅</a></li>
+                    <li><a href="javascript:void(0)">在線客服</a></li>
+                    <li><a href="/Mobile">手機投注</a></li>
+                    <li class="language non-border" select-language="">
+                        <span data-language="zh-CN" title="简体中文" class="ng-scope"></span>
+                        <span data-language="zh-TW" title="繁体中文" class="ng-scope"></span>
+                        <span data-language="en-US" title="English" class="ng-scope"></span>
+                        <span data-language="th" title="ภาษาไทย" class="ng-scope"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div id="logo-bg">
+                <a href="../Home/index.html"></a>
+            </div>
+            <div id="slogan"></div>
+            <ul id="slot-nav" ng-controller="LobbiesCtrl" class="ng-scope">
+                <li class="flash-color" ng-click="toMwFish()" style="color: rgb(255, 0, 0);">千炮捕魚</li>
+                <li class="flash-color" ng-click="toMgFlash()" style="color: rgb(255, 0, 0);">MG電子遊藝</li>
+                <li class="blue" ng-click="toPtFlash()">PT電子</li>
+                <li class="flash-color" ng-click="toGpiFlash()" style="color: rgb(0, 255, 0);">GPI電子</li>
+                <li class="flash-color" ng-click="toBbGame()" style="color: rgb(246, 255, 0);">BBIN電子</li>
+                <li class="orange" ng-click="toAgHtml()">AG電子</li>
+                <li class="flash-color" ng-click="toGnsHtml()" style="color: rgb(0, 255, 0);">GNS電子</li>
+            </ul>
+
+            <!-- Account-box -->
+            <!-- 未登入 -->
+            <div id="account-box" class="is-logout">
+                <form ng-controller="LoginCtrl" ng-submit="login(loginParams)" ng-disabled="isProcessing" class="ng-scope ng-pristine ng-invalid ng-invalid-required">
+                    <input id="login_account" type="text" placeholder="帳號" ng-model="loginParams.account" required="" autofocus="" class="ng-pristine ng-invalid ng-invalid-required">
+                    <input id="login_password" type="password" placeholder="密碼" ng-model="loginParams.password" required="" class="ng-pristine ng-invalid ng-invalid-required">
+                    <div id="check-code-wrapper">
+                        <input data-checkcode-retriever="checkCode" checkcode-type="Login" type="text" placeholder="驗證碼" ng-model="loginParams.checkCode" required="" class="ng-pristine ng-invalid ng-invalid-required">
+                        <img id="captcha" ng-show="checkCode.image" ng-src="" class="ng-hide">
+                    </div>
+                    <button id="login-box" class="login-btn ng-binding" onclick="login()">登入</button>
+                    <button class="forget-btn" ng-click="lineChatClick()" type="button">忘記密碼</button>
+                    <button class="join-btn" ng-click="RegisterClick()" type="button" onclick="location.href='../Register/index.html'">免費開戶</button>
+                    <!-- <div id="agree" ng-show="loginOver" class="ng-hide">
+                        點擊登入表示同意<a ng-click="agreement()">用戶協議</a>
+                    </div> -->
+                </form>
+            </div>
+            <!-- 登入 -->
+            <div id="account-box" class="login is-login">
+                <ul id="account-info">
+                    <li>
+                        帳號 :
+                        <span id="member-level" class="vip10" onclick="window.location.href='../Vip/index.html'">vip10</span>
+                        <span class="account">DemoAccount</span>
+                        <a id="mailbox" href="../SiteMail/index.html" title="站內信" class="ng-scope">
+                            <span class="ng-binding">1</span>
+                        </a>
+                    </li>
+                    <li>
+                        帳戶餘額 :
+                        <span class="account account-balance ng-binding" title="$ 5000.00" onclick="accountPopup()">$5,000.00</span>
+                        <a ng-click="updateBalance()" title="更新">
+                            <i ng-show="!updatingBalance" class="fa fa-refresh"></i>
+                            <i ng-show="updatingBalance" class="fa fa-spinner fa-spin ng-hide"></i>
+                        </a>
+                        
+                        <div id="callBackAllWallet" ng-click="callBackAllWallet()"></div>
+                    </li>
+                </ul>
+                <ul id="account-nav">
+                    <!-- Account Nav List -->
+                    <li class="logout" title="登出">
+                        <a class="ng-binding" onclick="signOut()">登出</a>
+                    </li>
+                </ul>
+                <div id="action-box">
+                    <a class="logout-btn ng-binding" onclick="signOut()">登出</a>
+                </div>
+            </div>
+            <!-- Account-box End -->
+        </div>
+    </header>
+    <nav id="nav" scrolltop-fixed="130" class="">
+        <ul ng-controller="LobbiesCtrl" class="ng-scope">
+            <li class="home active">
+                <a href="../Home/index.html" nav-active="">首頁</a>
+            </li>
+            <li class="fish" id="navFish">
+                <a href="" nav-active="">捕鱼达人</a>
+                <div class="subnav live">
+                    <!-- <span class="discount"></span> -->
+                    <div carousel-slider="" super-vis="7" super-play="true" super-effect="leftLoop">
+                        <span class="prev"></span>
+                        <div class="main-cell">
+                            <div class="tempWrap" style="overflow:hidden; position:relative; width:880px">
+                                <ol style="width: 3500px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
+                                    <!-- List -->
+                                </ol>
+                            </div>
+                        </div>
+                        <span class="next"></span>
+                    </div>
+                </div>
+            </li>
+            <li class="live" id="navLive">
+                <a href="../Lobby/Live.html" nav-active="">視訊直播</a>
+                <div class="subnav live">
+                    <!-- <span class="discount"></span> -->
+                    <div carousel-slider="" super-vis="7" super-play="true" super-effect="leftLoop">
+                        <span class="prev"></span>
+                        <div class="main-cell">
+                            <div class="tempWrap" style="overflow:hidden; position:relative; width:880px">
+                                <ol style="width: 3500px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
+                                    <!-- List -->
+                                </ol>
+                            </div>
+                        </div>
+                        <span class="next"></span>
+                    </div>
+                </div>
+            </li>
+            <li class="sport" id="navSport">
+                <a href="../Lobby/Sport.html" nav-active="">體育賽事</a>
+                <div class="subnav sport">
+                    <!-- <span class="discount"></span> -->
+                    <div carousel-slider="" super-vis="7" super-play="true" super-effect="leftLoop">
+                        <span class="prev"></span>
+                        <div class="main-cell">
+                            <div class="tempWrap" style="overflow:hidden; position:relative; width:880px">
+                                <ol style="width: 3500px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
+                                    <!-- List -->
+                                 </ol>
+                                 </div>
+                             </div>
+                        <span class="next"></span>
+                    </div>
+                </div>
+            </li>
+            <li class="lottery" id="navLottery">
+                <a href="../Lobby/Lottery.html" nav-active="">彩票遊戲</a>
+                <div class="subnav lottery">
+                    <!-- <span class="discount"></span> -->
+                    <div carousel-slider="" super-vis="7" super-play="true" super-effect="leftLoop">
+                        <span class="prev"></span>
+                        <div class="main-cell">
+                            <div class="tempWrap" style="overflow:hidden; position:relative; width:880px">
+                                <ol style="width: 3500px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
+                                    <!-- List -->       
+                                </ol>
+                            </div>
+                        </div>
+                        <span class="next"></span>
+                    </div>
+                </div>
+            </li>
+            <li class="game" id="navGame">
+                <a href="../Lobby/Game.html" nav-active="">電子遊戲</a>
+                <div class="subnav game">
+                    <!-- <span class="discount"></span> -->
+                    <div carousel-slider="" super-vis="7" super-play="true" super-effect="leftLoop">
+                        <span class="prev"></span>
+                        <div class="main-cell">
+                            <div class="tempWrap" style="overflow:hidden; position:relative; width:880px">
+                                <ol style="width: 3500px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
+                                    <!-- List -->
+                                </ol>
+                            </div>
+                        </div>
+                        <span class="next"></span>
+                    </div>
+                </div>
+            </li>
+            <li class="board" id="navBoard">
+                <a href="../Lobby/Board.html" nav-active="">棋牌游戏</a>
+                <div class="subnav board">
+                    <!-- <span class="discount"></span> -->
+                    <div carousel-slider="" super-vis="7" super-play="true" super-effect="leftLoop">
+                        <span class="prev"></span>
+                        <div class="main-cell">
+                            <div class="tempWrap" style="overflow:hidden; position:relative; width:880px">
+                                <ol style="width: 3500px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
+                                    <!-- List -->         
+                                </ol>
+                            </div>
+                        </div>
+                        <span class="next"></span>
+                    </div>
+                </div>
+            </li>
+            <li class="promotion">
+                <a href="../Promotion/index.html" nav-active="">優惠活動</a>
+            </li>
+        </ul>
+    </nav>
+    <div id="content">
+        <div class="wrapper">
+            <div id="banner"></div>
+        </div>
+        <div id="home">
+            <div class="wrapper">
+                <ul id="home-jackpot">
+                    <li class="mg">
+                        <span digital="" digital-min="362841662" time="1000" word="CNY" add="">CNY362,846,672.74</span> MG电游总奖池
+                    </li>
+                    <li class="pt">
+                        <span digital="" digital-min="537198094" time="1000" word="CNY" add="">CNY537,203,329.14</span> PT电游总奖池
+                    </li>
+                    <li class="super ng-scope" ng-controller="WinnerListCtrl">
+                        <p>中奖金额：<span ng-bind="superList.bonus" class="ng-binding">275532</span></p>
+                        玩家：<span ng-bind="superList.account" class="ng-binding">zha＊＊＊</span> 爆奖游戏：<span ng-bind="superList.game" class="ng-binding">MG幸运双星</span>
+                    </li>
+                </ul>
+                <div id="home-winner" ng-controller="WinnerListCtrl" class="ng-scope">
+                    <ul class="cycle-slideshow" data-cycle-fx="carousel" data-cycle-carousel-vertical="true" data-cycle-carousel-visible="3" data-cycle-timeout="1500" data-cycle-speed="300" data-cycle-easing="linear" data-cycle-slides="> li" data-cycle-random="true" data-cycle-pause-on-hover="true" style="position: relative; overflow: hidden; height: 96px;">
+                        <div class="cycle-carousel-wrap">
+                            <li ng-repeat="item in winnerList track by $index" class="ng-scope cycle-slide" style="position: static; top: 0px; left: 0px; z-index: 100; opacity: 1; display: block;">
+                                <span class="col account">恭喜<span title="pp83***" ng-bind="item.account" class="ng-binding">pp83***</span></span>
+                                <span class="col game">在<span class="blue ng-binding" title="金瓶梅" ng-bind="item.game">金瓶梅</span>游戏中</span>
+                                <span class="col bonus">获得奖金<span class="yellow ng-binding" title="2.6" ng-bind="item.bonus">2.6</span>万</span>
+                            </li>
+                            <li ng-repeat="item in winnerList track by $index" class="ng-scope cycle-slide" style="position: static; top: 0px; left: 0px; z-index: 99; display: block;">
+                                <span class="col account">恭喜<span title="mxm1***" ng-bind="item.account" class="ng-binding">mxm1***</span></span>
+                                <span class="col game">在<span class="blue ng-binding" title="异性猎手" ng-bind="item.game">异性猎手</span>游戏中</span>
+                                <span class="col bonus">获得奖金<span class="yellow ng-binding" title="2.7" ng-bind="item.bonus">2.7</span>万</span>
+                            </li>
+                            <li ng-repeat="item in winnerList track by $index" class="ng-scope cycle-slide" style="position: static; top: 0px; left: 0px; z-index: 97; display: block;">
+                                <span class="col account">恭喜<span title="lolo***" ng-bind="item.account" class="ng-binding">lolo***</span></span>
+                                <span class="col game">在<span class="blue ng-binding" title="糖果派对" ng-bind="item.game">糖果派对</span>游戏中</span>
+                                <span class="col bonus">获得奖金<span class="yellow ng-binding" title="3.3" ng-bind="item.bonus">3.3</span>万</span>
+                            </li>
+                            <li ng-repeat="item in winnerList track by $index" class="ng-scope cycle-slide" style="position: static; top: 0px; left: 0px; z-index: 96; display: block;">
+                                <span class="col account">恭喜<span title="qwe6***" ng-bind="item.account" class="ng-binding">qwe6***</span></span>
+                                <span class="col game">在<span class="blue ng-binding" title="酷炫水果农场" ng-bind="item.game">酷炫水果农场</span>游戏中</span>
+                                <span class="col bonus">获得奖金<span class="yellow ng-binding" title="3.7" ng-bind="item.bonus">3.7</span>万</span>
+                            </li>
+                            <li ng-repeat="item in winnerList track by $index" class="ng-scope cycle-slide" style="position: static; top: 0px; left: 0px; z-index: 95; display: block;">
+                                <span class="col account">恭喜<span title="wang***" ng-bind="item.account" class="ng-binding">wang***</span></span>
+                                <span class="col game">在<span class="blue ng-binding" title="水果拉霸" ng-bind="item.game">水果拉霸</span>游戏中</span>
+                                <span class="col bonus">获得奖金<span class="yellow ng-binding" title="1.1" ng-bind="item.bonus">1.1</span>万</span>
+                            </li>
+                            <li ng-repeat="item in winnerList track by $index" class="ng-scope cycle-slide" style="position: static; top: 0px; left: 0px; z-index: 94; display: block;">
+                                <span class="col account">恭喜<span title="xu27***" ng-bind="item.account" class="ng-binding">xu27***</span></span>
+                                <span class="col game">在<span class="blue ng-binding" title="宝石连线" ng-bind="item.game">宝石连线</span>游戏中</span>
+                                <span class="col bonus">获得奖金<span class="yellow ng-binding" title="12.7" ng-bind="item.bonus">12.7</span>万</span>
+                            </li>
+                        </div>
+                    </ul>
+                    <ul class="cycle-slideshow" data-cycle-fx="carousel" data-cycle-carousel-vertical="true" data-cycle-carousel-visible="3" data-cycle-timeout="1500" data-cycle-speed="300" data-cycle-easing="linear" data-cycle-slides="> li" data-cycle-random="true" data-cycle-pause-on-hover="true" style="position: relative; overflow: hidden; height: 96px;">
+                        <div class="cycle-carousel-wrap">
+                            <li ng-repeat="item in winnerList track by $index" class="ng-scope cycle-slide" style="position: static; top: 0px; left: 0px; z-index: 100; opacity: 1; display: block;">
+                                <span class="col account">恭喜<span title="pp83***" ng-bind="item.account" class="ng-binding">pp83***</span></span>
+                                <span class="col game">在<span class="blue ng-binding" title="金瓶梅" ng-bind="item.game">金瓶梅</span>游戏中</span>
+                                <span class="col bonus">获得奖金<span class="yellow ng-binding" title="2.6" ng-bind="item.bonus">2.6</span>万</span>
+                            </li>
+                            <li ng-repeat="item in winnerList track by $index" class="ng-scope cycle-slide" style="position: static; top: 0px; left: 0px; z-index: 99; display: block;">
+                                <span class="col account">恭喜<span title="mxm1***" ng-bind="item.account" class="ng-binding">mxm1***</span></span>
+                                <span class="col game">在<span class="blue ng-binding" title="异性猎手" ng-bind="item.game">异性猎手</span>游戏中</span>
+                                <span class="col bonus">获得奖金<span class="yellow ng-binding" title="2.7" ng-bind="item.bonus">2.7</span>万</span>
+                            </li>
+                            <li ng-repeat="item in winnerList track by $index" class="ng-scope cycle-slide" style="position: static; top: 0px; left: 0px; z-index: 97; display: block;">
+                                <span class="col account">恭喜<span title="lolo***" ng-bind="item.account" class="ng-binding">lolo***</span></span>
+                                <span class="col game">在<span class="blue ng-binding" title="糖果派对" ng-bind="item.game">糖果派对</span>游戏中</span>
+                                <span class="col bonus">获得奖金<span class="yellow ng-binding" title="3.3" ng-bind="item.bonus">3.3</span>万</span>
+                            </li>
+                            <li ng-repeat="item in winnerList track by $index" class="ng-scope cycle-slide" style="position: static; top: 0px; left: 0px; z-index: 96; display: block;">
+                                <span class="col account">恭喜<span title="qwe6***" ng-bind="item.account" class="ng-binding">qwe6***</span></span>
+                                <span class="col game">在<span class="blue ng-binding" title="酷炫水果农场" ng-bind="item.game">酷炫水果农场</span>游戏中</span>
+                                <span class="col bonus">获得奖金<span class="yellow ng-binding" title="3.7" ng-bind="item.bonus">3.7</span>万</span>
+                            </li>
+                            <li ng-repeat="item in winnerList track by $index" class="ng-scope cycle-slide" style="position: static; top: 0px; left: 0px; z-index: 95; display: block;">
+                                <span class="col account">恭喜<span title="wang***" ng-bind="item.account" class="ng-binding">wang***</span></span>
+                                <span class="col game">在<span class="blue ng-binding" title="水果拉霸" ng-bind="item.game">水果拉霸</span>游戏中</span>
+                                <span class="col bonus">获得奖金<span class="yellow ng-binding" title="1.1" ng-bind="item.bonus">1.1</span>万</span>
+                            </li>
+                            <li ng-repeat="item in winnerList track by $index" class="ng-scope cycle-slide" style="position: static; top: 0px; left: 0px; z-index: 94; display: block;">
+                                <span class="col account">恭喜<span title="xu27***" ng-bind="item.account" class="ng-binding">xu27***</span></span>
+                                <span class="col game">在<span class="blue ng-binding" title="宝石连线" ng-bind="item.game">宝石连线</span>游戏中</span>
+                                <span class="col bonus">获得奖金<span class="yellow ng-binding" title="12.7" ng-bind="item.bonus">12.7</span>万</span>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+                <div id="home-slot" ng-controller="LobbiesCtrl" class="ng-scope">
+                    <ul class="slot-list" ng-init="show='hot'">
+                        <li ng-click="show='hot'" ng-class="{'active': show=='hot'}" class="active">推荐游戏</li>
+                        <li ng-click="show='new'" ng-class="{'active': show=='new'}">最新游戏</li>
+                        <li ng-click="show='jackpot'" ng-class="{'active': show=='jackpot'}">彩金池游戏</li>
+                        <li ng-click="show='ag'" ng-class="{'active': show=='ag'}">AG电游</li>
+                        <li ng-click="show='pt'" ng-class="{'active': show=='pt'}">PT电游</li>
+                        <li ng-click="show='mg'" ng-class="{'active': show=='mg'}">MG电游</li>
+                        <li ng-click="show='sg'" ng-class="{'active': show=='sg'}">SG电游</li>
+                    </ul>
+                    <ul class="slot-panel hot" ng-show="show=='hot'">
+                        <li class="hot01" ng-click="toAgFish()">
+                            <div class="title">
+                                AG 捕鱼王
+                                <p>
+                                    <span class="orange">花式捕鱼 爽快捞金</span> 人气 <span digital="" digital-min="66188" add="" not-point="">67,316</span>
+                                </p>
+                            </div><span class="hover">AG 捕鱼王</span>
+                        </li>
+                        <li class="hot02" ng-click="toMgFlash()">
+                            <div class="title">
+                                MG 花花公子
+                                <p>
+                                    <span class="orange">冲击大奖 一路high翻</span> 人气 <span digital="" digital-min="66188" add="" not-point="">67,383</span>
+                                </p>
+                            </div><span class="hover">MG 花花公子</span>
+                        </li>
+                        <li class="hot03" ng-click="toPtFlash()">
+                            <div class="title">
+                                PT 高速公路之王
+                                <p>
+                                    <span class="orange">冲击大奖 一路high翻</span> 人气 <span digital="" digital-min="66188" add="" not-point="">67,231</span>
+                                </p>
+                            </div><span class="hover">PT 高速公路之王</span>
+                        </li>
+                        <li class="hot04" ng-click="toSgFlash()">
+                            <div class="title">
+                                SG 发发发
+                                <p>
+                                    <span class="orange">祝您大发 欢乐开局</span> 人气 <span digital="" digital-min="66188" add="" not-point="">68,257</span>
+                                </p>
+                            </div><span class="hover">SG 发发发</span>
+                        </li>
+                        <li class="hot05" ng-click="toMgFlash()">
+                            <div class="title">
+                                MG 冰球突破
+                                <p>
+                                    <span class="orange">摆脱束缚 突破极限</span> 人气 <span digital="" digital-min="66188" add="" not-point="">67,663</span>
+                                </p>
+                            </div><span class="hover">MG 冰球突破</span>
+                        </li>
+                        <li class="hot06" ng-click="toPtFlash()">
+                            <div class="title">
+                                PT 古怪猴子
+                                <p>
+                                    <span class="orange">精灵古怪 欢乐无限</span> 人气 <span digital="" digital-min="66188" add="" not-point="">67,362</span>
+                                </p>
+                            </div><span class="hover">PT 古怪猴子</span>
+                        </li>
+                        <li class="hot07" ng-click="toPtFlash()">
+                            <div class="title">
+                                PT 招财进宝
+                                <p>
+                                    <span class="orange">迎接财神 广纳财气</span> 人气 <span digital="" digital-min="66188" add="" not-point="">67,303</span>
+                                </p>
+                            </div><span class="hover">PT 招财进宝</span>
+                        </li>
+                        <li class="hot08" ng-click="toSgFlash()">
+                            <div class="title">
+                                SG 金鸡
+                                <p>
+                                    <span class="orange">金鸡出场 财运亨通</span> 人气 <span digital="" digital-min="66188" add="" not-point="">67,452</span>
+                                </p>
+                            </div><span class="hover">SG 金鸡</span>
+                        </li>
+                        <li class="hot09" ng-click="toPtFlash()">
+                            <div class="title">
+                                PT 湛蓝深海
+                                <p>
+                                    <span class="orange">蔚蓝海洋 等你来探</span> 人气 <span digital="" digital-min="66188" add="" not-point="">68,721</span>
+                                </p>
+                            </div><span class="hover">PT 湛蓝深海</span>
+                        </li>
+                        <li class="hot10" ng-click="toMgFlash()">
+                            <div class="title">
+                                MG 雷神2
+                                <p>
+                                    <span class="orange">神界至尊 雷神宝锤</span> 人气 <span digital="" digital-min="66188" add="" not-point="">67,356</span>
+                                </p>
+                            </div>
+                            <span class="hover">MG 雷神2</span>
+                        </li>
+                    </ul>
+                    <ul class="slot-panel ng-hide" ng-show="show=='new'" style="display: none;">
+                        <li class="new01" ng-click="toPtFlash()">
+                            <div class="title">PT 超级8</div><span class="hover">超级8</span></li>
+                        <li class="new02" ng-click="toPtFlash()">
+                            <div class="title">PT 宝石皇后</div><span class="hover">宝石皇后</span></li>
+                        <li class="new03" ng-click="toPtFlash()">
+                            <div class="title">PT 好事成双</div><span class="hover">好事成双</span></li>
+                        <li class="new04" ng-click="toPtFlash()">
+                            <div class="title">PT 武则天</div><span class="hover">武则天</span></li>
+                        <li class="new05" ng-click="toMgFlash()">
+                            <div class="title">MG 丛林吉姆-黄金国</div><span class="hover">丛林吉姆-黄金国</span></li>
+                        <li class="new06" ng-click="toMgFlash()">
+                            <div class="title">MG 足球之巅</div><span class="hover">足球之巅</span></li>
+                        <li class="new07" ng-click="toMgFlash()">
+                            <div class="title">MG K歌乐韵</div><span class="hover">K歌乐韵</span></li>
+                        <li class="new08" ng-click="toPrgFlash()">
+                            <div class="title">PP GPK 金列车</div><span class="hover">GPK 金列车</span></li>
+                        <li class="new09" ng-click="toSgFlash()">
+                            <div class="title">SG 虎大天王</div><span class="hover">虎大天王</span></li>
+                        <li class="new10" ng-click="toSgFlash()">
+                            <div class="title">SG 新霸天下</div><span class="hover">新霸天下</span></li>
+                        <li class="new11" ng-click="toAgHtml()">
+                            <div class="title">AG 欧洲列强争霸</div><span class="hover">欧洲列强争霸</span></li>
+                        <li class="new12" ng-click="toAgFish()">
+                            <div class="title">AG 捕鱼王者</div><span class="hover">捕鱼王者</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="wrapper">
+                <ul id="footer-nav"><!-- Append Footer List --></ul>
+                <p id="footer-deposit">
+                    MG电子官方直营，安全提款、从这里开始！
+                </p>
+                <span id="footer-chat" ng-click="lineChatClick()"></span>
+                <!--<ul id="footer-info">
+                    <li>联系我们：<span ng-bind="ContactInfo.TEL" class="ng-binding">18111111111</span></li>
+                    <li ng-click="qqClick(ContactInfo.QQ)">客服QQ：<span ng-bind="ContactInfo.QQ" class="ng-binding">131111111</span></li>
+                    <li>客服邮箱：<span ng-bind="ContactInfo.Email" class="ng-binding"></span></li>
+                </ul>-->
+            </div>
+        </div>
+        <div id="footer-logo"></div>
+        <p id="footer-suggest"><!-- Copyright --></p>
+    </footer>
+</body>

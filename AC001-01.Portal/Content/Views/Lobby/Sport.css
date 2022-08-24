@@ -1,0 +1,240 @@
+@charset "UTF-8";
+#banner {
+  background-image: url("../Lobby/Sport/banner.jpg");
+}
+
+#content {
+  background-image: url("../Lobby/Sport/background.jpg");
+}
+
+#lobby {
+  padding: 40px 0 50px;
+}
+
+#lobby .game-list > li {
+  width: 272px;
+  height: 345px;
+  margin: 0 25px 30px 25px;
+  border: 1px solid #412d23;
+  background-color: #201611;
+  background-position-x: 14px;
+  background-position-y: 14px;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+#lobby .game-list > li span {
+  position: absolute;
+  width: 272px;
+  height: 30px;
+  text-align: center;
+  left: 0;
+  bottom: 78px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fbff00), to(#da1b60));
+  background: -o-linear-gradient(top, #fbff00, #da1b60);
+  background: linear-gradient(to bottom, #fbff00, #da1b60);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  text-shadow: none;
+  font-weight: bolder;
+  font-size: 21px;
+}
+
+#lobby .game-list > li:not([game-list='more'])::after {
+  content: '进入游戏';
+  position: absolute;
+  bottom: 18px;
+  left: 20px;
+  width: 230px;
+  height: 42px;
+  font-size: 16px;
+  line-height: 42px;
+  border-radius: 5px;
+  border: 1px solid #111111;
+  color: #756f6b;
+  background: #2b231a;
+  background: -webkit-gradient(linear, left top, left bottom, from(#2b231a), color-stop(44%, #201611), to(#201614));
+  background: -o-linear-gradient(top, #2b231a 0%, #201611 44%, #201614 100%);
+  background: linear-gradient(to bottom, #2b231a 0%, #201611 44%, #201614 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#201611', endColorstr='#201614',GradientType=0 );
+}
+
+#lobby .game-list > li:hover {
+  -webkit-transform: scale(1.02);
+      -ms-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+#lobby .game-list > li:not([game-list='more']):hover::after {
+  border: 1px solid #d20000;
+  color: #fff;
+  background: #9c5953;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9c5953), color-stop(44%, #761c14), to(#5d0f0d));
+  background: -o-linear-gradient(top, #9c5953 0%, #761c14 44%, #5d0f0d 100%);
+  background: linear-gradient(to bottom, #9c5953 0%, #761c14 44%, #5d0f0d 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#761c14', endColorstr='#5d0f0d',GradientType=0 );
+}
+
+#lobby li.more {
+  background-image: url("../lobby/Sport/more.jpg");
+}
+
+#lobby li.SingSport {
+  background-image: url("../lobby/Sport/SingSport.jpg");
+}
+
+#lobby li.Sing2Sport {
+  background-image: url("../lobby/Sport/Sing2Sport.jpg");
+}
+
+#lobby li.AgSport {
+  background-image: url("../lobby/Sport/AgSport.jpg");
+}
+
+#lobby li.BbinaSport {
+  background-image: url("../lobby/Sport/BbinaSport.jpg");
+}
+
+#lobby li.CmdSport {
+  background-image: url("../lobby/Sport/CmdSport.jpg");
+}
+
+#lobby li.IboSport {
+  background-image: url("../lobby/Sport/IboSport.jpg");
+}
+
+#lobby li.HLSport {
+  background-image: url("../lobby/Sport/HLSport.jpg");
+}
+
+#lobby li.ImaSport {
+  background-image: url("../lobby/Sport/ImaSport.jpg");
+}
+
+#lobby li.M8Sport {
+  background-image: url("../lobby/Sport/M8Sport.jpg");
+}
+
+#lobby li.SabaaSport {
+  background-image: url("../lobby/Sport/SabaaSport.jpg");
+}
+
+#lobby li.SababSport {
+  background-image: url("../lobby/Sport/SababSport.jpg");
+}
+
+#lobby li.SV388Sport {
+  background-image: url("../lobby/Sport/SV388Sport.jpg");
+}
+
+#lobby li.HRBSport {
+  background-image: url("../lobby/Sport/HRBSport.jpg");
+}
+
+#lobby li.ZfbSport {
+  background-image: url("../lobby/Sport/ZfbSport.jpg");
+}
+
+#lobby li.E88Sport {
+  background-image: url("../lobby/Sport/E88Sport.jpg");
+}
+
+#lobby li.GbSport {
+  background-image: url("../lobby/Sport/GbSport.jpg");
+}
+
+#lobby li.GbsSport {
+  background-image: url("../lobby/Sport/GbsSport.jpg");
+}
+
+#lobby li.QtSport {
+  background-image: url("../lobby/Sport/QtSport.jpg");
+}
+
+#lobby li.BtiSport {
+  background-image: url("../lobby/Sport/BtiSport.jpg");
+}
+
+#lobby li.Cq9Sport {
+  background-image: url("../lobby/Sport/Cq9Sport.jpg");
+}
+
+#lobby li.EsbEsport {
+  background-image: url("../lobby/Esport/EsbEsport.jpg");
+}
+
+#lobby li.Esb1Esport {
+  background-image: url("../lobby/Esport/Esb1Esport.jpg");
+}
+
+#lobby li.SabaESport {
+  background-image: url("../lobby/Esport/SabaESport.jpg");
+}
+
+#lobby li.HcEsport {
+  background-image: url("../lobby/Esport/HcEsport.jpg");
+}
+
+#lobby li.CmdEsport {
+  background-image: url("../lobby/Esport/CmdEsport.jpg");
+}
+
+#lobby li.SabaaEsport {
+  background-image: url("../lobby/Esport/SabaaEsport.jpg");
+}
+
+#lobby li.E88Esport {
+  background-image: url("../lobby/Esport/E88Esport.jpg");
+}
+
+#lobby li.GbEsport {
+  background-image: url("../lobby/Esport/GbEsport.jpg");
+}
+
+#lobby li.GbsEsport {
+  background-image: url("../lobby/Esport/GbsEsport.jpg");
+}
+
+#lobby li.LeEsport {
+  background-image: url("../lobby/Esport/LeEsport.jpg");
+}
+
+#lobby li.AviaEsport {
+  background-image: url("../lobby/Esport/AviaEsport.jpg");
+}
+
+#lobby li.Cq9Esport {
+  background-image: url("../lobby/Esport/Cq9Esport.jpg");
+}
+
+#lobby li.TfEsport {
+  background-image: url("../lobby/Esport/TfEsport.jpg");
+}
+
+#lobby .game-list > li.more:hover {
+  border-color: #412d23;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
+#lobby .game-list > li.more::after {
+  display: none;
+}
+
+#lobby .game-list > li.more > span {
+  background: -webkit-gradient(linear, left top, left bottom, from(#8c74416e), to(#562b0fb5));
+  background: -o-linear-gradient(top, #8c74416e, #562b0fb5);
+  background: linear-gradient(to bottom, #8c74416e, #562b0fb5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  text-shadow: none;
+  letter-spacing: 2px;
+}
+/*# sourceMappingURL=Sport.css.map */

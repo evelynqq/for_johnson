@@ -1,0 +1,196 @@
+#banner {
+  background: url("../Lobby/Lottery/banner.jpg") no-repeat center top #251630;
+}
+
+#lobby .game-list li {
+  width: 470px;
+  height: 310px;
+  margin: 12px 12px 38px 12px;
+  background-repeat: no-repeat;
+  background-position-y: 62px;
+  position: relative;
+}
+
+#lobby .game-list li span {
+  position: absolute;
+  width: 470px;
+  margin-top: 320px;
+  color: #333;
+  text-align: center;
+}
+
+#lobby .game-list li div {
+  display: none;
+}
+
+#lobby .game-list li::before {
+  content: '';
+  width: 470px;
+  height: 110px;
+  position: absolute;
+  top: -30px;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#lobby .game-list li:not([game-box='more']):hover {
+  -webkit-transform: translate3d(0, -2%, 0);
+          transform: translate3d(0, -2%, 0);
+  -webkit-transition: -webkit-transform .1s linear;
+  transition: -webkit-transform .1s linear;
+  -o-transition: transform .1s linear;
+  transition: transform .1s linear;
+  transition: transform .1s linear, -webkit-transform .1s linear;
+}
+
+#lobby .game-list li:not([game-box='more']):hover::after {
+  content: '';
+  width: 470px;
+  height: 246px;
+  background-color: rgba(131, 121, 134, 0.6);
+  background-image: url("../lobby/Lottery/enter.png");
+  background-position-x: center;
+  background-position-y: 110px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 63px;
+  left: 0;
+}
+
+#lobby li[game-box='more'] {
+  background-image: url("../lobby/Lottery/more.jpg");
+}
+
+#lobby li[game-box='more']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/colorblack/Lottery/more.png");
+}
+
+#lobby li[game-box='BbinaLottery'] {
+  background-image: url("../lobby/Lottery/BbinaLottery.jpg");
+}
+
+#lobby li[game-box='BbinaLottery']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/colorblack/Lottery/BbinaLottery.png");
+}
+
+#lobby li[game-box='IgLottery'] {
+  background-image: url("../lobby/Lottery/IgLottery.jpg");
+}
+
+#lobby li[game-box='IgLottery']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/colorblack/Lottery/IgLottery.png");
+}
+
+#lobby li[game-box='IgLotto'] {
+  background-image: url("../lobby/Lottery/IgLotto.jpg");
+}
+
+#lobby li[game-box='IgLotto']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/colorblack/Lottery/IgLotto.png");
+}
+
+#lobby li[game-box='IgaLottery'] {
+  background-image: url("../lobby/Lottery/IgaLottery.jpg");
+}
+
+#lobby li[game-box='IgaLottery']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/colorblack/Lottery/IgaLottery.png");
+}
+
+#lobby li[game-box='IgaLotto'] {
+  background-image: url("../lobby/Lottery/IgaLotto.jpg");
+}
+
+#lobby li[game-box='IgaLotto']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/colorblack/Lottery/IgaLotto.png");
+}
+
+#lobby li[game-box='LxLottery'] {
+  background-image: url("../lobby/Lottery/LxLottery.jpg");
+}
+
+#lobby li[game-box='LxLottery']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/colorblack/Lottery/LxLottery.png");
+}
+
+#lobby li[game-box='VrLottery'] {
+  background-image: url("../lobby/Lottery/VrLottery.jpg");
+}
+
+#lobby li[game-box='VrLottery']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/colorblack/Lottery/VrLottery.png");
+}
+
+#lobby li[game-box='AplLottery'] {
+  background-image: url("../lobby/Lottery/AplLottery.jpg");
+}
+
+#lobby li[game-box='AplLottery']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/colorblack/Lottery/AplLottery.png");
+}
+
+#lobby li[game-box='G1Lottery'] {
+  background-image: url("../lobby/Lottery/G1Lottery.jpg");
+}
+
+#lobby li[game-box='G1Lottery']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/colorblack/Lottery/G1Lottery.png");
+}
+
+#lobby li[game-box='G1aLottery'] {
+  background-image: url("../lobby/Lottery/G1aLottery.jpg");
+}
+
+#lobby li[game-box='G1aLottery']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/colorblack/Lottery/G1aLottery.png");
+}
+
+#lobby li[game-box='GbLottery'] {
+  background-image: url("../lobby/Lottery/GbLottery.jpg");
+}
+
+#lobby li[game-box='GbLottery']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/colorblack/Lottery/GbLottery.png");
+}
+
+#lobby li[game-box='GblLottery'] {
+  background-image: url("../lobby/Lottery/GblLottery.jpg");
+}
+
+#lobby li[game-box='GblLottery']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/colorblack/Lottery/GblLottery.png");
+}
+
+#lobby li[game-box='SgwLottery'] {
+  background-image: url("../lobby/Lottery/SgwLottery.jpg");
+}
+
+#lobby li[game-box='SgwLottery']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/colorblack/Lottery/SgwLottery.png");
+}
+
+#lobby li[game-box='BgLottery'] {
+  background-image: url("../lobby/Lottery/BgLottery.jpg");
+}
+
+#lobby li[game-box='BgLottery']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/colorblack/Lottery/BgLottery.png");
+}
+
+#lobby li[game-box='Ig1Lottery'] {
+  background-image: url("../lobby/Lottery/Ig1Lottery.jpg");
+}
+
+#lobby li[game-box='Ig1Lottery']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/colorblack/Lottery/Ig1Lottery.png");
+}
+
+#lobby li[game-box='Ig1Lotto'] {
+  background-image: url("../lobby/Lottery/Ig1Lotto.jpg");
+}
+
+#lobby li[game-box='Ig1Lotto']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/colorblack/Lottery/Ig1Lotto.png");
+}
+/*# sourceMappingURL=Lottery.css.map */

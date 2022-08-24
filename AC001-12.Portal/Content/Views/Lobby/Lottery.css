@@ -1,0 +1,93 @@
+#banner {
+  background-image: url("../Lobby/Lottery/banner.jpg");
+}
+
+ul.game-list > li {
+  width: 320px;
+  height: 322px;
+  margin: 10px 4px;
+}
+
+ul.game-list > li span {
+  content: '';
+  position: absolute;
+  font-size: 21px;
+  color: #999;
+  bottom: 17px;
+  left: 0;
+  width: 320px;
+  height: 20px;
+}
+
+ul.game-list > li div {
+  display: none;
+}
+
+#lobby li[game-box='more'] {
+  background-image: url("../lobby/Lottery/more.png");
+}
+
+#lobby li[game-box='BbinaLottery'] {
+  background-image: url("../lobby/Lottery/BbinaLottery.png");
+}
+
+#lobby li[game-box='IgLottery'] {
+  background-image: url("../lobby/Lottery/IgLottery.png");
+}
+
+#lobby li[game-box='IgLotto'] {
+  background-image: url("../lobby/Lottery/IgLotto.png");
+}
+
+#lobby li[game-box='IgaLottery'] {
+  background-image: url("../lobby/Lottery/IgaLottery.png");
+}
+
+#lobby li[game-box='IgaLotto'] {
+  background-image: url("../lobby/Lottery/IgaLotto.png");
+}
+
+#lobby li[game-box='LxLottery'] {
+  background-image: url("../lobby/Lottery/LxLottery.png");
+}
+
+#lobby li[game-box='VrLottery'] {
+  background-image: url("../lobby/Lottery/VrLottery.png");
+}
+
+#lobby li[game-box='AplLottery'] {
+  background-image: url("../lobby/Lottery/AplLottery.png");
+}
+
+#lobby li[game-box='G1Lottery'] {
+  background-image: url("../lobby/Lottery/G1Lottery.png");
+}
+
+#lobby li[game-box='G1aLottery'] {
+  background-image: url("../lobby/Lottery/G1aLottery.png");
+}
+
+#lobby li[game-box='GbLottery'] {
+  background-image: url("../lobby/Lottery/GbLottery.png");
+}
+
+#lobby li[game-box='GblLottery'] {
+  background-image: url("../lobby/Lottery/GblLottery.png");
+}
+
+#lobby li[game-box='SgwLottery'] {
+  background-image: url("../lobby/Lottery/SgwLottery.png");
+}
+
+#lobby li[game-box='BgLottery'] {
+  background-image: url("../lobby/Lottery/BgLottery.png");
+}
+
+#lobby li[game-box='Ig1Lottery'] {
+  background-image: url("../lobby/Lottery/Ig1Lottery.png");
+}
+
+#lobby li[game-box='Ig1Lotto'] {
+  background-image: url("../lobby/Lottery/Ig1Lotto.png");
+}
+/*# sourceMappingURL=Lottery.css.map */

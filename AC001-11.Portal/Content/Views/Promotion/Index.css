@@ -1,0 +1,111 @@
+﻿#un-lobby #unlobby-title {
+    display: none;
+}
+
+/*#region 遊戲分類樣式 */
+ul.navtab {
+    margin-bottom: 20;
+    list-style: none;
+    font-size: 0;
+    border-bottom: 3px solid #01507b;
+}
+
+    ul.navtab li {
+        display: inline-block;
+        width: 68px;
+        height: 30px;
+        margin-right: 4px;
+        color: #fff;
+        font-family: SimSun;
+        font-size: 13px;
+        line-height: 30px;
+        text-align: center;
+        background: #23a6dc;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        cursor: pointer;
+    }
+
+        ul.navtab li.tab {
+            color: #fff;
+            background: #01507b;
+        }
+/*#endregion 遊戲分類樣式 */
+
+#un-lobby > div {
+    padding: 0 0 20px;
+    border-top: 0;
+    margin-top: 20px;
+}
+
+ul.discount {
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+}
+
+    ul.discount > li {
+        width: 1000px;
+        margin: 0 auto;
+    }
+
+        ul.discount > li:first-child {
+            text-align: center;
+            cursor: pointer;
+        }
+
+        ul.discount > li.content {
+            margin-top: 20px;
+            padding: 0 25px;
+            color: #d2d2d2;
+            font-size: 14px;
+            font-family: 'Microsoft YaHei';
+        }
+
+            ul.discount > li.content img {
+                margin: 0 -25px;
+            }
+
+li.content h3 {
+}
+
+li.content h4 {
+    color: #ff8c00;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+li.content h5 {
+}
+
+li.content p {
+}
+
+li.content dd {
+    margin-left: 0;
+}
+
+li.content table {
+    width: 100%;
+}
+
+    li.content table tr,
+    li.content table th,
+    li.content table td {
+        line-height: 2em;
+        text-align: center;
+        border: 1px solid #4a4a4a;
+        background: #1a1a1a;
+    }
+
+    li.content table th {
+        background: #121212;
+    }
+
+li.content ol {
+    padding-left: 20px;
+    list-style-type: decimal;
+}
+
+    li.content ol li {
+    }

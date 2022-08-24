@@ -1,0 +1,151 @@
+<body class="layout" ng-controller="LayoutCtrl">
+    <header id="header">
+        <!-- popup -->
+        <div id="popup"></div>
+        <div class="wrapper">
+            <!-- @* Logo , 回首页 *@ -->
+            <div id="logo-bg">
+                <a href="../Home/index.html"></a>
+            </div>
+
+            <!-- Account-box -->
+            <!-- 未登入 -->
+            <div id="account-box" class="is-logout">
+                <form ng-controller="LoginCtrl" ng-submit="login(loginParams)" ng-disabled="isProcessing"
+                    class="ng-scope ng-pristine ng-invalid ng-invalid-required">
+                    <div class="input-group">
+                        <input id="login_account" type="text" placeholder="帐号" ng-model="loginParams.account"
+                            required="" autofocus="" tabindex="1" class="ng-pristine ng-invalid ng-invalid-required">
+                        <div id="check-code-wrapper">
+                            <input data-checkcode-retriever="checkCode" type="text" placeholder="验证码"
+                                ng-model="loginParams.checkCode" checkcode-type="Login" required="" tabindex="3"
+                                class="ng-pristine ng-invalid ng-invalid-required">
+                            <img id="captcha" ng-show="checkCode.image" ng-src="" class="ng-hide">
+                        </div>
+                        <input id="login_password" type="password" placeholder="密码" ng-model="loginParams.password"
+                            required="" tabindex="2" class="ng-pristine ng-invalid ng-invalid-required">
+                        <button class="forget-btn" ng-click="lineChatClick()" type="button">忘记密码</button>
+                    </div>
+                    <div class="btn-group">
+                        <button id="login-box" class="login-btn ng-binding" onclick="login()">登入</button>
+                        <button class="reg-btn" type="button" ng-click="RegisterClick()"
+                            onclick="window.location.href='../Register/index.html'">免费开户</button>
+                        <a class="free-btn" ng-href="" target="_blank">安全导航</a>
+                    </div>
+                    <!-- <div id="agree" ng-show="loginOver" class="ng-hide" style="display: block;">
+                        点击登入表示同意<a ng-click="agreement()">用户协议</a>
+                    </div> -->
+                </form>
+            </div>
+            <!-- 登入 -->
+            <div id="account-box" class="is-login">
+                <ul id="account-info">
+                    <li>
+                        帳號 :
+                        <span id="member-level" class="vip10" onclick="window.location.href='../Vip/index.html'">vip10</span>
+                        <span class="account">DemoAccount</span>
+                        <a id="mailbox" href="../SiteMail/index.html" title="站內信" class="ng-scope">
+                            <span class="ng-binding">1</span>
+                        </a>
+                    </li>
+                    <li>
+                        帐户余额 :
+                        <span class="account account-balance ng-binding" title="$ 5000.00"
+                            onclick="accountPopup()">$5,000.00</span>
+                        <a ng-click="updateBalance()" title="更新">
+                            <i ng-show="!updatingBalance" class="fa fa-refresh"></i>
+                            <i ng-show="updatingBalance" class="fa fa-spinner fa-spin ng-hide"></i>
+                        </a>
+
+                        <div id="callBackAllWallet" ng-click="callBackAllWallet()"></div>
+                    </li>
+                </ul>
+                <div id="action-box">
+                    <a class="login-btn ng-binding" onclick="signOut()">登出</a>
+                    <a id="change-password-btn" href="../Account/ChangePassword.html" class="login-btn ">修改密码</a>
+                </div>
+
+                <ul id="account-nav">
+                    <!-- Account Nav List -->
+                </ul>
+            </div>
+            <!-- Account-box End -->
+
+            <!-- @* 导览列 *@ -->
+            <nav id="nav">
+                <ul class="mainnav ng-scope" ng-controller="LobbiesCtrl">
+                    <li class="active">
+                        <a href="../Home/index.html" nav-active="">首页</a>
+                    </li>
+                    <li class="hot">
+                        <a href="javascript:void(0)" ng-click="toAgFish()">捕鱼达人</a>
+                        <ol class="subnav" style="margin-left: -67px;">
+                            <li ng-click="toAgFish()">AG捕鱼王</li>
+                            <li ng-click="toMwHtml()">MW千炮捕鱼</li>
+                        </ol>
+                    </li>
+                    <li id="navLive" class="hot">
+                        <a href="../Lobby/Live.html" nav-active="">真人视讯</a>
+                        <!-- List -->
+                    </li>
+                    <li id="navSport">
+                        <a href="../Lobby/Sport.html" nav-active="">体育赛事</a>
+                        <!-- List -->
+                    </li>
+                    <li id="navLottery">
+                        <a href="../Lobby/Lottery.html" nav-active="">彩票游戏</a>
+                        <!-- List -->
+                    </li>
+                    <li id="navGame" class="hot">
+                        <a href="../Lobby/Game.html" nav-active="">电子游艺</a>
+                        <!-- List -->
+                    </li>
+                    <li id="navBoard">
+                        <a href="../Lobby/Board.html" nav-active="">棋牌游戏</a>
+                        <!-- List -->
+                    </li>
+                    <li class="hot toggle-color" toggle-color="">
+                        <a href="../Promotion/index.html" nav-active="">优惠活动</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- @* Banner *@ -->
+    <div id="banner"></div>
+
+    <div id="content">
+        <div class="wrapper">
+            <!-- @* 跑马灯 *@ -->
+            <div id="news">
+                <div id="hot-news" news-manual>
+                    <div class="marqueen">
+                        <ul class="news-list">
+                            <li onclick="newsClick()">★公司入款帐户不定时更新,请会员入款仔细查看最新收款帐户,若转入已下架帐户公司一概不负责</li>
+                            <li onclick="newsClick()">★建议会员多加使用QQ钱包,若出现商户限额或其他错误信息,请多加重新提交尝试即可</li>
+                            <li onclick="newsClick()">
+                                ★近期有不肖诈骗团体利用劫持网页手法使会员开启GStargaming网页时跳转至其他非法网站,请各位会员小心资金安全,GStargaming官网并没有其他网站与网址,GStargaming关心您
+                            </li>
+                            <li onclick="newsClick()">
+                                ★目前一天取款前五次免手续费出款，第六次開始收取50元手续费，以最后一笔取款往前推算24小时，建议会员可以24小时取款五次以内，就不会收取手续费用</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div class="wrapper">
+            <ul id="footer-nav">
+                <!-- Append Footer List -->
+            </ul>
+            <p id="footer-suggest">
+                <small>
+                    <!-- Copyright -->
+                </small>
+            </p>
+        </div>
+    </footer>
+</body>

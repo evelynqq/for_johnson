@@ -1,0 +1,70 @@
+﻿* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #014184 url('../../../../_Common/Content/Views/Lobby/Fish/bg_y.jpg') repeat-y center;
+}
+
+.fish-game {
+    min-height: 724px;
+    font-family: 'Microsoft YaHei','微软雅黑','微軟雅黑';
+    text-align: center;
+    background: url('../../../../_Common/Content/Views/Lobby/Fish/bg.jpg') no-repeat center top;
+}
+
+    .fish-game #logo {
+        height: 235px;
+        background: url('../../../../_Common/Content/Views/Lobby/Fish/logo.png') no-repeat center;
+    }
+
+/* #region banner(目前尚未用到)*/
+#content #banner > img {
+    width: 100%;
+}
+/* #endregion banner*/
+
+/* 遊戲列表list */
+#game-list {
+    display: inline-block;
+    margin: 65px auto 0;
+    padding: 0 0 20px;
+    max-width: 900px;
+}
+
+    #game-list li {
+        position: relative;
+        display: inline-block;
+        margin: 10px 15px;
+        top: 0;
+        cursor: pointer;
+        -webkit-transition: top 0.4s;
+        -o-transition: top 0.4s;
+        -moz-transition: top 0.4s;
+        transition: top 0.4s;
+    }
+
+        #game-list li:hover {
+            top: -10px;
+        }
+
+    #game-list .game-text {
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+        text-shadow: 1px 1px 0 #000;
+    }
+
+    #game-list li:hover .game-text {
+        color: #ff0;
+    }
+
+/* 载入中 */
+.fish-game .loading {
+    color: #fff;
+    font-size: 20px;
+    text-shadow: 1px 1px 0 #000;
+}

@@ -1,0 +1,807 @@
+﻿#banner {
+    position: relative;
+    height: auto;
+    overflow: hidden;
+    background-image: none;
+    z-index: 0;
+}
+
+/* #region slide-banner樣式 */
+#slide-banner {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+}
+
+    #slide-banner .slide {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -960px;
+    }
+
+
+        #slide-banner .slide a {
+            display: inline-block;
+            width: 1920px;
+            height: 600px; /* 通常只會改這兩個地方 跟著圖片高度 */
+        }
+
+    
+    /* 點點切換紐 */
+    #slide-banner .slide-pager {
+        position: absolute;
+        bottom: 40px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+        #slide-banner .slide-pager li {
+            display: inline-block;
+            width: 13px;
+            height: 13px;
+            margin: 0 4px;
+            /* 若要数字编号可以把font-size: 0拿掉 */
+            font-size: 0;
+            background-color: #880503;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+            #slide-banner .slide-pager .on,
+            #slide-banner .slide-pager li:hover {
+                background-color: #fff;
+            }
+/* #endregion slide-banner樣式 */
+
+#content {
+    background-color: #0a2431;
+    padding: 1px 0 30px;
+    background-image: url('../Home/images/background.jpg');
+    background-position: center 75px;
+    overflow: hidden;
+    background: #111;
+}
+
+.slider {
+    position: relative;
+    margin: 0 auto;
+    width: 1000px;
+    height: 80px;
+}
+
+.slider>span {
+    position: absolute;
+    top: 22px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    background-image: url('../Home/images/page.png');
+}
+
+.slider>span.prev {
+    left: -35px;
+    background-position: left center;
+}
+
+.slider>span.next {
+    right: -35px;
+    background-position: right center;
+}
+
+.slider .main-cell {
+    position: relative;
+}
+
+.slider .main-cell:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 372px;
+    display: inline-block;
+    width: 125px;
+    height: 80px;
+    background-image: url('../Home/images/ico_hover.png');
+}
+
+.slider ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+.slider ul li {
+    position: relative;
+    display: inline-block;
+    padding-right: 1px;
+    width: 125px !important;
+    height: 80px;
+    text-align: right;
+}
+
+.slider ul li:after {
+    content: '';
+    display: inline-block;
+    margin-top: 18px;
+    width: 2px;
+    height: 44px;
+    vertical-align: middle;
+    background-image: url('../Home/images/ico_bg.png');
+}
+
+.slider ul li:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 125px;
+    height: 80px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.slider ul li.active {}
+
+.slider .ag:before {
+    background-image: url('../Home/images/icon/ag.png');
+}
+
+.slider .bb:before {
+    background-image: url('../Home/images/icon/bb.png');
+}
+
+.slider .cq9:before {
+    background-image: url('../Home/images/icon/cq9.png');
+}
+
+.slider .fish:before {
+    background-image: url('../Home/images/icon/fish.png');
+}
+
+.slider .ga:before {
+    background-image: url('../Home/images/icon/ga.png');
+}
+
+.slider .gns:before {
+    background-image: url('../Home/images/icon/gns.png');
+}
+
+.slider .gpi:before {
+    background-image: url('../Home/images/icon/gpi.png');
+}
+
+.slider .hb:before {
+    background-image: url('../Home/images/icon/hb.png');
+}
+
+.slider .jdb:before {
+    background-image: url('../Home/images/icon/jdb.png');
+}
+
+.slider .mg:before {
+    background-image: url('../Home/images/icon/mg.png');
+}
+
+.slider .mw:before {
+    background-image: url('../Home/images/icon/mw.png');
+}
+
+.slider .ne:before {
+    background-image: url('../Home/images/icon/ne.png');
+}
+
+.slider .prg:before {
+    background-image: url('../Home/images/icon/prg.png');
+}
+
+.slider .pt:before {
+    background-image: url('../Home/images/icon/pt.png');
+}
+
+.slider .rt:before {
+    background-image: url('../Home/images/icon/rt.png');
+}
+
+.slider .sg:before {
+    background-image: url('../Home/images/icon/sg.png');
+}
+
+
+/* #region 电子 */
+
+.leftbox {
+    display: inline-block;
+}
+
+.game-section {
+    margin: 0 auto;
+    padding: 55px 0 0 305px;
+    width: 1018px;
+    height: 448px;
+    background: url('../Home/images/bg1.png');
+}
+
+.jackpot {
+    position: relative;
+    margin-bottom: 9px;
+    padding-right: 326px;
+    width: 461px;
+    height: 45px;
+    color: #fefc72;
+    font-family: 'Microsoft YaHei';
+    font-size: 16px;
+    line-height: 45px;
+    text-align: right;
+    background: url('../Home/images/jackpot.png');
+}
+
+.jackpot span {
+    position: absolute;
+    top: 2px;
+    left: 144px;
+    font-size: 20px;
+    letter-spacing: 19px;
+}
+
+.slot-game {
+    width: 477px;
+}
+
+.slot-game li {
+    position: relative;
+    list-style: none;
+    display: inline-block;
+    margin: 0 8px 8px 0;
+    padding-top: 85px;
+    width: 146px;
+    height: 114px;
+    color: #fff;
+    font-size: 12px;
+    line-height: 29px;
+    text-align: center;
+    background-color: #630304;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+.slot-game li:hover {
+    /* background-color: #910002; */
+}
+.slot-game li:hover:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+}
+.slot-game li:hover:after {
+    content: '进入游戏';
+    position: absolute;
+    top: 33px;
+    left: 33px;
+    width: 82px;
+    height: 26px;
+    /* background: url('../Home/images/enter.png'); */
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    line-height: 26px;
+    background: #910002;
+    border-radius: 5px;
+}
+
+.reward {
+    display: inline-block;
+    padding-top: 28px;
+    width: 223px;
+    height: 294px;
+    vertical-align: top;
+    background: url('../Home/images/winboard.png');
+}
+
+.reward .ward-title {
+    display: block;
+    padding-left: 5px;
+}
+
+.reward .ward-title span {
+    float: left;
+    width: 70px;
+    font-size: 12px;
+    text-align: center;
+}
+
+
+.reward ul {
+    display: inline-block;
+    height: 160px;
+    overflow: hidden;
+}
+
+.reward ul li {
+    color: #fff;
+    font-size: 12px;
+    line-height: 26px;
+    list-style: none;
+}
+
+.reward ul li span {
+    display: inline-block;
+    width: 70px;
+    text-align: center;
+}
+
+.reward div {
+    margin: 0 auto;
+    font: normal 16px/50px 'Microsoft YaHei';
+    color: #ffe6af;
+    text-align: center;
+    line-height: 45px;
+}
+
+.slot-game li.mg01 {
+    background-image: url('../Home/images/game/img1.jpg');
+}
+
+.slot-game li.mg02 {
+    background-image: url('../Home/images/game/img2.jpg');
+}
+
+.slot-game li.mg03 {
+    background-image: url('../Home/images/game/img3.jpg');
+}
+
+.slot-game li.mg04 {
+    background-image: url('../Home/images/game/img4.jpg');
+}
+
+.slot-game li.mg05 {
+    background-image: url('../Home/images/game/img5.jpg');
+}
+
+.slot-game li.mg06 {
+    background-image: url('../Home/images/game/img6.jpg');
+}
+
+.slot-game li.pt01 {
+    background-image: url('../Home/images/game/img7.jpg');
+}
+
+.slot-game li.pt02 {
+    background-image: url('../Home/images/game/img8.jpg');
+}
+
+.slot-game li.pt03 {
+    background-image: url('../Home/images/game/img9.jpg');
+}
+
+.slot-game li.pt04 {
+    background-image: url('../Home/images/game/img10.jpg');
+}
+
+.slot-game li.pt05 {
+    background-image: url('../Home/images/game/img11.jpg');
+}
+
+.slot-game li.pt06 {
+    background-image: url('../Home/images/game/img12.jpg');
+}
+
+.slot-game li.bb01 {
+    background-image: url('../Home/images/game/img13.jpg');
+}
+
+.slot-game li.bb02 {
+    background-image: url('../Home/images/game/img14.jpg');
+}
+
+.slot-game li.bb03 {
+    background-image: url('../Home/images/game/img15.jpg');
+}
+
+.slot-game li.bb04 {
+    background-image: url('../Home/images/game/img16.jpg');
+}
+
+.slot-game li.bb05 {
+    background-image: url('../Home/images/game/img17.jpg');
+}
+
+.slot-game li.bb06 {
+    background-image: url('../Home/images/game/img18.jpg');
+}
+
+.slot-game li.ag01 {
+    background-image: url('../Home/images/game/img19.jpg');
+}
+
+.slot-game li.ag02 {
+    background-image: url('../Home/images/game/img20.jpg');
+}
+
+.slot-game li.ag03 {
+    background-image: url('../Home/images/game/img21.jpg');
+}
+
+.slot-game li.ag04 {
+    background-image: url('../Home/images/game/img22.jpg');
+}
+
+.slot-game li.ag05 {
+    background-image: url('../Home/images/game/img23.jpg');
+}
+
+.slot-game li.ag06 {
+    background-image: url('../Home/images/game/img24.jpg');
+}
+
+.slot-game li.gpi01 {
+    background-image: url('../Home/images/game/img25.jpg');
+}
+
+.slot-game li.gpi02 {
+    background-image: url('../Home/images/game/img26.jpg');
+}
+
+.slot-game li.gpi03 {
+    background-image: url('../Home/images/game/img27.jpg');
+}
+
+.slot-game li.gpi04 {
+    background-image: url('../Home/images/game/img28.jpg');
+}
+
+.slot-game li.gpi05 {
+    background-image: url('../Home/images/game/img29.jpg');
+}
+
+.slot-game li.gpi06 {
+    background-image: url('../Home/images/game/img30.jpg');
+}
+
+.slot-game li.gns01 {
+    background-image: url('../Home/images/game/img31.jpg');
+}
+
+.slot-game li.gns02 {
+    background-image: url('../Home/images/game/img32.jpg');
+}
+
+.slot-game li.gns03 {
+    background-image: url('../Home/images/game/img33.jpg');
+}
+
+.slot-game li.gns04 {
+    background-image: url('../Home/images/game/img34.jpg');
+}
+
+.slot-game li.gns05 {
+    background-image: url('../Home/images/game/img35.jpg');
+}
+
+.slot-game li.gns06 {
+    background-image: url('../Home/images/game/img36.jpg');
+}
+
+.slot-game li.prg01 {
+    background-image: url('../Home/images/game/img37.jpg');
+}
+
+.slot-game li.prg02 {
+    background-image: url('../Home/images/game/img38.jpg');
+}
+
+.slot-game li.prg03 {
+    background-image: url('../Home/images/game/img39.jpg');
+}
+
+.slot-game li.prg04 {
+    background-image: url('../Home/images/game/img40.jpg');
+}
+
+.slot-game li.prg05 {
+    background-image: url('../Home/images/game/img41.jpg');
+}
+
+.slot-game li.prg06 {
+    background-image: url('../Home/images/game/img42.jpg');
+}
+
+.slot-game li.sg01 {
+    background-image: url('../Home/images/game/img43.jpg');
+}
+
+.slot-game li.sg02 {
+    background-image: url('../Home/images/game/img44.jpg');
+}
+
+.slot-game li.sg03 {
+    background-image: url('../Home/images/game/img45.jpg');
+}
+
+.slot-game li.sg04 {
+    background-image: url('../Home/images/game/img46.jpg');
+}
+
+.slot-game li.sg05 {
+    background-image: url('../Home/images/game/img47.jpg');
+}
+
+.slot-game li.sg06 {
+    background-image: url('../Home/images/game/img48.jpg');
+}
+
+.slot-game li.fish01 {
+    background-image: url('../Home/images/game/img49.1.png');
+}
+
+.slot-game li.fish02 {
+    background-image: url('../Home/images/game/img50.1.png');
+}
+
+.slot-game li.fish03 {
+    background-image: url('../Home/images/game/img51.1.png');
+}
+
+.slot-game li.fish04 {
+    background-image: url('../Home/images/game/img52.1.png');
+}
+
+.slot-game li.fish05 {
+    background-image: url('../Home/images/game/img53.1.png');
+}
+
+.slot-game li.fish06 {
+    background-image: url('../Home/images/game/img54.1.png');
+}
+
+.slot-game li.mw01 {
+    background-image: url('../Home/images/game/img55.jpg');
+}
+
+.slot-game li.mw02 {
+    background-image: url('../Home/images/game/img56.jpg');
+}
+
+.slot-game li.mw03 {
+    background-image: url('../Home/images/game/img57.jpg');
+}
+
+.slot-game li.mw04 {
+    background-image: url('../Home/images/game/img58.jpg');
+}
+
+.slot-game li.mw05 {
+    background-image: url('../Home/images/game/img59.jpg');
+}
+
+.slot-game li.mw06 {
+    background-image: url('../Home/images/game/img60.jpg');
+}
+
+.slot-game li.jdb01 {
+    background-image: url('../Home/images/game/img61.jpg');
+}
+
+.slot-game li.jdb02 {
+    background-image: url('../Home/images/game/img62.jpg');
+}
+
+.slot-game li.jdb03 {
+    background-image: url('../Home/images/game/img63.jpg');
+}
+
+.slot-game li.jdb04 {
+    background-image: url('../Home/images/game/img64.jpg');
+}
+
+.slot-game li.jdb05 {
+    background-image: url('../Home/images/game/img65.jpg');
+}
+
+.slot-game li.jdb06 {
+    background-image: url('../Home/images/game/img66.jpg');
+}
+
+.slot-game li.hb01 {
+    background-image: url('../Home/images/game/img67.jpg');
+}
+
+.slot-game li.hb02 {
+    background-image: url('../Home/images/game/img68.jpg');
+}
+
+.slot-game li.hb03 {
+    background-image: url('../Home/images/game/img69.jpg');
+}
+
+.slot-game li.hb04 {
+    background-image: url('../Home/images/game/img70.jpg');
+}
+
+.slot-game li.hb05 {
+    background-image: url('../Home/images/game/img71.jpg');
+}
+
+.slot-game li.hb06 {
+    background-image: url('../Home/images/game/img72.jpg');
+}
+
+.slot-game li.cq901 {
+    background-image: url('../Home/images/game/img73.jpg');
+}
+
+.slot-game li.cq902 {
+    background-image: url('../Home/images/game/img74.jpg');
+}
+
+.slot-game li.cq903 {
+    background-image: url('../Home/images/game/img75.jpg');
+}
+
+.slot-game li.cq904 {
+    background-image: url('../Home/images/game/img76.jpg');
+}
+
+.slot-game li.cq905 {
+    background-image: url('../Home/images/game/img77.jpg');
+}
+
+.slot-game li.cq906 {
+    background-image: url('../Home/images/game/img78.jpg');
+}
+
+.slot-game li.ne01 {
+    background-image: url('../Home/images/game/img79.jpg');
+}
+
+.slot-game li.ne02 {
+    background-image: url('../Home/images/game/img80.jpg');
+}
+
+.slot-game li.ne03 {
+    background-image: url('../Home/images/game/img81.jpg');
+}
+
+.slot-game li.ne04 {
+    background-image: url('../Home/images/game/img82.jpg');
+}
+
+.slot-game li.ne05 {
+    background-image: url('../Home/images/game/img83.jpg');
+}
+
+.slot-game li.ne06 {
+    background-image: url('../Home/images/game/img84.jpg');
+}
+
+.slot-game li.rt01 {
+    background-image: url('../Home/images/game/img85.jpg');
+}
+
+.slot-game li.rt02 {
+    background-image: url('../Home/images/game/img86.jpg');
+}
+
+.slot-game li.rt03 {
+    background-image: url('../Home/images/game/img87.jpg');
+}
+
+.slot-game li.rt04 {
+    background-image: url('../Home/images/game/img88.jpg');
+}
+
+.slot-game li.rt05 {
+    background-image: url('../Home/images/game/img89.jpg');
+}
+
+.slot-game li.rt06 {
+    background-image: url('../Home/images/game/img90.jpg');
+}
+
+.slot-game li.ga01 {
+    background-image: url('../Home/images/game/img91.jpg');
+}
+
+.slot-game li.ga02 {
+    background-image: url('../Home/images/game/img92.jpg');
+}
+
+.slot-game li.ga03 {
+    background-image: url('../Home/images/game/img93.jpg');
+}
+
+.slot-game li.ga04 {
+    background-image: url('../Home/images/game/img94.jpg');
+}
+
+.slot-game li.ga05 {
+    background-image: url('../Home/images/game/img95.jpg');
+}
+
+.slot-game li.ga06 {
+    background-image: url('../Home/images/game/img96.jpg');
+}
+
+
+/* #endregion 电子 */
+
+
+/* #region lobby */
+
+.game-list {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.game-list li {
+    display: inline-block;
+    margin: 2px;
+    width: 241px;
+    height: 326px;
+    list-style: none;
+    background-image: url('../Home/images/lobby.png');
+    background-position-y: bottom;
+    -moz-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
+}
+
+.game-list li:hover {
+    background-position-y: top;
+}
+
+.game-list li a {
+    display: block;
+    padding: 175px 15px 10px 15px;
+    font-family: 'Microsoft YaHei';
+    height: 100%;
+    color: #fff;
+    text-align: justify;
+    text-decoration: none;
+    line-height: 24px;
+}
+
+.game-list li span {
+    display: block;
+    margin: 5px auto 0;
+    width: 159px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    color: #1c1c1c;
+    font-size: 18px;
+    /* background: url('../Home/images/lobby_btn.png') no-repeat center bottom; */
+    color: #f1d9a6;
+    background: #291e19;
+    border-radius: 5px;
+    border: 1px solid #412d23;
+}
+
+.game-list li:hover span {
+    background-position: center top;
+}
+
+.game-list li[game-box="mobile"] {
+    background-position-x: 0;
+}
+
+.game-list li[game-box="live"] {
+    background-position-x: -241px;
+}
+
+.game-list li[game-box="lottery"] {
+    background-position-x: -482px;
+}
+
+.game-list li[game-box="sport"] {
+    background-position-x: 241px;
+}
+
+
+/* #endregion lobby */

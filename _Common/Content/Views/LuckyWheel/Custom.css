@@ -1,0 +1,245 @@
+﻿/* 主畫面調整 */
+body.luckywheel {
+    background: #ff4e00;
+    background: -moz-linear-gradient(top, #ff4e00 0, #ff880a 100%);
+    background: -webkit-linear-gradient(top, #ff4e00 0,#ff880a 100%);
+    background: linear-gradient(to bottom, #ff4e00 0,#ff880a 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff4e00', endColorstr='#ff880a',GradientType=0 );
+}
+
+    body.luckywheel::-webkit-scrollbar {
+        background: #ff4e00;
+        background: -moz-linear-gradient(top, #ff4e00 0, #ff880a 100%);
+        background: -webkit-linear-gradient(top, #ff4e00 0,#ff880a 100%);
+        background: linear-gradient(to bottom, #ff4e00 0,#ff880a 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff4e00', endColorstr='#ff880a',GradientType=0 );
+    }
+
+    body.luckywheel::-webkit-scrollbar-thumb {
+        background: #b33700;
+    }
+
+    body.luckywheel:before {
+        content: '';
+        background-image: url('../../../../_Common/Content/Views/LuckyWheel/luckywheel_bg.png');
+    }
+
+    body.luckywheel.preview:after {
+        content: '';
+        background-image: url('../../../../_Common/Content/Views/LuckyWheel/luckywheel_preview.png');
+    }
+
+    /*#region 活動頂端 */
+
+    body.luckywheel header .luckywheel-date {
+        color: #fff4c3;
+        text-shadow: 2px 2px 0px rgba(7,6,6,0.3);
+    }
+
+        body.luckywheel header .luckywheel-date:before {
+            content: '';
+            filter: drop-shadow(2px 2px 0px rgba(7,6,6,0.3));
+            background-image: url('../../../../_Common/Content/Views/LuckyWheel/luckywheel_date.png');
+        }
+
+    body.luckywheel header .luckywheel-title {
+        color: #ffe884;
+        text-shadow: 4px 4px 0px rgba(7,6,6,0.3),-1px -1px 0px #fff4c3;
+    }
+
+    /*#endregion 活動頂端 */
+
+    /*#region 活動中間 */
+    body.luckywheel .content {
+        background-image: url('../../../../_Common/Content/Views/LuckyWheel/luckywheel_contentBg.png');
+    }
+
+        body.luckywheel .content .panel-shadow {
+            background-color: rgb(119,45,0);
+            -moz-box-shadow: 5px 5px 0 rgba(119,45,0,0.4);
+            -webkit-box-shadow: 5px 5px 0 rgba(119,45,0,0.4);
+            box-shadow: 5px 5px 0 rgba(119,45,0,0.4);
+            filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=4,MakeShadow=true,ShadowOpacity=0.40);
+            -ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=4,MakeShadow=true,ShadowOpacity=0.40)";
+            zoom: 1;
+        }
+
+        body.luckywheel .content .console-panel > * {
+            border-bottom: 1px solid rgba(177,153,48,0.8);
+        }
+
+        body.luckywheel .content .console-panel .head {
+            color: #ff4200;
+            text-shadow: 1px 1px 0px rgba( 255,222,81,0.7 );
+            border-bottom: 1px solid #bebaa9;
+        }
+
+        body.luckywheel .content .console-panel ul::-webkit-scrollbar {
+            background: #fff7d6;
+        }
+
+        body.luckywheel .content .console-panel ul::-webkit-scrollbar-thumb {
+            background: #ff4200;
+        }
+
+        body.luckywheel .content .console-panel li {
+            border-bottom: 1px solid #eae3c8;
+        }
+
+            body.luckywheel .content .console-panel li:hover {
+                color: #ff4200;
+            }
+
+        body.luckywheel .content .console-panel .login-panel {
+            color: #ff4200;
+        }
+
+            body.luckywheel .content .console-panel .login-panel .login-button {
+                background-image: url('../../../../_Common/Content/Views/LuckyWheel/luckywheel_consoleButton.png');
+            }
+
+                body.luckywheel .content .console-panel .login-panel .login-button .login-main {
+                    text-shadow: 1px 1px 0px rgba( 255,250,230,0.7 );
+                }
+
+                body.luckywheel .content .console-panel .login-panel .login-button .login-sub {
+                    text-shadow: 1px 1px 0px rgba( 255,250,230,0.7 );
+                }
+
+            body.luckywheel .content .console-panel .login-panel .login-info {
+                text-shadow: 1px 1px 0px rgba( 255,250,230,0.7 );
+            }
+
+        body.luckywheel .content .console-panel .reward-list {
+            background: #fff7d6;
+        }
+
+        body.luckywheel .content .console-panel .account-record {
+            background: #fff7d6;
+        }
+
+        body.luckywheel .content .console-panel .serial-number input {
+            background: #fff7d6;
+            border-bottom: 1px solid rgba(177,153,48,0.8);
+        }
+
+        body.luckywheel .content .console-panel .serial-number a {
+            color: #ffe884;
+            text-shadow: 2px 2px 0 rgba( 116,41,15,0.7 );
+            background: #ff4200;
+        }
+
+        body.luckywheel .content .console-panel .serial-number .raffleCount-tip {
+            background: #ff4200;
+        }
+
+            body.luckywheel .content .console-panel .serial-number .raffleCount-tip:after {
+                border-left: 8px solid transparent;
+                border-right: 8px solid transparent;
+                border-top: 8px solid #ff4200;
+            }
+
+    /*#endregion 活動中間 */
+
+    /*#region 活動底部 */
+    body.luckywheel footer {
+        color: #fe003c;
+    }
+
+        body.luckywheel footer .wrapper {
+            background: #ffefae;
+            border-left: 4px solid #fe003c;
+            border-right: 4px solid #fe003c;
+        }
+/*#endregion 活動底部 */
+
+/*#region Modal */
+/*#region 獎項 Modal */
+.modal-backdrop {
+    background: rgba(0,0,0,0.9);
+    background: transparent \9;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e0000000,endColorstr=#e0000000);
+    zoom: 1;
+}
+
+.modal-dialog .modal-content {
+    background: #ff5100;
+    color: #ffe464;
+}
+
+    .modal-dialog .modal-content button {
+        background: #ffe464;
+        color: #ff5100;
+        border: 1px solid #ffe464;
+    }
+
+.modal-dialog.reward-modal .modal-content {
+    background: #ff5100;
+    color: #fff;
+}
+
+    .modal-dialog.reward-modal .modal-content:before {
+        display: inline-block;
+        background-image: url('../../../../_Common/Content/Views/LuckyWheel/luckywheel_rewardbg.png');
+    }
+
+    .modal-dialog.reward-modal .modal-content button {
+        background: #ffed9c;
+        color: #ff5100;
+    }
+
+.modal-dialog.again-modal .modal-content {
+    background: #ffed9c;
+    color: #41380e;
+}
+
+    .modal-dialog.again-modal .modal-content:before {
+        display: inline-block;
+        background-image: url('../../../../_Common/Content/Views/LuckyWheel/luckywheel_againbg.png');
+    }
+
+    .modal-dialog.again-modal .modal-content button {
+        background: #ff5100;
+        color: #ffed9c;
+    }
+/*#endregion 獎項 Modal */
+/*#endregion Modal */
+
+/*#region 轉盤 */
+.roulette.area6 {
+    background-image: url('../../../../_Common/Content/Views/LuckyWheel/roulette_wheel6.png');
+}
+
+.roulette.area8 {
+    background-image: url('../../../../_Common/Content/Views/LuckyWheel/roulette_wheel8.png');
+}
+
+.roulette.area10 {
+    background-image: url('../../../../_Common/Content/Views/LuckyWheel/roulette_wheel10.png');
+}
+
+.roulette.area12 {
+    background-image: url('../../../../_Common/Content/Views/LuckyWheel/roulette_wheel12.png');
+}
+
+.roulette .roulette-wheel .roulette-reward .reward-tooltip {
+    color: #ffe884;
+    text-shadow: 2px 2px 0px rgba(7,6,6,0.3);
+    background: rgba(255,66,0, 0.3);
+}
+
+.roulette .roulette-wheel .roulette-reward .reward-info {
+    color: #ffe884;
+    text-shadow: 2px 2px 0px rgba(7,6,6,0.3);
+}
+
+.roulette .roulette-wheel .roulette-arrow {
+    top: 106px; /* 轉盤寬度減去指針圖片寬度 */
+    left: 106px; /* 轉盤寬度減去指針圖片寬度 */
+    width: 224px;
+    height: 224px;
+    /* 設置背景圖讓directive "roulette-arrow" 取得路徑 */
+    /* 取得後會取消背景圖 */
+    background-image: url('../../../../_Common/Content/Views/LuckyWheel/roulette_arrow.png');
+}
+/*#endregion 轉盤 */

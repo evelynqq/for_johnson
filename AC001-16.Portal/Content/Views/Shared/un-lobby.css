@@ -1,0 +1,217 @@
+﻿/* 各頁設定 */
+#un-lobby {
+    display: inline-block;
+    padding: 20px 21px;
+}
+
+    #un-lobby aside {
+        float: left;
+        width: 198px;
+        /*height: 551px;*/
+    }
+
+    #un-lobby ul#sidebar li {
+        position: relative;
+        width: 198px;
+        height: 47px;
+        color: #401701;
+        font-size: 16px;
+        font-family: 'Microsoft YaHei';
+        line-height: 43px;
+        text-align: center;
+        background: #303132;
+        margin-bottom: 1px;
+    }
+
+        #un-lobby ul#sidebar li a {
+            position: absolute;
+            left: 0;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        #un-lobby ul#sidebar li:before {
+            position: absolute;
+            content: '';
+            width: 5px;
+            display: block;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #e21e22;
+            -webkit-transition: all 0.4s;
+            -moz-transition: all 0.4s;
+            transition: all 0.4s;
+        }
+
+            #un-lobby ul#sidebar li:hover:before,
+            #un-lobby ul#sidebar li.active:before {
+                width: 100%;
+            }
+
+
+        #un-lobby ul#sidebar li.mtab,
+        #un-lobby ul#sidebar li.active,
+        #un-lobby ul#sidebar li:hover {
+            color: #fff;
+            background-position: center bottom;
+        }
+
+/* 內文CSS */
+#articles {
+    float: right;
+    width: 930px;
+    padding: 0 35px 15px 35px;
+    margin-left: 30px;
+    color: #151515;
+    text-align: left;
+}
+
+    #articles h2 {
+        margin: 0;
+        padding-bottom: 20px;
+        color: #373839;
+        font-family: 'Microsoft YaHei';
+        font-size: 22px;
+        text-align: center;
+    }
+
+    #articles h3 {
+        color: #5a0003;
+        font-size: 18px;
+        text-align: left;
+    }
+
+    #articles h4 {
+        color: #5a0003;
+        font-size: 14px;
+        text-align: left;
+    }
+
+    #articles > ul {
+        list-style: none;
+    }
+
+    #articles ol {
+        padding-left: 20px;
+        list-style-type: decimal;
+    }
+
+    #articles p,
+    #articles li {
+        font-size: 12px;
+        text-align: justify;
+        line-height: 2em;
+    }
+
+    #articles p {
+        margin: 1em 0;
+    }
+
+    #articles table {
+        width: 100%;
+    }
+
+        #articles table tr,
+        #articles table th,
+        #articles table td {
+            line-height: 2em;
+            text-align: center;
+            border: 1px solid #151515;
+        }
+
+        #articles table th {
+            color: #fff;
+            background: #151515;
+            font-weight: normal;
+            border: 1px solid #fff;
+        }
+
+    /* 重點顏色 */
+    #articles .highlight {
+        color: #f00;
+    }
+
+    /* #region deposit线上存款页面使用 */
+    #articles ul.deposit {
+        list-style-type: none;
+    }
+
+        #articles ul.deposit > li {
+            counter-increment: title;
+        }
+
+            #articles ul.deposit > li > a:before {
+                content: "方法 "counter(title,upper-alpha)"、";
+            }
+
+            #articles ul.deposit > li a {
+                color: #5a0003;
+                font-size: 16px;
+                text-decoration: underline;
+            }
+/* #endregion deposit线上存款页面使用 */
+
+/* #region account nav共用 */
+.body {
+    position: relative;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 1px;
+    font-size: 14px;
+    font-family: PMingLiU;
+    background: #021428;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+    .body #title {
+        color: #fff;
+        text-align: center;
+        background: #021428;
+    }
+
+    .body.container #title,
+    .body #account-heading,
+    .body #withdrawal-heading {
+        color: #fff;
+        background: #151515;
+    }
+    /* 檢視存入帳戶的文字顏色 */
+    .body #show-account-info.btn {
+        color: #fff;
+    }
+/* #endregion account nav共用 */
+
+/* #region 輸入框placeholder顏色 */
+/* 此為預設顏色，若各站需特別色系請由此修改，不需要可整段刪除 */
+.form-group .control-div input::-webkit-input-placeholder {
+    color: #999;
+}
+
+.form-group .control-div input::-moz-placeholder {
+    color: #999;
+}
+
+.form-group .control-div input:-ms-input-placeholder {
+    color: #999;
+}
+
+.form-group .control-div input.placeholder {
+    color: #999;
+}
+/* #endregion 輸入框placeholder顏色 */
+
+/* 一鍵取回 */
+.body.container #title,
+.body #account-heading,
+.body #withdrawal-heading,
+#account-popup.modal.in table th {
+    color: #fff;
+    background: #303132;
+}

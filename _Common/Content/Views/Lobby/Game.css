@@ -1,0 +1,167 @@
+﻿#content {
+    margin-bottom: 100px;
+}
+
+#banner {
+    background-image: url('http://www.a20.gjsoft.cc/Content/Views/Lobby/Game/banner.jpg');
+}
+
+#lobby iframe {
+    position: relative;
+    top:31px;
+    left: 50%;
+    margin-left: -498px;
+    width: 996px;
+    height: 900px;
+    background: #fff;
+    -moz-transition: all linear .3s;
+    -o-transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    transition: all linear .3s;
+}
+
+.game-list {
+    text-align: center;
+    border: 1px solid #333;
+    width: 1000px !important;
+    margin-left: -500px !important;
+}
+
+    .game-list > li {
+        width: 166px;
+        height: 56px;
+        padding-top: 6px;
+        padding-left: 80px;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 400;
+        text-align: left;
+        line-height: 24px;
+        white-space: nowrap;
+    }
+
+        .game-list > li + li {
+            border-left: 1px solid #333;
+        }
+
+        .game-list > li > div {
+            color: #fde2a4;
+            font-size: 12px;
+        }
+
+            .game-list > li[game-box="more"] > div {
+                color: #858585;
+            }
+
+        .game-list > li:before{
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 166px;
+            height: 100%;
+            display: block;
+            background-position: 10px 2px;
+            background-repeat: no-repeat;
+        }
+
+        .game-list > li:not([game-box="more"]):hover,
+        .game-list > li.active {
+            background: linear-gradient(#f4deaf, #c6a263);
+            color: #000;
+        }
+        .game-list > li:not([game-box="more"]):hover > div,
+        .game-list > li.active > div{
+            color: #000;
+        }
+
+        .game-list > li[game-box="bbina"]:before {
+            background-image: url('http://www.a20.gjsoft.cc/Content/Views/Lobby/Game/bb.png');
+        }
+
+        .game-list > li[game-box="MgaFlash"]:before {
+            background-image: url('http://www.a20.gjsoft.cc/Content/Views/Lobby/Game/mg.png');
+        }
+
+        .game-list > li[game-box="PtaFlash"]:before {
+            background-image: url('http://www.a20.gjsoft.cc/Content/Views/Lobby/Game/pt.png');
+        }
+
+        .game-list > li[game-box="ag"]:before {
+            background-image: url('http://www.a20.gjsoft.cc/Content/Views/Lobby/Game/ag.png');
+        }
+
+        .game-list > li[game-box="gpi"]:before {
+            background-image: url('http://www.a20.gjsoft.cc/Content/Views/Lobby/Game/gpi.png');
+        }
+
+        .game-list > li[game-box="gns"]:before {
+            background-image: url('http://www.a20.gjsoft.cc/Content/Views/Lobby/Game/gns.png');
+        }
+
+        .game-list > li[game-box="pp"]:before {
+            background-image: url('http://www.a20.gjsoft.cc/Content/Views/Lobby/Game/pp.png');
+        }
+
+        .game-list > li[game-box="sg"]:before {
+            background-image: url('http://www.a20.gjsoft.cc/Content/Views/Lobby/Game/sg.png');
+        }
+
+        .game-list > li[game-box="fish"]:before {
+            background-image: url('http://www.a20.gjsoft.cc/Content/Views/Lobby/Game/fish.png');
+        }
+
+        .game-list > li[game-box="mw"]:before {
+            background-image: url('http://www.a20.gjsoft.cc/Content/Views/Lobby/Game/mw.png');
+        }
+
+        .game-list > li[game-box="hb"]:before {
+            background-image: url('http://www.a20.gjsoft.cc/Content/Views/Lobby/Game/hb.png');
+        }
+
+        .game-list > li[game-box="jdb"]:before {
+            background-image: url('http://www.a20.gjsoft.cc/Content/Views/Lobby/Game/jdb.png');
+        }
+
+        .game-list > li[game-box="ne"]:before {
+            background-image: url('http://www.a20.gjsoft.cc/Content/Views/Lobby/Game/ne.png');
+        }
+
+        .game-list > li[game-box="cq9"]:before {
+            background-image: url('http://www.a20.gjsoft.cc/Content/Views/Lobby/Game/cq9.png');
+        }
+
+        .game-list > li[game-box="rt"]:before {
+            background-image: url('http://www.a20.gjsoft.cc/Content/Views/Lobby/Game/rt.png');
+        }
+
+        .game-list > li[game-box="ga"]:before {
+            background-image: url('http://www.a20.gjsoft.cc/Content/Views/Lobby/Game/ga.png');
+        }
+
+        .game-list > li[game-box="pg"]:before {
+            background-image: url('http://www.a20.gjsoft.cc/Content/Views/Lobby/Game/pg.png');
+        }
+
+        .game-list > li[game-box="lg"]:before {
+            padding-left: 72px;
+            background-image: url('http://www.a20.gjsoft.cc/Content/Views/Lobby/Game/lg.png');
+        }
+
+        .game-list > li[game-box="isb"]:before {
+            background-image: url('http://www.a20.gjsoft.cc/Content/Views/Lobby/Game/isb.png');
+        }
+
+        .game-list > li[game-box="more"] {
+            padding-left: 0;
+            color: #858585;
+            text-align: center;
+        }
+
+            /*.game-list > li[game-box="more"]:hover,
+            .game-list > li[game-box="more"]:hover > div {
+                color: #000;
+            }*/
+
+        .game-list > li:hover:before {
+            filter:drop-shadow(1px 1px 1px #46361e);
+        }

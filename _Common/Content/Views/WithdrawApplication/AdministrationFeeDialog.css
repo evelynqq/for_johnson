@@ -1,0 +1,15 @@
+﻿table thead tr th {
+    text-align: center;
+}
+
+table tbody tr td {
+    text-align: right;
+}
+
+    table tbody tr td.date {
+        text-align: left;
+    }
+
+    table tbody tr td.audit {
+        text-align: center;
+    }

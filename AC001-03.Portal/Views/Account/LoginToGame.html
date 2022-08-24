@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html @* xmlns:ng="http://angularjs.org" *@ id="ng-app" ng-app="portalApp" meidon-time="@ViewBag.MeiDonNow" @* 主機的美東時間 *@ moment-lang="@ViewBag.Language" @* 瀏覽器語系 *@ ng-init="'@Resources.Shared.Head_Title'">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="shortcut icon" href="../../../_Common/Content/Views/Shared/images/favicon.ico" />
+    <link href="../../bundles/site.css" rel="stylesheet" />
+    <script src="../../../_Common/Scripts/jquery/v1.12.4/jquery.min.js"></script>
+    <script src="../../bundles/include-html.js"></script>
+</head>
+<body>
+    <div id="login-content" ng-controller="LoginToGameCtrl" class="ng-scope">
+        <div id="logingame-left">
+            <div id="login-info">
+                <h3>快速登錄</h3>
+                
+                <p>登錄亞洲最佳線上真人娛樂城、體育博彩、彩票遊戲、電子遊藝</p>
+            </div>
+            <form ng-controller="LoginCtrl" ng-submit="login(loginParams)" ng-disabled="isProcessing" class="ng-scope ng-pristine ng-invalid ng-invalid-required">
+                <input id="login_account" type="text" placeholder="帳號" ng-model="loginParams.account" required="" autofocus="" class="ng-pristine ng-invalid ng-invalid-required">
+                <input id="login_password" type="password" placeholder="密碼" ng-model="loginParams.password" required="" class="ng-pristine ng-invalid ng-invalid-required">
+                <div id="check-code-wrapper">
+                    <input data-checkcode-retriever="checkCode" checkcode-type="Login" type="text" placeholder="驗證碼" ng-model="loginParams.checkCode" required="" class="ng-pristine ng-invalid ng-invalid-required">
+                    <img id="captcha" ng-show="checkCode.image" ng-src="" class="ng-hide">
+                </div>
+                <button id="login-box" ng-disabled="isProcessing" ng-bind="isProcessing ? '登入...' : '登入'" class="ng-binding">登入</button>
+                <button type="button" id="forget" ng-click="lineChatClick()">忘記密碼</button>
+                <div id="agree" ng-show="loginOver" class="ng-hide">
+                    點擊登入表示同意<a ng-click="agreement()">用戶協議</a>
+                </div>
+            </form>
+        </div>
+        <div id="logingame-right">
+            <div id="logingame-logo">
+                <img src="/CdnRedirect/Web.Portal/AC001-03.Portal/Content/Views/Common/images/logo.png" onerror="this.style.display = 'none'" style="display: none;">
+            </div>
+            <span>沒有加入會員嗎？今天就立即加入。</span>
+            <button type="button" class="joinus" ng-click="GameRegisterClick()">免費開戶</button>
+        </div>
+    </div>
+</body>
+</html>

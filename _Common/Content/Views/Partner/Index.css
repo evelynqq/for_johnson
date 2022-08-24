@@ -1,0 +1,14 @@
+﻿#Union1 {
+    position: relative;
+}
+
+
+    #Union1 span.u-coin {
+        position: absolute;
+        right: 234px;
+        bottom: 43px;
+    }
+
+        #Union1 span.u-coin a {
+            text-decoration: none;
+        }

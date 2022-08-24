@@ -1,0 +1,167 @@
+﻿#un-lobby {
+    color: #a9a9a9;
+    aside {
+        display: none;
+    }
+    #articles {
+        margin: 0;
+        border: none;
+        width: auto;
+        li {
+            margin: 5px;
+        }
+        h3 {
+            width: 100%;
+        }
+    }
+}
+
+h2 {
+    color: #794200;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h3 {
+    color: #333;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.level-list {
+    background: #fff;
+    border-radius: 10px;
+    line-height: 60px;
+    text-align: center;
+    color: #505050;
+    .title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    ul {
+        font-size: 0;
+        li {
+            position: relative;
+            display: inline-block;
+            font-size: 16px;
+            width: 70px;
+            margin: 5px .5%;
+            border-radius: 5px;
+            line-height: 30px;
+            vertical-align: bottom;
+            color: #fff;
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                display: block;
+                width: 100%;
+                height: 32px;
+            }
+            &:before {
+                content: '';
+                mask: url('../Shared/images/vip.svg');
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+                background: #ffc622;
+                mask-size: cover;
+                margin-bottom: -5px;
+            }
+            span {
+                position: relative;
+                z-index: 2;
+            }
+            // @for $i from 1 through $vip-len {
+            //     &:nth-child(#{$i}):after {
+            //         background: nth($vip-color,$i);
+            //     }
+            //     &:nth-child(#{$i}) {
+            //         border: 1px solid  nth($vip-color,$i);
+            //     }
+            //     &:nth-child(#{$i}) .icon,
+            //     &:nth-child(#{$i}):before {
+            //         background: nth($vip-color,$i);
+            //     }
+            // }
+        }
+    }
+}
+
+#un-lobby table {
+    position: relative;
+    background: #fff;
+    color: #505050;
+    border-radius: 10px;
+    width: 100%;
+    td {
+        line-height: 24px;
+        text-align: center;
+        border: #ccc solid 1px;
+    }
+    &.landscape thead tr {
+        font-weight: 600;
+        background: #e2ebef;
+    }
+    &.landscape tbody tr {
+        &:nth-child(2n) {
+            background: #fafafa;
+        }
+        td:nth-child(1) {
+            position: relative;
+            color: #333;
+            line-height: 30px;
+            padding-bottom: 20px;
+            &:before {
+                content: '';
+                mask: url('../Shared/images/vip.svg');
+                position: absolute;
+                left: 50%;
+                margin-left: -25px;
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+                background: #ffc622;
+                mask-size: cover;
+                margin-bottom: -5px;
+            }
+        }
+    }
+    &.straight {
+        table-layout: fixed;
+        thead td {
+            position: relative;
+            &:nth-child(n+2) {
+                color: #333;
+                &:before {
+                    content: '';
+                    mask: url('../Shared/images/VIP.svg');
+                    display: inline-block;
+                    width: 50px;
+                    height: 50px;
+                    background: #ffc622;
+                    mask-size: cover;
+                    margin-bottom: -5px;
+                }
+            }
+        }
+        td:nth-child(1){
+            font-weight: 600;
+            background: #e2ebef;
+        }
+        tbody td:nth-child(2n-1):not(:nth-child(1)){
+            background: #fafafa;
+        }
+    }
+}
+
+ ul.rule li{
+    padding-left: 5em;
+    text-indent: -5em;
+    line-height: 24px;
+    margin-bottom: 10px;
+    strong {
+        color: #666;
+    }
+}

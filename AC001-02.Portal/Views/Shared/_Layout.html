@@ -1,0 +1,457 @@
+﻿<body class="layout" ng-controller="LayoutCtrl">
+    <header id="header" scrolltop-fixed="400">
+        <!-- popup -->
+        <div id="popup"></div>
+        <div class="header-top">
+            <div class="wrapper">
+                <ul class="top-nav top-nav-left">
+                    <li id="div-meiDonNow">
+                        美東時間 -
+                        <span ng-bind="meiDonNow|dateTime" class="ng-binding">2018/06/06 (三) 03:22:37</span>
+                    </li>
+                </ul>
+                <ul class="top-nav top-nav-right">
+                    <li><a href="javascript:void(0)" ng-controller="LobbiesCtrl" ng-click="toKgHtml()"
+                            class="ng-scope">開元棋牌</a></li>
+                    <li><a href="#">活动申请大厅</a></li>
+                    <li><a href="#">电子聚宝盆</a></li>
+                    <li class="license"><a href="javascript:void(0)">牌照展示</a></li>
+                    <li><a href="#">手机APP</a></li>
+                    <li class="language" select-language="">
+                        <span data-language="zh-TW" title="繁体中文" class="ng-scope ng-binding">繁体中文</span>
+                        <ul>
+                            <li data-language="zh-CN" title="简体中文" class="ng-scope ng-binding">简体中文</li>
+                            <li data-language="zh-TW" title="繁体中文" class="ng-scope ng-binding">繁体中文</li>
+                            <li data-language="en-US" title="English" class="ng-scope ng-binding">English</li>
+                            <li data-language="th" title="ภาษาไทย" class="ng-scope ng-binding">ภาษาไทย</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="wrapper">
+                <div id="logo-bg">
+                    <a href="../Home/index.html"></a>
+                </div>
+
+                <!-- @* 导览列 *@ -->
+                <nav id="nav" ng-controller="LobbiesCtrl" slide-menu="" class="ng-scope">
+                    <ul>
+                        <li class="active">
+                            <a href="../Home/index.html" nav-active="">
+                                <span class="ch">首页</span>
+                                <span class="en">HOME</span>
+                            </a>
+                        </li>
+                        <li class="has-menu">
+                            <a href="" nav-active="">
+                                <span class="ch">捕鱼达人</span>
+                                <span class="en">FISH</span>
+                            </a>
+                        </li>
+                        <li class="has-menu">
+                            <a href="../Lobby/Live.html" nav-active="">
+                                <span class="ch">真人视讯</span>
+                                <span class="en">LIVE</span>
+                            </a>
+                            <!-- List -->
+                        </li>
+                        <li class="has-menu">
+                            <a href="../Lobby/Sport.html" nav-active="">
+                                <span class="ch">体育赛事</span>
+                                <span class="en">SPORTS</span>
+                            </a>
+                            <!-- List -->
+                        </li>
+                        <li class="has-menu">
+                            <a href="../Lobby/Lottery.html" nav-active="">
+                                <span class="ch">彩票投注</span>
+                                <span class="en">LOTTERY</span>
+                            </a>
+                            <!-- List -->
+                        </li>
+                        <li class="hot has-menu on">
+                            <a href="../Lobby/Game.html" nav-active="">
+                                <span class="ch">电子游艺</span>
+                                <span class="en">SLOTS</span>
+                            </a>
+                            <!-- List -->
+                        </li>
+                        <li class="has-menu">
+                            <a href="../Lobby/Board.html" nav-active="">
+                                <span class="ch">棋牌游戏</span>
+                                <span class="en">BOARD</span>
+                            </a>
+                            <!-- List -->
+                        </li>
+                        <li class="promotion hot">
+                            <a href="../Promotion/index.html" nav-active="">
+                                <span class="ch">优惠活动</span>
+                                <span class="en">PROMOTION</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="wrapper">
+        <div id="member" scrolltop-fixed="400" class="">
+            <div class="wrapper">
+
+                <!-- Account-box -->
+                <!-- 未登入 -->
+                <div id="account-box" class="is-logout">
+                    <form ng-controller="LoginCtrl" ng-submit="login(loginParams)" ng-disabled="isProcessing"
+                        class="ng-scope ng-pristine ng-invalid ng-invalid-required">
+                        <input id="login_account" type="text" placeholder="帳號" ng-model="loginParams.account"
+                            required="" autofocus="" class="ng-pristine ng-invalid ng-invalid-required">
+                        <input id="login_password" type="password" placeholder="密碼" ng-model="loginParams.password"
+                            required="" class="ng-pristine ng-invalid ng-invalid-required">
+                        <a href="javascript:void(0)" ng-click="lineChatClick()">忘記密碼</a>
+                        <!-- <div id="check-code-wrapper">
+                            <input data-checkcode-retriever="checkCode" checkcode-type="Login" type="text" placeholder="驗證碼"
+                                ng-model="loginParams.checkCode" required="" tabindex="3"
+                                class="ng-pristine ng-invalid ng-invalid-required">
+                            <img id="captcha" ng-show="checkCode.image" ng-src="" class="ng-hide">
+                        </div> -->
+                        <button id="login-box" class="login-btn ng-binding" onclick="login()">登入</button>
+                        <button class="reg-btn" onclick="window.location.href='../Register/index.html'"
+                            type="button">免費開戶</button>
+                        <a class="link" href="javascript:void(0)" ng-click="lineChatClick()">忘記密碼</a>
+                        <a class="link" href="../Trial/Apply.html" target="_blank">免費試玩</a>
+                        <!-- <div id="agree" ng-show="loginOver" class="ng-hide">
+                            點擊登入表示同意<a ng-click="agreement()">用戶協議</a>
+                        </div> -->
+                    </form>
+                    <div class="online">
+                        当前在线游戏人数： <span digital="" digital-min="215862" add="" not-point=""
+                            not-thousandth="">217465</span> 人
+                    </div>
+                </div>
+                <!-- 登入 -->
+                <div id="account-box" class="login is-login">
+                    <ul id="account-info">
+                        <li>
+                            帳號 :
+                            <span id="member-level" class="vip10"
+                                onclick="window.location.href='../Vip/index.html'">vip10</span>
+                            <span class="account">DemoAccount</span>
+                            <a id="mailbox" href="../SiteMail/index.html" title="站內信" class="ng-scope">
+                                <span class="ng-binding">1</span>
+                            </a>
+                        </li>
+                        <li>
+                            帳戶餘額 :
+                            <span class="account account-balance ng-binding" title="$ 5000.00"
+                                onclick="accountPopup()">$5,000.00</span>
+                            <a ng-click="updateBalance()" title="更新">
+                                <i ng-show="!updatingBalance" class="fa fa-refresh"></i>
+                                <!-- <i ng-show="updatingBalance" class="fa fa-spinner fa-spin ng-hide"></i> -->
+                            </a>
+
+                            <div id="callBackAllWallet" ng-click="callBackAllWallet()"></div>
+                        </li>
+                    </ul>
+                    <ul id="account-nav">
+                        <!-- Account Nav List -->
+                        <li class="logout" title="登出">
+                            <a class="ng-binding" onclick="signOut()">登出</a>
+                        </li>
+                    </ul>
+                    <div id="action-box">
+                        <a class="logout-btn ng-binding" onclick="signOut()">登出</a>
+                    </div>
+                </div>
+                <!-- Account-box End -->
+
+            </div>
+        </div>
+    </div>
+    <div id="content">
+        <div class="wrapper">
+            <div id="banner">
+                <div class="winner-banner" winner-list="" vis="5">
+                    <div class="tempWrap" style="overflow:hidden; position:relative; height:120px">
+                        <ul class="winner-wrapper"
+                            style="height: 960px; position: relative; padding: 0px; margin: 0px; top: -574px;">
+                            <li class="winner-item ng-scope clone" ng-repeat="item in winnerList" style="height: 24px;">
+                                <span class="name ng-binding" ng-bind="item.name">ggsy***w</span>
+                                <span class="money ng-binding" ng-bind="item.money">284702.14</span>
+                                <span class="game ng-binding" ng-bind="item.game">森林宝藏</span>
+                            </li>
+                            <!-- ngRepeat: item in winnerList -->
+                            <li class="winner-item ng-scope" ng-repeat="item in winnerList" style="height: 24px;">
+                                <span class="name ng-binding" ng-bind="item.name">yi88***6</span>
+                                <span class="money ng-binding" ng-bind="item.money">364256.89</span>
+                                <span class="game ng-binding" ng-bind="item.game">抢劫银行</span>
+                            </li>
+                            <!-- end ngRepeat: item in winnerList -->
+                            <li class="winner-item ng-scope" ng-repeat="item in winnerList" style="height: 24px;">
+                                <span class="name ng-binding" ng-bind="item.name">lgjj***e</span>
+                                <span class="money ng-binding" ng-bind="item.money">627689.85</span>
+                                <span class="game ng-binding" ng-bind="item.game">古怪猴子</span>
+                            </li>
+                            <!-- end ngRepeat: item in winnerList -->
+                            <li class="winner-item ng-scope" ng-repeat="item in winnerList" style="height: 24px;">
+                                <span class="name ng-binding" ng-bind="item.name">k8kk***9</span>
+                                <span class="money ng-binding" ng-bind="item.money">654308.9</span>
+                                <span class="game ng-binding" ng-bind="item.game">千炮捕鱼</span>
+                            </li>
+                            <!-- end ngRepeat: item in winnerList -->
+                            <li class="winner-item ng-scope" ng-repeat="item in winnerList" style="height: 24px;">
+                                <span class="name ng-binding" ng-bind="item.name">zhyy***3</span>
+                                <span class="money ng-binding" ng-bind="item.money">453698.07</span>
+                                <span class="game ng-binding" ng-bind="item.game">杰克高手</span>
+                            </li>
+                            <!-- end ngRepeat: item in winnerList -->
+                            <li class="winner-item ng-scope" ng-repeat="item in winnerList" style="height: 24px;">
+                                <span class="name ng-binding" ng-bind="item.name">zq00***s</span>
+                                <span class="money ng-binding" ng-bind="item.money">567499.09</span>
+                                <span class="game ng-binding" ng-bind="item.game">狂欢夜</span>
+                            </li>
+                            <!-- end ngRepeat: item in winnerList -->
+                            <li class="winner-item ng-scope" ng-repeat="item in winnerList" style="height: 24px;">
+                                <span class="name ng-binding" ng-bind="item.name">yasf***a</span>
+                                <span class="money ng-binding" ng-bind="item.money">35823.21</span>
+                                <span class="game ng-binding" ng-bind="item.game">伴娘</span>
+                            </li>
+                            <!-- end ngRepeat: item in winnerList -->
+                            <li class="winner-item ng-scope" ng-repeat="item in winnerList" style="height: 24px;">
+                                <span class="name ng-binding" ng-bind="item.name">wyq4***6</span>
+                                <span class="money ng-binding" ng-bind="item.money">70465.67</span>
+                                <span class="game ng-binding" ng-bind="item.game">108好汉</span>
+                            </li>
+                            <!-- end ngRepeat: item in winnerList -->
+                            <li class="winner-item ng-scope" ng-repeat="item in winnerList" style="height: 24px;">
+                                <span class="name ng-binding" ng-bind="item.name">lce8***d</span>
+                                <span class="money ng-binding" ng-bind="item.money">436436.76</span>
+                                <span class="game ng-binding" ng-bind="item.game">熊之舞</span>
+                            </li>
+                            <!-- end ngRepeat: item in winnerList -->
+                            <li class="winner-item ng-scope" ng-repeat="item in winnerList" style="height: 24px;">
+                                <span class="name ng-binding" ng-bind="item.name">lilo***1</span>
+                                <span class="money ng-binding" ng-bind="item.money">552734.43</span>
+                                <span class="game ng-binding" ng-bind="item.game">108好汉</span>
+                            </li>
+                            <!-- end ngRepeat: item in winnerList -->
+                            <li class="winner-item ng-scope" ng-repeat="item in winnerList" style="height: 24px;">
+                                <span class="name ng-binding" ng-bind="item.name">yx11***o</span>
+                                <span class="money ng-binding" ng-bind="item.money">496321.21</span>
+                                <span class="game ng-binding" ng-bind="item.game">招财鞭炮</span>
+                            </li>
+                            <!-- end ngRepeat: item in winnerList -->
+                            <li class="winner-item ng-scope" ng-repeat="item in winnerList" style="height: 24px;">
+                                <span class="name ng-binding" ng-bind="item.name">q306***9</span>
+                                <span class="money ng-binding" ng-bind="item.money">424235.98</span>
+                                <span class="game ng-binding" ng-bind="item.game">花花公子</span>
+                            </li>
+                            <!-- end ngRepeat: item in winnerList -->
+                            <li class="winner-item ng-scope" ng-repeat="item in winnerList" style="height: 24px;">
+                                <span class="name ng-binding" ng-bind="item.name">feng***4</span>
+                                <span class="money ng-binding" ng-bind="item.money">192167.32</span>
+                                <span class="game ng-binding" ng-bind="item.game">打破大银行</span>
+                            </li>
+                            <!-- end ngRepeat: item in winnerList -->
+                            <li class="winner-item ng-scope" ng-repeat="item in winnerList" style="height: 24px;">
+                                <span class="name ng-binding" ng-bind="item.name">zxin***7</span>
+                                <span class="money ng-binding" ng-bind="item.money">654932.67</span>
+                                <span class="game ng-binding" ng-bind="item.game">淑女之夜</span>
+                            </li>
+                            <!-- end ngRepeat: item in winnerList -->
+                            <li class="winner-item ng-scope" ng-repeat="item in winnerList" style="height: 24px;">
+                                <span class="name ng-binding" ng-bind="item.name">H854***r</span>
+                                <span class="money ng-binding" ng-bind="item.money">436679.09</span>
+                                <span class="game ng-binding" ng-bind="item.game">抢劫银行</span>
+                            </li>
+                            <!-- end ngRepeat: item in winnerList -->
+                            <li class="winner-item ng-scope" ng-repeat="item in winnerList" style="height: 24px;">
+                                <span class="name ng-binding" ng-bind="item.name">gaol***w</span>
+                                <span class="money ng-binding" ng-bind="item.money">67582.31</span>
+                                <span class="game ng-binding" ng-bind="item.game">幸运双星</span>
+                            </li>
+                            <!-- end ngRepeat: item in winnerList -->
+                            <li class="winner-item ng-scope" ng-repeat="item in winnerList" style="height: 24px;">
+                                <span class="name ng-binding" ng-bind="item.name">a187***h</span>
+                                <span class="money ng-binding" ng-bind="item.money">165431.02</span>
+                                <span class="game ng-binding" ng-bind="item.game">108好汉</span>
+                            </li>
+                            <!-- end ngRepeat: item in winnerList -->
+                            <li class="winner-item ng-scope" ng-repeat="item in winnerList" style="height: 24px;">
+                                <span class="name ng-binding" ng-bind="item.name">A7de***f</span>
+                                <span class="money ng-binding" ng-bind="item.money">234534.63</span>
+                                <span class="game ng-binding" ng-bind="item.game">心跳时刻</span>
+                            </li>
+                            <!-- end ngRepeat: item in winnerList -->
+                            <li class="winner-item ng-scope" ng-repeat="item in winnerList" style="height: 24px;">
+                                <span class="name ng-binding" ng-bind="item.name">guoh***d</span>
+                                <span class="money ng-binding" ng-bind="item.money">743324.87</span>
+                                <span class="game ng-binding" ng-bind="item.game">星光之吻</span>
+                            </li>
+                            <!-- end ngRepeat: item in winnerList -->
+                            <li class="winner-item ng-scope" ng-repeat="item in winnerList" style="height: 24px;">
+                                <span class="name ng-binding" ng-bind="item.name">sjwa***s</span>
+                                <span class="money ng-binding" ng-bind="item.money">665230.76</span>
+                                <span class="game ng-binding" ng-bind="item.game">银行抢匪2</span>
+                            </li>
+                            <!-- end ngRepeat: item in winnerList -->
+                            <li class="winner-item ng-scope" ng-repeat="item in winnerList" style="height: 24px;">
+                                <span class="name ng-binding" ng-bind="item.name">cuio***a</span>
+                                <span class="money ng-binding" ng-bind="item.money">468131.44</span>
+                                <span class="game ng-binding" ng-bind="item.game">飞龙在天</span>
+                            </li>
+                            <!-- end ngRepeat: item in winnerList -->
+                            <li class="winner-item ng-scope" ng-repeat="item in winnerList" style="height: 24px;">
+                                <span class="name ng-binding" ng-bind="item.name">b124***b</span>
+                                <span class="money ng-binding" ng-bind="item.money">599008.08</span>
+                                <span class="game ng-binding" ng-bind="item.game">大明帝国</span>
+                            </li>
+                            <!-- end ngRepeat: item in winnerList -->
+                            <li class="winner-item ng-scope" ng-repeat="item in winnerList" style="height: 24px;">
+                                <span class="name ng-binding" ng-bind="item.name">gu9m***9</span>
+                                <span class="money ng-binding" ng-bind="item.money">546673.22</span>
+                                <span class="game ng-binding" ng-bind="item.game">招财进宝</span>
+                            </li>
+                            <!-- end ngRepeat: item in winnerList -->
+                            <li class="winner-item ng-scope" ng-repeat="item in winnerList" style="height: 24px;">
+                                <span class="name ng-binding" ng-bind="item.name">q10q***p</span>
+                                <span class="money ng-binding" ng-bind="item.money">64756.44</span>
+                                <span class="game ng-binding" ng-bind="item.game">热力宝石</span>
+                            </li>
+                            <!-- end ngRepeat: item in winnerList -->
+                            <li class="winner-item ng-scope" ng-repeat="item in winnerList" style="height: 24px;">
+                                <span class="name ng-binding" ng-bind="item.name">mark***1</span>
+                                <span class="money ng-binding" ng-bind="item.money">478875.47</span>
+                                <span class="game ng-binding" ng-bind="item.game">伴娘</span>
+                            </li>
+                            <!-- end ngRepeat: item in winnerList -->
+                            <li class="winner-item ng-scope" ng-repeat="item in winnerList" style="height: 24px;">
+                                <span class="name ng-binding" ng-bind="item.name">zzz1***q</span>
+                                <span class="money ng-binding" ng-bind="item.money">650131.13</span>
+                                <span class="game ng-binding" ng-bind="item.game">熊之舞</span>
+                            </li>
+                            <!-- end ngRepeat: item in winnerList -->
+                            <li class="winner-item ng-scope" ng-repeat="item in winnerList" style="height: 24px;">
+                                <span class="name ng-binding" ng-bind="item.name">ddyy***a</span>
+                                <span class="money ng-binding" ng-bind="item.money">749936.57</span>
+                                <span class="game ng-binding" ng-bind="item.game">108好汉</span>
+                            </li>
+                            <!-- end ngRepeat: item in winnerList -->
+                            <li class="winner-item ng-scope" ng-repeat="item in winnerList" style="height: 24px;">
+                                <span class="name ng-binding" ng-bind="item.name">xiet***n</span>
+                                <span class="money ng-binding" ng-bind="item.money">499565.67</span>
+                                <span class="game ng-binding" ng-bind="item.game">湛蓝深海</span>
+                            </li>
+                            <!-- end ngRepeat: item in winnerList -->
+                            <li class="winner-item ng-scope" ng-repeat="item in winnerList" style="height: 24px;">
+                                <span class="name ng-binding" ng-bind="item.name">kk26***l</span>
+                                <span class="money ng-binding" ng-bind="item.money">369783.42</span>
+                                <span class="game ng-binding" ng-bind="item.game">花花公子</span>
+                            </li>
+                            <!-- end ngRepeat: item in winnerList -->
+                            <li class="winner-item ng-scope" ng-repeat="item in winnerList" style="height: 24px;">
+                                <span class="name ng-binding" ng-bind="item.name">acxe***g</span>
+                                <span class="money ng-binding" ng-bind="item.money">679953.51</span>
+                                <span class="game ng-binding" ng-bind="item.game">打破大银行</span>
+                            </li>
+                            <!-- end ngRepeat: item in winnerList -->
+                            <li class="winner-item ng-scope" ng-repeat="item in winnerList" style="height: 24px;">
+                                <span class="name ng-binding" ng-bind="item.name">q11r***8</span>
+                                <span class="money ng-binding" ng-bind="item.money">649427.78</span>
+                                <span class="game ng-binding" ng-bind="item.game">古怪猴子</span>
+                            </li>
+                            <!-- end ngRepeat: item in winnerList -->
+                            <li class="winner-item ng-scope" ng-repeat="item in winnerList" style="height: 24px;">
+                                <span class="name ng-binding" ng-bind="item.name">cyfg***4</span>
+                                <span class="money ng-binding" ng-bind="item.money">289960.98</span>
+                                <span class="game ng-binding" ng-bind="item.game">抢劫银行</span>
+                            </li>
+                            <!-- end ngRepeat: item in winnerList -->
+                            <li class="winner-item ng-scope" ng-repeat="item in winnerList" style="height: 24px;">
+                                <span class="name ng-binding" ng-bind="item.name">s14z***j</span>
+                                <span class="money ng-binding" ng-bind="item.money">512726.43</span>
+                                <span class="game ng-binding" ng-bind="item.game">千炮捕鱼</span>
+                            </li>
+                            <!-- end ngRepeat: item in winnerList -->
+                            <li class="winner-item ng-scope" ng-repeat="item in winnerList" style="height: 24px;">
+                                <span class="name ng-binding" ng-bind="item.name">zhao***8</span>
+                                <span class="money ng-binding" ng-bind="item.money">1214045</span>
+                                <span class="game ng-binding" ng-bind="item.game">6红胡子和科</span>
+                            </li>
+                            <!-- end ngRepeat: item in winnerList -->
+                            <li class="winner-item ng-scope" ng-repeat="item in winnerList" style="height: 24px;">
+                                <span class="name ng-binding" ng-bind="item.name">ggsy***w</span>
+                                <span class="money ng-binding" ng-bind="item.money">284702.14</span>
+                                <span class="game ng-binding" ng-bind="item.game">森林宝藏</span>
+                            </li>
+                            <!-- end ngRepeat: item in winnerList -->
+                            <li class="winner-item ng-scope clone" ng-repeat="item in winnerList" style="height: 24px;">
+                                <span class="name ng-binding" ng-bind="item.name">yi88***6</span>
+                                <span class="money ng-binding" ng-bind="item.money">364256.89</span>
+                                <span class="game ng-binding" ng-bind="item.game">抢劫银行</span>
+                            </li>
+                            <li class="winner-item ng-scope clone" ng-repeat="item in winnerList" style="height: 24px;">
+                                <span class="name ng-binding" ng-bind="item.name">lgjj***e</span>
+                                <span class="money ng-binding" ng-bind="item.money">627689.85</span>
+                                <span class="game ng-binding" ng-bind="item.game">古怪猴子</span>
+                            </li>
+                            <li class="winner-item ng-scope clone" ng-repeat="item in winnerList" style="height: 24px;">
+                                <span class="name ng-binding" ng-bind="item.name">k8kk***9</span>
+                                <span class="money ng-binding" ng-bind="item.money">654308.9</span>
+                                <span class="game ng-binding" ng-bind="item.game">千炮捕鱼</span>
+                            </li>
+                            <li class="winner-item ng-scope clone" ng-repeat="item in winnerList" style="height: 24px;">
+                                <span class="name ng-binding" ng-bind="item.name">zhyy***3</span>
+                                <span class="money ng-binding" ng-bind="item.money">453698.07</span>
+                                <span class="game ng-binding" ng-bind="item.game">杰克高手</span>
+                            </li>
+                            <li class="winner-item ng-scope clone" ng-repeat="item in winnerList" style="height: 24px;">
+                                <span class="name ng-binding" ng-bind="item.name">zq00***s</span>
+                                <span class="money ng-binding" ng-bind="item.money">567499.09</span>
+                                <span class="game ng-binding" ng-bind="item.game">狂欢夜</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="news">
+                <div class="wrapper">
+                    <div id="hot-news" news-manual>
+                        <div class="marqueen">
+                            <ul class="news-list">
+                                <li onclick="newsClick()">★公司入款帐户不定时更新,请会员入款仔细查看最新收款帐户,若转入已下架帐户公司一概不负责</li>
+                                <li onclick="newsClick()">★建议会员多加使用QQ钱包,若出现商户限额或其他错误信息,请多加重新提交尝试即可</li>
+                                <li onclick="newsClick()">
+                                    ★近期有不肖诈骗团体利用劫持网页手法使会员开启GStargaming网页时跳转至其他非法网站,请各位会员小心资金安全,GStargaming官网并没有其他网站与网址,GStargaming关心您
+                                </li>
+                                <li onclick="newsClick()">
+                                    ★目前一天取款前五次免手续费出款，第六次開始收取50元手续费，以最后一笔取款往前推算24小时，建议会员可以24小时取款五次以内，就不会收取手续费用</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="wrapper">
+            <div id="footer-logo">
+                <ul id="footer-info">
+                    <li class="qq" ng-click="qqClick(ContactInfo.QQ)">QQ:<span ng-bind="ContactInfo.QQ"
+                            class="ng-binding"></span></li>
+                    <li class="chat" ng-click="lineChatClick()">在線客服</li>
+                    <li class="hour">服务时间：00:00-24:00</li>
+                    <li class="email">Email:<span ng-bind="ContactInfo.Email" class="ng-binding"></span></li>
+                </ul>
+                <div class="tel">7x24小时热线：<span ng-bind="ContactInfo.TEL2" class="ng-binding"></span></div>
+            </div>
+        </div>
+        <ul id="footer-nav">
+            <!-- Append Footer List -->
+        </ul>
+        <p id="footer-suggest">
+            <!-- Copyright -->
+        </p>
+    </footer>
+</body>

@@ -1,0 +1,107 @@
+﻿body {
+    min-width: 944px;
+    margin: 0;
+    background: #140B06 url('../../../../_Common/Content/Views/Lobby/LatestGame/bg_x.jpg') repeat-y center top;
+}
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+[ng-click] {
+    cursor: pointer;
+}
+
+ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.wrapper {
+    width: 944px;
+    margin: auto;
+}
+
+#latest-game {
+    min-height: 683px;
+    background: url('../../../../_Common/Content/Views/Lobby/LatestGame/bg.jpg') no-repeat center top;
+}
+
+#game-list {
+    padding: 330px 30px 20px;
+    font-size: 0;
+}
+
+    #game-list li {
+        display: inline-block;
+        width: 185px;
+        height: 175px;
+        margin: 15px;
+        background-repeat: no-repeat;
+        background-position: center top;
+    }
+
+        #game-list li.non-active {
+            filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+            opacity: 0.5;
+        }
+
+        #game-list li.mwfish {
+            background-image: url('../../../../_Common/Content/Views/Lobby/LatestGame/mwfish.png');
+        }
+
+        #game-list li.pg {
+            background-image: url('../../../../_Common/Content/Views/Lobby/LatestGame/pg.png');
+        }
+
+        #game-list li.cmd {
+            background-image: url('../../../../_Common/Content/Views/Lobby/LatestGame/cmd.jpg');
+        }
+
+        #game-list li.lg {
+            background-image: url('../../../../_Common/Content/Views/Lobby/LatestGame/lg.jpg');
+        }
+
+        #game-list li.isb {
+            background-image: url('../../../../_Common/Content/Views/Lobby/LatestGame/isb.jpg');
+        }
+
+        #game-list li.kg {
+            background-image: url('../../../../_Common/Content/Views/Lobby/LatestGame/kg.png');
+        }
+
+        #game-list li.lx {
+            background-image: url('../../../../_Common/Content/Views/Lobby/LatestGame/lx.png');
+        }
+
+        #game-list li.rg {
+            background-image: url('../../../../_Common/Content/Views/Lobby/LatestGame/rg.png');
+        }
+
+        #game-list li.pts {
+            background-image: url('../../../../_Common/Content/Views/Lobby/LatestGame/pts.png');
+        }
+
+        #game-list li.ebet {
+            background-image: url('../../../../_Common/Content/Views/Lobby/LatestGame/ebet.jpg');
+        }
+
+        #game-list li.im {
+            background-image: url('../../../../_Common/Content/Views/Lobby/LatestGame/im.jpg');
+        }
+
+        #game-list li.png {
+            background-image: url('../../../../_Common/Content/Views/Lobby/LatestGame/png.png');
+        }
+
+        #game-list li.og {
+            background-image: url('../../../../_Common/Content/Views/Lobby/LatestGame/og.jpg');
+        }
+
+        #game-list li.rg-lottery {
+            background-image: url('../../../../_Common/Content/Views/Lobby/LatestGame/rglottery.png');
+        }

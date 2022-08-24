@@ -1,0 +1,60 @@
+﻿/* #region header */
+#search {
+    background-color: #ffc600;
+}
+/* #endregion header */
+
+/* #region nav */
+nav {
+    background-color: #60bb00;
+}
+
+#game-nav > li > span {
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+}
+
+#game-nav > li:hover span,
+#game-nav > li.active span {
+    color: #194500;
+    font-weight: bold;
+    background-color: #ffc600;
+}
+
+ol.subnav > li {
+    color: #000;
+    font-weight: bold;
+    background-color: #fff;
+}
+
+    ol.subnav > li:hover {
+        color: #fff;
+        background-color: #ffc600;
+    }
+/* #endregion nav */
+
+/* #region 游戏列表区块 */
+#game-list li {
+    border-color: #60bb00;
+}
+
+    #game-list li:hover {
+        background-color: #ffc600;
+        border-color: #ffc600;
+    }
+
+        #game-list li:hover .game-logo:before {
+            background-image: url('../../../../_Common/Content/Views/BoardCasino/JDB/hover.png');
+        }
+
+        #game-list li:hover .game-text {
+            color: #000;
+        }
+/* #endregion 游戏列表区块 */
+
+/* #region pager */
+#pager li[ng-click]:hover {
+    background-color: #ffc600;
+}
+/* #endregion pager */

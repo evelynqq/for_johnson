@@ -1,0 +1,76 @@
+﻿/* #region header */
+#search {
+    background-color: #036e90;
+}
+/* #endregion header */
+
+/* #region nav */
+nav {
+    background-color: #036e90;
+}
+
+#game-nav > li span {
+    line-height: 26px;
+    border: 2px solid transparent;
+}
+
+    #game-nav > li span:hover,
+    #game-nav > li.active span {
+        border-color: #fff;
+    }
+
+ol.subnav > li {
+    background-color: #fddb00;
+}
+
+    ol.subnav > li:hover {
+        color: #fff;
+        background-color: #f2941a;
+    }
+/* #endregion nav */
+
+/* #region recommend-list */
+#recommend-list .slick-dots li.slick-active,
+#recommend-list .slick-dots li.slick-active:hover,
+#recommend-list .slick-prev:hover,
+#recommend-list .slick-next:hover {
+    background-color: #036e90;
+}
+
+#recommend-list .list-title {
+    border-bottom: 2px solid #036e90;
+}
+
+    #recommend-list .list-title span {
+        background-color: #036e90;
+    }
+
+    #recommend-list .list-title a {
+        color: #036e90;
+    }
+/* #endregion recommend-list */
+
+/* #region 游戏列表区块 */
+.game-list li {
+    border-color: #036e90;
+}
+
+    .game-list li:hover {
+        background-color: #036e90;
+        border-color: #036e90;
+    }
+
+        .game-list li:hover .game-logo:before {
+            background-image: url('../../../../_Common/Content/Views/SlotCasino/PG/hover.png');
+        }
+
+        .game-list li:hover .game-text {
+            color: #fff;
+        }
+/* #endregion 游戏列表区块 */
+
+/* #region pager */
+#pager > li[ng-click]:hover {
+    background-color: #036e90;
+}
+/* #endregion pager */

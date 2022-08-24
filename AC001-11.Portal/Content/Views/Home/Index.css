@@ -1,0 +1,568 @@
+﻿/* #region 首頁基本設定 */
+#banner {
+    height: 600px;
+    margin-top: 138px;
+    background: url('http://cdn2.gjsoft.cc/Web.Portal/AC001-01.Portal/Upload/Slider/03.jpg') center top no-repeat;
+    overflow: hidden;
+}
+
+/* #region slide-banner樣式 */
+#slide-banner {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+}
+
+    #slide-banner .slide {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -960px;
+    }
+
+
+        #slide-banner .slide a {
+            display: inline-block;
+            width: 1920px;
+            height: 600px; /* 通常只會改這兩個地方 跟著圖片高度 */
+        }
+
+    
+    /* 點點切換紐 */
+    #slide-banner .slide-pager {
+        position: absolute;
+        bottom: 50px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+        #slide-banner .slide-pager li {
+            display: inline-block;
+            width: 13px;
+            height: 13px;
+            margin: 0 4px;
+            /* 若要数字编号可以把font-size: 0拿掉 */
+            font-size: 0;
+            background-color: #ef7979;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+            #slide-banner .slide-pager .on,
+            #slide-banner .slide-pager li:hover {
+                background-color: #fff;
+            }
+/* #endregion slide-banner樣式 */
+
+#news {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    width: 100%;
+    z-index: 4;
+}
+
+    #news + .wrapper {
+        width: auto;
+        margin: auto;
+    }
+
+#content > .wrapper {
+    width: auto;
+}
+
+#content {
+    background: linear-gradient(180deg,#d1e9f5 250px,#fff);
+}
+/* #endregion 首頁基本設定 */
+
+/* #region 登入前 */
+#account-box.ScrollTop:after {
+    display: block;
+}
+
+#account-box.off-scroll {
+    position: absolute;
+    top: 180px;
+    left: 50%;
+    width: 301px;
+    min-width: 0;
+    height: 350px;
+    margin: 0 0 0 200px;
+    background: url('../Home/images/form_bg01.png') no-repeat ;
+}
+
+    #account-box.off-scroll:after {
+        display: none;
+    }
+
+    #account-box.off-scroll > .wrapper {
+        width: auto;
+    }
+
+        #account-box.off-scroll > .wrapper:after {
+            display: none;
+        }
+
+    #account-box.off-scroll form {
+        padding: 12px 20px 0 20px;
+    }
+
+        #account-box.off-scroll form input {
+            display: block;
+            width: 100% !important;
+            height: 46px;
+            padding-left: 50px;
+            margin-bottom: 10px;
+            color: #666;
+            font-size: 14px;
+            font-family: 'Microsoft YaHei';
+            border: none;
+            background: none;
+        }
+
+            #account-box.off-scroll form input:focus {
+                outline: 0;
+            }
+
+            #account-box.off-scroll form input::-webkit-input-placeholder {
+                color: #999;
+            }
+
+            #account-box.off-scroll form input:focus::-webkit-input-placeholder {
+                color: transparent;
+            }
+
+            #account-box.off-scroll form input::-moz-placeholder {
+                color: #fff;
+            }
+
+            #account-box.off-scroll form input:focus::-moz-placeholder {
+                color: transparent;
+            }
+
+            #account-box.off-scroll form input:-ms-input-placeholder {
+                color: #fff;
+            }
+
+            #account-box.off-scroll form input:focus:-ms-input-placeholder {
+                color: transparent;
+            }
+
+            #account-box.off-scroll form input.placeholder {
+                color: #fff;
+            }
+
+            #account-box.off-scroll form input + input {
+                margin-left: 0;
+            }
+
+        #account-box.off-scroll form .login-btn,
+        #account-box.off-scroll form .reg-btn {
+            width: 124px;
+            height: 46px;
+            color: #fff;
+            font-size: 20px;
+            border-radius: 30px;
+            float: left;
+            transition: all .2s;
+        }
+
+        #account-box.off-scroll form .login-btn {
+            margin-right: 10px;
+            background: #ed6e6e;
+        }
+
+        #account-box.off-scroll form .reg-btn {
+            border: none;
+            background: #2cbb98;
+        }
+
+        #account-box.off-scroll form .forget-btn {
+            position: absolute;
+            top: 73px;
+            left: 238px;
+            right: auto;
+            width: 38px;
+            height: 38px;
+            color: #fff;
+            font-family: SimSun;
+            line-height: 13px;
+            border: none;
+            text-decoration: none;
+            background: #52a4d7;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all .2s;
+        }
+
+    #account-box.off-scroll #check-code-wrapper {
+        width: 255px;
+        margin: 0 0 10px 0;
+    }
+
+    #account-box.off-scroll #captcha {
+        top: 8px;
+        right: 5px;
+    }
+
+    #account-box.off-scroll #agree {
+        top: 103%;
+        left: 0;
+        right: 0;
+        text-align: center;
+        width: 175px;
+        color: #ffffff;
+    }
+    /* #endregion 登入前 */
+
+    /* #region 登入後 */
+    #account-box.off-scroll.is-login {
+        background: url('../Home/images/form_bg02.png');
+    }
+
+        #account-box.off-scroll.is-login > .wrapper {
+            padding: 30px 0 0 47px;
+        }
+
+        #account-box.off-scroll.is-login ul#account-info {
+            margin-bottom: 25px;
+        }
+
+            #account-box.off-scroll.is-login ul#account-info > li {
+                color: #fff;
+                font-size: 12px;
+                width: 100%;
+            }
+
+                #account-box.off-scroll.is-login ul#account-info > li + li {
+                    margin: 10px 0;
+                }
+
+                #account-box.off-scroll.is-login ul#account-info > li > span.account {
+                    color: #fffea9;
+                }
+
+        #account-box.off-scroll.is-login ul#account-nav {
+            margin: 0 0 25px -9px;
+            width: 230px;
+        }
+
+            #account-box.off-scroll.is-login ul#account-nav > li {
+                color: #fff;
+                font-size: 12px;
+                margin-bottom: 10px;
+                border: none;
+            }
+
+        #account-box.off-scroll.is-login #action-box > .logout-btn {
+            width: 259px;
+            height: 46px;
+            margin-left: -25px;
+            color: #fff;
+            font-size: 20px;
+            line-height: 46px;
+            background: #2dbb98;
+            border: 0;
+            transition: all .2s;
+        }
+
+        #account-box.off-scroll.is-login #action-box > #change-password-btn {
+            display: none;
+        }
+/* #endregion 登入後 */
+
+        /* Button Hover */
+        #account-box.off-scroll form .login-btn:hover,
+        #account-box.off-scroll form .reg-btn:hover,
+        #account-box.off-scroll form .forget-btn:hover,
+        #account-box.off-scroll.is-login .logout-btn:hover {
+            -webkit-box-shadow: 0 5px 10px 0 rgba(0,0,0,.2);
+            box-shadow: 0 5px 10px 0 rgba(0,0,0,.2);
+        }
+
+/* #region 特色 */
+#feature {
+    height: 91px;
+    background: url('../Home/images/feature.png') no-repeat center top;
+}
+/* #endregion 特色 */
+
+/* #region 電子遊藝 */
+#game {
+    position: relative;
+    height: 463px;
+    padding-top: 310px;
+}
+
+    #game:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        background: url('../Home/images/slot_bg.png') center top no-repeat;
+    }
+
+    #game #mg, #game #bb {
+        background-color:;
+        border-radius: 50px;
+        background-color: #009ed0;
+        transition: all .2s;
+    }
+
+    #game #mg {
+        position: absolute;
+        top: 65px;
+        left: 50%;
+        z-index: 1;
+        width: 270px;
+        height: 65px;
+        margin-left: -493px;
+        background-image: url('../Home/images/mg.png');
+    }
+
+    #game #bb {
+        position: absolute;
+        top: 175px;
+        left: 50%;
+        z-index: 1;
+        width: 270px;
+        height: 65px;
+        margin-left: -493px;
+        background-image: url('../Home/images/bb.png');
+    }
+
+    #game #mg:hover, #game #bb:hover {
+        -webkit-box-shadow: 0 5px 10px 0 rgba(0,0,0,.2);
+        box-shadow: 0 5px 10px 0 rgba(0,0,0,.2);
+    }
+
+    #game .list {
+        display: block;
+        position: relative;
+        z-index: 1;
+        height: 64px;
+        margin: 22px 0;
+        padding-left: 9px;
+        text-align: center;
+    }
+
+        #game .list li {
+            display: inline-block;
+            width: 143px;
+            height: 48px;
+        }
+/* #endregion 電子遊藝 */
+
+/* #region 大廳輪播 */
+.slide {
+    position: relative;
+    width: 1016px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+    .slide .main-cell {
+        /*margin: 0 68px;*/
+        margin: 0 40px;
+    }
+
+    .slide .cycle-slideshow {
+        width: 1016px;
+        margin: 0 auto;
+    }
+
+        .slide .cycle-slideshow li {
+            display: inline-block;
+            width: 210px;
+            height: 276px;
+            margin: 0 5px;
+            border-radius: .25rem;
+            background-size: 100% 100%;
+        }
+
+        .slide .cycle-slideshow .bb {
+            background: url('../Home/images/live_bb.jpg');
+            background-size: 100% 100%;
+        }
+
+        .slide .cycle-slideshow .ag {
+            background: url('../Home/images/live_ag.jpg');
+            background-size: 100% 100%;
+        }
+
+        .slide .cycle-slideshow .pt {
+            background: url('../Home/images/live_pt.jpg');
+            background-size: 100% 100%;
+        }
+
+        .slide .cycle-slideshow .mg {
+            background: url('../Home/images/live_mg.jpg');
+            background-size: 100% 100%;
+        }
+
+        .slide .cycle-slideshow .ab {
+            background: url('../Home/images/live_ab.jpg');
+            background-size: 100% 100%;
+        }
+
+        .slide .cycle-slideshow .gpi {
+            background: url('../Home/images/live_gpi.jpg');
+            background-size: 100% 100%;
+        }
+
+        .slide .cycle-slideshow li:hover {
+            border: 1px solid #23a6da;
+        }
+
+    .slide #prev,
+    .slide #next {
+        position: absolute;
+        top: 155px;
+        z-index: 9;
+        display: block;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        color: #fff;
+        background: #23a6da;
+        border-radius: 50px;
+    }
+
+    .slide #prev {
+        left: 0;
+        transition: all .2s;
+    }
+    .slide #prev:before {
+        content: '<';
+    }
+
+    .slide #next {
+        right: 0;
+        transition: all .2s;
+    }
+    .slide #next:before {
+        content: '>';
+    }
+        .slide #prev:before,
+        .slide #next:before {
+            font-size: 25px;
+            font-family: sans-serif;
+            padding: 13px;
+        }
+
+        .slide #prev:hover,
+        .slide #next:hover {
+            -webkit-box-shadow: 0 5px 10px 0 rgba(0,0,0,.2);
+            box-shadow: 0 5px 10px 0 rgba(0,0,0,.2);  
+        }
+
+    .slide .tempWrap {
+        margin: auto;
+    }
+
+/* #endregion 大廳輪播 */
+
+/* #region 大廳入口 */
+#portal {
+    position: relative;
+    margin: 0;
+    padding: 30px 0;
+    list-style: none;
+    font-size: 0;
+    text-align: center;
+    /*background: #212121;*/
+}
+
+    #portal:before {
+        content: '';
+        position: absolute;
+        top: 229px;
+        left: 0;
+        right: 0;
+        height: 1px;
+        /*background: #282828;*/
+    }
+
+    #portal li {
+        position: relative;
+        display: inline-block;
+        width: 310px;
+        height: 265px;
+        margin: 0 20px;
+        vertical-align: middle;
+    }
+
+    #portal .sport {
+        background: url('../Home/images/btn_sport.png') center top no-repeat;
+    }
+
+    #portal .lottery {
+        background: url('../Home/images/btn_lottery.png') center top no-repeat;
+    }
+
+    #portal .partner {
+        background: url('../Home/images/btn_partner.png') center top no-repeat;
+    }
+
+    #portal li:hover {
+        background-position: center bottom;
+    }
+
+    #portal a {
+        width: 160px;
+        height: 36px;
+        background: #2dbb98;
+        border-radius: 30px;
+        margin: 185px auto 0 auto;
+        display: block;
+        text-decoration: none;
+        font-size: 20px;
+        color: #fff;
+        line-height: 36px;
+        transition: all .2s;
+    }
+
+    #portal a:hover {
+        -webkit-box-shadow: 0 5px 10px 0 rgba(0,0,0,.2);
+        box-shadow: 0 5px 10px 0 rgba(0,0,0,.2);
+    }
+
+    #portal .sport a:before {
+        content: '体育投注';
+    }
+
+    #portal .lottery a:before {
+        content: '彩票游戏';
+    }
+
+    #portal .partner a:before {
+        content: 'GS代理';
+    }
+
+/* #endregion 大廳入口 */
+
+/* #region 手機投注 */
+#mobile {
+    display: none;
+    height: 371px;
+}
+/* #endregion 手機投注 */
+
+/* #region 關於金沙 */
+#about {
+    display: none;
+    height: 233px;
+}
+/* #endregion 關於金沙 */
+
+aside#service-lb {
+    visibility: visible;
+}
+
+

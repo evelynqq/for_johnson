@@ -1,0 +1,162 @@
+﻿<body class="layout" ng-controller="LayoutCtrl">
+    <header id="header">
+        <!-- popup -->
+        <div id="popup"></div>
+        <div class="wrapper">
+            <div id="logo-bg">
+                <a href="../Home/index.html"></a>
+            </div>
+            <ul class="topnav">
+                <li class="hot"><a href="/Partner">代理合作</a></li>
+                <li><a href="/Trial/Login" target="_blank">免費試玩</a></li>
+                <li ng-click="lineChatClick()" toggle-color="" class="toggle-color">在線客服</li>
+                <li class="lan">
+                    <select id="select-language" select-language="">
+                        <option data-language="zh-TW" value="zh-TW" selected="" class="ng-scope ng-binding">繁体中文</option>
+                        <option data-language="zh-CN" value="zh-CN" class="ng-scope ng-binding">简体中文</option>
+                        <option data-language="en-US" value="en-US" class="ng-scope ng-binding">English</option>
+                        <option data-language="th" value="th" class="ng-scope ng-binding">ภาษาไทย</option>
+                    </select>
+                </li>
+            </ul>
+
+            <!-- Account-box -->
+            <!-- 未登入 -->
+            <div id="account-box" class="is-logout">
+
+                <form>
+                    <input id="login_account" type="text" placeholder="帳號" ng-model="loginParams.account" required="" autofocus="" class="ng-pristine ng-invalid ng-invalid-required">
+                    <input id="login_password" type="password" placeholder="密碼" ng-model="loginParams.password" required="" class="ng-pristine ng-invalid ng-invalid-required">
+                    <div id="check-code-wrapper">
+                        <input data-checkcode-retriever="checkCode" type="text" placeholder="驗證碼" ng-model="loginParams.checkCode" checkcode-type="Login" required="" class="ng-pristine ng-invalid ng-invalid-required">
+                        <img id="captcha" ng-show="checkCode.image" ng-src="" class="ng-hide">
+                    </div>
+                    <button class="forget-btn" ng-click="lineChatClick()" type="button">忘記密碼</button>
+                    <button id="login-box" class="login-btn ng-binding" onclick="login()">登入</button>
+                    <button class="reg-btn" onclick="window.location.href='../Register/index.html'" type="button">
+                        免費開戶
+                    </button>
+                    <!-- <div id="agree" ng-show="loginOver" class="ng-hide" style="display: block;">
+                        點擊登入表示同意<a ng-click="agreement()">用戶協議</a>
+                    </div> -->
+                </form>
+            </div>
+            <!-- 登入 -->
+            <div id="account-box" class="is-login">
+                <ul id="account-info">
+                    <li>
+                        帳號 :
+                        <span id="member-level" class="vip10" onclick="window.location.href='../Vip/index.html'">vip10</span>
+                        <span class="account">DemoAccount</span>
+                        <a id="mailbox" href="../SiteMail/index.html" title="站內信" class="ng-scope">
+                            <span class="ng-binding">1</span>
+                        </a>
+                    </li>
+                    <li class="account-balance">
+                        帳戶餘額 :
+                        <span class="account account-balance ng-binding" title="$ 5000.00" onclick="accountPopup()">$5,000.00</span>
+                        <a ng-click="updateBalance()" title="更新">
+                            <i ng-show="!updatingBalance" class="fa fa-refresh"></i>
+                            <i ng-show="updatingBalance" class="fa fa-spinner fa-spin ng-hide"></i>
+                        </a>
+                        <div id="callBackAllWallet" ng-click="callBackAllWallet()"></div>
+                    </li>
+                    <li data-info="03">
+                        站內信 :
+                        <a id="mailbox" ng-controller="StationMailCountCtrl" href="../SiteMail/index.html" title="站內信" class="ng-scope">
+                            <span ng-hide="!(MailIsReadCount.Count > 0)" class="ng-binding ng-hide">0</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul id="account-nav">
+                    <!-- Account Nav List -->
+                    <li class="logout">
+                        <a class="logout-btn ng-binding" onclick="signOut()">登出</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Account-box End -->
+
+            <nav id="nav" scrolltop-fixed="105" class="">
+                <ul class="ng-scope" ng-controller="LobbiesCtrl">
+                    <li class="active">
+                        <a nav-active="" href="../Home/index.html"><i class="fa fa-home"></i> 首頁</a>
+                    </li>
+                    <li id="navFish" class="Fish">
+                        <a href="../Lobby/Fish.html">捕魚達人</a>
+                        <div class="subnav Fish">
+                            <!-- List -->
+                        </div>
+                    </li>
+                    <li id="navLive" class="Live">
+                        <a href="../Lobby/Live.html">真人視訊</a>
+                        <div class="subnav Live">
+                            <!-- List -->
+                        </div>
+                    </li>
+                    <li id="navGame" class="game">
+                        <a href="../Lobby/Game.html">電子遊藝</a>
+                        <div class="subnav Game">
+                            <!-- List -->
+                        </div>
+                    </li>
+                    <li id="navSport" class="Sport">
+                        <a href="../Lobby/Sport.html">體育賽事</a>
+                        <div class="subnav Sport">
+                            <!-- List -->
+                        </div>
+                    </li>
+                    <li id="navLottery" class="Lottery">
+                        <a href="../Lobby/Lottery.html">彩票游戲</a>
+                        <div class="subnav Lottery">
+                            <!-- List -->
+                        </div>
+                    </li>
+                    <li id="navBoard" class="Board">
+                        <a href="../Lobby/Board.html">棋牌游戲</a>
+                        <div class="subnav Board">
+                            <!-- List -->
+                        </div>
+                    </li>
+                    <li class="hot">
+                        <a href="../Promotion/index.html" nav-active="">優惠活動</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div id="banner"></div>
+    <div id="content">
+        <div class="wrapper">
+            <div id="news">
+                <div id="hot-news" news-manual>
+                    <div class="marqueen">
+                        <ul class="news-list">
+                            <li onclick="newsClick()">
+                                ★公司入款帐户不定时更新,请会员入款仔细查看最新收款帐户,若转入已下架帐户公司一概不负责
+                            </li>
+                            <li onclick="newsClick()">
+                                ★建议会员多加使用QQ钱包,若出现商户限额或其他错误信息,请多加重新提交尝试即可
+                            </li>
+                            <li onclick="newsClick()">
+                                ★近期有不肖诈骗团体利用劫持网页手法使会员开启GStargaming网页时跳转至其他非法网站,请各位会员小心资金安全,GStargaming官网并没有其他网站与网址,GStargaming关心您
+                            </li>
+                            <li onclick="newsClick()">
+                                ★目前一天取款前五次免手续费出款，第六次開始收取50元手续费，以最后一笔取款往前推算24小时，建议会员可以24小时取款五次以内，就不会收取手续费用
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="wrapper">
+            <div id="footer-logo"></div>
+            <ul id="footer-nav">
+                <!-- Append Footer List -->
+            </ul>
+            <p id="footer-suggest"><!-- Copyright --></p>
+        </div>
+    </footer>
+</body>

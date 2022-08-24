@@ -1,0 +1,18 @@
+﻿.form-group .control-label {
+    width: 25%;
+    line-height: 16px;
+}
+
+.form-group .control-info {
+    width: 41%;
+}
+
+#btn-submit, #btn-reset {
+    font-size: 15px;
+}
+
+fieldset legend {
+    padding-left: 24px;
+    font-size: 12px;
+    letter-spacing: -1px;
+}

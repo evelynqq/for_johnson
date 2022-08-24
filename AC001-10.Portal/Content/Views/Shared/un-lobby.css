@@ -1,0 +1,262 @@
+﻿#un-lobby {
+    display: inline-block;
+    width: 100%;
+    margin: 40px 0;
+}
+
+    #un-lobby > aside {
+    }
+
+        #un-lobby > aside > #sidebar {
+            display: table;
+            margin: 0 auto;
+            background: linear-gradient(#f3f3f5,#d2d2d2);
+            border-bottom: 1px solid #bfbfbf;
+        }
+
+            #un-lobby > aside > #sidebar > li {
+                display: table-cell;
+                width: 1%;
+                letter-spacing: 1px;
+                line-height: 64px;
+                font-size: 14px;
+                color: #18202e;
+                text-align: center;
+                border-right: 1px solid #bfbfbf;
+                border-left: 1px solid #eee;
+            }
+
+                    #un-lobby > aside > #sidebar > li:hover > a,
+                    #un-lobby > aside > #sidebar > li.active > a {
+                        color: #dd5227;
+                    }
+
+                #un-lobby > aside > #sidebar > li > a {
+                    display: inline-block;
+                    width: 100%;
+                    height: 100%;
+                    color: #18202e;
+                    font-family: SimSun;
+                    
+                }
+
+    #un-lobby > #articles {
+        min-height: 469px;
+        padding: 15px 20px;
+        color: #18202e;
+        font-family: SimSun;
+        text-align: justify;
+        background: #f1f1f1;
+    }
+
+        #un-lobby > #articles .panel {
+            color: #18202e;
+        }
+
+        #un-lobby > #articles h2 {
+            text-align: left;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 2em;
+        }
+
+        #un-lobby > #articles h3 {
+            text-align: left;
+            line-height: 2em;
+        }
+
+        #un-lobby > #articles h4 {
+            text-align: left;
+            line-height: 2em;
+        }
+
+        #un-lobby > #articles p, #un-lobby > #articles li {
+            line-height: 2em;
+        }
+
+        #un-lobby > #articles ul {
+            padding: 0;
+            margin-bottom: 30px;
+        }
+
+        #un-lobby > #articles ol {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+            #un-lobby > #articles ol li {
+                list-style: decimal;
+            }
+
+        #un-lobby > #articles .subtitle {
+            color: #dd5227;
+            font-weight: bolder;
+        }
+
+        #un-lobby > #articles table {
+            border: 1px solid #b29c90;
+        }
+
+            #un-lobby > #articles table tr, #un-lobby > #articles table th, #un-lobby > #articles table td {
+                padding: 0 5px;
+                text-align: center;
+                line-height: 2em;
+                border: 1px solid #b29c90;
+            }
+
+            #un-lobby > #articles table th {
+                color: #fff;
+                background: #db5330;
+            }
+
+        /*#region 聯絡我們*/
+        #un-lobby > #articles.contact ol, #un-lobby > #articles.contact ul {
+            display: block;
+        }
+
+            #un-lobby > #articles.contact ul li {
+                list-style: none;
+            }
+/*#endregion 聯絡我們*/
+
+/* #region tab切換 */
+#Union ul.mtab-menual {
+    padding: 0 0 15px;
+    text-align: left;
+}
+
+    #Union ul.mtab-menual li {
+        display: inline;
+        margin-right: 3px;
+        padding: 5px 10px;
+        color: #db5330;
+        font: 12px/30px "SimSun";
+        border-bottom: 1px solid #db5330;
+        cursor: pointer;
+    }
+    
+        #Union ul.mtab-menual li.mtab {
+            color: #fff;
+            border-radius: 3px;
+            background: #db5330;
+        }
+
+#Union li {
+    display: list-item;
+}
+
+/* #endregion tab切換*/
+
+/* #region deposit线上存款页面使用 */
+#articles ul.deposit {
+    list-style-type: none;
+}
+
+    #articles ul.deposit li {
+        font-size: 14px;
+        font-weight: bold;
+        font-family: Arial,'Microsoft JhengHei';
+        counter-increment: title;
+    }
+
+        #articles ul.deposit li > a.deposit-title:before {
+            content: "方法 "counter(title,upper-alpha)"、";
+        }
+
+        #articles ul.deposit li a.deposit-title {
+            display: table;
+            color: #ff0000;
+            font-size: 14px;
+            text-decoration: underline;
+        }
+
+            #articles ul.deposit li a.deposit-title img {
+                vertical-align: bottom;
+            }
+
+        #articles ul.deposit li > a {
+            color: #d06744;
+            text-decoration: underline;
+        }
+
+        #articles ul.deposit li > a > img {
+            vertical-align: text-top;
+        }
+
+        #articles ul.deposit li .highlight {
+            color: #ff0000;
+        }
+
+        #articles ul.deposit li .highlight-white.color {
+            color: #fff;
+        }
+/* #endregion deposit线上存款页面使用 */
+
+/* #region account-nav的panel設定 */
+.body {
+    padding: 5px 5px 35px 5px;
+    color: #383838;
+    font-size: 15px;
+    font-family: '新細明體';
+    margin-top: 30px;
+}
+
+    .body #title {
+        height: 48px;
+        font: bold 21px "Microsoft JhengHei";
+        border: none;
+        color: #fff;
+        background: #4f5567;
+    }
+
+    .body #account-heading,
+    .body #withdrawal-heading {
+        height: 40px;
+        margin: 1px;
+        font: bold 15px/25px "PMingLiU";
+        text-align: left;
+        color: #fff;
+        background: #9195ad;
+    }
+
+    .body #show-account-info.btn {
+        color: #e5e5e5;
+    }
+
+    .body #bet_record tfoot {
+        text-align: center;
+        background: #dfdfdf;
+    }
+
+    .body #panel-online-deposit {
+        border: 1px solid #b7b7b7;
+    }
+
+        .body #panel-online-deposit .panel-body > form {
+            width: auto;
+        }
+
+/* 線上存款用 */
+#panel-online-deposit .panel-heading {
+    height: 40px;
+    margin: 1px;
+    font: bold 15px/25px "PMingLiU";
+    color: #fff;
+    background: #6b564b;
+}
+
+/* #endregion account-nav的panel設定 */
+
+/*合作夥伴用*/
+.highlight {
+    color: #ff0000;
+}
+
+/* 一鍵取回 */
+.body.container #title,
+.body #account-heading,
+.body #withdrawal-heading,
+#account-popup.modal.in table th {
+    color: #fff;
+    background: #db5330;
+}

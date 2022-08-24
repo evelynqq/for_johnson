@@ -1,0 +1,279 @@
+@charset "UTF-8";
+#banner {
+  display: block;
+}
+
+#content {
+  background-image: url("../Lobby/Live/content_bg.jpg");
+}
+
+#lobby {
+  padding: 20px 18px;
+}
+
+ul.game-list > li {
+  width: 490px;
+  height: 200px;
+  margin: 5px;
+  background: #202020;
+  border: 2px solid #202020;
+  position: relative;
+}
+
+ul.game-list > li:not([game-box='more']):hover {
+  background-position: center;
+  background: #980d2c;
+  border: 2px solid #980d2c;
+  width: 490px;
+  height: 200px;
+}
+
+ul.game-list > li span {
+  position: absolute;
+  font-size: 14px;
+  color: #fff;
+  left: 15px;
+  bottom: 15px;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px #202020;
+}
+
+ul.game-list > li div {
+  display: none;
+}
+
+ul.game-list > li::before {
+  content: '';
+  width: 150px;
+  height: 150px;
+  top: 0;
+  right: 30px;
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+ul.game-list > li:not([game-box='more'])::after {
+  content: '进入游戏';
+  font-size: 16px;
+  letter-spacing: 2px;
+  position: absolute;
+  color: #fff;
+  width: 110px;
+  height: 25px;
+  text-align: center;
+  padding: 5px;
+  bottom: 22px;
+  right: 45px;
+  border: 1px solid #fff;
+}
+
+#lobby li[game-box='more'] {
+  background-image: url("../lobby/live/more.jpg");
+  background-position-x: 3px;
+  background-position-y: 3px;
+}
+
+#lobby li[game-box='more']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/color/live/more.png");
+}
+
+#lobby li[game-box='AllBetReal'] {
+  background-image: url("../lobby/live/AllBetReal.jpg");
+  background-position-x: 3px;
+  background-position-y: 3px;
+}
+
+#lobby li[game-box='AllBetReal']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/color/live/AllBetReal.png");
+}
+
+#lobby li[game-box='AgBr'] {
+  background-image: url("../lobby/live/AgBr.jpg");
+  background-position-x: 3px;
+  background-position-y: 3px;
+}
+
+#lobby li[game-box='AgBr']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/color/live/AgBr.png");
+}
+
+#lobby li[game-box='BbinaLive'] {
+  background-image: url("../lobby/live/BbinaLive.jpg");
+  background-position-x: 3px;
+  background-position-y: 3px;
+}
+
+#lobby li[game-box='BbinaLive']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/color/live/BbinaLive.png");
+}
+
+#lobby li[game-box='BgReal'] {
+  background-image: url("../lobby/live/BgReal.jpg");
+  background-position-x: 3px;
+  background-position-y: 3px;
+}
+
+#lobby li[game-box='BgReal']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/color/live/BgReal.png");
+}
+
+#lobby li[game-box='EBetReal'] {
+  background-image: url("../lobby/live/EBetReal.jpg");
+  background-position-x: 3px;
+  background-position-y: 3px;
+}
+
+#lobby li[game-box='EBetReal']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/color/live/EBetReal.png");
+}
+
+#lobby li[game-box='EvoReal'] {
+  background-image: url("../lobby/live/EvoReal.jpg");
+  background-position-x: 3px;
+  background-position-y: 3px;
+}
+
+#lobby li[game-box='EvoReal']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/color/live/EvoReal.png");
+}
+
+#lobby li[game-box='GdReal'] {
+  background-image: url("../lobby/live/GdReal.jpg");
+  background-position-x: 3px;
+  background-position-y: 3px;
+}
+
+#lobby li[game-box='GdReal']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/color/live/GdReal.png");
+}
+
+#lobby li[game-box='GpiLive'] {
+  background-image: url("../lobby/live/GpiLive.jpg");
+  background-position-x: 3px;
+  background-position-y: 3px;
+}
+
+#lobby li[game-box='GpiLive']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/color/live/GpiLive.png");
+}
+
+#lobby li[game-box='HgaReal'] {
+  background-image: url("../lobby/live/HgaReal.jpg");
+  background-position-x: 3px;
+  background-position-y: 3px;
+}
+
+#lobby li[game-box='HgaReal']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/color/live/HgaReal.png");
+}
+
+#lobby li[game-box='OgaReal'] {
+  background-image: url("../lobby/live/OgaReal.jpg");
+  background-position-x: 3px;
+  background-position-y: 3px;
+}
+
+#lobby li[game-box='OgaReal']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/color/live/OgaReal.png");
+}
+
+#lobby li[game-box='PtaReal'] {
+  background-image: url("../lobby/live/PtaReal.jpg");
+  background-position-x: 3px;
+  background-position-y: 3px;
+}
+
+#lobby li[game-box='PtaReal']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/color/live/PtaReal.png");
+}
+
+#lobby li[game-box='PtaLive'] {
+  background-image: url("../lobby/live/PtaLive.jpg");
+  background-position-x: 3px;
+  background-position-y: 3px;
+}
+
+#lobby li[game-box='PtaLive']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/color/live/PtaLive.png");
+}
+
+#lobby li[game-box='PtbReal'] {
+  background-image: url("../lobby/live/PtbReal.jpg");
+  background-position-x: 3px;
+  background-position-y: 3px;
+}
+
+#lobby li[game-box='PtbReal']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/color/live/PtbReal.png");
+}
+
+#lobby li[game-box='MgaReal'] {
+  background-image: url("../lobby/live/MgaReal.jpg");
+  background-position-x: 3px;
+  background-position-y: 3px;
+}
+
+#lobby li[game-box='MgaReal']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/color/live/MgaReal.png");
+}
+
+#lobby li[game-box='SaReal'] {
+  background-image: url("../lobby/live/SaReal.jpg");
+  background-position-x: 3px;
+  background-position-y: 3px;
+}
+
+#lobby li[game-box='SaReal']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/color/live/SaReal.png");
+}
+
+#lobby li[game-box='SbLive'] {
+  background-image: url("../lobby/live/SbLive.jpg");
+  background-position-x: 3px;
+  background-position-y: 3px;
+}
+
+#lobby li[game-box='SbLive']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/color/live/SbLive.png");
+}
+
+#lobby li[game-box='SunbetReal'] {
+  background-image: url("../lobby/live/SunbetReal.jpg");
+  background-position-x: 3px;
+  background-position-y: 3px;
+}
+
+#lobby li[game-box='SunbetReal']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/color/live/SunbetReal.png");
+}
+
+#lobby li[game-box='WmReal'] {
+  background-image: url("../lobby/live/WmReal.jpg");
+  background-position-x: 3px;
+  background-position-y: 3px;
+}
+
+#lobby li[game-box='WmReal']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/color/live/WmReal.png");
+}
+
+#lobby li[game-box='RyReal'] {
+  background-image: url("../lobby/live/RyReal.jpg");
+  background-position-x: 3px;
+  background-position-y: 3px;
+}
+
+#lobby li[game-box='RyReal']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/color/live/RyReal.png");
+}
+
+#lobby li[game-box='Ry2Real'] {
+  background-image: url("../lobby/live/Ry2Real.jpg");
+  background-position-x: 3px;
+  background-position-y: 3px;
+}
+
+#lobby li[game-box='Ry2Real']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/color/live/Ry2Real.png");
+}
+/*# sourceMappingURL=Live.css.map */

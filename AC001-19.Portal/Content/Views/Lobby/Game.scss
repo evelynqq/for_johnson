@@ -1,0 +1,126 @@
+﻿@import '../../../../_Common/Css/GameCode';
+
+#banner {
+    background-color: #0072e4;
+    background-image: url('../Lobby/Game/banner.jpg');
+}
+
+#lobby {
+    position: relative;
+    left: 50%;
+    margin-left: -500px;
+    width: 1000px;
+}
+
+.slide-left {
+    position: relative;
+    font-size: 0;
+    text-align: center;
+}
+
+.slide-left .tempWrap {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.slide-left > span {
+    position: absolute;
+    z-index: 1;
+    display: inline-block;
+    width: 50px;
+    height: 100px;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+.slide-left > .prev:before,
+.slide-left > .next:before {
+    border: 1px solid #f80882;
+    display: inline-block;
+    width: 48px;
+    height: 98px;
+    cursor: pointer;
+    font-size: 36px;
+    line-height: 98px;
+    color: #f80882;
+}
+
+.slide-left > .prev {
+    left: 0;
+}
+
+.slide-left > .prev:before {
+    content: '<';
+}
+
+.slide-left > .next {
+    right: 0;
+}
+
+.slide-left > .next:before {
+    content: '>';
+}
+
+.game-list {
+    width: 900px;
+    height: 100px;
+    overflow: hidden;
+    li {
+        float: left;
+        width: 150px;
+        height: 100px;
+        border: 1px solid #f80882;
+        position: relative;
+        &:not([game-box='more']):hover {
+            background-attachment:fixed;
+            background-color: #f80882;
+        }
+        &::before {
+            content: '';
+            width: 150px;
+            height: 150px;
+            top: 0;
+            left: 30px;
+            background-size: 60% auto;
+            background-repeat: no-repeat;
+            position: absolute;
+        }
+        span {
+            font-size: 21px;
+            color: #fff;
+            width: 148px;
+            height: 30px;
+            bottom: 12px;
+            left: 0;
+            position: absolute;    
+        }
+        div {
+            display: none;
+        }
+    }
+}
+.game-list li[game-box='more'] span {
+    display: none;
+}
+// gamebox-list
+@each $gamebox in $game-list {
+    @if $gamebox != more {
+        #lobby li[game-box='#{$gamebox}'] {
+            background-image: url('../lobby/Game/#{$gamebox}.jpg');
+            &::before {
+                background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v3/nav/Game/#{$gamebox}.png');
+            }
+        }
+    }
+}
+
+#lobby iframe {
+    width: 1000px;
+    height: 890px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+#lobby iframe.sg {
+    background-color: #fff;
+}

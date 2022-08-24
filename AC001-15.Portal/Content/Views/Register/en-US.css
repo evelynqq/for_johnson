@@ -1,0 +1,11 @@
+﻿.form-group .control-label {
+    width: 25%;
+}
+
+.form-group .control-info {
+    width: 41%;
+}
+
+#btn-submit {
+    margin-left: 190px;
+}

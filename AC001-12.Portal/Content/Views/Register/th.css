@@ -1,0 +1,24 @@
+﻿.form-group .control-label {
+    width: 30%;
+}
+
+.form-group .control-div {
+    width: 33%;
+}
+
+.form-group .control-info {
+    width: 36%;
+}
+
+fieldset#last-fieldset .form-group .control-label {
+    display: none;
+}
+
+fieldset#last-fieldset .form-group .control-div {
+    width: 100%;
+    text-align: center;
+}
+
+#btn-submit, #btn-reset {
+    letter-spacing: 0;
+}

@@ -1,0 +1,86 @@
+﻿@import '../../../../_Common/Css/GameCode';
+
+#banner {
+    background-image: url('../Lobby/Esport/banner.jpg');
+}
+
+ul.game-list > li {
+    position: relative;
+    width: 331px;
+    height: 568px;
+    margin: 7px;
+    padding-top: 500px;
+    overflow: hidden;
+    background-position: left top;
+    transition: padding-top linear 0.1s;
+    background-color: #444242;
+    border-style: ridge;
+    border-width: 3px;
+    border-color: #FFBB00;
+    box-shadow:1px 1px 19px 2px rgba(0, 0, 0, 0.7) inset;
+    cursor: pointer;
+    &::before {
+        content: '';
+        position: absolute;
+        background-repeat: no-repeat;
+        top: 3px;
+        left: 3px;
+        width: 150px;
+        height: 150px;
+        opacity: 1;
+        transition: 0.3s;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 331px;
+        height: 568px;
+        display: inline-block;
+        background: url('../Lobby/Esport/enter.png') no-repeat center top;
+        opacity: 0;
+        transition: 0.3s;
+    }
+    &:not([game-box='more']):hover {
+        padding-top: 466px;
+        &:before,
+        &:after {
+            opacity: 1;
+        }
+    }
+    span {
+        position: absolute;
+        font-size: 14px;
+        color: #777;
+        letter-spacing: 1px;
+        top: 110px;
+        left: 0;
+        width: 160px;
+        height: 30px;
+        line-height: 30px;
+        text-shadow: 1px 1px 5px #000;
+        div {
+            display: none;
+        }
+    }
+}
+ul.game-list > li[game-box='more'] span {
+    font-size: 32px;
+    color: #777;
+    width: 333px;
+    height: 50px;
+    left: 0;
+    top: 200px;
+    letter-spacing: 13px;
+    text-shadow: none;
+}
+// gamebox-list
+@each $gamebox in $esport-list {
+    #lobby li[game-box='#{$gamebox}'] {
+        background-image: url('../lobby/Esport/#{$gamebox}.jpg');
+        &::before {
+            background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v1/colorshadow/Esport/#{$gamebox}.png');
+        }
+    }
+}

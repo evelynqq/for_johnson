@@ -1,0 +1,16 @@
+﻿#nav > ul > li a {
+    font-size: 12px;
+}
+
+ul#account-nav > li > a {
+    font-size: 12px;
+}
+
+#action-box {
+    margin-left: 15px;
+}
+
+    #action-box .login-btn,
+    #action-box .forget-btn {
+        font-size: 12px;
+    }

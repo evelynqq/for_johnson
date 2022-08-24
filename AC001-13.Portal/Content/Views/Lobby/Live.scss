@@ -1,0 +1,89 @@
+﻿@import '../../../../_Common/Css/GameCode';
+
+#banner {
+    background-color: #7c3a3b;
+    background-image: url('../Lobby/Live/banner.jpg');
+}
+
+#lobby {
+    position: relative;
+    left: 50%;
+    margin-left: -500px;
+    width: 1000px;
+    height: 700px;
+}
+
+#lobby li.slide {
+    float: left;
+    width: 120px;
+    height: 650px;
+    filter: grayscale(100%);
+    transition: width 0.5s, background 0.5s;
+    &::before {
+        content: '';
+        width: 150px;
+        height: 110px;
+        top: 0;
+        left: 20px;
+        background-repeat: no-repeat;
+        background-size: 80% auto;
+        position: absolute;
+    }
+}
+
+/*平台在显示时的样式设定*/
+#lobby ul li.slide.active,
+#lobby ul li.slide:hover {
+    filter: grayscale(0%);
+    width: 400px;
+    background-position: left top;
+}
+
+/*平台在不显示时的样式设定*/
+#lobby ul li.slide.unactive {
+    width: 0;
+}
+
+.pagers {
+    width: 1000px; /*设定包裹分页按钮容器的宽度，防止因为平台列表造成跑版*/
+    height: 20px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.pagers > span {
+    display: inline-block;
+    width: 80px;
+    height: 6px;
+    margin: 0 4px;
+    background: #b38844;
+    cursor: pointer;
+}
+
+.pagers > span.active,
+.pagers > span:hover {
+    background: #e2b36b;
+}
+
+#lobby ul {
+    display: block;
+    height: 650px;
+    background-position: -125px top;
+    overflow: hidden;
+    span {
+        display: none;
+    }
+    div {
+        display: none;
+    }
+}
+
+// gamebox-list
+@each $gamebox in $live-list {
+    #lobby li[game-box='#{$gamebox}'] {
+        background-image: url('../lobby/live/#{$gamebox}.jpg');
+        &::before {
+            background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v2/color/live/#{$gamebox}.png');
+        }
+    }
+}

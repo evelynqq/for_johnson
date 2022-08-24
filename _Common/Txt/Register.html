@@ -1,0 +1,114 @@
+<form ng-if="state=='ok'" class="form-horizontal ng-scope ng-pristine ng-invalid ng-invalid-required"
+    ng-submit="register(params)" onsubmit="return captchaPopup();">
+    <fieldset>
+        <div class="form-group">
+            <label class="control-label">推荐人</label>
+            <div class="control-div">
+                <input type="text" id="parentAccount" ng-model="scope.params.ParentAccount"
+                    class="form-control ng-pristine ng-valid" placeholder="请输入推荐人">
+            </div>
+            <div class="control-info">请输入推荐人</div>
+        </div>
+        <div class="form-group">
+            <label class="control-label">
+                <i class="fa fa-star fa-required"></i>
+                会员帐号
+            </label>
+            <div class="control-div">
+                <input ng-model="scope.params.Account" type="text" maxlength="50"
+                    class="form-control ng-pristine ng-invalid ng-invalid-required"
+                    placeholder="2 - 15 字符，字母开头，限字母，数字和底线" required="" autofocus="">
+            </div>
+            <div class="control-info">2 - 15 字符，字母开头，限字母，数字和底线</div>
+        </div>
+        <div class="form-group">
+            <label class="control-label">
+                <i class="fa fa-star fa-required"></i>
+                会员密码
+            </label>
+            <div class="control-div">
+                <input ng-model="scope.params.Password" class="form-control ng-pristine ng-invalid ng-invalid-required"
+                    type="password" minlength="6" required="" placeholder="密码需为 6 个字元以上且须包含字母和数字">
+            </div>
+            <div class="control-info">密码需为 6 个字元以上且须包含字母和数字</div>
+        </div>
+        <div class="form-group">
+            <label class="control-label">
+                <i class="fa fa-star fa-required"></i>
+                确认密码
+            </label>
+            <div class="control-div">
+                <input ng-model="scope.Confirm_Password" class="form-control ng-pristine ng-invalid ng-invalid-required"
+                    type="password" minlength="6" required="" placeholder="请再次确认密码">
+            </div>
+            <div class="control-info">请再次确认密码</div>
+        </div>
+        <div class="form-group">
+            <label class="control-label">
+                <i class="fa fa-star fa-required"></i>
+                取款密码
+            </label>
+            <div class="control-div">
+                <input ng-model="scope.params.MoneyPassword"
+                    class="form-control ng-pristine ng-invalid ng-invalid-required" type="password" autocomplete="off"
+                    maxlength="256" required="" placeholder="请输入取款密​​码">
+            </div>
+            <div class="control-info">请输入取款密​​码</div>
+        </div>
+        <div class="form-group ng-scope" ng-if="registerSetting.IsShow_Name &amp;&amp; registerSetting.IsRequired_Name">
+            <label class="control-label">
+                <i class="fa fa-star fa-required"></i>
+                真实姓名
+            </label>
+            <div class="control-div">
+                <input ng-model="scope.params.Name" required=""
+                    class="form-control ng-pristine ng-invalid ng-invalid-required" type="text" maxlength="50"
+                    placeholder="必须与提款的银行户口相同，否则无法提款">
+            </div>
+            <div class="control-info">必须与提款的银行户口相同，否则无法提款</div>
+        </div>
+        <div class="form-group ng-scope"
+            ng-if="registerSetting.IsShow_Mobile &amp;&amp; registerSetting.IsRequired_Mobile">
+            <label class="control-label">
+                <i class="fa fa-star fa-required"></i>
+                手机号码
+            </label>
+            <div class="control-div">
+                <input ng-model="scope.params.Mobile" required=""
+                    class="form-control ng-pristine ng-invalid ng-invalid-required" type="text" maxlength="20"
+                    placeholder="请输入正确的手机号码，以便日后身份验证使用">
+            </div>
+            <div class="control-info">请输入正确的手机号码，以便日后身份验证使用</div>
+        </div>
+        <div class="form-group ng-scope"
+            ng-if="registerSetting.IsShow_IdNumber &amp;&amp; !registerSetting.IsRequired_IdNumber">
+            <label class="control-label">
+                微信号
+            </label>
+            <div class="control-div">
+                <input ng-model="scope.params.IdNumber" class="form-control ng-pristine ng-valid" autocomplete="off"
+                    maxlength="20" placeholder="请输入您的微信">
+            </div>
+            <div class="control-info">请输入您的微信</div>
+        </div>
+        <div class="form-group">
+            <label class="control-label"></label>
+            <div class="agreement control-div">
+                <label>
+                    <input ng-model="scope.agree" type="checkbox" class="ng-pristine ng-valid">
+                    已满18 岁，且同意本站
+                </label>
+                <a ng-click="openAgreementClick()">用户注册协议</a>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label"></label>
+            <div class="control-div">
+                <!-- <button id="btn-submit" ng-disabled="isProcessing" class="form-btn ng-binding"
+                ng-bind="isProcessing ? '处理中...' : '立即注册'" onclick="captchaPopup()">立即注册</button> -->
+                <button id="btn-submit" type="button" class="form-btn ng-binding" onclick="captchaPopup()">立即注册</button>
+                <button id="btn-reset" class="form-btn" type="reset">重置</button>
+            </div>
+        </div>
+    </fieldset>
+</form>

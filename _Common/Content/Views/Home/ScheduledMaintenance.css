@@ -1,0 +1,14 @@
+﻿body, select, button, input, textarea,
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Microsoft JhengHei','微軟正黑體';
+}
+
+.jumbotron {
+    padding: 30px;
+    margin-bottom: 30px;
+    line-height: 2.1428571435;
+    color: inherit;
+    font-size: 21px;
+    font-weight: 200;
+    background-color: #eeeeee;
+}

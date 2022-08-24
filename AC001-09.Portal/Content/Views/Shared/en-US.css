@@ -1,0 +1,9 @@
+﻿#nav {
+    left: 240px;
+    width: 760px;
+}
+
+    #nav > ul > li a {
+        padding: 0 7px;
+        font-size: 12px;
+    }

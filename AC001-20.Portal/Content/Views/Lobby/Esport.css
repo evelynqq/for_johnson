@@ -1,0 +1,70 @@
+#lobby {
+  padding: 45px 0 70px;
+}
+
+#banner {
+  background-image: url("../Lobby/Esport/banner.jpg");
+}
+
+.game-list > li {
+  width: 326px;
+  height: 325px;
+  padding-top: 260px;
+}
+
+#lobby li.more {
+  background-image: url("../lobby/Sport/more.jpg");
+}
+
+#lobby li.EsbEsport {
+  background-image: url("../lobby/Sport/EsbEsport.jpg");
+}
+
+#lobby li.Esb1Esport {
+  background-image: url("../lobby/Sport/Esb1Esport.jpg");
+}
+
+#lobby li.SabaESport {
+  background-image: url("../lobby/Sport/SabaESport.jpg");
+}
+
+#lobby li.HcEsport {
+  background-image: url("../lobby/Sport/HcEsport.jpg");
+}
+
+#lobby li.CmdEsport {
+  background-image: url("../lobby/Sport/CmdEsport.jpg");
+}
+
+#lobby li.SabaaEsport {
+  background-image: url("../lobby/Sport/SabaaEsport.jpg");
+}
+
+#lobby li.E88Esport {
+  background-image: url("../lobby/Sport/E88Esport.jpg");
+}
+
+#lobby li.GbEsport {
+  background-image: url("../lobby/Sport/GbEsport.jpg");
+}
+
+#lobby li.GbsEsport {
+  background-image: url("../lobby/Sport/GbsEsport.jpg");
+}
+
+#lobby li.LeEsport {
+  background-image: url("../lobby/Sport/LeEsport.jpg");
+}
+
+#lobby li.AviaEsport {
+  background-image: url("../lobby/Sport/AviaEsport.jpg");
+}
+
+#lobby li.Cq9Esport {
+  background-image: url("../lobby/Sport/Cq9Esport.jpg");
+}
+
+#lobby li.TfEsport {
+  background-image: url("../lobby/Sport/TfEsport.jpg");
+}
+/*# sourceMappingURL=Esport.css.map */

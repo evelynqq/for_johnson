@@ -1,0 +1,135 @@
+﻿@import '../../../../_Common/Css/GameCode';
+
+#banner {
+    background: url('../Lobby/Live/banner.jpg') no-repeat center #251630;
+}
+
+#lobby {
+    position: relative;
+    text-align: center;
+}
+
+#lobby .game-list {
+    display: inline-block;
+    height: 400px;
+    overflow: hidden;
+}
+
+#lobby .game-list li {
+    width: 126px;
+    height: 346px;
+    margin: 30px 5px;
+    position: relative;
+    span {
+        position: absolute;
+        bottom: -30px;
+        font-size: 16px;
+        color: #563d7c;
+        width: 126px;
+        height: 30px;
+    }
+    div {
+        display: none;
+        p {
+            display: none;
+        }
+    }
+    &:not([game-box='more']):hover {
+        transform: translate3d(0,-2%,0);
+        transition: transform .1s linear;
+        div {
+            top: 100px;
+            font-size: 34px;
+            color: #ffc001;
+            position: absolute;
+            display: block;
+            text-align: center;
+            width: 126px;
+            height: 30px;
+            p {
+                font-size: 24px;
+                color: white;
+                position: absolute;
+                display: block;
+                top: 20px;
+                left: 0;
+                text-align: center;
+                width: 126px;
+                height: 30px;
+            }
+        }
+        &:not([game-box='more'])::before {
+            content: '';
+            width: 126px;
+            height: 346px;
+            position: absolute;
+            background-repeat: no-repeat;
+            background-position-y: 115px;
+            background-color: rgba($color: #251630, $alpha: 0.7);
+            top: 0;
+            left: 0;
+            background-image: url('../lobby/live/light.png');
+        }
+        &:not([game-box='more'])::after {
+            content: '进入游戏';
+            width: 105px;
+            height: 48px;
+            color: #ffc001;
+            background: rgba($color: #837986, $alpha: 0.6);
+            position: absolute;
+            bottom: 70px;
+            left: 10px;
+            font-size: 16px;
+            font-style: normal;
+            -webkit-font-smoothing: antialiased;
+            line-height: 48px;
+            text-align: center;
+            border: 1px solid #837986;
+            font-weight: lighter;
+            letter-spacing: 1px;
+        }
+    }
+}
+#lobby .line {
+    display: none;
+}
+#lobby .game-list li[game-box='more']:hover {
+    transform: translate3d(0,0,0);
+    display: none;
+}
+
+// gamebox-list
+@each $gamebox in $live-list {
+    #lobby li[game-box='#{$gamebox}'] {
+        background-image: url('../lobby/live/#{$gamebox}.jpg');
+    }
+}
+
+.pager {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+}
+
+.pager .prev {
+    display: block;
+    position: absolute;
+    top: 170px;
+    left: 0;
+    width: 15px;
+    height: 24px;
+    background: url('../Lobby/Live/prev.png') no-repeat;
+    cursor: pointer;
+}
+
+.pager .next {
+    display: block;
+    position: absolute;
+    top: 170px;
+    right: 0;
+    width: 15px;
+    height: 24px;
+    background: url('../Lobby/Live/next.png') no-repeat;
+    cursor: pointer;
+}

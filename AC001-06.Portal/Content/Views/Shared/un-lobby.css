@@ -1,0 +1,290 @@
+﻿/* 各頁設定 */
+#un-lobby {
+    min-height: 510px;
+    padding: 30px 0;
+    margin: 30px auto;
+    max-width: 1000px;
+}
+
+#un-lobby aside {
+    /*float: left;*/
+    margin-right: 40px;
+    width: 1000px;
+}
+
+#un-lobby ul#sidebar {
+    margin: 0;
+    padding: 0 5px;
+    list-style: none;
+}
+
+#un-lobby ul#sidebar li {
+    height: 50px;
+    background-repeat: no-repeat;
+    float: left;
+    margin: 0 15px 0 0;
+    position: relative;
+}
+
+#un-lobby ul#sidebar li:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: block;
+    background-position: left center;
+    width: 40px;
+    height: 50px;
+}
+
+#un-lobby ul#sidebar li.asideAboutUS:before {
+    background-image: url('../Shared/images/aside_about.png');
+}
+
+#un-lobby ul#sidebar li.asideContact:before {
+    background-image: url('../Shared/images/aside_contact.png');
+}
+
+#un-lobby ul#sidebar li.asidePartner:before {
+    background-image: url('../Shared/images/aside_partner.png');
+}
+
+#un-lobby ul#sidebar li.asideDeposit:before {
+    background-image: url('../Shared/images/aside_deposit.png');
+}
+
+#un-lobby ul#sidebar li.asideWithdrawal:before {
+    background-image: url('../Shared/images/aside_withdraw.png');
+}
+
+#un-lobby ul#sidebar li.asideFAQ:before {
+    background-image: url('../Shared/images/aside_faq.png');
+}
+
+#un-lobby ul#sidebar li.asideResponsibleGambling:before {
+    background-image: url('../Shared/images/aside_responsible.png');
+}
+
+#un-lobby ul#sidebar li.asideTrial:before {
+    background-image: url('../Shared/images/aside_trial.png');
+}
+
+#un-lobby ul#sidebar li.asideClient:before {
+    background-image: url('../Shared/images/aside_client.png');
+}
+
+#un-lobby ul#sidebar li:hover:before,
+#un-lobby ul#sidebar li.active:before {
+    background-position: right center;
+}
+
+#un-lobby ul#sidebar li a {
+    display: block;
+    height: 100%;
+    cursor: pointer;
+    color: #777;
+    text-decoration: none;
+    line-height: 50px;
+    padding-left: 45px;
+}
+
+#un-lobby ul#sidebar li:hover a,
+#un-lobby ul#sidebar li.active a {
+    color: #ffa500;
+}
+
+/* 內文CSS */
+#articles {
+    min-height: 400px;
+    /*padding: 15px 35px;*/
+    color: #999;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    clear: both;
+    padding: 0 40px 40px;
+}
+
+#articles h2 {
+    /*margin: 0 0 0 -10px;*/
+    margin: 0px;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    background: #666;
+    border: 1px solid #fff;
+    margin: 0 -40px 40px;
+}
+
+#articles h2 span {
+    margin-left: 5px;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+#articles h3 {
+    color: #ff0000;
+    font-family: Arial, '微軟正黑體';
+    font-size: 16px;
+    text-align: left;
+}
+
+#articles h4 {
+    display: inline-block;
+    height: 34px;
+    margin: 10px 0;
+    padding: 0 10px;
+    line-height: 34px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Microsoft JhengHei';
+    color: #000;
+    background: #f0c647;
+}
+
+#articles ul {
+    list-style: none;
+}
+
+#articles ol {
+    padding-left: 20px;
+    list-style-type: decimal;
+}
+
+#articles ol ul {
+    padding: 0;
+}
+
+#articles p,
+#articles li {
+    font-size: 12px;
+    text-align: justify;
+    line-height: 2em;
+}
+
+#articles p {
+    margin: 1em 0;
+}
+
+#articles form {
+    padding: 10px 20px;
+}
+
+#articles table {
+    width: 100%;
+    margin: 30px 0;
+}
+
+#articles table tr,
+#articles table th,
+#articles table td {
+    font-size: 15px;
+    font-family: 'Microsoft JhengHei';
+    line-height: 2em;
+    text-align: center;
+    border: 1px solid #999;
+}
+
+#articles table th {
+    font-size: 18px;
+    background: #555;
+}
+
+/* 重點顏色 */
+#articles .highlight {
+    color: #ff0000;
+    font-weight: bolder;
+}
+
+/* #region 合作夥伴tab 供其他页面使用 */
+#articles ul.mtab-menual {
+    padding-bottom: 15px;
+    padding-left: 0;
+    text-align: left;
+}
+
+#articles ul.mtab-menual li {
+    display: inline;
+    margin-right: 3px;
+    padding: 5px 10px;
+    color: #999;
+    font-size: 15px;
+    border: 1px #ffa500 solid;
+    cursor: pointer;
+}
+
+#articles ul.mtab-menual li.mtab {
+    color: #fff;
+    border: 1px #999 #ffa500;
+    background-color: #ff9c00;
+}
+
+/* #endregion 合作夥伴tab 供其他页面使用 */
+
+/* #region deposit线上存款页面使用 */
+#articles ul.deposit {
+    padding: 0;
+    list-style-type: none;
+}
+
+#articles ul.deposit li {
+    font-size: 16px;
+    counter-increment: title;
+}
+
+#articles ul.deposit li>a:before {
+    content: "方法 "counter(title, upper-alpha)"、";
+}
+
+#articles ul.deposit li a {
+    color: #f00;
+    text-decoration: underline;
+}
+
+/* #endregion deposit线上存款页面使用 */
+
+/* #region account nav共用 */
+.body {
+    position: relative;
+    width: 1000px;
+    margin: 40px auto;
+    font-size: 14px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.body #title {
+    color: #fff;
+    text-align: center;
+    background: #666;
+}
+
+.body.container #title {
+    font-size: 15px;
+    font-family: '新細明體';
+}
+
+.body.container #title,
+.body #account-heading,
+.body #withdrawal-heading {
+    color: #fff;
+    background: #706c80;
+}
+
+/* 檢視存入帳戶的文字顏色 */
+.body #show-account-info.btn {
+    color: #fff;
+}
+
+/* #endregion account nav共用 */
+
+/* 一鍵取回 */
+.body.container #title,
+.body #account-heading,
+.body #withdrawal-heading,
+#account-popup.modal.in table th {
+    color: #fff;
+    background: #ff9c00;
+}

@@ -1,0 +1,77 @@
+﻿@import '../../../../_Common/Css/GameCode';
+
+#banner {
+    display: block;
+}
+
+#content {
+    background-image: url('../Lobby/Sport/content_bg.jpg');
+}
+
+#lobby {
+    padding: 13px 0;
+}
+
+ul.game-list > li {
+    width: 310px;
+    height: 374px;
+    margin: 15px;
+    background: #000;
+    border: 2px solid #fff;
+    position: relative;
+    &:not([game-box='more']):hover {
+        background-position: center;
+        background: #dd0023;
+        border: 2px solid #dd0023;
+        width: 310px;
+        height: 374px;
+    }
+    span {
+        position: absolute;
+        font-size: 21px;
+        color: #fff;
+        bottom: 22px;
+        width: 170px;
+        height: 30px;
+        background: transparent;
+        right: 12px;
+        letter-spacing: 2px;
+        font-weight: 700;
+    }
+    div {
+        display: none;
+    }
+    &::before {
+        content: '';
+        width: 150px;
+        height: 150px;
+        bottom: -58px;
+        left: 12px;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: 75% auto;
+    }
+}
+
+// gamebox-list
+@each $gamebox in $sport-list {
+    #lobby li[game-box='#{$gamebox}'] {
+        background-image: url('../lobby/Sport/#{$gamebox}.jpg');
+        &::before {
+            background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v1/white/Sport/#{$gamebox}.png');
+            // background-image: url('../lobby/Sport/logo/#{$gamebox}.png');
+        }
+    }
+}
+
+@each $gamebox in $esport-list {
+    @if ($gamebox != 'more') {
+        #lobby li[game-box='#{$gamebox}'] {
+            background-image: url('../lobby/Esport/#{$gamebox}.jpg');
+            &::before {
+                background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v1/white/Esport/#{$gamebox}.png');
+                // background-image: url('../lobby/Esport/logo/#{$gamebox}.png');
+            }
+        }
+    }
+}

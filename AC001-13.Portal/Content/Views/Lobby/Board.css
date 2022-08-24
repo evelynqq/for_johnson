@@ -1,0 +1,139 @@
+#banner {
+  background-color: #251754;
+  background-image: url("../Lobby/Board/banner.jpg");
+}
+
+#lobby {
+  position: relative;
+  left: 50%;
+  margin-left: -500px;
+  width: 1000px;
+}
+
+.game-list li,
+.game-list li:before,
+.game-list li span {
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.game-list li {
+  position: relative;
+  margin: 15px;
+  width: 468px;
+  height: 330px;
+  background-color: #333;
+  overflow: hidden;
+  -webkit-filter: brightness(0.5);
+          filter: brightness(0.5);
+}
+
+.game-list li:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.game-list li span {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  margin: -50px -125px 0 0;
+  width: 250px;
+  height: 100px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid #fff;
+  line-height: 100px;
+  text-align: center;
+  font-size: 22px;
+  color: #fff;
+  z-index: 2;
+}
+
+.game-list li:hover {
+  -webkit-filter: brightness(0.9);
+          filter: brightness(0.9);
+}
+
+.game-list li:hover:before,
+.game-list li:hover span {
+  -webkit-transform: scale(1.1, 1.1);
+      -ms-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+}
+
+.game-list li:hover div {
+  display: none;
+}
+
+#lobby [game-box='more']:before {
+  background-image: url("../lobby/Board/more.jpg");
+}
+
+#lobby [game-box='City761Board']:before {
+  background-image: url("../lobby/Board/City761Board.jpg");
+}
+
+#lobby [game-box='JdbBoard']:before {
+  background-image: url("../lobby/Board/JdbBoard.jpg");
+}
+
+#lobby [game-box='KgHtml']:before {
+  background-image: url("../lobby/Board/KgHtml.jpg");
+}
+
+#lobby [game-box='LegBoard']:before {
+  background-image: url("../lobby/Board/LegBoard.jpg");
+}
+
+#lobby [game-box='JsBoard']:before {
+  background-image: url("../lobby/Board/JsBoard.jpg");
+}
+
+#lobby [game-box='VgBoard']:before {
+  background-image: url("../lobby/Board/VgBoard.jpg");
+}
+
+#lobby [game-box='NwBoard']:before {
+  background-image: url("../lobby/Board/NwBoard.jpg");
+}
+
+#lobby [game-box='FgBoard']:before {
+  background-image: url("../lobby/Board/FgBoard.jpg");
+}
+
+#lobby [game-box='KyBoard']:before {
+  background-image: url("../lobby/Board/KyBoard.jpg");
+}
+
+#lobby [game-box='LcBoard']:before {
+  background-image: url("../lobby/Board/LcBoard.jpg");
+}
+
+#lobby [game-box='T365Board']:before {
+  background-image: url("../lobby/Board/T365Board.jpg");
+}
+
+#lobby [game-box='YgBoard']:before {
+  background-image: url("../lobby/Board/YgBoard.jpg");
+}
+
+#lobby [game-box='AsBoard']:before {
+  background-image: url("../lobby/Board/AsBoard.jpg");
+}
+
+#lobby [game-box='TyBoard']:before {
+  background-image: url("../lobby/Board/TyBoard.jpg");
+}
+
+#lobby [game-box='Cq9Board']:before {
+  background-image: url("../lobby/Board/Cq9Board.jpg");
+}
+/*# sourceMappingURL=Board.css.map */

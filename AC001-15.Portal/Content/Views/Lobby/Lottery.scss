@@ -1,0 +1,73 @@
+﻿@import '../../../../_Common/Css/GameCode';
+
+#banner {
+    background-image: url('../Lobby/Lottery/banner.jpg');
+}
+
+ul.game-list > li {
+    position: relative;
+    width: 333px;
+    height: 283px;
+    margin: 6px;
+    background-position: center top 60px;
+    background-color: #444242;
+    border-style: ridge;
+    border-width: 2px;
+    border-color: #FFBB00;
+    box-shadow:1px 1px 19px 2px rgba(0, 0, 0, 0.7) inset;
+    cursor: pointer;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 60px;
+        left: 16px;
+        display: inline-block;
+        width: 298px;
+        height: 202px;
+        background: url('../Lobby/Board/enter.png') no-repeat center top;
+        opacity: 0;
+        transition: 0.3s;
+    }
+    &:not([game-box='more']):hover:before {
+        opacity: 1;
+    }
+    &[game-box='more'] {
+        cursor: default;
+    }
+    &::after {
+        content: '';
+        width: 150px;
+        height: 110px;
+        right: 140px;
+        top: -10px;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: 70% auto;
+    }
+    span {
+        position: absolute;
+        font-size: 21px;
+        color: #fff;
+        text-shadow: 1px 1px 5px #000;
+        top: 10px;
+        left: 150px;
+    }
+    div {
+        position: absolute;
+        font-size: 14px;
+        color: #9A9796;
+        text-shadow: 1px 1px 5px #000;
+        top: 35px;
+        left: 150px;
+    }
+}
+
+// gamebox-list
+@each $gamebox in $lottery-list {
+    #lobby li[game-box='#{$gamebox}'] {
+        background-image: url('../lobby/Lottery/#{$gamebox}.jpg');
+        &::after {
+            background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v3/colorshadow/Lottery/#{$gamebox}.png');
+        }
+    }
+}

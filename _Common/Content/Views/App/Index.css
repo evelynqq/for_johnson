@@ -1,0 +1,206 @@
+﻿body {
+    font-family: arial,"Microsoft JhengHei","微軟正黑體",sans-serif;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background: url("../../../../_Common/Content/Views/App/images/new_bg.jpg") top center/100% auto no-repeat fixed #000;
+}
+
+    body.layout {
+        background-color: #000;
+    }
+
+#app-download {
+    position: relative;
+    width: 1000px;
+    height: 600px;
+    margin: 20px auto 0;
+}
+
+    #app-download:before {
+        content: '';
+        position: absolute;
+        right: -75px;
+        top: -20px;
+        width: 673px;
+        height: 459px;
+        display: block;
+        background: url("../../../../_Common/Content/Views/App/images/mobile.png");
+    }
+
+    #app-download .logo {
+        -webkit-filter: drop-shadow(2px 1px 3px #000);
+        filter: drop-shadow(2px 1px 3px #000);
+    }
+
+    #app-download > .title {
+        position: absolute;
+        top: 230px;
+        left: 30px;
+        color: #fff;
+        font-size: 85px;
+        font-weight: bold;
+        text-shadow: -5px 5px 5px #bd2600, 5px -5px 5px #bd2600, -5px -5px 5px #bd2600, -5px 5px 5px #bd2600, 5px 5px 5px #bd2600;
+        line-height: 0.7;
+    }
+
+        #app-download > .title:before {
+            content: '轻松下载 掌控全局';
+            position: absolute;
+            bottom: -35px;
+            width: 100%;
+            font-size: 24px;
+            text-align: center;
+            text-shadow: 2px 2px 5px #000;
+            display: block;
+            letter-spacing: 8px;
+        }
+
+    #app-download ul {
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        margin-left: -484px;
+        top: 370px;
+    }
+
+        #app-download ul li {
+            position: relative;
+            top: 10px;
+            width: 300px;
+            height: 300px;
+            background: #fff;
+            border-radius: 5px;
+            margin: 10px;
+            display: inline-block;
+            vertical-align: top;
+            text-align: left;
+            -webkit-transition: all .4s;
+            -o-transition: all .4s;
+            transition: all .4s;
+        }
+
+            #app-download ul li.casino .banner {
+                height: 160px;
+                background: url("../../../../_Common/Content/Views/App/images/casino_banner.jpg") center no-repeat;
+                -webkit-transition: all .4s;
+                -o-transition: all .4s;
+                transition: all .4s;
+            }
+
+            #app-download ul li.tpg .title:before {
+                background-image: url("../../../../_Common/Content/Views/App/images/tpg_icon.png");
+            }
+
+            #app-download ul li.tpg .banner {
+                height: 160px;
+                background: url("../../../../_Common/Content/Views/App/images/tpg_banner.jpg") center no-repeat;
+                -webkit-transition: all .4s;
+                -o-transition: all .4s;
+                transition: all .4s;
+            }
+
+            #app-download ul li.more .title:before {
+                background-image: url("../../../../_Common/Content/Views/App/images/more_icon.png");
+            }
+
+            #app-download ul li.more .banner {
+                height: 160px;
+                background: url("../../../../_Common/Content/Views/App/images/more_banner.jpg") center no-repeat;
+                -webkit-transition: all .4s;
+                -o-transition: all .4s;
+                transition: all .4s;
+            }
+
+            #app-download ul li:hover {
+                top: 0px;
+            }
+
+            #app-download ul li .title {
+                padding: 10px;
+                line-height: 30px;
+            }
+
+                #app-download ul li .title:before {
+                    content: '';
+                    width: 30px;
+                    height: 30px;
+                    float: left;
+                    margin-right: 5px;
+                    background-size: cover;
+                    vertical-align: bottom;
+                }
+
+                #app-download ul li .title h3 {
+                    font-size: 16px;
+                    line-height: 30px;
+                    padding: 0;
+                    margin: 0;
+                    display: inline-block;
+                }
+
+                #app-download ul li .title i {
+                    float: right;
+                    font-size: 20px;
+                    margin: 5px;
+                    color: #999;
+                }
+
+                    #app-download ul li .title i:hover {
+                        color: #333;
+                    }
+
+            #app-download ul li .app-bottom {
+                position: relative;
+                padding: 10px 25px;
+            }
+
+                #app-download ul li .app-bottom .qr-code canvas {
+                    width: 70px;
+                    height: 70px;
+                    border: 5px solid #fff;
+                    -webkit-box-shadow: 1px 1px 2px #999;
+                    box-shadow: 1px 1px 2px #999;
+                }
+
+                #app-download ul li .app-bottom p, #app-download ul li .app-bottom button {
+                    position: absolute;
+                    right: 10px;
+                    width: 150px;
+                    text-align: center;
+                    margin: 0 25px;
+                }
+
+                #app-download ul li .app-bottom p {
+                    top: 10px;
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+
+                #app-download ul li .app-bottom button {
+                    bottom: 15px;
+                    background: #666;
+                    border-radius: 15px;
+                    color: #fff;
+                    -webkit-transition: all .3s;
+                    -o-transition: all .3s;
+                    transition: all .3s;
+                }
+
+                    #app-download ul li .app-bottom button:hover {
+                        background: #333;
+                    }
+
+            #app-download ul li.more {
+                color: #999;
+            }
+
+                #app-download ul li.more .app-bottom p {
+                    margin: 0;
+                    width: 100%;
+                    line-height: 70px;
+                    text-align: center;
+                    right: 0;
+                    font-size: 30px;
+                }
+/*# sourceMappingURL=Index.css.map */

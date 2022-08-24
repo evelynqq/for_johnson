@@ -1,0 +1,25 @@
+﻿#nav ul li a {
+    font-size: 14px;
+}
+
+#un-lobby > aside > #sidebar > li {
+    text-transform: uppercase;
+}
+
+#header-bot {
+    top: 35px;
+}
+
+    #header-bot #account-box {
+        line-height: 28px;
+    }
+
+    ul#account-info {
+        right: 70px;
+    }
+
+    #action-box {
+        position: absolute;
+        top: 0px;
+        right: 10px;
+    }

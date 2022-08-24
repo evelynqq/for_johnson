@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html @* xmlns:ng="http://angularjs.org" *@ id="ng-app" ng-app="portalApp" meidon-time="@ViewBag.MeiDonNow" @* 主機的美東時間
+    *@ moment-lang="@ViewBag.Language" @* 瀏覽器語系 *@ ng-init="'@Resources.Shared.Head_Title'">
+
+<head>
+    <title>welcome</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="shortcut icon" href="../../../_Common/Content/Views/Shared/images/favicon.ico" />
+    <link href="../../bundles/site.css" rel="stylesheet" />
+    <link href="../../Content/Views/Register/index.css" rel="stylesheet" />
+    <script src="../../../_Common/Scripts/jquery/v1.12.4/jquery.min.js"></script>
+    <script src="../../bundles/include-html.js"></script>
+</head>
+
+<body class="layout" ng-controller="LayoutCtrl">
+    <header id="header"></header>
+    <nav id="nav"></nav>
+    <div class="banner">
+        <div class="wrapper"></div>
+    </div>
+    <div id="content">
+        <div class="wrapper">
+            <div id="un-lobby" class="clearfix ng-scope" ng-controller="LobbiesCtrl">
+                <aside></aside>
+                <article id="articles">
+                    <h2>加入我们</h2>
+                    <p>
+                        全新升级，简单介面，存取方便，优惠更高，首存还送彩金喔；立即加入吧！
+                        <br> 最低存款10元，最低取款50元，3分钟火速到帐。支持：支付宝，微信支付。
+                    </p>
+                    <div class="panel panel-default">
+                        <div class="panel-body ng-scope" ng-controller="RegisterCtrl">
+                            <!-- ngIf: state=='ok' -->
+                            <form ng-if="state=='ok'"
+                                class="form-horizontal ng-scope ng-pristine ng-invalid ng-invalid-required"
+                                ng-submit="register(params)">
+                                <fieldset>
+                                    <legend>帐号注册</legend>
+                                    <div class="form-group">
+                                        <label class="control-label">推薦人</label>
+                                        <div class="control-div">
+                                            <input type="text" id="parentAccount" ng-model="scope.params.ParentAccount"
+                                                class="form-control ng-pristine ng-valid" placeholder="請輸入推薦人">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">
+                                            <i class="fa fa-star fa-required"></i> 會員帳號
+                                        </label>
+                                        <div class="control-div">
+                                            <input ng-model="scope.params.Account" type="text" maxlength="50"
+                                                class="form-control ng-pristine ng-valid"
+                                                placeholder="2-15 字元，字母開頭，限字母，數字和底線" autofocus="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">
+                                            <i class="fa fa-star fa-required"></i> 會員密碼
+                                        </label>
+                                        <div class="control-div">
+                                            <input ng-model="scope.params.Password"
+                                                class="form-control ng-pristine ng-invalid ng-invalid-required"
+                                                type="password" placeholder="請輸入密碼" required="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">
+                                            <i class="fa fa-star fa-required"></i> 確認密碼
+                                        </label>
+                                        <div class="control-div">
+                                            <input ng-model="scope.Confirm_Password"
+                                                class="form-control ng-pristine ng-invalid ng-invalid-required"
+                                                type="password" placeholder="請再次確認密碼" required="">
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <fieldset id="fieldset-more-option">
+                                    <legend>会员资料</legend>
+                                    <!-- #region 這段在【其他選項】也有，只不過這邊是必填，非必填的會出現在【其他選項】 -->
+                                    <div class="form-group">
+                                        <label class="control-label">
+                                            <i class="fa fa-star fa-required"></i> 取款密碼
+                                        </label>
+                                        <div class="control-div">
+                                            <input ng-model="scope.params.MoneyPassword"
+                                                class="form-control ng-pristine ng-invalid ng-invalid-required"
+                                                type="password" placeholder="請輸入取款密碼" autocomplete="off" maxlength="256"
+                                                required="">
+                                        </div>
+                                    </div>
+                                    <!-- ngIf: registerSetting.IsShow_Name && registerSetting.IsRequired_Name -->
+                                    <div class="form-group ng-scope"
+                                        ng-if="registerSetting.IsShow_Name &amp;&amp; registerSetting.IsRequired_Name">
+                                        <label class="control-label">
+                                            <i class="fa fa-star fa-required"></i> 真實姓名
+                                        </label>
+                                        <div class="control-div">
+                                            <input ng-model="scope.params.Name" placeholder="必須與提款的銀行戶口相同，否則無法提款"
+                                                required=""
+                                                class="form-control ng-pristine ng-invalid ng-invalid-required"
+                                                type="text" maxlength="50">
+                                        </div>
+                                    </div>
+                                    <!-- end ngIf: registerSetting.IsShow_Name && registerSetting.IsRequired_Name -->
+                                    <!-- ngIf: registerSetting.IsShow_Mobile && registerSetting.IsRequired_Mobile -->
+                                    <div class="form-group ng-scope"
+                                        ng-if="registerSetting.IsShow_Mobile &amp;&amp; registerSetting.IsRequired_Mobile">
+                                        <label class="control-label">
+                                            <i class="fa fa-star fa-required"></i> 手機號碼
+                                        </label>
+                                        <div class="control-div">
+                                            <input ng-model="scope.params.Mobile" placeholder="請輸入您的手機號碼" required=""
+                                                class="form-control ng-pristine ng-invalid ng-invalid-required"
+                                                type="text" maxlength="20">
+                                        </div>
+                                    </div>
+                                    <!-- end ngIf: registerSetting.IsShow_Mobile && registerSetting.IsRequired_Mobile -->
+                                    <!-- ngIf: registerSetting.IsShow_Email && registerSetting.IsRequired_Email -->
+                                    <div class="form-group ng-scope"
+                                        ng-if="registerSetting.IsShow_Email &amp;&amp; registerSetting.IsRequired_Email">
+                                        <label class="control-label">
+                                            <i class="fa fa-star fa-required"></i> 電子郵箱
+                                        </label>
+                                        <div class="control-div">
+                                            <input ng-model="scope.params.Email" placeholder="請輸入您的電子郵箱" required=""
+                                                class="form-control ng-pristine ng-valid-email ng-invalid ng-invalid-required"
+                                                type="email" maxlength="256">
+                                        </div>
+                                    </div>
+                                    <!-- end ngIf: registerSetting.IsShow_Email && registerSetting.IsRequired_Email -->
+                                    <!-- ngIf: registerSetting.IsShow_Sex && registerSetting.IsRequired_Sex -->
+                                    <!-- ngIf: registerSetting.IsShow_Birthday && registerSetting.IsRequired_Birthday -->
+                                    <!-- ngIf: registerSetting.IsShow_IdNumber && registerSetting.IsRequired_IdNumber -->
+                                    <!-- ngIf: registerSetting.IsShow_QQ && registerSetting.IsRequired_QQ -->
+                                    <div class="form-group ng-scope"
+                                        ng-if="registerSetting.IsShow_QQ &amp;&amp; registerSetting.IsRequired_QQ">
+                                        <label class="control-label">
+                                            <i class="fa fa-star fa-required"></i> QQ號碼
+                                        </label>
+                                        <div class="control-div">
+                                            <input ng-model="scope.params.QQAccount" placeholder="請輸入您的QQ號碼"
+                                                class="form-control ng-pristine ng-invalid ng-invalid-required"
+                                                required="" type="text" maxlength="20">
+                                        </div>
+                                    </div>
+                                    <!-- end ngIf: registerSetting.IsShow_QQ && registerSetting.IsRequired_QQ -->
+                                    <!-- #region 【其他選項】 -->
+                                    <!-- ngIf: registerSetting.IsShow_Name && !registerSetting.IsRequired_Name -->
+                                    <!-- ngIf: registerSetting.IsShow_Mobile && !registerSetting.IsRequired_Mobile -->
+                                    <!-- ngIf: registerSetting.IsShow_Email && !registerSetting.IsRequired_Email -->
+                                    <!-- ngIf: registerSetting.IsShow_Sex && !registerSetting.IsRequired_Sex -->
+                                    <div class="form-group ng-scope"
+                                        ng-if="registerSetting.IsShow_Sex &amp;&amp; !registerSetting.IsRequired_Sex">
+                                        <label class="control-label">
+                                            性別
+                                        </label>
+                                        <div class="sex control-div">
+                                            <label class="radio-inline">
+                                                <input type="radio" ng-model="scope.params.Sex" value="true" name="sex"
+                                                    class="ng-pristine ng-valid">男
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" ng-model="scope.params.Sex" value="false" name="sex"
+                                                    class="ng-pristine ng-valid">女
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!-- end ngIf: registerSetting.IsShow_Sex && !registerSetting.IsRequired_Sex -->
+                                    <!-- ngIf: registerSetting.IsShow_Birthday && !registerSetting.IsRequired_Birthday -->
+                                    <div class="form-group ng-scope"
+                                        ng-if="registerSetting.IsShow_Birthday &amp;&amp; !registerSetting.IsRequired_Birthday">
+                                        <label class="control-label">
+                                            出生日期
+                                        </label>
+                                        <div class="control-div">
+                                            <input datepickerui="" class="datepicker ng-pristine ng-valid hasDatepicker"
+                                                ng-model="scope.params.Birthday" type="text" placeholder="請選擇您出生日期"
+                                                id="dp1527825865281">
+                                        </div>
+                                    </div>
+                                    <!-- end ngIf: registerSetting.IsShow_Birthday && !registerSetting.IsRequired_Birthday -->
+                                    <!-- ngIf: registerSetting.IsShow_IdNumber && !registerSetting.IsRequired_IdNumber -->
+                                    <div class="form-group ng-scope"
+                                        ng-if="registerSetting.IsShow_IdNumber &amp;&amp; !registerSetting.IsRequired_IdNumber">
+                                        <label class=" control-label">
+                                            微信號
+                                        </label>
+                                        <div class="control-div">
+                                            <input ng-model="scope.params.IdNumber"
+                                                class="form-control ng-pristine ng-valid" autocomplete="off"
+                                                maxlength="20" placeholder="請輸入您的微信">
+                                        </div>
+                                    </div>
+                                    <!-- end ngIf: registerSetting.IsShow_IdNumber && !registerSetting.IsRequired_IdNumber -->
+                                    <!-- ngIf: registerSetting.IsShow_QQ && !registerSetting.IsRequired_QQ -->
+                                    <div class="form-group">
+                                        <label class="control-label"><span class="star">*</span>驗證碼</label>
+                                        <div class="control-div">
+                                            <div id="checkcode-input-group" class="input-group">
+                                                <input ng-model="scope.params.checkCode"
+                                                    data-checkcode-retriever="scope.checkCode" checkcode-type="Register"
+                                                    type="text" placeholder="請輸入驗證碼" autocomplete="off" required=""
+                                                    class="ng-pristine ng-invalid ng-invalid-required">
+                                                <span class="input-group-addon checkcode">
+                                                    <img ng-show="scope.checkCode.image" ng-src="" class="ng-hide">
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="last">
+                                    <div class="form-group">
+                                        <div class="control-div">
+                                            <label>
+                                                <input ng-model="scope.agree" type="checkbox"
+                                                    class="ng-pristine ng-valid"> 已滿18 歲，且同意本站
+                                            </label>
+                                            <a class="agreement" ng-click="openAgreementClick()">用戶註冊協議 </a>
+                                        </div>
+                                    </div>
+                                    <!-- <button id="btn-submit" ng-disabled="isProcessing" class="btn btn-default ng-binding" ng-bind="isProcessing ? '處理中...' : '立即註冊'">立即註冊</button> -->
+                                    <button id="btn-submit" type="button" class="btn ng-binding"
+                                        onclick="captchaPopup()">立即注册</button>
+                                </fieldset>
+                            </form>
+                            <!-- end ngIf: state=='ok' -->
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+    <footer id="footer"></footer>
+</body>
+
+</html>

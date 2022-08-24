@@ -1,0 +1,24 @@
+﻿/* Lobby各廳設定 */
+#lobby {
+    display: inline-block;
+    color: #fff;
+    font-size: 12px;
+    width: 100%;
+}
+
+    #lobby > .game-list {
+        font-size: 0;
+    }
+
+        #lobby > .game-list > li {
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+    /* #region 针对独立娱乐城的CSS */
+    #lobby > section.intro {
+        padding: 20px;
+        background: #CC0033;
+    }
+/* #endregion 针对独立娱乐城的CSS */

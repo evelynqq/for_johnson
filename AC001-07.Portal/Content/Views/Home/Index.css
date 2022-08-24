@@ -1,0 +1,450 @@
+﻿.banner {
+    height: 600px;
+    background-image: none;
+    background-color: #101010;
+}
+
+#content {
+    padding: 0;
+}
+
+/* #region slide-banner樣式 */
+#slide-banner {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+    margin-top: 140px;
+}
+
+    #slide-banner .slide {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -960px;
+    }
+
+
+        #slide-banner .slide a {
+            display: inline-block;
+            width: 1920px;
+            height: 600px; /* 通常只會改這兩個地方 跟著圖片高度 */
+        }
+
+    
+    /* 點點切換紐 */
+    #slide-banner .slide-pager {
+        position: absolute;
+        bottom: 65px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+        #slide-banner .slide-pager li {
+            display: inline-block;
+            width: 13px;
+            height: 13px;
+            margin: 0 4px;
+            /* 若要数字编号可以把font-size: 0拿掉 */
+            font-size: 0;
+            background-color: #ffcd79;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+            #slide-banner .slide-pager .on,
+            #slide-banner .slide-pager li:hover {
+                background-color: #fff;
+            }
+/* #endregion slide-banner樣式 */
+
+
+/* #region 彩金區塊 */
+section#money {
+    padding: 35px 0;
+    background: rgba(0,0,0,.5);
+    border-top: 1px solid #746252;
+    border-bottom: 1px solid #746252;
+}
+
+.jackpot-area {
+    margin: 11px 0;
+}
+
+    .jackpot-area ul {
+        display: block;
+        text-align: center;
+    }
+
+    .jackpot-area li {
+        display: inline-block;
+        width: 325px;
+        height: 100px;
+        padding-top: 28px;
+        color: #ffe2b7;
+        font-size: 14px;
+        letter-spacing: 1px;
+        text-align: center;
+        background: url('../Home/images/jackpot_bg.png') no-repeat;
+    }
+
+        .jackpot-area li.middle {
+            margin: 0 9px;
+        }
+
+        .jackpot-area li > span {
+            display: block;
+            color: #e9d87b;
+            font-size: 16px;
+        }
+
+            .jackpot-area li > span:after {
+                content: '元';
+                color: #edca69;
+                font-size: 16px;
+            }
+
+.winners-area {
+    height: 93px;
+    padding-left: 290px;
+    background: url('../Home/images/winner_bg.jpg') no-repeat center;
+}
+
+    .winners-area > div {
+        display: inline-block;
+        vertical-align: top;
+        width: 373px;
+        height: 75px;
+        margin-top: 10px;
+        overflow: hidden;
+    }
+
+        .winners-area > div ul {
+            display: block;
+            height: 94px;
+        }
+
+        .winners-area > div li {
+            display: block;
+            font-size: 12px;
+            line-height: 20px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+            .winners-area > div li span {
+                display: inline-block;
+            }
+
+        .winners-area > div .area {
+            width: 68px;
+            color: #838383;
+        }
+
+        .winners-area > div .user {
+            width: 99px;
+            color: #fff;
+        }
+
+        .winners-area > div .game {
+            width: 110px;
+            color: #838383;
+        }
+
+        .winners-area > div .money {
+            color: #edca69;
+        }
+/* #endregion 彩金區塊 */
+
+/* #region 電子區塊 */
+#slot-box {
+    height: 428px;
+    padding: 20px 0;
+    text-align: left;
+    /* 背景超出去隱藏 */
+    overflow: hidden;
+}
+
+    #slot-box .game-box {
+        position: relative;
+        z-index: 2;
+        display: inline-block;
+        list-style: none;
+        vertical-align: top;
+        background:url('../Home/images/main-counter-bg.png') no-repeat;
+        background-size: cover;
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 0 40px;
+    }
+
+        #slot-box .game-box li {
+            position: relative;
+            padding: 12px 0 0 127px;
+            width: 265px;
+            height: 66px;
+            text-align: left;
+            background-repeat: no-repeat;
+            border-top: 1px solid #746252;
+            border-bottom: 1px solid rgba(0,0,0,.5);
+        }
+
+            #slot-box .game-box li > h3 {
+                margin: 0;
+                color: #ffcf86;
+                font-size: 16px;
+                font-weight: normal;
+            }
+
+            #slot-box .game-box li > h4 {
+                margin: 0;
+                color: #ffdaa3;
+                font-size: 12px;
+            }
+
+            #slot-box .game-box li:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 99%;
+                height: 60px;
+                border: 2px solid transparent;
+                -webkit-transition: border .4s;
+                -o-transition: border .4s;
+                -moz-transition: border .4s;
+                transition: border .4s;
+            }
+
+            #slot-box .game-box li:first-child.game-active:before,
+            #slot-box .game-box li:first-child:hover:before {
+                border-radius: 10px 10px 0 0;
+            }
+
+            #slot-box .game-box li:last-child.game-active:before,
+            #slot-box .game-box li:last-child:hover:before {
+                border-radius: 0 0 10px 10px;
+            }
+
+            #slot-box .game-box li.game-active:before,
+            #slot-box .game-box li:hover:before {
+                border: 2px solid #edc968;
+            }
+
+            #slot-box .game-box li[game-box="mg"] {
+                background-image: url('../Home/Images/slot/tab/mg.png');
+            }
+
+            #slot-box .game-box li[game-box="pt"] {
+                background-image: url('../Home/Images/slot/tab/pt.png');
+            }
+
+            #slot-box .game-box li[game-box="bb"] {
+                background-image: url('../Home/Images/slot/tab/bbin.png');
+            }
+
+            #slot-box .game-box li[game-box="ag"] {
+                background-image: url('../Home/Images/slot/tab/ag.png');
+            }
+
+            #slot-box .game-box li[game-box="gpi"] {
+                background-image: url('../Home/Images/slot/tab/gpi.png');
+            }
+
+            #slot-box .game-box li[game-box="gns"] {
+                background-image: url('../Home/Images/slot/tab/gns.png');
+            }
+
+.slot-img {
+    display: inline-block;
+    width: 596px;
+    height: 379px;
+    margin-top: 7px;
+    font-size: 0;
+}
+
+    .slot-img li {
+        display: inline-block;
+        position: relative;
+        margin: 9px 0 0px 8px;
+        width: 190px;
+        height: 176px;
+        text-align: center;
+        background-color: #252525;
+        vertical-align: top;
+        z-index: 1;
+    }
+
+        .slot-img li:hover {
+            background-color: #edc968;
+        }
+
+        .slot-img li img {
+            width: 190px;
+            height: 121px;
+        }
+
+        .slot-img li:hover img {
+            margin-top: 5px;
+            width: 180px;
+            height: 117px;
+        }
+
+        /* 熱門遊戲 */
+        .slot-img li.hot:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 75px;
+            height: 74px;
+            background: url('../Home/Images/hot.png') repeat-x;
+        }
+
+        /* hover前蓋一層透明黑底 */
+        .slot-img li:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 190px;
+            height: 121px;
+            background: url('../Home/Images/black.png') repeat;
+        }
+
+        .slot-img li:hover:after {
+            background: none;
+        }
+
+        .slot-img li span {
+            display: inline-block;
+            margin-top: 9px;
+            color: #dadada;
+            font-family: 'Microsoft YaHei';
+            font-size: 14px;
+        }
+
+        .slot-img li:hover span {
+            color: #000;
+        }
+
+        /* 星星 */
+        .slot-img li span:after {
+            content: '';
+            display: block;
+            margin: 6px auto 0;
+            width: 55px;
+            height: 11px;
+            background: url('../Home/Images/start.png') repeat-x;
+        }
+
+        .slot-img li:hover span:after {
+            background: url('../Home/Images/start_h.png') repeat-x;
+        }
+
+/* #endregion 電子區塊 */
+
+/* 首頁資訊區 */
+#home-info {
+    list-style-type: none;
+    border-top: 1px solid #746252;
+    padding: 20px 0;
+}
+
+    #home-info ul {
+        list-style-type: none;
+    }
+
+    #home-info li {
+        text-align: left;
+        background: no-repeat left top;
+    }
+
+    #home-info > li {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    #home-info h3 {
+        height: 80px;
+        margin: 0 0 12px;
+        background: no-repeat left top;
+    }
+
+#reason > h3 {
+    background-image: url('../Home/images/t1.png');
+}
+
+#reason li {
+    width: 271px;
+    height: 46px;
+    margin-bottom: 10px;
+}
+
+    #reason li[data-index="01"] {
+        background-image: url('../Home/images/l1.png');
+    }
+
+    #reason li[data-index="02"] {
+        background-image: url('../Home/images/l2.png');
+    }
+
+    #reason li[data-index="03"] {
+        background-image: url('../Home/images/l3.png');
+    }
+
+    #reason li[data-index="04"] {
+        background-image: url('../Home/images/l4.png');
+    }
+
+    #reason li[data-index="05"] {
+        background-image: url('../Home/images/l5.png');
+    }
+
+#product {
+    width: 290px;
+    margin: 0 76px;
+}
+
+    #product > h3 {
+        background-image: url('../Home/images/t2.png');
+    }
+
+    #product h4 {
+        color: #988b81;
+        margin: 0;
+    }
+
+    #product p {
+        margin: 5px 0 15px;
+        color: #988b81;
+        font-size: 12px;
+    }
+
+#advantage {
+    width: 317px;
+}
+
+    #advantage > h3 {
+        background-image: url('../Home/images/t3.png');
+    }
+
+    #advantage li {
+        height: 72px;
+        margin-bottom: 26px;
+        border-radius: 10px;
+    }
+
+        #advantage li[data-index="deposit"] {
+            background-image: url('../Home/images/l7.gif');
+        }
+
+        #advantage li[data-index="withdrawal"] {
+            background-image: url('../Home/images/l8.gif');
+        }
+
+        #advantage li[data-index="bank"] {
+            background-image: url('../Home/images/l9.png');
+        }

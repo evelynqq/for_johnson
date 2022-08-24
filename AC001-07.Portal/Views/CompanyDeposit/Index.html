@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<html @*
+      xmlns:ng="http://angularjs.org"
+      *@
+      id="ng-app"
+      ng-app="portalApp"
+      meidon-time="@ViewBag.MeiDonNow"
+      @*
+      主機的美東時間
+      *@
+      moment-lang="@ViewBag.Language"
+      @*
+      瀏覽器語系
+      *@
+      ng-init="'@Resources.Shared.Head_Title'">
+
+<head>
+    <title>線上支付</title>
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type"
+          content="text/html; charset=utf-8">
+    <link rel="shortcut icon"
+          href="../../../_Common/Content/Views/Shared/images/favicon.ico" />
+    <link href="http://cdn1.gjsoft.cc/Web.Portal/_Common/Content/bootstrap.custom.min.css"
+          rel="stylesheet">
+    <link href="../../../_Common/Content/Views/CompanyDeposit/Index.css"
+          rel="stylesheet" />
+    <script src="../../../_Common/Scripts/jquery/v1.12.4/jquery.min.js"></script>
+    <script src="../../bundles/include-html.js"></script>
+    <style>
+        .cloak {
+            display: none;
+        }
+    </style>
+    <script>
+        function chengTab(tab, menu) {
+            $('#steps').removeAttr('class');
+            $('#steps').addClass(menu + ' nav nav-tabs');
+
+            $('.tab-content').children('div').addClass('cloak');
+            $('#' + tab).removeClass('cloak');
+
+            if (tab == 'bank') {
+                $('#bank-info').removeClass('cloak');
+            } else {
+                $('#bank-info').addClass('cloak');
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container"
+         ng-controller="CompanyDepositCtrl">
+        <ul id="steps"
+            class="nav nav-tabs p1">
+            <li>
+                <a id="step1"></a>
+            </li>
+            <li>
+                <a id="step2"></a>
+            </li>
+            <li>
+                <a id="step3"></a>
+            </li>
+            <li>
+                <a id="step4"></a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-content-cave"
+                 id="bank">
+                <div class="row row-bank">
+                    <div class="col-xs-3">
+                        <label>
+                            <input ng-change="selectBank('中国农业银行', 'General')"
+                                   ng-model="params.bankId"
+                                   type="radio"
+                                   value="1">
+                            中国农业银行
+                            <a href="http://www.abchina.com/"
+                               title="前往中国农业银行"
+                               target="_blank">
+                                <i class="fa fa-sign-in"></i>
+                            </a>
+                        </label>
+                    </div>
+                    <div class="col-xs-3">
+                        <label>
+                            <input ng-change="selectBank('北京银行', 'General')"
+                                   ng-model="params.bankId"
+                                   type="radio"
+                                   value="2">
+                            北京银行
+                            <a href="http://www.bankofbeijing.com.cn/"
+                               title="前往北京银行"
+                               target="_blank">
+                                <i class="fa fa-sign-in"></i>
+                            </a>
+                        </label>
+                    </div>
+                    <div class="col-xs-3">
+                        <label>
+                            <input ng-change="selectBank('交通银行', 'General')"
+                                   ng-model="params.bankId"
+                                   type="radio"
+                                   value="3">
+                            交通银行
+                            <a href="http://www.bankcomm.com/"
+                               title="前往交通银行"
+                               target="_blank">
+                                <i class="fa fa-sign-in"></i>
+                            </a>
+                        </label>
+                    </div>
+                    <div class="col-xs-3">
+                        <label>
+                            <input ng-change="selectBank('上海银行', 'General')"
+                                   ng-model="params.bankId"
+                                   type="radio"
+                                   value="4">
+                            上海银行
+                            <a href="http://www.bankofshanghai.com/"
+                               title="前往上海银行"
+                               target="_blank">
+                                <i class="fa fa-sign-in"></i>
+                            </a>
+                        </label>
+                    </div>
+                    <div class="col-xs-3">
+                        <label>
+                            <input ng-change="selectBank('中国银行', 'General')"
+                                   ng-model="params.bankId"
+                                   type="radio"
+                                   value="5">
+                            中国银行
+                            <a href="http://www.boc.cn/"
+                               title="前往中国银行"
+                               target="_blank">
+                                <i class="fa fa-sign-in"></i>
+                            </a>
+                        </label>
+                    </div>
+                    <div class="col-xs-3">
+                        <label>
+                            <input ng-change="selectBank('中国建设银行', 'General')"
+                                   ng-model="params.bankId"
+                                   type="radio"
+                                   value="6">
+                            中国建设银行
+                            <a href="http://www.ccb.com/"
+                               title="前往中国建设银行"
+                               target="_blank">
+                                <i class="fa fa-sign-in"></i>
+                            </a>
+                        </label>
+                    </div>
+                    <div class="col-xs-3">
+                        <label>
+                            <input ng-change="selectBank('中国光大银行', 'General')"
+                                   ng-model="params.bankId"
+                                   type="radio"
+                                   value="7">
+                            中国光大银行
+                            <a href="http://www.cebbank.com/"
+                               title="前往中国光大银行"
+                               target="_blank">
+                                <i class="fa fa-sign-in"></i>
+                            </a>
+                        </label>
+                    </div>
+                    <div class="col-xs-3">
+                        <label>
+                            <input ng-change="selectBank('兴业银行', 'General')"
+                                   ng-model="params.bankId"
+                                   type="radio"
+                                   value="8">
+                            兴业银行
+                            <a href="http://www.cib.com.cn/"
+                               title="前往兴业银行"
+                               target="_blank">
+                                <i class="fa fa-sign-in"></i>
+                            </a>
+                        </label>
+                    </div>
+                    <div class="col-xs-3">
+                        <label>
+                            <input ng-change="selectBank('中国民生银行', 'General')"
+                                   ng-model="params.bankId"
+                                   type="radio"
+                                   value="9">
+                            中国民生银行
+                            <a href="http://www.cmbc.com.cn/"
+                               title="前往中国民生银行"
+                               target="_blank">
+                                <i class="fa fa-sign-in"></i>
+                            </a>
+                        </label>
+                    </div>
+                    <div class="col-xs-3">
+                        <label>
+                            <input ng-change="selectBank('招商银行', 'General')"
+                                   ng-model="params.bankId"
+                                   type="radio"
+                                   value="10">
+                            招商银行
+                            <a href="http://www.cmbchina.com/"
+                               title="前往招商银行"
+                               target="_blank">
+                                <i class="fa fa-sign-in"></i>
+                            </a>
+                        </label>
+                    </div>
+                    <div class="col-xs-3">
+                        <label>
+                            <input ng-change="selectBank('中信银行', 'General')"
+                                   ng-model="params.bankId"
+                                   type="radio"
+                                   value="11">
+                            中信银行
+                            <a href="http://bank.ecitic.com/"
+                               title="前往中信银行"
+                               target="_blank">
+                                <i class="fa fa-sign-in"></i>
+                            </a>
+                        </label>
+                    </div>
+                    <div class="col-xs-3">
+                        <label>
+                            <input ng-change="selectBank('广发银行', 'General')"
+                                   ng-model="params.bankId"
+                                   type="radio"
+                                   value="12">
+                            广发银行
+                            <a href="http://www.cgbchina.com.cn/"
+                               title="前往广发银行"
+                               target="_blank">
+                                <i class="fa fa-sign-in"></i>
+                            </a>
+                        </label>
+                    </div>
+                    <div class="col-xs-3">
+                        <label>
+                            <input ng-change="selectBank('华夏银行', 'General')"
+                                   ng-model="params.bankId"
+                                   type="radio"
+                                   value="13">
+                            华夏银行
+                            <a href="http://www.hxb.com.cn/"
+                               title="前往华夏银行"
+                               target="_blank">
+                                <i class="fa fa-sign-in"></i>
+                            </a>
+                        </label>
+                    </div>
+                    <div class="col-xs-3">
+                        <label>
+                            <input ng-change="selectBank('中国工商银行', 'General')"
+                                   ng-model="params.bankId"
+                                   type="radio"
+                                   value="14">
+                            中国工商银行
+                            <a href="http://www.icbc.com.cn/"
+                               title="前往中国工商银行"
+                               target="_blank">
+                                <i class="fa fa-sign-in"></i>
+                            </a>
+                        </label>
+                    </div>
+                    <div class="col-xs-3">
+                        <label>
+                            <input ng-change="selectBank('中国邮政', 'General')"
+                                   ng-model="params.bankId"
+                                   type="radio"
+                                   value="15">
+                            中国邮政
+                            <a href="http://www.psbc.com/"
+                               title="前往中国邮政"
+                               target="_blank">
+                                <i class="fa fa-sign-in"></i>
+                            </a>
+                        </label>
+                    </div>
+                    <div class="col-xs-3">
+                        <label>
+                            <input ng-change="selectBank('深圳发展银行', 'General')"
+                                   ng-model="params.bankId"
+                                   type="radio"
+                                   value="16">
+                            深圳发展银行
+                            <a href="http://bank.pingan.com/"
+                               title="前往深圳发展银行"
+                               target="_blank">
+                                <i class="fa fa-sign-in"></i>
+                            </a>
+                        </label>
+                    </div>
+                    <div class="col-xs-3">
+                        <label>
+                            <input ng-change="selectBank('浦发银行', 'General')"
+                                   ng-model="params.bankId"
+                                   type="radio"
+                                   value="17">
+                            浦发银行
+                            <a href="http://www.spdb.com.cn/"
+                               title="前往浦发银行"
+                               target="_blank">
+                                <i class="fa fa-sign-in"></i>
+                            </a>
+                        </label>
+                    </div>
+                    <div class="col-xs-3">
+                        <label>
+                            <input ng-change="selectBank('平安银行', 'General')"
+                                   ng-model="params.bankId"
+                                   type="radio"
+                                   value="18">
+                            平安银行
+                            <a href="http://bank.pingan.com/"
+                               title="前往平安银行"
+                               target="_blank">
+                                <i class="fa fa-sign-in"></i>
+                            </a>
+                        </label>
+                    </div>
+                    <div class="col-xs-3">
+                        <label>
+                            <input ng-change="selectBank('渤海银行', 'General')"
+                                   ng-model="params.bankId"
+                                   type="radio"
+                                   value="19">
+                            渤海银行
+                            <a href="http://www.cbhb.com.cn/"
+                               title="前往渤海银行"
+                               target="_blank">
+                                <i class="fa fa-sign-in"></i>
+                            </a>
+                        </label>
+                    </div>
+                    <div class="col-xs-3">
+                        <label>
+                            <input ng-change="selectBank('东莞银行', 'General')"
+                                   ng-model="params.bankId"
+                                   type="radio"
+                                   value="20">
+                            东莞银行
+                            <a href="http://www.dongguanbank.cn/"
+                               title="前往东莞银行"
+                               target="_blank">
+                                <i class="fa fa-sign-in"></i>
+                            </a>
+                        </label>
+                    </div>
+                    <div class="col-xs-3">
+                        <label>
+                            <input ng-change="selectBank('广州银行', 'General')"
+                                   ng-model="params.bankId"
+                                   type="radio"
+                                   value="21">
+                            广州银行
+                            <a href="http://www.gzcb.com.cn/"
+                               title="前往广州银行"
+                               target="_blank">
+                                <i class="fa fa-sign-in"></i>
+                            </a>
+                        </label>
+                    </div>
+                    <div class="col-xs-3">
+                        <label>
+                            <input ng-change="selectBank('杭州银行', 'General')"
+                                   ng-model="params.bankId"
+                                   type="radio"
+                                   value="22">
+                            杭州银行
+                            <a href="http://www.hccb.com.cn/"
+                               title="前往杭州银行"
+                               target="_blank">
+                                <i class="fa fa-sign-in"></i>
+                            </a>
+                        </label>
+                    </div>
+                    <div class="col-xs-3">
+                        <label>
+                            <input ng-change="selectBank('浙商银行', 'General')"
+                                   ng-model="params.bankId"
+                                   type="radio"
+                                   value="23">
+                            浙商银行
+                            <a href="https://e.czbank.com/APPINSPECT/index.jsp"
+                               title="前往浙商银行"
+                               target="_blank">
+                                <i class="fa fa-sign-in"></i>
+                            </a>
+                        </label>
+                    </div>
+                    <div class="col-xs-3">
+                        <label>
+                            <input ng-change="selectBank('宁波银行', 'General')"
+                                   ng-model="params.bankId"
+                                   type="radio"
+                                   value="24">
+                            宁波银行
+                            <a href="http://www.nbcb.com.cn/"
+                               title="前往宁波银行"
+                               target="_blank">
+                                <i class="fa fa-sign-in"></i>
+                            </a>
+                        </label>
+                    </div>
+                    <div class="col-xs-3">
+                        <label>
+                            <input ng-change="selectBank('BEA东亚银行', 'General')"
+                                   ng-model="params.bankId"
+                                   type="radio"
+                                   value="25">
+                            BEA东亚银行
+                            <a href="http://www.hkbea.com/"
+                               title="前往BEA东亚银行"
+                               target="_blank">
+                                <i class="fa fa-sign-in"></i>
+                            </a>
+                        </label>
+                    </div>
+                    <div class="col-xs-3">
+                        <label>
+                            <input ng-change="selectBank('温州银行', 'General')"
+                                   ng-model="params.bankId"
+                                   type="radio"
+                                   value="26">
+                            温州银行
+                            <a href="http://www.wzcb.com.cn/"
+                               title="前往温州银行"
+                               target="_blank">
+                                <i class="fa fa-sign-in"></i>
+                            </a>
+                        </label>
+                    </div>
+                    <div class="col-xs-3">
+                        <label>
+                            <input ng-change="selectBank('晋商银行', 'General')"
+                                   ng-model="params.bankId"
+                                   type="radio"
+                                   value="27">
+                            晋商银行
+                            <a href="http://www.jshbank.com/"
+                               title="前往晋商银行"
+                               target="_blank">
+                                <i class="fa fa-sign-in"></i>
+                            </a>
+                        </label>
+                    </div>
+                    <div class="col-xs-3">
+                        <label>
+                            <input ng-change="selectBank('南京银行', 'General')"
+                                   ng-model="params.bankId"
+                                   type="radio"
+                                   value="28">
+                            南京银行
+                            <a href="http://www.njcb.com.cn/"
+                               title="前往南京银行"
+                               target="_blank">
+                                <i class="fa fa-sign-in"></i>
+                            </a>
+                        </label>
+                    </div>
+                    <div class="col-xs-3">
+                        <label>
+                            <input ng-change="selectBank('广州农商银行', 'General')"
+                                   ng-model="params.bankId"
+                                   type="radio"
+                                   value="29">
+                            广州农商银行
+                            <a href="http://www.grcbank.com/"
+                               title="前往广州农商银行"
+                               target="_blank">
+                                <i class="fa fa-sign-in"></i>
+                            </a>
+                        </label>
+                    </div>
+                    <div class="col-xs-3">
+                        <label>
+                            <input ng-change="selectBank('上海农商银行', 'General')"
+                                   ng-model="params.bankId"
+                                   type="radio"
+                                   value="30">
+                            上海农商银行
+                            <a href="http://www.srcb.com/"
+                               title="前往上海农商银行"
+                               target="_blank">
+                                <i class="fa fa-sign-in"></i>
+                            </a>
+                        </label>
+                    </div>
+                    <div class="col-xs-3">
+                        <label>
+                            <input ng-change="selectBank('汉口银行', 'General')"
+                                   ng-model="params.bankId"
+                                   type="radio"
+                                   value="31">
+                            汉口银行
+                            <a href="http://www.hkbchina.com/"
+                               title="前往汉口银行"
+                               target="_blank">
+                                <i class="fa fa-sign-in"></i>
+                            </a>
+                        </label>
+                    </div>
+                    <div class="col-xs-3">
+                        <label>
+                            <input ng-change="selectBank('珠海市农村信用合作联社', 'General')"
+                                   ng-model="params.bankId"
+                                   type="radio"
+                                   value="32">
+                            珠海市农村信用合作联社
+                            <a href="http://17968841.1024sj.com/"
+                               title="前往珠海市农村信用合作联社"
+                               target="_blank">
+                                <i class="fa fa-sign-in"></i>
+                            </a>
+                        </label>
+                    </div>
+                    <div class="col-xs-3">
+                        <label>
+                            <input ng-change="selectBank('顺德农商银行', 'General')"
+                                   ng-model="params.bankId"
+                                   type="radio"
+                                   value="33">
+                            顺德农商银行
+                            <a href="http://www.sdebank.com/"
+                               title="前往顺德农商银行"
+                               target="_blank">
+                                <i class="fa fa-sign-in"></i>
+                            </a>
+                        </label>
+                    </div>
+                    <div class="col-xs-3">
+                        <label>
+                            <input ng-change="selectBank('浙江稠州商业银行', 'General')"
+                                   ng-model="params.bankId"
+                                   type="radio"
+                                   value="34">
+                            浙江稠州商业银行
+                            <a href="http://www.czcb.com.cn/"
+                               title="前往浙江稠州商业银行"
+                               target="_blank">
+                                <i class="fa fa-sign-in"></i>
+                            </a>
+                        </label>
+                    </div>
+                    <div class="col-xs-3">
+                        <label>
+                            <input ng-change="selectBank('北京农商银行', 'General')"
+                                   ng-model="params.bankId"
+                                   type="radio"
+                                   value="35">
+                            北京农商银行
+                            <a href="http://www.bjrcb.com/"
+                               title="前往北京农商银行"
+                               target="_blank">
+                                <i class="fa fa-sign-in"></i>
+                            </a>
+                        </label>
+                    </div>
+                    <div class="col-xs-3">
+                        <label>
+                            <input ng-change="selectBank('东莞农村商业银行', 'General')"
+                                   ng-model="params.bankId"
+                                   type="radio"
+                                   value="36">
+                            东莞农村商业银行
+                            <a href="http://www.drcbank.com/"
+                               title="前往东莞农村商业银行"
+                               target="_blank">
+                                <i class="fa fa-sign-in"></i>
+                            </a>
+                        </label>
+                    </div>
+                    <div class="col-xs-3">
+                        <label>
+                            <input ng-change="selectBank('其他', 'General')"
+                                   ng-model="params.bankId"
+                                   type="radio"
+                                   value="37">
+                            其他
+                        </label>
+                    </div>
+                    <div class="col-xs-3">
+                        <label>
+                            <input ng-change="selectBank('', 'QQWallet')"
+                                   ng-model="params.bankId"
+                                   type="radio"
+                                   value="QQWallet">
+                            QQ扫码
+                            <a href="https://im.qq.com/"
+                               title="前往QQ官方网站"
+                               target="_blank">
+                                <img href="http://cdn1.gjsoft.cc/Web.Portal/_Common/Content/Views/CompanyDeposit/images/qqwallet.png"
+                                     alt="QQ扫码" />
+                            </a>
+                        </label>
+                    </div>
+                    <div class="col-xs-3">
+                        <label>
+                            <input ng-change="selectBank('', 'JD')"
+                                   ng-model="params.bankId"
+                                   type="radio"
+                                   value="JD">
+                            京东
+                            <a href="https://www.jdpay.com/home/page/"
+                               title="前往京东官方网站"
+                               target="_blank">
+                                <img href="http://cdn1.gjsoft.cc/Web.Portal/_Common/Content/Views/CompanyDeposit/images/jd.jpg"
+                                     alt="京东" />
+                            </a>
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="actionbar bank-actionbar center-block">
+                        <button onclick="chengTab('account','p2')"
+                                class="btn btn-default btn-submit">
+                            下一步
+                            <i class="btn-r"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="content-shadow"></div>
+            </div>
+            <div class="cloak tab-content-cave"
+                 id="account">
+                <!-- <div class="alert alert-info" ng-if="loadingAccounts">
+                    <i class="fa fa-spinner fa-spin"></i>
+                    载入中...
+                </div>
+                <div class="alert alert-warning" ng-if="!loadingAccounts && !accounts.length">
+                    无可供使用的银行帐号, 请洽客服人员
+                </div> -->
+                <div id="account-info"
+                     class="row"
+                     ng-if="accounts.length">
+                    <div ng-if="params.groupAccountType=='General'">优先推荐!※提醒您：同银行转帐才能立即到帐喔！</div>
+                    <p>
+                        公司银行帐号随时更换！每次存款都要到公司入款画面确定。<br />
+                        如汇款到已过期帐号，公司无法查收恕不负责！
+                    </p>
+                </div>
+                <div class="row ng-scope"
+                     ng-if="accounts.length">
+                    <div class="col-xs-6 account ng-scope">
+                        <div class="row">
+                            <div class="account-checkbox">
+                                <input class="account-checkbox ng-pristine ng-valid"
+                                       id="116"
+                                       ng-model="params.accountId"
+                                       type="radio"
+                                       value="116"
+                                       name="029">
+                            </div>
+                            <div class="account-info"
+                                 ng-switch=""
+                                 on="params.groupAccountType">
+                                <div ng-switch-default=""
+                                     class="ng-scope">
+                                    <div class="ng-binding">
+                                        银行 : 中國銀行
+                                    </div>
+                                    <div class="ng-binding">
+                                        收款人 : 王曉明
+                                    </div>
+                                    <div class="ng-binding">
+                                        开户行网点 : 吉林省
+                                    </div>
+                                    <div class="ng-binding">
+                                        帐户 : 11111111
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 account ng-scope">
+                        <div class="row">
+                            <div class="account-checkbox">
+                                <input class="account-checkbox ng-pristine ng-valid"
+                                       id="2"
+                                       ng-model="params.accountId"
+                                       type="radio"
+                                       value="2"
+                                       name="02B">
+                            </div>
+                            <div class="account-info"
+                                 ng-switch=""
+                                 on="params.groupAccountType">
+                                <div ng-switch-default=""
+                                     class="ng-scope">
+                                    <div class="ng-binding">
+                                        银行 : 建設銀行
+                                    </div>
+                                    <div class="ng-binding">
+                                        收款人 : 王聰明
+                                    </div>
+                                    <div class="ng-binding">
+                                        开户行网点 : 吉林省松原
+                                    </div>
+                                    <div class="ng-binding">
+                                        帐户 : 1234567890
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 account ng-scope">
+                        <div class="row">
+                            <div class="account-checkbox">
+                                <input class="account-checkbox ng-pristine ng-valid"
+                                       id="109"
+                                       ng-model="params.accountId"
+                                       type="radio"
+                                       value="109"
+                                       name="02D">
+                            </div>
+                            <div class="account-info"
+                                 ng-switch=""
+                                 on="params.groupAccountType">
+                                <div ng-switch-default=""
+                                     class="ng-scope">
+                                    <div class="ng-binding">
+                                        银行 : 呵呵銀行
+                                    </div>
+                                    <div class="ng-binding">
+                                        收款人 : 呵呵呵
+                                    </div>
+                                    <div class="ng-binding">
+                                        开户行网点 : 台清
+                                    </div>
+                                    <div class="ng-binding">
+                                        帐户 : 9876543210
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 account ng-scope">
+                        <div class="row">
+                            <div class="account-checkbox">
+                                <input class="account-checkbox ng-pristine ng-valid"
+                                       id="114"
+                                       ng-model="params.accountId"
+                                       type="radio"
+                                       value="114"
+                                       name="02F">
+                            </div>
+                            <div class="account-info"
+                                 ng-switch=""
+                                 on="params.groupAccountType">
+                                <div ng-switch-default=""
+                                     class="ng-scope">
+                                    <div class="ng-binding">
+                                        银行 : 中國建設銀行
+                                    </div>
+                                    <div class="ng-binding">
+                                        收款人 : 拉拉拉
+                                    </div>
+                                    <div class="ng-binding">
+                                        开户行网点 : 地球
+                                    </div>
+                                    <div class="ng-binding">
+                                        帐户 : 987564231
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row"
+                     ng-if="accounts.length">
+                    <div class="actionbar account-actionbar center-block">
+                        <button onclick="chengTab('bank','p1')"
+                                class="btn btn-default btn-submit">
+                            上一步
+                            <i class="btn-r"></i>
+                        </button>
+                        <button onclick="chengTab('edit','p3')"
+                                class="btn btn-default btn-submit">
+                            下一步
+                            <i class="btn-r"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="content-shadow"></div>
+            </div>
+            <div class="cloak tab-content-cave"
+                 id="edit">
+                <div ng-switch
+                     on="params.groupAccountType">
+                    <div class="row"
+                         ng-switch-default>
+                        <div class="col-xs-5">
+                            <div id="panel-deposit-account"
+                                 class="panel panel-default">
+                                <div class="panel-heading">入款银行帐号</div>
+                                <div class="panel-body"
+                                     id="zClip">
+                                    <div class="row">
+                                        银行：
+                                        <span class="ng-binding">中國建設銀行</span>
+                                        <i class="fa fa-clipboard"></i>
+                                        <span class="copy">已复制</span>
+                                        <div class="zclip"
+                                             id="zclip-ZeroClipboardMovie_1"
+                                             style="position: absolute; left: 181px; top: 61px; width: 75px; height: 15px; z-index: 99;">
+                                            <embed id="ZeroClipboardMovie_1"
+                                                   src="/Scripts/ZeroClipboard.swf"
+                                                   loop="false"
+                                                   menu="false"
+                                                   quality="best"
+                                                   bgcolor="#ffffff"
+                                                   width="75"
+                                                   height="15"
+                                                   name="ZeroClipboardMovie_1"
+                                                   align="middle"
+                                                   allowscriptaccess="always"
+                                                   allowfullscreen="false"
+                                                   type="application/x-shockwave-flash"
+                                                   pluginspage="http://www.macromedia.com/go/getflashplayer"
+                                                   flashvars="id=1&amp;width=75&amp;height=15"
+                                                   wmode="transparent"></div>
+                                    </div>
+                                    <div class="row">
+                                        收款人：
+                                        <span class="ng-binding">拉拉拉</span>
+                                        <i class="fa fa-clipboard"></i>
+                                        <span class="copy">已复制</span>
+                                        <div class="zclip"
+                                             id="zclip-ZeroClipboardMovie_2"
+                                             style="position: absolute; left: 151px; top: 82px; width: 75px; height: 15px; z-index: 99;">
+                                            <embed id="ZeroClipboardMovie_2"
+                                                   src="/Scripts/ZeroClipboard.swf"
+                                                   loop="false"
+                                                   menu="false"
+                                                   quality="best"
+                                                   bgcolor="#ffffff"
+                                                   width="75"
+                                                   height="15"
+                                                   name="ZeroClipboardMovie_2"
+                                                   align="middle"
+                                                   allowscriptaccess="always"
+                                                   allowfullscreen="false"
+                                                   type="application/x-shockwave-flash"
+                                                   pluginspage="http://www.macromedia.com/go/getflashplayer"
+                                                   flashvars="id=2&amp;width=75&amp;height=15"
+                                                   wmode="transparent"></div>
+                                    </div>
+                                    <div class="row">
+                                        开户行网点：
+                                        <span class="ng-binding">地球</span>
+                                        <i class="fa fa-clipboard"></i>
+                                        <span class="copy">已复制</span>
+                                        <div class="zclip"
+                                             id="zclip-ZeroClipboardMovie_3"
+                                             style="position: absolute; left: 166px; top: 103px; width: 75px; height: 15px; z-index: 99;">
+                                            <embed id="ZeroClipboardMovie_3"
+                                                   src="/Scripts/ZeroClipboard.swf"
+                                                   loop="false"
+                                                   menu="false"
+                                                   quality="best"
+                                                   bgcolor="#ffffff"
+                                                   width="75"
+                                                   height="15"
+                                                   name="ZeroClipboardMovie_3"
+                                                   align="middle"
+                                                   allowscriptaccess="always"
+                                                   allowfullscreen="false"
+                                                   type="application/x-shockwave-flash"
+                                                   pluginspage="http://www.macromedia.com/go/getflashplayer"
+                                                   flashvars="id=3&amp;width=75&amp;height=15"
+                                                   wmode="transparent"></div>
+                                    </div>
+                                    <div class="row">
+                                        帐号：
+                                        <span class="ng-binding">987564231</span>
+                                        <i class="fa fa-clipboard"></i>
+                                        <span class="copy">已复制</span>
+                                        <div class="zclip"
+                                             id="zclip-ZeroClipboardMovie_4"
+                                             style="position: absolute; left: 168px; top: 124px; width: 75px; height: 15px; z-index: 99;">
+                                            <embed id="ZeroClipboardMovie_4"
+                                                   src="/Scripts/ZeroClipboard.swf"
+                                                   loop="false"
+                                                   menu="false"
+                                                   quality="best"
+                                                   bgcolor="#ffffff"
+                                                   width="75"
+                                                   height="15"
+                                                   name="ZeroClipboardMovie_4"
+                                                   align="middle"
+                                                   allowscriptaccess="always"
+                                                   allowfullscreen="false"
+                                                   type="application/x-shockwave-flash"
+                                                   pluginspage="http://www.macromedia.com/go/getflashplayer"
+                                                   flashvars="id=4&amp;width=75&amp;height=15"
+                                                   wmode="transparent"></div>
+                                    </div>
+                                    <!-- ngIf: applyInfo.account.Memo -->
+                                    <div>
+                                        &nbsp;
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-7">
+                            <div id="panel-trans-steps"
+                                 class="panel panel-default">
+                                <div class="panel-heading">接下来您可以通过以下方式完成转帐</div>
+                                <div class="panel-body">
+                                    <ul class="ul-padding-vertical-05">
+                                        <li>
+                                            1、ATM转帐：到您最近的ATM将款项转到上述银行账号。
+                                        </li>
+                                        <li>
+                                            2、ATM现存：到上述银行ATM以现金存入银行账号。
+                                        </li>
+                                        <li>
+                                            3、支付宝(如有设置昵称，存款人请提交昵称）。
+                                        </li>
+                                        <li>
+                                            4、银行柜台：到您最近的银行将款项转到上述银行账号。
+                                        </li>
+                                        <li>
+                                            5、手机转帐：通过您的手机验证将款项转到上述的银行帐号。
+                                        </li>
+                                        <li>
+                                            6、网路银行转帐：登入您的网路银行完成转帐。
+                                        </li>
+                                        <li>
+                                            7、其他：非以上入款方式请选择其他。
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="row" ng-switch-when="WeChat">
+                        <div class="col-xs-12">
+                            <div id="panel-deposit-account" class="panel panel-default">
+                                <div class="panel-heading">入款银行帐号</div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        类型：
+                                        <span>{{applyInfo.account.BankName}}</span>
+                                    </div>
+                                    <div class="row">
+                                        昵称：
+                                        <span>{{applyInfo.account.PersonName}}</span>
+                                    </div>
+                                    <div ng-if="applyInfo.account.Memo" class="row">
+                                        备注：
+                                        <div class="account-memo">{{applyInfo.account.Memo}}</div>
+                                    </div>
+                                    <img ng-src="{{applyInfo.account.QRCodeUrl}}" alt="{{applyInfo.account.BankName}} - {{applyInfo.account.PersonName}}" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" ng-switch-when="Alipay">
+                        <div class="col-xs-12">
+                            <div id="panel-deposit-account" class="panel panel-default">
+                                <div class="panel-heading">入款银行帐号</div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        类型：
+                                        <span>{{applyInfo.account.BankName}}</span>
+                                    </div>
+                                    <div class="row">
+                                        存款人姓名：
+                                        <span>{{applyInfo.account.PersonName}}</span>
+                                    </div>
+                                    <div ng-if="applyInfo.account.Memo" class="row">
+                                        备注：
+                                        <div class="account-memo">{{applyInfo.account.Memo}}</div>
+                                    </div>
+                                    <img ng-src="{{applyInfo.account.QRCodeUrl}}" alt="{{applyInfo.account.BankName}} - {{applyInfo.account.PersonName}}" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" ng-switch-when="Tenpay">
+                        <div class="col-xs-12">
+                            <div id="panel-deposit-account" class="panel panel-default">
+                                <div class="panel-heading">入款银行帐号</div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        类型：
+                                        <span>{{applyInfo.account.BankName}}</span>
+                                    </div>
+                                    <div class="row">
+                                        存款人昵称 / QQ账号：
+                                        <span>{{applyInfo.account.PersonName}}</span>
+                                    </div>
+                                    <div ng-if="applyInfo.account.Memo" class="row">
+                                        备注：
+                                        <div class="account-memo">{{applyInfo.account.Memo}}</div>
+                                    </div>
+                                    <img ng-src="{{applyInfo.account.QRCodeUrl}}" alt="{{applyInfo.account.BankName}} - {{applyInfo.account.PersonName}}" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" ng-switch-when="QQWallet">
+                        <div class="col-xs-12">
+                            <div id="panel-deposit-account" class="panel panel-default">
+                                <div class="panel-heading">入款银行帐号</div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        类型：
+                                        <span>{{applyInfo.account.BankName}}</span>
+                                    </div>
+                                    <div class="row">
+                                        存款人姓名 / QQ账号：
+                                        <span>{{applyInfo.account.PersonName}}</span>
+                                    </div>
+                                    <div ng-if="applyInfo.account.Memo" class="row">
+                                        备注：
+                                        <div class="account-memo">{{applyInfo.account.Memo}}</div>
+                                    </div>
+                                    <img ng-src="{{applyInfo.account.QRCodeUrl}}" alt="{{applyInfo.account.BankName}} - {{applyInfo.account.PersonName}}" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" ng-switch-when="JD">
+                        <div class="col-xs-12">
+                            <div id="panel-deposit-account" class="panel panel-default">
+                                <div class="panel-heading">入款银行帐号</div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        类型：
+                                        <span>{{applyInfo.account.BankName}}</span>
+                                    </div>
+                                    <div class="row">
+                                        存款人姓名 ：
+                                        <span>{{applyInfo.account.PersonName}}</span>
+                                    </div>
+                                    <div ng-if="applyInfo.account.Memo" class="row">
+                                        备注：
+                                        <div class="account-memo">{{applyInfo.account.Memo}}</div>
+                                    </div>
+                                    <img ng-src="{{applyInfo.account.QRCodeUrl}}" alt="{{applyInfo.account.BankName}} - {{applyInfo.account.PersonName}}" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" ng-switch-when="UnionPay">
+                        <div class="col-xs-12">
+                            <div id="panel-deposit-account" class="panel panel-default">
+                                <div class="panel-heading">入款银行帐号</div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        类型：
+                                        <span>{{applyInfo.account.BankName}}</span>
+                                    </div>
+                                    <div class="row">
+                                        存款人姓名 ：
+                                        <span>{{applyInfo.account.PersonName}}</span>
+                                    </div>
+                                    <div ng-if="applyInfo.account.Memo" class="row">
+                                        备注：
+                                        <div class="account-memo">{{applyInfo.account.Memo}}</div>
+                                    </div>
+                                    <img ng-src="{{applyInfo.account.QRCodeUrl}}" alt="{{applyInfo.account.BankName}} - {{applyInfo.account.PersonName}}" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" ng-switch-when="BaiduWallet">
+                        <div class="col-xs-12">
+                            <div id="panel-deposit-account" class="panel panel-default">
+                                <div class="panel-heading">入款银行帐号</div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        类型：
+                                        <span>{{applyInfo.account.BankName}}</span>
+                                    </div>
+                                    <div class="row">
+                                        存款人姓名：
+                                        <span>{{applyInfo.account.PersonName}}</span>
+                                    </div>
+                                    <div ng-if="applyInfo.account.Memo" class="row">
+                                        备注：
+                                        <div class="account-memo">{{applyInfo.account.Memo}}</div>
+                                    </div>
+                                    <img ng-src="{{applyInfo.account.QRCodeUrl}}" alt="{{applyInfo.account.BankName}} - {{applyInfo.account.PersonName}}" />
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <form class="form-horizontal col-xs-8"
+                      ng-submit="openConfirmDialog()">
+                    <div id="form-edit-trans-info-title">请填写您的转帐资料:</div>
+                    <div id="form-amount-limit"
+                         class="form-group">
+                        <label class="col-xs-4 control-label">存款限额</label>
+                        <div class="col-xs-8">
+                            <!-- <div ng-if="loading" class="form-control-static">
+                                <i class="fa fa-spinner fa-spin"></i>
+                                载入中...
+                            </div> -->
+                            <p class="form-control-static"
+                               ng-if="!loading"
+                               ng-switch="condition">
+                                <span ng-switch-when="less">$2,000 以下</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div ng-class="{'has-warning': params.amount !== undefinded && !isAvailableAmount(params.amount)}"
+                         class="form-group">
+                        <label class="col-xs-4 control-label">存入金额</label>
+                        <div class="col-xs-8">
+                            <div class="input-block">
+                                <i class="input-block-top"></i>
+                                <input id="amount"
+                                       name="amount"
+                                       ng-model="params.amount"
+                                       type="number"
+                                       class="form-control"
+                                       required
+                                       step="0.01">
+                                <i class="input-block-btm"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-xs-4 control-label">存入时间</label>
+                        <div class="col-xs-8">
+                            <div class="row">
+                                <div class="col-xs-5 date-input">
+                                    <div class="input-group date-input-group">
+                                        <span class="input-group-addon">日期</span>
+                                        <input ng-model="date"
+                                               type="text"
+                                               class="form-control date"
+                                               required>
+                                    </div>
+                                </div>
+                                <div class="col-xs-3 hour-input">
+                                    <div class="input-group hour-input-group">
+                                        <span class="input-group-addon">时</span>
+                                        <select ng-options="h for h in hours"
+                                                ng-model="hour"
+                                                class="form-control"></select>
+                                    </div>
+                                </div>
+                                <div class="col-xs-3 minute-input">
+                                    <div class="input-group min-input-group">
+                                        <span class="input-group-addon">分</span>
+                                        <select ng-options="m for m in minutes"
+                                                ng-model="minute"
+                                                class="form-control"></select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label ng-if="params.groupAccountType=='General' || params.groupAccountType=='Alipay' || params.groupAccountType=='JD' || params.groupAccountType=='UnionPay' || params.groupAccountType=='BaiduWallet'"
+                               class="col-xs-4 control-label">存款人姓名</label>
+                        <label ng-if="params.groupAccountType=='WeChat'"
+                               class="col-xs-4 control-label">存款人昵称</label>
+                        <label ng-if="params.groupAccountType=='Tenpay'"
+                               class="col-xs-4 control-label">存款人昵称 / QQ账号</label>
+                        <label ng-if="params.groupAccountType=='QQWallet'"
+                               class="col-xs-4 control-label">存款人姓名 / QQ账号</label>
+                        <div class="col-xs-8">
+                            <div class="input-block">
+                                <i class="input-block-top"></i>
+                                <input ng-model="params.depositName"
+                                       type="text"
+                                       class="form-control"
+                                       maxlength="50"
+                                       required />
+                                <i class="input-block-btm"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group"
+                         ng-if="params.groupAccountType=='General'">
+                        <label class="col-xs-4 control-label">存款方式</label>
+                        <div class="col-xs-8">
+                            <label ng-repeat="(key, label) in depositTypes"
+                                   class="deposit-types ng-scope ng-binding">
+                                <input ng-model="params.type"
+                                       ng-change="selectDepositType(label)"
+                                       type="radio"
+                                       value="ATM"
+                                       class="ng-pristine ng-valid"
+                                       name="01M">
+                                ATM自动柜员机
+                            </label><label ng-repeat="(key, label) in depositTypes"
+                                   class="deposit-types ng-scope ng-binding">
+                                <input ng-model="params.type"
+                                       ng-change="selectDepositType(label)"
+                                       type="radio"
+                                       value="ATMCash"
+                                       class="ng-pristine ng-valid"
+                                       name="01O">
+                                ATM现金入款
+                            </label><label ng-repeat="(key, label) in depositTypes"
+                                   class="deposit-types ng-scope ng-binding">
+                                <input ng-model="params.type"
+                                       ng-change="selectDepositType(label)"
+                                       type="radio"
+                                       value="Alipay"
+                                       class="ng-pristine ng-valid"
+                                       name="01Q">
+                                支付宝
+                            </label><label ng-repeat="(key, label) in depositTypes"
+                                   class="deposit-types ng-scope ng-binding">
+                                <input ng-model="params.type"
+                                       ng-change="selectDepositType(label)"
+                                       type="radio"
+                                       value="Bank"
+                                       class="ng-pristine ng-valid"
+                                       name="01S">
+                                银行柜台
+                            </label><label ng-repeat="(key, label) in depositTypes"
+                                   class="deposit-types ng-scope ng-binding">
+                                <input ng-model="params.type"
+                                       ng-change="selectDepositType(label)"
+                                       type="radio"
+                                       value="Mobile"
+                                       class="ng-pristine ng-valid"
+                                       name="01U">
+                                手机银行转帐
+                            </label><label ng-repeat="(key, label) in depositTypes"
+                                   class="deposit-types ng-scope ng-binding">
+                                <input ng-model="params.type"
+                                       ng-change="selectDepositType(label)"
+                                       type="radio"
+                                       value="OnlineBank"
+                                       class="ng-pristine ng-valid"
+                                       name="01W">
+                                网银转帐
+                            </label><label ng-repeat="(key, label) in depositTypes"
+                                   class="deposit-types ng-scope ng-binding">
+                                <input ng-model="params.type"
+                                       ng-change="selectDepositType(label)"
+                                       type="radio"
+                                       value="Others"
+                                       class="ng-pristine ng-valid"
+                                       name="01Y">
+                                其他
+                            </label>
+                        </div>
+                    </div>
+                    <!-- <div class="form-group" ng-show="showBranch">
+                        <label class="col-xs-4 control-label">{{branchTitle}}</label>
+                        <div class="col-xs-8">
+                            <div>
+                                <input type="text" ng-model="branchProvince" style="width: 65px" />省
+                                <input type="text" ng-model="branchCity" style="width: 65px" />
+                                <select ng-model="cityType" ng-init="cityType='县'">
+                                    <option>县</option>
+                                    <option>市</option>
+                                </select>
+                                <input type="text" ng-model="branchOther" style="width: 85px" />
+                            </div>
+                            <div>
+                                (例：「广东省 佛山市 豪苑支行」)
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="actionbar edit-actionbar center-block">
+                        <button type="button"
+                                onclick="chengTab('account','p2')"
+                                class="btn btn-default btn-submit">
+                            上一步
+                            <i class="btn-r"></i>
+                        </button>
+                        <button onclick="chengTab('complete','p4')"
+                                class="btn btn-default btn-submit">
+                            提交申请
+                            <i class="btn-r"></i>
+                        </button>
+                    </div>
+                </form>
+                <div class="clearfix"></div>
+                <div class="content-shadow"></div>
+            </div>
+            <div class="cloak tab-content-cave"
+                 id="complete">
+                <div class="row">
+                    <div class="col-xs-8 col-xs-offset-2">
+                        <div id="panel-complete"
+                             class="panel panel-default">
+                            <div class="panel-heading">您的存款申请已成功提交!以下是您的存款资料，请妥善保存。</div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-xs-4 text-right">
+                                        存入银行
+                                    </div>
+                                    <div class="col-xs-8"
+                                         ng-switch=""
+                                         on="params.groupAccountType">
+                                        <div ng-switch-default=""
+                                             class="ng-scope ng-binding">
+                                            中國建設銀行 - 987564231
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-4 text-right">
+                                        存入金额
+                                    </div>
+                                    <div class="col-xs-8 ng-binding">
+                                        2000
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-4 text-right">
+                                        存入时间
+                                    </div>
+                                    <div class="col-xs-8 ng-binding">
+                                        2018/11/29 06:00
+                                    </div>
+                                </div>
+                                <div class="row ng-scope"
+                                     ng-if="params.groupAccountType=='General'">
+                                    <div class="col-xs-4 text-right">
+                                        您使用的银行
+                                    </div>
+                                    <div class="col-xs-8 ng-binding">
+                                        上海农商银行
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-4 text-right"
+                                         ng-switch=""
+                                         on="params.groupAccountType">
+                                        <span ng-switch-default=""
+                                              class="ng-scope">存款人姓名</span>
+                                    </div>
+                                    <div class="col-xs-8 ng-binding">
+                                        2000
+                                    </div>
+                                </div>
+                                <div class="row ng-scope"
+                                     ng-if="params.groupAccountType=='General'">
+                                    <div class="col-xs-4 text-right">
+                                        存款方式
+                                    </div>
+                                    <div class="col-xs-8 ng-binding">
+                                        支付宝
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-4 text-right">
+                                        订单编号
+                                    </div>
+                                    <div class="col-xs-8 ng-binding">
+                                        3096
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="complete-actionbar center-block">
+                            <button type="button"
+                                    class="btn btn-default btn-submit"
+                                    onclick="window.close();">
+                                关闭视窗
+                                <i class="btn-r"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-shadow"></div>
+            </div>
+        </div>
+        <div id="bank-info"
+             class="row">
+            <div class="col-xs-12">
+                银行列表提醒您：同银行转帐才能立即到帐喔！
+            </div>
+        </div>
+    </div>
+
+    <input name="__RequestVerificationToken"
+           type="hidden"
+           value="LQhD2RINn2JPc_auO2SHvkIKcN1CtOPn_6kRdiEa5bBKjJGwV9pPozZq4Rl3NMC5697QwW0lBfYcHc15AHuFwBwruQc1" />
+</body>
+
+</html>

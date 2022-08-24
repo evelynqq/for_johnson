@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html @* xmlns:ng="http://angularjs.org" *@ id="ng-app" ng-app="portalApp" meidon-time="@ViewBag.MeiDonNow" @* 主機的美東時間 *@ moment-lang="@ViewBag.Language" @* 瀏覽器語系 *@ ng-init="'@Resources.Shared.Head_Title'">
+
+<head>
+    <title>welcome</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="shortcut icon" href="../../../_Common/Content/Views/Shared/images/favicon.ico" />
+    <link href="../../bundles/site.css" rel="stylesheet" />
+    <link href="../../Content/Views/NetworkDetect/index.css" rel="stylesheet" />
+    <script src="../../../_Common/Scripts/jquery/v1.12.4/jquery.min.js"></script>
+    <script src="../../bundles/include-html.js"></script>
+    <script>
+        $(window).load(function() {
+            $('.asideNetworkDetect').addClass('active');
+        });
+    </script>
+</head>
+
+<body class="layout" ng-controller="LayoutCtrl">
+    <header id="header"></header>
+    <nav id="nav"></nav>
+    <div id="content">
+        <div class="wrapper">
+            <div id="news"></div>
+            <div id="un-lobby">
+                <aside></aside>
+                <article id="articles">
+                    <h2>线路检测中心</h2>
+                    <div class="slogan">温馨提示：ms数值越小越靠前的网址，打开速度就越快</div>
+                    <script type="text/javascript" language="javascript">
+                    time = 0
+                    setInterval("time++", 100)
+                    b = 0
+                    var autourl = new Array()
+                    autourl[0] = 'http://www.vvvv0020.com';
+                    autourl[1] = 'http://www.vvvv0021.com';
+                    autourl[2] = 'http://www.vvvv0022.com';
+                    autourl[3] = 'http://www.vvvv0023.com';
+                    autourl[4] = 'http://www.vvvv0024.com';
+                    autourl[5] = 'http://www.vvvv0025.com';
+                    autourl[6] = 'http://www.vvvv0026.com';
+                    autourl[7] = 'http://www.vvvv0027.com';
+                    autourl[8] = 'http://www.vvvv0028.com';
+                    autourl[9] = 'http://www.vvvv0029.com';
+
+                    function butt() {
+                        for (var i = 0; i < autourl.length; i++) {
+                            document.write("<div class='form-group'>");
+                            document.write("<input type='text' name='url" + i + "' id='url" + i + "' class='link' value='' /> > <input name='txt" + i + "' id='txt" + i + "' value='测试中……' class='speed'> > ");
+                            document.write("<a class='hyperlink' id='a" + i + "' href=''  target='_blank' title='直接打开'>直接打开</a>");
+                            document.write("</div>");
+                        }
+                    }
+
+                    butt();
+
+                    function auto(url) {
+                        document.getElementById('a' + b).href = url;
+                        document.getElementById('url' + b).value = url;
+                        if (time > 200) {
+
+                            document.getElementById('txt' + b).value = '链接超时';
+
+                        } else {
+
+                            document.getElementById('txt' + b).value = "时间：" + time * 10 + "ms";
+                        }
+                        b++;
+                    }
+
+                    function run() {
+
+                        for (var i = 0; i < autourl.length; i++) {
+                            document.write("<img src='" + autourl[i] + "/?t=" + Math.random() + "' width='1' height='1' onerror=auto('" + autourl[i] + "') style='display:none'>")
+                        }
+                    }
+                    run();
+                    </script>
+                    <button class="reload" onclick='location.reload();'>点击这里重新检测刷新访问速度</button>
+                </article>
+            </div>
+        </div>
+    </div>
+    <footer id="footer"></footer>
+</body>
+
+</html>

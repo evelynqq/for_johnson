@@ -1,0 +1,807 @@
+﻿@import "_nav";
+
+/* #region base */
+body {
+    font-family: 'SimSun', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.428571429;
+    padding: 0px;
+    margin: 0px;
+}
+
+body.layout {
+    min-width: 1100px;
+}
+
+header > h1,
+nav > h1,
+section > h1,
+footer > h1,
+aside > h1 {
+    display: none;
+}
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+iframe {
+    border: none;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+[ng-click] {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    position: relative;
+    width: 1100px;
+    margin: 0 auto;
+}
+
+/*#endregion */
+
+/*#region header */
+#header {
+    position: relative;
+    height: 126px;
+    background: #fff;
+}
+
+#header:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: url('../Shared/images/top_bg.jpg') repeat-x;
+}
+/*#endregion header */
+
+/*#region logo */
+#logo-bg {
+    position: relative;
+    display: inline-block;
+    width: 264px;
+    height: 80px;
+    margin: 10px 0;
+    background: url('../Shared/images/logo.png') left center no-repeat;
+    background-size: auto 100%;
+}
+
+#logo-bg > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+/*#endregion logo */
+/*#region navtop */
+ul.topnav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-block;
+}
+
+ul.topnav > li {
+    float: left;
+    margin: 7px;
+    color: #272727;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+ul.topnav > li:first-child {
+    padding-right: 7px;
+}
+
+ul.topnav > li > a {
+    color: #272727;
+    text-transform: uppercase;
+}
+
+ul.topnav > li > a.error {
+    font-weight: bolder;
+}
+
+ul.topnav > li.warn {
+    position: relative;
+    padding-left: 12px;
+}
+
+ul.topnav > li.warn:before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -16px;
+    width: 18px;
+    height: 17px;
+    padding-left: 13px;
+    background: url('../Shared/images/warn.png') center top no-repeat;
+}
+
+ul.topnav > li.warn:hover:before {
+    background-position: center bottom;
+}
+
+ul.topnav > li.hot a {
+    position: relative;
+}
+
+ul.topnav > li.hot a:after {
+    content: '';
+    position: absolute;
+    top: -9px;
+    right: -17px;
+    display: inline-block;
+    width: 21px;
+    height: 12px;
+    background: url('../Shared/images/hot_n.gif') no-repeat center center;
+}
+/*#region language 選擇語系 */
+ul.topnav li.lan {
+    margin: 2px 0;
+    position: relative;
+}
+ul.topnav li.lan:after {
+    content: '';
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    width: 0;
+    height: 0;
+    margin-top: -4px;
+    border-style: solid;
+    border-width: 8px 5px 0 5px;
+    border-color: #363533 transparent transparent transparent;
+}
+
+ul.topnav li select {
+    margin: 0;
+    height: 26px;
+    -webkit-appearance: none; /* Safari and Chrome */
+    -moz-appearance: none; /* Firefox */
+    appearance: none; /* CSS3 */
+    outline: none;
+    color: #363533;
+    border-radius: 0;
+    padding: 0 20px 0 10px;
+}
+
+ul.topnav li select::-ms-expand {
+    display: none;
+    /* IE 8 */
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+    /* IE 5-7 */
+    filter: alpha(opacity=0);
+    /* Good browsers :) */
+    opacity: 0;
+}
+
+ul.topnav li select option {
+    background: #fff534;
+}
+
+#language {
+    position: absolute;
+    right: 25px;
+    top: 5px;
+}
+
+#language header {
+    display: inline-block;
+    color: #fff;
+    font-size: 13px;
+    line-height: 19px;
+}
+
+#language h2 {
+    display: inline-block;
+    margin: 0;
+    color: #ff5e5e;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+select#select-language {
+    font-size: 13px;
+}
+/*#endregion language 選擇語系*/
+/*#endregion */
+
+/*#region loginbar 顯示「登入帳號」區塊*/
+#account-box {
+    position: absolute;
+    top: 45px;
+    right: 0;
+}
+
+#account-box > form {
+    position: relative;
+    display: inline-block;
+    margin: 18px 0;
+}
+
+#account-box > form input {
+    width: 115px;
+    padding: 3px 3px;
+    color: #787878;
+    font-size: 12px;
+    font-family: SimSun;
+    background-color: #fff;
+    border: 1px #ddd solid;
+}
+
+#account-box > form input.plachoder {
+    color: #a6a6a6;
+}
+
+#account-box > form input::-webkit-input-placeholder {
+    color: #a6a6a6;
+}
+
+#account-box > form input::-moz-placeholder {
+    color: #a6a6a6;
+}
+
+#account-box > form button {
+    font-size: 12px;
+    font-family: SimSun;
+    border: none;
+    outline: none;
+}
+
+#account-box > form button.forget-btn {
+    color: #272727;
+    background: none;
+}
+
+#account-box > form button.login-btn {
+    width: 63px;
+    height: 29px;
+    color: #fff;
+    background: #ffc722;
+}
+
+#account-box > form button.reg-btn {
+    width: 83px;
+    height: 29px;
+    color: #fff;
+    background: #272727;
+}
+
+#account-box > form button:hover {
+    background-position: bottom center;
+}
+
+#check-code-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+#captcha {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: auto;
+    height: 19px;
+}
+
+#agree {
+    position: absolute;
+    top: 110%;
+    right: 0;
+    display: inline-block;
+    display: none;
+    padding: 2px 5px;
+    color: #fff;
+    font-size: 13px;
+    background-color: #272727;
+}
+
+#agree a {
+    color: #feab19;
+    font-weight: bold;
+    cursor: pointer;
+}
+/*#endregion loginbar 顯示「登入帳號」區塊*/
+
+/*#region account-info 登入後, 顯示「帳號資訊」區塊*/
+ul#account-info {
+    display: block;
+    padding: 0;
+    list-style: none;
+    text-align: right;
+}
+
+ul#account-info > li {
+    position: relative;
+    display: inline-block;
+    margin: 0 10px;
+    padding-left: 18px;
+    color: #363533;
+}
+
+ul#account-info > li.account-id {
+    background: url('../Shared/images/icon_id.png') left center no-repeat;
+}
+
+ul#account-info > li.account-balance {
+    background: url('../Shared/images/icon_balance.png') left center no-repeat;
+}
+
+ul#account-info > li > span.account {
+    display: inline-block;
+    max-width: 6em;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: top;
+    overflow: hidden;
+}
+
+ul#account-info > li > a {
+    color: #fe0500;
+}
+/*#endregion account-info 登入後, 顯示「帳號資訊」區塊*/
+
+/*#region account_nav 登入後帳號選單 */
+ul#account-nav > li {
+    position: relative;
+    float: left;
+    margin: 0 10px;
+}
+
+ul#account-nav > li:first-child {
+    padding-left: 18px;
+    background: url('../Shared/images/icon_account.png') left center no-repeat;
+}
+
+ul#account-nav > li:not(:first-child):before {
+    position: absolute;
+    top: 6px;
+    left: -10px;
+    z-index: 1;
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    content: '';
+    background-color: #272727;
+    line-height: 20px;
+}
+
+ul#account-nav > li.logout {
+    padding-right: 18px;
+    background: url('../Shared/images/icon_logout.png') right center no-repeat;
+}
+
+ul#account-nav > li > a {
+    color: #363533;
+    font-family: SimSun;
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+ul#account-nav > li > a.logout-btn {
+    color: #272727;
+}
+
+ul#account-nav > li > a:hover {
+    color: #feab19;
+}
+/*#endregion account_nav 登入後帳號選單 */
+
+#banner {
+    position: relative;
+    height: 278px;
+    background-color: #3a0809;
+    background-image: url('../Shared/images/banner.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;
+}
+
+/*#region news 跑馬燈 */
+#news {
+    position: relative;
+    top: 0px;
+    width: 1100px;
+    height: 36px;
+    padding: 0 20px 0 190px;
+    background: url('../Shared/images/news.jpg') center no-repeat;
+}
+
+#hot-news {
+    text-align: justify;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#hot-news li {
+    color: #fff;
+    font-size: 11.5px;
+    text-decoration: none;
+    line-height: 36px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#hot-news li:hover {
+    text-decoration: underline;
+}
+/*#endregion 跑馬燈*/
+
+/*#region content 內頁 */
+#content {
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    background: #fff;
+    padding-bottom: 30px;
+}
+/*#endregion content 內頁 */
+
+/*#region footer */
+#footer {
+    text-align: center;
+    background: #272727;
+    padding: 20px 0;
+}
+
+#footer-nav {
+    display: inline-block;
+    margin: 0 0 10px 0;
+    padding: 0;
+    list-style: none;
+}
+
+#footer-nav li {
+    float: left;
+}
+
+#footer-nav li:first-child {
+    border-left-style: none;
+}
+
+#footer-nav a {
+    display: inline-block;
+    padding: 0 10px;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#footer-nav a:hover {
+    color: #ffc722;
+}
+
+#footer-logo {
+    position: relative;
+    display: inline-block;
+    width: 997px;
+    height: 60px;
+    margin: 10px auto;
+    background: url('../Shared/images/footerlogo.png') no-repeat;
+    border-bottom: 1px solid #666;
+}
+
+#footer-suggest {
+    margin: 0;
+    color: #a6a6a6;
+}
+
+#footer-suggest small {
+    font-size: 13px;
+    line-height: 26px;
+}
+
+/*#endregion footer*/
+
+/*#region service 更多服務 */
+aside.service {
+    position: absolute;
+    top: 210px;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+aside.service li {
+    width: 145px;
+}
+
+aside.service li.closed {
+    height: 25px;
+    cursor: pointer;
+}
+
+aside.service li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+aside.service-left {
+    left: 0;
+    background-image: url('../Shared/images/service/left01.gif');
+}
+
+aside.service-left li.mwfish {
+    height: 75px;
+}
+
+aside.service-left li.mw {
+    height: 80px;
+}
+
+aside.service-left li.mwddz {
+    height: 60px;
+}
+
+aside.service-left li.mobile {
+    height: 88px;
+}
+
+aside.service-left li.deposit {
+    height: 94px;
+}
+
+aside.service-right {
+    right: 0;
+    background-image: url('../Shared/images/service/right.1.gif');
+}
+
+aside.service-right li.chat {
+    height: 112px;
+}
+
+aside.service-right li.qq {
+    height: 84px;
+    padding-top: 38px;
+}
+
+aside.service-right li.qq span {
+    display: block;
+    height: 17px;
+}
+
+aside.service-right li.mail {
+    height: 59px;
+}
+
+aside.service-right li.download {
+    height: 142px;
+}
+
+aside#service-lb {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 248px;
+    height: 135px;
+    background: url('../Shared/images/service/lb_deposit.gif') no-repeat;
+}
+
+aside#service-lb a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+aside#service-lb .closed {
+    position: absolute;
+    top: -25px;
+    right: -30px;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background: url('../Shared/images/service/lb_close.png') no-repeat;
+    cursor: pointer;
+}
+/*#endregion service 更多服務 */
+
+/* #region mailbox 站内信 不同版请由此修改 */
+
+#mailbox {
+    position: relative;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    text-decoration: none;
+    background: url('../../../../_Common/Content/Views/Shared/images/m_icon.png') no-repeat;
+}
+
+#mailbox > span,
+#mailbox > span:hover {
+    position: absolute;
+    left: 80%;
+    bottom: 60%;
+    min-width: 16px;
+    padding: 0 2px;
+    height: 16px;
+    color: #000;
+    font-size: 12px;
+    text-align: center;
+    line-height: 16px;
+    border-radius: 5px;
+    background: #fff47e;
+}
+
+/* #endregion mailbox 站内信 不同版请由此修改 */
+
+/*#region 彈跳視窗跑馬燈資訊內容 */
+#marquee-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    display: none;
+}
+
+#marquee-wrapper.show {
+    display: block;
+    z-index: 1000;
+    background-image: url('../../../../_Common/Content/Views/Shared/images/transparent-black.png');
+}
+
+#marquee {
+    width: 600px;
+    max-height: 500px;
+    margin: 30px auto 0 auto;
+    background-color: #fff;
+    background-image: url('../../../../_Common/Content/Views/Shared/images/table_background.jpg');
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    cursor: default;
+    -moz-transition: margin-top ease-in 300ms;
+    -o-transition: margin-top ease-in 300ms;
+    -webkit-transition: margin-top ease-in 300ms;
+    transition: margin-top ease-in 300ms;
+}
+
+#marquee > header {
+    text-align: center;
+    background-color: #e9e9e9;
+    border-bottom: 1px solid #ccc;
+    -moz-border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+}
+
+#marquee > header > h2 {
+    margin: 0;
+    color: #0080e3;
+    font-size: 21px;
+    line-height: 60px;
+}
+
+ul#newsBags {
+    margin: 0;
+    padding: 10px 50px;
+    max-height: 380px;
+    overflow: auto;
+}
+
+ul#newsBags > li {
+    /*list-style-image:url('');*/
+    list-style-type: disc;
+    color: #454545;
+    white-space: pre-line;
+    font-size: 13px;
+    line-height: 27px;
+    border-bottom: 1px dashed #999;
+}
+
+#marquee > footer {
+    text-align: center;
+    line-height: 80px;
+    background-color: #e9e9e9;
+    background-image: -webkit-radial-gradient(center top, ellipse farthest-side, rgba(0, 0, 0, 0.3), transparent);
+    background-size: 100% 8px;
+    background-repeat: no-repeat;
+    border-top: 1px solid #ccc;
+    -moz-border-radius: 0 0 5px 5px;
+    -webkit-border-radius: 0 0 5px 5px;
+    border-radius: 0 0 5px 5px;
+}
+
+#marquee > footer > span {
+    display: inline-block;
+    width: 119px;
+    font-size: 15px;
+    font-weight: bolder;
+    line-height: 45.5px;
+    background-image: url('../../../../_Common/Content/Views/Shared/images/sent_bn.png');
+    cursor: pointer;
+}
+
+#marquee > footer > span:hover {
+    background-position: 0 -45.5px;
+}
+/*#endregion 彈跳視窗跑馬燈資訊內容 */
+
+/*title 文字背景顏色此修改*/
+.ui-widget-header {
+    padding: 0 5px;
+    line-height: 12px;
+}
+
+#ad-dialog {
+    display: none;
+    padding: 0;
+}
+
+#ad-dialog img {
+    width: 100%;
+    height: auto !important;
+}
+
+#ad-dialog .dialog-footer {
+    height: 30px;
+    padding: 0 3px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 25px;
+    border-top: 1px solid #000;
+}
+
+.ui-dialog {
+    position: fixed;
+    z-index: 999;
+}
+
+.ui-dialog .ui-dialog-title {
+    height: 15px;
+    font-size: 13px;
+}
+
+.ui-dialog .ui-dialog-buttonpane {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only {
+    font-size: 12px;
+}
+
+.ui-dialog .ui-dialog-buttonpane button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 3px 6px;
+}
+/* #endregion 弹跳出来的dialog */
+
+/*#region loginToGame 游戏平台登入口*/
+#logingame-body {
+    background-color: #900;
+}
+/*#endregion */

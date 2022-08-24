@@ -1,0 +1,178 @@
+#lobby {
+  padding: 30px 0 45px;
+}
+
+#banner {
+  background-image: url("../Lobby/Game/banner.jpg");
+}
+
+.game-list > li {
+  width: 194px;
+  height: 364px;
+  padding-top: 298px;
+}
+
+#lobby li.more {
+  background-image: url("../lobby/Game/more.jpg");
+}
+
+#lobby li.AgHtml {
+  background-image: url("../lobby/Game/AgHtml.jpg");
+}
+
+#lobby li.BbinaSlot {
+  background-image: url("../lobby/Game/BbinaSlot.jpg");
+}
+
+#lobby li.Cq9Html {
+  background-image: url("../lobby/Game/Cq9Html.jpg");
+}
+
+#lobby li.FsHtml {
+  background-image: url("../lobby/Game/FsHtml.jpg");
+}
+
+#lobby li.GaHtml {
+  background-image: url("../lobby/Game/GaHtml.jpg");
+}
+
+#lobby li.GnsHtml {
+  background-image: url("../lobby/Game/GnsHtml.jpg");
+}
+
+#lobby li.GpiHtml {
+  background-image: url("../lobby/Game/GpiHtml.jpg");
+}
+
+#lobby li.GpiFlash {
+  background-image: url("../lobby/Game/GpiFlash.jpg");
+}
+
+#lobby li.HabaHtml {
+  background-image: url("../lobby/Game/HabaHtml.jpg");
+}
+
+#lobby li.IsbHtml {
+  background-image: url("../lobby/Game/IsbHtml.jpg");
+}
+
+#lobby li.JdbHtml {
+  background-image: url("../lobby/Game/JdbHtml.jpg");
+}
+
+#lobby li.LgHtml {
+  background-image: url("../lobby/Game/LgHtml.jpg");
+}
+
+#lobby li.MgaHtml {
+  background-image: url("../lobby/Game/MgaHtml.jpg");
+}
+
+#lobby li.MgaFlash {
+  background-image: url("../lobby/Game/MgaFlash.jpg");
+}
+
+#lobby li.MwHtml {
+  background-image: url("../lobby/Game/MwHtml.jpg");
+}
+
+#lobby li.MwSlot {
+  background-image: url("../lobby/Game/MwSlot.jpg");
+}
+
+#lobby li.NeHtml {
+  background-image: url("../lobby/Game/NeHtml.jpg");
+}
+
+#lobby li.Ne2Slot {
+  background-image: url("../lobby/Game/Ne2Slot.jpg");
+}
+
+#lobby li.PgHtml {
+  background-image: url("../lobby/Game/PgHtml.jpg");
+}
+
+#lobby li.PngHtml {
+  background-image: url("../lobby/Game/PngHtml.jpg");
+}
+
+#lobby li.PrgHtml {
+  background-image: url("../lobby/Game/PrgHtml.jpg");
+}
+
+#lobby li.PrgFlash {
+  background-image: url("../lobby/Game/PrgFlash.jpg");
+}
+
+#lobby li.PtaHtml {
+  background-image: url("../lobby/Game/PtaHtml.jpg");
+}
+
+#lobby li.PtaFlash {
+  background-image: url("../lobby/Game/PtaFlash.jpg");
+}
+
+#lobby li.PtbSlot {
+  background-image: url("../lobby/Game/PtbSlot.jpg");
+}
+
+#lobby li.PtsHtml {
+  background-image: url("../lobby/Game/PtsHtml.jpg");
+}
+
+#lobby li.SgHtml {
+  background-image: url("../lobby/Game/SgHtml.jpg");
+}
+
+#lobby li.SgFlash {
+  background-image: url("../lobby/Game/SgFlash.jpg");
+}
+
+#lobby li.RtHtml {
+  background-image: url("../lobby/Game/RtHtml.jpg");
+}
+
+#lobby li.TpgHtml {
+  background-image: url("../lobby/Game/TpgHtml.jpg");
+}
+
+#lobby li.AeSlot {
+  background-image: url("../lobby/Game/AeSlot.jpg");
+}
+
+#lobby li.JpSlot {
+  background-image: url("../lobby/Game/JpSlot.jpg");
+}
+
+#lobby li.RtgSlot {
+  background-image: url("../lobby/Game/RtgSlot.jpg");
+}
+
+#lobby li.QtSlot {
+  background-image: url("../lobby/Game/QtSlot.jpg");
+}
+
+#lobby li.PsSlot {
+  background-image: url("../lobby/Game/PsSlot.jpg");
+}
+
+#lobby li.Pg1Slot {
+  background-image: url("../lobby/Game/Pg1Slot.jpg");
+}
+
+#lobby li.GanSlot {
+  background-image: url("../lobby/Game/GanSlot.jpg");
+}
+
+#lobby li.HbSlot {
+  background-image: url("../lobby/Game/HbSlot.jpg");
+}
+
+#lobby li.BgSlot {
+  background-image: url("../lobby/Game/BgSlot.jpg");
+}
+
+#lobby li.VrSlot {
+  background-image: url("../lobby/Game/VrSlot.jpg");
+}
+/*# sourceMappingURL=Game.css.map */

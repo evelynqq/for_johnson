@@ -1,0 +1,30 @@
+﻿/* 各站有需要再覆盖客制样式 */
+.wrap {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('../../../../_Common/Content/Views/App/images/bg.jpg') no-repeat center;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+    .wrap > .prepare-page {
+        position: absolute;
+        top: 40%;
+        right: 0;
+        left: 0;
+        color: #fff;
+        font-family: 'Microsoft YaHei';
+        text-align: center;
+    }
+
+        .wrap > .prepare-page > h3 {
+            margin-bottom: 20px;
+            font-size: 40px;
+        }
+
+        .wrap > .prepare-page > a {
+            color: inherit;
+        }

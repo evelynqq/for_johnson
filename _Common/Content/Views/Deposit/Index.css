@@ -1,0 +1,4 @@
+﻿#articles ul.deposit li > a {
+    cursor: pointer;
+    font-weight: bold;
+}

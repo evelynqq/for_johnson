@@ -1,0 +1,154 @@
+#banner {
+  background-image: url("../Lobby/Esport/banner.jpg");
+}
+
+#content {
+  background-image: url("../Lobby/Esport/background.jpg");
+}
+
+.game-list > li {
+  width: 320px;
+  height: 370px;
+  margin-bottom: 20px;
+  background-color: #2f2f2f;
+  border-bottom: 8px solid #585858;
+  overflow: hidden;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.game-list > li:nth-child(3n + 2) {
+  margin: 0 20px;
+}
+
+.game-list > li:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 320px;
+  height: 299px;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.game-list > li:hover {
+  -webkit-transform: translateY(-5px);
+      -ms-transform: translateY(-5px);
+          transform: translateY(-5px);
+  border-bottom: 8px solid #0088fe;
+}
+
+.game-list > li:hover:before {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#lobby li[game-box='more']:before {
+  background-image: url("../lobby/Esport/more.jpg");
+}
+
+#lobby li[game-box='EsbEsport']:before {
+  background-image: url("../lobby/Esport/EsbEsport.jpg");
+}
+
+#lobby li[game-box='Esb1Esport']:before {
+  background-image: url("../lobby/Esport/Esb1Esport.jpg");
+}
+
+#lobby li[game-box='SabaESport']:before {
+  background-image: url("../lobby/Esport/SabaESport.jpg");
+}
+
+#lobby li[game-box='HcEsport']:before {
+  background-image: url("../lobby/Esport/HcEsport.jpg");
+}
+
+#lobby li[game-box='CmdEsport']:before {
+  background-image: url("../lobby/Esport/CmdEsport.jpg");
+}
+
+#lobby li[game-box='SabaaEsport']:before {
+  background-image: url("../lobby/Esport/SabaaEsport.jpg");
+}
+
+#lobby li[game-box='E88Esport']:before {
+  background-image: url("../lobby/Esport/E88Esport.jpg");
+}
+
+#lobby li[game-box='GbEsport']:before {
+  background-image: url("../lobby/Esport/GbEsport.jpg");
+}
+
+#lobby li[game-box='GbsEsport']:before {
+  background-image: url("../lobby/Esport/GbsEsport.jpg");
+}
+
+#lobby li[game-box='LeEsport']:before {
+  background-image: url("../lobby/Esport/LeEsport.jpg");
+}
+
+#lobby li[game-box='AviaEsport']:before {
+  background-image: url("../lobby/Esport/AviaEsport.jpg");
+}
+
+#lobby li[game-box='Cq9Esport']:before {
+  background-image: url("../lobby/Esport/Cq9Esport.jpg");
+}
+
+#lobby li[game-box='TfEsport']:before {
+  background-image: url("../lobby/Esport/TfEsport.jpg");
+}
+
+.game-list > li[game-box='more']:hover:before {
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+}
+
+.game-list > li span {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 320px;
+  height: 60px;
+  color: #0088fe;
+  font-size: 24px;
+  text-align: center;
+  line-height: 20px;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.game-list > li[game-box="more"] span {
+  color: #58584F;
+}
+
+.game-list > li:hover span {
+  bottom: -25px;
+}
+
+.game-list > li[game-box="more"]:hover span {
+  bottom: -20px;
+}
+
+.game-list > li[game-box="more"]:hover {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  border-bottom: 8px solid #585858;
+  background-color: #2f2f2f;
+}
+
+.game-list > li[game-box="more"]:hover::before {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+/*# sourceMappingURL=Esport.css.map */

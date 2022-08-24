@@ -1,0 +1,84 @@
+﻿/* #region header */
+#search {
+    background-color: #000;
+}
+/* #endregion header */
+
+/* #region nav */
+nav {
+    background-color: #910000;
+}
+
+#game-nav > li > span {
+    font-weight: bold;
+}
+
+#game-nav > li:hover span,
+#game-nav > li.active span {
+    background-color: #000;
+}
+
+ol.subnav > li {
+    color: #fff;
+    background-color: #910000;
+}
+
+    ol.subnav > li:hover {
+        background-color: #000;
+    }
+/* #endregion nav */
+
+/* #region recommend-list */
+#recommend-list .slick-dots li.slick-active,
+#recommend-list .slick-dots li.slick-active:hover,
+#recommend-list .slick-prev:hover,
+#recommend-list .slick-next:hover {
+    background-color: #910000;
+}
+
+#recommend-list .list-title {
+    border-bottom: 2px solid #910000;
+}
+
+    #recommend-list .list-title span {
+        background-color: #910000;
+    }
+
+    #recommend-list .list-title a {
+        color: #910000;
+    }
+/* #endregion recommend-list */
+
+/* #region 游戏列表区块 */
+.game-list li {
+    border-color: #910000;
+}
+
+    .game-list li:hover {
+        background-color: #910000;
+        border-color: #910000;
+    }
+
+        .game-list li:hover .game-logo:before {
+            background-image: url('../../../../_Common/Content/Views/SlotCasino/MW/hover.png');
+        }
+
+    .game-list li .game-text {
+        color: #910000;
+    }
+
+    .game-list li:hover .game-text {
+        color: #fff;
+    }
+/* #endregion 游戏列表区块 */
+
+/* #region pager */
+#pager > li {
+    color: #fff;
+    background-color: #000;
+}
+
+    #pager > li[ng-click]:hover {
+        background-color: #910000;
+    }
+/* #endregion pager */

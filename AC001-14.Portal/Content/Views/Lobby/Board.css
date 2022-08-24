@@ -1,0 +1,207 @@
+@charset "UTF-8";
+#banner {
+  display: block;
+}
+
+#content {
+  background-image: url("../Lobby/Board/content_bg.jpg");
+}
+
+#lobby {
+  padding: 12px 0;
+}
+
+ul.game-list > li {
+  width: 322px;
+  height: 295px;
+  margin: 10px;
+  background: #202020;
+  border: 2px solid #fff;
+  position: relative;
+}
+
+ul.game-list > li:not([game-box='more']):hover {
+  background-position: center;
+  background: #dd0023;
+  border: 2px solid #dd0023;
+  width: 322px;
+  height: 295px;
+}
+
+ul.game-list > li span {
+  position: absolute;
+  font-size: 22px;
+  color: #fff;
+  background: transparent;
+  width: 197px;
+  height: 54px;
+  padding: 10px 0;
+  bottom: 0;
+  left: 0;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+ul.game-list > li div {
+  display: none;
+}
+
+ul.game-list > li::before {
+  content: '';
+  width: 100px;
+  height: 70px;
+  top: 0;
+  right: 0;
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+ul.game-list > li:not([game-box='more'])::after {
+  content: '进入游戏';
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  position: absolute;
+  color: #fff;
+  width: 100px;
+  height: 27px;
+  text-align: center;
+  padding: 5px;
+  bottom: 9px;
+  right: 10px;
+  border: 0.5px solid #fff;
+}
+
+ul.game-list > li[game-box='more'] span {
+  width: 322px;
+  text-align: center;
+}
+
+#lobby [game-box='more'] {
+  background-image: url("../lobby/Board/more.jpg");
+}
+
+#lobby [game-box='more']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorshadow/Board/more.png");
+}
+
+#lobby [game-box='City761Board'] {
+  background-image: url("../lobby/Board/City761Board.jpg");
+}
+
+#lobby [game-box='City761Board']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorshadow/Board/City761Board.png");
+}
+
+#lobby [game-box='JdbBoard'] {
+  background-image: url("../lobby/Board/JdbBoard.jpg");
+}
+
+#lobby [game-box='JdbBoard']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorshadow/Board/JdbBoard.png");
+}
+
+#lobby [game-box='KgHtml'] {
+  background-image: url("../lobby/Board/KgHtml.jpg");
+}
+
+#lobby [game-box='KgHtml']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorshadow/Board/KgHtml.png");
+}
+
+#lobby [game-box='LegBoard'] {
+  background-image: url("../lobby/Board/LegBoard.jpg");
+}
+
+#lobby [game-box='LegBoard']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorshadow/Board/LegBoard.png");
+}
+
+#lobby [game-box='JsBoard'] {
+  background-image: url("../lobby/Board/JsBoard.jpg");
+}
+
+#lobby [game-box='JsBoard']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorshadow/Board/JsBoard.png");
+}
+
+#lobby [game-box='VgBoard'] {
+  background-image: url("../lobby/Board/VgBoard.jpg");
+}
+
+#lobby [game-box='VgBoard']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorshadow/Board/VgBoard.png");
+}
+
+#lobby [game-box='NwBoard'] {
+  background-image: url("../lobby/Board/NwBoard.jpg");
+}
+
+#lobby [game-box='NwBoard']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorshadow/Board/NwBoard.png");
+}
+
+#lobby [game-box='FgBoard'] {
+  background-image: url("../lobby/Board/FgBoard.jpg");
+}
+
+#lobby [game-box='FgBoard']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorshadow/Board/FgBoard.png");
+}
+
+#lobby [game-box='KyBoard'] {
+  background-image: url("../lobby/Board/KyBoard.jpg");
+}
+
+#lobby [game-box='KyBoard']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorshadow/Board/KyBoard.png");
+}
+
+#lobby [game-box='LcBoard'] {
+  background-image: url("../lobby/Board/LcBoard.jpg");
+}
+
+#lobby [game-box='LcBoard']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorshadow/Board/LcBoard.png");
+}
+
+#lobby [game-box='T365Board'] {
+  background-image: url("../lobby/Board/T365Board.jpg");
+}
+
+#lobby [game-box='T365Board']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorshadow/Board/T365Board.png");
+}
+
+#lobby [game-box='YgBoard'] {
+  background-image: url("../lobby/Board/YgBoard.jpg");
+}
+
+#lobby [game-box='YgBoard']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorshadow/Board/YgBoard.png");
+}
+
+#lobby [game-box='AsBoard'] {
+  background-image: url("../lobby/Board/AsBoard.jpg");
+}
+
+#lobby [game-box='AsBoard']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorshadow/Board/AsBoard.png");
+}
+
+#lobby [game-box='TyBoard'] {
+  background-image: url("../lobby/Board/TyBoard.jpg");
+}
+
+#lobby [game-box='TyBoard']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorshadow/Board/TyBoard.png");
+}
+
+#lobby [game-box='Cq9Board'] {
+  background-image: url("../lobby/Board/Cq9Board.jpg");
+}
+
+#lobby [game-box='Cq9Board']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorshadow/Board/Cq9Board.png");
+}
+/*# sourceMappingURL=Board.css.map */

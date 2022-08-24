@@ -1,0 +1,101 @@
+﻿@import '../../../../_Common/Css/GameCode';
+$MainColor: #0088fe;
+
+#banner {
+    background-image: url('../Lobby/Live/banner.jpg');
+}
+
+#content {
+    background-image: url('../Lobby/Live/background.jpg');
+}
+
+.game-list > li {
+    width: 319px;
+    height: 285px;
+    margin-bottom: 15px;
+    background-color: #fdfdfd;
+    background-position-x: center;
+    background-position-y: 79px;
+    background-repeat: no-repeat;
+    -webkit-box-shadow: inset 0px -2px 11px 0px #254169;
+    -moz-box-shadow: inset 0px -2px 11px 0px #254169;
+    box-shadow: inset 0px -2px 11px 0px #254169;
+    span {
+        position: absolute;
+        display: block;
+        font-size: 22px;
+        color: $MainColor;
+        left: 150px;
+        top: 20px;
+        letter-spacing: 1px;
+    }
+    div {
+        position: absolute;
+        display: block;
+        font-size: 14px;
+        color: #8a8a8a;
+        left: 150px;
+        top: 50px;
+    }
+    &:nth-child(3n + 2) {
+        margin: 0 20px;
+    }
+    &[game-box='more'] {
+        font-size: 22px;
+        color: $MainColor;
+        padding-top: 10px;
+    }
+    &:not([game-box='more']) {
+        &:before {
+            content: '';
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            transition: all 0.5s;
+        }
+        &:before {
+            content: '进入游戏';
+            white-space: pre;
+            position: absolute;
+            font-family:STXihei;
+            top: 79px;
+            left: 14px;
+            width: 292px;
+            height: 181px;
+            color: #fdfdfd;
+            font-size: 14px;
+            background: #000;
+            text-align: center;
+            line-height: 190px;
+            letter-spacing: 3px;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0px;
+            left: 25px;
+            display: block;
+            width: 150px;
+            height: 150px;
+            background-repeat: no-repeat;
+            background-size: 75% auto;
+            -webkit-filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.7));
+            filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.7))
+        }
+        &:hover {
+            &:before {
+                opacity: 0.7;
+            }
+        }
+    }
+}
+
+// gamebox-list
+@each $gamebox in $live-list {
+    #lobby li[game-box='#{$gamebox}'] {
+        background-image: url('../lobby/live/#{$gamebox}.jpg');
+        &::after {
+            background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v3/colorblack/live/#{$gamebox}.png');
+        }
+    }
+}

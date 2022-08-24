@@ -1,0 +1,16 @@
+﻿#lobby .game-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 15px 0;
+    font-size: 0;
+}
+
+    #lobby .game-list li {
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+    }
+
+        #lobby .game-list li:hover {
+            background-position: center bottom;
+        }

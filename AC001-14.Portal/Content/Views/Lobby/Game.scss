@@ -1,0 +1,127 @@
+﻿@import '../../../../_Common/Css/GameCode';
+
+#banner {
+    display: block;
+}
+
+#content {
+    background-image: url('../Lobby/Game/content_bg.jpg');
+}
+
+#lobby iframe {
+    width: 100%;
+    height: 900px;
+    background: #fff;
+    -moz-transition: all linear 0.2s;
+    -o-transition: all linear 0.2s;
+    -webkit-transition: all linear 0.2s;
+    transition: all linear 0.2s;
+}
+
+/* 電子tab */
+#lobby span.title {
+    display: block;
+    height: 31px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-indent: 20px;
+    line-height: 31px;
+    background: #151515;
+}
+
+#lobby .slider-left {
+    position: relative;
+    height: 75px;
+    overflow: hidden;
+    > span {
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        display: inline-block;
+        width: 25px;
+        height: 75px;
+        background-color: #1f1f1f;
+        cursor: pointer;
+        vertical-align: top;
+        &.prev {
+            left: 0;
+            border-right: 1px solid #252525;
+            &:before {
+                background-image: url('../Lobby/Game/prev.png');
+            }
+        }
+        &.next {
+            right: 0;
+            border-left: 1px solid #252525;
+            &:before {
+                background-image: url('../Lobby/Game/next.png');
+            }
+        }
+        &:before {
+            content: '';
+            display: block;
+            width: 17px;
+            height: 27px;
+            margin: 24px auto 0;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+        }
+        &:hover {
+            background-color: #dd0023;
+        }
+    }
+}
+
+#lobby .main-cell {
+    margin: 0 25px;
+}
+
+#lobby ul.game-list > li {
+    position: relative;
+    width: calc(100% / 8);
+    height: 75px;
+    padding-top: 50px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #1f1f1f;
+    background-position: center top;
+    background-repeat: no-repeat;
+    display: inline-block;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: inline-block;
+        width: 1px;
+        height: 75px;
+        background-color: #252525;
+    }
+    div {
+        display: none;
+    }
+    &:not([game-box='more']):hover,
+    &.active {
+        background-color: #dd0023;
+    }
+}
+#lobby ul.game-list > li[game-box='more'] {
+    display: none;
+}
+#lobby ul.game-list > li[game-box='more'] span {
+    display: none;
+}
+// gamebox-list
+@each $gamebox in $game-list {
+    @if $gamebox != more {
+        #lobby li[game-box='#{$gamebox}'] {
+            background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v2/colorshadow/Game/#{$gamebox}.png');
+            // background-image: url('../lobby/Game/#{$gamebox}.png');
+            background-size: 65% auto;
+        }
+    }
+}

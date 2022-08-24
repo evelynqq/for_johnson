@@ -1,0 +1,96 @@
+﻿@import '../../../../_Common/Css/GameCode';
+
+#banner {
+    background: url('../Lobby/Esport/banner.jpg') no-repeat center #251630;
+}
+
+#lobby .game-list li {
+    width: 305px;
+    height: 345px;
+    margin: 5px 5px 35px;
+    position: relative;
+    span {
+        margin-top: 350px;
+    }
+    div {
+        display: none;
+    }
+    &:hover {
+        transform: translate3d(0,-2%,0);
+        transition: transform .1s linear;
+        div {
+            top: 10px;
+            left: 15px;
+            font-size: 48px;
+            color: #ffffff;
+            position: absolute;
+            display: block;
+        }
+        &::before {
+            content: '';
+            width: 305px;
+            height: 345px;
+            position: absolute;
+            background-repeat: no-repeat;
+            background-position-y: -10px;
+            background-position-x: -10px;
+            top: 0;
+            left: 0;
+            background-image: url('../lobby/Esport/light.png');
+            background-color: rgba($color: #251630, $alpha: 0.7);
+        }
+        &:not([game-box='more'])::after {
+            content: '进入游戏';
+            width: 270px;
+            height: 48px;
+            color: #ffc001;
+            background: rgba($color: #837986, $alpha: 0.6);
+            position: absolute;
+            bottom: 20px;
+            left: 16px;
+            font-size: 21px;
+            font-style: normal;
+            -webkit-font-smoothing: antialiased;
+            line-height: 48px;
+            text-align: center;
+            border: 1px solid #837986;
+            font-weight: lighter;
+            letter-spacing: 1px;
+        }
+    }
+}
+#lobby .game-list li[game-box='more'] div {
+    top: 10px;
+    left: 15px;
+    text-align: left;
+    font-size: 48px;
+    color: #ffffff;
+    position: absolute;
+    display: block;
+}
+#lobby .game-list li[game-box='more']::before {
+    content: '';
+    width: 305px;
+    height: 345px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position-y: -6px;
+    background-position-x: -10px;
+    top: 0;
+    left: 0;
+    background-image: url('../lobby/Esport/light.png');
+    background-color: transparent;
+}
+#lobby .game-list li[game-box='more']:hover {
+    transform: translate3d(0,0,0);
+}
+// gamebox-list
+@each $gamebox in $esport-list {
+    #lobby li[game-box='#{$gamebox}'] {
+        background-image: url('../lobby/Esport/#{$gamebox}.jpg');
+    }
+}
+
+#lobby .game-list li:hover {
+    background-position: top;
+}

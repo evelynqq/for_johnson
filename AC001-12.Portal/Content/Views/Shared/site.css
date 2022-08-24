@@ -1,0 +1,818 @@
+@charset "UTF-8";
+/* #region base */
+body {
+  font-family: "Microsoft YaHei",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  background: #171723 url("../Shared/images/homeBg.jpg") center top no-repeat;
+}
+
+body.layout {
+  min-width: 1000px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+iframe {
+  border: none;
+}
+
+[ng-click] {
+  cursor: pointer;
+}
+
+ol, ul {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.wrapper {
+  position: relative;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+/* #endregion base */
+/* #region LoginToGame */
+#logingame-body {
+  background: #222;
+}
+
+/* #endregion LoginToGame */
+/* #region header */
+#header {
+  position: absolute;
+  z-index: 11;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  height: 130px;
+}
+
+/* background: url('../Shared/images/header.png') repeat-x; */
+/* #endregion header */
+/* #region news 跑馬燈 */
+#news {
+  position: absolute;
+  top: 342px;
+  left: 50%;
+  padding-left: 60px;
+  margin-left: -500px;
+  background: rgba(0, 0, 0, 0.4) url("../Shared/images/news.png") no-repeat left center;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(50%, rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0)));
+  background: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+#news:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  background: url("../Shared/images/news.png") no-repeat left center;
+  width: 60px;
+  height: 40px;
+}
+
+#hot-news {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#hot-news li {
+  display: inline-block;
+  height: 40px;
+  margin-right: 5px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 40px;
+  vertical-align: top;
+}
+
+#hot-news li:hover {
+  text-decoration: underline;
+}
+
+/* #endregion 跑馬燈 */
+/* #region logo */
+#logo-bg {
+  position: relative;
+  display: inline-block;
+  width: 306px;
+  height: 71px;
+  background: url("../../../../_Common/Content/Views/Shared/images/logo_w.png") no-repeat;
+  background-size: auto 80%;
+  background-position: left center;
+}
+
+#logo-bg > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+/*#endregion logo */
+/*#region topnav */
+ul.top-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+ul.top-nav li {
+  display: inline-block;
+  float: left;
+}
+
+ul.top-nav li:first-child:before,
+ul.top-nav li#select-language:before {
+  display: none;
+}
+
+ul.top-nav li:before {
+  content: '|';
+  color: #fffadc;
+  padding: 0 5px;
+}
+
+ul.top-nav li#select-language {
+  padding-left: 5px;
+}
+
+ul.top-nav li a {
+  color: #fffadc;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+ul.top-nav li a:hover {
+  color: #ff0000;
+}
+
+ul.top-nav li.deposit a {
+  color: #0ff;
+}
+
+ul.top-nav li.deposit.color a {
+  color: #f00;
+}
+
+ul.top-nav li.net a {
+  color: #ff0000;
+}
+
+ul.top-nav li.net.color a {
+  color: #fff;
+}
+
+ul.top-nav li > span {
+  display: inline-block;
+  width: 22px;
+  height: 16px;
+  margin: 0 2px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+span[data-language="zh-CN"] {
+  background-image: url("../Shared/images/cn.png");
+}
+
+span[data-language="zh-TW"] {
+  background-image: url("../Shared/images/tw.png");
+}
+
+span[data-language="en-US"] {
+  background-image: url("../Shared/images/us.png");
+}
+
+ul.top-nav span[data-language="th"] {
+  display: none;
+}
+
+/*#endregion */
+/* #region loginbar 顯示「登入帳號」區塊 */
+#account-box {
+  display: inline-block;
+  position: absolute;
+  top: 30px;
+  right: 0;
+  text-align: right;
+  line-height: 30px;
+}
+
+#account-box > form {
+  position: relative;
+  display: inline-block;
+  width: 530px;
+}
+
+#account-box > form input {
+  width: 127px;
+  height: 26px;
+  padding: 0 3px;
+  margin-bottom: 5px;
+  color: #999;
+  font-size: 13px;
+  text-align: right;
+  background: none;
+  border-radius: 3px;
+  border: none;
+  background: #fefefe;
+}
+
+#account-box > form input::-webkit-input-placeholder {
+  color: #999;
+}
+
+#account-box > form input::-moz-placeholder {
+  color: #999;
+}
+
+#account-box > form input.placeholder {
+  color: #999;
+}
+
+#account-box > form button {
+  font-size: 13px;
+  border: none;
+}
+
+*.login-btn, .logout-btn {
+  width: 60px;
+  height: 26px;
+  color: #fff;
+  font-size: 15px;
+  font-family: SimSun;
+  font-weight: bold;
+  line-height: 26px;
+  white-space: nowrap;
+  background: #b4564a;
+  border-style: none;
+  border-radius: 3px;
+  padding: 0;
+}
+
+.logout-btn {
+  display: block;
+  text-align: center;
+}
+
+*.login-btn:hover, .logout-btn:hover {
+  background-position: bottom center;
+}
+
+*.forget-btn {
+  color: #b8ae98;
+  background: none;
+}
+
+#check-code-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+#captcha {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: auto;
+  height: 22px;
+}
+
+#agree {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 1;
+  padding: 2px 5px;
+  font-size: 13px;
+  background-color: #fff;
+}
+
+#agree a {
+  color: #0c41ed;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* #endregion loginbar 顯示「登入帳號」區塊 */
+/* #region account-info 登入後, 顯示「帳號資訊」區塊 */
+ul#account-info {
+  position: relative;
+  display: inline-block;
+}
+
+ul#account-info > li {
+  display: inline-block;
+  padding-left: 3px;
+  color: #b8ae98;
+  font-size: 12px;
+  line-height: 27px;
+  vertical-align: top;
+  margin-left: 20px;
+}
+
+ul#account-info > li > span.account {
+  display: inline-block;
+  color: #fffc00;
+  max-width: 6em;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: top;
+  overflow: hidden;
+}
+
+ul#account-info > li a {
+  cursor: pointer;
+}
+
+ul#account-info > li a:hover {
+  color: #fff;
+}
+
+#action-box {
+  display: inline-block;
+  vertical-align: top;
+}
+
+#action-box > a {
+  display: inline-block;
+  padding: 0;
+  font-size: 12px;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* #endregion account-info 登入後, 顯示「帳號資訊」區塊 */
+/* #region account-nav 登入後的子導覽列 (帳號相關操作) */
+ul#account-nav {
+  display: block;
+  text-align: center;
+  background: url("../../../../_Common/Content/Views/Shared/images/transparent-black.png");
+  margin-top: -5px;
+}
+
+ul#account-nav > li {
+  display: inline-block;
+  line-height: 26px;
+}
+
+ul#account-nav > li:before {
+  content: '|';
+  color: #777;
+  padding: 0 10px;
+}
+
+ul#account-nav > li:first-child:before {
+  display: none;
+}
+
+ul#account-nav > li > a {
+  display: inline-block;
+  color: #fff;
+  font-size: 12px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+ul#account-nav > li > a:hover {
+  color: #ff0000;
+}
+
+/* #endregion 登入後的子導覽列 (帳號相關操作) */
+/* #region nav 導覽列 */
+#nav {
+  position: relative;
+  height: 40px;
+  bottom: -15px;
+}
+
+#nav > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+}
+
+#nav > ul > li {
+  position: relative;
+  float: left;
+  width: calc(92% / 8);
+  margin: 0 0.5%;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 3px solid #b4564a;
+}
+
+#nav > ul > li.hot {
+  background: url("../Shared/images/hot.gif") no-repeat top right;
+}
+
+#nav > ul > li:hover, #nav > ul > li.active {
+  background-color: #b4564a;
+}
+
+#nav > ul > li a {
+  display: inline-block;
+  width: 100%;
+  height: 36px;
+  margin: 0 auto;
+  color: #fff;
+  font-family: PMingLiU;
+  text-align: center;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+
+#nav > ul > li:hover .subnav {
+  display: block;
+}
+
+.subnav {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0px;
+  width: 320px;
+  padding: 0;
+  z-index: 999;
+  list-style: none;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.subnav li {
+  position: relative;
+  display: inline-block;
+  height: 34px;
+  width: 50%;
+  margin-left: -5px;
+  color: #fff;
+  line-height: 34px;
+  text-align: center;
+}
+
+.subnav li.hot:after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  right: -9px;
+  width: 23px;
+  height: 20px;
+  background: url("../Shared/images/hot.gif") no-repeat center center;
+}
+
+.subnav li:hover {
+  color: #b4564a;
+}
+
+/* #endregion nav 導覽列 */
+/*#region banner */
+#banner {
+  height: 382px;
+  background: #000 url("../Shared/images/banner.jpg") no-repeat top center;
+}
+
+/*#endregion */
+/* #region content 內頁 */
+#content {
+  position: relative;
+  margin: 20px auto;
+  text-align: center;
+}
+
+/* #endregion content 內頁 */
+/* #region footer */
+#footer {
+  text-align: center;
+  background: #171723;
+  border-top: 1px solid #6E6B7C;
+}
+
+#footer-nav {
+  display: inline-block;
+  margin: 0 0 10px 0;
+  padding: 0;
+  list-style: none;
+}
+
+#footer-nav li {
+  float: left;
+}
+
+#footer-nav li:before {
+  content: '|';
+  padding: 0 5px;
+  color: #a9a8a8;
+}
+
+#footer-nav li:first-child:before {
+  display: none;
+}
+
+#footer-nav a {
+  display: inline-block;
+  padding: 0 7px;
+  color: #a9a8a8;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+}
+
+#footer-nav a:hover {
+  color: #fff;
+}
+
+#footer-logo {
+  position: relative;
+  display: inline-block;
+  width: 994px;
+  height: 50px;
+  margin: 10px auto;
+  background: url("../Shared/images/footer_logo.png") no-repeat;
+}
+
+#footer-logo > a.gpk-btn {
+  position: absolute;
+  top: 100px;
+  left: 170px;
+  width: 90px;
+  height: 30px;
+}
+
+#footer-logo > a.xtd-btn {
+  position: absolute;
+  top: 100px;
+  left: 265px;
+  width: 80px;
+  height: 34px;
+}
+
+#footer-suggest {
+  margin: 0 0 20px 0;
+  line-height: 30px;
+  color: #a9a8a8;
+}
+
+#footer-suggest small {
+  font-size: 14px;
+  line-height: 2em;
+}
+
+/* #endregion footer */
+/* #region 近期浏览 */
+#review-list {
+  position: fixed;
+  bottom: -77px;
+  left: 0;
+  width: 100%;
+  height: 77px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  z-index: 1;
+  -webkit-transition: bottom 0.4s;
+  -o-transition: bottom 0.4s;
+  transition: bottom 0.4s;
+}
+
+#review-list.open {
+  bottom: 0;
+}
+
+#review-list .up,
+#review-list .down {
+  position: absolute;
+  top: -24px;
+  left: 0;
+  width: 150px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  background: url("../../../../_Common/Content/Views/Shared/images/review/tab.png") no-repeat;
+}
+
+#review-list .up:after,
+#review-list .down:after {
+  content: '';
+  display: inline-block;
+  margin-left: 5px;
+  width: 7px;
+  height: 8px;
+}
+
+#review-list .up:after {
+  background: url("../../../../_Common/Content/Views/Shared/images/review/up.png") no-repeat;
+}
+
+#review-list .down:after {
+  background: url("../../../../_Common/Content/Views/Shared/images/review/down.png") no-repeat;
+}
+
+#review-list .wrapper {
+  padding-left: 80px;
+  height: 77px;
+  background: url("../../../../_Common/Content/Views/Shared/images/review/txt.png") no-repeat 20px 15px;
+}
+
+#review-box li {
+  display: inline-block;
+  position: relative;
+  margin: 10px 8px 0;
+  width: 60px;
+  height: 60px;
+}
+
+#review-box li.no-review {
+  line-height: 60px;
+}
+
+#review-box li img {
+  width: 60px;
+  height: 60px;
+}
+
+#review-box li div {
+  display: none;
+  position: absolute;
+  top: -31px;
+  left: -5px;
+  padding-top: 2px;
+  width: 70px;
+  height: 29px;
+  text-align: center;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  background: url("../../../../_Common/Content/Views/Shared/images/review/title.png") no-repeat;
+}
+
+#review-box li:hover div {
+  display: block;
+}
+
+/* #endregion 近期浏览 */
+/* #region mailbox 站内信 不同版请由此修改 */
+#mailbox {
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  vertical-align: top;
+  text-decoration: none;
+  background: url("../../../../_Common/Content/Views/Shared/images/m_icon.png") no-repeat;
+}
+
+#mailbox > span, #mailbox > span:hover {
+  position: absolute;
+  left: 80%;
+  bottom: 60%;
+  min-width: 16px;
+  padding: 0 2px;
+  height: 16px;
+  color: #000;
+  font-size: 12px;
+  text-align: center;
+  line-height: 16px;
+  border-radius: 5px;
+  background: #fff47e;
+}
+
+/* #endregion mailbox 站内信 不同版请由此修改 */
+/* #region 彈跳視窗跑馬燈資訊內容 */
+#marquee-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  display: none;
+}
+
+#marquee-wrapper.show {
+  display: block;
+  z-index: 1000;
+  background-image: url("../../../../_Common/Content/Views/Shared/images/transparent-black.png");
+}
+
+#marquee {
+  width: 600px;
+  max-height: 500px;
+  margin: 30px auto 0 auto;
+  background-color: #fff;
+  background-image: url("../../../../_Common/Content/Views/Shared/images/table_background.jpg");
+  border-radius: 5px;
+  cursor: default;
+  -webkit-transition: margin-top ease-in 300ms;
+  -o-transition: margin-top ease-in 300ms;
+  transition: margin-top ease-in 300ms;
+}
+
+#marquee > header {
+  text-align: center;
+  background-color: #e9e9e9;
+  border-bottom: 1px solid #CCC;
+  border-radius: 5px 5px 0 0;
+}
+
+#marquee > header > h2 {
+  margin: 0;
+  color: #0080e3;
+  font-size: 21px;
+  line-height: 60px;
+}
+
+ul#newsBags {
+  margin: 0;
+  padding: 10px 50px;
+  max-height: 380px;
+  overflow: auto;
+}
+
+ul#newsBags > li {
+  color: #454545;
+  font-size: 13px;
+  line-height: 27px;
+  list-style: disc;
+  white-space: pre-line;
+  border-bottom: 1px dashed #999;
+}
+
+#marquee > footer {
+  text-align: center;
+  line-height: 80px;
+  background-color: #e9e9e9;
+  background-image: -webkit-radial-gradient(center top, ellipse farthest-side, rgba(0, 0, 0, 0.3), transparent);
+  background-size: 100% 8px;
+  background-repeat: no-repeat;
+  border-top: 1px solid #ccc;
+  border-radius: 0 0 5px 5px;
+}
+
+#marquee > footer > span {
+  display: inline-block;
+  width: 119px;
+  font-size: 15px;
+  font-weight: bolder;
+  line-height: 45.5px;
+  background-image: url("../../../../_Common/Content/Views/Shared/images/sent_bn.png");
+  cursor: pointer;
+}
+
+#marquee > footer > span:hover {
+  background-position: 0 -45.5px;
+}
+
+/* #endregion 彈跳視窗跑馬燈資訊內容 */
+/* #region 弹跳出来的notice Dialog */
+/* title 文字背景顏色此修改 */
+.ui-widget-header {
+  min-height: 30px;
+  line-height: 30px;
+}
+
+.ui-dialog {
+  z-index: 999;
+}
+
+.ui-dialog .ui-dialog-title {
+  font-size: 13px;
+  line-height: 15px;
+}
+
+.ui-dialog .ui-dialog-buttonpane {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only {
+  font-size: 12px;
+}
+
+.ui-dialog .ui-dialog-buttonpane button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 3px 6px;
+  background: #ffd800;
+}
+
+/* Directive: popup-dialog 若modal:true, 会出现fullscreen overlay, 下面可以设定样式 */
+/* #endregion 弹跳出来的notice Dialog */
+/*# sourceMappingURL=site.css.map */

@@ -1,0 +1,13 @@
+﻿#content form {
+    width: 400px;
+    margin: 50px 30px 20px;
+}
+
+form .form-group {
+    text-align: center;
+}
+
+form .control-label {
+    width: 130px;
+    text-align: left;
+}

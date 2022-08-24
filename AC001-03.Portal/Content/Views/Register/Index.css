@@ -1,0 +1,304 @@
+﻿/* #region 針對type=number  會出現右邊上下箭頭做隐藏 */
+input[type="number"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+    input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none; /*for chrome*/
+    }
+
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none; /*for chrome*/
+    }
+/* #endregion 針對type=number  會出現右邊上下箭頭 */
+
+#un-lobby .unlobby-nav {
+    display: none;
+}
+
+#articles .register-top p {
+    margin: 30px 0;
+    color: #fff;
+    font-size: 13px;
+}
+
+    #articles .register-top p span.big-size {
+        margin-right: 3px;
+        font-size: 26px;
+    }
+
+    #articles .register-top p .forget {
+        float: right;
+    }
+
+        #articles .register-top p .forget span {
+            padding: 0 2px;
+            color: #3aaa35;
+            font-size: 18px;
+        }
+
+#articles .register-top ul {
+    display: block;
+    font-size: 0;
+    text-align: left;
+}
+
+    #articles .register-top ul li {
+        display: inline-block;
+        width: 124px;
+        height: 32px;
+        color: #999;
+        font-size: 15px;
+        text-align: center;
+        line-height: 32px;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+        #articles .register-top ul li[data-img="01"] {
+            color: #fff;
+            background-image: url('../Register/images/btn_01.png');
+        }
+
+        #articles .register-top ul li[data-img="02"] {
+            background-image: url('../Register/images/btn_02.png');
+        }
+
+        #articles .register-top ul li[data-img="03"] {
+            background-image: url('../Register/images/btn_03.png');
+        }
+
+.form-group .control-label {
+    width: 17%;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 30px;
+}
+
+    .form-group .control-label .fa {
+        color: #fd2e32;
+    }
+
+        .form-group .control-label .fa:before {
+            content: '*';
+        }
+
+.form-group .control-div {
+    width: 30%;
+    text-align: left;
+    line-height: 30px;
+}
+
+.form-group .control-info {
+    display: inline-block;
+    width: 50%;
+    text-align: left;
+    line-height: 30px;
+}
+
+.form-group .control-div input,
+#checkcode-input-group input {
+    display: block;
+    width: 100%;
+    height: 30px;
+    padding: 0 4px;
+    font-size: 14px;
+    line-height: 30px;
+    color: #000;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.form-group .control-div > label {
+    display: inline-block;
+}
+
+.form-group .control-div input[type="radio"],
+.form-group .control-div input[type="checkbox"] {
+    display: inline-block;
+    padding: 0;
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+}
+
+.modal {
+    background: rgba(0,0,0,0.5);
+}
+
+.modal-dialog {
+    width: 700px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+fieldset {
+    width: 670px;
+    margin: 0 auto;
+    padding: 20px 0;
+    border: none;
+}
+
+.showMore {
+    display: none;
+}
+
+#moreoption, .agreement {
+    color: #3aaa35;
+    cursor: pointer;
+}
+
+a.agreement:hover {
+    text-decoration: underline;
+}
+
+.hasShow {
+    display: block;
+    -webkit-transition: all linear 3s;
+    -moz-transition: all linear 3s;
+    -ms-transition: all linear 3s;
+    -o-transition: all linear 3s;
+    transition: all linear 3s;
+}
+/*輸入驗證碼的群組*/
+#checkcode-input-group {
+    display: inline-block;
+    float: left;
+    width: 100%;
+    height: 30px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+    #checkcode-input-group > input {
+        display: inline-block;
+        float: left;
+        width: 70%;
+    }
+
+    #checkcode-input-group > span {
+        float: right;
+        width: 28%;
+        height: 30px;
+    }
+
+.checkcode {
+    position: relative;
+}
+
+    .checkcode img {
+        width: 100%;
+        height: 100%;
+        border-radius: 3px;
+    }
+
+.form-group.register-info .control-label,
+.form-group.agree-area .control-label,
+.form-group.button-area .control-label {
+    display: none;
+}
+
+.form-group.register-info .control-div {
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    color: #620800;
+    text-align: center;
+    background: #ffe71e;
+}
+
+.form-group.agree-area .control-div {
+    width: 100%;
+    text-align: center;
+}
+
+.form-group.button-area .control-div {
+    width: 100%;
+    text-align: center;
+}
+
+    .form-group.button-area .control-div button {
+        display: inline-block;
+        width: 94px;
+        height: 42px;
+        margin: 0 5px;
+        padding: 0;
+        color: #333;
+        font-size: 15px;
+        line-height: 42px;
+        vertical-align: top;
+        white-space: nowrap;
+        border: 1px solid #ffe71e;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        background: #ffe71e;
+    }
+
+        .form-group.button-area .control-div button:hover {
+            background: #ffed53;
+        }
+
+.modal-header {
+    color: #fff;
+    text-align: left;
+    background: #808080;
+}
+
+.modal-content,
+.modal-dialog,
+.modal-body,
+.modal-footer {
+    background: #fff;
+}
+
+.modal-footer {
+    margin-top: 15px;
+    padding: 19px 20px 20px;
+    text-align: right;
+    border-top: 1px solid #e5e5e5;
+}
+
+.modal-body > ul {
+    list-style-type: disc;
+    padding-left: 30px;
+}
+
+    .modal-body > ul li {
+        line-height: 2em;
+    }
+
+.modal-header > .modal-title {
+    color: #fff;
+    font-weight: normal;
+}
+
+.lineheight {
+    color: #f00;
+}
+
+/* 此為預設顏色，若各站需特別色系請由此修改 */
+.form-group .control-div input::-webkit-input-placeholder {
+    color: #fff;
+}
+
+.form-group .control-div input::-moz-placeholder {
+    color: #fff;
+}
+
+.form-group .control-div input:-ms-input-placeholder {
+    color: #fff;
+}
+
+.form-group .control-div input.placeholder {
+    color: #fff;
+}
+/* #endregion 輸入框placeholder顏色 */

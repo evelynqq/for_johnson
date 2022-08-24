@@ -1,0 +1,140 @@
+﻿body {
+    font-family: Arial, 'Microsoft JhengHei','微軟正黑體','微软正黑体';
+    background-color: #000;
+}
+
+/* #region Header */
+#search {
+    background-color: #ffe2ab;
+}
+
+    #search form input {
+        color: #ffe2ab;
+        font-weight: bold;
+        background-color: #000;
+    }
+
+        #search form input::-webkit-input-placeholder {
+            color: #ffe2ab;
+        }
+
+        #search form input::-moz-placeholder {
+            color: #ffe2ab;
+        }
+
+        #search form input:-ms-input-placeholder {
+            color: #ffe2ab;
+        }
+
+        #search form input.placeholdersjs {
+            color: #ffe2ab;
+        }
+
+    #search form button {
+        color: #000;
+    }
+/* #endregion Header */
+
+/* #region Nav */
+nav {
+    margin-bottom: 10px;
+    background-color: #ffe2ab;
+}
+
+#game-nav > li > span {
+    color: #555;
+    font-weight: bold;
+}
+
+    #game-nav > li > span:hover,
+    #game-nav > li.active > span {
+        color: #ffe2ab;
+        background-color: #000;
+    }
+
+ol.subnav > li {
+    color: #000;
+    background-color: #ffe2ab;
+}
+
+    ol.subnav > li:hover {
+        color: #ffe2ab;
+        background-color: #000;
+    }
+/* #endregion Nav */
+
+/* #region 游戏列表区块 */
+#game-list li {
+    width: 200px;
+    height: 220px;
+    background-color: #998766;
+}
+
+    #game-list li:hover {
+        background-color: #ffe2ab;
+    }
+
+    #game-list li img.icon.icon01 {
+        top: -10px;
+        left: -10px;
+    }
+
+    #game-list li img.icon.icon02 {
+        top: -10px;
+        right: -10px;
+    }
+
+    #game-list li img.icon.icon03 {
+        right: -10px;
+    }
+
+    #game-list li img.icon.icon04 {
+        left: -10px;
+    }
+
+    #game-list li:hover .game-logo:before {
+        width: 180px;
+        height: 180px;
+        background: url('../../../../_Common/Content/Views/LiveCasino/Sunbet/hover.png') no-repeat center;
+    }
+
+    #game-list li .game-logo img {
+        width: 180px;
+        height: 180px;
+    }
+/* #endregion 游戏列表区块 */
+
+/* #region 页码区块 */
+#pager li {
+    font-weight: bold;
+}
+
+    #pager li[ng-click]:hover {
+        color: #000;
+        background-color: #ffe2ab;
+    }
+/* #endregion 页码区块 */
+
+/*装置萤幕宽小于446*/
+@media (min-width: 530px) and (max-width: 700px) {
+    .LiveHtml .wrapper {
+        width: 510px;
+    }
+
+    #game-list li {
+        width: 160px;
+        height: 180px;
+    }
+
+        #game-list li .game-logo img {
+            width: 140px;
+            height: 140px;
+        }
+
+        #game-list li:hover .game-logo:before {
+            top: 9px;
+            left: 9px;
+            width: 140px;
+            height: 140px;
+        }
+}

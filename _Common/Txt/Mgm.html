@@ -1,0 +1,117 @@
+<div id="invite-box">
+    <div class="invite-list">
+        <ul>
+            <li>
+                <p>50</p>                 
+                <p>昨日获得推荐红利</p>
+            </li>
+            <li>
+                <p onclick="invitePopup()" class="rec-btn">89</p>
+                <p>您已推荐好友<i class="fa fa-external-link" onclick="invitePopup()"></i></p>
+            </li>
+            <li>
+                <p>1,889</p>
+                <p>您已获得</p>
+            </li>
+        </ul>
+    </div>
+    <div class="invite-code">
+        <h3>邀请方式</h3>
+        <p>这是您的专属邀请码, 复制以下文字通过微信或QQ等方式发送给好友</p>
+        <div class="invite-txt">
+            <p>以下为<!-- GStar -->会员专属邀请注册网址,诚挚的邀请您加入,众多好礼享不完~以下为<span>GStar</span>会员专属邀请注册网址,诚挚的邀请您加入,众多好礼享不完~<br/>
+            7533697.com/register.html?c=0E8D5W7A</p>
+        </div>
+        <div class="copy-btn">
+            <ul>
+                <li class="icon-btn">
+                    <a href=""><i class="fa fa-copy"></i><span>复制全文</span></a>
+                </li>
+                <li class="icon-btn">
+                    <a href=""><i class="fa fa-copy"></i><span>复制连结</span></a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="invite-dividend">
+        <h3>推荐红利</h3>
+        <ul>
+            <li>
+                <p>推荐完家数量 <b>1 以上</b></p>
+            </li>
+            <li>
+                <p>推荐红利比例 
+                    <span class="tip">
+                        <i class="fa fa-question-circle"></i>
+                        <span class="tiptxt">推荐好友应获红利<br/>推荐好友的有效投注额*推荐红利比例</span>
+                    </span>
+                    <b>0.1%</b>
+                </p>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <h3>活动规则</h3>
+        <p><!-- GStar -->所有会员均可参与,将专属邀请码推荐给好友,被推荐人透过此专属邀请码注册,游戏有效投注比例0.1%红利金!此优惠无需申请,系统自动发放!<span>GStar</span>保留随时终止活动的权利,并不做提前通知及保留对活动的最终解释权.</p>
+    </div>
+</div>
+<!-- <div class="modal-backdrop fade"></div> -->
+<div class="modal fade" id="invite-record">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header ng-scope">
+                <button onclick="modalClose()" type="button" class="close">×</button>
+                <h4 class="modal-title">推荐纪录</h4>
+            </div>
+            <div class="modal-body">
+                <div class="search-time">
+                    <h4>注册时间</h4>
+                    <input type="text" placeholder="年/月/日" />至<input type="text" placeholder="年/月/日" />
+                    <button>搜尋</button>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>好友账号</th>
+                            <th>注册时间</th>
+                            <th>状态</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>gg****en</td>
+                            <td>2018/10/03 上午 02:01:47</td>
+                            <td><span class="normal" title="正常"><i class="fa fa-check"></i></span></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>gg****en</td>
+                            <td>2018/10/03 上午 02:01:47</td>
+                            <td><span class="disable" title="停用"><i class="fa fa-times"></i></span></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>gg****en</td>
+                            <td>2018/10/03 上午 02:01:47</td>
+                            <td><span class="freeze" title="冻结"><i class="fa fa-lock"></i></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="modal-footer">
+                <ul id="pager">
+                    <li ng-click="startPage()">&lt;&lt;</li>
+                    <li ng-click="prevPage()">&lt;</li>
+                    <li><span ng-bind="currentPage+1" class="ng-binding">1</span>/<span ng-bind="pageCount()"
+                            class="ng-binding">8</span></li>
+                    <li ng-click="nextPage()">&gt;</li>
+                    <li ng-click="endPage()">&gt;&gt;</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

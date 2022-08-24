@@ -1,0 +1,209 @@
+﻿body {
+    background-color: #201e1e;
+}
+
+/* #region Header */
+#search {
+    width: auto;
+    padding: 0;
+    background-color: transparent;
+}
+
+    #search > form > * {
+        height: 40px;
+        line-height: 40px;
+    }
+
+    #search > form > input {
+        width: 200px;
+        margin: 0;
+        color: #201e1e;
+        font-size: 15px;
+        font-weight: bold;
+        -moz-border-radius: 5px 0 0 5px;
+        -webkit-border-radius: 5px 0 0 5px;
+        border-radius: 5px 0 0 5px;
+    }
+
+    #search form button {
+        width: 49px;
+        font-size: 30px;
+        background: #a8c638;
+        -moz-border-radius: 0 5px 5px 0;
+        -webkit-border-radius: 0 5px 5px 0;
+        border-radius: 0 5px 5px 0;
+    }
+
+        #search form button:hover {
+            background: #d0f645; /* For browsers that do not support gradients */
+            background: -webkit-linear-gradient(#d0f645, #aac939); /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(#d0f645, #aac939); /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(#d0f645, #aac939); /* For Firefox 3.6 to 15 */
+            background: linear-gradient(#d0f645, #aac939); /* Standard syntax */
+        }
+/* #endregion Header */
+
+/* #region Nav */
+nav {
+    min-height: 35px;
+    padding: 0;
+    background-color: #eee;
+}
+
+#game-nav > li {
+    position: relative;
+    display: inline-block;
+    height: 35px;
+    margin: 0 10px 0 0;
+    padding: 0;
+}
+
+    #game-nav > li > span {
+        position: relative;
+        display: block;
+        height: 100%;
+        padding: 0 10px;
+        color: #000;
+        font-size: 14px;
+        line-height: 35px;
+        z-index: 1;
+    }
+
+    #game-nav > li:hover,
+    #game-nav > li.active {
+        background: #a8c638;
+    }
+
+        #game-nav > li:hover:after,
+        #game-nav > li.active:after {
+            content: '▼';
+            position: absolute;
+            left: 50%;
+            bottom: -11px;
+            margin-left: -6px;
+            color: #a8c638;
+            font-size: 12px;
+            z-index: 2;
+        }
+
+ol.subnav > li {
+    background-color: #eee;
+}
+
+    ol.subnav > li:hover {
+        background-color: #a8c638;
+    }
+/* #endregion Nav */
+
+/* #region 游戏列表区块 */
+#game-list li {
+    width: 190px;
+    height: 219px;
+    border-color: #a8c638;
+    border-width: 4px 0 9px 0;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+    #game-list li:hover {
+        background-color: #fff;
+    }
+
+    #game-list li .game-logo {
+        padding-top: 7px;
+    }
+
+        #game-list li .game-logo img {
+            width: 180px;
+            height: 169px;
+        }
+
+    #game-list li:hover .game-logo:before {
+        top: 0;
+        left: 0;
+        width: 190px;
+        height: 206px;
+        background-image: url('../../../../_Common/Content/Views/LiveCasino/GPI/hover.png');
+    }
+
+    #game-list li:hover .game-text {
+        color: #000;
+    }
+/* #endregion 游戏列表区块 */
+
+/* #region pager */
+#pager > li {
+    margin: 0 7px;
+    font-family: Arial, PMingLiU;
+    text-transform: uppercase;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+    #pager > li[ng-click]:hover {
+        background-color: #a7c738;
+    }
+/* #endregion pager */
+
+/* #region RWD*/
+
+/* 装置萤幕宽小于870 */
+@media (max-width: 870px) {
+    #game-list li {
+        width: 160px;
+        height: 200px;
+    }
+
+        #game-list li .game-logo img {
+            width: 152px;
+            height: 152px;
+        }
+
+        #game-list li:hover .game-logo:before {
+            width: 160px;
+            height: 187px;
+        }
+}
+
+/*装置萤幕宽小于700*/
+@media (max-width: 700px) {
+    #header {
+        text-align: center;
+    }
+
+        #header #logo {
+            display: block;
+        }
+
+        #header #search {
+            position: static;
+            margin: 0 auto 15px;
+        }
+}
+
+/*装置萤幕宽小于530*/
+@media (max-width: 530px) {
+    .LiveHtml #game-list li {
+        height: 136px;
+    }
+
+        .LiveHtml #game-list li .game-logo img {
+            width: 95px;
+            height: 95px;
+        }
+
+        .LiveHtml #game-list li:hover .game-logo:before {
+            top: 0;
+            left: 0;
+            width: 109px;
+            height: 123px;
+        }
+
+    #pager > li {
+        margin: 0 3px;
+        padding: 0 3px;
+    }
+}
+/* #endregion RWD*/

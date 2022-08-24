@@ -1,0 +1,28 @@
+﻿#top-nav {
+    text-transform: uppercase;
+}
+
+#action-box > a {
+    letter-spacing: -1px;
+}
+
+ul#account-nav > li:before {
+    content: '|';
+    padding: 0;
+}
+
+ul#account-nav > li > a {
+    letter-spacing: -1px;
+}
+
+ul#account-info > li {
+    margin-right: 3px;
+}
+
+    ul#account-info > li > span.account {
+        max-width: 4em;
+    }
+
+#nav ol li {
+    font-family: Arial;
+}

@@ -1,0 +1,55 @@
+﻿* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial,'Microsoft YaHei', '微軟雅黑','微软雅黑';
+    text-align: center;
+    background: #000 url('../../../../_Common/Content/Views/Account/LoginToSunbetLiveBetLimit/bg.jpg') no-repeat center top;
+}
+
+.sunbetLiveBetLimit {
+    margin: 105px auto 0;
+    padding: 240px 0 0 0;
+    width: 725px;
+    height: 636px;
+    border: 3px solid #cac5b9;
+    color: #fff;
+    font-size: 21px;
+    background-color: rgba(0,0,0,.6);
+    background-color: #000\9;
+    background-repeat: no-repeat;
+    background-position: center 50px;
+    background-image: url('../../../../_Common/Content/Views/Account/LoginToSunbetLiveBetLimit/logo.png');
+}
+
+    .sunbetLiveBetLimit p {
+        margin: 0 auto 25px;
+        padding: 0 0 5px 0;
+        width: 500px;
+        border-bottom: 1px solid #fff;
+        text-align: left;
+    }
+
+    .sunbetLiveBetLimit ul {
+        margin: 0 auto;
+        padding: 0;
+        width: 490px;
+        list-style: none;
+    }
+
+        .sunbetLiveBetLimit ul li {
+            margin: 0 0 15px 0;
+            line-height: 53px;
+            border: 1px solid #443d32;
+            cursor: pointer;
+            background-color: #1e1b15;
+        }
+
+            .sunbetLiveBetLimit ul li:hover {
+                background-color: #0a0907;
+            }

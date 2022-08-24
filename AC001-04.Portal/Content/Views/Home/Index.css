@@ -1,0 +1,146 @@
+﻿#content > .wrapper {
+    padding-top: 15px;
+}
+
+#banner {
+    height: 600px;
+    background-image: none;
+    background-color: #241530;
+}
+
+/* #region slide-banner樣式 */
+#slide-banner {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+}
+
+    #slide-banner .slide {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -960px;
+    }
+
+
+        #slide-banner .slide a {
+            display: inline-block;
+            width: 1920px;
+            height: 600px; /* 通常只會改這兩個地方 跟著圖片高度 */
+        }
+
+    
+    /* 點點切換紐 */
+    #slide-banner .slide-pager {
+        position: absolute;
+        bottom: 40px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+        #slide-banner .slide-pager li {
+            display: inline-block;
+            width: 13px;
+            height: 13px;
+            margin: 0 4px;
+            /* 若要数字编号可以把font-size: 0拿掉 */
+            font-size: 0;
+            background-color: #ffc426;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+            #slide-banner .slide-pager .on,
+            #slide-banner .slide-pager li:hover {
+                background-color: #fff;
+            }
+/* #endregion slide-banner樣式 */
+
+#news {
+    height: 80px;
+    padding: 0 10px 0 160px;
+    background: url('../Home/images/news.png') no-repeat left center;
+}
+
+#hot-news a {
+    color: #999;
+    line-height: 45px;
+}
+
+#introduce {
+    position: relative;
+    height: 620px;
+    background: url('../Home/images/footerimg.jpg') no-repeat center top #eee;
+}
+
+    #introduce .wrapper {
+        position: relative;
+    }
+
+    #introduce #time01 {
+        position: absolute;
+        top: 124px;
+        left: 2px;
+        width: 304px;
+        height: 87px;
+        background: url('../Home/images/deposit.gif');
+    }
+
+    #introduce #time02 {
+        position: absolute;
+        top: 220px;
+        left: 2px;
+        width: 304px;
+        height: 87px;
+        background: url('../Home/images/withdraw.gif');
+    }
+
+.game-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0;
+}
+
+    .game-list:after {
+        content: '';
+        display: block;
+        padding-top: 50px;
+        width: 1000px;
+        height: 130px;
+        background: url('../Home/images/game.png') no-repeat center;
+    }
+
+    .game-list li {
+        display: inline-block;
+        width: 250px;
+        height: 370px;
+    }
+
+        .game-list li.live {
+            background: url('../Home/images/g_01.png') no-repeat;
+        }
+
+        .game-list li.sport {
+            background: url('../Home/images/g_02.png') no-repeat;
+        }
+
+        .game-list li.lottery {
+            background: url('../Home/images/g_04.png') no-repeat;
+        }
+
+        .game-list li.game {
+            background: url('../Home/images/g_03.png') no-repeat;
+        }
+
+        .game-list li:hover {
+            background-position: right;
+        }
+
+        .game-list li a {
+            display: block;
+            height: 100%;
+        }

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html @* xmlns:ng="http://angularjs.org" *@ id="ng-app" ng-app="portalApp" meidon-time="@ViewBag.MeiDonNow" @* 主機的美東時間
+    *@ moment-lang="@ViewBag.Language" @* 瀏覽器語系 *@ ng-init="'@Resources.Shared.Head_Title'">
+
+<head>
+    <title>welcome</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="shortcut icon" href="../../../_Common/Content/Views/Shared/images/favicon.ico" />
+    <link href="../../bundles/site.css" rel="stylesheet" />
+    <link href="../../../_Common/Content/Views/App/Index.css" rel="stylesheet" />
+    <script src="../../../_Common/Scripts/jquery/v1.12.4/jquery.min.js"></script>
+    <script src="../../bundles/include-html.js"></script>
+    <script src="../../../_Common/Scripts/jquery/v1.12.4/jquery.min.js"></script>
+    <script src="../../../_Common/Scripts/jquery.qrcode.min.js"></script>
+</head>
+
+<body class="layout" ng-controller="LayoutCtrl">
+    <div id="app-download">
+        <div class="title">APP下載</div>
+        <div class="logo"></div>
+        <ul class="app-list">
+            <li class="casino">
+                <div class="title">
+                    <div class="icon"></div>
+                    <h3>亞虎娛樂全站APP</h3>
+                    <i class="fa fa-apple"></i>
+                    <i class="fa fa-android"></i>
+                </div>
+                <div class="banner"></div>
+                <div class="app-bottom">
+                    <div class="qr-code strAppPath1"></div>
+                    <p>使用手機掃描QRCode下載應用程序</p>
+                    <button>安裝教學</button>
+                </div>
+            </li>
+            <li class="tpg">
+                <div class="title">
+                    <div class="icon"></div>
+                    <h3>TPG 4D捕魚APP</h3>
+                    <i class="fa fa-apple"></i>
+                    <i class="fa fa-android"></i>
+                </div>
+                <div class="banner"></div>
+                <div class="app-bottom">
+                    <div class="qr-code"></div>
+                    <p>使用手機掃描QRCode下載應用程序</p>
+                    <button>安裝教學</button>
+                </div>
+            </li>
+            <li class="more">
+                <div class="title">
+                    <div class="icon"></div>
+                    <h3>Coming Soon</h3>
+                    <i class="fa fa-apple"></i>
+                    <i class="fa fa-android"></i>
+                </div>
+                <div class="banner"></div>
+                <div class="app-bottom">
+                    <p>敬請期待</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script>
+        $(function () {
+            $(".casino .qr-code").qrcode({
+                text: "casionurl",
+            });
+        });
+        $(function () {
+            $(".tpg .qr-code").qrcode({
+                text: "tpgurl",
+            });
+        });
+        $(function () {
+            $(".more .qr-code").qrcode({
+                text: "coming soon",
+            });
+        });
+    </script>
+</body>
+
+</html>

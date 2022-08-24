@@ -1,0 +1,21 @@
+﻿/* Lobby各廳設定 */
+#lobby {
+    display: inline-block;
+    color: #fff;
+    font-size: 0;
+    width: 100%;
+}
+
+    #lobby > ul.game-list {
+        text-align: center;
+    }
+
+        #lobby > ul.game-list > li {
+            display: inline-block;
+            background-position: center top;
+            background-repeat: no-repeat;
+        }
+
+            #lobby > ul.game-list > li:hover {
+                background-position: center bottom;
+            }

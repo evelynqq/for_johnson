@@ -1,0 +1,67 @@
+﻿@import '../../../../_Common/Css/GameCode';
+
+#banner {
+    background-image: url('../Lobby/Game/banner.jpg');
+}
+
+#lobby .game-list > li {
+    width: 300px;
+    height: 295px;
+    margin: 0px 10px 14px 4px;
+    background-position: center 10px;
+    background-color:#b82322;
+    position: relative;
+    span {
+        display: none;
+    }
+    div {
+        display: none;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        width: 150px;
+        height: 150px;
+        top: 170px;
+        left: 15px;
+        opacity: 1;
+    }
+    &:not([game-box='more']):after {
+        position: absolute;
+        color: #b82322;
+        background-color: #fff;
+        width: 100px;
+        height: 30px;
+        top: 225px;
+        margin-left: 40px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        opacity: 1;
+        text-align: center;
+    }
+}
+#lobby .game-list > li:not([game-box='more']):hover {
+    background-size: 102%;
+    overflow: hidden;
+}
+#lobby .game-list > li:not([game-box='more']):hover:after {
+    opacity: 1;
+    top: 225px;
+    width: 110px;
+    margin-left: 30px;
+    font-size: 18px;
+}
+
+// gamebox-list
+@each $gamebox in $game-list {
+    #lobby li[game-box='#{$gamebox}'] {
+        background-image: url('../lobby/Game/#{$gamebox}.jpg');
+        &::before {
+            background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v1/white/Game/#{$gamebox}.png');
+        }
+    }
+}

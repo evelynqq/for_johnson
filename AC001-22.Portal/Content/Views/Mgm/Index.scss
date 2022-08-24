@@ -1,0 +1,41 @@
+﻿$MainColor: #2f2e2c;
+$SecondColor: #ffbd00;
+
+#banner {
+    background-image: url('../Mgm/images/banner.jpg');
+}
+
+#invite-box .invite-list li p:first-child {
+    color: $SecondColor;
+}
+
+#invite-box h3 {
+    color: $MainColor;
+}
+
+#invite-box .icon-btn {
+    background: $MainColor;
+    &:before {
+        background: $SecondColor;
+    }
+}
+
+#invite-box b {
+    color: $SecondColor;
+}
+
+#invite-box {
+    text-align: left;
+}
+
+#invite-record.modal.in {
+    table th {
+        background: $MainColor;
+    }
+    .search-time button {
+        background: $MainColor;
+        &:hover {
+            background: $SecondColor;
+        }
+    }
+}

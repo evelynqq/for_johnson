@@ -1,0 +1,83 @@
+﻿#un-lobby > div {
+    padding-bottom: 10px;
+}
+
+/*#region 遊戲分類樣式 */
+ul.navtab {
+    width: 1000px;
+    margin: 0 auto 10px;
+    border-bottom: 1px solid #b4564a;
+    text-align: left;
+}
+
+    ul.navtab li {
+        display: inline-block;
+        height: 38px;
+        padding: 0 5px;
+        color: #fff;
+        font-size: 14px;
+        font-family: 'Microsoft JhengHei';
+        line-height: 38px;
+    }
+
+        ul.navtab li.tab {
+            background: #b4564a;
+        }
+/*#endregion 優惠分類樣式 */
+
+/*#region 優惠區塊 */
+ul.discount {
+    margin: 0 auto;
+    padding: 0px 20px;
+    width: 100%;
+}
+
+    ul.discount > li {
+        width: 100%;
+    }
+
+        ul.discount > li:first-child {
+            margin-bottom: 5px;
+        }
+
+            ul.discount > li:first-child > img {
+                width: 100%;
+            }
+
+        /*優惠內文顏色*/
+        ul.discount > li.content {
+            color: #000;
+            text-align: justify;
+            overflow-x: auto;
+        }
+
+li.content dd {
+    margin-left: 0;
+}
+
+li.content table {
+    width: 100%;
+}
+
+    li.content table tr,
+    li.content table th,
+    li.content table td {
+        line-height: 2em;
+        text-align: center;
+    }
+
+li.content ol {
+    padding-left: 20px;
+    list-style-type: decimal;
+}
+
+li.content ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+li.content .highlight {
+    color: #f00;
+}
+
+/*#endregion 優惠區塊 */

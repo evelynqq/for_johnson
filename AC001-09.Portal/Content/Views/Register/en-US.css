@@ -1,0 +1,15 @@
+﻿.form-group .control-label {
+    width: 27%;
+}
+
+.form-group .control-div {
+    width: 33%;
+}
+
+#checkcode-input-group {
+    width: 205px;
+}
+
+.last .control-div {
+    white-space: nowrap;
+}

@@ -1,0 +1,68 @@
+﻿@import "../../../../_Common/Css/GameCode";
+
+#banner {
+    background-image: url('../Lobby/Sport/banner.jpg');
+}
+
+#lobby li {
+    width: 285px;
+    height: 360px;
+    background: #ccc;
+    background-size: 100%;
+    background-position: center;
+    display: inline-block;
+    transition: all 0.2s linear;
+    &:nth-child(n+5) {
+        margin-top: 16px;
+    }
+    span {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        bottom: 0;
+        left: 0;
+        color: #fff;
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        font-size: 25px;
+        z-index: 2;
+        background: rgba(0,0,0,.5);
+        transition: all 0.2s linear;
+    }
+    &:not([game-box="more"]):hover {
+        span {
+            bottom: 50%;
+            margin-bottom: -25px;
+            background: transparent;
+            border: 2px solid #fff;
+            border-radius: 3px;
+            width: 70%;
+            margin-right: 15%;
+            margin-left: 15%;
+        }
+        &:not([game-box="more"]) {
+            background-size: 120%;
+            background-position: center;
+        }
+    }
+    & + li:not(:nth-child(4n+1)) {
+        margin-left: 16px;
+    }
+}
+
+// gamebox-list
+@each $gamebox in $sport-list {
+    #lobby li[game-box="#{$gamebox}"] {
+        background-image: url("../lobby/Sport/#{$gamebox}.jpg");
+    }
+}
+
+@each $gamebox in $esport-list {
+    @if ($gamebox != 'more') {
+        #lobby li[game-box="#{$gamebox}"] {
+            background-image: url("../lobby/Esport/#{$gamebox}.jpg");
+        }
+    }
+}

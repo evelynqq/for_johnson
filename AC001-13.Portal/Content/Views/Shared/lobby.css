@@ -1,0 +1,13 @@
+﻿#lobby {
+    text-align: center;
+}
+
+.game-list li[game-box] {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+    .game-list li[game-box]:hover {
+        background-position: center bottom;
+    }

@@ -1,0 +1,72 @@
+﻿@import '../../../../_Common/Css/GameCode';
+
+#banner {
+    background-color: #251754;
+    background-image: url('../Lobby/Lottery/banner.jpg');
+}
+
+#lobby {
+    position: relative;
+    left: 50%;
+    margin-left: -500px;
+    width: 1000px;
+}
+
+.game-list li,
+.game-list li:before,
+.game-list li span {
+    transition: all 0.2s linear;
+}
+
+.game-list li {
+    position: relative;
+    margin: 15px;
+    width: 468px;
+    height: 330px;
+    background-color: #333;
+    overflow: hidden;
+    filter: brightness(0.5);
+    &:before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    span {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        margin: -50px -125px 0 0;
+        width: 250px;
+        height: 100px;
+        background: rgba(0, 0, 0, 0.5);
+        border: 1px solid #fff;
+        line-height: 100px;
+        text-align: center;
+        font-size: 22px;
+        color: #fff;
+        z-index: 2;
+    }
+    div {
+        display: none;
+    }
+    &:hover {
+        filter: brightness(0.9);
+        &:before,
+        span {
+            transform: scale(1.1, 1.1);
+        }
+    }
+}
+
+// gamebox-list
+@each $gamebox in $lottery-list {
+    #lobby li[game-box='#{$gamebox}']:before {
+        background-image: url('../lobby/Lottery/#{$gamebox}.jpg');
+    }
+}

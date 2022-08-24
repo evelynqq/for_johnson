@@ -1,0 +1,66 @@
+﻿@import '../../../../_Common/Css/GameCode';
+
+.banner {
+    background: url('../Lobby/Live/banner.jpg') center top no-repeat;
+}
+
+#lobby .game-list li {
+    width: 46%;
+    height: 233px;
+    margin: 0 2% 15px;
+    border: 1px solid #354666;
+    transition: opacity 0.2s;
+    // background-position: center top;
+    background: url('../Lobby/live/AllBetReal.jpg');
+    background: url('../Lobby/Live/more.jpg') no-repeat center top;
+    position: relative;
+    &:hover {
+        opacity: 0.7;
+    }
+    span {
+        font-size: 20px;
+        color: #fff;
+        position: absolute;
+        width: 150px;
+        height: 30px;
+        bottom: 55px;
+        left: 50px;
+        text-align: center;
+        font-weight: 300;
+        letter-spacing: 2px;
+    }
+    div {
+        display: none;
+    }
+    &::before {
+        content: '';
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        top: 20px;
+        left: 50px;
+        background-repeat: no-repeat;
+    }
+    &::after {
+        content: '立即进入';
+        position: absolute;
+        font-size: 16px;
+        text-align: center;
+        color: #0e86ca;
+        width: 150px;
+        height: 30px;
+        bottom: 30px;
+        left: 50px;
+        font-weight: 400;
+    }
+}
+
+// gamebox-list
+@each $gamebox in $live-list {
+    #lobby li[game-box='#{$gamebox}'] {
+        background-image: url('../lobby/live/#{$gamebox}.jpg');
+        &::before {
+            background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v1/color/live/#{$gamebox}.png');
+        }
+    }
+}

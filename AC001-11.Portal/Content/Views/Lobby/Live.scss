@@ -1,0 +1,63 @@
+﻿@import '../../../../_Common/Css/GameCode';
+
+#banner {
+    background-image: url('../Lobby/Live/banner.jpg');
+}
+
+.game-list > li {
+    position: relative;
+    width: 235px;
+    height: 323px;
+    margin: 20px 15px;
+    border-radius: 0.25rem;
+    box-shadow: 0 5px 19px 0 rgba(0, 0, 0, 0.15);
+    background-size: 100% 100%;
+    transition: all 0.2s linear;
+    &:not([game-box='more']):hover {
+        box-shadow: 0 5px 19px 0 rgba(0, 0, 0, 0.25);
+        transform: scale(1.05, 1.05);
+    }
+    span {
+        position: absolute;
+        left: 0;
+        top: 80px;
+        font-weight: 400;
+        font-size: 14px;
+        text-align: center;
+        color: #fff;
+        border:1px solid rgba(255, 255, 255, 0.034);
+        width: 130px;
+        height: 30px;
+        line-height: 21px;
+        letter-spacing: 1px;
+        border-bottom-right-radius: 3px;
+        border-bottom-left-radius: 3px;
+    }
+    div {
+        display: none;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100px;
+        height: 70px;
+        top: 20px;
+        left: 10px;
+    }
+}
+.game-list > li[game-box='more'] span {
+    width: 235px;
+    height: 50px;
+    font-size: 36px;
+    color: #95bdbdad;
+}
+// gamebox-list
+@each $gamebox in $live-list {
+    #lobby li[game-box='#{$gamebox}'] {
+        background-image: url('../lobby/live/#{$gamebox}.jpg');
+        &::before {
+            background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v2/white/live/#{$gamebox}.png');
+            // background-image: url('../lobby/live/logo/#{$gamebox}.png');
+        }
+    }
+}

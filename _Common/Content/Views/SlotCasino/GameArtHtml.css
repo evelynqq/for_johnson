@@ -1,0 +1,104 @@
+﻿/* #region header */
+#search {
+    background-color: #38368e;
+}
+/* #endregion header */
+
+/* #region nav */
+nav {
+    padding: 0;
+    background: #eee;
+    background: -moz-linear-gradient(top, #eee 0, #ddd 100%);
+    background: -webkit-linear-gradient(top, #eee 0,#ddd 100%);
+    background: linear-gradient(to bottom, #eee 0,#ddd 100%);
+}
+
+#game-nav > li {
+    height: 50px;
+    margin: 0 8px;
+}
+
+    #game-nav > li > span {
+        display: block;
+        height: 100%;
+        padding: 0 16px;
+        color: #555;
+        line-height: 50px;
+        z-index: 1;
+    }
+
+    #game-nav > li:hover:after,
+    #game-nav > li.active:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 3px;
+        background-color: #38368e;
+    }
+
+ol.subnav {
+    padding: 0;
+    background: #ddd;
+    background: -moz-linear-gradient(left, #ddd 0, #eee 100%);
+    background: -webkit-linear-gradient(left, #ddd 0,#eee 100%);
+    background: linear-gradient(to right, #ddd 0,#eee 100%);
+}
+
+    ol.subnav > li {
+        color: #555;
+        background-color: transparent;
+    }
+
+        ol.subnav > li:hover {
+            color: #fff;
+            background-color: #38368e;
+        }
+/* #endregion nav */
+
+/* #region recommend-list */
+#recommend-list .slick-dots li.slick-active,
+#recommend-list .slick-dots li.slick-active:hover,
+#recommend-list .slick-prev:hover,
+#recommend-list .slick-next:hover {
+    background-color: #555;
+}
+
+#recommend-list .list-title {
+    border-bottom: 2px solid #555;
+}
+
+    #recommend-list .list-title span {
+        background-color: #555;
+    }
+
+    #recommend-list .list-title a {
+        color: #555;
+    }
+/* #endregion recommend-list */
+
+/* #region 游戏列表区块 */
+ul.game-list li {
+    border-color: #555;
+}
+
+    ul.game-list li:hover {
+        background-color: #38368e;
+    }
+
+        ul.game-list li:hover .game-logo:before {
+            background-image: url('../../../../_Common/Content/Views/SlotCasino/GameArt/hover.png');
+        }
+
+        ul.game-list li:hover .game-text {
+            color: #fff;
+        }
+/* #endregion 游戏列表区块 */
+
+/* #region pager */
+#pager > li[ng-click]:hover {
+    color: #fff;
+    background-color: #38368e;
+}
+/* #endregion pager */

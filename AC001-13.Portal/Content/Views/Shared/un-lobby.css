@@ -1,0 +1,249 @@
+﻿/* 各頁設定 */
+#un-lobby {
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    margin-left: -500px;
+    width: 1000px;
+}
+
+    #un-lobby aside {
+        float: left;
+    }
+
+    #un-lobby ul#sidebar {
+        width: 196px;
+        padding-top: 32px;
+    }
+
+        #un-lobby ul#sidebar li {
+            float: left;
+            width: 196px;
+            height: 48px;
+            text-align: center;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+            #un-lobby ul#sidebar li a {
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                color: #00a4df;
+                font-size: 15px;
+                line-height: 48px;
+                text-decoration: none;
+                border: 1px solid #00a4df;
+                -moz-border-radius: 3px;
+                -webkit-border-radius: 3px;
+                border-radius: 3px;
+                background-color: none;
+                -webkit-transition: all 0.2s linear;
+                -moz-transition: all 0.2s linear;
+                -o-transition: all 0.2s linear;
+                -ms-transition: all 0.2s linear;
+                transition: all 0.2s linear;
+            }
+
+            #un-lobby ul#sidebar li.promotion {
+                height: 169px;
+                margin-top: 10px;
+                background: url('../Shared/images/aside_pro.jpg') no-repeat center top;
+            }
+
+            #un-lobby ul#sidebar li:not(.promotion) a:hover,
+            #un-lobby ul#sidebar li.active a {
+                background-color: #00a4df;
+                color: #fff;
+                background-position: center bottom;
+            }
+
+/* 內文CSS */
+#articles {
+    float: right;
+    width: 800px;
+    min-height: 550px;
+    padding: 15px 35px;
+    color: #5d7079;
+    text-align: left;
+}
+
+    #articles h2 {
+        padding-bottom: 15px;
+        margin: 15px 0;
+        color: #374f7e;
+        font-size: 18px;
+        border-bottom: 1px solid #374f7e;
+    }
+
+    #articles h3 {
+        color: #374f7e;
+        font-size: 16px;
+        text-align: left;
+    }
+
+    #articles h4 {
+        color: #374f7e;
+        font-size: 14px;
+        text-align: left;
+    }
+
+    #articles > ul {
+        padding-left: 20px;
+        list-style: disc;
+    }
+
+        #articles > ul.nonstyle {
+            list-style: none;
+        }
+
+    #articles ol {
+        padding-left: 20px;
+        list-style-type: decimal;
+    }
+
+    #articles p,
+    #articles li {
+        font-size: 13px;
+        text-align: justify;
+        line-height: 25px;
+    }
+
+    #articles p {
+        margin: 1em 0;
+    }
+
+    #articles table {
+        width: 100%;
+    }
+
+        #articles table tr,
+        #articles table th,
+        #articles table td {
+            color: #2b1e0e;
+            font-size: 13px;
+            line-height: 25px;
+            text-align: center;
+            border: 1px solid #473308;
+        }
+
+        #articles table th {
+            color: #fff;
+            background-color: #2a3d60;
+        }
+
+    /* 重點顏色 */
+    #articles .highlight {
+        color: #ff0000;
+        font-weight: bolder;
+    }
+
+    /* #region 合作夥伴tab 供其他页面使用 */
+    #articles ul.mtab-menual {
+        padding: 0;
+    }
+
+        #articles ul.mtab-menual li {
+            float: left;
+            display: inline-block;
+            width: 181px;
+            height: 45px;
+            padding: 0 5px;
+            color: #fff;
+            font-size: 18px;
+            line-height: 45px;
+            text-align: center;
+            background: #374f7e;
+            cursor: pointer;
+            background-color: #2e4369;
+            border-left: 1px solid #253655;
+            box-shadow: inset 10px -40px 40px 0 rgba(0,0,0,0.1);
+        }
+
+            #articles ul.mtab-menual li.mtab,
+            #articles ul.mtab-menual li:hover {
+                background: #37517e;
+                background-position: center bottom;
+            }
+    /* #endregion 合作夥伴tab 供其他页面使用 */
+
+    /* #region deposit线上存款页面使用 */
+    #articles ul.deposit {
+        list-style-type: none;
+    }
+
+        #articles ul.deposit > li {
+            counter-increment: title;
+        }
+
+            #articles ul.deposit > li > a:before {
+                content: "方法 "counter(title,upper-alpha)"、";
+            }
+
+            #articles ul.deposit > li a {
+                color: #06b9ff;
+                font-size: 16px;
+                text-decoration: underline;
+            }
+/* #endregion deposit线上存款页面使用 */
+
+/* #region account nav共用 */
+.body {
+    position: relative;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 5px;
+    font-size: 14px;
+    font-family: PMingLiU;
+    background: rgba(0,0,0,0.1);
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+    .body #title {
+        color: #fff;
+        text-align: center;
+        background: #374f7e;
+    }
+
+    .body.container #title,
+    .body #account-heading,
+    .body #withdrawal-heading {
+        color: #fff;
+        background: #06b9ff;
+    }
+    /* 檢視存入帳戶的文字顏色 */
+    .body #show-account-info.btn {
+        color: #fff;
+    }
+/* #endregion account nav共用 */
+
+/* #region 輸入框placeholder顏色 */
+/* 此為預設顏色，若各站需特別色系請由此修改，不需要可整段刪除 */
+.form-group .control-div input::-webkit-input-placeholder {
+    color: #999;
+}
+
+.form-group .control-div input::-moz-placeholder {
+    color: #999;
+}
+
+.form-group .control-div input:-ms-input-placeholder {
+    color: #999;
+}
+
+.form-group .control-div input.placeholder {
+    color: #999;
+}
+/* #endregion 輸入框placeholder顏色 */
+
+/* 一鍵取回 */
+.body.container #title,
+.body #account-heading,
+.body #withdrawal-heading,
+#account-popup.modal.in table th {
+    color: #fff;
+    background: #37507e;
+}

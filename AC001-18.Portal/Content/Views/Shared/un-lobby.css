@@ -1,0 +1,254 @@
+/* 各頁設定 */
+#un-lobby {
+    margin: 30px 15px 50px;
+    background: #efefef;
+}
+
+    #un-lobby:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+
+    #un-lobby ul#sidebar {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+        #un-lobby ul#sidebar li {
+            float: left;
+            width: 135px;
+            height: 45px;
+            color: #fff;
+            font-size: 15px;
+            font-family: 'Microsoft YaHei';
+            line-height: 45px;
+            text-align: center;
+            background: #001c33;
+        }
+
+            #un-lobby ul#sidebar li.asideTrial {
+                display: none;
+            }
+
+            #un-lobby ul#sidebar li:hover, #un-lobby ul#sidebar li.active {
+                background: #b82422;
+            }
+
+            #un-lobby ul#sidebar li a {
+                display: block;
+                height: 100%;
+                color: inherit;
+                text-decoration: none;
+            }
+
+/* 內文CSS */
+#articles {
+    position: relative;
+    float: left;
+    min-height: 370px;
+    padding: 30px 20px;
+    font-size: 13px;
+    font-family: 'Microsoft YaHei';
+    color: #888;
+}
+
+    #articles h2 {
+        margin: 0;
+        color: #001d33;
+        font-size: 25px;
+    }
+
+    #articles h3 {
+        color: #b82422;
+    }
+
+    #articles h4 {
+        color: #666;
+    }
+
+    #articles > ul {
+        list-style: none;
+    }
+
+    #articles ol {
+        padding-left: 20px;
+        list-style-type: decimal;
+    }
+
+        #articles ol ul {
+            list-style: none;
+            padding: 0;
+        }
+
+    #articles p,
+    #articles li {
+        font-size: 13px;
+        text-align: justify;
+        line-height: 2em;
+    }
+
+    #articles p {
+        margin: 1em 0;
+    }
+
+    #articles table {
+        width: 100%;
+    }
+
+        #articles table tr,
+        #articles table th,
+        #articles table td {
+            color: #fff;
+            line-height: 2em;
+            text-align: center;
+            border: 1px solid #efefef;
+            background: #666;
+        }
+
+        #articles table th {
+            color: #FFF;
+            font-size: 15px;
+            font-weight: bold;
+            background: #b82422;
+        }
+
+    /* 重點顏色 */
+    #articles .highlight {
+        color: #ff0000;
+        font-weight: bolder;
+    }
+
+    /* #region 合作夥伴tab 供其他页面使用 */
+    #articles ul.mtab-menual {
+        margin: 30px 0 0;
+        padding: 0;
+        text-align: left;
+    }
+
+        #articles ul.mtab-menual li {
+            display: inline;
+            margin-right: 15px;
+            padding: 10px 25px;
+            color: #fff;
+            font-size: 15px;
+            background: #001d33;
+            cursor: pointer;
+        }
+
+            #articles ul.mtab-menual li.mtab {
+                background: #b82422;
+            }
+
+    #articles #agent-register {
+        margin-top: 30px;
+    }
+    /* #endregion 合作夥伴tab 供其他页面使用 */
+
+    /* #region deposit线上存款页面使用 */
+    #articles ul.deposit {
+        list-style-type: none;
+        margin: 20px 0 0;
+        padding: 0;
+    }
+
+        #articles ul.deposit > li {
+            counter-increment: title;
+        }
+
+            #articles ul.deposit > li > a:before {
+                content: "方式 "counter(title,upper-alpha)"、";
+                color: #b82422;
+                border-bottom: 1px solid #b82422;
+            }
+
+            #articles ul.deposit > li > a.other-deposit:before {
+                content: "通道二：";
+            }
+
+            #articles ul.deposit > li a {
+                color: #b82422;
+                font-size: 16px;
+                border-bottom: 1px solid #b82422;
+            }
+
+            #articles ul.deposit > li .red {
+                color: #f00;
+            }
+
+            #articles ul.deposit > li .green {
+                color: #28ff28;
+            }
+
+            #articles ul.deposit > li .orange {
+                color: #f93;
+            }
+
+            #articles ul.deposit > li .yellow {
+                color: #f5f557;
+            }
+
+/* #endregion deposit线上存款页面使用 */
+
+/* #region account nav共用 */
+.body {
+    position: relative;
+    width: 1000px;
+    padding: 5px;
+    margin: 30px auto;
+    font-size: 13px;
+    font-family: PMingLiU;
+    background: rgb(0,0,0,.1);
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+    .body #title {
+        color: #fff;
+        text-align: center;
+        background: #b82422;
+    }
+
+    .body.container #title,
+    .body #account-heading,
+    .body #withdrawal-heading {
+        color: #fff;
+        background: #333;
+    }
+    /* 檢視存入帳戶的文字顏色 */
+    .body #show-account-info.btn {
+        color: #fff;
+        background: #333;
+    }
+/* #endregion account nav共用 */
+
+/* #region 輸入框placeholder顏色 */
+/* 此為預設顏色，若各站需特別色系請由此修改，不需要可整段刪除 */
+.form-group .control-div input::-webkit-input-placeholder {
+    color: #999;
+}
+
+.form-group .control-div input::-moz-placeholder {
+    color: #999;
+}
+
+.form-group .control-div input:-ms-input-placeholder {
+    color: #999;
+}
+
+.form-group .control-div input.placeholder {
+    color: #999;
+}
+/* #endregion 輸入框placeholder顏色 */
+
+/* 一鍵取回 */
+.body.container #title,
+.body #account-heading,
+.body #withdrawal-heading,
+#account-popup.modal.in table th {
+    color: #fff;
+    background: #404040;
+}

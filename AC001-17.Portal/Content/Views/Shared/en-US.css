@@ -1,0 +1,26 @@
+﻿.mainnav > li > a {
+    font-size: 12px;
+}
+
+ul#account-nav > li {
+    padding: 0 5px;
+    line-height: 8px;
+}
+
+    ul#account-nav > li > a {
+        font-size: 12px;
+    }
+
+#action-box > a {
+    font-size: 12px;
+}
+
+#un-lobby aside #sidebar li a {
+    padding-left: 15px;
+    letter-spacing: -1px;
+    font-size: 13px;
+}
+
+#footer-nav a {
+    padding: 0 5px;
+}

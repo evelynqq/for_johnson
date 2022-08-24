@@ -1,0 +1,8 @@
+﻿.container {
+    max-width: none !important;
+    width: 750px;
+}
+
+.actionbar {
+    width: 64px;
+}

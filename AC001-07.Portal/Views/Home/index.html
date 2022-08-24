@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html @* xmlns:ng="http://angularjs.org" *@ id="ng-app" ng-app="portalApp" meidon-time="@ViewBag.MeiDonNow" @* 主機的美東時間 *@ moment-lang="@ViewBag.Language" @* 瀏覽器語系 *@ ng-init="'@Resources.Shared.Head_Title'">
+
+<head>
+    <title>welcome</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="shortcut icon" href="../../../_Common/Content/Views/Shared/images/favicon.ico" />
+    <link href="../../bundles/site.css" rel="stylesheet" />
+    <link href="../../Content/Views/Home/index.css" rel="stylesheet" />
+    <script src="../../../_Common/Scripts/jquery/v1.12.4/jquery.min.js"></script>
+    <script src="../../bundles/include-html.js"></script>
+    <script src="../../../_Common/Content/jquery.SuperSlide.2.1.2.js" type="text/javascript"></script>
+    <script>
+        // Slide-banner
+        $(function () {
+            $('#slide-banner').slide({
+                titCell: 'ul.slide-pager',
+                mainCell: 'div.slide',
+                autoPage: true,
+                autoPlay: true,
+                effect: 'fold',
+                interTime: 3000,
+                delayTime: 500,
+                easing: 'swing',
+                trigger: 'click'
+            });
+        });
+    </script>
+</head>
+
+<body class="layout" ng-controller="LayoutCtrl">
+    <header id="header"></header>
+    <!-- Slide-Banner -->
+    <div class="banner">
+        <section id="slide-banner">
+            <div class="slide">
+                <a href="#"><img src="../../../_Common/Content/Views/Shared/images/01.jpg"></a>
+                <a href="#"><img src="../../../_Common/Content/Views/Shared/images/02.jpg"></a>
+                <a href="#"><img src="../../../_Common/Content/Views/Shared/images/03.jpg"></a>
+            </div>
+            <ul class="slide-pager"></ul>
+        </section>
+        <div class="wrapper"></div>
+    </div>
+    <!-- Slide-Banner End -->
+    <div id="news"></div>
+    <div id="content">
+        <div id="home" ng-controller="LobbiesCtrl">
+            <section id="money">
+                <div class="jackpot-area">
+                    <ul>
+                        <li>
+                            MG累积大奖
+                            <span super-jackpot>60,240.12</span>
+                        </li>
+                        <li class="middle">
+                            PT累积大奖
+                            <span super-jackpot>45,358,467.64</span>
+                        </li>
+                        <li>
+                            BBIN累积大奖
+                            <span super-jackpot>768,543.97</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="winners-area" ng-controller="HomeListCtrl">
+                    <div data-list="01">
+                        <ul class="cycle-slideshow" data-cycle-fx="carousel" data-cycle-carousel-vertical="true" data-cycle-timeout="1" data-cycle-easing="linear" data-cycle-slides="> li" data-cycle-speed="2000" data-cycle-pause-on-hover=true>
+                            <li ng-repeat="item in winnersListLeft track by $index" ng-cloak>
+                                <span class="area">电子游艺</span>
+                                <span class="user">ad****</span>
+                                <span class="game">女仕之夜</span>
+                                <span class="money">500.00</span>
+                            </li>
+                            <li ng-repeat="item in winnersListLeft track by $index" ng-cloak>
+                                <span class="area">电子游艺</span>
+                                <span class="user">ad****</span>
+                                <span class="game">女仕之夜</span>
+                                <span class="money">500.00</span>
+                            </li>
+                            <li ng-repeat="item in winnersListLeft track by $index" ng-cloak>
+                                <span class="area">电子游艺</span>
+                                <span class="user">ad****</span>
+                                <span class="game">女仕之夜</span>
+                                <span class="money">500.00</span>
+                            </li>
+                            <li ng-repeat="item in winnersListLeft track by $index" ng-cloak>
+                                <span class="area">电子游艺</span>
+                                <span class="user">ad****</span>
+                                <span class="game">女仕之夜</span>
+                                <span class="money">500.00</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div data-list="02">
+                        <ul class="cycle-slideshow" data-cycle-fx="carousel" data-cycle-carousel-vertical="true" data-cycle-timeout="1" data-cycle-easing="linear" data-cycle-slides="> li" data-cycle-speed="2000" data-cycle-pause-on-hover=true>
+                            <li ng-repeat="item in winnersListLeft track by $index" ng-cloak>
+                                <span class="area">电子游艺</span>
+                                <span class="user">ad****</span>
+                                <span class="game">女仕之夜</span>
+                                <span class="money">500.00</span>
+                            </li>
+                            <li ng-repeat="item in winnersListLeft track by $index" ng-cloak>
+                                <span class="area">电子游艺</span>
+                                <span class="user">ad****</span>
+                                <span class="game">女仕之夜</span>
+                                <span class="money">500.00</span>
+                            </li>
+                            <li ng-repeat="item in winnersListLeft track by $index" ng-cloak>
+                                <span class="area">电子游艺</span>
+                                <span class="user">ad****</span>
+                                <span class="game">女仕之夜</span>
+                                <span class="money">500.00</span>
+                            </li>
+                            <li ng-repeat="item in winnersListLeft track by $index" ng-cloak>
+                                <span class="area">电子游艺</span>
+                                <span class="user">ad****</span>
+                                <span class="game">女仕之夜</span>
+                                <span class="money">500.00</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <div id="slot-box" ng-controller="LobbiesCtrl" ng-cloak>
+                <div class="wrapper">
+                    <ul class="game-box" ng-init="game='mg'">
+                        <li game-box="mg" ng-click="game='mg'" ng-class="{'game-active':game=='mg'}">
+                            <h3>MG电子</h3>
+                            <h4>MG GAMING</h4>
+                        </li>
+                        <li game-box="pt" ng-click="game='pt'" ng-class="{'game-active':game=='pt'}">
+                            <h3>PT电子</h3>
+                            <h4>PT GAMING</h4>
+                        </li>
+                        <li game-box="bb" ng-click="game='bb'" ng-class="{'game-active':game=='bb'}">
+                            <h3>BBIN电子</h3>
+                            <h4>BBIN GAMING</h4>
+                        </li>
+                        <li game-box="ag" ng-click="game='ag'" ng-class="{'game-active':game=='ag'}">
+                            <h3>AG电子</h3>
+                            <h4>AG GAMING</h4>
+                        </li>
+                        <li game-box="gns" ng-click="game='gns'" ng-class="{'game-active':game=='gns'}">
+                            <h3>GNS电子</h3>
+                            <h4>GNS GAMING</h4>
+                        </li>
+                        <li game-box="gpi" ng-click="game='gpi'" ng-class="{'game-active':game=='gpi'}">
+                            <h3>GPI电子</h3>
+                            <h4>GPI GAMING</h4>
+                        </li>
+                    </ul>
+                    <ul class="slot-img mg-box" ng-if="game=='mg'">
+                        <li class="hot" ng-click="toMgFlash()"><img src="../../Content/Views/Home/Images/slot/mg01.png" /><span>摆脱</span></li>
+                        <li class="hot" ng-click="toMgFlash()"><img src="../../Content/Views/Home/Images/slot/mg02.png" /><span>狂欢节</span></li>
+                        <li class="hot" ng-click="toMgFlash()"><img src="../../Content/Views/Home/Images/slot/mg03.png" /><span>宝石迷阵</span></li>
+                        <li ng-click="toMgFlash()"><img src="../../Content/Views/Home/Images/slot/mg04.png" /><span>春假</span></li>
+                        <li ng-click="toMgFlash()"><img src="../../Content/Views/Home/Images/slot/mg05.png" /><span>不朽的爱情</span></li>
+                        <li ng-click="toMgFlash()"><img src="../../Content/Views/Home/Images/slot/mg06.png" /><span>女仕之夜</span></li>
+                    </ul>
+                    <ul class="slot-img pt-box" ng-if="game=='pt'">
+                        <li ng-click="toPtFlash()"><img src="../../Content/Views/Home/Images/slot/pt01.png" /><span>古怪猴子</span></li>
+                        <li class="hot" ng-click="toPtFlash()"><img src="../../Content/Views/Home/Images/slot/pt02.png" /><span>湛蓝深海</span></li>
+                        <li ng-click="toPtFlash()"><img src="../../Content/Views/Home/Images/slot/pt03.png" /><span>熊之舞</span></li>
+                        <li ng-click="toPtFlash()"><img src="../../Content/Views/Home/Images/slot/pt04.png" /><span>大明帝国</span></li>
+                        <li ng-click="toPtFlash()"><img src="../../Content/Views/Home/Images/slot/pt05.png" /><span>樱桃之恋</span></li>
+                        <li ng-click="toPtFlash()"><img src="../../Content/Views/Home/Images/slot/pt06.png" /><span>黑豹之月</span></li>
+                    </ul>
+                    <ul class="slot-img bb-box" ng-if="game=='bb'">
+                        <li class="hot" ng-click="toBbGame()"><img src="../../Content/Views/Home/Images/slot/bb01.png" /><span>连环夺宝</span></li>
+                        <li class="hot" ng-click="toBbGame()"><img src="../../Content/Views/Home/Images/slot/bb02.png" /><span>糖果派对</span></li>
+                        <li ng-click="toBbGame()"><img src="../../Content/Views/Home/Images/slot/bb03.png" /><span>怒火凌空</span></li>
+                        <li ng-click="toBbGame()"><img src="../../Content/Views/Home/Images/slot/bb04.png" /><span>惑星战记</span></li>
+                        <li ng-click="toBbGame()"><img src="../../Content/Views/Home/Images/slot/bb05.png" /><span>明星97</span></li>
+                        <li ng-click="toBbGame()"><img src="../../Content/Views/Home/Images/slot/bb06.png" /><span>三国</span></li>
+                    </ul>
+                    <ul class="slot-img ag-box" ng-if="game=='ag'">
+                        <li class="hot" ng-click="toAgFish()"><img src="../../Content/Views/Home/Images/slot/ag01.jpg" /><span>捕鱼王</span></li>
+                        <li ng-click="toAgHtml()"><img src="../../Content/Views/Home/Images/slot/ag02.jpg" /><span>水果拉霸</span></li>
+                        <li ng-click="toAgHtml()"><img src="../../Content/Views/Home/Images/slot/ag03.jpg" /><span>灵猴献瑞</span></li>
+                        <li ng-click="toAgHtml()"><img src="../../Content/Views/Home/Images/slot/ag04.jpg" /><span>复古花园</span></li>
+                        <li ng-click="toAgHtml()"><img src="../../Content/Views/Home/Images/slot/ag05.jpg" /><span>太空漫游</span></li>
+                        <li ng-click="toAgHtml()"><img src="../../Content/Views/Home/Images/slot/ag06.jpg" /><span>杰克高手</span></li>
+                    </ul>
+                    <ul class="slot-img gpi-box" ng-if="game=='gpi'">
+                        <li ng-click="toGpiFlash()"><img src="../../Content/Views/Home/Images/slot/gpi01.png" /><span>转三国</span></li>
+                        <li ng-click="toGpiFlash()"><img src="../../Content/Views/Home/Images/slot/gpi02.png" /><span>2014足球老虎机</span></li>
+                        <li ng-click="toGpiFlash()"><img src="../../Content/Views/Home/Images/slot/gpi03.png" /><span>金瓶梅</span></li>
+                        <li ng-click="toGpiFlash()"><img src="../../Content/Views/Home/Images/slot/gpi04.png" /><span>经典老虎机</span></li>
+                        <li ng-click="toGpiFlash()"><img src="../../Content/Views/Home/Images/slot/gpi05.png" /><span>财神到</span></li>
+                        <li ng-click="toGpiFlash()"><img src="../../Content/Views/Home/Images/slot/gpi06.png" /><span>甜蜜蜜</span></li>
+                    </ul>
+                    <ul class="slot-img gns-box" ng-if="game=='gns'">
+                        <li ng-click="toGnsHtml()"><img src="../../Content/Views/Home/Images/slot/gns01.png" /><span>女帝崛起</span></li>
+                        <li ng-click="toGnsHtml()"><img src="../../Content/Views/Home/Images/slot/gns02.png" /><span>草原争霸战</span></li>
+                        <li ng-click="toGnsHtml()"><img src="../../Content/Views/Home/Images/slot/gns03.png" /><span>嗜血一族</span></li>
+                        <li ng-click="toGnsHtml()"><img src="../../Content/Views/Home/Images/slot/gns04.png" /><span>神枪独角兽</span></li>
+                        <li ng-click="toGnsHtml()"><img src="../../Content/Views/Home/Images/slot/gns05.png" /><span>神秘猴城</span></li>
+                        <li ng-click="toGnsHtml()"><img src="../../Content/Views/Home/Images/slot/gns06.png" /><span>星际探索:猎户座</span></li>
+                    </ul>
+                </div>
+            </div>
+            <ul id="home-info">
+                <li id="reason">
+                    <h3></h3>
+                    <ul>
+                        <li data-index="01"></li>
+                        <li data-index="02"></li>
+                        <li data-index="03"></li>
+                        <li data-index="04"></li>
+                        <li data-index="05"></li>
+                    </ul>
+                </li>
+                <li id="product">
+                    <h3></h3>
+                    <ul>
+                        <li data-index="game">
+                            <h4>电子游艺</h4>
+                            <p>
+                                8000多款老虎机、电动扑克、大型电玩、桌上游戏、 以丰富的视觉、声光效果提供您一级的娱乐。
+                            </p>
+                        </li>
+                        <li data-index="live">
+                            <h4>真人娱乐</h4>
+                            <p>
+                                提供真人娱乐、百家乐、骰宝、二八杠、龙虎斗、轮 盘、金臂精彩内容面向全玩家。
+                            </p>
+                        </li>
+                        <li data-index="lottery">
+                            <h4>彩票游戏</h4>
+                            <p>
+                                彩票游戏丰富，提供最高赔率，所有赛果依据官方开 奖结果。给您一夜致富的机会及空前的游戏体验！
+                            </p>
+                        </li>
+                        <li data-index="sport">
+                            <h4>体育赛事</h4>
+                            <p>
+                                为您提供最全面赛前及滚球投注服务,眼下最为热门的 体育投注类型，为您营造最好的赔率，创造最大价值。
+                            </p>
+                        </li>
+                    </ul>
+                </li>
+                <li id="advantage">
+                    <h3></h3>
+                    <ul>
+                        <li data-index="deposit"></li>
+                        <li data-index="withdrawal"></li>
+                        <li data-index="bank"></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <footer id="footer"></footer>
+</body>
+
+</html>

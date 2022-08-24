@@ -1,0 +1,73 @@
+﻿body {
+    background: #e5e5e5;
+}
+
+.container {
+    text-align: center;
+}
+
+.title {
+    display: inline-block;
+    font-family: 'Microsoft JhengHei';
+    font-weight: bold;
+}
+
+#copy {
+    width: initial;
+    margin: 15px auto;
+    text-align: left;
+    border: #fff;
+}
+
+.table > tbody > tr > th {
+    background: #d9edf7;
+    border-color: #fff;
+}
+
+.table > tbody > tr > td {
+    width: 250px;
+    background: #E9edf6;
+    border-color: #fff;
+}
+
+.table > tfoot > tr, .table > tfoot > tr > td {
+    padding: 0;
+    border: none;
+}
+
+    .table > tfoot > tr > td div {
+        margin: 10px 0;
+    }
+
+.clip {
+    color: red;
+    display: none;
+}
+
+#price th, #price td {
+    color: #fff;
+    background: #49afcd;
+    font-size: 16px;
+    font-weight: bold;
+    border-top: 3px solid #fff;
+}
+
+#price td {
+    color: #e9f940;
+}
+
+.fa-clipboard {
+    color: #5c5c5c;
+    cursor: pointer;
+}
+
+/* 這段是為了修復 zclip 的 css 錯誤 */
+/************************************/
+#copy td {
+    position: relative;
+}
+
+    #copy td > .zclip > embed {
+        position: absolute;
+    }
+/************************************/

@@ -1,0 +1,280 @@
+﻿#banner {
+    height: 600px;
+}
+
+/* #region slide-banner樣式 */
+#slide-banner {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+}
+
+    #slide-banner .slide {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -960px;
+    }
+
+
+        #slide-banner .slide a {
+            display: inline-block;
+            width: 1920px;
+            height: 600px; /* 通常只會改這兩個地方 跟著圖片高度 */
+        }
+
+    
+    /* 點點切換紐 */
+    #slide-banner .slide-pager {
+        position: absolute;
+        bottom: 40px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+        #slide-banner .slide-pager li {
+            display: inline-block;
+            width: 13px;
+            height: 13px;
+            margin: 0 4px;
+            /* 若要数字编号可以把font-size: 0拿掉 */
+            font-size: 0;
+            background-color: #880503;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+            #slide-banner .slide-pager .on,
+            #slide-banner .slide-pager li:hover {
+                background-color: #fff;
+            }
+/* #endregion slide-banner樣式 */
+
+    #home:before{
+        content: "";
+        display: inline-block;
+        width: 1080px;
+        height: 136px;
+        background: url('../Home/images/jackpot-wrapper-bg.jpg') no-repeat left center;
+        margin: 10px 15px 30px;
+    }
+
+    #home:after{
+        content: "¥ 672,936,488.62";
+        position: absolute;
+        top: 64px;
+        right: 206px;
+        display: inline-block;
+        width: 378px;
+        height: 45px;
+        color: #d92013;
+        font-size: 48px;
+        font-weight: bold;
+        line-height: 32px;
+        animation:HomeJackpotText 1.5s infinite alternate;
+    }
+    @-moz-keyframes HomeJackpotText {
+      from {
+        transform: scale(1);
+      }
+          
+      to {
+        transform: scale(1.3);
+      }
+    }
+
+    @-webkit-keyframes HomeJackpotText {
+      from {
+        transform: scale(1);
+      }
+          
+      to {
+        transform: scale(1.3);
+      }
+    }
+
+    @keyframes HomeJackpotText {
+      from {
+        transform: scale(1);
+      }
+          
+      to {
+        transform: scale(1.3);
+      }
+    }
+
+    #home ul {
+        margin: 0 0 30px 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+.game-list {
+    text-align: center;
+}
+
+    .game-list li {
+        display: inline-block;
+        width: 24.7%;
+        height: 345px;
+        padding: 0 15px;
+        margin-bottom: 30px;
+    }
+        .game-list li a{
+            position: relative;
+            background: url('../Home/images/hp-banner-03.jpg') no-repeat center top;
+            background-size: 100% auto;
+            padding-bottom: 100px; 
+        }
+
+        .game-list li.sport a {
+            background-image: url('../Home/images/hp-banner-03.jpg');
+        }
+
+        .game-list li.live a {
+            background-image: url('../Home/images/hp-banner-02.jpg');
+        }
+
+        .game-list li.game a {
+            background-image: url('../Home/images/hp-banner-01.jpg');
+        }
+
+        .game-list li.lottery a {
+            background-image: url('../Home/images/hp-banner-05.jpg');
+        }
+
+        .game-list li a {
+            display: block;
+            height: 100%;
+        }
+
+        .game-list li a:after{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            display: block;
+            height: 100px;
+            width: 100%;
+            background: #b82422;
+            font-size: 14px;
+            color: #fff;
+            text-align: left;
+            padding: 10px 6px;
+            box-sizing: border-box;
+            text-align: justify;
+            text-justify:inter-ideograph;
+        }
+
+        .game-list li.sport a:after {
+            content: "体育全面的体育赛事，盘口的自由选择，详细的数据统计，实时的赛事直播。大小球，单双盘，标准盘，走地，滚球多种玩法，成就无限可能。";
+        }
+
+        .game-list li.live a:after {
+            content: "真人娱乐多平台真人荷官现场发牌，百家乐，21点，骰宝，龙虎，轮盘应有尽有。注码灵活，报表详细，玩法众多，助您激情娱乐。";
+        }
+
+        .game-list li.game a:after {
+            content: "老虎机LaBa360 (拉霸360)提供RTG,PT和HB丰富多彩的老虎机游戏，更有机会获得各种高额累积奖池，让您乐翻天。";
+        }
+
+        .game-list li.lottery a:after {
+            content: "彩票时时彩，快乐彩，奇乐彩，福彩，体彩等高频彩票。玩法多种多样，返点自由选择，投注及时结算。下一个头奖可能就是您。";
+        }
+
+.information, .service {
+    position: relative;
+    display: inline-block;
+    width: 480px;
+    height: 155px;
+    margin: 50px 8px;
+    color: #282f35;
+}
+
+.information {
+    display: none;
+    padding: 10px 0 0 30px;
+    vertical-align: top;
+    background: url('../Home/images/info_01.png') no-repeat;
+    overflow: hidden;
+}
+
+    .information .arrow {
+        position: absolute;
+        top: 5px;
+        right: 30px;
+        z-index: 1;
+    }
+
+        .information .arrow li {
+            display: inline-block;
+            width: 15px;
+            height: 20px;
+            background: url('../Home/images/arrow.png') left top;
+            cursor: pointer;
+        }
+
+            .information .arrow li.right {
+                background: url('../Home/images/arrow.png') right top;
+            }
+
+    .information .text {
+        position: relative;
+        white-space: nowrap;
+        -moz-transition: left .5s ease;
+        -o-transition: left .5s ease;
+        -webkit-transition: left .5s ease;
+        transition: left .5s ease;
+    }
+
+        .information .text.sec01 {
+            left: 0;
+        }
+
+        .information .text.sec02 {
+            left: -485px;
+        }
+
+        .information .text.sec03 {
+            left: -970px;
+        }
+
+        .information .text li {
+            display: inline-block;
+            width: 270px;
+            margin-right: 60px;
+            margin-left: 150px;
+            font-size: 12px;
+            white-space: normal;
+        }
+
+            .information .text li span {
+                display: block;
+                margin-bottom: 3px;
+                font-weight: bold;
+                font-size: 14px;
+            }
+
+.service { 
+    display: none;
+    padding: 15px 0 0 180px;
+    background: url('../Home/images/info_03.png') no-repeat;
+}
+
+    .service .chat {
+        position: absolute;
+        top: 0;
+        left: 50px;
+        width: 340px;
+        height: 70px;
+    }
+
+    .service li {
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 7px;
+        font-size: 12px;
+    }

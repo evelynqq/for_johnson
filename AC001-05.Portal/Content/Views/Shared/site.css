@@ -1,0 +1,1652 @@
+@charset "UTF-8";
+#nav {
+  background: #151515;
+  border-top: 1px solid #00aeff;
+}
+
+.mainnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mainnav > li {
+  float: left;
+  width: 12.5%;
+}
+
+.mainnav > li.service {
+  background: #6577d9 url("images/service_btn.jpg") no-repeat center;
+}
+
+.mainnav > li > a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  font-size: 13px;
+  font-family: 'Microsoft YaHei';
+  text-align: center;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.mainnav > li > a:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 19px;
+  width: 1px;
+  height: 12px;
+  background-color: #ccc;
+}
+
+.mainnav > li.hot > a {
+  background: url("../Shared/images/hot.gif") no-repeat 75px 2px;
+}
+
+.mainnav > li:first-child > a:before,
+.mainnav > li.service > a:before {
+  display: none;
+}
+
+.mainnav > li:hover,
+.mainnav li.active {
+  -webkit-box-shadow: inset 0 -1px 0 0 #00aeff;
+          box-shadow: inset 0 -1px 0 0 #00aeff;
+  background-color: #262626;
+  color: white;
+}
+
+.mainnav > li > a > i {
+  position: relative;
+  top: -2px;
+  font-size: 12px;
+}
+
+.mainnav > li:hover > a,
+.mainnav li.active > a {
+  color: white;
+}
+
+.mainnav > li:hover > .subnav {
+  display: block;
+}
+
+.subnav {
+  display: none;
+  position: absolute;
+  z-index: 99;
+  left: 0;
+  width: 100%;
+  min-width: 1000px;
+  height: 109px;
+  line-height: 109px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: rgba(21, 26, 35, 0.95);
+  background: -o-radial-gradient(ellipse farthest-side at center top, #283244 0%, rgba(21, 26, 35, 0.95) 100%);
+  background: radial-gradient(ellipse farthest-side at center top, #283244 0%, rgba(21, 26, 35, 0.95) 100%);
+  border: solid 1px rgba(255, 255, 255, 0.15);
+  overflow: hidden;
+}
+
+.subnav > span {
+  position: absolute;
+  top: 46px;
+  left: 50%;
+  z-index: 1;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-position: center top;
+  cursor: pointer;
+}
+
+.subnav > span:hover {
+  background-position-y: bottom;
+}
+
+.subnav > span.prev {
+  margin-left: -505px;
+  background-image: url("../Shared/images/arrow_l.png");
+}
+
+.subnav > span.next {
+  margin-left: 477px;
+  background-image: url("../Shared/images/arrow_r.png");
+}
+
+.subnav .main-cell {
+  display: inline-block;
+}
+
+.subnav ul {
+  display: block;
+  width: 945px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+.subnav ul li {
+  display: inline-block;
+  vertical-align: top;
+  min-width: 105px;
+  width: 135px;
+  margin: 0 0px;
+  padding-top: 25px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  font-family: 'Microsoft Yahei';
+  background-position: top;
+  background-repeat: no-repeat;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+.subnav ul li:hover {
+  color: white;
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+.subnav li.more {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/live/more.png");
+}
+
+.subnav li.AllBetReal {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/live/AllBetReal.png");
+}
+
+.subnav li.AgBr {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/live/AgBr.png");
+}
+
+.subnav li.BbinaLive {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/live/BbinaLive.png");
+}
+
+.subnav li.BgReal {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/live/BgReal.png");
+}
+
+.subnav li.EBetReal {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/live/EBetReal.png");
+}
+
+.subnav li.EvoReal {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/live/EvoReal.png");
+}
+
+.subnav li.GdReal {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/live/GdReal.png");
+}
+
+.subnav li.GpiLive {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/live/GpiLive.png");
+}
+
+.subnav li.HgaReal {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/live/HgaReal.png");
+}
+
+.subnav li.OgaReal {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/live/OgaReal.png");
+}
+
+.subnav li.PtaReal {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/live/PtaReal.png");
+}
+
+.subnav li.PtaLive {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/live/PtaLive.png");
+}
+
+.subnav li.PtbReal {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/live/PtbReal.png");
+}
+
+.subnav li.MgaReal {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/live/MgaReal.png");
+}
+
+.subnav li.SaReal {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/live/SaReal.png");
+}
+
+.subnav li.SbLive {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/live/SbLive.png");
+}
+
+.subnav li.SunbetReal {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/live/SunbetReal.png");
+}
+
+.subnav li.WmReal {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/live/WmReal.png");
+}
+
+.subnav li.RyReal {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/live/RyReal.png");
+}
+
+.subnav li.Ry2Real {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/live/Ry2Real.png");
+}
+
+.subnav li.more {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Sport/more.png");
+}
+
+.subnav li.SingSport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Sport/SingSport.png");
+}
+
+.subnav li.Sing2Sport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Sport/Sing2Sport.png");
+}
+
+.subnav li.AgSport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Sport/AgSport.png");
+}
+
+.subnav li.BbinaSport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Sport/BbinaSport.png");
+}
+
+.subnav li.CmdSport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Sport/CmdSport.png");
+}
+
+.subnav li.IboSport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Sport/IboSport.png");
+}
+
+.subnav li.HLSport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Sport/HLSport.png");
+}
+
+.subnav li.ImaSport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Sport/ImaSport.png");
+}
+
+.subnav li.M8Sport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Sport/M8Sport.png");
+}
+
+.subnav li.SabaaSport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Sport/SabaaSport.png");
+}
+
+.subnav li.SababSport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Sport/SababSport.png");
+}
+
+.subnav li.SV388Sport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Sport/SV388Sport.png");
+}
+
+.subnav li.HRBSport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Sport/HRBSport.png");
+}
+
+.subnav li.ZfbSport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Sport/ZfbSport.png");
+}
+
+.subnav li.E88Sport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Sport/E88Sport.png");
+}
+
+.subnav li.GbSport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Sport/GbSport.png");
+}
+
+.subnav li.GbsSport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Sport/GbsSport.png");
+}
+
+.subnav li.QtSport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Sport/QtSport.png");
+}
+
+.subnav li.BtiSport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Sport/BtiSport.png");
+}
+
+.subnav li.Cq9Sport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Sport/Cq9Sport.png");
+}
+
+.subnav li.more {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Esport/more.png");
+}
+
+.subnav li.EsbEsport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Esport/EsbEsport.png");
+}
+
+.subnav li.Esb1Esport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Esport/Esb1Esport.png");
+}
+
+.subnav li.SabaESport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Esport/SabaESport.png");
+}
+
+.subnav li.HcEsport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Esport/HcEsport.png");
+}
+
+.subnav li.CmdEsport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Esport/CmdEsport.png");
+}
+
+.subnav li.SabaaEsport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Esport/SabaaEsport.png");
+}
+
+.subnav li.E88Esport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Esport/E88Esport.png");
+}
+
+.subnav li.GbEsport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Esport/GbEsport.png");
+}
+
+.subnav li.GbsEsport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Esport/GbsEsport.png");
+}
+
+.subnav li.LeEsport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Esport/LeEsport.png");
+}
+
+.subnav li.AviaEsport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Esport/AviaEsport.png");
+}
+
+.subnav li.Cq9Esport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Esport/Cq9Esport.png");
+}
+
+.subnav li.TfEsport {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Esport/TfEsport.png");
+}
+
+.subnav li.more {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Lottery/more.png");
+}
+
+.subnav li.BbinaLottery {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Lottery/BbinaLottery.png");
+}
+
+.subnav li.IgLottery {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Lottery/IgLottery.png");
+}
+
+.subnav li.IgLotto {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Lottery/IgLotto.png");
+}
+
+.subnav li.IgaLottery {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Lottery/IgaLottery.png");
+}
+
+.subnav li.IgaLotto {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Lottery/IgaLotto.png");
+}
+
+.subnav li.LxLottery {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Lottery/LxLottery.png");
+}
+
+.subnav li.VrLottery {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Lottery/VrLottery.png");
+}
+
+.subnav li.AplLottery {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Lottery/AplLottery.png");
+}
+
+.subnav li.G1Lottery {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Lottery/G1Lottery.png");
+}
+
+.subnav li.G1aLottery {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Lottery/G1aLottery.png");
+}
+
+.subnav li.GbLottery {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Lottery/GbLottery.png");
+}
+
+.subnav li.GblLottery {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Lottery/GblLottery.png");
+}
+
+.subnav li.SgwLottery {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Lottery/SgwLottery.png");
+}
+
+.subnav li.BgLottery {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Lottery/BgLottery.png");
+}
+
+.subnav li.Ig1Lottery {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Lottery/Ig1Lottery.png");
+}
+
+.subnav li.Ig1Lotto {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Lottery/Ig1Lotto.png");
+}
+
+.subnav li.more {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Board/more.png");
+}
+
+.subnav li.City761Board {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Board/City761Board.png");
+}
+
+.subnav li.JdbBoard {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Board/JdbBoard.png");
+}
+
+.subnav li.KgHtml {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Board/KgHtml.png");
+}
+
+.subnav li.LegBoard {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Board/LegBoard.png");
+}
+
+.subnav li.JsBoard {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Board/JsBoard.png");
+}
+
+.subnav li.VgBoard {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Board/VgBoard.png");
+}
+
+.subnav li.NwBoard {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Board/NwBoard.png");
+}
+
+.subnav li.FgBoard {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Board/FgBoard.png");
+}
+
+.subnav li.KyBoard {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Board/KyBoard.png");
+}
+
+.subnav li.LcBoard {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Board/LcBoard.png");
+}
+
+.subnav li.T365Board {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Board/T365Board.png");
+}
+
+.subnav li.YgBoard {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Board/YgBoard.png");
+}
+
+.subnav li.AsBoard {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Board/AsBoard.png");
+}
+
+.subnav li.TyBoard {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Board/TyBoard.png");
+}
+
+.subnav li.Cq9Board {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Board/Cq9Board.png");
+}
+
+.subnav li.more {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Game/more.png");
+}
+
+.subnav li.AgHtml {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Game/AgHtml.png");
+}
+
+.subnav li.BbinaSlot {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Game/BbinaSlot.png");
+}
+
+.subnav li.Cq9Html {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Game/Cq9Html.png");
+}
+
+.subnav li.FsHtml {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Game/FsHtml.png");
+}
+
+.subnav li.GaHtml {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Game/GaHtml.png");
+}
+
+.subnav li.GnsHtml {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Game/GnsHtml.png");
+}
+
+.subnav li.GpiHtml {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Game/GpiHtml.png");
+}
+
+.subnav li.GpiFlash {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Game/GpiFlash.png");
+}
+
+.subnav li.HabaHtml {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Game/HabaHtml.png");
+}
+
+.subnav li.IsbHtml {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Game/IsbHtml.png");
+}
+
+.subnav li.JdbHtml {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Game/JdbHtml.png");
+}
+
+.subnav li.LgHtml {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Game/LgHtml.png");
+}
+
+.subnav li.MgaHtml {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Game/MgaHtml.png");
+}
+
+.subnav li.MgaFlash {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Game/MgaFlash.png");
+}
+
+.subnav li.MwHtml {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Game/MwHtml.png");
+}
+
+.subnav li.MwSlot {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Game/MwSlot.png");
+}
+
+.subnav li.NeHtml {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Game/NeHtml.png");
+}
+
+.subnav li.Ne2Slot {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Game/Ne2Slot.png");
+}
+
+.subnav li.PgHtml {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Game/PgHtml.png");
+}
+
+.subnav li.PngHtml {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Game/PngHtml.png");
+}
+
+.subnav li.PrgHtml {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Game/PrgHtml.png");
+}
+
+.subnav li.PrgFlash {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Game/PrgFlash.png");
+}
+
+.subnav li.PtaHtml {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Game/PtaHtml.png");
+}
+
+.subnav li.PtaFlash {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Game/PtaFlash.png");
+}
+
+.subnav li.PtbSlot {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Game/PtbSlot.png");
+}
+
+.subnav li.PtsHtml {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Game/PtsHtml.png");
+}
+
+.subnav li.SgHtml {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Game/SgHtml.png");
+}
+
+.subnav li.SgFlash {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Game/SgFlash.png");
+}
+
+.subnav li.RtHtml {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Game/RtHtml.png");
+}
+
+.subnav li.TpgHtml {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Game/TpgHtml.png");
+}
+
+.subnav li.AeSlot {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Game/AeSlot.png");
+}
+
+.subnav li.JpSlot {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Game/JpSlot.png");
+}
+
+.subnav li.RtgSlot {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Game/RtgSlot.png");
+}
+
+.subnav li.QtSlot {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Game/QtSlot.png");
+}
+
+.subnav li.PsSlot {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Game/PsSlot.png");
+}
+
+.subnav li.Pg1Slot {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Game/Pg1Slot.png");
+}
+
+.subnav li.GanSlot {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Game/GanSlot.png");
+}
+
+.subnav li.HbSlot {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Game/HbSlot.png");
+}
+
+.subnav li.BgSlot {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Game/BgSlot.png");
+}
+
+.subnav li.VrSlot {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Game/VrSlot.png");
+}
+
+.subnav li.more {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Fish/more.png");
+}
+
+.subnav li.City761Fish {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Fish/City761Fish.png");
+}
+
+.subnav li.AgHsr {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Fish/AgHsr.png");
+}
+
+.subnav li.BbFish30 {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Fish/BbFish30.png");
+}
+
+.subnav li.BbFish38 {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Fish/BbFish38.png");
+}
+
+.subnav li.Cq9Fish {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Fish/Cq9Fish.png");
+}
+
+.subnav li.FsFishBeauty {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Fish/FsFishBeauty.png");
+}
+
+.subnav li.FsFishThunder {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Fish/FsFishThunder.png");
+}
+
+.subnav li.FsFishBird {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Fish/FsFishBird.png");
+}
+
+.subnav li.FsFishHappy {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Fish/FsFishHappy.png");
+}
+
+.subnav li.FsFishEveryDay {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Fish/FsFishEveryDay.png");
+}
+
+.subnav li.GnsFish {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Fish/GnsFish.png");
+}
+
+.subnav li.JdbFishMoney {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Fish/JdbFishMoney.png");
+}
+
+.subnav li.JdbFish {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Fish/JdbFish.png");
+}
+
+.subnav li.Jdb2Fish {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Fish/Jdb2Fish.png");
+}
+
+.subnav li.MwFish {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Fish/MwFish.png");
+}
+
+.subnav li.PgFish {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Fish/PgFish.png");
+}
+
+.subnav li.Pg2Fish {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Fish/Pg2Fish.png");
+}
+
+.subnav li.PtFish {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Fish/PtFish.png");
+}
+
+.subnav li.PtsFish {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Fish/PtsFish.png");
+}
+
+.subnav li.UgFish {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Fish/UgFish.png");
+}
+
+.subnav li.TpgFish {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Fish/TpgFish.png");
+}
+
+.subnav li.QtFish {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Fish/QtFish.png");
+}
+
+.subnav li.Qt2Fish {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Fish/Qt2Fish.png");
+}
+
+.subnav li.RtgFish {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Fish/RtgFish.png");
+}
+
+.subnav li.PsFish {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Fish/PsFish.png");
+}
+
+.subnav li.Tpg2Fish {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Fish/Tpg2Fish.png");
+}
+
+.subnav li.Tpg3Fish {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Fish/Tpg3Fish.png");
+}
+
+.subnav li.BgFish {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/colorblack/Fish/BgFish.png");
+}
+
+/*#region base */
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  background: #001845;
+  color: #999;
+  padding: 0px;
+  margin: 0px;
+}
+
+body.layout {
+  min-width: 1000px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+iframe {
+  border: none;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+[ng-click] {
+  cursor: pointer;
+}
+
+.wrapper {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  line-height: 0;
+  content: '';
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/*#endregion */
+/*#region header */
+#header {
+  position: relative;
+  padding: 5px 0;
+  background: #151515;
+}
+
+.logo {
+  float: left;
+  width: 250px;
+  height: 72px;
+  margin: 10px 0;
+  background: url("../../../../_Common/Content/Views/Shared/images/logo_w.png") no-repeat;
+  background-size: auto 100%;
+}
+
+.logo a {
+  display: block;
+  height: 100%;
+}
+
+.header-wrapper {
+  float: right;
+  width: 624px;
+  height: 82px;
+  margin-top: 10px;
+  text-align: right;
+  position: relative;
+}
+
+.header-list {
+  float: right;
+  list-style-type: none;
+  margin: -5px 0 0 0;
+  padding: 0;
+  font-size: 0;
+}
+
+.header-list > li {
+  display: inline-block;
+  /* color: #5a5a5a; */
+  font-size: 12px;
+  line-height: 20px;
+  vertical-align: top;
+}
+
+.header-list > li + li:before {
+  content: '|';
+  margin: 0 5px;
+  color: #5a5a5a;
+}
+
+.header-list > li > a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.header-list > li > a:hover {
+  color: #fff;
+}
+
+.header-list > li:hover,
+.header-list > li a[href='/Trial/Login'] {
+  color: #fff;
+}
+
+.header-list > li a.error {
+  color: #000;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+.header-list > li.language {
+  position: relative;
+  cursor: pointer;
+}
+
+.header-list > li.language > i {
+  position: relative;
+  top: -1px;
+}
+
+.header-list > li.language:hover > ul {
+  display: block;
+}
+
+.header-list > li.language > ul {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  z-index: 2;
+  list-style-type: none;
+  margin: 0;
+  padding-left: 10px;
+}
+
+.header-list > li.language > ul li {
+  padding: 5px 7px;
+  color: #5a5a5a;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.header-list > li.language > ul li:hover {
+  color: #ff9936;
+}
+
+.header-list > li.language > ul li[data-language='th'] {
+  display: none;
+}
+
+.header-list > li.toggle-color a {
+  /* color: #f00; */
+}
+
+.header-list > li.color a {
+  color: #000;
+}
+
+.header-list > li.toggle-color:hover {
+  color: #fff;
+}
+
+.header-list > li.color {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.header-list > li.warn a {
+  padding-left: 20px;
+  background: url("../Shared/images/warn.png") no-repeat left top;
+}
+
+.header-list > li.warn a:hover {
+  background-position: left bottom;
+}
+
+.header-list .toggle-color {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.header-list .color {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.header-list .toggle-color:hover,
+.header-list .color:hover {
+  color: #fff;
+}
+
+.header-list > li.hot a {
+  position: relative;
+}
+
+.header-list > li.hot a:after {
+  content: '';
+  position: absolute;
+  top: -9px;
+  right: -17px;
+  display: inline-block;
+  width: 21px;
+  height: 12px;
+  background: url("images/hot.gif") no-repeat center center;
+}
+
+/*#endregion header */
+/*#region loginbar 顯示「登入帳號」區塊*/
+#account-box {
+  position: absolute;
+  right: 0;
+  bottom: 5px;
+  text-align: right;
+  width: 620px;
+}
+
+#account-box > form {
+  position: relative;
+  display: inline-block;
+  margin: 5px 0;
+}
+
+#account-box > form input {
+  vertical-align: top;
+  width: 150px;
+  padding: 4px 3px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#account-box > form ::-webkit-input-placeholder {
+  color: #5a5a5a;
+}
+
+#account-box > form ::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #5a5a5a;
+}
+
+#account-box > form :-ms-input-placeholder {
+  color: #5a5a5a;
+}
+
+.login-btn {
+  width: 54px;
+  height: 25px;
+  line-height: 25px;
+  color: #fff;
+  font-size: 13px;
+  background: #0e86ca;
+  border-style: none;
+}
+
+.login-btn:hover {
+  background: #00aeff;
+}
+
+.register-btn {
+  width: 84px;
+  height: 25px;
+  color: #fff;
+  font-size: 13px;
+  background: #ff9000;
+  border-style: none;
+  vertical-align: bottom;
+}
+
+.register-btn:hover {
+  background: #ffa939;
+}
+
+.forget-btn {
+  position: absolute;
+  top: 4px;
+  left: 253px;
+  padding: 0;
+  color: #a9a9a9;
+  font-size: 12px;
+  border: none;
+  background: none;
+}
+
+#check-code-wrapper {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+#captcha {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  width: auto;
+  height: 21px;
+}
+
+#agree {
+  position: absolute;
+  top: -100%;
+  right: 30px;
+  z-index: 99;
+  display: inline-block;
+  padding: 2px 5px;
+  font-size: 13px;
+}
+
+#agree a {
+  font-weight: bold;
+  cursor: pointer;
+  color: #f5f5f6;
+  text-decoration: underline;
+}
+
+/*#endregion loginbar 顯示「登入帳號」區塊*/
+/*#region account-info 登入後, 顯示「帳號資訊」區塊*/
+ul#account-info {
+  position: relative;
+  display: inline-block;
+  margin: 8px 0 2px;
+  padding: 0;
+  list-style: none;
+}
+
+ul#account-info > li {
+  display: inline-block;
+  margin-left: 20px;
+  color: #01b2f1;
+  font-size: 12px;
+  vertical-align: top;
+}
+
+ul#account-info > li > span.account {
+  display: inline-block;
+  max-width: 6em;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: top;
+  overflow: hidden;
+  line-height: 18px;
+}
+
+ul#account-info > li a {
+  cursor: pointer;
+  vertical-align: top;
+}
+
+ul#account-info > li a:hover {
+  color: #ffd800;
+}
+
+ul#account-info > li i {
+  color: #01b2f1;
+}
+
+ul#account-info > li i.fa-refresh:hover,
+ul#account-info > li i.fa-spin {
+  color: #ffd800;
+}
+
+ul#account-info #member-level {
+  color: #fff;
+  background: #01b2f1;
+}
+
+ul#account-info #member-level:before {
+  background: #fff;
+}
+
+#action-box {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#action-box > a {
+  display: inline-block;
+  margin-right: 6px;
+  font-size: 13px;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: top;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#action-box > a:hover {
+  color: #fff;
+}
+
+#action-box > a[ng-click='signOut()'] {
+  display: inline-block;
+  font-size: 13px;
+  font-family: FontAwesome;
+  height: 25px;
+  line-height: 25px;
+  color: #fff;
+  font-size: 13px;
+  background: #0e86ca;
+  border-style: none;
+  padding: 0 15px;
+}
+
+#account-box i {
+  color: #ffa10c;
+}
+
+/*#endregion account-info 登入後, 顯示「帳號資訊」區塊*/
+/*#region account-nav 登入後的子導覽列 (帳號相關操作) */
+#sub-navbar {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+ul#account-nav {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+
+ul#account-nav > li {
+  display: inline-block;
+  padding: 0 10px;
+  line-height: 12px;
+  vertical-align: top;
+  border-left: 1px solid #5a5a5a;
+}
+
+ul#account-nav > li:first-child {
+  padding-left: 0;
+  border-left: 0;
+}
+
+ul#account-nav > li > a {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 13px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  vertical-align: bottom;
+}
+
+ul#account-nav > li > a:hover {
+  color: #fff;
+}
+
+/*#endregion 登入後的子導覽列 (帳號相關操作)*/
+/*#region banner*/
+.banner {
+  position: relative;
+  overflow: hidden;
+  height: 254px;
+  background: url("../Shared/images/banner.jpg") center top;
+  background-color: #000;
+}
+
+.banner .wrapper {
+  position: relative;
+  height: 254px;
+  z-index: 2;
+}
+
+.banner:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 36px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  z-index: 2;
+}
+
+/*#endregion banner*/
+/*#region news 跑馬燈 */
+#news {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 36px;
+  padding: 0 20px 0 80px;
+  background: url("../Shared/images/news_bg2.png") no-repeat;
+}
+
+#hot-news {
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 36px;
+  height: 36px;
+}
+
+#hot-news li {
+  color: #000;
+  font-size: 12px;
+  text-decoration: none;
+  line-height: 36px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+#hot-news li:hover {
+  text-decoration: underline;
+}
+
+/*#endregion 跑馬燈*/
+/*#region content 內頁 */
+#content {
+  position: relative;
+  padding: 40px 0;
+  background: url("../Shared/images/home-bg.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+#content .wrapper {
+  /* background: url('../Shared/images/content_bg02.jpg') center top; */
+}
+
+/*#endregion content 內頁 */
+/*#region footer */
+#footer {
+  padding: 30px 0;
+  color: #bbb;
+  font-size: 12px;
+  font-family: sans-serif, 'SimSun';
+  border-top: solid 1px rgba(0, 174, 255, 0.3);
+  background: #040404;
+}
+
+#footer-suggest {
+  float: left;
+  margin: 0 0 30px 10px;
+}
+
+#footer-nav {
+  float: right;
+  margin: 0 0 10px 0;
+  padding: 0;
+  list-style: none;
+}
+
+#footer-nav li {
+  float: left;
+  line-height: 12px;
+  border-left: 1px solid #727272;
+}
+
+#footer-nav li:first-child {
+  border-left-style: none;
+}
+
+#footer-nav a {
+  display: inline-block;
+  padding: 0 15px;
+  color: #bbb;
+  text-align: center;
+  text-decoration: none;
+}
+
+#footer-nav a:hover {
+  color: #fff;
+}
+
+#footer-logo {
+  position: relative;
+  clear: both;
+  height: 35px;
+  background: url("../Shared/images/footer_logo.png") no-repeat center top;
+}
+
+#gotop {
+  position: absolute;
+  top: -47px;
+  right: 0;
+  width: 42px;
+  height: 17px;
+  background: url("../Shared/images/top_btn.png") no-repeat;
+  cursor: pointer;
+}
+
+/*#endregion footer*/
+/*#region service 更多服務 */
+.services {
+  position: absolute;
+  top: 210px;
+  left: auto;
+  right: 0;
+}
+
+ul#girl {
+  position: relative;
+  width: 161px;
+  height: 442px;
+  margin: 0;
+  padding: 153px 0 0 0;
+  list-style-type: none;
+  background: url("../Shared/images/service.png") no-repeat;
+}
+
+ul#girl > li {
+  display: block;
+  cursor: pointer;
+}
+
+/* 在線客服 */
+ul#girl > li#chat {
+  height: 75px;
+}
+
+/* 企業 QQ */
+ul#girl > li#qq {
+  margin-top: 23px;
+  height: 35px;
+}
+
+ul#girl > li#qq2 {
+  margin-top: 3px;
+  height: 35px;
+}
+
+/* 免費開戶 */
+ul#girl > li#join {
+  margin-top: 21px;
+  height: 48px;
+}
+
+ul#girl > li#closed {
+  position: absolute;
+  left: 32px;
+  bottom: 0;
+  width: 99px;
+  height: 30px;
+}
+
+.services-left {
+  position: fixed;
+  top: auto;
+  left: 0;
+  right: auto;
+  bottom: 1px;
+  width: 255px;
+  height: 135px;
+  background: no-repeat center center;
+  background-image: url("../Shared/images/service_deposit.gif");
+}
+
+.services-left a {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.services-left .closed {
+  display: inline-block;
+  position: absolute;
+  top: -14px;
+  left: auto;
+  right: -14px;
+  width: 28px;
+  height: 28px;
+  background: url("../Shared/images/service_closed.png") no-repeat center center;
+  cursor: pointer;
+}
+
+/*#endregion service 更多服務 */
+/*#region mailbox 站内信 不同版请由此修改*/
+#mailbox {
+  position: relative;
+  top: -1px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: top;
+  text-decoration: none;
+  background: url("../../../../_Common/Content/Views/Shared/images/m_icon.png") no-repeat;
+  background-size: cover;
+}
+
+#mailbox > span,
+#mailbox > span:hover {
+  position: absolute;
+  left: 80%;
+  bottom: 60%;
+  min-width: 16px;
+  padding: 0 2px;
+  height: 16px;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  line-height: 16px;
+  border-radius: 5px;
+  background: #01b2f1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*#endregion mailbox 站内信 不同版请由此断修改*/
+/*#region 彈跳視窗跑馬燈資訊內容 */
+#marquee-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  display: none;
+}
+
+#marquee-wrapper.show {
+  display: block;
+  z-index: 1000;
+  background-image: url("../../../../_Common/Content/Views/Shared/images/transparent-black.png");
+}
+
+#marquee {
+  width: 600px;
+  max-height: 500px;
+  margin: 30px auto 0 auto;
+  background-color: #fff;
+  background-image: url("../../../../_Common/Content/Views/Shared/images/table_background.jpg");
+  border-radius: 5px;
+  cursor: default;
+  -webkit-transition: margin-top ease-in 300ms;
+  -o-transition: margin-top ease-in 300ms;
+  transition: margin-top ease-in 300ms;
+}
+
+#marquee > header {
+  text-align: center;
+  background-color: #e9e9e9;
+  border-bottom: 1px solid #ccc;
+  border-radius: 5px 5px 0 0;
+}
+
+#marquee > header > h2 {
+  margin: 0;
+  color: #0080e3;
+  font-size: 21px;
+  line-height: 60px;
+}
+
+ul#newsBags {
+  margin: 0;
+  padding: 10px 50px;
+  max-height: 380px;
+  overflow: auto;
+}
+
+ul#newsBags > li {
+  color: #454545;
+  font-size: 13px;
+  line-height: 27px;
+  list-style: disc;
+  white-space: pre-line;
+  border-bottom: 1px dashed #999;
+}
+
+#marquee > footer {
+  text-align: center;
+  line-height: 80px;
+  background-color: #e9e9e9;
+  background-image: -webkit-radial-gradient(center top, ellipse farthest-side, rgba(0, 0, 0, 0.3), transparent);
+  background-size: 100% 8px;
+  background-repeat: no-repeat;
+  border-top: 1px solid #ccc;
+  border-radius: 0 0 5px 5px;
+}
+
+#marquee > footer > span {
+  display: inline-block;
+  width: 119px;
+  font-size: 15px;
+  font-weight: bolder;
+  line-height: 45.5px;
+  background-image: url("../../../../_Common/Content/Views/Shared/images/sent_bn.png");
+  cursor: pointer;
+}
+
+#marquee > footer > span:hover {
+  background-position: 0 -45.5px;
+}
+
+/*#endregion 彈跳視窗跑馬燈資訊內容 */
+/* #region 弹跳出来的notice Dialog */
+/*title 文字背景顏色此修改*/
+.ui-widget-header {
+  padding: 0 5px;
+  line-height: 12px;
+}
+
+#ad-dialog {
+  display: none;
+  padding: 0;
+}
+
+#ad-dialog img {
+  width: 100%;
+  height: auto !important;
+}
+
+#ad-dialog .dialog-footer {
+  height: 30px;
+  padding: 0 3px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 25px;
+  border-top: 1px solid #000;
+}
+
+.ui-dialog {
+  position: fixed;
+  z-index: 999;
+}
+
+.ui-dialog .ui-dialog-title {
+  font-size: 13px;
+  line-height: 15px;
+}
+
+.ui-dialog .ui-dialog-buttonpane {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only {
+  font-size: 12px;
+}
+
+.ui-dialog .ui-dialog-buttonpane button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 3px 6px;
+}
+
+/* #endregion 弹跳出来的dialog */
+/*#region loginToGame 游戏平台登入口*/
+#logingame-body {
+  background-color: #40509b;
+}
+
+/*#endregion */
+/*統計代碼會出現的圖片*/
+#lim_mini {
+  display: none !important;
+}
+/*# sourceMappingURL=site.css.map */

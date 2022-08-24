@@ -1,0 +1,252 @@
+﻿/*代理註冊頁面 CSS*/
+/*#region 針對type=number  會出現右邊上下箭頭做隐藏*/
+input[type="number"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+    input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none; /*for chrome*/
+    }
+
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none; /*for chrome*/
+    }
+/*#endregion 針對type=number  會出現右邊上下箭頭做隐藏*/
+form.form-horizontal {
+    padding: 15px;
+}
+
+.form-group .control-label {
+    width: 25%;
+    font-weight: 500;
+    line-height: 32px;
+}
+
+    .form-group .control-label .fa {
+        color: #b20000;
+    }
+
+.form-group .control-div {
+    width: 50%;
+    text-align: left;
+    line-height: 32px;
+}
+
+    .form-group .control-div input, .form-group .control-div select, #checkcode-input-group input {
+        display: block;
+        width: 100%;
+        height: 32px;
+        padding: 5px 4px;
+        color: #555;
+        font-size: 14px;
+        line-height: 1.428571429;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .form-group .control-div > label {
+        display: inline-block;
+    }
+
+    .form-group .control-div input[type="radio"], .form-group .control-div input[type="checkbox"] {
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+    }
+
+fieldset {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    border: none;
+}
+
+    fieldset.group-border {
+        border: none;
+    }
+
+        fieldset.group-border legend {
+            display: none;
+        }
+
+.panel-heading {
+    display: none;
+}
+
+.panel-title {
+    width: 974px;
+    height: 46px;
+    padding: 0 10px;
+    color: #FFFFFF;
+    font-size: 18px;
+    line-height: 43px;
+    text-align: left;
+    background: url('/CdnRedirect/Web.Portal/GPK.Portal/Content/Views/Shared/images/page_title.jpg') center no-repeat;
+    -moz-box-sizing: inherit;
+    -webkit-box-sizing: inherit;
+    box-sizing: border-box;
+}
+/* #region  更多選項*/
+#moreoption {
+    color: #428bca;
+    cursor: pointer;
+}
+
+    #moreoption:hover {
+        color: #63b3f8;
+    }
+/* #endregion  更多選項*/
+
+.fieldset-moreoption {
+    -webkit-transition: all linear 3s;
+    -moz-transition: all linear 3s;
+    -ms-transition: all linear 3s;
+    -o-transition: all linear 3s;
+    transition: all linear 3s;
+}
+
+/*#captcha-title {
+    color: transparent;
+    font-size: 0;
+}*/
+
+/*#region 輸入驗證碼的群組*/
+#checkcode-input-group {
+    display: inline-block;
+    float: left;
+    height: 32px;
+    width: 200px;
+    background: #e5e5e5;
+    border-radius: 3px;
+}
+
+    #checkcode-input-group > input {
+        display: inline-block;
+        float: left;
+        width: 70%;
+        height: 32px;
+    }
+
+    #checkcode-input-group > span {
+        float: left;
+        width: 30%;
+        height: 32px;
+    }
+
+.checkcode {
+    position: relative;
+}
+
+    .checkcode img {
+        width: 100%;
+        height: 100%;
+        border-radius: 3px;
+    }
+
+#btn-submit {
+    float: left;
+    margin: 15px 0;
+}
+/*#endregion 輸入驗證碼的群組*/
+
+/*#region 驗證銀行帳戶提示 */
+.tooltip {
+    /* 因為戰神沒有設定全域box-sizing, 若只用position: absolute會造成各站間距不同都需要調整, 所以改用float */
+    float: left;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    word-break: break-all;
+}
+
+/*  若有修改.form-control的長度導致提示斷行跑版, 則使用這段並將上面的砍掉
+    .tooltip {
+        position:absolute;
+        top: 0;
+        left: 77%;
+        z-index: 1;
+        word-break: break-all;
+}
+*/
+
+.tooltipshowarrow_int {
+    position: absolute;
+    top: 5px;
+    right: -1px;
+    z-index: 1000;
+    display: block;
+    border: 8px solid;
+    border-color: transparent #fff;
+    border-left-width: 0;
+    -moz-box-shadow: inset 1px 1px 0 rgba(0,0,0,.1),inset 0 -1px 0 rgba(0,0,0,.07);
+    -webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,.1),inset 0 -1px 0 rgba(0,0,0,.07);
+    box-shadow: inset 1px 1px 0 rgba(0,0,0,.1),inset 0 -1px 0 rgba(0,0,0,.07);
+}
+
+.tooltipshowarrow_out {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    z-index: 999;
+    display: block;
+    border: 8px solid;
+    border-color: transparent #bbb;
+    border-left-width: 0;
+    -moz-box-shadow: inset 1px 1px 0 rgba(0,0,0,.1),inset 0 -1px 0 rgba(0,0,0,.07);
+    -webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,.1),inset 0 -1px 0 rgba(0,0,0,.07);
+    box-shadow: inset 1px 1px 0 rgba(0,0,0,.1),inset 0 -1px 0 rgba(0,0,0,.07);
+}
+
+.tooltipshow {
+    position: absolute;
+    z-index: 999 !important;
+    width: 180px;
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid;
+    border-color: #bbb #bbb #a8a8a8;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,.2);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.2);
+    box-shadow: 0 1px 3px rgba(0,0,0,.2);
+}
+/*#endregion 驗證銀行帳戶提示 */
+
+/*#region 註冊成功 彈跳視窗 */
+#agentModal {
+    text-align: center;
+}
+
+.modal-header {
+    color: #fff;
+    text-align: left;
+    background: #808080;
+}
+
+    .modal-header > .modal-title {
+        color: #fff;
+        font-weight: normal;
+    }
+
+.modal-footer {
+    margin-top: 15px;
+    padding: 19px 20px 20px;
+    text-align: right;
+    border-top: 1px solid #e5e5e5;
+}
+
+    .modal-footer button {
+        border: none;
+    }
+/*#endregion 註冊成功 彈跳視窗*/
+

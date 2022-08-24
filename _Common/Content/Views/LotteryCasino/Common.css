@@ -1,0 +1,43 @@
+﻿/* LotteryCasino 共同样式 */
+.game-list li {
+    cursor: pointer;
+}
+    /* #region 游戏列表区块*/
+    .game-list li img.icon {
+        position: absolute;
+        z-index: 2;
+    }
+
+        .game-list li img.icon.icon01 {
+            top: 9px;
+            left: 9px;
+        }
+
+        .game-list li img.icon.icon02 {
+            top: 7px;
+            right: 10px;
+        }
+
+        .game-list li img.icon.icon03 {
+            right: 5px;
+            bottom: 30px;
+        }
+
+        .game-list li img.icon.icon04 {
+            left: -10px;
+            bottom: 30px;
+        }
+
+/*装置萤幕宽小于530*/
+@media (max-width: 530px) {
+
+    .SlotHtml .game-list li img.icon.icon01 {
+        left: 6px;
+    }
+
+    .SlotHtml .game-list li img.icon.icon02 {
+        right: 3px;
+    }
+}
+
+/* #endregion RWD*/

@@ -1,0 +1,77 @@
+﻿/* #region header */
+#search {
+    background-color: #fddb00;
+}
+
+    #search form button {
+        color: #f2941a;
+    }
+/* #endregion header */
+
+/* #region nav */
+nav {
+    background-color: #f2941a;
+}
+
+#game-nav > li span {
+    font-weight: normal;
+}
+
+#game-nav > li:hover > span,
+#game-nav > li.active > span {
+    color: #000;
+    font-weight: bold;
+    background-color: #fddb00;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+}
+
+ol.subnav > li {
+    background-color: #fddb00;
+}
+
+    ol.subnav > li:hover {
+        color: #fff;
+        background-color: #f2941a;
+    }
+/* #endregion nav */
+
+/* #region recommend-list */
+#recommend-list .slick-dots li.slick-active,
+#recommend-list .slick-dots li.slick-active:hover,
+#recommend-list .slick-prev:hover,
+#recommend-list .slick-next:hover {
+    background-color: #fddb00;
+}
+
+#recommend-list .list-title {
+    border-bottom: 2px solid #fddb00;
+}
+
+    #recommend-list .list-title span {
+        color: #000;
+        background-color: #fddb00;
+    }
+
+    #recommend-list .list-title a {
+        color: #fddb00;
+    }
+/* #endregion recommend-list */
+
+/* #region 游戏列表区块 */
+.game-list li:hover {
+    background-color: #fddb00;
+    border-color: #fddb00;
+}
+
+    .game-list li:hover .game-logo:before {
+        background-image: url('../../../../_Common/Content/Views/SlotCasino/CQ9/hover.png');
+    }
+/* #endregion 游戏列表区块 */
+
+/* #region pager */
+#pager > li[ng-click]:hover {
+    background-color: #fddb00;
+}
+/* #endregion pager */

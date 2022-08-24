@@ -1,0 +1,56 @@
+﻿.banner {
+    background: url('/CdnRedirect/Web.Portal/GJ001-01.Portal/Content/Views/NetworkDetect/images/banner.jpg');
+}
+
+.slogan {
+    width: 618px;
+    height: 35px;
+    line-height: 35px;
+    margin: 0 auto 20px;
+    color: #313131;
+    font-size: 16px;
+    font-family: 'Microsoft YaHei';
+    text-align: center;
+    background: url('/CdnRedirect/Web.Portal/GJ001-01.Portal/Content/Views/NetworkDetect/images/slogan.png');
+}
+
+.form-group {
+    padding: 10px 5px;
+    border-bottom: 1px solid #999;
+}
+
+input {
+    padding: 0 10px;
+    color: #313131;
+    font-size: 12px;
+    font-family: SinSum;
+    border: none;
+}
+
+    input.link {
+        width: 250px;
+    }
+
+button.reload, a.hyperlink {
+    margin-left: 10px;
+    padding: 5px 25px;
+    color: #fff !important;
+    font-family: 'Microsoft YaHei';
+    text-decoration: none;
+    background: #6B7CD6;
+    border: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+    button.reload:hover, a.hyperlink:hover {
+        background: #FFA10C;
+    }
+
+button.reload {
+    display: block;
+    margin: 40px auto;
+    padding: 10px 25px;
+    font-size: 18px;
+}

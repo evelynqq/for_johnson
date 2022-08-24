@@ -1,0 +1,175 @@
+<div class="panel">
+    <div id="title" class="panel-heading">
+        <div>线上取款</div>
+    </div>
+    <div class="panel-body">
+        <div ng-if="!loading" class="row ng-scope">
+            <div ng-if="isSuccess!==false" class="ng-scope">
+                <div id="account-panel" class="panel">
+                    <div id="account-heading" class="panel-heading">
+                        <span ng-if="bankAccount &amp;&amp; !showBankAccount" class="ng-scope">
+                            <i class="fa fa-info-circle"></i>
+                            <a id="show-account-info" class="btn btn-link" onclick="showAccount(this)"><span
+                                    ng-bind="bankAccount ? '检视' : ''" class="ng-binding">检视</span>存入帐户</a>
+                        </span>
+                    </div>
+                    <div id="showBankAccount" class="cloak">
+                        <form name="bankAccountForm" class="form-horizontal ng-pristine ng-invalid ng-invalid-required"
+                            ng-submit="updateBankAccount(updateBankAccountParams)">
+                            <div class="form-group">
+                                <label class="control-label" for="inputBankName">银行名称</label>
+                                <div class="control-div">
+                                    <p ng-if="bankAccount" class="form-control-static ng-scope"><span
+                                            ng-bind="bankAccount.BankName" class="ng-binding">农业银行</span></p>
+                                    <!-- <div ng-show="!bankAccount" class="input-block ng-hide">
+                                        <i class="input-block-top"></i>
+                                        <select name="bankName" ng-model="updateBankAccountParams.BankName" ng-change="updateBankName()" class="form-control ng-pristine ng-invalid ng-invalid-required" id="inputBankName" ng-options="value.Name for value in banks | orderBy:'Sort' " required=""><option value="?" selected="selected"></option></select>
+                                        <i class="input-block-btm"></i>
+                                    </div> -->
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="inputProvince">省份</label>
+                                <div class="control-div">
+                                    <p ng-if="bankAccount" class="form-control-static ng-scope"><span
+                                            ng-bind="bankAccount.Province" class="ng-binding">江西省</span></p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="inputCity">县市</label>
+                                <div class="control-div">
+                                    <p ng-if="bankAccount" class="form-control-static ng-scope"><span
+                                            ng-bind="bankAccount.City" class="ng-binding">南昌市</span></p>
+                                </div>
+                            </div>
+                            <div class="form-group" ng-class="{'has-error': !isValid}">
+                                <label class="control-label" for="inputAccount">银行帐号</label>
+                                <div class="control-div">
+                                    <p ng-if="bankAccount" class="form-control-static ng-scope"><span
+                                            ng-bind="bankAccount.Account" class="ng-binding">622</span></p>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div ng-if="bankAccount" class="ng-scope">
+                <div id="withdrawal-panel" class="panel panel-default">
+                    <div id="withdrawal-heading" class="panel-heading">
+                        取款金额
+                    </div>
+                    <div class="panel-body">
+                        <form class="form-horizontal ng-pristine ng-invalid ng-invalid-required"
+                            ng-submit="apply(applyParams)" name="applyForm">
+                            <div class="form-group">
+                                <!-- <div class="alert alert-danger ng-hide" role="alert" ng-hide="IsPassAudit">由于您的稽核未过，需额外加收手续费</div> -->
+                                <div>
+                                    <p class="form-control-static">
+                                        <a class="btn-link" ng-click="showAdministrationFeeDialog()">检视稽核详细资讯</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="form-group"
+                                ng-class="{'has-error': balance <= 0 || balance - min - fee - adFee <= 0}">
+                                <label class="control-label">帐户余额</label>
+                                <div class="control-div">
+                                    <p class="form-control-static ng-binding">
+                                        $ 5,000
+                                    </p>
+                                </div>
+                                <div class="tooltip">
+                                </div>
+                            </div>
+                            <div ng-if="condition &amp;&amp; condition != 'unlimited'" class="form-group ng-scope">
+                                <label class="control-label">取款限额</label>
+                                <div class="control-div">
+                                    <p class="form-control-static ng-scope" ng-if="!loading" ng-switch="condition">
+                                        <span ng-switch-when="between" class="ng-scope"><span
+                                                ng-bind="min | customCurrency" class="ng-binding">$ 10</span> ~ <span
+                                                ng-bind="max | customCurrency" class="ng-binding">$ 50,000</span></span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div ng-if="fee" class="form-group error ng-scope">
+                                <label class="control-label">手续费</label>
+                                <div class="control-div">
+                                    <p class="form-control-static ">
+                                        <span ng-bind="fee | customCurrency" class="ng-binding">$ 5</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div ng-if="TotalDiscountCancel > 0" class="form-group error ng-scope">
+                                <label class="control-label">优惠扣除</label>
+                                <div class="control-div">
+                                    <p class="form-control-static">
+                                        <span ng-bind="TotalDiscountCancel | customCurrency" class="ng-binding">$
+                                            5,000</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="form-group"
+                                ng-class="{'has-error': applyForm.amount.$dirty &amp;&amp; applyForm.amount.$invalid}">
+                                <label class="control-label" for="inputAmount">取款金额</label>
+                                <div class="control-div">
+                                    <div class="input-block">
+                                        <i class="input-block-top"></i>
+                                        <input ng-disabled="!bankAccount||balance <= 0" ng-model="applyParams.amount"
+                                            name="amount"
+                                            class="form-control ng-pristine ng-valid-number ng-valid-max ng-valid-min ng-invalid ng-invalid-required"
+                                            id="inputAmount" type="number" autocomplete="off" min="10" max="50000"
+                                            required="">
+                                        <i class="input-block-btm"></i>
+                                    </div>
+                                </div>
+                                <div class="tooltip">
+                                </div>
+                            </div>
+                            <div class="form-group has-error" ng-class="{'has-error': isOverdraft()}">
+                                <label class="control-label">
+                                    取款后帐户余额
+                                </label>
+                                <div class="control-div">
+                                    <p class="form-control-static">
+                                    </p>
+                                    <div ng-if="applyForm.amount.$invalid" class="ng-scope">
+                                        --
+                                    </div>
+                                    <div class="tooltip ">
+                                    </div>
+
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="moneyPassword">取款密码</label>
+                                <div class="control-div">
+                                    <div class="input-block">
+                                        <i class="input-block-top"></i>
+                                        <input id="money-pwd-input"
+                                            class="form-control ng-pristine ng-invalid ng-invalid-required"
+                                            type="password" placeholder="请输入您的取款密码" ng-model="applyParams.moneyPassword"
+                                            required="">
+                                        <i class="input-block-btm"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label"></label>
+                                <div class="control-div">
+                                    <button ng-disabled="!bankAccount || isOverdraft()||isShowApply" type="submit"
+                                        class="btn btn-submit">
+                                        申请
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="panel-shadow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

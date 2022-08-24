@@ -1,0 +1,185 @@
+#banner {
+  background-image: url("../Lobby/Board/banner.jpg");
+}
+
+.game-list > li {
+  width: 408px;
+  height: 302px;
+  margin: 20px;
+  border-radius: 0.25rem;
+  -webkit-box-shadow: 0 5px 19px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 5px 19px 0 rgba(0, 0, 0, 0.15);
+  background-size: 100% 100%;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  position: relative;
+}
+
+.game-list > li:not([game-box='more']):hover {
+  -webkit-box-shadow: 0 5px 19px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 5px 19px 0 rgba(0, 0, 0, 0.25);
+  -webkit-transform: scale(1.05, 1.05);
+      -ms-transform: scale(1.05, 1.05);
+          transform: scale(1.05, 1.05);
+}
+
+.game-list > li span {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-weight: 500;
+  font-size: 12px;
+  text-align: center;
+  color: #fff;
+  background: #00517b;
+  border-radius: 10px;
+  width: 100px;
+  height: 20px;
+  line-height: 22px;
+  letter-spacing: 1px;
+}
+
+.game-list > li div {
+  display: none;
+}
+
+.game-list > li::before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 70px;
+  bottom: -17px;
+  left: 160px;
+  background-repeat: no-repeat;
+  background-size: 80% auto;
+}
+
+#lobby [game-box='more'] {
+  background-image: url("../lobby/Board/more.jpg");
+}
+
+#lobby [game-box='more']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/white/Board/more.png");
+}
+
+#lobby [game-box='City761Board'] {
+  background-image: url("../lobby/Board/City761Board.jpg");
+}
+
+#lobby [game-box='City761Board']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/white/Board/City761Board.png");
+}
+
+#lobby [game-box='JdbBoard'] {
+  background-image: url("../lobby/Board/JdbBoard.jpg");
+}
+
+#lobby [game-box='JdbBoard']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/white/Board/JdbBoard.png");
+}
+
+#lobby [game-box='KgHtml'] {
+  background-image: url("../lobby/Board/KgHtml.jpg");
+}
+
+#lobby [game-box='KgHtml']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/white/Board/KgHtml.png");
+}
+
+#lobby [game-box='LegBoard'] {
+  background-image: url("../lobby/Board/LegBoard.jpg");
+}
+
+#lobby [game-box='LegBoard']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/white/Board/LegBoard.png");
+}
+
+#lobby [game-box='JsBoard'] {
+  background-image: url("../lobby/Board/JsBoard.jpg");
+}
+
+#lobby [game-box='JsBoard']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/white/Board/JsBoard.png");
+}
+
+#lobby [game-box='VgBoard'] {
+  background-image: url("../lobby/Board/VgBoard.jpg");
+}
+
+#lobby [game-box='VgBoard']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/white/Board/VgBoard.png");
+}
+
+#lobby [game-box='NwBoard'] {
+  background-image: url("../lobby/Board/NwBoard.jpg");
+}
+
+#lobby [game-box='NwBoard']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/white/Board/NwBoard.png");
+}
+
+#lobby [game-box='FgBoard'] {
+  background-image: url("../lobby/Board/FgBoard.jpg");
+}
+
+#lobby [game-box='FgBoard']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/white/Board/FgBoard.png");
+}
+
+#lobby [game-box='KyBoard'] {
+  background-image: url("../lobby/Board/KyBoard.jpg");
+}
+
+#lobby [game-box='KyBoard']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/white/Board/KyBoard.png");
+}
+
+#lobby [game-box='LcBoard'] {
+  background-image: url("../lobby/Board/LcBoard.jpg");
+}
+
+#lobby [game-box='LcBoard']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/white/Board/LcBoard.png");
+}
+
+#lobby [game-box='T365Board'] {
+  background-image: url("../lobby/Board/T365Board.jpg");
+}
+
+#lobby [game-box='T365Board']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/white/Board/T365Board.png");
+}
+
+#lobby [game-box='YgBoard'] {
+  background-image: url("../lobby/Board/YgBoard.jpg");
+}
+
+#lobby [game-box='YgBoard']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/white/Board/YgBoard.png");
+}
+
+#lobby [game-box='AsBoard'] {
+  background-image: url("../lobby/Board/AsBoard.jpg");
+}
+
+#lobby [game-box='AsBoard']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/white/Board/AsBoard.png");
+}
+
+#lobby [game-box='TyBoard'] {
+  background-image: url("../lobby/Board/TyBoard.jpg");
+}
+
+#lobby [game-box='TyBoard']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/white/Board/TyBoard.png");
+}
+
+#lobby [game-box='Cq9Board'] {
+  background-image: url("../lobby/Board/Cq9Board.jpg");
+}
+
+#lobby [game-box='Cq9Board']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/white/Board/Cq9Board.png");
+}
+/*# sourceMappingURL=Board.css.map */

@@ -1,0 +1,85 @@
+﻿@import '../../../../_Common/Css/GameCode';
+
+.banner {
+    background: url('../Lobby/Board/banner.jpg') center top no-repeat;
+}
+
+#lobby .game-list li {
+    width: 486px;
+    height: 289px;
+    margin: 0 7px 15px;
+    padding: 65px 0 0 325px;
+    color: #fff;
+    font-size: 12px;
+    border: 1px solid #354666;
+    transition: opacity 0.3s;
+    background: url('../Lobby/Board/more.jpg');
+    position: relative;
+    &:not([game-box='more']):hover {
+        opacity: 0.7;
+    }
+    span {
+        position: absolute;
+        font-size: 18px;
+        color: #fff;
+        font-weight: 600;
+        letter-spacing: 2px;
+        bottom: 0;
+        right: 0;
+        line-height: 370px;
+        text-align: center;
+        width: 204px;
+        height: 100%;
+        background-color:rgba(0,0,0,0.3);
+    }
+    &::after {
+        content: '立即进入';
+        position: absolute;
+        font-size: 14px;
+        color: #00afff;
+        bottom: 50px;
+        left: 280px;
+        width: 204px;
+        height: 30px;
+        font-weight: 400;
+        text-align: center;
+    }
+    div {
+        display: none;
+    }
+    &::before {
+        content: '';
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        top: 20px;
+        left: 305px;
+        background-repeat: no-repeat;
+        z-index: 1;
+    }
+}
+#lobby .game-list li[game-box='more'] span {
+    color: #84827D;
+}
+#lobby .game-list li[game-box='more']::after {
+    content: 'COMING SOON';
+    position: absolute;
+    font-size: 14px;
+    color: #84827D;
+    bottom: 50px;
+    left: 280px;
+    width: 204px;
+    height: 30px;
+    font-weight: 400;
+    text-align: center;
+}
+
+// gamebox-list
+@each $gamebox in $board-list {
+    #lobby li[game-box='#{$gamebox}'] {
+        background-image: url('../lobby/Board/#{$gamebox}.jpg');
+        &::before {
+            background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v1/color/Board/#{$gamebox}.png');
+        }
+    }
+}

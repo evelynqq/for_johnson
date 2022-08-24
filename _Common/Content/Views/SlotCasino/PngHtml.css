@@ -1,0 +1,75 @@
+﻿/* #region header */
+#search {
+    background-color: #1e7bbb;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+/* #endregion header */
+
+/* #region nav */
+nav {
+    background-color: #1e7bbb;
+}
+
+#game-nav > li span:hover,
+#game-nav > li.active span {
+    background-color: #f00;
+}
+
+ol.subnav > li {
+    color: #fff;
+    background-color: #1e7bbb;
+}
+
+    ol.subnav > li:hover {
+        background-color: #f00;
+    }
+/* #endregion nav */
+
+/* #region recommend-list */
+#recommend-list .slick-dots li.slick-active,
+#recommend-list .slick-dots li.slick-active:hover,
+#recommend-list .slick-prev:hover,
+#recommend-list .slick-next:hover {
+    background-color: #1e7bbb;
+}
+
+#recommend-list .list-title {
+    border-bottom: 2px solid #1e7bbb;
+}
+
+    #recommend-list .list-title span {
+        background-color: #1e7bbb;
+    }
+
+    #recommend-list .list-title a {
+        color: #1e7bbb;
+    }
+/* #endregion recommend-list */
+
+/* #region game-list */
+.game-list li:hover {
+    background-color: #1e7bbb;
+    border-color: #1e7bbb;
+}
+
+    .game-list li:hover .game-logo:before {
+        background-image: url('../../../../_Common/Content/Views/SlotCasino/PNG/hover.png');
+    }
+
+    .game-list li:hover .game-text {
+        color: #fff;
+    }
+/* #endregion game-list */
+
+/* #region pager */
+#pager > li[ng-click] {
+    color: #fff;
+    background-color: #1e7bbb;
+}
+
+    #pager > li[ng-click]:hover {
+        background-color: #f00;
+    }
+/* #endregion pager */

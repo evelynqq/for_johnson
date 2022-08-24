@@ -1,0 +1,243 @@
+﻿/* 各頁設定 */
+#un-lobby {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    margin: 0 auto;
+    padding: 192px 0 0px;
+    background: #fff url('../Shared/images/content_bg.jpg') no-repeat center top;
+}
+
+#un-lobby>.wrapper {
+    width: 1090px;
+}
+
+#un-lobby aside {
+    width: 100%;
+    background: #e8e8e8;
+}
+
+#sidebar {
+    display: block;
+    padding-left: 1px;
+}
+
+#un-lobby ul#sidebar li {
+    width: 16.66%;
+    height: 63px;
+    display: inline-block;
+}
+
+#un-lobby ul#sidebar li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 63px;
+    background: #1f1f1f;
+    border: 1px solid #eaebeb;
+}
+
+#un-lobby ul#sidebar li:hover a,
+#un-lobby ul#sidebar li.active a {
+    background: #dd0023;
+}
+
+/* 內文CSS */
+#articles {
+    position: relative;
+    background: #e8e8e8;
+    border-bottom: none;
+    float: right;
+    width: 100%;
+    min-height: 640px;
+    margin-bottom: 0px;
+    margin-right: 0;
+    padding: 20px 40px 40px;
+    color: #363636;
+    font-size: 12px;
+    text-align: left;
+}
+
+#articles h2 {
+    margin: 0;
+    font-size: 32px;
+    text-align: center;
+}
+
+#articles h3 {
+    color: #DD0023;
+    font-size: 20px;
+    text-align: left;
+}
+
+#articles h4 {
+    font-size: 14px;
+    text-align: left;
+}
+
+#articles>ul {
+    list-style: none;
+}
+
+#articles ol {
+    padding-left: 20px;
+    list-style-type: decimal;
+}
+
+#articles p,
+#articles li {
+    font-size: 12px;
+    text-align: justify;
+    line-height: 2em;
+}
+
+#articles p {
+    margin: 1em 0;
+}
+
+#articles table {
+    width: 100%;
+}
+
+#articles table tr,
+#articles table th,
+#articles table td {
+    line-height: 2.5em;
+    text-align: center;
+    border: 1px solid #363636;
+}
+
+#articles table th {
+    font-weight: bold;
+    background-color: #e6e6e6;
+}
+
+/* 重點顏色 */
+#articles .highlight {
+    color: #a00;
+}
+
+/* #region 合作夥伴tab 供其他页面使用 */
+#articles ul.mtab-menual {
+    padding: 20px 0;
+    display: block;
+    text-align: center;
+}
+
+#articles ul.mtab-menual li {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 8px 32px;
+    color: #1f1f1f;
+    font-size: 12px;
+    line-height: 24px;
+    text-align: center;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+#articles ul.mtab-menual li:hover,
+#articles ul.mtab-menual li.mtab {
+    color: #fff;
+    background-color: #DD0023;
+}
+
+/* #endregion 合作夥伴tab 供其他页面使用 */
+
+/* #region deposit线上存款页面使用 */
+#articles ul.deposit {
+    list-style-type: none;
+}
+
+#articles ul.deposit>li {
+    counter-increment: title;
+}
+
+#articles ul.deposit>li>a:before {
+    content: "方法 "counter(title, upper-alpha)"、";
+}
+
+#articles ul.deposit>li a {
+    color: #ff6a00;
+    font-size: 16px;
+    text-decoration: underline;
+}
+
+/* #endregion deposit线上存款页面使用 */
+
+/* #region account nav共用 */
+.body {
+    position: relative;
+    width: 1000px;
+    margin: 100px auto 30px auto;
+    padding: 1px;
+    font-size: 14px;
+    font-family: PMingLiU;
+    background: #e8e8e8;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.body #title {
+    color: #fff;
+    text-align: center;
+    background: #0b0b0b;
+}
+
+.body.container #title,
+.body #account-heading,
+.body #withdrawal-heading {
+    color: #fff;
+    background: #840000;
+}
+
+/* 檢視存入帳戶的文字顏色 */
+.body #show-account-info.btn {
+    color: #fff;
+}
+
+/* #endregion account nav共用 */
+
+/* #region 輸入框placeholder顏色 */
+/* 此為預設顏色，若各站需特別色系請由此修改，不需要可整段刪除 */
+.form-group .control-div input::-webkit-input-placeholder {
+    color: #999;
+}
+
+.form-group .control-div input::-moz-placeholder {
+    color: #999;
+}
+
+.form-group .control-div input:-ms-input-placeholder {
+    color: #999;
+}
+
+.form-group .control-div input.placeholder {
+    color: #999;
+}
+
+/* #endregion 輸入框placeholder顏色 */
+
+#agent-register {
+    text-align: center;
+}
+
+#agent-register>div {
+    width: 60%;
+    display: inline-block;
+}
+
+/* 一鍵取回 */
+.body.container #title,
+.body #account-heading,
+.body #withdrawal-heading,
+#account-popup.modal.in table th {
+    color: #fff;
+    background: #1f1f1f;
+}

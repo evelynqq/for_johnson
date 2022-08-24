@@ -1,0 +1,234 @@
+@charset "UTF-8";
+#banner {
+  background-image: url("../Lobby/Lottery/banner.jpg");
+}
+
+#content {
+  background-image: url("../Lobby/Lottery/background.jpg");
+}
+
+#lobby .game-list > li {
+  width: 431px;
+  height: 275px;
+  background-color: #201611;
+  background-position-x: 155px;
+  background-position-y: 22px;
+  background-repeat: no-repeat;
+  margin: 20px 30px;
+  border: 1px solid #412d23;
+  position: relative;
+  -webkit-transition: all ease 0.1s;
+  -o-transition: all ease 0.1s;
+  transition: all ease 0.1s;
+}
+
+#lobby .game-list > li span {
+  position: absolute;
+  font-size: 15px;
+  color: #6F6A66;
+  left: 0;
+  top: 130px;
+  width: 160px;
+  height: 30px;
+  text-align: center;
+}
+
+#lobby .game-list > li::before {
+  content: '';
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  top: 30px;
+  left: 10px;
+  background-repeat: no-repeat;
+  background-size: 90%;
+}
+
+#lobby .game-list > li:not([game-list='more'])::after {
+  content: '进入游戏';
+  position: absolute;
+  bottom: 50px;
+  left: 20px;
+  width: 115px;
+  height: 50px;
+  font-size: 16px;
+  line-height: 50px;
+  border-radius: 5px;
+  border: 1px solid #111111;
+  color: #756f6b;
+  background: #2b231a;
+  background: -webkit-gradient(linear, left top, left bottom, from(#2b231a), color-stop(44%, #201611), to(#201614));
+  background: -o-linear-gradient(top, #2b231a 0%, #201611 44%, #201614 100%);
+  background: linear-gradient(to bottom, #2b231a 0%, #201611 44%, #201614 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#201611', endColorstr='#201614',GradientType=0 );
+}
+
+#lobby .game-list > li:hover {
+  -webkit-transform: scale(1.02);
+      -ms-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+#lobby li.more {
+  background-image: url("../lobby/Lottery/more.jpg");
+}
+
+#lobby li.more::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Lottery/more.png");
+}
+
+#lobby li.BbinaLottery {
+  background-image: url("../lobby/Lottery/BbinaLottery.jpg");
+}
+
+#lobby li.BbinaLottery::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Lottery/BbinaLottery.png");
+}
+
+#lobby li.IgLottery {
+  background-image: url("../lobby/Lottery/IgLottery.jpg");
+}
+
+#lobby li.IgLottery::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Lottery/IgLottery.png");
+}
+
+#lobby li.IgLotto {
+  background-image: url("../lobby/Lottery/IgLotto.jpg");
+}
+
+#lobby li.IgLotto::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Lottery/IgLotto.png");
+}
+
+#lobby li.IgaLottery {
+  background-image: url("../lobby/Lottery/IgaLottery.jpg");
+}
+
+#lobby li.IgaLottery::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Lottery/IgaLottery.png");
+}
+
+#lobby li.IgaLotto {
+  background-image: url("../lobby/Lottery/IgaLotto.jpg");
+}
+
+#lobby li.IgaLotto::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Lottery/IgaLotto.png");
+}
+
+#lobby li.LxLottery {
+  background-image: url("../lobby/Lottery/LxLottery.jpg");
+}
+
+#lobby li.LxLottery::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Lottery/LxLottery.png");
+}
+
+#lobby li.VrLottery {
+  background-image: url("../lobby/Lottery/VrLottery.jpg");
+}
+
+#lobby li.VrLottery::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Lottery/VrLottery.png");
+}
+
+#lobby li.AplLottery {
+  background-image: url("../lobby/Lottery/AplLottery.jpg");
+}
+
+#lobby li.AplLottery::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Lottery/AplLottery.png");
+}
+
+#lobby li.G1Lottery {
+  background-image: url("../lobby/Lottery/G1Lottery.jpg");
+}
+
+#lobby li.G1Lottery::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Lottery/G1Lottery.png");
+}
+
+#lobby li.G1aLottery {
+  background-image: url("../lobby/Lottery/G1aLottery.jpg");
+}
+
+#lobby li.G1aLottery::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Lottery/G1aLottery.png");
+}
+
+#lobby li.GbLottery {
+  background-image: url("../lobby/Lottery/GbLottery.jpg");
+}
+
+#lobby li.GbLottery::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Lottery/GbLottery.png");
+}
+
+#lobby li.GblLottery {
+  background-image: url("../lobby/Lottery/GblLottery.jpg");
+}
+
+#lobby li.GblLottery::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Lottery/GblLottery.png");
+}
+
+#lobby li.SgwLottery {
+  background-image: url("../lobby/Lottery/SgwLottery.jpg");
+}
+
+#lobby li.SgwLottery::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Lottery/SgwLottery.png");
+}
+
+#lobby li.BgLottery {
+  background-image: url("../lobby/Lottery/BgLottery.jpg");
+}
+
+#lobby li.BgLottery::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Lottery/BgLottery.png");
+}
+
+#lobby li.Ig1Lottery {
+  background-image: url("../lobby/Lottery/Ig1Lottery.jpg");
+}
+
+#lobby li.Ig1Lottery::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Lottery/Ig1Lottery.png");
+}
+
+#lobby li.Ig1Lotto {
+  background-image: url("../lobby/Lottery/Ig1Lotto.jpg");
+}
+
+#lobby li.Ig1Lotto::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v2/color/Lottery/Ig1Lotto.png");
+}
+
+#lobby .game-list > li:not([game-list='more']):hover::after {
+  border: 1px solid #d20000;
+  color: #fff;
+  background: #9c5953;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9c5953), color-stop(44%, #761c14), to(#5d0f0d));
+  background: -o-linear-gradient(top, #9c5953 0%, #761c14 44%, #5d0f0d 100%);
+  background: linear-gradient(to bottom, #9c5953 0%, #761c14 44%, #5d0f0d 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#761c14', endColorstr='#5d0f0d',GradientType=0 );
+}
+
+#lobby .game-list > li.more::after {
+  display: none;
+}
+
+#lobby .game-list > li.more:hover {
+  border-color: #412d23;
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+}
+
+#lobby .game-list > li.more > span {
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: #50382d;
+}
+/*# sourceMappingURL=Lottery.css.map */

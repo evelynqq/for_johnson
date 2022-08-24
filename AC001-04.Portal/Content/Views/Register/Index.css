@@ -1,0 +1,194 @@
+@charset "UTF-8";
+/*註冊頁面 CSS*/
+/*#region 針對type=number  會出現右邊上下箭頭做隐藏*/
+input[type="number"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  /*for chrome*/
+}
+
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  /*for chrome*/
+}
+
+/*#endregion 針對type=number  會出現右邊上下箭頭*/
+.panel {
+  color: #666;
+  font: 12px 'SimSun';
+  background: none;
+  -webkit-box-shadow: 0 0px 0px rgba(0, 0, 0, 0) !important;
+          box-shadow: 0 0px 0px rgba(0, 0, 0, 0) !important;
+}
+
+.panel-body {
+  padding-top: -10px !important;
+}
+
+.form-group {
+  margin: 7px 0;
+}
+
+.form-group .control-label {
+  width: 30%;
+  line-height: 40px;
+}
+
+.form-group .control-label .fa {
+  color: #b20000;
+}
+
+.form-group .control-div {
+  width: 50%;
+  text-align: left;
+  line-height: 28px;
+}
+
+.form-group .control-div input, #checkcode-input-group input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 5px 4px 5px 10px;
+  line-height: 1.428571429;
+  font-size: 12px;
+  font-family: 'SimSun';
+  color: #979797;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.form-group .control-div > label {
+  display: inline-block;
+}
+
+.form-group .control-div input[type="radio"], .form-group .control-div input[type="checkbox"] {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+}
+
+.modal {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-dialog {
+  width: 700px;
+  border-radius: 5px;
+}
+
+fieldset {
+  width: 700px;
+  margin: 0 auto;
+  border: none;
+}
+
+.showMore {
+  display: none;
+}
+
+.panel-heading {
+  display: none;
+}
+
+.register-title {
+  display: none;
+}
+
+#moreoption, .agreement {
+  color: #ffc84e;
+  cursor: pointer;
+}
+
+#moreoption:hover, .agreement:hover {
+  color: #ffd800;
+}
+
+a.agreement:hover {
+  text-decoration: underline;
+}
+
+.hasShow {
+  display: block;
+  -webkit-transition: all linear 3s;
+  -o-transition: all linear 3s;
+  transition: all linear 3s;
+}
+
+/*輸入驗證碼的群組*/
+.checkcode {
+  position: relative;
+}
+
+.checkcode img {
+  width: 100%;
+  height: 40px;
+  border-radius: 3px;
+}
+
+button + button {
+  margin-left: 10px;
+}
+
+#btn-submit {
+  float: left;
+  color: #333;
+  font-size: 13px;
+  font-family: 'Microsoft JhengHei';
+  line-height: 25px;
+  vertical-align: top;
+  outline: none;
+  border: none;
+  line-height: 30px;
+  color: #fff;
+  background: #ffc74e;
+  width: 100px;
+  border-radius: 0px !important;
+}
+
+#btn-submit:hover {
+  background: #ffa200;
+}
+
+.modal-header {
+  color: #fff;
+  text-align: left;
+  background: #808080;
+}
+
+.modal-content, .modal-dialog, .modal-body, .modal-footer {
+  background: #fff;
+}
+
+.modal-footer {
+  margin-top: 15px;
+  padding: 19px 20px 20px;
+  text-align: right;
+  border-top: 1px solid #e5e5e5;
+}
+
+.modal-body > ul {
+  list-style-type: disc;
+  padding-left: 30px;
+}
+
+.modal-body > ul li {
+  line-height: 2em;
+}
+
+.modal-header > .modal-title {
+  color: #fff;
+  font-weight: normal;
+}
+
+.lineheight {
+  color: #ff0000;
+}
+/*# sourceMappingURL=Index.css.map */

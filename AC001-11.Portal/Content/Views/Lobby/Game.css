@@ -1,0 +1,272 @@
+#banner {
+  background-image: url("../Lobby/Game/banner.jpg");
+}
+
+#lobby {
+  position: relative;
+}
+
+#lobby .prev,
+#lobby .next {
+  position: absolute;
+  top: 25px;
+  display: block;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  background: #23a6da;
+  border-radius: 50px;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+#lobby .prev:before,
+#lobby .next:before {
+  font-size: 20px;
+  line-height: 36px;
+  font-family: sans-serif;
+  padding: 14px;
+}
+
+#lobby .prev:hover,
+#lobby .next:hover {
+  -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+#lobby .prev {
+  left: -10px;
+}
+
+#lobby .prev:before {
+  content: '<';
+}
+
+#lobby .next {
+  right: -10px;
+}
+
+#lobby .next:before {
+  content: '>';
+}
+
+#lobby .slider-left {
+  overflow: hidden;
+  height: 88px;
+}
+
+#lobby .tempWrap {
+  margin: auto;
+}
+
+.game-list li {
+  display: inline-block;
+  width: 150px;
+  height: 58px;
+  padding: 10px 0;
+  margin: 16px 2px;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-color: #cbe6f4;
+  cursor: pointer;
+  font-size: 15px;
+  color: #0069ba;
+  border-radius: 50px;
+  text-align: left;
+  line-height: 20px;
+}
+
+.game-list li:before {
+  content: '';
+  position: relative;
+  width: 50px;
+  height: 15px;
+  display: inline-block;
+}
+
+.game-list li div {
+  font-size: 12px;
+  display: inherit;
+  position: relative;
+  left: 51px;
+}
+
+.game-list li:not([game-box='more']):hover,
+.game-list li .active {
+  background-position: center bottom;
+  background-color: #0094ca;
+  color: #fff;
+  -webkit-transition: background-color 600ms;
+  -o-transition: background-color 600ms;
+  transition: background-color 600ms;
+}
+
+#lobby li[game-box='AgHtml'] {
+  background-image: url("../lobby/Game/AgHtml.png");
+}
+
+#lobby li[game-box='BbinaSlot'] {
+  background-image: url("../lobby/Game/BbinaSlot.png");
+}
+
+#lobby li[game-box='Cq9Html'] {
+  background-image: url("../lobby/Game/Cq9Html.png");
+}
+
+#lobby li[game-box='FsHtml'] {
+  background-image: url("../lobby/Game/FsHtml.png");
+}
+
+#lobby li[game-box='GaHtml'] {
+  background-image: url("../lobby/Game/GaHtml.png");
+}
+
+#lobby li[game-box='GnsHtml'] {
+  background-image: url("../lobby/Game/GnsHtml.png");
+}
+
+#lobby li[game-box='GpiHtml'] {
+  background-image: url("../lobby/Game/GpiHtml.png");
+}
+
+#lobby li[game-box='GpiFlash'] {
+  background-image: url("../lobby/Game/GpiFlash.png");
+}
+
+#lobby li[game-box='HabaHtml'] {
+  background-image: url("../lobby/Game/HabaHtml.png");
+}
+
+#lobby li[game-box='IsbHtml'] {
+  background-image: url("../lobby/Game/IsbHtml.png");
+}
+
+#lobby li[game-box='JdbHtml'] {
+  background-image: url("../lobby/Game/JdbHtml.png");
+}
+
+#lobby li[game-box='LgHtml'] {
+  background-image: url("../lobby/Game/LgHtml.png");
+}
+
+#lobby li[game-box='MgaHtml'] {
+  background-image: url("../lobby/Game/MgaHtml.png");
+}
+
+#lobby li[game-box='MgaFlash'] {
+  background-image: url("../lobby/Game/MgaFlash.png");
+}
+
+#lobby li[game-box='MwHtml'] {
+  background-image: url("../lobby/Game/MwHtml.png");
+}
+
+#lobby li[game-box='MwSlot'] {
+  background-image: url("../lobby/Game/MwSlot.png");
+}
+
+#lobby li[game-box='NeHtml'] {
+  background-image: url("../lobby/Game/NeHtml.png");
+}
+
+#lobby li[game-box='Ne2Slot'] {
+  background-image: url("../lobby/Game/Ne2Slot.png");
+}
+
+#lobby li[game-box='PgHtml'] {
+  background-image: url("../lobby/Game/PgHtml.png");
+}
+
+#lobby li[game-box='PngHtml'] {
+  background-image: url("../lobby/Game/PngHtml.png");
+}
+
+#lobby li[game-box='PrgHtml'] {
+  background-image: url("../lobby/Game/PrgHtml.png");
+}
+
+#lobby li[game-box='PrgFlash'] {
+  background-image: url("../lobby/Game/PrgFlash.png");
+}
+
+#lobby li[game-box='PtaHtml'] {
+  background-image: url("../lobby/Game/PtaHtml.png");
+}
+
+#lobby li[game-box='PtaFlash'] {
+  background-image: url("../lobby/Game/PtaFlash.png");
+}
+
+#lobby li[game-box='PtbSlot'] {
+  background-image: url("../lobby/Game/PtbSlot.png");
+}
+
+#lobby li[game-box='PtsHtml'] {
+  background-image: url("../lobby/Game/PtsHtml.png");
+}
+
+#lobby li[game-box='SgHtml'] {
+  background-image: url("../lobby/Game/SgHtml.png");
+}
+
+#lobby li[game-box='SgFlash'] {
+  background-image: url("../lobby/Game/SgFlash.png");
+}
+
+#lobby li[game-box='RtHtml'] {
+  background-image: url("../lobby/Game/RtHtml.png");
+}
+
+#lobby li[game-box='TpgHtml'] {
+  background-image: url("../lobby/Game/TpgHtml.png");
+}
+
+#lobby li[game-box='AeSlot'] {
+  background-image: url("../lobby/Game/AeSlot.png");
+}
+
+#lobby li[game-box='JpSlot'] {
+  background-image: url("../lobby/Game/JpSlot.png");
+}
+
+#lobby li[game-box='RtgSlot'] {
+  background-image: url("../lobby/Game/RtgSlot.png");
+}
+
+#lobby li[game-box='QtSlot'] {
+  background-image: url("../lobby/Game/QtSlot.png");
+}
+
+#lobby li[game-box='PsSlot'] {
+  background-image: url("../lobby/Game/PsSlot.png");
+}
+
+#lobby li[game-box='Pg1Slot'] {
+  background-image: url("../lobby/Game/Pg1Slot.png");
+}
+
+#lobby li[game-box='GanSlot'] {
+  background-image: url("../lobby/Game/GanSlot.png");
+}
+
+#lobby li[game-box='HbSlot'] {
+  background-image: url("../lobby/Game/HbSlot.png");
+}
+
+#lobby li[game-box='BgSlot'] {
+  background-image: url("../lobby/Game/BgSlot.png");
+}
+
+#lobby li[game-box='VrSlot'] {
+  background-image: url("../lobby/Game/VrSlot.png");
+}
+
+#lobby iframe {
+  display: block;
+  width: 960px;
+  height: 1020px;
+  margin: 10px auto;
+}
+/*# sourceMappingURL=Game.css.map */

@@ -1,0 +1,114 @@
+﻿#banner {
+    background-image: url('../Promotion/images/banner.jpg');
+}
+
+#content {
+    background-image: url('../Promotion/images/background.jpg');
+}
+
+#unlobby-title {
+    display: none;
+}
+
+/*#region 遊戲分類樣式 */
+
+ul.navtab {
+    display: block;
+    margin: 13px 0;
+    padding: 0;
+    font-size: 0;
+    text-align: left;
+    border-bottom: 1px solid #700b0f;
+}
+
+ul.navtab li {
+    display: inline-block;
+    width: 130px;
+    height: 37px;
+    font-size: 16px;
+    line-height: 37px;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+    background-color: #570201;
+    color: #c19e79;
+    border: 1px solid #570201;
+    border-bottom: none;
+}
+
+ul.navtab li.tab,
+ul.navtab li:hover {
+    background-image: -ms-linear-gradient(top, #8b0300, #600201, #3b0101);
+    background-image: -moz-linear-gradient(top, #8b0300, #600201, #3b0101);
+    background-image: -webkit-linear-gradient(top, #8b0300, #600201, #3b0101);
+    background-image: -o-linear-gradient(top, #8b0300, #600201, #3b0101);
+    background-image: linear-gradient(top, #8b0300, #600201, #3b0101);
+}
+
+
+/*#endregion 遊戲分類樣式 */
+
+#un-lobby>div {
+    padding-bottom: 10px;
+}
+
+#un-lobby>div>ul {
+    margin: 0 auto;
+    list-style: none;
+}
+
+#un-lobby>div>ul>li:first-child {
+    margin-bottom: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#un-lobby>div>ul>li[ng-bind-html] {
+    margin: 10px auto 15px;
+    padding: 5px 15px;
+    color: #a6c5d4;
+    font-size: 12px;
+    font-family: SimSun;
+    background: rgba(200,200,200,.3);
+    width: 950px;
+}
+
+li[ng-bind-html] h3 {}
+
+li[ng-bind-html] h4 {
+    font-size: 12px;
+    color: #f39800;
+}
+
+li[ng-bind-html] h5 {}
+
+li[ng-bind-html] p {}
+
+li[ng-bind-html] dd {
+    margin-left: 0;
+}
+
+li[ng-bind-html] img {
+    margin: -5px -15px;
+}
+
+li[ng-bind-html] table {
+    width: 100%;
+}
+
+li[ng-bind-html] table tr,
+li[ng-bind-html] table th,
+li[ng-bind-html] table td {
+    line-height: 2em;
+    text-align: center;
+    border: 1px solid #a6c5d4;
+}
+
+li[ng-bind-html] table th {
+    font-weight: bold;
+    background: #1a3d4f;
+}
+
+li[ng-bind-html] ol {
+    padding-left: 20px;
+    list-style-type: decimal;
+}

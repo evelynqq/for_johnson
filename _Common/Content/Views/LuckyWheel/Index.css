@@ -1,0 +1,481 @@
+﻿body.luckywheel {
+    font-family: Arial, 'Microsoft YaHei';
+    text-align: center;
+    background: #ff4e00;
+    background: -moz-linear-gradient(top, #ff4e00 0, #ff880a 100%);
+    background: -webkit-linear-gradient(top, #ff4e00 0,#ff880a 100%);
+    background: linear-gradient(to bottom, #ff4e00 0,#ff880a 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff4e00', endColorstr='#ff880a',GradientType=0 );
+    overflow-y: scroll;
+}
+
+    body.luckywheel::-webkit-scrollbar {
+        width: 12px;
+        background: #ff4e00;
+        background: -moz-linear-gradient(top, #ff4e00 0, #ff880a 100%);
+        background: -webkit-linear-gradient(top, #ff4e00 0,#ff880a 100%);
+        background: linear-gradient(to bottom, #ff4e00 0,#ff880a 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff4e00', endColorstr='#ff880a',GradientType=0 );
+    }
+
+    body.luckywheel::-webkit-scrollbar-thumb {
+        background: #b33700;
+    }
+
+    body.luckywheel:before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: -50%;
+        margin-left: 50%;
+        width: 100%;
+        height: 900px;
+        background: url('../../../../_Common/Content/Views/LuckyWheel/luckywheel_bg.png') no-repeat center top;
+        z-index: -1;
+    }
+
+    body.luckywheel.preview:after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: auto;
+        right: 0;
+        width: 135px;
+        height: 135px;
+        background: url('../../../../_Common/Content/Views/LuckyWheel/luckywheel_preview.png') no-repeat right top;
+        z-index: 1;
+    }
+
+    body.luckywheel .wrapper {
+        margin: 0 auto;
+        width: 876px;
+    }
+
+    body.luckywheel ol, ul {
+        display: inline-block;
+        margin: 0 auto;
+        padding: 0;
+        list-style: none;
+    }
+
+    /*#region 活動頂端 */
+    body.luckywheel header {
+        text-align: center;
+    }
+
+        body.luckywheel header .luckywheel-date {
+            text-align: left;
+            color: #fff4c3;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 31px;
+            text-shadow: 2px 2px 0px rgba(7,6,6,0.3);
+        }
+
+            body.luckywheel header .luckywheel-date:before {
+                content: '';
+                display: inline-block;
+                position: relative;
+                width: 34px;
+                height: 31px;
+                filter: drop-shadow(2px 2px 0px rgba(7,6,6,0.3));
+                background: url('../../../../_Common/Content/Views/LuckyWheel/luckywheel_date.png') no-repeat center center;
+                vertical-align: middle;
+            }
+
+        body.luckywheel header .luckywheel-title {
+            margin-top: 0;
+            color: #ffe884;
+            font-size: 130px;
+            font-weight: bold;
+            text-align: left;
+            text-shadow: 4px 4px 0px rgba(7,6,6,0.3),-1px -1px 0px #fff4c3;
+        }
+
+    /*#endregion 活動頂端 */
+
+    /*#region 活動中間 */
+    body.luckywheel .content {
+        min-height: 540px;
+        background: url('../../../../_Common/Content/Views/LuckyWheel/luckywheel_contentBg.png') no-repeat center bottom;
+    }
+
+        body.luckywheel .content .game-panel {
+            float: left;
+            width: 66.6%;
+            height: 100%;
+        }
+
+        body.luckywheel .content .panel-shadow {
+            float: right;
+            width: 33.3%;
+            height: 100%;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            background-color: rgb(119,45,0);
+            -moz-box-shadow: 5px 5px 0 rgba(119,45,0,0.4);
+            -webkit-box-shadow: 5px 5px 0 rgba(119,45,0,0.4);
+            box-shadow: 5px 5px 0 rgba(119,45,0,0.4);
+            filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=4,MakeShadow=true,ShadowOpacity=0.40);
+            -ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=4,MakeShadow=true,ShadowOpacity=0.40)";
+            zoom: 1;
+        }
+
+        body.luckywheel .content .console-panel {
+            position: relative;
+            padding: 2px 0;
+            background: #ffe884;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+            body.luckywheel .content .console-panel > * {
+                position: relative;
+                margin: 0 auto 8px;
+                width: 92%;
+                border-bottom: 1px solid rgba(177,153,48,0.8);
+            }
+
+            body.luckywheel .content .console-panel .head {
+                margin: 0 auto;
+                width: 96%;
+                color: #ff4200;
+                font-size: 17px;
+                font-weight: bold;
+                text-shadow: 1px 1px 0px rgba( 255,222,81,0.7 );
+                border-bottom: 1px solid #bebaa9;
+            }
+
+                body.luckywheel .content .console-panel .head span,
+                body.luckywheel .content .console-panel li span {
+                    display: inline-block;
+                    overflow: hidden;
+                    -ms-text-overflow: ellipsis;
+                    -o-text-overflow: ellipsis;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+
+            body.luckywheel .content .console-panel ul {
+                padding: 0 8px;
+                width: 100%;
+                height: 120px;
+                overflow: hidden;
+                overflow-y: scroll;
+            }
+
+                body.luckywheel .content .console-panel ul::-webkit-scrollbar {
+                    width: 3px;
+                    background: #fff7d6;
+                }
+
+                body.luckywheel .content .console-panel ul::-webkit-scrollbar-thumb {
+                    background: #ff4200;
+                }
+
+            body.luckywheel .content .console-panel li {
+                border-bottom: 1px solid #eae3c8;
+            }
+
+                body.luckywheel .content .console-panel li:hover {
+                    color: #ff4200;
+                }
+
+            body.luckywheel .content .console-panel .login-panel {
+                color: #ff4200;
+                font-size: 15px;
+                font-weight: bold;
+                text-align: left;
+                z-index: 1;
+            }
+
+                body.luckywheel .content .console-panel .login-panel .login-button {
+                    display: inline-block;
+                    position: absolute;
+                    padding-right: 12px;
+                    top: -48px;
+                    left: -62px;
+                    width: 124px;
+                    height: 94px;
+                    font-size: 0;
+                    line-height: 100px;
+                    text-align: right;
+                    background: url('../../../../_Common/Content/Views/LuckyWheel/luckywheel_consoleButton.png') no-repeat center center;
+                    vertical-align: bottom;
+                }
+
+                    body.luckywheel .content .console-panel .login-panel .login-button .login-main {
+                        padding-right: 4px;
+                        font-size: 24px;
+                        text-shadow: 1px 1px 0px rgba( 255,250,230,0.7 );
+                    }
+
+                        body.luckywheel .content .console-panel .login-panel .login-button .login-main.isGame {
+                            font-size: 43px;
+                            padding-right: 0;
+                        }
+
+                    body.luckywheel .content .console-panel .login-panel .login-button .login-sub {
+                        font-size: 15px;
+                        margin-left: 0;
+                        padding-left: 0;
+                        text-shadow: 1px 1px 0px rgba( 255,250,230,0.7 );
+                    }
+
+                body.luckywheel .content .console-panel .login-panel .login-info {
+                    padding-left: 64px;
+                    text-shadow: 1px 1px 0px rgba( 255,250,230,0.7 );
+                }
+
+
+                body.luckywheel .content .console-panel .login-panel .isLink {
+                    cursor: pointer;
+                }
+
+                body.luckywheel .content .console-panel .login-panel .text-underline {
+                    text-decoration: underline;
+                }
+
+            body.luckywheel .content .console-panel .reward-list {
+                background: #fff7d6;
+            }
+
+                body.luckywheel .content .console-panel .reward-list li span {
+                    display: inline-block;
+                    width: 48%;
+                    max-width: 48%;
+                }
+
+            body.luckywheel .content .console-panel .account-record {
+                background: #fff7d6;
+            }
+
+                body.luckywheel .content .console-panel .account-record ul {
+                    width: 100%;
+                }
+
+                body.luckywheel .content .console-panel .account-record span {
+                    display: inline-block;
+                    width: 30%;
+                    max-width: 30%;
+                }
+
+            body.luckywheel .content .console-panel .serial-number {
+                position: relative;
+                height: 40px;
+                border-bottom: none;
+            }
+
+                body.luckywheel .content .console-panel .serial-number input {
+                    float: left;
+                    padding: 0 8px;
+                    width: 180px;
+                    background: #fff7d6;
+                    height: 32px;
+                    line-height: 31px;
+                    border: none;
+                    border-bottom: 1px solid rgba(177,153,48,0.8);
+                }
+
+                body.luckywheel .content .console-panel .serial-number a {
+                    float: right;
+                    padding: 0 8px;
+                    height: 32px;
+                    line-height: 32px;
+                    color: #ffe884;
+                    font-size: 14px;
+                    text-decoration: none;
+                    text-shadow: 2px 2px 0 rgba( 116,41,15,0.7 );
+                    background: #ff4200;
+                }
+
+                body.luckywheel .content .console-panel .serial-number .raffleCount-tip {
+                    position: absolute;
+                    top: -40px;
+                    left: 0;
+                    width: 180px;
+                    height: 32px;
+                    color: #ffe884;
+                    font-size: 14px;
+                    line-height: 32px;
+                    background: #ff4200;
+                    -webkit-transition: all linear 1s;
+                    -moz-transition: all linear 1s;
+                    -ms-transition: all linear 1s;
+                    -o-transition: all linear 1s;
+                    transition: all linear 1s;
+                }
+
+                    body.luckywheel .content .console-panel .serial-number .raffleCount-tip:after {
+                        content: '';
+                        display: inline-block;
+                        position: absolute;
+                        top: 100%;
+                        left: 82px;
+                        width: 0;
+                        height: 0;
+                        border-left: 8px solid transparent;
+                        border-right: 8px solid transparent;
+                        border-top: 8px solid #ff4200;
+                    }
+
+    /*#endregion 活動中間 */
+
+    /*#region 活動底部 */
+    body.luckywheel footer {
+        color: #fe003c;
+        text-align: left;
+    }
+
+        body.luckywheel footer .wrapper {
+            padding: 32px;
+            background: #ffefae;
+            border-left: 4px solid #fe003c;
+            border-right: 4px solid #fe003c;
+        }
+
+            body.luckywheel footer .wrapper > h2 {
+                font-size: 20px;
+                font-weight: bold;
+                margin-top: 0;
+            }
+
+        body.luckywheel footer p {
+            font-size: 15px;
+            white-space: pre-wrap;
+        }
+
+/*#endregion 活動底部 */
+
+/*#region Modal */
+.modal {
+    overflow-y: hidden;
+}
+
+/*#region 獎項 Modal */
+.modal-backdrop {
+    background: rgba(0,0,0,0.9);
+    background: transparent \9;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e0000000,endColorstr=#e0000000);
+    zoom: 1;
+}
+
+.modal-dialog {
+    margin: 500px auto 0;
+    width: 410px;
+}
+
+    .modal-dialog .modal-content {
+        position: relative;
+        padding: 12px 0;
+        background: #ff5100;
+        color: #ffe464;
+        border: none;
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+        border-radius: 0;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+        .modal-dialog .modal-content:before {
+            content: '';
+            position: absolute;
+            display: none;
+            top: auto;
+            left: 0;
+            bottom: 100%;
+            width: 100%;
+            height: 174px;
+        }
+
+        .modal-dialog .modal-content button {
+            background: #ffe464;
+            color: #ff5100;
+            font-size: 14px;
+            line-height: 32px;
+            border: 1px solid #ffe464;
+            -moz-border-radius: 0;
+            -webkit-border-radius: 0;
+            border-radius: 0;
+        }
+
+    .modal-dialog.reward-modal .modal-content {
+        background: #ff5100;
+        color: #fff;
+    }
+
+        .modal-dialog.reward-modal .modal-content:before {
+            display: inline-block;
+            background: url('../../../../_Common/Content/Views/LuckyWheel/luckywheel_rewardbg.png') no-repeat center bottom;
+        }
+
+        .modal-dialog.reward-modal .modal-content button {
+            background: #ffed9c;
+            color: #ff5100;
+            border: none;
+        }
+
+    .modal-dialog.again-modal .modal-content {
+        background: #ffed9c;
+        color: #41380e;
+    }
+
+        .modal-dialog.again-modal .modal-content:before {
+            display: inline-block;
+            background: url('../../../../_Common/Content/Views/LuckyWheel/luckywheel_againbg.png') no-repeat center bottom;
+        }
+
+        .modal-dialog.again-modal .modal-content button {
+            background: #ff5100;
+            color: #ffed9c;
+            border: none;
+        }
+/*#endregion 獎項 Modal */
+
+/*#region 快速登入口 Modal */
+.modal-backdrop.login-modal {
+    background: none;
+}
+
+.modal-dialog.login-modal {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+    .modal-dialog.login-modal iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .modal-dialog.login-modal .modal-content {
+        position: relative;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+        border-radius: 0;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+        .modal-dialog.login-modal .modal-content #login-content {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+        }
+/*#endregion 快速登入口 Modal */
+
+/*#endregion Modal */

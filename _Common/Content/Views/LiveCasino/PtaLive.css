@@ -1,0 +1,53 @@
+﻿/* #region header */
+#search {
+    background-color: #312f6e;
+}
+/* #endregion header */
+
+/* #region nav */
+#game-nav > li > span {
+    color: #312f6e;
+}
+
+#game-nav > li:hover > span,
+#game-nav > li.active > span {
+    color: #fff;
+    font-weight: bold;
+    background-color: #312f6e;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+}
+
+ol.subnav > li {
+    color: #312f6e;
+    background-color: #eee;
+}
+
+    ol.subnav > li:hover {
+        color: #fff;
+        background-color: #312f6e;
+    }
+/* #endregion nav */
+
+/* #region game-list */
+#game-list li:hover {
+    background-color: #312f6e;
+    border-color: #312f6e;
+}
+
+    #game-list li:hover .game-logo:before {
+        background-image: url('../../../../_Common/Content/Views/LiveCasino/PTA/hover.png');
+    }
+
+    #game-list li:hover .game-text {
+        color: #fff;
+    }
+/* #endregion game-list */
+
+/* #region pager */
+#pager > li[ng-click]:hover {
+    color: #fff;
+    background-color: #312f6e;
+}
+/* #endregion pager */

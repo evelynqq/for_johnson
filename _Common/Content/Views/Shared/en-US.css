@@ -1,0 +1,16 @@
+﻿ul.top-nav > li {
+    text-transform: uppercase;
+}
+
+#nav > ul > li a {
+    text-transform: uppercase;
+}
+
+#un-lobby ul#sidebar li a {
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+#account-nav > li > a {
+    max-width: 5em;
+}

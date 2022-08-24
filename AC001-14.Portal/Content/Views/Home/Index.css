@@ -1,0 +1,525 @@
+﻿#content {
+    background-image: url('../Home/images/content_bg.jpg');
+}
+
+#banner {
+    padding: 0;
+    display: block;
+    height: 600px;
+}
+
+/* #region slide-banner樣式 */
+#slide-banner {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+}
+
+    #slide-banner .slide {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -960px;
+    }
+
+        #slide-banner .slide a {
+            display: inline-block;
+            width: 1920px;
+            height: 600px; /* 通常只會改這兩個地方 跟著圖片高度 */
+        }
+    
+    /* 點點切換紐 */
+    #slide-banner .slide-pager {
+        position: absolute;
+        bottom: 40px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+        #slide-banner .slide-pager li {
+            display: inline-block;
+            width: 13px;
+            height: 13px;
+            margin: 0 4px;
+            /* 若要数字编号可以把font-size: 0拿掉 */
+            font-size: 0;
+            background-color: #e10327;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+            #slide-banner .slide-pager .on,
+            #slide-banner .slide-pager li:hover {
+                background-color: #fff;
+            }
+/* #endregion slide-banner樣式 */
+
+#home {
+    padding:0 0 20px;
+    background: #e7e7e7;
+}
+#content .wrapper {
+    padding: 0;
+}
+
+/* #region home-jackpot */
+#home-jackpot {
+    display: block;
+    font-size: 0;
+    color: #fff;
+    background: #dd0023;
+}
+
+    #home-jackpot > li {
+        display: inline-block;
+        width: 33.2%;
+        vertical-align: top;
+    }
+
+        #home-jackpot > li.mg,
+        #home-jackpot > li.pt {
+            padding: 20px 0;
+            font-size: 24px;
+            text-align: center;
+        }
+
+            #home-jackpot > li.mg span,
+            #home-jackpot > li.pt span {
+                display: block;
+                margin-bottom: 8px;
+            }
+
+        #home-jackpot > li.super {
+            padding: 46px 0 0 103px;
+            font-size: 12px;
+            font-family: SimSun;
+            text-align: left;
+            background:url('../Home/images/super_winner.png') no-repeat 30px 18px;
+        }
+
+            #home-jackpot > li.super p {
+                margin: 0 0 -4px;
+                color: #fff;
+                font-size: 24px;
+                font-family: Arial,'Microsoft YaHei';
+            }
+
+            #home-jackpot > li.super span {
+                color: #fff;
+            }
+/* #endregion home-jackpot */
+
+/* #region home-winner */
+#home-winner{
+    background: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+#home-winner:before {
+    content: "";
+    display: inline-block;
+    width: 95px;
+    height: 67px;
+    background: #fff url('../Home/images/winner_list.png') no-repeat center center;
+    margin-top: 16px;
+}
+
+    #home-winner ul { 
+        width: 400px;
+        height: 110px;
+        vertical-align: top;
+        padding: 0 10px;
+    }
+
+        #home-winner ul li {
+        }
+
+            #home-winner ul li span.col {
+                display: inline-block;
+                width: 32%;
+                vertical-align: top;
+                color: #454545;
+                font-size: 12px;
+                font-family: SimSun;
+                line-height: 32px;
+            }
+
+            #home-winner ul li span.account {
+                padding-left: 25px;
+            }
+
+            #home-winner ul li span.blue {
+                color: #DD0023;
+            }
+
+            #home-winner ul li span.yellow {
+                color: #f00;
+            }
+/* #endregion home-winner */
+
+/* #region home-slot */
+#home-slot {
+    font-family: SimSun;
+}       
+
+    #home-slot ul.slot-list {
+        display: block;
+        background: #1f1f1f;
+        text-align: center;
+    }
+
+        #home-slot ul.slot-list li {
+            display: inline-block;
+            height: 60px;
+            line-height: 60px;
+            padding:0 20px ;
+            color: #fff;
+            font-size: 16px;
+        }
+
+            #home-slot ul.slot-list li:hover,
+            #home-slot ul.slot-list li.active {
+                background-color: #dd0023;
+            }
+
+    #home-slot ul.slot-panel {
+        display: block;
+        margin: 15px 0;
+        font-size: 0;
+        text-align: center;
+    }
+
+        #home-slot ul.slot-panel li {
+            position: relative;
+            display: inline-block;
+            width: 20%;
+            height: 180px;
+            vertical-align: top;
+            margin: 0px 4px 10px;
+            color: #fff;
+            font-size: 16px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            transition: .3s;
+        }
+
+            #home-slot ul.slot-panel li:hover{
+                transform: scale(1.1);
+                margin: 0 20px 10px;
+            }
+
+            #home-slot ul.slot-panel li div.title {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                display: inline-block;
+                width: 100%;
+                height: 94px;
+                padding: 65px 15px 0;
+                background: url('../Home/images/slot/icon_bg.png') repeat-x center top;
+            }
+
+        #home-slot ul.slot-panel.hot li {
+            font-size: 14px;
+        }
+
+            #home-slot ul.slot-panel.hot li div.title {
+                padding-top: 40px;
+            }
+
+            #home-slot ul.slot-panel.hot li p {
+                margin: 5px 0 0;
+                text-align: right;
+            }
+
+            #home-slot ul.slot-panel.hot li span.orange {
+                float: left;
+                color: #fb6a00;
+                width: 50%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-align: left;
+                text-overflow: ellipsis;
+            }
+
+        #home-slot ul.slot-panel li span.hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+            width: 100%;
+            height: 100%;
+            padding-top: 40px;
+            font-size: 18px;
+            text-align: center;
+            background: #212121 \9;
+            background: rgba(21,21,21,.8);
+        }
+
+            #home-slot ul.slot-panel li span.hover:after {
+                content: '进入游戏';
+                display: block;
+                width: 180px;
+                height: 45px;
+                margin: 40px auto 0;
+                font-size: 16px;
+                line-height: 45px;
+                background: #bd8246;
+            }
+
+        #home-slot ul.slot-panel li:hover span.hover {
+            display: inline-block;
+        }
+        #home-slot ul.slot-panel li.hot01 {
+            background-image: url('../Home/images/slot/hot/01.jpg');
+            width: 40.5%;
+        }
+        #home-slot ul.slot-panel li.hot02 {
+            background-image: url('../Home/images/slot/hot/02.jpg');
+        }
+        #home-slot ul.slot-panel li.hot03 {
+            background-image: url('../Home/images/slot/hot/03.jpg');
+        }
+        #home-slot ul.slot-panel li.hot04 {
+            background-image: url('../Home/images/slot/hot/04.jpg');
+        }
+        #home-slot ul.slot-panel li.hot05 {
+            background-image: url('../Home/images/slot/hot/05.jpg');
+        }
+        #home-slot ul.slot-panel li.hot06 {
+            width: 40.5%;
+            background-image: url('../Home/images/slot/hot/06.jpg');
+        }
+        #home-slot ul.slot-panel li.hot07 {
+            background-image: url('../Home/images/slot/hot/07.jpg');
+        }
+        #home-slot ul.slot-panel li.hot08 {
+            background-image: url('../Home/images/slot/hot/08.jpg');
+        }
+        #home-slot ul.slot-panel li.hot09 {
+            background-image: url('../Home/images/slot/hot/09.jpg');
+        }
+        #home-slot ul.slot-panel li.hot10 {
+            background-image: url('../Home/images/slot/hot/10.jpg');
+        }
+        #home-slot ul.slot-panel li.new01 {
+            background-image: url('../Home/images/slot/new/01.jpg');
+        }
+        #home-slot ul.slot-panel li.new02 {
+            background-image: url('../Home/images/slot/new/02.jpg');
+        }
+        #home-slot ul.slot-panel li.new03 {
+            background-image: url('../Home/images/slot/new/03.jpg');
+        }
+        #home-slot ul.slot-panel li.new04 {
+            background-image: url('../Home/images/slot/new/04.jpg');
+        }
+        #home-slot ul.slot-panel li.new05 {
+            background-image: url('../Home/images/slot/new/05.jpg');
+        }
+        #home-slot ul.slot-panel li.new06 {
+            background-image: url('../Home/images/slot/new/06.jpg');
+        }
+        #home-slot ul.slot-panel li.new07 {
+            background-image: url('../Home/images/slot/new/07.jpg');
+        }
+        #home-slot ul.slot-panel li.new08 {
+            background-image: url('../Home/images/slot/new/08.jpg');
+        }
+        #home-slot ul.slot-panel li.new09 {
+            background-image: url('../Home/images/slot/new/09.jpg');
+        }
+        #home-slot ul.slot-panel li.new10 {
+            background-image: url('../Home/images/slot/new/10.jpg');
+        }
+        #home-slot ul.slot-panel li.new11 {
+            background-image: url('../Home/images/slot/new/11.jpg');
+        }
+        #home-slot ul.slot-panel li.new12 {
+            background-image: url('../Home/images/slot/new/12.jpg');
+        }
+        #home-slot ul.slot-panel li.jackpot01 {
+            background-image: url('../Home/images/slot/jackpot/01.jpg');
+        }
+        #home-slot ul.slot-panel li.jackpot02 {
+            background-image: url('../Home/images/slot/jackpot/02.jpg');
+        }
+        #home-slot ul.slot-panel li.jackpot03 {
+            background-image: url('../Home/images/slot/jackpot/03.jpg');
+        }
+        #home-slot ul.slot-panel li.jackpot04 {
+            background-image: url('../Home/images/slot/jackpot/04.jpg');
+        }
+        #home-slot ul.slot-panel li.jackpot05 {
+            background-image: url('../Home/images/slot/jackpot/05.jpg');
+        }
+        #home-slot ul.slot-panel li.jackpot06 {
+            background-image: url('../Home/images/slot/jackpot/06.jpg');
+        }
+        #home-slot ul.slot-panel li.jackpot07 {
+            background-image: url('../Home/images/slot/jackpot/07.jpg');
+        }
+        #home-slot ul.slot-panel li.jackpot08 {
+            background-image: url('../Home/images/slot/jackpot/08.jpg');
+        }
+        #home-slot ul.slot-panel li.jackpot09 {
+            background-image: url('../Home/images/slot/jackpot/09.jpg');
+        }
+        #home-slot ul.slot-panel li.jackpot10 {
+            background-image: url('../Home/images/slot/jackpot/10.jpg');
+        }
+        #home-slot ul.slot-panel li.jackpot11 {
+            background-image: url('../Home/images/slot/jackpot/11.jpg');
+        }
+        #home-slot ul.slot-panel li.jackpot12 {
+            background-image: url('../Home/images/slot/jackpot/12.jpg');
+        }
+        #home-slot ul.slot-panel li.ag01 {
+            background-image: url('../Home/images/slot/ag/01.jpg');
+        }
+        #home-slot ul.slot-panel li.ag02 {
+            background-image: url('../Home/images/slot/ag/02.jpg');
+        }
+        #home-slot ul.slot-panel li.ag03 {
+            background-image: url('../Home/images/slot/ag/03.jpg');
+        }
+        #home-slot ul.slot-panel li.ag04 {
+            background-image: url('../Home/images/slot/ag/04.jpg');
+        }
+        #home-slot ul.slot-panel li.ag05 {
+            background-image: url('../Home/images/slot/ag/05.jpg');
+        }
+        #home-slot ul.slot-panel li.ag06 {
+            background-image: url('../Home/images/slot/ag/06.jpg');
+        }
+        #home-slot ul.slot-panel li.ag07 {
+            background-image: url('../Home/images/slot/ag/07.jpg');
+        }
+        #home-slot ul.slot-panel li.ag08 {
+            background-image: url('../Home/images/slot/ag/08.jpg');
+        }
+        #home-slot ul.slot-panel li.ag09 {
+            background-image: url('../Home/images/slot/ag/09.jpg');
+        }
+        #home-slot ul.slot-panel li.ag10 {
+            background-image: url('../Home/images/slot/ag/10.jpg');
+        }
+        #home-slot ul.slot-panel li.ag11 {
+            background-image: url('../Home/images/slot/ag/11.jpg');
+        }
+        #home-slot ul.slot-panel li.ag12 {
+            background-image: url('../Home/images/slot/ag/12.jpg');
+        }
+        #home-slot ul.slot-panel li.pt01 {
+            background-image: url('../Home/images/slot/pt/01.jpg');
+        }
+        #home-slot ul.slot-panel li.pt02 {
+            background-image: url('../Home/images/slot/pt/02.jpg');
+        }
+        #home-slot ul.slot-panel li.pt03 {
+            background-image: url('../Home/images/slot/pt/03.jpg');
+        }
+        #home-slot ul.slot-panel li.pt04 {
+            background-image: url('../Home/images/slot/pt/04.jpg');
+        }
+        #home-slot ul.slot-panel li.pt05 {
+            background-image: url('../Home/images/slot/pt/05.jpg');
+        }
+        #home-slot ul.slot-panel li.pt06 {
+            background-image: url('../Home/images/slot/pt/06.jpg');
+        }
+        #home-slot ul.slot-panel li.pt07 {
+            background-image: url('../Home/images/slot/pt/07.jpg');
+        }
+        #home-slot ul.slot-panel li.pt08 {
+            background-image: url('../Home/images/slot/pt/08.jpg');
+        }
+        #home-slot ul.slot-panel li.pt09 {
+            background-image: url('../Home/images/slot/pt/09.jpg');
+        }
+        #home-slot ul.slot-panel li.pt10 {
+            background-image: url('../Home/images/slot/pt/10.jpg');
+        }
+        #home-slot ul.slot-panel li.pt11 {
+            background-image: url('../Home/images/slot/pt/11.jpg');
+        }
+        #home-slot ul.slot-panel li.pt12 {
+            background-image: url('../Home/images/slot/pt/12.jpg');
+        }
+        #home-slot ul.slot-panel li.mg01 {
+            background-image: url('../Home/images/slot/mg/01.jpg');
+        }
+        #home-slot ul.slot-panel li.mg02 {
+            background-image: url('../Home/images/slot/mg/02.jpg');
+        }
+        #home-slot ul.slot-panel li.mg03 {
+            background-image: url('../Home/images/slot/mg/03.jpg');
+        }
+        #home-slot ul.slot-panel li.mg04 {
+            background-image: url('../Home/images/slot/mg/04.jpg');
+        }
+        #home-slot ul.slot-panel li.mg05 {
+            background-image: url('../Home/images/slot/mg/05.jpg');
+        }
+        #home-slot ul.slot-panel li.mg06 {
+            background-image: url('../Home/images/slot/mg/06.jpg');
+        }
+        #home-slot ul.slot-panel li.mg07 {
+            background-image: url('../Home/images/slot/mg/07.jpg');
+        }
+        #home-slot ul.slot-panel li.mg08 {
+            background-image: url('../Home/images/slot/mg/08.jpg');
+        }
+        #home-slot ul.slot-panel li.mg09 {
+            background-image: url('../Home/images/slot/mg/09.jpg');
+        }
+        #home-slot ul.slot-panel li.mg10 {
+            background-image: url('../Home/images/slot/mg/10.jpg');
+        }
+        #home-slot ul.slot-panel li.mg11 {
+            background-image: url('../Home/images/slot/mg/11.jpg');
+        }
+        #home-slot ul.slot-panel li.mg12 {
+            background-image: url('../Home/images/slot/mg/12.jpg');
+        }
+        #home-slot ul.slot-panel li.sg01 {
+            background-image: url('../Home/images/slot/sg/01.jpg');
+        }
+        #home-slot ul.slot-panel li.sg02 {
+            background-image: url('../Home/images/slot/sg/02.jpg');
+        }
+        #home-slot ul.slot-panel li.sg03 {
+            background-image: url('../Home/images/slot/sg/03.jpg');
+        }
+        #home-slot ul.slot-panel li.sg04 {
+            background-image: url('../Home/images/slot/sg/04.jpg');
+        }
+        #home-slot ul.slot-panel li.sg05 {
+            background-image: url('../Home/images/slot/sg/05.jpg');
+        }
+        #home-slot ul.slot-panel li.sg06 {
+            background-image: url('../Home/images/slot/sg/06.jpg');
+        }
+        #home-slot ul.slot-panel li.sg07 {
+            background-image: url('../Home/images/slot/sg/07.jpg');
+        }
+        #home-slot ul.slot-panel li.sg08 {
+            background-image: url('../Home/images/slot/sg/08.jpg');
+        }
+        #home-slot ul.slot-panel li.sg09 {
+            background-image: url('../Home/images/slot/sg/09.jpg');
+        }
+        #home-slot ul.slot-panel li.sg10 {
+            background-image: url('../Home/images/slot/sg/10.jpg');
+        }
+        #home-slot ul.slot-panel li.sg11 {
+            background-image: url('../Home/images/slot/sg/11.jpg');
+        }
+        #home-slot ul.slot-panel li.sg12 {
+            background-image: url('../Home/images/slot/sg/12.jpg');
+        }
+/* #endregion home-slot */

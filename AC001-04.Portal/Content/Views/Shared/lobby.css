@@ -1,0 +1,33 @@
+﻿#lobby {
+    min-height: 440px;
+    /*background: url('../Shared/images/content.jpg') no-repeat center bottom;*/
+}
+
+    #lobby .line {
+        position: relative;
+        margin: 0 auto;
+        bottom: 52px;
+        width: 943px;
+        height: 1px;
+        background: #ddd;
+    }
+
+    #lobby .game-list {
+        padding: 0;
+        list-style: none;
+        text-align: center;
+    }
+
+        #lobby .game-list li {
+            display: inline-block;
+            -moz-transition: .5s;
+            -o-transition: .5s;
+            -webkit-transition: .5s;
+            transition: .5s;
+        }
+
+            #lobby .game-list li span {
+                display: block;
+                color: #563d7c;
+                font-size: 18px;
+            }

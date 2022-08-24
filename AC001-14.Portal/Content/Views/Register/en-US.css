@@ -1,0 +1,7 @@
+﻿.form-group .control-label {
+    width: 33%;
+}
+
+.form-group.agree .control-div {
+    width: 67%;
+}

@@ -1,0 +1,178 @@
+@charset "UTF-8";
+/*註冊頁面 CSS*/
+#banner {
+  background-image: url("../Register/images/banner.jpg");
+}
+
+/*#region 針對type=number  會出現右邊上下箭頭做隐藏*/
+input[type="number"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  /*for chrome*/
+}
+
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  /*for chrome*/
+}
+
+/*#endregion 針對type=number  會出現右邊上下箭頭*/
+#articles h2 {
+  color: #fff;
+}
+
+.panel-body > form {
+  width: 100%;
+}
+
+.panel, #articles {
+  color: #fff;
+  background: none;
+}
+
+.form-group .control-label {
+  width: 20%;
+  font-size: 14px;
+  line-height: 32px;
+}
+
+.form-group .control-label .fa {
+  color: #b20000;
+}
+
+.form-group .control-div {
+  width: 50%;
+  text-align: left;
+  line-height: 32px;
+}
+
+.form-group .control-div input, #checkcode-input-group input {
+  display: block;
+  width: 100%;
+  height: 32px;
+  padding: 5px 4px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #a1a1a1;
+  background-color: #eaeaea;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.form-group .control-div > label {
+  display: inline-block;
+}
+
+.form-group .control-div input[type="radio"], .form-group .control-div input[type="checkbox"] {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+}
+
+.modal {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-dialog {
+  width: 700px;
+  border-radius: 5px;
+}
+
+fieldset {
+  margin: 0 auto;
+  text-align: center;
+  border: none;
+  color: #a6a6a6;
+}
+
+.showMore {
+  display: none;
+}
+
+.panel-heading p {
+  color: #fed715;
+  font-family: 'Microsoft YaHei';
+  font-size: 14px;
+  text-align: left;
+}
+
+#articles form:before {
+  content: '賬戶註冊';
+  display: block;
+  height: 46px;
+  padding: 0 10px;
+  color: #FFFFFF;
+  font-size: 18px;
+  text-align: center;
+  line-height: 43px;
+  background: url("../Shared/images/title.png") center no-repeat;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+/*輸入驗證碼的群組*/
+#checkcode-input-group {
+  display: inline-block;
+  width: 200px;
+  height: 32px;
+  background: #e5e5e5;
+  border-radius: 3px;
+}
+
+#checkcode-input-group > input {
+  display: inline-block;
+  width: 70%;
+}
+
+#checkcode-input-group > span {
+  float: left;
+  width: 30%;
+}
+
+.checkcode {
+  position: relative;
+}
+
+.checkcode img {
+  position: absolute;
+  right: -4px;
+  width: 106%;
+  height: 32px;
+  border-radius: 3px;
+}
+
+#articles form button {
+  width: 130px;
+  height: 36px;
+  margin: 0 auto;
+  color: #272727;
+  letter-spacing: 1px;
+  text-align: center;
+  border: none;
+}
+
+#btn-reset {
+  background: #ccc;
+}
+
+#btn-reset:hover {
+  background: #bbb;
+}
+
+#btn-submit {
+  background: #ffc722;
+}
+
+#btn-submit:hover {
+  background: #ffb400;
+}
+/*# sourceMappingURL=Index.css.map */

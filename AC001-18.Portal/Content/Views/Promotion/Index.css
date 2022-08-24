@@ -1,0 +1,123 @@
+﻿#unlobby-title {
+    display: none;
+}
+
+#un-lobby > div {
+    padding-bottom: 10px;
+}
+/*#region 遊戲分類樣式 */
+ul.navtab {
+    display: inline-block;
+    width: 100%;
+    margin: 0 auto 10px;
+    padding-left: 0px;
+    border-bottom: 1px solid #b82422;
+}
+
+    ul.navtab li {
+        float: left;
+        display: inline-block;
+        height: 38px;
+        padding: 0 20px;
+        color: #001d33;
+        font-size: 14px;
+        line-height: 38px;
+    }
+
+        ul.navtab li:first-child {
+            border-top-left-radius: 5px;
+        }
+
+        ul.navtab li.tab {
+            color: #fff;
+            background: #b82422;
+        }
+/*#endregion 遊戲分類樣式 */
+#un-lobby > div > ul {
+    margin: 0 auto;
+    padding: 0 16px;
+    list-style: none;
+}
+
+    #un-lobby > div > ul > li:first-child {
+        text-align: center;
+        cursor: pointer;
+    }
+
+    #un-lobby > div > ul > li[ng-bind-html] {
+        margin: 0 auto;
+        padding: 0 50px 0 65px;
+        color: #fff;
+        font-size: 15px;
+        font-family: 'Microsoft Yahei';
+    }
+
+        #un-lobby > div > ul > li[ng-bind-html] > img {
+            display: block;
+            width: 850px;
+            margin: -15px auto 0;
+        }
+
+        #un-lobby > div > ul > li > img {
+            max-width: 100%;
+            margin-bottom: 10px;
+        }
+
+li[ng-bind-html] {
+    text-align: center;
+}
+
+    li[ng-bind-html] h3 {
+        padding-left: 5px;
+        color: #ff6a00;
+        font-size: 15px;
+        font-weight: normal;
+        text-align: left;
+    }
+
+    li[ng-bind-html] h4 {
+        text-align: left;
+    }
+
+    li[ng-bind-html] h5 {
+        text-align: left;
+    }
+
+    li[ng-bind-html] p {
+        text-align: left;
+    }
+
+    li[ng-bind-html] dd {
+        margin-left: 0;
+        text-align: left;
+    }
+
+    li[ng-bind-html] table {
+        width: 100%;
+    }
+
+        li[ng-bind-html] table tr,
+        li[ng-bind-html] table th,
+        li[ng-bind-html] table td {
+            line-height: 2em;
+            text-align: center;
+            border: 1px solid #777;
+        }
+
+        li[ng-bind-html] table th {
+            color: #ff0;
+            font-size: 15px;
+            font-weight: normal;
+            background: #660000;
+        }
+
+    li[ng-bind-html] ol {
+        padding-left: 70px;
+        list-style-type: decimal;
+        text-align: left;
+    }
+
+    li[ng-bind-html] ul {
+        padding-left: 70px;
+        text-align: left;
+    }

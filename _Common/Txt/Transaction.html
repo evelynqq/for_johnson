@@ -1,0 +1,47 @@
+<div class="panel panel-default">
+    <div id="title" class="panel-heading">
+        <div>帐户交易记录</div>
+    </div>
+    <div class="panel-body">
+        <div>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th class="text-left">
+                            <span>日期</span>&nbsp;&nbsp;
+                            <button class="btn btn-default btn-sm" type="button" ng-click="selectedBtn = 0; changeTimeBegin(0);">
+                                <span ng-class="{'text-danger': selectedBtn === 0}" class="text-danger">今日</span>
+                            </button>
+                            <button class="btn btn-default btn-sm" type="button" ng-click="selectedBtn = 1; changeTimeBegin(1, 0);">
+                                <span ng-class="{'text-danger': selectedBtn === 1}">昨日</span>
+                            </button>
+                            <button class="btn btn-default btn-sm" type="button" ng-click="selectedBtn = 2; changeTimeBegin(7);">
+                                <span ng-class="{'text-danger': selectedBtn === 2}">7日内</span>
+                            </button>
+                            <button class="btn btn-default btn-sm" type="button" ng-click="selectedBtn = 3; changeTimeBegin(30);">
+                                <span ng-class="{'text-danger': selectedBtn === 3}">30日内</span>
+                            </button>
+                        </th>
+                        <th class="text-right">金额</th>
+                        <th class="text-left">
+                            <span>类型</span>&nbsp;&nbsp;
+                            <select class="select-custom ng-pristine ng-valid" ng-model="select" ng-options="item as item.SelectText for item in selectItems" ng-change="searchType(select)"><option value="0" selected="selected">全部</option><option value="1">公司入款</option><option value="2">线上支付</option><option value="3">线上取款</option><option value="4">人工存提</option><option value="5">优惠活动</option><option value="6">返水</option><option value="7">时时返水</option><option value="8">其他</option></select>
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody data-history-scrolled="loadMore()">
+                    <!-- ngRepeat: data in records -->
+                </tbody>
+            </table>
+            <!-- ngIf: state=='ok' && !records.length --><div ng-if="state=='ok' &amp;&amp; !records.length" class="alert alert-warning ng-scope">
+                <i class="fa fa-warning"></i>
+                无任何资料
+            </div><!-- end ngIf: state=='ok' && !records.length -->
+        </div>
+        <div ng-show="!complete" class="ng-hide">
+            <i class="fa fa-spinner fa-spin"></i>
+            载入中
+        </div>
+    </div>
+</div>

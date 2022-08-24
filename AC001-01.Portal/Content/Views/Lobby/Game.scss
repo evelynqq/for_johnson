@@ -1,0 +1,120 @@
+﻿@import '../../../../_Common/Css/GameCode';
+
+#banner {
+    background-image: url('../Lobby/Game/banner.jpg');
+}
+
+#content {
+    background-image: url('../Lobby/Game/bg.jpg');
+}
+
+.kanban {
+    background: #130d0a;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.kanban .jackpot {
+    display: inline-block;
+    padding-top: 60px;
+    width: 218px;
+    height: 155px;
+    color: #ffcc7c;
+    font-size: 30px;
+    text-align: center;
+    background: url('../Lobby/Game/jackpot.jpg');
+    vertical-align: top;
+}
+
+.kanban #winner {
+    display: inline-block;
+    width: 776px;
+    height: 155px;
+    padding: 20px 0 0 40px;
+    vertical-align: top;
+}
+
+.kanban #winner .info {
+    display: inline-block;
+    margin: 0 10px;
+    vertical-align: top;
+}
+
+.kanban #winner .info + .info {
+    margin-left: 20px;
+}
+
+.kanban #winner li span {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 12px;
+    line-height: 2em;
+    text-align: left;
+}
+
+.kanban #winner li span.account {
+    width: 120px;
+    color: #999;
+}
+
+.kanban #winner li span.game {
+    width: 120px;
+    color: #999;
+}
+
+.kanban #winner li span.money {
+    width: 100px;
+    color: #c5a10a;
+}
+
+#lobby .game-list {
+    margin: 30px 0;
+}
+
+#lobby .game-list > li {
+    position: relative;
+    width: 166px;
+    height: 45px;
+    color: #fed385;
+    font-size: 13px;
+    line-height: 45px;
+    text-align: left;
+    background-repeat: no-repeat;
+    background-position: left center;
+    border: 1px solid transparent;
+    div {
+        display: none;
+    }
+}
+
+#lobby .game-list > li:hover,
+#lobby .game-list > li.active {
+    border: 1px solid #f70000;
+}
+
+#lobby .game-list > li:before {
+    content: '';
+    display: inline-block;
+    width: 55px;
+    height: 42px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 130% auto;
+    vertical-align: top;
+}
+#lobby li[game-box="more"]:before {
+    background-size: 64%;
+}
+
+// gamebox-list
+@each $gamebox in $game-list {
+    #lobby li[game-box='#{$gamebox}']:before {
+        background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v2/color/Game/#{$gamebox}.png');
+    }
+}
+
+#lobby iframe {
+    width: 100%;
+    min-height: 950px;
+    background: #fff;
+}

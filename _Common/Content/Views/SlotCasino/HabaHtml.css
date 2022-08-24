@@ -1,0 +1,102 @@
+﻿/* #region header */
+#search {
+    background-color: #fe2949;
+}
+/* #endregion header */
+
+/* #region nav */
+nav {
+    padding: 0;
+    background-color: #fe2949;
+}
+
+#game-nav {
+    padding: 0;
+}
+
+    #game-nav > li {
+        height: 50px;
+        margin: 0 10px 0 0;
+    }
+
+        #game-nav > li > span {
+            position: relative;
+            display: block;
+            height: 100%;
+            font-weight: bold;
+            line-height: 50px;
+            z-index: 1;
+        }
+
+        #game-nav > li:hover span,
+        #game-nav > li.active span {
+            color: #ff0;
+        }
+
+        #game-nav > li:hover:after,
+        #game-nav > li.active:after {
+            content: '▲';
+            position: absolute;
+            left: 50%;
+            bottom: -4px;
+            z-index: 0;
+            margin-left: -8px;
+            color: #fff;
+            font-size: 16px;
+        }
+
+ol.subnav {
+    padding: 0;
+}
+
+    ol.subnav > li:hover {
+        color: #fff;
+        background-color: #fe2949;
+    }
+/* #endregion nav */
+
+/* #region recommend-list */
+#recommend-list .slick-dots li.slick-active,
+#recommend-list .slick-dots li.slick-active:hover,
+#recommend-list .slick-prev:hover,
+#recommend-list .slick-next:hover {
+    background-color: #fe2949;
+}
+
+#recommend-list .list-title {
+    border-bottom: 2px solid #fe2949;
+}
+
+    #recommend-list .list-title span {
+        background-color: #fe2949;
+    }
+
+    #recommend-list .list-title a {
+        color: #fe2949;
+    }
+/* #endregion recommend-list */
+
+/* #region 游戏列表区块 */
+.game-list li {
+    border: 1px solid #ccc;
+}
+
+    .game-list li:hover {
+        background-color: #fe2949;
+    }
+
+    .game-list li .game-logo:hover:before {
+        background-image: url('../../../../_Common/Content/Views/SlotCasino/HABA/hover.png');
+    }
+
+    .game-list li:hover .game-text {
+        color: #fff;
+    }
+/* #endregion 游戏列表区块 */
+
+/* #region pager */
+#pager li[ng-click]:hover {
+    color: #fff;
+    background-color: #fe2949;
+}
+/* #endregion pager */

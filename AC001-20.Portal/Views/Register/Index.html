@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html>
+<html @*xmlns:ng="http://angularjs.org" *@ id="ng-app" ng-app="portalApp" meidon-time="@ViewBag.MeiDonNow" @*主機的美東時間*@
+    moment-lang="@ViewBag.Language" @*瀏覽器語系*@ ng-init="'@Resources.Shared.Head_Title'">
+
+<head>
+    <title>welcome</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="shortcut icon" href="../../../_Common/Content/Views/Shared/images/favicon.ico" />
+    <link href="../../bundles/site.css" rel="stylesheet" />
+    <link href="../../Content/Views/Register/index.css" rel="stylesheet" />
+    <script src="../../../_Common/Scripts/jquery/v1.12.4/jquery.min.js"></script>
+    <script src="../../bundles/include-html.js"></script>
+</head>
+
+<body class="layout" ng-controller="LayoutCtrl">
+    <header id="header"></header>
+
+    <!-- @* 導覽列 *@ -->
+    <nav id="nav"></nav>
+
+    <!-- Banner -->
+    <div id="banner"></div>
+
+    <!-- @* 跑馬燈 *@ -->
+    <div id="news"></div>
+
+    <!-- Content -->
+    <div id="content">
+
+        <div class="wrapper">
+            <div id="un-lobby">
+                <aside></aside>
+                <article id="articles">
+                    <h2>免费注册<span>JOIN US</span></h2>
+                    <div ng-controller="RegisterCtrl" class="ng-scope">
+                        <form ng-if="state=='ok'"
+                            class="form-horizontal ng-scope ng-pristine ng-invalid ng-invalid-required"
+                            ng-submit="register(params)">
+                            <fieldset>
+                                <legend>帐号注册</legend>
+
+                                <div class="form-group">
+                                    <label class="control-label">推薦人</label>
+                                    <div class="control-div">
+                                        <input type="text" id="parentAccount" ng-model="scope.params.ParentAccount"
+                                            class="form-control ng-pristine ng-valid">
+                                    </div>
+                                    <div class="control-info">請輸入推薦人</div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">
+                                        <i class="fa fa-star fa-required"></i>
+                                        會員帳號
+                                    </label>
+                                    <div class="control-div">
+                                        <input ng-model="scope.params.Account" type="text" maxlength="50"
+                                            class="form-control ng-pristine ng-invalid ng-invalid-required" required=""
+                                            autofocus="">
+                                    </div>
+                                    <div class="control-info">2 - 15 字元，字母開頭，限字母，數字和底線</div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">
+                                        <i class="fa fa-star fa-required"></i>
+                                        會員密碼
+                                    </label>
+                                    <div class="control-div">
+                                        <input ng-model="scope.params.Password"
+                                            class="form-control ng-pristine ng-invalid ng-invalid-required"
+                                            type="password" required="">
+                                    </div>
+                                    <div class="control-info">請輸入密碼</div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">
+                                        <i class="fa fa-star fa-required"></i>
+                                        確認密碼
+                                    </label>
+                                    <div class="control-div">
+                                        <input ng-model="scope.Confirm_Password"
+                                            class="form-control ng-pristine ng-invalid ng-invalid-required"
+                                            type="password" required="">
+                                    </div>
+                                    <div class="control-info">請再次確認密碼</div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">
+                                        <i class="fa fa-star fa-required"></i>
+                                        取款密碼
+                                    </label>
+                                    <div class="control-div">
+                                        <input ng-model="scope.params.MoneyPassword"
+                                            class="form-control ng-pristine ng-invalid ng-invalid-required"
+                                            type="password" autocomplete="off" maxlength="256" required="">
+                                    </div>
+                                    <div class="control-info">請輸入取款密碼</div>
+                                </div>
+                            </fieldset>
+
+                            <fieldset>
+                                <legend>会员资料</legend>
+                                <div class="form-group ng-scope">
+                                    <label class="control-label">
+                                        <i class="fa fa-star fa-required"></i>
+                                        真實姓名
+                                    </label>
+                                    <div class="control-div">
+                                        <input ng-model="scope.params.Name" required=""
+                                            class="form-control ng-pristine ng-invalid ng-invalid-required" type="text"
+                                            maxlength="50">
+                                    </div>
+                                    <div class="control-info">必須與提款的銀行戶口相同，否則無法提款</div>
+                                </div>
+                                <div class="form-group ng-scope">
+                                    <label class="control-label">
+                                        <i class="fa fa-star fa-required"></i>
+                                        手機號碼
+                                    </label>
+                                    <div class="control-div">
+                                        <input ng-model="scope.params.Mobile" required=""
+                                            class="form-control ng-pristine ng-invalid ng-invalid-required" type="text"
+                                            maxlength="20">
+                                    </div>
+                                    <div class="control-info">請輸入您的手機號碼</div>
+                                </div>
+                                <div class="form-group ng-scope">
+                                    <label class="control-label">
+                                        <i class="fa fa-star fa-required"></i>
+                                        電子郵箱
+                                    </label>
+                                    <div class="control-div">
+                                        <input ng-model="scope.params.Email" required=""
+                                            class="form-control ng-pristine ng-valid-email ng-invalid ng-invalid-required"
+                                            type="email" maxlength="256">
+                                    </div>
+                                    <div class="control-info">請輸入您的電子郵箱</div>
+                                </div>
+                                <div class="form-group ng-scope">
+                                    <label class="control-label">
+                                        <i class="fa fa-star fa-required"></i>
+                                        QQ號碼
+                                    </label>
+                                    <div class="control-div">
+                                        <input ng-model="scope.params.QQAccount"
+                                            class="form-control ng-pristine ng-invalid ng-invalid-required" required=""
+                                            type="text" maxlength="20">
+                                    </div>
+                                    <div class="control-info">請輸入您的QQ號碼</div>
+                                </div>
+                                <div class="form-group ng-scope">
+                                    <label class="control-label">
+                                        性別
+                                    </label>
+                                    <div class="sex control-div">
+                                        <label class="radio-inline">
+                                            <input type="radio" ng-model="scope.params.Sex" value="true" name="sex"
+                                                class="ng-pristine ng-valid">男
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" ng-model="scope.params.Sex" value="false" name="sex"
+                                                class="ng-pristine ng-valid">女
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group ng-scope">
+                                    <label class="control-label">
+                                        出生日期
+                                    </label>
+                                    <div class="control-div">
+                                        <input datepickerui="" class="datepicker ng-pristine ng-valid hasDatepicker"
+                                            ng-model="scope.params.Birthday" type="text" id="dp1529640398605">
+                                    </div>
+                                    <div class="control-info">請選擇您出生日期</div>
+                                </div>
+                                <div class="form-group ng-scope">
+                                    <label class="control-label">
+                                        微信號
+                                    </label>
+                                    <div class="control-div">
+                                        <input ng-model="scope.params.IdNumber"
+                                            class="form-control ng-pristine ng-valid" autocomplete="off" maxlength="20">
+                                    </div>
+                                    <div class="control-info">請輸入您的微信</div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">驗證碼</label>
+                                    <div class="control-div">
+                                        <div id="checkcode-input-group" class="input-group">
+                                            <input data-checkcode-retriever="scope.checkCode"
+                                                ng-model="scope.params.checkCode" checkcode-type="Register" type="text"
+                                                autocomplete="off" required=""
+                                                class="ng-pristine ng-invalid ng-invalid-required">
+                                            <span class="input-group-addon checkcode">
+                                                <img ng-show="scope.checkCode.image" ng-src="" class="ng-hide">
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="control-info">請輸入驗證碼</div>
+                                </div>
+                            </fieldset>
+
+                            <fieldset class="last">
+                                <div class="form-group">
+                                    <div class="control-div">
+                                        <label>
+                                            <input ng-model="scope.agree" type="checkbox" class="ng-pristine ng-valid">
+                                            已滿18 歲，且同意本站
+                                        </label>
+                                        <a class="agreement" ng-click="openAgreementClick()">用戶註冊協議 </a>
+                                    </div>
+                                </div>
+                                <!-- <button id="btn-submit" ng-disabled="isProcessing" ng-bind="isProcessing ? '處理中...' : '立即註冊'" class="ng-binding">立即註冊</button> -->
+                                <button id="btn-submit" type="button" class="form-btn ng-binding"
+                                    onclick="captchaPopup()">立即注册</button>
+                                <button id="btn-reset" type="reset">重置</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer"></footer>
+</body>
+
+</html>

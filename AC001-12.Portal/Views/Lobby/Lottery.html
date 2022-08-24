@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>welcome</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="shortcut icon" href="../../../_Common/Content/Views/Shared/images/favicon.ico" />
+    <link href="../../bundles/site.css" rel="stylesheet" />
+    <link href="../../Content/Views/Lobby/Lottery.css" rel="stylesheet" />
+    <script src="../../../_Common/Scripts/jquery/v1.12.4/jquery.min.js"></script>
+    <script src="../../bundles/include-html.js"></script>
+        <script>
+        // for View
+        $(function() {
+            var lobby = 'lottery';
+            var row = 3;
+            var rank = false;
+            var frame = '<ul class="game-list">*</ul>';
+            var position = '<li game-box="code"><span>name</span><div>vcode LOTTERY</div></li>';
+            var more = '<li game-box="more"><span>敬请期待</span><div>COMING SOON</div></li>';
+            var ViewList = getViewList(lobby, row, rank, frame, position, more);
+
+            $(ViewList).prependTo('#lobby');
+        });
+    </script>
+</head>
+
+<body>
+    <header id="header"></header>
+    <div id="banner"></div>
+    <div id="content">
+        <div class="wrapper">
+            <section id="lobby" ng-controller="LobbiesCtrl" class="ng-scope">
+               <!-- List -->
+            </section>
+        </div>
+    </div>
+    <footer id="footer"></footer>
+</body>
+
+</html>

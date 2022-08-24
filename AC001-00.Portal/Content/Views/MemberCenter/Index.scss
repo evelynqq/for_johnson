@@ -1,0 +1,205 @@
+﻿$MainColor:#6c6c6c;
+
+#banner,
+.banner,
+#news,
+.news {
+    display: none;
+}
+
+
+article ul {
+    margin: 20px 0;
+}
+
+// body sytle =====================================================
+#account-panel,
+#withdrawal-panel {
+    width: 90%;
+}
+
+// body sytle =====================================================
+
+.member-center {
+    font-size: 0;
+
+    // 內容標題 ====================================================
+    #articles {
+        h2 {
+            line-height: 27px;
+            padding: 10px 15px;
+        }
+    }
+
+    .panel-heading#title {
+        font-size: 18px;
+        line-height: 27px;
+    }
+
+    // 內容標題 End ====================================================
+
+    #memberHeader {
+        margin-top: 50px;
+        margin-bottom: 20px;
+        font-size: 0;
+        color: #333;
+        background: #f7f8fa;
+
+        .title {
+            font-size: 26px;
+            line-height: 40px;
+            color: #fff;
+            background: #555;
+        }
+
+        .infor {
+            width: 100%;
+            height: 70px;
+            vertical-align: top;
+            display: inline-block;
+
+            ul {
+                margin: 20px 10px;
+
+                li {
+                    width: 25%;
+                    font-size: 14px;
+                    text-align: center;
+                    line-height: 30px;
+                    display: inline-block;
+                }
+            }
+
+            button {
+                line-height: 20px;
+                border-radius: 3px;
+                background: linear-gradient(#fbfbfb, #ddd);
+
+                &:hover {
+                    background: linear-gradient(#ddd, #fbfbfb);
+                }
+            }
+        }
+    }
+
+    #memberCentent {
+        width: 80%;
+        margin-top: 0;
+        font-size: 14px;
+        display: inline-block;
+        background: #f7f8fa;
+    }
+
+    .body,
+    #articles {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    // Menu list
+    #memberAside {
+        width: 18%;
+        margin-right: 2%;
+        display: inline-block;
+        background: #f7f8fa;
+        border: 1px solid #d9d9d9;
+        border-top: none;
+        vertical-align: top;
+        font-size: 14px;
+        text-align: left;
+
+        // 第一層
+        >ul>li {
+            line-height: 40px;
+
+            span {
+                position: relative;
+                border-top: 1px solid #d9d9d9;
+
+                i {
+                    width: 30px;
+                    text-align: center;
+                    color: $MainColor;
+                }
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 15px;
+                    right: 10px;
+                    width: 0;
+                    height: 0;
+                    border-width: 5px;
+                    border-style: solid;
+                    border-color: transparent $MainColor transparent transparent;
+                    transition: all .2s;
+                }
+            }
+
+            &.open,
+            &:hover {
+                span {
+                    background: #ededed;
+
+                    &:before {
+                        top: 18px;
+                        transform: rotate(-90deg);
+                    }
+                }
+
+                ul {
+                    display: block;
+                }
+            }
+
+            &.active.open,
+            &:hover {
+                span {
+                    color: #fff;
+                    background: $MainColor;
+
+                    i {
+                        color: #fff;
+                    }
+
+                    &:before {
+                        border-color: transparent #fff transparent transparent;
+                    }
+                }
+            }
+
+            // 第二層
+            ul {
+                display: none;
+
+                li {
+                    line-height: 26px;
+
+                    // 子項目
+                    a {
+                        padding-left: 30px;
+
+                        &:hover {
+                            color: #333;
+                            background: #dedede;
+                        }
+                    }
+
+                    &.active {
+                        color: #333;
+                        background: #dedede;
+                    }
+                }
+            }
+
+            a,
+            span {
+                width: 100%;
+                height: 100%;
+                display: inline-block;
+                color: #333;
+            }
+        }
+    }
+}

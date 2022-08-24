@@ -1,0 +1,55 @@
+﻿#un-lobby:before {
+    display: none;
+}
+
+/*#region 遊戲分類樣式 */
+ul.navtab {
+    display: inline-block;
+    width: 900px;
+    padding: 0;
+    margin: 10px auto;
+    border-bottom: 1px solid #ffc722;
+}
+
+    ul.navtab li {
+        float: left;
+        display: inline-block;
+        height: 38px;
+        padding: 0 5px;
+        margin-right: 10px;
+        color: #fff;
+        font-size: 14px;
+        font-family: 'Microsoft JhengHei';
+        line-height: 38px;
+        background: #272727;
+    }
+
+        ul.navtab li.tab,
+        ul.navtab li:hover {
+            color: #272727;
+            background: #ffc722;
+        }
+/*#endregion 遊戲分類樣式 */
+
+ul.discount {
+    position: relative;
+    z-index: 3;
+    width: 900px;
+    margin: 0 auto;
+}
+
+    ul.discount > li:first-child {
+        height: 179px;
+        margin-bottom: 5px;
+        cursor: pointer;
+    }
+
+    ul.discount > li.content {
+        background: #a6a6a6;
+        padding: 20px;
+        text-align: left;
+    }
+
+    ul.discount li img {
+        width: 100%;
+    }

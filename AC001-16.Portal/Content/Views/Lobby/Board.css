@@ -1,0 +1,135 @@
+#banner {
+  background-image: url("../Lobby/Board/banner.jpg");
+}
+
+#lobby li {
+  width: 390px;
+  height: 300px;
+  background: #ccc;
+  background-size: 100%;
+  background-position: center;
+  display: inline-block;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+#lobby li:nth-child(n + 4) {
+  margin-top: 16px;
+}
+
+#lobby li span {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 25px;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+#lobby li:not([game-box='more']):hover span {
+  bottom: 50%;
+  margin-bottom: -25px;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 3px;
+  width: 60%;
+  margin-right: 20%;
+  margin-left: 20%;
+}
+
+#lobby li:not([game-box='more']):hover:not([game-box='more']) {
+  background-size: 110%;
+}
+
+#lobby li + li:not(:nth-child(3n + 1)) {
+  margin-left: 15px;
+}
+
+#lobby li[game-box='more']::after {
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+  -webkit-transition: -webkit-transform none;
+  transition: -webkit-transform none;
+  -o-transition: transform none;
+  transition: transform none;
+  transition: transform none, -webkit-transform none;
+  background: none;
+  opacity: 0;
+}
+
+#lobby [game-box='more'] {
+  background-image: url("../lobby/Board/more.jpg");
+}
+
+#lobby [game-box='City761Board'] {
+  background-image: url("../lobby/Board/City761Board.jpg");
+}
+
+#lobby [game-box='JdbBoard'] {
+  background-image: url("../lobby/Board/JdbBoard.jpg");
+}
+
+#lobby [game-box='KgHtml'] {
+  background-image: url("../lobby/Board/KgHtml.jpg");
+}
+
+#lobby [game-box='LegBoard'] {
+  background-image: url("../lobby/Board/LegBoard.jpg");
+}
+
+#lobby [game-box='JsBoard'] {
+  background-image: url("../lobby/Board/JsBoard.jpg");
+}
+
+#lobby [game-box='VgBoard'] {
+  background-image: url("../lobby/Board/VgBoard.jpg");
+}
+
+#lobby [game-box='NwBoard'] {
+  background-image: url("../lobby/Board/NwBoard.jpg");
+}
+
+#lobby [game-box='FgBoard'] {
+  background-image: url("../lobby/Board/FgBoard.jpg");
+}
+
+#lobby [game-box='KyBoard'] {
+  background-image: url("../lobby/Board/KyBoard.jpg");
+}
+
+#lobby [game-box='LcBoard'] {
+  background-image: url("../lobby/Board/LcBoard.jpg");
+}
+
+#lobby [game-box='T365Board'] {
+  background-image: url("../lobby/Board/T365Board.jpg");
+}
+
+#lobby [game-box='YgBoard'] {
+  background-image: url("../lobby/Board/YgBoard.jpg");
+}
+
+#lobby [game-box='AsBoard'] {
+  background-image: url("../lobby/Board/AsBoard.jpg");
+}
+
+#lobby [game-box='TyBoard'] {
+  background-image: url("../lobby/Board/TyBoard.jpg");
+}
+
+#lobby [game-box='Cq9Board'] {
+  background-image: url("../lobby/Board/Cq9Board.jpg");
+}
+/*# sourceMappingURL=Board.css.map */

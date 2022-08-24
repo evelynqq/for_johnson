@@ -1,0 +1,35 @@
+﻿/* Lobby各廳設定 */
+#lobby {
+    display: inline-block;
+    width: 100%;
+    margin: 40px 0;
+}
+
+    #lobby > ul.game-list {
+        display: inline-block;
+        margin: 0 auto;
+        padding: 0 6px;
+        text-align: center;
+        background-color: rgsba(0,0,0,.4);
+    }
+
+        #lobby > ul.game-list > li {
+            position: relative;
+            float: left;
+            background-position: center top;
+        }
+            #lobby > ul.game-list > li:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                width: 100%;
+                height: 100%;
+                transition: .3s;
+            }
+
+            #lobby > ul.game-list > li:not([game-box='more']):hover:before {
+                /* background-position: center bottom; */
+                box-shadow: 0 0 160px 160px rgba(0,0,0,.7) inset;
+            }

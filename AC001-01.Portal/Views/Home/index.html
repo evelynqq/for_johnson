@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html @* xmlns:ng="http://angularjs.org" *@ id="ng-app" ng-app="portalApp" meidon-time="@ViewBag.MeiDonNow" @* 主機的美東時間 *@ moment-lang="@ViewBag.Language" @* 瀏覽器語系 *@ ng-init="'@Resources.Shared.Head_Title'">
+
+<head>
+    <title>welcome</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="shortcut icon" href="../../../_Common/Content/Views/Shared/images/favicon.ico" />
+    <link href="../../bundles/site.css" rel="stylesheet" />
+    <link href="../../Content/Views/Home/index.css" rel="stylesheet" />
+    <link href="../../Content/each-site/cute3D/css/cute-slider-style.css" rel="stylesheet">
+    <script src="../../../_Common/Scripts/jquery/v1.12.4/jquery.min.js"></script>
+    <script src="../../bundles/include-html.js"></script>
+    <script src="../../../_Common/Content/jquery.SuperSlide.2.1.2.js" type="text/javascript"></script>
+    <script>
+        // Slide-banner
+        $(function () {
+            $('#slide-banner').slide({
+                titCell: 'ul.slide-pager',
+                mainCell: 'div.slide',
+                autoPage: true,
+                autoPlay: true,
+                effect: 'fold',
+                interTime: 3000,
+                delayTime: 500,
+                easing: 'swing',
+                trigger: 'click'
+            });
+        });
+    </script>
+</head>
+<body class="layout" ng-controller="LayoutCtrl">
+    <header id="header"></header>
+    <div id="header-bottom"></div>
+    <!-- Slide-Banner -->
+    <div id="banner">
+        <section id="slide-banner">
+            <div class="slide">
+                <a href="#"><img src="../../../_Common/Content/Views/Shared/images/01.jpg"></a>
+                <a href="#"><img src="../../../_Common/Content/Views/Shared/images/02.jpg"></a>
+                <a href="#"><img src="../../../_Common/Content/Views/Shared/images/03.jpg"></a>
+            </div>
+            <ul class="slide-pager"></ul>
+        </section>
+    </div>
+    <!-- Slide-Banner End -->
+    <div id="content">
+        <div class="wrapper">
+        </div>
+        <div id="home" ng-controller="LobbiesCtrl" ng-init="show='mg'" class="ng-scope">
+            <div class="slider" custom-carousel-slider="" super-vis="8">
+                <span class="prev"></span>
+                <span class="next"></span>
+                <div class="main-cell">
+                    <div class="tempWrap" style="overflow:hidden; position:relative; width:1000px">
+                        <ul style="width: 3125px; position: relative; overflow: hidden; padding: 0px; margin: 0px; left: -250px;">
+                            <li class="ga clone ng-scope active" style="float: left; width: 124px;"></li>
+                            <li class="mg ng-scope active" style="float: left; width: 124px;"></li>
+                            <li class="pt ng-scope active" style="float: left; width: 124px;"></li>
+                            <li class="bb ng-scope active" style="float: left; width: 124px;"></li>
+                            <li class="ag ng-scope active" style="float: left; width: 124px;"></li>
+                            <li class="gpi ng-scope active" style="float: left; width: 124px;"></li>
+                            <li class="gns ng-scope active" style="float: left; width: 124px;"></li>
+                            <li class="prg ng-scope active" style="float: left; width: 124px;"></li>
+                            <li class="sg ng-scope active" style="float: left; width: 124px;"></li>
+                            <li class="fish ng-scope active" style="float: left; width: 124px;"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="game-section">
+                <div class="leftbox ng-hide" ng-show="show=='mg'">
+                    <div class="jackpot">MG大奖池：<span digital="" time="1000" not-thousandth="" digital-min="8140263" digital-max="8540263">8230772.87</span></div>
+                    <ul class="slot-game">
+                        <li class="mg01" ng-click="toMgFlash()">冰上曲棍球</li>
+                        <li class="mg02" ng-click="toMgFlash()">抢劫银行</li>
+                        <li class="mg03" ng-click="toMgFlash()">银行破坏家</li>
+                        <li class="mg04" ng-click="toMgFlash()">阿瓦隆</li>
+                        <li class="mg05" ng-click="toMgFlash()">猫头鹰</li>
+                        <li class="mg06" ng-click="toMgFlash()">星光之吻</li>
+                    </ul>
+                </div>
+                <div class="reward">
+                    <div class="ward-title">
+                        <span>客户ID</span>
+                        <span>金额</span>
+                        <span>游戏名称</span>
+                    </div>
+                    <ul class="cycle-slideshow" data-cycle-fx="carousel" data-cycle-carousel-vertical="true" data-cycle-timeout="1" data-cycle-easing="linear" data-cycle-slides="> li" data-cycle-speed="2000" data-cycle-pause-on-hover="true" style="position: relative;">
+                        <li class="cycle-slide cycle-sentinel" style="position: static; top: 0px; left: 0px; z-index: 100; opacity: 1; visibility: hidden; display: block;"><span style="visibility: hidden;">che***</span><span style="visibility: hidden;">获得2.7万</span><span style="visibility: hidden;">千炮捕鱼</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 90; opacity: 0; display: none;"><span>che***</span><span>获得2.7万</span><span>千炮捕鱼</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 89; display: none; opacity: 0;"><span>lin***</span><span>获得1.3万</span><span>经典水果机</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 88; display: none; opacity: 0;"><span>zaw***</span><span>获得2.6万</span><span>超级斗地主</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 87; display: none; opacity: 0;"><span>xie***</span><span>获得1.5万</span><span>连环夺宝</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 86; display: none; opacity: 0;"><span>qq6***</span><span>获得4.2万</span><span>伴娘我最大</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 85; display: none; opacity: 0;"><span>lol***</span><span>获得3.3万</span><span>糖果派对</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 84; display: none; opacity: 0;"><span>you***</span><span>获得2.9万</span><span>金鸡</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 83; display: none; opacity: 0;"><span>Tan***</span><span>获得8.4万</span><span>火烧连环船</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 82; display: none; opacity: 0;"><span>kzz***</span><span>获得3.5万</span><span>淑女之夜</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 81; display: none; opacity: 0;"><span>jin***</span><span>获得3.1万</span><span>不朽的浪漫</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 80; display: none; opacity: 0;"><span>xx8***</span><span>获得2.6万</span><span>招财鞭炮</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 79; display: none; opacity: 0;"><span>tan***</span><span>获得3.8万</span><span>胸围银行</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 78; display: none; opacity: 0;"><span>aa7***</span><span>获得3.3万</span><span>丛林快讯</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 77; display: none; opacity: 0;"><span>cha***</span><span>获得7.3万</span><span>白狮王</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 76; display: none; opacity: 0;"><span>ccq***</span><span>获得2.1万</span><span>非洲炙热</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 75; display: none; opacity: 0;"><span>bin***</span><span>获得3.2万</span><span>无敌金刚</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 74; display: none; opacity: 0;"><span>lia***</span><span>获得2.7万</span><span>千炮捕鱼</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 73; display: none; opacity: 0;"><span>cen***</span><span>获得3.2万</span><span>喜福猴年</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 72; display: none; opacity: 0;"><span>pp8***</span><span>获得3.3万</span><span>金瓶梅</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 71; display: none; opacity: 0;"><span>lao***</span><span>获得6.5万</span><span>阿瓦隆</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 70; display: none; opacity: 0;"><span>Ain***</span><span>获得9.2万</span><span>海滨嘉年华</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 69; display: none; opacity: 0;"><span>a87***</span><span>获得3.4万</span><span>海底总动员</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 68; display: none; opacity: 0;"><span>zha***</span><span>获得1.8万</span><span>群英三国</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 67; display: none; opacity: 0;"><span>xia***</span><span>获得2.8万</span><span>摆脱</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 66; display: none; opacity: 0;"><span>ang***</span><span>获得3.6万</span><span>一夜惊喜</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 65; display: none; opacity: 0;"><span>zh1***</span><span>获得3.8万</span><span>圣诞老人</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 64; display: none; opacity: 0;"><span>qb1***</span><span>获得8.6万</span><span>豪车会</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 63; display: none; opacity: 0;"><span>aa1***</span><span>获得9.4万</span><span>雅典娜21点</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 62; display: none; opacity: 0;"><span>al0***</span><span>获得2.1万</span><span>战斗女王</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 61; display: none; opacity: 0;"><span>cgt***</span><span>获得5.6万</span><span>幸运大转盘</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 60; display: none; opacity: 0;"><span>ggm***</span><span>获得7.3万</span><span>捕鱼王</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 59; display: none; opacity: 0;"><span>xu2***</span><span>获得12.7万</span><span>宝石连线</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 58; display: none; opacity: 0;"><span>zxz***</span><span>获得3.7万</span><span>罗马勇士</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 57; display: none; opacity: 0;"><span>LYJ***</span><span>获得5.1万</span><span>深海决战</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 56; display: none; opacity: 0;"><span>lwz***</span><span>获得2.4万</span><span>赌城21点</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 55; display: none; opacity: 0;"><span>mim***</span><span>获得11.1万</span><span>狂欢节</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 54; display: none; opacity: 0;"><span>www***</span><span>获得2.6万</span><span>不朽的浪漫</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 53; display: none; opacity: 0;"><span>loc***</span><span>获得2.4万</span><span>吸血鬼扑克</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 52; display: none; opacity: 0;"><span>wns***</span><span>获得9.8万</span><span>湛蓝深海</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 51; display: none; opacity: 0;"><span>pin***</span><span>获得5.9万</span><span>水果拉霸</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 50; display: none; opacity: 0;"><span>zms***</span><span>获得6.5万</span><span>满月财富</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 49; display: none; opacity: 0;"><span>cai***</span><span>获得1.4万</span><span>美式轮盘</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 48; display: none; opacity: 0;"><span>qwe***</span><span>获得3.7万</span><span>酷炫水果</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 47; display: none; opacity: 0;"><span>aa8***</span><span>获得4.3万</span><span>一夜奇遇</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 46; display: none; opacity: 0;"><span>mxm***</span><span>获得2.7万</span><span>异性猎手</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 45; display: none; opacity: 0;"><span>wsd***</span><span>获得3.1万</span><span>美式轮盘</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 44; display: none; opacity: 0;"><span>yy2***</span><span>获得7.0万</span><span>北极宝藏</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 43; display: none; opacity: 0;"><span>cj1***</span><span>获得5.3万</span><span>亚特兰蒂斯</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 42; display: none; opacity: 0;"><span>a15***</span><span>获得12.4万</span><span>海滨嘉年华</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 41; display: none; opacity: 0;"><span>Ali***</span><span>获得2.9万</span><span>百幕大三角 </span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 40; display: none; opacity: 0;"><span>hed***</span><span>获得4.1万</span><span>熊之舞</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 39; display: none; opacity: 0;"><span>k52***</span><span>获得3.3万</span><span>船长的宝藏</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 38; display: none; opacity: 0;"><span>qll***</span><span>获得4.6万</span><span>警察与土匪</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 37; display: none; opacity: 0;"><span>lul***</span><span>获得7.7万</span><span>银行抢匪</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 36; display: none; opacity: 0;"><span>wan***</span><span>获得17.8万</span><span>沙漠宝藏</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 35; display: none; opacity: 0;"><span>ren***</span><span>获得11.3万</span><span>冰上曲棍球</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 34; display: none; opacity: 0;"><span>jqj***</span><span>获得7.5万</span><span>连环夺宝</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 33; display: none; opacity: 0;"><span>xzh***</span><span>获得19.3万</span><span>糖果派对2</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 32; display: none; opacity: 0;"><span>xy0***</span><span>获得6.4万</span><span>摆脱</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 31; display: none; opacity: 0;"><span>cat***</span><span>获得2.4万</span><span>招财进宝</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 30; display: none; opacity: 0;"><span>lih***</span><span>获得7.9万</span><span>喜福牛年</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 100; display: block;"><span>cfn***</span><span>获得3.4万</span><span>黑杰克</span></li>
+                        <li class="cycle-slide cycle-slide-active" style="position: absolute; top: 20px; left: 0px; z-index: 99; display: block;"><span>wan***</span><span>获得1.6万</span><span>龙龙龙</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 40px; left: 0px; z-index: 97; display: block;"><span>as5***</span><span>获得4.8万</span><span>樱桃之恋</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 60px; left: 0px; z-index: 96; display: block;"><span>zha***</span><span>获得2.7万</span><span>丛林巫师</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 80px; left: 0px; z-index: 95; display: block;"><span>qjj***</span><span>获得5.5万</span><span>摆脱</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 100px; left: 0px; z-index: 94; display: block;"><span>ljj***</span><span>获得23.3万</span><span>捕鱼天下</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 120px; left: 0px; z-index: 93; display: block;"><span>tan***</span><span>获得9.3万</span><span>超级斗地主</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 140px; left: 0px; z-index: 92; display: block;"><span>wyh***</span><span>获得1.9万</span><span>抢劫银行</span></li>
+                        <li class="cycle-slide" style="position: absolute; top: 160px; left: 0px; z-index: 91; display: block;"><span>wan***</span><span>获得1.1万</span><span>水果拉霸</span></li>
+                    </ul>
+                    <div>超级大奖池，等您来爆！</div>
+                </div>
+            </div>
+            <ul class="game-list wrapper">
+                <li game-box="mobile"><a href="/Mobile">面向玩家，提供3万多款电子游戏种类、9大平台百家乐以及彩票游戏投注，随时随地不间断娱乐。<span>手機投注</span></a></li>
+                <li game-box="live"><a href="/Lobby/Live">提供真人百家乐、轮盘、龙虎斗、二八杠等，美女荷官在线发牌，画面真实高清，如同亲临赌场！<span>視訊直播</span></a></li>
+                <li game-box="lottery"><a href="/Lobby/Lottery">彩种丰富齐全，时时彩、、北京PK拾、六合彩等，玩法多样，涵盖国内所有热门彩票游戏。<span>彩票遊戲</span></a></li>
+                <li game-box="sport"><a href="/Lobby/Sport">地球上最好的体育赛事投注系统，足球、篮球、橄榄球等，应有尽有，每周为您精选多场精彩赛事。<span>體育賽事</span></a></li>
+            </ul>
+        </div>
+    </div>
+    <footer id="footer"></footer>
+</body>
+</html>

@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html @* xmlns:ng="http://angularjs.org" *@ id="ng-app" ng-app="portalApp" meidon-time="@ViewBag.MeiDonNow" @* 主機的美東時間 *@ moment-lang="@ViewBag.Language" @* 瀏覽器語系 *@ ng-init="'@Resources.Shared.Head_Title'">
+
+<head>
+    <title>welcome</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="shortcut icon" href="../../../_Common/Content/Views/Shared/images/favicon.ico" />
+    <link href="../../bundles/site.css" rel="stylesheet" />
+    <link href="../../Content/Views/Lobby/Game.css" rel="stylesheet" />
+    <script src="../../../_Common/Scripts/jquery/v1.12.4/jquery.min.js"></script>
+    <script src="../../bundles/include-html.js"></script>
+    <script>
+        // for View
+        $(function() {
+            var lobby = 'game';
+            var row = 6;
+            var rank = false;
+            var frame = '<ul class="game-list">*</ul>';
+            var position = '<li game-box="code"><span>name</span><div>vcode Gaming</div></li>';
+            var more = '<li game-box="more"><span>敬请期待</span><div>COMING SOON</div></li>';
+            var ViewList = getViewList(lobby, row, rank, frame, position, more);
+
+            $(ViewList).prependTo('.main-cell');
+
+            // 加入active
+            $('[game-box="Cq9Html"]').addClass('active');
+        });
+    </script>
+</head>
+
+<body class="layout" ng-controller="LayoutCtrl">
+    <header id="header"></header>
+    <nav id="nav"></nav>
+    <div id="content">
+        <div class="wrapper">
+            <div id="news"></div>
+            <section id="lobby" ng-controller="LobbiesCtrl">
+                <div id="top-box" ng-init="jackpot=true">
+                    <div id="slideimg">
+                        <span class="slide-ctrl prev"></span>
+                        <span class="slide-ctrl next"></span>
+                        <ul class="slide">
+                            <li data-img="01"></li>
+                            <li data-img="02"></li>
+                        </ul>
+                        <ul class="ad-pager"></ul>
+                    </div>
+                    <div id="jackpot" ng-show="jackpot==true">
+                        <ul class="casino">
+                            <li>PT老虎机总彩池<span digital digital-min="459724089" word="￥" add>￥459,724,184.33</span></li>
+                            <li>AG老虎机总彩池<span digital digital-min="99003136" word="￥" add>￥459,724,184.33</span></li>
+                        </ul>
+                        <span class="title">最新获奖会员<i ng-click="jackpot=false">更多</i></span>
+                        <div id="jackpot-winner">
+                            <ul>
+                                <li>
+                                    <span class="bonus">4225</span>
+                                    <span class="account">zu1***</span>
+                                    <span class="game">舞狮献瑞</span>
+                                    <span class="money">100.00 </span>
+                                </li>
+                                <li>
+                                    <span class="bonus">20200</span>
+                                    <span class="account">jjg***</span>
+                                    <span class="game">太空漫游</span>
+                                    <span class="money">350.00 </span>
+                                </li>
+                                <li>
+                                    <span class="bonus">1950</span>
+                                    <span class="account">zgb***</span>
+                                    <span class="game">泰山传奇</span>
+                                    <span class="money">50.00 </span>
+                                </li>
+                                <li>
+                                    <span class="bonus">1500</span>
+                                    <span class="account">g65***</span>
+                                    <span class="game">反转马戏团</span>
+                                    <span class="money">10.00 </span>
+                                </li>
+                                <li>
+                                    <span class="bonus">1265</span>
+                                    <span class="account">Lij***</span>
+                                    <span class="game">招福钱龟</span>
+                                    <span class="money">1.25 </span>
+                                </li>
+                                <li>
+                                    <span class="bonus">1160</span>
+                                    <span class="account">hb8***</span>
+                                    <span class="game">灵猴献瑞</span>
+                                    <span class="money">30.00 </span>
+                                </li>
+                                <li>
+                                    <span class="bonus">1180</span>
+                                    <span class="account">sss***</span>
+                                    <span class="game">连环夺宝</span>
+                                    <span class="money">250.00 </span>
+                                </li>
+                                <li>
+                                    <span class="bonus">10460</span>
+                                    <span class="account">zgl***</span>
+                                    <span class="game">五轮驱动</span>
+                                    <span class="money">FreeGame</span>
+                                </li>
+                                <li>
+                                    <span class="bonus">4963.75</span>
+                                    <span class="account">zia***</span>
+                                    <span class="game">国王现金</span>
+                                    <span class="money">450.00 </span>
+                                </li>
+                                <li>
+                                    <span class="bonus">1500</span>
+                                    <span class="account">qq6***</span>
+                                    <span class="game">太空漫游</span>
+                                    <span class="money">10.00 </span>
+                                </li>
+                                <li>
+                                    <span class="bonus">1525</span>
+                                    <span class="account">szm***</span>
+                                    <span class="game">幸运双星</span>
+                                    <span class="money">17.50 </span>
+                                </li>
+                                <li>
+                                    <span class="bonus">1300</span>
+                                    <span class="account">zd1***</span>
+                                    <span class="game">摆脱</span>
+                                    <span class="money">30.00 </span>
+                                </li>
+                                <li>
+                                    <span class="bonus">2225</span>
+                                    <span class="account">hao***</span>
+                                    <span class="game">摆脱</span>
+                                    <span class="money">20.00 </span>
+                                </li>
+                                <li>
+                                    <span class="bonus">1008.5</span>
+                                    <span class="account">qzd***</span>
+                                    <span class="game">青龙出海</span>
+                                    <span class="money">15.00 </span>
+                                </li>
+                                <li>
+                                    <span class="bonus">1550</span>
+                                    <span class="account">zzg***</span>
+                                    <span class="game">银行抢匪</span>
+                                    <span class="money">25.00 </span>
+                                </li>
+                                <li>
+                                    <span class="bonus">1550</span>
+                                    <span class="account">klz***</span>
+                                    <span class="game">银行抢匪</span>
+                                    <span class="money">30.00 </span>
+                                </li>
+                                <li>
+                                    <span class="bonus">1408</span>
+                                    <span class="account">bhi***</span>
+                                    <span class="game">伴娘我最大</span>
+                                    <span class="money">20.00 </span>
+                                </li>
+                                <li>
+                                    <span class="bonus">1510.5</span>
+                                    <span class="account">liz***</span>
+                                    <span class="game">摆脱</span>
+                                    <span class="money">20.00 </span>
+                                </li>
+                                <li>
+                                    <span class="bonus">4000</span>
+                                    <span class="account">jjg***</span>
+                                    <span class="game">牧场咖啡</span>
+                                    <span class="money">100.00 </span>
+                                </li>
+                                <li>
+                                    <span class="bonus">2310</span>
+                                    <span class="account">hgq***</span>
+                                    <span class="game">幸运双星</span>
+                                    <span class="money">10.00 </span>
+                                </li>
+                                <li>
+                                    <span class="bonus">5520</span>
+                                    <span class="account">jjg***</span>
+                                    <span class="game">牧场咖啡</span>
+                                    <span class="money">FreeGame</span>
+                                </li>
+                                <li>
+                                    <span class="bonus">3005</span>
+                                    <span class="account">qq3***</span>
+                                    <span class="game">金鸡</span>
+                                    <span class="money">5.50 </span>
+                                </li>
+                                <li>
+                                    <span class="bonus">1105</span>
+                                    <span class="account">b81***</span>
+                                    <span class="game">东方美人</span>
+                                    <span class="money">10.00 </span>
+                                </li>
+                                <li>
+                                    <span class="bonus">3292</span>
+                                    <span class="account">mm6***</span>
+                                    <span class="game">摆脱</span>
+                                    <span class="money">1.50 </span>
+                                </li>
+                                <li>
+                                    <span class="bonus">1080</span>
+                                    <span class="account">hai***</span>
+                                    <span class="game">复古花园</span>
+                                    <span class="money">0.25 </span>
+                                </li>
+                                <li>
+                                    <span class="bonus">7875</span>
+                                    <span class="account">gq4***</span>
+                                    <span class="game">银行抢匪</span>
+                                    <span class="money">100.00 </span>
+                                </li>
+                                <li>
+                                    <span class="bonus">4324</span>
+                                    <span class="account">js8***</span>
+                                    <span class="game">地府烈焰</span>
+                                    <span class="money">50.00 </span>
+                                </li>
+                                <li>
+                                    <span class="bonus">1557.2</span>
+                                    <span class="account">ss1***</span>
+                                    <span class="game">翅膀</span>
+                                    <span class="money">2.25 </span>
+                                </li>
+                                <li>
+                                    <span class="bonus">2700</span>
+                                    <span class="account">ggg***</span>
+                                    <span class="game">招财鞭炮</span>
+                                    <span class="money">20.00 </span>
+                                </li>
+                                <li>
+                                    <span class="bonus">1800</span>
+                                    <span class="account">jjg***</span>
+                                    <span class="game">麻将老虎机</span>
+                                    <span class="money">1.25 </span>
+                                </li>
+                                <li>
+                                    <span class="bonus">5490</span>
+                                    <span class="account">sem***</span>
+                                    <span class="game">胸围银行</span>
+                                    <span class="money">300.00 </span>
+                                </li>
+                                <li>
+                                    <span class="bonus">1575</span>
+                                    <span class="account">ben***</span>
+                                    <span class="game">银行抢匪</span>
+                                    <span class="money">FreeGame</span>
+                                </li>
+                                <li>
+                                    <span class="bonus">1709.6</span>
+                                    <span class="account">min***</span>
+                                    <span class="game">摆脱</span>
+                                    <span class="money">35.00 </span>
+                                </li>
+                                <li>
+                                    <span class="bonus">2160</span>
+                                    <span class="account">jjg***</span>
+                                    <span class="game">日本武士</span>
+                                    <span class="money">15.00 </span>
+                                </li>
+                                <li>
+                                    <span class="bonus">1270</span>
+                                    <span class="account">bj1***</span>
+                                    <span class="game">银行抢匪</span>
+                                    <span class="money">0.50 </span>
+                                </li>
+                                <li>
+                                    <span class="bonus">1560</span>
+                                    <span class="account">zgb***</span>
+                                    <span class="game">胸围银行</span>
+                                    <span class="money">3.50 </span>
+                                </li>
+                                <li>
+                                    <span class="bonus">5625</span>
+                                    <span class="account">szm***</span>
+                                    <span class="game">象棋老虎机</span>
+                                    <span class="money">30.00 </span>
+                                </li>
+                                <li>
+                                    <span class="bonus">4875</span>
+                                    <span class="account">zul***</span>
+                                    <span class="game">夏日营地</span>
+                                    <span class="money">50.00 </span>
+                                </li>
+                                <li>
+                                    <span class="bonus">1975</span>
+                                    <span class="account">qB7***</span>
+                                    <span class="game">招福钱龟</span>
+                                    <span class="money">1.50 </span>
+                                </li>
+                                <li>
+                                    <span class="bonus">9500</span>
+                                    <span class="account">zul***</span>
+                                    <span class="game">大航海时代</span>
+                                    <span class="money">0.50 </span>
+                                </li>
+                                <li>
+                                    <span class="bonus">1125</span>
+                                    <span class="account">she***</span>
+                                    <span class="game">甜蜜派对</span>
+                                    <span class="money">10.00 </span>
+                                </li>
+                                <li>
+                                    <span class="bonus">1600</span>
+                                    <span class="account">hzz***</span>
+                                    <span class="game">太空漫游</span>
+                                    <span class="money">2.25 </span>
+                                </li>
+                                <li>
+                                    <span class="bonus">1605</span>
+                                    <span class="account">qqg***</span>
+                                    <span class="game">银行抢匪</span>
+                                    <span class="money">0.25 </span>
+                                </li>
+                                <li>
+                                    <span class="bonus">1375</span>
+                                    <span class="account">ld8***</span>
+                                    <span class="game">纯银</span>
+                                    <span class="money">5.00 </span>
+                                </li>
+                                <li>
+                                    <span class="bonus">2220</span>
+                                    <span class="account">zgl***</span>
+                                    <span class="game">马戏团</span>
+                                    <span class="money">10.00 </span>
+                                </li>
+                                <li>
+                                    <span class="bonus">2370</span>
+                                    <span class="account">zz1***</span>
+                                    <span class="game">东方美人</span>
+                                    <span class="money">20.00 </span>
+                                </li>
+                                <li>
+                                    <span class="bonus">1080</span>
+                                    <span class="account">Dbb***</span>
+                                    <span class="game">招福钱龟</span>
+                                    <span class="money">50.00 </span>
+                                </li>
+                                <li>
+                                    <span class="bonus">1309</span>
+                                    <span class="account">d13***</span>
+                                    <span class="game">翅膀</span>
+                                    <span class="money">200.00 </span>
+                                </li>
+                                <li>
+                                    <span class="bonus">3402</span>
+                                    <span class="account">zu1***</span>
+                                    <span class="game">金龙卷</span>
+                                    <span class="money">100.00 </span>
+                                </li>
+                                <li>
+                                    <span class="bonus">2450</span>
+                                    <span class="account">Bs1***</span>
+                                    <span class="game">连环夺宝</span>
+                                    <span class="money">350.00 </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="winner" ng-show="jackpot==false">
+                        <span class="title account">玩家</span>
+                        <span class="title money">投注金额</span>
+                        <span class="title bonus">奖金</span>
+                        <span class="title">游戏名称</span>
+                        <span class="winner-closed" ng-click="jackpot=true"></span>
+                        <div id="slidewinner">
+                            <ul>
+                                <li>
+                                    <span class="account">zu1***</span>
+                                    <span class="money">100.00 </span>
+                                    <span class="bonus">4225</span>
+                                    <span class="game">舞狮献瑞</span>
+                                </li>
+                                <li>
+                                    <span class="account">jjg***</span>
+                                    <span class="money">350.00 </span>
+                                    <span class="bonus">20200</span>
+                                    <span class="game">太空漫游</span>
+                                </li>
+                                <li>
+                                    <span class="account">zgb***</span>
+                                    <span class="money">50.00 </span>
+                                    <span class="bonus">1950</span>
+                                    <span class="game">泰山传奇</span>
+                                </li>
+                                <li>
+                                    <span class="account">g65***</span>
+                                    <span class="money">10.00 </span>
+                                    <span class="bonus">1500</span>
+                                    <span class="game">反转马戏团</span>
+                                </li>
+                                <li>
+                                    <span class="account">Lij***</span>
+                                    <span class="money">1.25 </span>
+                                    <span class="bonus">1265</span>
+                                    <span class="game">招福钱龟</span>
+                                </li>
+                                <li>
+                                    <span class="account">hb8***</span>
+                                    <span class="money">30.00 </span>
+                                    <span class="bonus">1160</span>
+                                    <span class="game">灵猴献瑞</span>
+                                </li>
+                                <li>
+                                    <span class="account">sss***</span>
+                                    <span class="money">250.00 </span>
+                                    <span class="bonus">1180</span>
+                                    <span class="game">连环夺宝</span>
+                                </li>
+                                <li>
+                                    <span class="account">zgl***</span>
+                                    <span class="money">FreeGame</span>
+                                    <span class="bonus">10460</span>
+                                    <span class="game">五轮驱动</span>
+                                </li>
+                                <li>
+                                    <span class="account">zia***</span>
+                                    <span class="money">450.00 </span>
+                                    <span class="bonus">4963.75</span>
+                                    <span class="game">国王现金</span>
+                                </li>
+                                <li>
+                                    <span class="account">qq6***</span>
+                                    <span class="money">10.00 </span>
+                                    <span class="bonus">1500</span>
+                                    <span class="game">太空漫游</span>
+                                </li>
+                                <li>
+                                    <span class="account">szm***</span>
+                                    <span class="money">17.50 </span>
+                                    <span class="bonus">1525</span>
+                                    <span class="game">幸运双星</span>
+                                </li>
+                                <li>
+                                    <span class="account">zd1***</span>
+                                    <span class="money">30.00 </span>
+                                    <span class="bonus">1300</span>
+                                    <span class="game">摆脱</span>
+                                </li>
+                                <li>
+                                    <span class="account">hao***</span>
+                                    <span class="money">20.00 </span>
+                                    <span class="bonus">2225</span>
+                                    <span class="game">摆脱</span>
+                                </li>
+                                <li>
+                                    <span class="account">qzd***</span>
+                                    <span class="money">15.00 </span>
+                                    <span class="bonus">1008.5</span>
+                                    <span class="game">青龙出海</span>
+                                </li>
+                                <li>
+                                    <span class="account">zzg***</span>
+                                    <span class="money">25.00 </span>
+                                    <span class="bonus">1550</span>
+                                    <span class="game">银行抢匪</span>
+                                </li>
+                                <li>
+                                    <span class="account">klz***</span>
+                                    <span class="money">30.00 </span>
+                                    <span class="bonus">1550</span>
+                                    <span class="game">银行抢匪</span>
+                                </li>
+                                <li>
+                                    <span class="account">bhi***</span>
+                                    <span class="money">20.00 </span>
+                                    <span class="bonus">1408</span>
+                                    <span class="game">伴娘我最大</span>
+                                </li>
+                                <li>
+                                    <span class="account">liz***</span>
+                                    <span class="money">20.00 </span>
+                                    <span class="bonus">1510.5</span>
+                                    <span class="game">摆脱</span>
+                                </li>
+                                <li>
+                                    <span class="account">jjg***</span>
+                                    <span class="money">100.00 </span>
+                                    <span class="bonus">4000</span>
+                                    <span class="game">牧场咖啡</span>
+                                </li>
+                                <li>
+                                    <span class="account">hgq***</span>
+                                    <span class="money">10.00 </span>
+                                    <span class="bonus">2310</span>
+                                    <span class="game">幸运双星</span>
+                                </li>
+                                <li>
+                                    <span class="account">jjg***</span>
+                                    <span class="money">FreeGame</span>
+                                    <span class="bonus">5520</span>
+                                    <span class="game">牧场咖啡</span>
+                                </li>
+                                <li>
+                                    <span class="account">qq3***</span>
+                                    <span class="money">5.50 </span>
+                                    <span class="bonus">3005</span>
+                                    <span class="game">金鸡</span>
+                                </li>
+                                <li>
+                                    <span class="account">b81***</span>
+                                    <span class="money">10.00 </span>
+                                    <span class="bonus">1105</span>
+                                    <span class="game">东方美人</span>
+                                </li>
+                                <li>
+                                    <span class="account">mm6***</span>
+                                    <span class="money">1.50 </span>
+                                    <span class="bonus">3292</span>
+                                    <span class="game">摆脱</span>
+                                </li>
+                                <li>
+                                    <span class="account">hai***</span>
+                                    <span class="money">0.25 </span>
+                                    <span class="bonus">1080</span>
+                                    <span class="game">复古花园</span>
+                                </li>
+                                <li>
+                                    <span class="account">gq4***</span>
+                                    <span class="money">100.00 </span>
+                                    <span class="bonus">7875</span>
+                                    <span class="game">银行抢匪</span>
+                                </li>
+                                <li>
+                                    <span class="account">js8***</span>
+                                    <span class="money">50.00 </span>
+                                    <span class="bonus">4324</span>
+                                    <span class="game">地府烈焰</span>
+                                </li>
+                                <li>
+                                    <span class="account">ss1***</span>
+                                    <span class="money">2.25 </span>
+                                    <span class="bonus">1557.2</span>
+                                    <span class="game">翅膀</span>
+                                </li>
+                                <li>
+                                    <span class="account">ggg***</span>
+                                    <span class="money">20.00 </span>
+                                    <span class="bonus">2700</span>
+                                    <span class="game">招财鞭炮</span>
+                                </li>
+                                <li>
+                                    <span class="account">jjg***</span>
+                                    <span class="money">1.25 </span>
+                                    <span class="bonus">1800</span>
+                                    <span class="game">麻将老虎机</span>
+                                </li>
+                                <li>
+                                    <span class="account">sem***</span>
+                                    <span class="money">300.00 </span>
+                                    <span class="bonus">5490</span>
+                                    <span class="game">胸围银行</span>
+                                </li>
+                                <li>
+                                    <span class="account">ben***</span>
+                                    <span class="money">FreeGame</span>
+                                    <span class="bonus">1575</span>
+                                    <span class="game">银行抢匪</span>
+                                </li>
+                                <li>
+                                    <span class="account">min***</span>
+                                    <span class="money">35.00 </span>
+                                    <span class="bonus">1709.6</span>
+                                    <span class="game">摆脱</span>
+                                </li>
+                                <li>
+                                    <span class="account">jjg***</span>
+                                    <span class="money">15.00 </span>
+                                    <span class="bonus">2160</span>
+                                    <span class="game">日本武士</span>
+                                </li>
+                                <li>
+                                    <span class="account">bj1***</span>
+                                    <span class="money">0.50 </span>
+                                    <span class="bonus">1270</span>
+                                    <span class="game">银行抢匪</span>
+                                </li>
+                                <li>
+                                    <span class="account">zgb***</span>
+                                    <span class="money">3.50 </span>
+                                    <span class="bonus">1560</span>
+                                    <span class="game">胸围银行</span>
+                                </li>
+                                <li>
+                                    <span class="account">szm***</span>
+                                    <span class="money">30.00 </span>
+                                    <span class="bonus">5625</span>
+                                    <span class="game">象棋老虎机</span>
+                                </li>
+                                <li>
+                                    <span class="account">zul***</span>
+                                    <span class="money">50.00 </span>
+                                    <span class="bonus">4875</span>
+                                    <span class="game">夏日营地</span>
+                                </li>
+                                <li>
+                                    <span class="account">qB7***</span>
+                                    <span class="money">1.50 </span>
+                                    <span class="bonus">1975</span>
+                                    <span class="game">招福钱龟</span>
+                                </li>
+                                <li>
+                                    <span class="account">zul***</span>
+                                    <span class="money">0.50 </span>
+                                    <span class="bonus">9500</span>
+                                    <span class="game">大航海时代</span>
+                                </li>
+                                <li>
+                                    <span class="account">she***</span>
+                                    <span class="money">10.00 </span>
+                                    <span class="bonus">1125</span>
+                                    <span class="game">甜蜜派对</span>
+                                </li>
+                                <li>
+                                    <span class="account">hzz***</span>
+                                    <span class="money">2.25 </span>
+                                    <span class="bonus">1600</span>
+                                    <span class="game">太空漫游</span>
+                                </li>
+                                <li>
+                                    <span class="account">qqg***</span>
+                                    <span class="money">0.25 </span>
+                                    <span class="bonus">1605</span>
+                                    <span class="game">银行抢匪</span>
+                                </li>
+                                <li>
+                                    <span class="account">ld8***</span>
+                                    <span class="money">5.00 </span>
+                                    <span class="bonus">1375</span>
+                                    <span class="game">纯银</span>
+                                </li>
+                                <li>
+                                    <span class="account">zgl***</span>
+                                    <span class="money">10.00 </span>
+                                    <span class="bonus">2220</span>
+                                    <span class="game">马戏团</span>
+                                </li>
+                                <li>
+                                    <span class="account">zz1***</span>
+                                    <span class="money">20.00 </span>
+                                    <span class="bonus">2370</span>
+                                    <span class="game">东方美人</span>
+                                </li>
+                                <li>
+                                    <span class="account">Dbb***</span>
+                                    <span class="money">50.00 </span>
+                                    <span class="bonus">1080</span>
+                                    <span class="game">招福钱龟</span>
+                                </li>
+                                <li>
+                                    <span class="account">d13***</span>
+                                    <span class="money">200.00 </span>
+                                    <span class="bonus">1309</span>
+                                    <span class="game">翅膀</span>
+                                </li>
+                                <li>
+                                    <span class="account">zu1***</span>
+                                    <span class="money">100.00 </span>
+                                    <span class="bonus">3402</span>
+                                    <span class="game">金龙卷</span>
+                                </li>
+                                <li class="lasliow">
+                                    <span class="account">Bs1***</span>
+                                    <span class="money">350.00 </span>
+                                    <span class="bonus">2450</span>
+                                    <span class="game">连环夺宝</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-left" carousel-slider super-vis="6" super-play="true" super-effect="leftLoop">
+                    <span class="prev"></span>
+                    <span class="next"></span>
+                    <div class="main-cell">
+                        <!-- List -->
+                    </div>
+                </div>
+                <iframe src="../../../_Common/Demo/iframePage/index.html" width="1000" height="1000"></iframe>
+            </section>
+        </div>
+    </div>
+    <footer id="footer"></footer>
+</body>
+
+</html>

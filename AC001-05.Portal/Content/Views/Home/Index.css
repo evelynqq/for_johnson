@@ -1,0 +1,342 @@
+﻿.banner {
+    height: 541px;
+    background-image: none;
+    background-color: #000;
+}
+
+.banner .wrapper {
+    height: 36px;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    left: 50%;
+    margin-left: -500px;
+}
+
+/* #region slide-banner樣式 */
+#slide-banner {
+    position: relative;
+    height: 541px;
+    overflow: hidden;
+}
+
+#slide-banner .slide {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -960px;
+}
+
+#slide-banner .slide a {
+    display: inline-block;
+    width: 1920px;
+    height: 541px; /* 通常只會改這兩個地方 跟著圖片高度 */
+}
+
+/* 點點切換紐 */
+#slide-banner .slide-pager {
+    position: absolute;
+    bottom: 65px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+#slide-banner .slide-pager li {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    margin: 0 4px;
+    /* 若要数字编号可以把font-size: 0拿掉 */
+    font-size: 0;
+    background-color: #001848;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#slide-banner .slide-pager .on,
+#slide-banner .slide-pager li:hover {
+    background-color: #fff;
+}
+/* #endregion slide-banner樣式 */
+
+#content {
+    padding: 0;
+    background: none;
+}
+
+#content:before,
+#content:after {
+    display: none;
+}
+
+#content .wrapper {
+    background: none;
+}
+
+.game-links {
+    position: relative;
+    overflow-x: hidden;
+    display: block;
+    min-width: 1000px;
+    height: 320px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+.game-links:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 954px;
+    height: 44px;
+    margin-left: -477px;
+    background: url('../Home/images/list_title.png') center top no-repeat;
+}
+
+.game-links:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: -1;
+    width: 1900px;
+    height: 320px;
+    margin-left: -950px;
+}
+
+.game-links li {
+    display: inline-block;
+    width: 250px;
+    height: 272px;
+    margin: 15px 0;
+    padding: 0;
+    list-style-type: none;
+    background-repeat: no-repeat;
+    background-position: center top;
+    transition: all 0.2s ease;
+}
+
+.game-links li:hover {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+.game-links li.sport {
+    background-image: url('../Home/images/sport.png');
+}
+
+.game-links li.live {
+    background-image: url('../Home/images/live.png');
+}
+
+.game-links li.lottery {
+    background-image: url('../Home/images/lottery.png');
+}
+
+.game-links li.slot {
+    background-image: url('../Home/images/slot.png');
+}
+
+.game-links li a {
+    display: block;
+    height: 100%;
+}
+
+/* 电子游戏 */
+.slot-game {
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.slot-game .game-tab {
+    width: 955px;
+    height: 66px;
+    margin: 0 auto 20px;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+.slot-game .game-tab li {
+    display: inline-block;
+    width: 153px;
+    height: 55px;
+    margin: 0 33px 8px;
+    background-position: center top;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.slot-game .game-tab li:hover,
+.slot-game .game-tab li.active {
+    opacity: 1;
+}
+
+.slot-game .game-tab li[game-box='mg'] {
+    margin-left: 0;
+    background-image: url('../Home/images/slot-game/mg.png');
+}
+
+.slot-game .game-tab li[game-box='pt'] {
+    background-image: url('../Home/images/slot-game/pt.png');
+}
+
+.slot-game .game-tab li[game-box='mw'] {
+    background-image: url('../Home/images/slot-game/mw.png');
+}
+
+.slot-game .game-tab li[game-box='bb'] {
+    margin-left: 0;
+    background-image: url('../Home/images/slot-game/bb.png');
+}
+
+.slot-game .game-tab li[game-box='prg'] {
+    margin-left: 0;
+    background-image: url('../Home/images/slot-game/pp.png');
+}
+
+.slot-game .game-tab li[game-box='mwfish'] {
+    background-image: url('../Home/images/slot-game/fish.png');
+}
+
+.slot-game .game-tab li[game-box='gns'] {
+    background-image: url('../Home/images/slot-game/gns.png');
+}
+
+.slot-game .game-tab li[game-box='sg'] {
+    margin-left: 0;
+    background-image: url('../Home/images/slot-game/sg.png');
+}
+
+.slot-game .game-content {
+    display: block;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+}
+
+.slot-game .game-content li {
+    display: inline-block;
+    width: 323px;
+    height: 127px;
+    margin: 0 3px 17px;
+    border: 1px solid #354666;
+    transition: opacity 0.2s;
+}
+.slot-game .game-content li:hover {
+    opacity: 0.7;
+}
+
+.slot-game .game01 li[data-game='01'] {
+    background-image: url('../Home/images/slot-game/01-1.png');
+}
+
+.slot-game .game01 li[data-game='02'] {
+    background-image: url('../Home/images/slot-game/01-2.png');
+}
+
+.slot-game .game01 li[data-game='03'] {
+    background-image: url('../Home/images/slot-game/01-3.png');
+}
+
+.slot-game .game01 li[data-game='04'] {
+    background-image: url('../Home/images/slot-game/01-4.png');
+}
+
+.slot-game .game01 li[data-game='05'] {
+    background-image: url('../Home/images/slot-game/01-5.png');
+}
+
+.slot-game .game01 li[data-game='06'] {
+    background-image: url('../Home/images/slot-game/01-6.png');
+}
+
+.slot-game .game01 li[data-game='07'] {
+    background-image: url('../Home/images/slot-game/01-7.png');
+}
+
+.slot-game .game01 li[data-game='08'] {
+    background-image: url('../Home/images/slot-game/01-8.png');
+}
+
+.slot-game .game01 li[data-game='09'] {
+    background-image: url('../Home/images/slot-game/01-9.png');
+}
+
+.slot-game .game02 li[data-game='01'] {
+    background-image: url('../Home/images/slot-game/02-1.png');
+}
+
+.slot-game .game02 li[data-game='02'] {
+    background-image: url('../Home/images/slot-game/02-2.png');
+}
+
+.slot-game .game02 li[data-game='03'] {
+    background-image: url('../Home/images/slot-game/02-3.png');
+}
+
+.slot-game .game02 li[data-game='04'] {
+    background-image: url('../Home/images/slot-game/02-4.png');
+}
+
+.slot-game .game02 li[data-game='05'] {
+    background-image: url('../Home/images/slot-game/02-5.png');
+}
+
+.slot-game .game02 li[data-game='06'] {
+    background-image: url('../Home/images/slot-game/02-6.png');
+}
+
+.slot-game .game02 li[data-game='07'] {
+    background-image: url('../Home/images/slot-game/02-7.png');
+}
+
+.slot-game .game02 li[data-game='08'] {
+    background-image: url('../Home/images/slot-game/02-8.png');
+}
+
+.slot-game .game02 li[data-game='09'] {
+    background-image: url('../Home/images/slot-game/02-9.png');
+}
+
+.info {
+    position: relative;
+    height: 554px;
+    margin: 30px 0 60px;
+    background: url('../Home/images/info.png') center top no-repeat;
+}
+
+.info .wrapper {
+    position: relative;
+}
+
+.info .btn-group {
+    position: absolute;
+    top: 138px;
+    left: 576px;
+}
+
+.info .more-btn {
+    display: block;
+    width: 47px;
+    height: 20px;
+    margin-bottom: 119px;
+    padding: 2px 7px;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0e86ca;
+    text-decoration: none;
+    border-radius: 15px;
+}
+
+.info .more-btn:hover {
+    background: #00aeff;
+}

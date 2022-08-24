@@ -1,0 +1,110 @@
+﻿#banner {
+    height: 600px;
+}
+
+/* #region slide-banner樣式 */
+#slide-banner {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+}
+
+#slide-banner .slide {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -960px;
+}
+
+
+#slide-banner .slide a {
+    display: inline-block;
+    width: 1920px;
+    height: 600px;
+    /* 通常只會改這兩個地方 跟著圖片高度 */
+}
+
+
+/* 點點切換紐 */
+#slide-banner .slide-pager {
+    position: absolute;
+    bottom: 65px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+#slide-banner .slide-pager li {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    margin: 0 4px;
+    /* 若要数字编号可以把font-size: 0拿掉 */
+    font-size: 0;
+    background-color: #ff9600;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#slide-banner .slide-pager .on,
+#slide-banner .slide-pager li:hover {
+    background-color: #fff;
+}
+
+/* #endregion slide-banner樣式 */
+
+#news {
+    margin-top: -36px;
+}
+
+#content:after {
+    position: absolute;
+    bottom: 0;
+}
+
+#home {
+    text-align: center;
+}
+
+.game-list {
+    margin: 0;
+    padding: 0 0 76px;
+    list-style: none;
+    font-size: 0;
+    background: #fff;
+    /*background: url('../Home/images/gamelist_bg.jpg') center top no-repeat;*/
+}
+
+.game-list li {
+    display: inline-block;
+    width: 218px;
+    height: 367px;
+    margin: 40px 20px;
+}
+
+.game-list a {
+    display: block;
+    height: 100%;
+}
+
+.game-list .sport {
+    background: url('../Home/images/sport.png') center top;
+}
+
+.game-list .game {
+    background: url('../Home/images/game.png') center top;
+}
+
+.game-list .live {
+    background: url('../Home/images/live.png') center top;
+}
+
+.game-list .lottery {
+    background: url('../Home/images/lottery.png') center top;
+}
+
+.game-list li:hover {
+    background-position: center bottom;
+}

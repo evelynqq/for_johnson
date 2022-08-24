@@ -1,0 +1,29 @@
+﻿/* account */
+#account-box.off-scroll.is-login ul#account-info {
+    margin-bottom: 10px;
+}
+
+#account-box.off-scroll form .login-btn,
+#account-box.off-scroll form .reg-btn {
+    font-size: 16px;
+}
+
+#account-box.off-scroll.is-login ul#account-nav {
+    margin: 0 0 20px;
+}
+
+    #account-box.off-scroll.is-login ul#account-nav > li#change-password-btn {
+        font-family: Arial;
+    }
+
+#account-box.off-scroll.is-login > .wrapper {
+    padding: 30px 0 0 30px;
+}
+
+#account-box.off-scroll.is-login ul#account-nav {
+    width: 245px;
+}
+
+#account-box.off-scroll.is-login #action-box > .logout-btn {
+    margin-left: -10px;
+}

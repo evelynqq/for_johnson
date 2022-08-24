@@ -1,0 +1,82 @@
+#lobby {
+  padding: 45px 0 70px;
+}
+
+#banner {
+  background-image: url("../Lobby/Lottery/banner.jpg");
+}
+
+.game-list > li {
+  width: 326px;
+  height: 325px;
+  padding-top: 260px;
+}
+
+#lobby li.more {
+  background-image: url("../lobby/Lottery/more.jpg");
+}
+
+#lobby li.BbinaLottery {
+  background-image: url("../lobby/Lottery/BbinaLottery.jpg");
+}
+
+#lobby li.IgLottery {
+  background-image: url("../lobby/Lottery/IgLottery.jpg");
+}
+
+#lobby li.IgLotto {
+  background-image: url("../lobby/Lottery/IgLotto.jpg");
+}
+
+#lobby li.IgaLottery {
+  background-image: url("../lobby/Lottery/IgaLottery.jpg");
+}
+
+#lobby li.IgaLotto {
+  background-image: url("../lobby/Lottery/IgaLotto.jpg");
+}
+
+#lobby li.LxLottery {
+  background-image: url("../lobby/Lottery/LxLottery.jpg");
+}
+
+#lobby li.VrLottery {
+  background-image: url("../lobby/Lottery/VrLottery.jpg");
+}
+
+#lobby li.AplLottery {
+  background-image: url("../lobby/Lottery/AplLottery.jpg");
+}
+
+#lobby li.G1Lottery {
+  background-image: url("../lobby/Lottery/G1Lottery.jpg");
+}
+
+#lobby li.G1aLottery {
+  background-image: url("../lobby/Lottery/G1aLottery.jpg");
+}
+
+#lobby li.GbLottery {
+  background-image: url("../lobby/Lottery/GbLottery.jpg");
+}
+
+#lobby li.GblLottery {
+  background-image: url("../lobby/Lottery/GblLottery.jpg");
+}
+
+#lobby li.SgwLottery {
+  background-image: url("../lobby/Lottery/SgwLottery.jpg");
+}
+
+#lobby li.BgLottery {
+  background-image: url("../lobby/Lottery/BgLottery.jpg");
+}
+
+#lobby li.Ig1Lottery {
+  background-image: url("../lobby/Lottery/Ig1Lottery.jpg");
+}
+
+#lobby li.Ig1Lotto {
+  background-image: url("../lobby/Lottery/Ig1Lotto.jpg");
+}
+/*# sourceMappingURL=Lottery.css.map */

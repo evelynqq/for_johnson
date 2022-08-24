@@ -1,0 +1,20 @@
+﻿/* Lobby各廳設定 */
+#lobby {
+    width: 1048px;
+    vertical-align: top;
+    margin: 0 auto;
+    padding: 30px 28px;
+    background-color: rgba(255,255,255,0.9);
+}
+
+    #lobby > ul.game-list {
+        display: block;
+        font-size: 0;
+        text-align: center;
+    }
+
+        #lobby > ul.game-list > li {
+            display: inline-block;
+            vertical-align: top;
+            background-repeat: no-repeat;
+        }

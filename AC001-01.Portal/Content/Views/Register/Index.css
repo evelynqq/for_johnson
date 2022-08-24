@@ -1,0 +1,241 @@
+﻿/* #region 針對type=number  會出現右邊上下箭頭做隐藏 */
+input[type="number"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+    input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none; /*for chrome*/
+    }
+
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none; /*for chrome*/
+    }
+/* #endregion 針對type=number  會出現右邊上下箭頭 */
+
+#register {
+    display: inline-block;
+    color: #fff;
+}
+
+.register-title {
+    height: 54px;
+    background: url('../Register/images/reg_title.png') center top no-repeat;
+}
+
+#articles .top-info {
+    margin: 0;
+    font-size: 16px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+legend {
+    margin: 0 15px;
+    padding: 0 5px;
+    color: #dbb880;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: SimSun;
+}
+
+.form-group .control-label {
+    width: 20%;
+    font-weight: normal;
+    line-height: 28px;
+}
+
+    .form-group .control-label .fa {
+        color: #dbb880;
+    }
+
+.form-group .control-div {
+    width: 40%;
+    text-align: left;
+    line-height: 28px;
+}
+
+.form-group .control-info {
+    display: inline-block;
+    width: 40%;
+    text-align: left;
+}
+
+.form-group .control-div input,
+#checkcode-input-group input {
+    display: block;
+    width: 187px;
+    height: 28px;
+    padding: 5px 4px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    border: 1px solid #000;
+    background-color: #343434;
+    color: #795548;
+    border-radius: 3px;
+}
+
+    .form-group .control-div input.account {
+        /* background-image: url('../Register/images/input_01.png'); */
+    }
+
+    .form-group .control-div input.password {
+        /* background-image: url('../Register/images/input_02.png'); */
+    }
+
+    .form-group .control-div input.confirm {
+        /* background-image: url('../Register/images/input_03.png'); */
+    }
+
+.form-group .control-div > label {
+    display: inline-block;
+}
+
+.form-group .control-div input[type="radio"],
+.form-group .control-div input[type="checkbox"] {
+    display: inline-block;
+    padding: 0;
+    width: 14px;
+    height: 14px;
+}
+
+.modal {
+    background: rgba(0,0,0,0.5);
+}
+
+.modal-dialog {
+    width: 700px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+fieldset {
+    margin: 0 auto 20px;
+    /*color: #6b6260;*/
+    border: 2px solid #dbb880;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+    fieldset.last {
+        border: none;
+    }
+
+        fieldset.last p {
+            margin-left: 10%;
+        }
+
+.showMore {
+    display: none;
+}
+
+#moreoption, .agreement {
+    color: #428bca;
+    cursor: pointer;
+}
+
+    #moreoption:hover,
+    .agreement:hover {
+        color: #2a6496;
+    }
+
+a.agreement:hover {
+    text-decoration: underline;
+}
+
+.hasShow {
+    display: block;
+    -webkit-transition: all linear 3s;
+    -moz-transition: all linear 3s;
+    -ms-transition: all linear 3s;
+    -o-transition: all linear 3s;
+    transition: all linear 3s;
+}
+/*輸入驗證碼的群組*/
+#checkcode-input-group {
+    display: inline-block;
+    float: left;
+    width: 187px;
+    height: 27px;
+    background: #e5e5e5;
+    border-radius: 5px;
+}
+
+    #checkcode-input-group > input {
+        display: inline-block;
+        float: left;
+        width: 70%;
+    }
+
+    #checkcode-input-group > span {
+        float: left;
+        width: 30%;
+    }
+
+.checkcode {
+    position: relative;
+}
+
+    .checkcode img {
+        width: 100%;
+        height: 26px;
+        border-radius: 5px;
+    }
+
+.btn-group {
+    clear: both;
+    margin: 45px 0 0 21.5%;
+}
+
+    .btn-group button {
+        float: left;
+        width: 94px;
+        height: 34px;
+        margin: 0 5px;
+        border: 0;
+        background: url('../Register/images/btn.png') center top;
+    }
+
+        .btn-group button:hover {
+            background: url('../Register/images/btn.png') center bottom;
+        }
+
+.modal-header {
+    color: #fff;
+    text-align: left;
+    background: #808080;
+}
+
+.modal-content,
+.modal-dialog,
+.modal-body,
+.modal-footer {
+    background: #fff;
+}
+
+.modal-footer {
+    margin-top: 15px;
+    padding: 19px 20px 20px;
+    text-align: right;
+    border-top: 1px solid #e5e5e5;
+}
+
+.modal-body > ul {
+    list-style-type: disc;
+    padding-left: 30px;
+}
+
+    .modal-body > ul li {
+        line-height: 2em;
+    }
+
+.modal-header > .modal-title {
+    color: #fff;
+    font-weight: normal;
+}
+
+.lineheight {
+    color: #ff0000;
+}

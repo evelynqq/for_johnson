@@ -1,0 +1,49 @@
+﻿@import '../../../../_Common/Css/GameCode';
+
+.banner {
+    background: url('../Lobby/Sport/banner.jpg') center top no-repeat;
+}
+
+#lobby .game-list li {
+    width: 31%;
+    height: 362px;
+    margin: 0 1% 15px;
+    border: 1px solid #354666;
+    background: url('../Lobby/Sport/more.jpg') no-repeat center top;
+    position: relative;
+    &:not([game-box='more']):hover {
+        background-position: center bottom;
+        span {
+            background-color:#354666;
+        }
+    }
+    span {
+        position: absolute;
+        font-size: 21px;
+        color: #fff;
+        font-weight: bold;
+        letter-spacing: 2px;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+        line-height: 60px;
+        width: 100%;
+        height: 60px;
+        background-color:rgba(0,0,0,0.5);
+    }
+}
+
+// gamebox-list
+@each $gamebox in $sport-list {
+    #lobby .game-list li[game-box='#{$gamebox}'] {
+        background-image: url('../lobby/Sport/#{$gamebox}.jpg');
+    }
+}
+
+@each $gamebox in $esport-list {
+    @if ($gamebox != 'more') {
+        #lobby .game-list li[game-box='#{$gamebox}'] {
+            background-image: url('../lobby/Esport/#{$gamebox}.jpg');
+        }
+    }
+}

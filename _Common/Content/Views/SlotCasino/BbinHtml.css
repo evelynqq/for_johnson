@@ -1,0 +1,81 @@
+﻿/* #region header */
+#search {
+    background-color: #000;
+}
+/* #endregion header */
+
+/* #region nav */
+nav {
+    background-color: #bd0000;
+}
+
+#game-nav > li:hover > span,
+#game-nav > li.active > span {
+    color: #ffde03;
+    font-weight: bold;
+    background-color: #5c1111;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+}
+
+ol.subnav > li {
+    color: #fff;
+    background-color: #bd0000;
+}
+
+    ol.subnav > li:hover {
+        color: #ffde03;
+        background-color: #5c1111;
+    }
+/* #endregion nav */
+
+/* #region recommend-list */
+#recommend-list .slick-dots li.slick-active,
+#recommend-list .slick-dots li.slick-active:hover,
+#recommend-list .slick-prev:hover,
+#recommend-list .slick-next:hover {
+    background-color: #bd0000;
+}
+
+#recommend-list .list-title {
+    border-bottom: 2px solid #bd0000;
+}
+
+    #recommend-list .list-title span {
+        background-color: #bd0000;
+    }
+
+    #recommend-list .list-title a {
+        color: #bd0000;
+    }
+/* #endregion recommend-list */
+
+/* #region game-list */
+.game-list li {
+    border-color: #bd0000;
+}
+
+    .game-list li:hover {
+        background-color: #bd0000;
+    }
+
+        .game-list li:hover .game-logo:before {
+            background-image: url('../../../../_Common/Content/Views/SlotCasino/BBIN/hover.png');
+        }
+
+        .game-list li:hover .game-text {
+            color: #fff;
+        }
+/* #endregion game-list */
+
+/* #region pager */
+#pager > li {
+    color: #fff;
+    background-color: #4a1010;
+}
+
+    #pager > li[ng-click]:hover {
+        background-color: #bd0000;
+    }
+/* #endregion pager */

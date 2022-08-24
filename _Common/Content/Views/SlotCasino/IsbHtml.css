@@ -1,0 +1,81 @@
+﻿/* #region header*/
+#search {
+    background-color: #555f6a;
+}
+/* #endregion header */
+
+/* #region nav */
+nav {
+    background-color: #fbaf17;
+}
+
+#game-nav > li > span {
+    font-weight: bold;
+}
+
+    #game-nav > li > span:hover,
+    #game-nav > li.active > span {
+        background-color: #be8218;
+    }
+
+ol.subnav > li {
+    color: #000;
+    background-color: #fbaf17;
+}
+
+    ol.subnav > li:hover {
+        color: #fff;
+        background-color: #be8218;
+    }
+/* #endregion nav */
+
+/* #region recommend-list */
+#recommend-list .slick-dots li.slick-active,
+#recommend-list .slick-dots li.slick-active:hover,
+#recommend-list .slick-prev:hover,
+#recommend-list .slick-next:hover {
+    background-color: #555f6a;
+}
+
+#recommend-list .list-title {
+    border-bottom: 2px solid #555f6a;
+}
+
+    #recommend-list .list-title span {
+        background-color: #555f6a;
+    }
+
+    #recommend-list .list-title a {
+        color: #555f6a;
+    }
+/* #endregion recommend-list */
+
+/* #region 游戏列表区块 */
+.game-list li {
+    border-color: #555f6a;
+}
+
+    .game-list li:hover {
+        background-color: #faaf16;
+        border-color: #faaf16;
+    }
+
+        .game-list li:hover .game-logo:before {
+            background-image: url('../../../../_Common/Content/Views/SlotCasino/ISB/hover.png');
+        }
+
+        .game-list li:hover .game-text {
+            color: #fff;
+        }
+/* #endregion 游戏列表区块 */
+
+/* #region pager */
+#pager > li {
+    color: #fff;
+    background-color: #555f6a;
+}
+
+    #pager > li[ng-click]:hover {
+        background-color: #fbaf17;
+    }
+/* #endregion pager */

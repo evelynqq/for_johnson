@@ -1,0 +1,152 @@
+﻿#content {
+    background-image: url('../Promotion/images/promotions_bg.jpg');
+}
+
+#un-lobby {
+    min-height: 700px;
+    text-align: center;
+    background: none;
+    border: none;
+}
+
+    #un-lobby > div {
+        display: block;
+        padding-bottom: 10px;
+    }
+
+.discount {
+    display: inline-block;
+    margin: 5px auto;
+    list-style: none;
+}
+
+    .discount > li:first-child {
+        width: 1000px;
+        cursor: pointer;
+    }
+
+    .discount > li[ng-bind-html] {
+        width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+        color: #fff;
+        text-align: justify;
+        list-style: none;
+        background-color: #404040;
+        border-top: 0;
+    }
+
+    .discount > li img {
+        width: 100%;
+    }
+
+li[ng-bind-html] h2 {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 24px;
+    text-align: center;
+    background-color: #a86d46;
+}
+
+li[ng-bind-html] h3 {
+}
+
+li[ng-bind-html] h4 {
+    position: relative;
+    display: inline-block;
+    height: 27px;
+    padding: 0 10px;
+    color: #a100a7;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 27px;
+    background-color: #d1a354;
+}
+
+    li[ng-bind-html] h4:before {
+        content: '';
+        position: absolute;
+        right: -29px;
+        width: 0;
+        height: 0;
+        margin-left: 29px;
+        border-style: solid;
+        border-width: 27px 0 0 29px;
+        border-color: transparent transparent transparent #d1a354;
+    }
+
+    li[ng-bind-html] h4:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        display: block;
+        width: 830px;
+        border-bottom: 1px solid #d1a354;
+    }
+
+li[ng-bind-html] p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 28px;
+}
+
+li[ng-bind-html] li {
+    font-size: 14px;
+    line-height: 28px;
+}
+
+li[ng-bind-html] ol,
+li[ng-bind-html] ul {
+    padding-left: 20px;
+}
+
+li[ng-bind-html] span.highlight {
+    color: #f00;
+}
+
+li[ng-bind-html] table {
+    width: 98% !important;
+    margin: 10px 0 10px 10px;
+    font-size: 14px;
+}
+
+    li[ng-bind-html] table thead tr th {
+        padding: 5px 10px;
+        background: #535353;
+        color: #ffc000;
+        text-align: center;
+        border: 1px solid #535353;
+        font-weight: normal;
+    }
+
+    li[ng-bind-html] table tbody tr td {
+        padding: 5px 10px;
+        text-align: center;
+        border: 1px solid #535353;
+    }
+
+/* Nav Tab */
+ul.navtab {
+    display: block;
+    margin: 13px auto 10px;
+}
+
+    ul.navtab li {
+        display: inline-block;
+        width: 172px;
+        height: 55px;
+        margin: 0 -3px;
+        color: #f6f6f6;
+        font-size: 19px;
+        line-height: 55px;
+        text-align: center;
+        border: 1px solid #4f4f4f;
+        background-color: #353535;
+        cursor: pointer;
+    }
+
+        ul.navtab li.tab,
+        ul.navtab li:hover {
+            color: #181000;
+            background-color: #ffcf86;
+        }

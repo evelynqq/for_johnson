@@ -1,0 +1,122 @@
+<div class="panel panel-default">
+    <div id="title" class="panel-heading">
+        <div>
+            站内信
+        </div>
+    </div>
+    <div class="panel-body">
+
+        <button type="button" ng-click="openNewMail()" class="btn btn-primary">
+            <i class="fa fa-comment-o"></i>
+            新信件
+        </button>
+
+        <ul class="nav-tabs">
+            <li onclick="chengTab(this, 'inbox')" class="active">收件匣 ( <span ng-bind="unRead.Count" class="ng-binding">1</span> )</li>
+            <li onclick="chengTab(this, 'sentbox')" class="">寄件匣</li>
+        </ul>
+
+        <div class="features">
+            <button type="button" class="btn btn-default" disabled="disabled">
+                <i class="fa fa-trash"></i>
+                删除
+            </button>
+            <div class="btn-group ng-scope" ng-if="mailbox=='inbox'">
+                <button type="button" class="btn btn-default" disabled="disabled">标示为已读</button>
+                <button type="button" class="btn btn-default" disabled="disabled">标示为未读</button>
+            </div>
+        </div>
+
+        <!-- inbox -->
+        <table id="inbox" class="table table-hover ng-scope">
+            <thead>
+                <tr>
+                    <th>
+                        <input type="checkbox" class="ng-pristine ng-valid">
+                    </th>
+                    <th>主旨</th>
+                    <th>时间</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="ng-scope active">
+                    <td>
+                        <input type="checkbox" class="ng-pristine ng-valid">
+                    </td>
+                    <td>
+                        <a class="btn btn-link subject ng-binding">test9999</a>
+                    </td>
+                    <td>
+                        <span class="ng-binding">2018/09/04 (二) 05:30:19</span>
+                        <span class="text-muted ng-binding">- 3 个月前</span>
+                    </td>
+                </tr>
+                <tr class="ng-scope active">
+                    <td>
+                        <input type="checkbox" class="ng-pristine ng-valid">
+                    </td>
+                    <td>
+                        <a class="btn btn-link subject ng-binding" >123456</a>
+                    </td>
+                    <td>
+                        <span class="ng-binding">2018/09/03 (一) 21:12:37</span>
+                        <span class="text-muted ng-binding">- 3 个月前</span>
+                    </td>
+                </tr>
+                <tr class="ng-scope notRead">
+                    <td>
+                        <input type="checkbox" class="ng-pristine ng-valid">
+                    </td>
+                    <td>
+                        <a class="btn btn-link subject ng-binding">测试</a>
+                    </td>
+                    <td>
+                        <span class="ng-binding">2018/09/03 (一) 21:12:26</span>
+                        <span class="text-muted ng-binding">- 3 个月前</span>
+                    </td>
+                </tr>
+                <tr class="ng-scope active">
+                    <td>
+                        <input type="checkbox" class="ng-pristine ng-valid">
+                    </td>
+                    <td>
+                        <a class="btn btn-link subject ng-binding">测试发信</a>
+                    </td>
+                    <td>
+                        <span class="ng-binding">2018/09/03 (一) 21:10:52</span>
+                        <span class="text-muted ng-binding">- 3 个月前</span>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">
+                        <span class="ng-scope ng-binding">已全部载入</span>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <!-- sentbox -->
+        <table id="sentbox" class="table table-hover ng-scope cloak">
+            <thead>
+                <tr>
+                    <th>
+                        <input type="checkbox" class="ng-pristine ng-valid">
+                    </th>
+                    <th>主旨</th>
+                    <th>时间</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">
+                        <span class="ng-scope ng-binding">无资料</span>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>

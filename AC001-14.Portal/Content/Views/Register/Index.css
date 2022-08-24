@@ -1,0 +1,206 @@
+﻿/* #region 針對type=number  會出現右邊上下箭頭做隐藏 */
+input[type="number"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+    input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none; /*for chrome*/
+    }
+
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none; /*for chrome*/
+    }
+/* #endregion 針對type=number  會出現右邊上下箭頭 */
+
+#content .wrapper {
+    width: 1120px;
+    padding: 0;
+}
+
+#un-lobby {
+    padding: 150px 0 0px
+}
+
+    #un-lobby aside {
+        position: absolute;
+        top: 40px;
+        left: 80px;
+        width: 300px;
+        background: url('../Register/images/reg_bg2.png') no-repeat center bottom;
+        margin: 0;
+        z-index: 10;
+        display: inline-block;
+    }
+
+#sidebar {
+    margin-bottom: 260px;
+}
+
+#un-lobby ul#sidebar li {
+    width: 100%;
+}
+
+#articles {
+    border-bottom: none;
+    margin-right: 0;
+    padding: 40px 0 15px 230px;
+}
+
+    #articles .reg-info {
+        padding-bottom: 15px;
+        color: #1f1f1f;
+        line-height: 25px;
+        text-align: center;
+    }
+
+.form-group .control-label {
+    color: #353535;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 34px;
+}
+
+    .form-group .control-label .fa:before {
+        content: '*';
+    }
+
+.form-group .control-div {
+    width: 50%;
+    text-align: left;
+    line-height: 32px;
+}
+
+.form-group .control-info {
+    display: inline-block;
+    display: none;
+    width: 30%;
+    text-align: left;
+}
+
+.form-group .control-div input,
+#checkcode-input-group input {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 0 10px;
+    font-size: 12px;
+    line-height: 32px;
+    color: #282828;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #4a4a4a;
+}
+
+.form-group .control-div > label {
+    display: inline-block;
+}
+
+.form-group .control-div input[type="radio"],
+.form-group .control-div input[type="checkbox"] {
+    display: inline-block;
+    padding: 0;
+    width: 14px;
+    height: 14px;
+}
+
+fieldset {
+    width: 700px;
+    margin: 0 auto;
+    border: none;
+}
+
+legend {
+    padding-bottom: 12px;
+    color: #1f1f1f;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.showMore {
+    display: none;
+}
+
+#moreoption {
+    color: #dd0023;
+    cursor: pointer;
+}
+
+    #moreoption:hover {
+        color: #2a6496;
+    }
+
+a.agreement {
+    color: #d00;
+}
+
+    a.agreement:hover {
+        text-decoration: underline;
+    }
+
+.hasShow {
+    display: block;
+    -webkit-transition: all linear 3s;
+    -moz-transition: all linear 3s;
+    -ms-transition: all linear 3s;
+    -o-transition: all linear 3s;
+    transition: all linear 3s;
+}
+/*輸入驗證碼的群組*/
+#checkcode-input-group {
+    display: inline-block;
+    width: 312px;
+    height: 34px;
+    background: #e5e5e5;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+    #checkcode-input-group > input {
+        display: inline-block;
+        width: 70%;
+    }
+
+    #checkcode-input-group > span {
+        float: left;
+        width: 30%;
+        height: 34px;
+    }
+
+.checkcode {
+    position: relative;
+}
+
+    .checkcode img {
+        width: 100%;
+        height: 100%;
+        border-radius: 3px;
+    }
+
+#btn-submit,
+#btn-reset {
+    display: inline-block;
+    height: 34px;
+    vertical-align: top;
+    padding: 0px 30px;
+    font-size: 14px;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+}
+
+#btn-submit {
+    margin: 0 10px 0 221px;
+    color: #fff;
+    background: #dd0023;
+    border: none;
+}
+
+#btn-reset {
+    color: #ffffff;
+    background: #006b0f;
+    border: 1px solid #006b0f;
+}

@@ -1,0 +1,21 @@
+﻿#top-menu li {
+    padding: 0 7px;
+    text-transform: uppercase;
+}
+
+#account-box > form .login-btn, #account-box > form .join-btn {
+    font-size: 12px;
+}
+
+#account-box > form .forget-btn {
+    left: 255px;
+}
+
+#nav > ul > li {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+#action-box a {
+    font-size: 12px;
+}

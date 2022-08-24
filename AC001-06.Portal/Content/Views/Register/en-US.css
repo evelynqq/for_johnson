@@ -1,0 +1,16 @@
+﻿.form-group .control-label {
+    width: 29%;
+}
+
+.form-group .control-info {
+    width: 41%;
+}
+
+.last .control-div {
+    width: 65%;
+}
+
+fieldset button {
+    width: 100px;
+    font-size: 14px;
+}

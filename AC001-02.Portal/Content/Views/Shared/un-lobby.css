@@ -1,0 +1,324 @@
+﻿/* 各頁設定 */
+#un-lobby {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    margin: 0 auto;
+}
+
+    #un-lobby aside {
+        float: left;
+        width: 244px;
+        background: #fff;
+    }
+
+        #un-lobby aside:before {
+            content: '';
+            display: block;
+            width: 244px;
+            height: 79px;
+            background: url('../Shared/images/title.png') no-repeat;
+        }
+
+#aside-pad {
+}
+
+#sidebar {
+    padding: 0 10px;
+}
+
+    #sidebar li {
+        position: relative;
+        height: 38px;
+        font-size: 14px;
+        line-height: 37px;
+        background-color: #e5e5e5;
+        border-radius: 29px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+        #sidebar li a {
+            display: block;
+            color: #565656;
+            text-decoration: none;
+            height: 38px;
+            width: 100%;
+        }
+
+        #sidebar li:hover, #sidebar li.active {
+            background-color: #0088fe;
+        }
+
+            #sidebar li:hover a, #sidebar li.active a {
+                color: #fff;
+            }
+
+/* 內文CSS */
+#articles {
+    float: left;
+    width: 741px;
+    min-height: 801px;
+    margin-left: 15px;
+    padding: 20px 43px;
+    color: #4b4b4b;
+    background: #fff;
+}
+
+    #articles h2 {
+        color: #0088fe;
+        font-size: 20px;
+        font-weight: normal;
+        margin: 0 0 16px 0;
+    }
+
+    #articles h3 {
+        color: #6a6a6a;
+        font-size: 13px;
+        text-align: left;
+    }
+
+    #articles h4 {
+        font-size: 14px;
+        text-align: left;
+    }
+
+    #articles > ul {
+        list-style: none;
+    }
+
+    #articles ol {
+        padding-left: 20px;
+        list-style-type: decimal;
+    }
+
+    #articles p,
+    #articles li {
+        color: #6a6a6a;
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    #articles p {
+        margin: 1em 0;
+    }
+
+    #articles a {
+        color: #8f8f8f;
+        text-decoration: none;
+    }
+
+    #articles table {
+        width: 100%;
+    }
+
+        #articles table tr,
+        #articles table th,
+        #articles table td {
+            color: #6a6a6a;
+            font-size: 12px;
+            text-align: center;
+            line-height: 2em;
+            background-color: #f3f3f3;
+            border: 1px solid #6a6a6a;
+        }
+
+        #articles table th {
+        }
+
+    /* 重點顏色 */
+    #articles .highlight {
+        color: #0088fe;
+    }
+
+    #articles .highlight-red {
+        color: #f00;
+    }
+
+    #articles .highlight-green {
+        color: #1eeb23;
+    }
+
+    #articles .highlight-yellow {
+        color: #ff0;
+    }
+
+    #articles .highlight-blue {
+        color: #00f;
+    }
+
+    /* #region 合作夥伴tab 供其他页面使用 */
+    #articles ul.mtab-menual {
+        height: 44px;
+        margin-bottom: 16px;
+    }
+
+        #articles ul.mtab-menual li {
+            float: left;
+            min-width: 104px;
+            padding: 0 6px;
+            color: #565656;
+            background: #e5e5e5;
+            font-size: 14px;
+            text-align: center;
+            line-height: 42px;
+            -moz-border-radius: 20px;
+            -webkit-border-radius: 20px;
+            border-radius: 20px;
+            margin-right: 10px;
+        }
+
+            #articles ul.mtab-menual li.mtab {
+                color: #fff;
+                background-color: #0088fe;
+            }
+    /* #endregion 合作夥伴tab 供其他页面使用 */
+
+    /* #region deposit线上存款页面使用 */
+    #articles .deposit .red-yellow-blue {
+        -moz-animation: red-yellow-blue 2s infinite steps(1);
+        -o-animation: red-yellow-blue 2s infinite steps(1);
+        -webkit-animation: red-yellow-blue 2s infinite steps(1);
+        animation: red-yellow-blue 2s infinite steps(1);
+    }
+
+    #articles ul.deposit {
+        color: #fff;
+        font-size: 12px;
+        list-style-type: none;
+    }
+
+        #articles ul.deposit p,
+        #articles ul.deposit li {
+            color: #c0c0c0;
+            font-size: 16px;
+            counter-increment: title;
+        }
+
+        #articles ul.deposit > li > a:before {
+            content: counter(title,upper-alpha)":";
+        }
+
+        #articles ul.deposit > li > a,
+        #articles ul.deposit > li > h3 {
+            color: #ffcc66;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-decoration: underline;
+        }
+/* #endregion deposit线上存款页面使用 */
+
+/* animate red-yellow-blue */
+@keyframes red-yellow-blue {
+    0% {
+        color: #f00;
+    }
+
+    33% {
+        color: #ff0;
+    }
+
+    66% {
+        color: #00f;
+    }
+
+    100% {
+        color: #f00;
+    }
+}
+
+@-moz-keyframes red-yellow-blue {
+    0% {
+        color: #f00;
+    }
+
+    33% {
+        color: #ff0;
+    }
+
+    66% {
+        color: #00f;
+    }
+
+    100% {
+        color: #f00;
+    }
+}
+
+@-webkit-keyframes red-yellow-blue {
+    0% {
+        color: #f00;
+    }
+
+    33% {
+        color: #ff0;
+    }
+
+    66% {
+        color: #00f;
+    }
+
+    100% {
+        color: #f00;
+    }
+}
+
+/* #region account nav共用 */
+.body {
+    position: relative;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 1px;
+    font-size: 14px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #c7c7c7;
+}
+
+    .body #title {
+        color: #fff;
+        text-align: center;
+        background: #1f1f1f;
+    }
+
+    .body.container #title,
+    .body #account-heading,
+    .body #withdrawal-heading {
+        color: #fff;
+        background: #1f1f1f;
+    }
+    /* 檢視存入帳戶的文字顏色 */
+    .body #show-account-info.btn {
+        color: #fff;
+    }
+/* #endregion account nav共用 */
+
+/* #region 輸入框placeholder顏色 */
+/* 此為預設顏色，若各站需特別色系請由此修改，不需要可整段刪除 */
+.form-group .control-div input::-webkit-input-placeholder {
+    color: #999;
+}
+
+.form-group .control-div input::-moz-placeholder {
+    color: #999;
+}
+
+.form-group .control-div input:-ms-input-placeholder {
+    color: #999;
+}
+
+.form-group .control-div input.placeholder {
+    color: #999;
+}
+/* #endregion 輸入框placeholder顏色 */
+
+/* 一鍵取回 */
+.body.container #title,
+.body #account-heading,
+.body #withdrawal-heading,
+#account-popup.modal.in table th {
+    color: #fff;
+    background: #2758a7;
+}

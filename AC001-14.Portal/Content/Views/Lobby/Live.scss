@@ -1,0 +1,76 @@
+﻿@import '../../../../_Common/Css/GameCode';
+
+#banner {
+    display: block;
+}
+
+#content {
+    background-image: url('../Lobby/Live/content_bg.jpg');
+}
+
+#lobby {
+    padding: 20px 18px;
+}
+
+ul.game-list > li {
+    width: 490px;
+    height: 200px;
+    margin: 5px;
+    background: #202020;
+    border: 2px solid #202020;
+    position: relative;
+    &:not([game-box='more']):hover {
+        background-position: center;
+        background: #980d2c;
+        border: 2px solid #980d2c;
+        width: 490px;
+        height: 200px;
+    }
+    span {
+        position: absolute;
+        font-size: 14px;
+        color: #fff;
+        left: 15px;
+        bottom: 15px;
+        letter-spacing: 1px;
+        text-shadow: 0 0 10px #202020;
+    }
+    div {
+        display: none;
+    }
+    &::before {
+        content: '';
+        width: 150px;
+        height: 150px;
+        top: 0;
+        right: 30px;
+        position: absolute;
+        background-repeat: no-repeat;
+    }
+    &:not([game-box='more'])::after {
+        content: '进入游戏';
+        font-size: 16px;
+        letter-spacing: 2px;
+        position: absolute;
+        color: #fff;
+        width: 110px;
+        height: 25px;
+        text-align: center;
+        padding: 5px;
+        bottom: 22px;
+        right: 45px;
+        border: 1px solid #fff;
+    }
+}
+
+// gamebox-list
+@each $gamebox in $live-list {
+    #lobby li[game-box='#{$gamebox}'] {
+        background-image: url('../lobby/live/#{$gamebox}.jpg');
+        background-position-x: 3px;
+        background-position-y: 3px;
+        &::before {
+            background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v1/color/live/#{$gamebox}.png');
+        }
+    }
+}

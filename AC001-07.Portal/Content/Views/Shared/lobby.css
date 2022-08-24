@@ -1,0 +1,70 @@
+﻿/* Lobby各廳設定 */
+#lobby {
+}
+
+    /* 遊戲廳側攔 */
+    #lobby aside {
+        display: inline-block;
+        width: 250px;
+        background: rgba(0,0,0,.4);
+        border: 1px solid #746252;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+        #lobby aside .title {
+            height: 76px;
+            background: url('../Shared/images/lobbyaside_title.jpg') no-repeat center top;
+        }
+
+            #lobby aside .title:hover {
+                /* background-position-y: bottom; */
+            }
+
+#lobby-sidebar {
+    list-style-type: none;
+}
+
+    #lobby-sidebar > li {
+        height: 37px;
+        padding-left: 22px;
+        color: #ffcf86;
+        line-height: 37px;
+        text-align: left;
+        text-shadow: 1px 0px 1px #000;
+        /* background: url('../Shared/images/lobbyaside_item.png') no-repeat center top; */
+    }
+
+        #lobby-sidebar > li a {
+            display: block;
+            height: 100%;
+            color: #ffcf86;
+            text-decoration: none;
+        }
+
+        #lobby-sidebar > li:hover,
+        #lobby-sidebar > li:hover a {
+            color: #FFEDD2;
+        }
+
+/* 遊戲清單*/
+ul.game-list {
+    display: inline-block;
+    width: 74%;
+    list-style-type: none;
+    vertical-align: top;
+}
+
+    ul.game-list > li {
+        display: inline-block;
+        vertical-align: top;
+        background: no-repeat center top;
+    }
+
+        ul.game-list > li:not([game-box='more']):hover {
+            background-position-y: bottom;
+        }
+
+        ul.game-list > li.margin-bottom {
+            margin-bottom: 20px;
+        }

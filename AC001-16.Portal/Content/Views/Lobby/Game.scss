@@ -1,0 +1,109 @@
+﻿@import '../../../../_Common/Css/GameCode';
+
+#banner {
+    background-image: url('../Lobby/Game/banner.jpg');
+}
+
+/* 電子tab */
+#lobby .slider-left {
+    position: relative;
+    height: 84px;
+    overflow: hidden;
+}
+
+#lobby .slider-left > span {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    display: inline-block;
+    width: 40px;
+    height: 84px;
+    background-position: center top;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    background: #151515;
+    transition: all 0.2s linear;
+    &:hover {
+        background: #e21e22;
+    }
+    &:before {
+        content: '';
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        margin: 32px auto;
+    }
+    &.prev {
+        left: 0;
+        &:before {
+            margin-left: 15px;
+            border-left: 5px solid #fff;
+            border-bottom: 5px solid #fff;
+            transform: rotate(45deg);
+        }
+    }
+    &.next {
+        right: 0;
+        &:before {
+            margin-left: 5px;
+            border-right: 5px solid #fff;
+            border-bottom: 5px solid #fff;
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+#lobby .main-cell {
+    margin: 0 40px;
+    background-color: #151515;
+}
+
+#lobby li {
+    width: 160px;
+    height: 84px;
+    background-color: #151515;
+    float: left;
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 70px;
+        height: 84px;
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 2;
+    }
+    div {
+        position: absolute;
+        left: 70px;
+        font-size: 16px;
+        color: #fff;
+        line-height: 85px;
+        width: 90px;
+        z-index: 2;
+    }
+}
+#lobby li[game-box='more'] {
+    display: none;
+}
+#lobby li[game-box='more'] div {
+    display: none;
+}
+// gamebox-list
+@each $gamebox in $game-list {
+    @if $gamebox != more {
+        #lobby li[game-box='#{$gamebox}']:before {
+            background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v2/color/Game/#{$gamebox}.png');
+            background-repeat: no-repeat;
+            background-size: 98% auto;
+        }
+    }
+}
+
+#lobby iframe {
+    position: relative;
+    width: 1200px;
+    height: 875px;
+    z-index: 1;
+}

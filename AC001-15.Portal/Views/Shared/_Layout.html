@@ -1,0 +1,200 @@
+﻿<body class="layout" ng-controller="LayoutCtrl">
+    <header id="header">
+        <!-- popup -->
+        <div id="popup"></div>
+        <div class="header-top">
+            <div class="wrapper">
+                <div id="div-meiDonNow">
+                    美東時間 -
+                    <span ng-bind="meiDonNow|dateTime">2018/05/25 (五) 00:49:59</span>
+                </div>
+                <ul id="top-nav">
+                    <li class="blue license" toggle-color><a href="javascript:void(0)">牌照展示</a></li>
+                    <li class="green" toggle-color><a href="/Mobile">手機投注</a></li>
+                    <li class="purple" toggle-color><a ng-href="{{ContactInfo.HttpAPP==''?'#':ContactInfo.HttpAPP}}" target="_blank">APP下载</a></li>
+                    <li class="yellow" toggle-color><a href="/Partner">代理合作</a></li>
+                    <li class="red" toggle-color><a href="/Trial/Apply" target="_blank">免費試玩</a></li>
+                    <li class="language" select-language="">
+                        <span data-language="zh-CN" title="简体中文" class="ng-scope"></span>
+                        <span data-language="zh-TW" title="繁体中文" class="ng-scope"></span>
+                        <span data-language="en-US" title="English" class="ng-scope"></span>
+                        <span data-language="th" title="ภาษาไทย" class="ng-scope"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div id="logo-bg">
+                <a href="../Home/index.html"></a>
+            </div>
+            <!-- Account-box -->
+            <!-- 未登入 -->
+            <div id="account-box" class="is-logout">
+                <form ng-controller="LoginCtrl" ng-submit="login(loginParams)" ng-disabled="isProcessing"
+                    class="ng-scope ng-pristine ng-invalid ng-invalid-required">
+                    <input id="login_account" type="text" placeholder="帳號" ng-model="loginParams.account" required="" autofocus=""
+                        class="ng-pristine ng-invalid ng-invalid-required">
+                    <input id="login_password" type="password" placeholder="密碼" ng-model="loginParams.password" required=""
+                        class="ng-pristine ng-invalid ng-invalid-required">
+                    <div id="check-code-wrapper">
+                        <input data-checkcode-retriever="checkCode" checkcode-type="Login" type="text" placeholder="驗證碼"
+                            ng-model="loginParams.checkCode" required="" class="ng-pristine ng-invalid ng-invalid-required">
+                        <img id="captcha" ng-show="checkCode.image" ng-src="" class="ng-hide">
+                    </div>
+                    <a class="forget-btn" href="javascript:void(0)" ng-click="lineChatClick()">忘記?</a>
+                    <button id="login-box" class="login-btn ng-binding" onclick="login()">登入</button>
+                    <button class="join-btn" ng-click="RegisterClick()" type="button"
+                        onclick="location.href='../Register/index.html';">免費開戶</button>
+                    <!-- <div id="agree" ng-show="loginOver" class="ng-hide">
+                        點擊登入表示同意<a ng-click="agreement()">用戶協議</a>
+                    </div> -->
+                </form>
+            </div>
+            <!-- 登入 -->
+            <div id="account-box" class="is-login ng-scope" ng-controller="AccountCtrl" ng-init="$root.user.isLogin=true">
+                <ul id="account-info">
+                    <li>
+                        帳號 :
+                        <span id="member-level" class="vip10"
+                            onclick="window.location.href='../Vip/index.html'">vip10</span>
+                        <span class="account">DemoAccount</span>
+                        <a id="mailbox" href="../SiteMail/index.html" title="站內信" class="ng-scope">
+                            <span class="ng-binding">1</span>
+                        </a>
+                    </li>
+                    <li>
+                        帳戶餘額 :
+                        <span class="account account-balance ng-binding" title="$ 5000.00" onclick="accountPopup()">$5,000.00</span>
+                        <a ng-click="updateBalance()" title="更新">
+                            <i ng-show="!updatingBalance" class="fa fa-refresh"></i>
+                            <i ng-show="updatingBalance" class="fa fa-spinner fa-spin ng-hide"></i>
+                        </a>
+                        <div id="callBackAllWallet" ng-click="callBackAllWallet()"></div>
+                    </li>
+                </ul>
+                <ul id="account-nav">
+                    <!-- Account Nav List -->
+                </ul>
+                <div id="action-box">
+                    <a class="login-btn ng-binding" onclick="signOut()">安全退出</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav id="nav" slide-menu>
+        <ul ng-controller="LobbiesCtrl">
+            <li class="home">
+                <a href="../Home/index.html" nav-active>網站首頁</a>
+            </li>
+            <li class="fish">
+                <a href="#" nav-active>捕鱼达人</a>
+                <!-- <ol class="subnav">
+                    <li game-box="xxx" ng-click="toBbSport()">xxx</li>
+                </ol> -->
+            </li>
+            <li class="live">
+                <a href="../Lobby/Live.html" nav-active>真人视讯</a>
+            </li>
+            <li class="esport">
+                <a href="../Lobby/Esport.html" nav-active>电子竞技</a>
+            </li>
+            <li class="sport">
+                <a href="../Lobby/Sport.html" nav-active>体育赛事</a>
+            </li>
+            <li class="lottery">
+                <a href="../Lobby/Lottery.html" nav-active>彩票游戏</a>
+            </li>
+            <li class="game">
+                <a href="../Lobby/Game.html" nav-active>电子游艺</a>
+            </li>
+            <li class="board">
+                <a href="../Lobby/Board.html" nav-active>棋牌游戏</a>
+            </li>
+            <li class="promotion">
+                <a href="../Promotion/index.html" nav-active>優惠活動</a>
+            </li>
+            <li class="chat">
+                <a href="javascript:void(0)" ng-click="lineChatClick()">在線客服</a>
+            </li>
+        </ul>
+    </nav>
+    <div id="banner">
+        <div id="news" data-login="False">
+            <div id="hot-news" news-manual>
+                <div class="marqueen">
+                    <ul class="news-list">
+                        <li onclick="newsClick()">★公司入款帐户不定时更新,请会员入款仔细查看最新收款帐户,若转入已下架帐户公司一概不负责</li>
+                        <li onclick="newsClick()">★建议会员多加使用QQ钱包,若出现商户限额或其他错误信息,请多加重新提交尝试即可</li>
+                        <li onclick="newsClick()">★近期有不肖诈骗团体利用劫持网页手法使会员开启GStargaming网页时跳转至其他非法网站,请各位会员小心资金安全,GStargaming官网并没有其他网站与网址,GStargaming关心您</li>
+                        <li onclick="newsClick()">★目前一天取款前五次免手续费出款，第六次開始收取50元手续费，以最后一笔取款往前推算24小时，建议会员可以24小时取款五次以内，就不会收取手续费用</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="content">
+    </div>
+    <footer id="footer">
+        <div class="wrapper">
+            <ul id="footer-info">
+                <li>
+                    <span>关于</span>ABOUT
+                    <ul>
+                        <li><a href="javascript:void(0)">国际品牌 </a></li>
+                        <li><a href="javascript:void(0)">公司直营 </a></li>
+                        <li><a href="javascript:void(0)">诚信第一 </a></li>
+                        <li><a href="javascript:void(0)">游戏齐全 </a></li>
+                    </ul>
+                </li>
+                <li>
+                    <span>游戏</span>GAME
+                    <ul>
+                        <li><a href="/Lobby/Sport">体育投注</a></li>
+                        <li><a href="/Lobby/Live">真人娱乐</a></li>
+                        <li><a href="/Lobby/Lottery">彩票投注</a></li>
+                        <li><a href="/Lobby/Game">电子游艺</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <span>信誉</span>CREDIBILITY
+                    <ul>
+                        <li><a href="javascript:void(0)">数据加密</a></li>
+                        <li><a href="javascript:void(0)">24小时客服</a></li>
+                        <li><a href="javascript:void(0)">3分钟到账</a></li>
+                        <li><a href="javascript:void(0)">政府牌照</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <span>公正</span>JUSTICE
+                    <ul>
+                        <li><a href="javascript:void(0)">现场直播</a></li>
+                        <li><a href="javascript:void(0)">投注公平</a></li>
+                        <li><a href="javascript:void(0)">专员监督</a></li>
+                        <li><a href="javascript:void(0)">资金安全</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <span>优惠</span>FEATURES
+                    <ul>
+                        <li><a href="javascript:void(0)">首存赠送</a></li>
+                        <li><a href="javascript:void(0)">反水无限</a></li>
+                        <li><a href="javascript:void(0)">入款赠送</a></li>
+                        <li><a href="javascript:void(0)">代理合作</a></li>
+                    </ul>
+                </li>
+                <li class="contact">
+                    <span>联系我们</span>CONTACT US
+                    <ul>
+                        <li><a href="javascript:void(0)">电话：<span ng-bind="ContactInfo.TEL"></span></a></li>
+                        <li><a href="javascript:void(0)" ng-click="qqClick(ContactInfo.QQ)">Q Q：<span ng-bind="ContactInfo.QQ"></span></a></li>
+                        <li><a href="javascript:void(0)">邮箱：<span ng-bind="ContactInfo.Email"></span></a></li>
+                        <li><a href="javascript:void(0)">投诉：<span ng-bind="ContactInfo.ComplaintsEmail"></span></a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul id="footer-nav"><!-- Append Footer List --></ul>
+            <p id="footer-suggest"><!-- Copyright --></p>
+        </div>
+        <div id="footer-logo"></div>
+    </footer>
+</body>

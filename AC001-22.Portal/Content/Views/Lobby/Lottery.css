@@ -1,0 +1,91 @@
+#banner {
+  background-image: url("../Lobby/Lottery/banner.jpg");
+}
+
+#content {
+  min-height: 495px;
+  overflow: hidden;
+}
+
+#lobby ul.game-list {
+  margin: 25px 0;
+}
+
+#lobby ul.game-list li {
+  width: 434px;
+  height: 321px;
+  margin: 10px;
+}
+
+#lobby ul.game-list li div {
+  display: none;
+}
+
+#lobby li[game-box='more'] {
+  background-image: url("../lobby/Lottery/more.jpg");
+}
+
+#lobby li[game-box='BbinaLottery'] {
+  background-image: url("../lobby/Lottery/BbinaLottery.jpg");
+}
+
+#lobby li[game-box='IgLottery'] {
+  background-image: url("../lobby/Lottery/IgLottery.jpg");
+}
+
+#lobby li[game-box='IgLotto'] {
+  background-image: url("../lobby/Lottery/IgLotto.jpg");
+}
+
+#lobby li[game-box='IgaLottery'] {
+  background-image: url("../lobby/Lottery/IgaLottery.jpg");
+}
+
+#lobby li[game-box='IgaLotto'] {
+  background-image: url("../lobby/Lottery/IgaLotto.jpg");
+}
+
+#lobby li[game-box='LxLottery'] {
+  background-image: url("../lobby/Lottery/LxLottery.jpg");
+}
+
+#lobby li[game-box='VrLottery'] {
+  background-image: url("../lobby/Lottery/VrLottery.jpg");
+}
+
+#lobby li[game-box='AplLottery'] {
+  background-image: url("../lobby/Lottery/AplLottery.jpg");
+}
+
+#lobby li[game-box='G1Lottery'] {
+  background-image: url("../lobby/Lottery/G1Lottery.jpg");
+}
+
+#lobby li[game-box='G1aLottery'] {
+  background-image: url("../lobby/Lottery/G1aLottery.jpg");
+}
+
+#lobby li[game-box='GbLottery'] {
+  background-image: url("../lobby/Lottery/GbLottery.jpg");
+}
+
+#lobby li[game-box='GblLottery'] {
+  background-image: url("../lobby/Lottery/GblLottery.jpg");
+}
+
+#lobby li[game-box='SgwLottery'] {
+  background-image: url("../lobby/Lottery/SgwLottery.jpg");
+}
+
+#lobby li[game-box='BgLottery'] {
+  background-image: url("../lobby/Lottery/BgLottery.jpg");
+}
+
+#lobby li[game-box='Ig1Lottery'] {
+  background-image: url("../lobby/Lottery/Ig1Lottery.jpg");
+}
+
+#lobby li[game-box='Ig1Lotto'] {
+  background-image: url("../lobby/Lottery/Ig1Lotto.jpg");
+}
+/*# sourceMappingURL=Lottery.css.map */

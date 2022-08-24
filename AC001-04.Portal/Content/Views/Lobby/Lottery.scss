@@ -1,0 +1,62 @@
+﻿@import '../../../../_Common/Css/GameCode';
+
+#banner {
+    background: url('../Lobby/Lottery/banner.jpg') no-repeat center top #251630;
+}
+
+#lobby .game-list li {
+    width: 470px;
+    height: 310px;
+    margin: 12px 12px 38px 12px;
+    background-repeat: no-repeat;
+    background-position-y: 62px;
+    position: relative;
+    span {
+        position: absolute;
+        width: 470px;
+        margin-top: 320px;
+        color: #333;
+        text-align: center;
+    }
+    div {
+        display: none;
+    }
+    &::before {
+        content: '';
+        width: 470px;
+        height: 110px;
+        position: absolute;
+        top: -30px;
+        left: 0;
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+    &:not([game-box='more']):hover {
+        transform: translate3d(0,-2%,0);
+        transition: transform .1s linear;
+        &::after {
+            content: '';
+            width: 470px;
+            height: 246px;
+            background-color: rgba($color: #837986, $alpha: 0.6);
+            background-image: url('../lobby/Lottery/enter.png');
+            background-position-x: center;
+            background-position-y: 110px;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 63px;
+            left: 0;
+        }
+    }
+}
+
+// gamebox-list
+@each $gamebox in $lottery-list {
+    #lobby li[game-box='#{$gamebox}'] {
+        background-image: url('../lobby/Lottery/#{$gamebox}.jpg');
+        &::before {
+            background-image: url('../../../../_Common/Content/Views/Shared/images/logo/v3/colorblack/Lottery/#{$gamebox}.png');
+        }
+    }
+}

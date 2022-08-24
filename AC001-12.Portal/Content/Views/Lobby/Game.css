@@ -1,0 +1,383 @@
+#banner {
+  background-image: url("../Lobby/Game/banner.jpg");
+}
+
+#lobby > ul.game-list > li {
+  width: 320px;
+  height: 322px;
+  margin: 10px 4px;
+  position: relative;
+  background-position-y: 47px;
+  background-repeat: no-repeat;
+}
+
+#lobby > ul.game-list > li:not([game-box='more']):before {
+  -webkit-transition: 0s;
+  -o-transition: 0s;
+  transition: 0s;
+}
+
+#lobby > ul.game-list > li:not([game-box='more']):hover {
+  background-position: center bottom;
+}
+
+#lobby > ul.game-list > li:not([game-box='more']):hover:not([game-box='more'])::before {
+  -webkit-box-shadow: 0 0 160px 160px #ffb400 inset;
+          box-shadow: 0 0 160px 160px #ffb400 inset;
+}
+
+#lobby > ul.game-list > li span {
+  font-size: 21px;
+  font-weight: 600;
+  position: absolute;
+  bottom: 13px;
+  width: 320px;
+  height: 30px;
+  color: aliceblue;
+  left: 0;
+}
+
+#lobby > ul.game-list > li div {
+  display: none;
+}
+
+#lobby > ul.game-list > li::after {
+  content: '';
+  width: 150px;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-size: 80% auto;
+  top: -22px;
+  left: 100px;
+  position: absolute;
+  opacity: 1;
+}
+
+#lobby li[game-box='more'] {
+  background-image: url("../lobby/Game/more.jpg");
+}
+
+#lobby li[game-box='more']::after {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/color/Game/more.png");
+}
+
+#lobby li[game-box='AgHtml'] {
+  background-image: url("../lobby/Game/AgHtml.jpg");
+}
+
+#lobby li[game-box='AgHtml']::after {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/color/Game/AgHtml.png");
+}
+
+#lobby li[game-box='BbinaSlot'] {
+  background-image: url("../lobby/Game/BbinaSlot.jpg");
+}
+
+#lobby li[game-box='BbinaSlot']::after {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/color/Game/BbinaSlot.png");
+}
+
+#lobby li[game-box='Cq9Html'] {
+  background-image: url("../lobby/Game/Cq9Html.jpg");
+}
+
+#lobby li[game-box='Cq9Html']::after {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/color/Game/Cq9Html.png");
+}
+
+#lobby li[game-box='FsHtml'] {
+  background-image: url("../lobby/Game/FsHtml.jpg");
+}
+
+#lobby li[game-box='FsHtml']::after {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/color/Game/FsHtml.png");
+}
+
+#lobby li[game-box='GaHtml'] {
+  background-image: url("../lobby/Game/GaHtml.jpg");
+}
+
+#lobby li[game-box='GaHtml']::after {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/color/Game/GaHtml.png");
+}
+
+#lobby li[game-box='GnsHtml'] {
+  background-image: url("../lobby/Game/GnsHtml.jpg");
+}
+
+#lobby li[game-box='GnsHtml']::after {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/color/Game/GnsHtml.png");
+}
+
+#lobby li[game-box='GpiHtml'] {
+  background-image: url("../lobby/Game/GpiHtml.jpg");
+}
+
+#lobby li[game-box='GpiHtml']::after {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/color/Game/GpiHtml.png");
+}
+
+#lobby li[game-box='GpiFlash'] {
+  background-image: url("../lobby/Game/GpiFlash.jpg");
+}
+
+#lobby li[game-box='GpiFlash']::after {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/color/Game/GpiFlash.png");
+}
+
+#lobby li[game-box='HabaHtml'] {
+  background-image: url("../lobby/Game/HabaHtml.jpg");
+}
+
+#lobby li[game-box='HabaHtml']::after {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/color/Game/HabaHtml.png");
+}
+
+#lobby li[game-box='IsbHtml'] {
+  background-image: url("../lobby/Game/IsbHtml.jpg");
+}
+
+#lobby li[game-box='IsbHtml']::after {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/color/Game/IsbHtml.png");
+}
+
+#lobby li[game-box='JdbHtml'] {
+  background-image: url("../lobby/Game/JdbHtml.jpg");
+}
+
+#lobby li[game-box='JdbHtml']::after {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/color/Game/JdbHtml.png");
+}
+
+#lobby li[game-box='LgHtml'] {
+  background-image: url("../lobby/Game/LgHtml.jpg");
+}
+
+#lobby li[game-box='LgHtml']::after {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/color/Game/LgHtml.png");
+}
+
+#lobby li[game-box='MgaHtml'] {
+  background-image: url("../lobby/Game/MgaHtml.jpg");
+}
+
+#lobby li[game-box='MgaHtml']::after {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/color/Game/MgaHtml.png");
+}
+
+#lobby li[game-box='MgaFlash'] {
+  background-image: url("../lobby/Game/MgaFlash.jpg");
+}
+
+#lobby li[game-box='MgaFlash']::after {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/color/Game/MgaFlash.png");
+}
+
+#lobby li[game-box='MwHtml'] {
+  background-image: url("../lobby/Game/MwHtml.jpg");
+}
+
+#lobby li[game-box='MwHtml']::after {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/color/Game/MwHtml.png");
+}
+
+#lobby li[game-box='MwSlot'] {
+  background-image: url("../lobby/Game/MwSlot.jpg");
+}
+
+#lobby li[game-box='MwSlot']::after {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/color/Game/MwSlot.png");
+}
+
+#lobby li[game-box='NeHtml'] {
+  background-image: url("../lobby/Game/NeHtml.jpg");
+}
+
+#lobby li[game-box='NeHtml']::after {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/color/Game/NeHtml.png");
+}
+
+#lobby li[game-box='Ne2Slot'] {
+  background-image: url("../lobby/Game/Ne2Slot.jpg");
+}
+
+#lobby li[game-box='Ne2Slot']::after {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/color/Game/Ne2Slot.png");
+}
+
+#lobby li[game-box='PgHtml'] {
+  background-image: url("../lobby/Game/PgHtml.jpg");
+}
+
+#lobby li[game-box='PgHtml']::after {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/color/Game/PgHtml.png");
+}
+
+#lobby li[game-box='PngHtml'] {
+  background-image: url("../lobby/Game/PngHtml.jpg");
+}
+
+#lobby li[game-box='PngHtml']::after {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/color/Game/PngHtml.png");
+}
+
+#lobby li[game-box='PrgHtml'] {
+  background-image: url("../lobby/Game/PrgHtml.jpg");
+}
+
+#lobby li[game-box='PrgHtml']::after {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/color/Game/PrgHtml.png");
+}
+
+#lobby li[game-box='PrgFlash'] {
+  background-image: url("../lobby/Game/PrgFlash.jpg");
+}
+
+#lobby li[game-box='PrgFlash']::after {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/color/Game/PrgFlash.png");
+}
+
+#lobby li[game-box='PtaHtml'] {
+  background-image: url("../lobby/Game/PtaHtml.jpg");
+}
+
+#lobby li[game-box='PtaHtml']::after {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/color/Game/PtaHtml.png");
+}
+
+#lobby li[game-box='PtaFlash'] {
+  background-image: url("../lobby/Game/PtaFlash.jpg");
+}
+
+#lobby li[game-box='PtaFlash']::after {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/color/Game/PtaFlash.png");
+}
+
+#lobby li[game-box='PtbSlot'] {
+  background-image: url("../lobby/Game/PtbSlot.jpg");
+}
+
+#lobby li[game-box='PtbSlot']::after {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/color/Game/PtbSlot.png");
+}
+
+#lobby li[game-box='PtsHtml'] {
+  background-image: url("../lobby/Game/PtsHtml.jpg");
+}
+
+#lobby li[game-box='PtsHtml']::after {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/color/Game/PtsHtml.png");
+}
+
+#lobby li[game-box='SgHtml'] {
+  background-image: url("../lobby/Game/SgHtml.jpg");
+}
+
+#lobby li[game-box='SgHtml']::after {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/color/Game/SgHtml.png");
+}
+
+#lobby li[game-box='SgFlash'] {
+  background-image: url("../lobby/Game/SgFlash.jpg");
+}
+
+#lobby li[game-box='SgFlash']::after {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/color/Game/SgFlash.png");
+}
+
+#lobby li[game-box='RtHtml'] {
+  background-image: url("../lobby/Game/RtHtml.jpg");
+}
+
+#lobby li[game-box='RtHtml']::after {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/color/Game/RtHtml.png");
+}
+
+#lobby li[game-box='TpgHtml'] {
+  background-image: url("../lobby/Game/TpgHtml.jpg");
+}
+
+#lobby li[game-box='TpgHtml']::after {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/color/Game/TpgHtml.png");
+}
+
+#lobby li[game-box='AeSlot'] {
+  background-image: url("../lobby/Game/AeSlot.jpg");
+}
+
+#lobby li[game-box='AeSlot']::after {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/color/Game/AeSlot.png");
+}
+
+#lobby li[game-box='JpSlot'] {
+  background-image: url("../lobby/Game/JpSlot.jpg");
+}
+
+#lobby li[game-box='JpSlot']::after {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/color/Game/JpSlot.png");
+}
+
+#lobby li[game-box='RtgSlot'] {
+  background-image: url("../lobby/Game/RtgSlot.jpg");
+}
+
+#lobby li[game-box='RtgSlot']::after {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/color/Game/RtgSlot.png");
+}
+
+#lobby li[game-box='QtSlot'] {
+  background-image: url("../lobby/Game/QtSlot.jpg");
+}
+
+#lobby li[game-box='QtSlot']::after {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/color/Game/QtSlot.png");
+}
+
+#lobby li[game-box='PsSlot'] {
+  background-image: url("../lobby/Game/PsSlot.jpg");
+}
+
+#lobby li[game-box='PsSlot']::after {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/color/Game/PsSlot.png");
+}
+
+#lobby li[game-box='Pg1Slot'] {
+  background-image: url("../lobby/Game/Pg1Slot.jpg");
+}
+
+#lobby li[game-box='Pg1Slot']::after {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/color/Game/Pg1Slot.png");
+}
+
+#lobby li[game-box='GanSlot'] {
+  background-image: url("../lobby/Game/GanSlot.jpg");
+}
+
+#lobby li[game-box='GanSlot']::after {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/color/Game/GanSlot.png");
+}
+
+#lobby li[game-box='HbSlot'] {
+  background-image: url("../lobby/Game/HbSlot.jpg");
+}
+
+#lobby li[game-box='HbSlot']::after {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/color/Game/HbSlot.png");
+}
+
+#lobby li[game-box='BgSlot'] {
+  background-image: url("../lobby/Game/BgSlot.jpg");
+}
+
+#lobby li[game-box='BgSlot']::after {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/color/Game/BgSlot.png");
+}
+
+#lobby li[game-box='VrSlot'] {
+  background-image: url("../lobby/Game/VrSlot.jpg");
+}
+
+#lobby li[game-box='VrSlot']::after {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v3/color/Game/VrSlot.png");
+}
+/*# sourceMappingURL=Game.css.map */

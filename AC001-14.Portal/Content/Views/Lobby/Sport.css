@@ -1,0 +1,329 @@
+#banner {
+  display: block;
+}
+
+#content {
+  background-image: url("../Lobby/Sport/content_bg.jpg");
+}
+
+#lobby {
+  padding: 13px 0;
+}
+
+ul.game-list > li {
+  width: 310px;
+  height: 374px;
+  margin: 15px;
+  background: #000;
+  border: 2px solid #fff;
+  position: relative;
+}
+
+ul.game-list > li:not([game-box='more']):hover {
+  background-position: center;
+  background: #dd0023;
+  border: 2px solid #dd0023;
+  width: 310px;
+  height: 374px;
+}
+
+ul.game-list > li span {
+  position: absolute;
+  font-size: 21px;
+  color: #fff;
+  bottom: 22px;
+  width: 170px;
+  height: 30px;
+  background: transparent;
+  right: 12px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+ul.game-list > li div {
+  display: none;
+}
+
+ul.game-list > li::before {
+  content: '';
+  width: 150px;
+  height: 150px;
+  bottom: -58px;
+  left: 12px;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 75% auto;
+}
+
+#lobby li[game-box='more'] {
+  background-image: url("../lobby/Sport/more.jpg");
+}
+
+#lobby li[game-box='more']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/white/Sport/more.png");
+}
+
+#lobby li[game-box='SingSport'] {
+  background-image: url("../lobby/Sport/SingSport.jpg");
+}
+
+#lobby li[game-box='SingSport']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/white/Sport/SingSport.png");
+}
+
+#lobby li[game-box='Sing2Sport'] {
+  background-image: url("../lobby/Sport/Sing2Sport.jpg");
+}
+
+#lobby li[game-box='Sing2Sport']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/white/Sport/Sing2Sport.png");
+}
+
+#lobby li[game-box='AgSport'] {
+  background-image: url("../lobby/Sport/AgSport.jpg");
+}
+
+#lobby li[game-box='AgSport']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/white/Sport/AgSport.png");
+}
+
+#lobby li[game-box='BbinaSport'] {
+  background-image: url("../lobby/Sport/BbinaSport.jpg");
+}
+
+#lobby li[game-box='BbinaSport']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/white/Sport/BbinaSport.png");
+}
+
+#lobby li[game-box='CmdSport'] {
+  background-image: url("../lobby/Sport/CmdSport.jpg");
+}
+
+#lobby li[game-box='CmdSport']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/white/Sport/CmdSport.png");
+}
+
+#lobby li[game-box='IboSport'] {
+  background-image: url("../lobby/Sport/IboSport.jpg");
+}
+
+#lobby li[game-box='IboSport']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/white/Sport/IboSport.png");
+}
+
+#lobby li[game-box='HLSport'] {
+  background-image: url("../lobby/Sport/HLSport.jpg");
+}
+
+#lobby li[game-box='HLSport']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/white/Sport/HLSport.png");
+}
+
+#lobby li[game-box='ImaSport'] {
+  background-image: url("../lobby/Sport/ImaSport.jpg");
+}
+
+#lobby li[game-box='ImaSport']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/white/Sport/ImaSport.png");
+}
+
+#lobby li[game-box='M8Sport'] {
+  background-image: url("../lobby/Sport/M8Sport.jpg");
+}
+
+#lobby li[game-box='M8Sport']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/white/Sport/M8Sport.png");
+}
+
+#lobby li[game-box='SabaaSport'] {
+  background-image: url("../lobby/Sport/SabaaSport.jpg");
+}
+
+#lobby li[game-box='SabaaSport']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/white/Sport/SabaaSport.png");
+}
+
+#lobby li[game-box='SababSport'] {
+  background-image: url("../lobby/Sport/SababSport.jpg");
+}
+
+#lobby li[game-box='SababSport']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/white/Sport/SababSport.png");
+}
+
+#lobby li[game-box='SV388Sport'] {
+  background-image: url("../lobby/Sport/SV388Sport.jpg");
+}
+
+#lobby li[game-box='SV388Sport']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/white/Sport/SV388Sport.png");
+}
+
+#lobby li[game-box='HRBSport'] {
+  background-image: url("../lobby/Sport/HRBSport.jpg");
+}
+
+#lobby li[game-box='HRBSport']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/white/Sport/HRBSport.png");
+}
+
+#lobby li[game-box='ZfbSport'] {
+  background-image: url("../lobby/Sport/ZfbSport.jpg");
+}
+
+#lobby li[game-box='ZfbSport']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/white/Sport/ZfbSport.png");
+}
+
+#lobby li[game-box='E88Sport'] {
+  background-image: url("../lobby/Sport/E88Sport.jpg");
+}
+
+#lobby li[game-box='E88Sport']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/white/Sport/E88Sport.png");
+}
+
+#lobby li[game-box='GbSport'] {
+  background-image: url("../lobby/Sport/GbSport.jpg");
+}
+
+#lobby li[game-box='GbSport']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/white/Sport/GbSport.png");
+}
+
+#lobby li[game-box='GbsSport'] {
+  background-image: url("../lobby/Sport/GbsSport.jpg");
+}
+
+#lobby li[game-box='GbsSport']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/white/Sport/GbsSport.png");
+}
+
+#lobby li[game-box='QtSport'] {
+  background-image: url("../lobby/Sport/QtSport.jpg");
+}
+
+#lobby li[game-box='QtSport']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/white/Sport/QtSport.png");
+}
+
+#lobby li[game-box='BtiSport'] {
+  background-image: url("../lobby/Sport/BtiSport.jpg");
+}
+
+#lobby li[game-box='BtiSport']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/white/Sport/BtiSport.png");
+}
+
+#lobby li[game-box='Cq9Sport'] {
+  background-image: url("../lobby/Sport/Cq9Sport.jpg");
+}
+
+#lobby li[game-box='Cq9Sport']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/white/Sport/Cq9Sport.png");
+}
+
+#lobby li[game-box='EsbEsport'] {
+  background-image: url("../lobby/Esport/EsbEsport.jpg");
+}
+
+#lobby li[game-box='EsbEsport']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/white/Esport/EsbEsport.png");
+}
+
+#lobby li[game-box='Esb1Esport'] {
+  background-image: url("../lobby/Esport/Esb1Esport.jpg");
+}
+
+#lobby li[game-box='Esb1Esport']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/white/Esport/Esb1Esport.png");
+}
+
+#lobby li[game-box='SabaESport'] {
+  background-image: url("../lobby/Esport/SabaESport.jpg");
+}
+
+#lobby li[game-box='SabaESport']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/white/Esport/SabaESport.png");
+}
+
+#lobby li[game-box='HcEsport'] {
+  background-image: url("../lobby/Esport/HcEsport.jpg");
+}
+
+#lobby li[game-box='HcEsport']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/white/Esport/HcEsport.png");
+}
+
+#lobby li[game-box='CmdEsport'] {
+  background-image: url("../lobby/Esport/CmdEsport.jpg");
+}
+
+#lobby li[game-box='CmdEsport']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/white/Esport/CmdEsport.png");
+}
+
+#lobby li[game-box='SabaaEsport'] {
+  background-image: url("../lobby/Esport/SabaaEsport.jpg");
+}
+
+#lobby li[game-box='SabaaEsport']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/white/Esport/SabaaEsport.png");
+}
+
+#lobby li[game-box='E88Esport'] {
+  background-image: url("../lobby/Esport/E88Esport.jpg");
+}
+
+#lobby li[game-box='E88Esport']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/white/Esport/E88Esport.png");
+}
+
+#lobby li[game-box='GbEsport'] {
+  background-image: url("../lobby/Esport/GbEsport.jpg");
+}
+
+#lobby li[game-box='GbEsport']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/white/Esport/GbEsport.png");
+}
+
+#lobby li[game-box='GbsEsport'] {
+  background-image: url("../lobby/Esport/GbsEsport.jpg");
+}
+
+#lobby li[game-box='GbsEsport']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/white/Esport/GbsEsport.png");
+}
+
+#lobby li[game-box='LeEsport'] {
+  background-image: url("../lobby/Esport/LeEsport.jpg");
+}
+
+#lobby li[game-box='LeEsport']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/white/Esport/LeEsport.png");
+}
+
+#lobby li[game-box='AviaEsport'] {
+  background-image: url("../lobby/Esport/AviaEsport.jpg");
+}
+
+#lobby li[game-box='AviaEsport']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/white/Esport/AviaEsport.png");
+}
+
+#lobby li[game-box='Cq9Esport'] {
+  background-image: url("../lobby/Esport/Cq9Esport.jpg");
+}
+
+#lobby li[game-box='Cq9Esport']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/white/Esport/Cq9Esport.png");
+}
+
+#lobby li[game-box='TfEsport'] {
+  background-image: url("../lobby/Esport/TfEsport.jpg");
+}
+
+#lobby li[game-box='TfEsport']::before {
+  background-image: url("../../../../_Common/Content/Views/Shared/images/logo/v1/white/Esport/TfEsport.png");
+}
+/*# sourceMappingURL=Sport.css.map */
